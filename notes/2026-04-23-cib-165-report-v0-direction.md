@@ -77,6 +77,7 @@ By later on `2026-04-23`, the Threads repo had advanced beyond the initial repor
 - Pilot analysis and decision framework, decision memo, and baseline error review table were added.
 - Source intake and sampling-frame docs, templates, and register were added.
 - Integrated real-pilot readiness review docs and template were added.
+- Stakeholder authorization packet and decision-record template were added.
 
 The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not data-ready until stakeholders approve the source, fields, raw-evidence storage, screenshot/link handling, access, retention, and redaction rules.
 
@@ -108,14 +109,15 @@ The next real research step is stakeholder approval:
 1. Review `reports/threads-scam-content-research-v0-executive-brief.md`.
 2. Complete `reports/report-v0-review-checklist.md`.
 3. Collect comments using `templates/report_review_feedback.md`.
-4. Record pilot authorization using `templates/data_authorization_request.md`.
+4. Record pilot authorization using `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, and `templates/data_authorization_request.md`.
 5. Run `docs/26-pilot-go-no-go-checklist.md`.
 6. If approved, complete `templates/pilot_batch_work_order.md` and execute `docs/29-authorized-pilot-execution-plan.md`.
 7. Before annotation, onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and run QA with `docs/31-annotation-quality-control-plan.md`.
 8. Use `docs/32-500-item-expansion-plan.md` only after the 50-item pilot and 100-200 item first usable batch justify expansion.
 9. After the 50-item pilot, use `docs/33-pilot-analysis-and-decision-framework.md` and `templates/pilot_decision_memo.md` to decide whether to expand, revise, narrow, or pause.
 10. Before any real source is authorized, complete `templates/source_candidate_intake.md` and `templates/source_sampling_frame_template.csv`.
-11. Before any real collection starts, complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
+11. Use `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md` to record the stakeholder decision.
+12. Before any real collection starts, complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
 
 Until that gate passes, use only synthetic or fully redacted examples.
 

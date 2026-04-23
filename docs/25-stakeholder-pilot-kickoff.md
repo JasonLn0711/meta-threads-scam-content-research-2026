@@ -85,7 +85,7 @@ Stakeholders should decide:
 | Reporting | Can aggregate metrics and redacted examples be shown in memos? |
 | Publication | Are any outputs limited to internal review? |
 
-Use `templates/data_authorization_request.md` to record the decision.
+Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, and `templates/data_authorization_request.md` to record the decision.
 
 ## First Pilot Design
 
@@ -135,4 +135,4 @@ Pause the pilot if:
 
 ## Immediate Next Action
 
-Complete `templates/data_authorization_request.md` for the first real source. After approval, run `docs/22-annotation-pilot-runbook.md`.
+Complete `docs/36-stakeholder-authorization-packet.md` for the first real source. If the decision is `approved` or `approved_with_limits`, fill `templates/stakeholder_authorization_decision_record.md`, update the governance registers, then continue through `docs/26-pilot-go-no-go-checklist.md`, `templates/pilot_batch_work_order.md`, and `docs/35-real-pilot-readiness-review.md`.

@@ -23,15 +23,17 @@ As of `2026-04-23`:
 
 Before the 50-item pilot begins:
 
-1. Complete `templates/data_authorization_request.md`.
+1. Complete `docs/36-stakeholder-authorization-packet.md`.
 2. Complete `templates/source_candidate_intake.md`.
-3. Record the candidate in `source-intake-register.md`.
-4. Build `templates/source_sampling_frame_template.csv`.
-5. Record the decision in `pilot-authorization-register.md`.
-6. Complete `docs/26-pilot-go-no-go-checklist.md`.
-7. Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
-8. Complete `templates/pilot_batch_work_order.md`.
-9. Confirm raw evidence storage outside git.
-10. Confirm redaction, access, retention, and sharing rules.
+3. Build `templates/source_sampling_frame_template.csv`.
+4. Complete `templates/stakeholder_authorization_decision_record.md`.
+5. Complete `templates/data_authorization_request.md`.
+6. Record the candidate in `source-intake-register.md`.
+7. Record the decision in `pilot-authorization-register.md`.
+8. Complete `docs/26-pilot-go-no-go-checklist.md`.
+9. Complete `templates/pilot_batch_work_order.md`.
+10. Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
+11. Confirm raw evidence storage outside git.
+12. Confirm redaction, access, retention, and sharing rules.
 
 If any item is unresolved, the project remains synthetic-only.

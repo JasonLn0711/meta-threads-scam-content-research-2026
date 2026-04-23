@@ -135,7 +135,6 @@ This dry run does not prove:
 
 ## Decision
 
-Proceed to stakeholder report review and pilot authorization. Do not collect real examples until `templates/data_authorization_request.md` and `docs/26-pilot-go-no-go-checklist.md` are completed.
+Proceed to stakeholder report review and pilot authorization. Do not collect real examples until `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, and `templates/real_pilot_readiness_review.md` are completed.
 
 After authorization, repeat the same workflow on the 50-item pilot and record the result under `experiments/dataset-audit/` and `experiments/baselines/`.
-

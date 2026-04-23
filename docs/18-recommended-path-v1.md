@@ -14,7 +14,7 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: complete stakeholder pilot approval using `docs/25-stakeholder-pilot-kickoff.md`, pass `docs/26-pilot-go-no-go-checklist.md`, then complete `docs/35-real-pilot-readiness-review.md` before real examples are collected.
+Immediate next action: complete stakeholder pilot approval using `docs/36-stakeholder-authorization-packet.md`, `docs/25-stakeholder-pilot-kickoff.md`, and `templates/stakeholder_authorization_decision_record.md`; then pass `docs/26-pilot-go-no-go-checklist.md` and complete `docs/35-real-pilot-readiness-review.md` before real examples are collected.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 

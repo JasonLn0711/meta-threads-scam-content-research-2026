@@ -13,6 +13,8 @@ Before collecting any real item:
 - Complete source candidate intake in `templates/source_candidate_intake.md`.
 - Record the source candidate in `governance/source-intake-register.md`.
 - Build the source sampling frame with `templates/source_sampling_frame_template.csv`.
+- Complete `docs/36-stakeholder-authorization-packet.md`.
+- Complete `templates/stakeholder_authorization_decision_record.md`.
 - Confirm the source is allowed under `governance/data-governance.md`.
 - Complete or link `templates/data_authorization_request.md`.
 - Decide where raw evidence will live outside git.

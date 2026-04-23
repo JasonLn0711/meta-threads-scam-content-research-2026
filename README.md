@@ -113,16 +113,17 @@ As of `2026-04-23`, the repo has moved from scaffold-only to pilot-ready pending
 - The post-pilot analysis and decision framework exists.
 - The source intake and sampling-frame package exists.
 - The integrated real-pilot readiness review package exists.
+- The stakeholder authorization packet and decision-record template exist.
 - No real Threads evidence has been collected or committed.
 
-The next blocker is governance, not tooling: stakeholders must approve source, fields, screenshot/link handling, access, retention, and redaction rules, then pass the real-pilot readiness review before the first real pilot.
+The next blocker is governance, not tooling: stakeholders must use the authorization packet to approve source, fields, screenshot/link handling, access, retention, and redaction rules, then pass the go/no-go and real-pilot readiness reviews before the first real pilot.
 
 ## Recommended First Milestone
 
 By `2026-04-30`, produce the readable report v0 above. Within the following 4 weeks, produce:
 
 1. A finalized phase-1 taxonomy and annotation guide.
-2. Stakeholder authorization, go/no-go approval, and readiness review for real pilot evidence.
+2. Stakeholder authorization packet, go/no-go approval, and readiness review for real pilot evidence.
 3. A real-pilot readiness review, then a 5-item calibration and 50-item authorized pilot.
 4. A 100-200 item first usable dataset only after pilot review and revisions.
 5. A governed 500-item expansion only after the earlier gates show the workflow is stable.

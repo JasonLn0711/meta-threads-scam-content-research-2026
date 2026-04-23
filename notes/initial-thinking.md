@@ -104,6 +104,7 @@ By the next update on `2026-04-23`, the repo had these additional research asset
 - Pilot analysis and decision framework, decision memo template, error review table, and decision-analysis protocol.
 - Source intake and sampling-frame package for evaluating candidate sources before collection.
 - Integrated real-pilot readiness review package tying source, governance, annotation, QA, and baseline gates together.
+- Stakeholder authorization packet and decision-record template for turning the next approval meeting into a recorded source decision.
 
 The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
 

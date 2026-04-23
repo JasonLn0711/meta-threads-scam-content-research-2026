@@ -12,6 +12,7 @@ After a `go` or `go_with_limits` decision, complete `templates/pilot_batch_work_
 
 | Check | Status | Owner | Notes |
 |---|---|---|---|
+| Stakeholder authorization decision record completed |  |  |  |
 | Data authorization request completed |  |  |  |
 | Source candidate intake completed |  |  |  |
 | Source sampling frame completed |  |  |  |

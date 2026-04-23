@@ -16,9 +16,11 @@ Share these files as the v0 report package:
 | `reports/threads-scam-content-research-v0.md` | Full research report. |
 | `reports/report-v0-review-checklist.md` | Pre-delivery and reviewer sign-off checklist. |
 | `docs/25-stakeholder-pilot-kickoff.md` | Pilot approval memo. |
+| `docs/36-stakeholder-authorization-packet.md` | Packet for source, field, storage, access, retention, and redaction approval. |
 | `docs/26-pilot-go-no-go-checklist.md` | Gate before real collection. |
 | `docs/35-real-pilot-readiness-review.md` | Integrated owner-facing readiness review before real collection. |
 | `templates/data_authorization_request.md` | Record of allowed source, fields, storage, retention, and access. |
+| `templates/stakeholder_authorization_decision_record.md` | Meeting or written-approval decision record. |
 | `templates/real_pilot_readiness_review.md` | Fillable readiness review template. |
 | `templates/report_review_feedback.md` | Structured feedback form for reviewers. |
 
@@ -83,8 +85,8 @@ Every accepted material change should preserve these constraints:
 
 | Decision | Meaning | Next action |
 |---|---|---|
-| `go` | Stakeholders approve the pilot as written. | Complete `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
-| `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
+| `go` | Stakeholders approve the pilot as written. | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
+| `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the decision record and authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
 | `no_go` | Stakeholders do not approve real data work. | Continue only synthetic calibration, docs, and tooling; do not collect real examples. |
 | `revise_first` | Report or pilot design needs revision before decision. | Update the report package and rerun the review checklist. |
 
@@ -93,6 +95,7 @@ Every accepted material change should preserve these constraints:
 After the stakeholder readout, update or create:
 
 - a decision-log entry with the stakeholder outcome
+- `templates/stakeholder_authorization_decision_record.md` filled for the stakeholder decision
 - `templates/data_authorization_request.md` filled for the first approved source, if any
 - `docs/26-pilot-go-no-go-checklist.md` with the initial gate status
 - `templates/real_pilot_readiness_review.md` with final launch status

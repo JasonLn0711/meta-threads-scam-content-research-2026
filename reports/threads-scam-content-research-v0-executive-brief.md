@@ -65,7 +65,7 @@ Stakeholders should decide whether the project may proceed to the first real pil
 | Reporting | Can aggregate metrics and redacted examples appear in internal memos? |
 | Pilot decision | Is the first pilot `go`, `go_with_limits`, or `no_go`? |
 
-Use `templates/data_authorization_request.md` to record the decision and `docs/26-pilot-go-no-go-checklist.md` before any real evidence is collected.
+Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, and `docs/35-real-pilot-readiness-review.md` before any real evidence is collected.
 
 ## What This Work Will Not Do
 
@@ -112,4 +112,4 @@ By 2026-04-30:
 2. Collect reviewer comments with `templates/report_review_feedback.md`.
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
 4. Record whether stakeholders approve the pilot, approve with limits, or decline.
-5. If approved, complete the data authorization record, go/no-go checklist, and real-pilot readiness review before real collection.
+5. If approved, complete the stakeholder authorization decision record, data authorization record, go/no-go checklist, and real-pilot readiness review before real collection.

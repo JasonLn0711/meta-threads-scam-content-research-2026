@@ -18,11 +18,13 @@ Completed:
 - Pilot analysis and decision framework with decision memo and error review table.
 - Source intake and sampling-frame package.
 - Integrated real-pilot readiness review package.
+- Stakeholder authorization packet and decision-record template.
 
 Not completed:
 
 - stakeholder authorization for real Threads evidence
 - approved source candidate and sampling frame
+- completed stakeholder authorization decision record
 - completed real-pilot readiness review
 - real 50-item pilot collection
 - human annotation on real examples
@@ -60,7 +62,7 @@ Deliverables:
 
 Goals:
 
-- Complete stakeholder authorization, go/no-go review, and real-pilot readiness review.
+- Complete stakeholder authorization packet, go/no-go review, and real-pilot readiness review.
 - Run 5-item calibration.
 - Annotate the first authorized 50-item pilot batch if the gate passes.
 - Track disagreement and unclear fields.

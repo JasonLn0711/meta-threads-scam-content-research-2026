@@ -80,4 +80,4 @@ Mark each as approved, denied, pending, or not needed.
 
 ## Link To Governance
 
-Record the final decision or a summary in `governance/data-governance.md` before collection begins.
+Record the final decision in `templates/stakeholder_authorization_decision_record.md` and summarize it in `governance/pilot-authorization-register.md` before collection begins.

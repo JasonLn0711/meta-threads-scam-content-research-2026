@@ -156,6 +156,7 @@ If these appear, narrow the taxonomy for v1.1 rather than adding more fields.
 - Confirm whether stakeholder-provided examples are authorized for annotation.
 - Decide where local raw evidence will be stored outside git.
 - Assign at least two pseudonymous annotator IDs.
+- Complete `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md`.
 - Complete `templates/data_authorization_request.md` for any real source.
 - Complete `templates/real_pilot_readiness_review.md` before any real collection starts.
 - Run a 5-item dry annotation using the templates before collecting the full 50-item pilot.

@@ -28,3 +28,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Added a pilot analysis decision framework before expansion beyond the first real pilot | `0008-add-pilot-analysis-decision-framework.md` |
 | 2026-04-23 | Added a source intake and sampling-frame gate before real source collection | `0009-add-source-intake-sampling-frame.md` |
 | 2026-04-23 | Added an integrated real-pilot readiness review before any real 50-item pilot begins | `0010-add-real-pilot-readiness-review.md` |
+| 2026-04-23 | Added a stakeholder authorization packet and decision record before real source approval | `0011-add-stakeholder-authorization-packet.md` |

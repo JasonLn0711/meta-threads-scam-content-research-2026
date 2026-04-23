@@ -17,8 +17,10 @@ Complete this review after:
 1. A candidate source has been proposed.
 2. The source intake has been completed.
 3. The sampling frame has been drafted.
-4. The authorization request has been reviewed.
-5. Raw evidence storage, access, retention, and redaction rules are known.
+4. The stakeholder authorization packet has been reviewed.
+5. The stakeholder authorization decision record has been completed.
+6. The authorization request has been reviewed.
+7. Raw evidence storage, access, retention, and redaction rules are known.
 
 Complete it before:
 
@@ -46,6 +48,7 @@ The readiness review should point to completed local artifacts. Do not paste raw
 |---|---|---|
 | Source intake | `templates/source_candidate_intake.md` completed copy | Defines what source is being used and why it is permitted. |
 | Sampling | `templates/source_sampling_frame_template.csv` completed copy | Prevents opportunistic over-collection and source skew. |
+| Stakeholder decision | `templates/stakeholder_authorization_decision_record.md` completed copy | Records approval, limits, blockers, and decision owner. |
 | Authorization | `templates/data_authorization_request.md` completed copy | Records approved fields, handling, retention, and limits. |
 | Governance record | `governance/source-intake-register.md` and `governance/pilot-authorization-register.md` | Creates durable decision memory. |
 | Launch checklist | `docs/26-pilot-go-no-go-checklist.md` completed copy | Confirms operational gates. |
@@ -195,7 +198,7 @@ Examples of unacceptable unresolved issues:
 ## Owner Actions Before Real Collection
 
 1. Complete a project-specific copy of `templates/real_pilot_readiness_review.md`.
-2. Attach or link completed source intake, sampling frame, authorization request, go/no-go checklist, and pilot work order.
+2. Attach or link completed source intake, sampling frame, stakeholder authorization decision record, authorization request, go/no-go checklist, and pilot work order.
 3. Record the source decision in `governance/source-intake-register.md`.
 4. Record the pilot authorization decision in `governance/pilot-authorization-register.md`.
 5. Confirm raw evidence storage outside git.

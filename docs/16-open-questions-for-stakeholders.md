@@ -11,6 +11,7 @@ The remaining blocker before real data work is stakeholder approval of source, f
 These questions must be answered before the first real 50-item pilot batch:
 
 - Which source type is approved first: stakeholder-provided cases, manually identified public examples, API-authorized examples, or another approved source?
+- What is the stakeholder authorization decision: `approved`, `approved_with_limits`, `revise_request`, or `rejected_or_paused`?
 - Which fields may be retained in annotation files?
 - May screenshots be retained, and must they be redacted before annotation?
 - May source URLs or visible links be stored, normalized, redacted, or omitted?
@@ -18,6 +19,8 @@ These questions must be answered before the first real 50-item pilot batch:
 - What retention/deletion rule applies to raw evidence and derived annotation files?
 - Can aggregate metrics and redacted examples appear in internal memos?
 - Who is the final owner for `go`, `no_go`, or `go_with_limits` on the pilot?
+
+Use `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md` to turn these answers into a recorded decision.
 
 ## Criminal Investigation Stakeholders
 

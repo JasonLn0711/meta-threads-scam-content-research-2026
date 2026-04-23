@@ -25,6 +25,7 @@ redaction_checklist.md
 report_review_feedback.md
 source_candidate_intake.md
 source_sampling_frame_template.csv
+stakeholder_authorization_decision_record.md
 stakeholder_pilot_request_email.md
 thread_item_sample.json
 thread_item_sample_batch.json
@@ -37,6 +38,8 @@ Use `500_item_expansion_work_order.md` only after the staged expansion gates in 
 Use `pilot_decision_memo.md` and `baseline_error_review_table.csv` after the 50-item pilot to decide whether to expand, revise, narrow, or pause.
 
 Use `source_candidate_intake.md` and `source_sampling_frame_template.csv` before any real source enters authorization or collection.
+
+Use `stakeholder_authorization_decision_record.md` with `docs/36-stakeholder-authorization-packet.md` to record source, field, storage, access, retention, redaction, and sharing decisions.
 
 Use `real_pilot_readiness_review.md` as the final owner-facing readiness record before any real 50-item pilot begins.
 

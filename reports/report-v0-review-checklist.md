@@ -32,6 +32,7 @@ The goal is not to make the report longer. The goal is to make sure the report i
 |---|---|---|---|
 | Report says no automated collection without authorization |  |  |  |
 | Report points to data authorization and go/no-go artifacts |  |  |  |
+| Report points to the stakeholder authorization packet and decision record |  |  |  |
 | Report points to the real-pilot readiness review before collection |  |  |  |
 | Raw evidence is described as outside git |  |  |  |
 | Screenshots, URLs, contact handles, and OCR privacy risks are acknowledged |  |  |  |
@@ -100,10 +101,12 @@ The goal is not to make the report longer. The goal is to make sure the report i
 | `reports/threads-scam-content-research-v0.md` |  |  |
 | `reports/threads-scam-content-research-v0-executive-brief.md` |  |  |
 | `docs/25-stakeholder-pilot-kickoff.md` |  |  |
+| `docs/36-stakeholder-authorization-packet.md` |  |  |
 | `docs/26-pilot-go-no-go-checklist.md` |  |  |
 | `docs/35-real-pilot-readiness-review.md` |  |  |
 | `docs/27-report-v0-delivery-plan.md` |  |  |
 | `templates/data_authorization_request.md` |  |  |
+| `templates/stakeholder_authorization_decision_record.md` |  |  |
 | `templates/real_pilot_readiness_review.md` |  |  |
 | `templates/report_review_feedback.md` |  |  |
 

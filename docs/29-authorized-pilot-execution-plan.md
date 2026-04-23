@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This plan defines exactly what happens after stakeholders approve a real Threads pilot through `docs/26-pilot-go-no-go-checklist.md`.
+This plan defines exactly what happens after stakeholders approve a real Threads pilot through `docs/36-stakeholder-authorization-packet.md` and `docs/26-pilot-go-no-go-checklist.md`.
 
-It is not an authorization document. It is an execution plan that becomes usable only after the data authorization request, source limits, raw-storage rules, redaction rules, and access list are approved.
+It is not an authorization document. It is an execution plan that becomes usable only after the stakeholder authorization decision, data authorization request, source limits, raw-storage rules, redaction rules, and access list are approved.
 
 ## Current State
 
@@ -24,6 +24,8 @@ Begin this execution plan only when all of the following are true:
 
 | Gate | Required artifact |
 |---|---|
+| Stakeholder authorization packet | Completed `docs/36-stakeholder-authorization-packet.md` |
+| Stakeholder authorization decision | Completed `templates/stakeholder_authorization_decision_record.md` with `approved` or `approved_with_limits` |
 | Source candidate intake | Completed `templates/source_candidate_intake.md` |
 | Sampling frame | Completed `templates/source_sampling_frame_template.csv` |
 | Source and field approval | Completed `templates/data_authorization_request.md` |
@@ -85,16 +87,18 @@ Use pseudonymous IDs such as `collector_01`, `ann_01`, `ann_02`, `rev_01`, and `
 
 Before touching real evidence:
 
-1. Complete `templates/data_authorization_request.md`.
-2. Complete source intake with `templates/source_candidate_intake.md`.
-3. Record the source in `governance/source-intake-register.md`.
-4. Build the sampling frame with `templates/source_sampling_frame_template.csv`.
-5. Record the approval summary in `governance/pilot-authorization-register.md`.
-6. Complete `docs/26-pilot-go-no-go-checklist.md`.
-7. Fill `templates/pilot_batch_work_order.md`.
-8. Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
-9. Confirm raw evidence storage outside git.
-10. Onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and `templates/annotator_onboarding_checklist.md`.
+1. Complete `docs/36-stakeholder-authorization-packet.md`.
+2. Complete `templates/stakeholder_authorization_decision_record.md`.
+3. Complete `templates/data_authorization_request.md`.
+4. Complete source intake with `templates/source_candidate_intake.md`.
+5. Record the source in `governance/source-intake-register.md`.
+6. Build the sampling frame with `templates/source_sampling_frame_template.csv`.
+7. Record the approval summary in `governance/pilot-authorization-register.md`.
+8. Complete `docs/26-pilot-go-no-go-checklist.md`.
+9. Fill `templates/pilot_batch_work_order.md`.
+10. Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
+11. Confirm raw evidence storage outside git.
+12. Onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and `templates/annotator_onboarding_checklist.md`.
 
 Stop if the decision is `no_go`, `pending`, or unclear.
 

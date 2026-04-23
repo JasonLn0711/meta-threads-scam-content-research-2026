@@ -27,7 +27,7 @@ The approval questions are:
 6. What is the retention/deletion rule?
 7. Can aggregate metrics and redacted examples be included in internal memos?
 
-The detailed kickoff memo is in `docs/25-stakeholder-pilot-kickoff.md`, and the authorization record template is `templates/data_authorization_request.md`.
+The detailed kickoff memo is in `docs/25-stakeholder-pilot-kickoff.md`, the approval packet is in `docs/36-stakeholder-authorization-packet.md`, and the authorization record templates are `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`.
 
 Once approval is recorded, we will run the pilot through the go/no-go checklist in `docs/26-pilot-go-no-go-checklist.md` and the real-pilot readiness review in `docs/35-real-pilot-readiness-review.md`.
 

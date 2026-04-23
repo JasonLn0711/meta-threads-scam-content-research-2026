@@ -416,9 +416,12 @@ For domain reviewers:
 
 Before real data work:
 
-- Record data authority in `governance/data-governance.md`.
+- Complete `docs/36-stakeholder-authorization-packet.md`.
+- Complete `templates/stakeholder_authorization_decision_record.md`.
 - Complete `templates/data_authorization_request.md`.
+- Record data authority in `governance/pilot-authorization-register.md`.
 - Pass `docs/26-pilot-go-no-go-checklist.md`.
+- Complete `templates/real_pilot_readiness_review.md`.
 - Decide what evidence can be stored in git, local storage, or private controlled folders.
 - Finalize redaction procedure.
 - Run annotator calibration and finalize adjudication process.
@@ -464,12 +467,14 @@ By the deadline, the repo should contain:
 | `docs/23-collection-and-redaction-sop.md` | Manual collection, redaction, OCR, link, and snapshot handling. |
 | `docs/24-annotator-training-and-calibration.md` | Training and agreement workflow before the pilot. |
 | `docs/25-stakeholder-pilot-kickoff.md` | Stakeholder-facing approval memo for real pilot data. |
+| `docs/36-stakeholder-authorization-packet.md` | Approval packet for source, field, storage, access, retention, and redaction decisions. |
 | `docs/26-pilot-go-no-go-checklist.md` | Required gate before real collection and annotation. |
 | `docs/35-real-pilot-readiness-review.md` | Integrated final readiness review before real collection. |
 | `data-contracts/thread_item_schema_v1.json` | Machine-readable item schema. |
 | `data-contracts/labeling_schema_v1.json` | Machine-readable label schema. |
 | `templates/annotation_sheet_template.csv` | Spreadsheet starter for manual review. |
 | `templates/data_authorization_request.md` | Source, field, retention, and redaction approval record. |
+| `templates/stakeholder_authorization_decision_record.md` | Stakeholder decision record for pilot approval or limits. |
 | `templates/real_pilot_readiness_review.md` | Fillable readiness decision record. |
 | `templates/collection_log_template.csv` | Per-item collection readiness and evidence-status log. |
 | `templates/redaction_checklist.md` | Redaction QA before annotation or sharing. |

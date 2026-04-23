@@ -81,6 +81,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 
 - source candidate intake is completed
 - source sampling frame is completed
+- stakeholder authorization decision record is completed
 - data owner or source category is identified
 - collection method is manual or stakeholder-provided
 - allowed fields are listed
@@ -88,6 +89,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 - redaction expectation is clear
 - retention rule is known
 - publication/demo restrictions are known
+- `templates/stakeholder_authorization_decision_record.md` has been completed
 - `templates/data_authorization_request.md` has been completed or linked from a governance decision
 - `templates/real_pilot_readiness_review.md` has been completed with `go` or `go_with_limits`
 
@@ -109,6 +111,8 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 - Source candidate intake template: `templates/source_candidate_intake.md`
 - Source sampling frame template: `templates/source_sampling_frame_template.csv`
 - Source intake register: `governance/source-intake-register.md`
+- Stakeholder authorization packet: `docs/36-stakeholder-authorization-packet.md`
+- Stakeholder authorization decision record: `templates/stakeholder_authorization_decision_record.md`
 - Collection and redaction SOP: `docs/23-collection-and-redaction-sop.md`
 - Authorization request template: `templates/data_authorization_request.md`
 - Authorization register: `governance/pilot-authorization-register.md`
