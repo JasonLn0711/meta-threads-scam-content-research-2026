@@ -12,6 +12,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_sampling_frame.csv` | Diagnostic 50-item pilot sampling frame. |
 | `threads_pilot_v1_2026-05_authorization_decision.md` | Stakeholder authorization decision record. |
 | `threads_pilot_v1_2026-05_data_authorization.md` | Field, storage, retention, and sharing authorization summary. |
+| `threads_pilot_v1_2026-05_controlled_launch_record.md` | Non-sensitive controlled launch record, including CIB API and automation authorization. |
 | `threads_pilot_v1_2026-05_go_no_go.md` | Go/no-go decision record. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
@@ -19,6 +20,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `../../docs/38-first-pilot-checkpoint-protocol.md` | Required first 10-15 item checkpoint protocol. |
 | `../../templates/pilot_checkpoint_review.md` | Checkpoint review template. |
 | `../../decision-log/0017-record-integrated-synthetic-launch-rehearsal.md` | Decision record preserving the controlled-launch gate after the synthetic rehearsal. |
+| `../../decision-log/0018-record-cib-api-and-automation-authorization.md` | Decision record for CIB-authorized API access and automation. |
 | `../../experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only launch rehearsal results. |
 
 ## Launch Status
@@ -29,10 +31,11 @@ Meaning:
 
 - The stakeholder outcome has been recorded as approved.
 - The project owner explicitly approved the requirement that exact source, storage, access, retention, and redaction limits be written into the launch record before collection.
-- The pilot is limited to 50 manually collected or stakeholder-provided Threads items.
-- No scraping, crawling, browser automation, bulk export, landing-page crawling, redirect-chain capture, profile review, or production scoring is approved.
+- The pilot remains limited to the first 50 Threads items before the decision memo, unless a later work order expands it.
+- CIB explicitly authorizes API access and all research-required automation under the controlled launch record.
+- Production scoring, public accusation, and legal fraud determinations are not approved.
 - Raw evidence must stay outside git.
-- Exact raw storage location, access list, and any sensitive source identifiers must be held in the approved controlled location, not in this repository.
+- Exact raw storage location, API credentials, automation logs, access list, and any sensitive source identifiers must be held in the approved controlled location, not in this repository.
 - The item-1 preflight must pass after local workspace initialization.
 - The pilot must pause after the first 10-15 collected or annotated rows for checkpoint review.
 - The integrated synthetic launch rehearsal is tooling evidence only; it does not authorize item 1.
