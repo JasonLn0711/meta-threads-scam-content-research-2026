@@ -105,6 +105,7 @@ By the next update on `2026-04-23`, the repo had these additional research asset
 - Source intake and sampling-frame package for evaluating candidate sources before collection.
 - Integrated real-pilot readiness review package tying source, governance, annotation, QA, and baseline gates together.
 - Stakeholder authorization packet and decision-record template for turning the next approval meeting into a recorded source decision.
+- Approved pilot launch packet with `go_with_limits` records under `governance/pilot-launch/`.
 
 The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
 

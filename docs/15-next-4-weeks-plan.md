@@ -19,13 +19,11 @@ Completed:
 - Source intake and sampling-frame package.
 - Integrated real-pilot readiness review package.
 - Stakeholder authorization packet and decision-record template.
+- Approved pilot launch packet with `go_with_limits` records.
 
 Not completed:
 
-- stakeholder authorization for real Threads evidence
-- approved source candidate and sampling frame
-- completed stakeholder authorization decision record
-- completed real-pilot readiness review
+- controlled launch record with exact source, storage, access, retention, and redaction limits outside git
 - real 50-item pilot collection
 - human annotation on real examples
 - real baseline evaluation
@@ -62,7 +60,7 @@ Deliverables:
 
 Goals:
 
-- Complete stakeholder authorization packet, go/no-go review, and real-pilot readiness review.
+- Complete controlled launch details for exact source, storage, access, retention, and redaction limits.
 - Run 5-item calibration.
 - Annotate the first authorized 50-item pilot batch if the gate passes.
 - Track disagreement and unclear fields.

@@ -8,7 +8,7 @@ This document is the integrated readiness gate. It does not replace the source i
 
 Default status: `not_ready`.
 
-As of `2026-04-23`, no real Threads evidence has been approved, collected, annotated, or committed. The repo is workflow-ready, but the real pilot is still blocked on source authorization, storage, access, retention, redaction, and sampling decisions.
+As of `2026-04-23`, the first real 50-item pilot has a `go_with_limits` launch packet under `governance/pilot-launch/`. No real Threads evidence has been collected, annotated, or committed. Collection remains blocked until exact source, storage, access, retention, and redaction limits are written into the controlled launch record outside git.
 
 ## When To Use This Review
 
@@ -164,12 +164,12 @@ The readiness review should confirm that the team will stop or pause if:
 
 | Area | Current status | Reason |
 |---|---|---|
-| Governance and authorization | `not_ready` | No approved real Threads source, fields, storage, access, retention, or redaction record yet. |
-| Source and sampling | `not_ready` | Source intake and sampling frame templates exist, but no approved source has been filled and accepted. |
-| Storage and redaction | `not_ready` | SOP exists, but no approved local raw-evidence storage plan has been recorded. |
+| Governance and authorization | `ready_with_limits` | Approval and launch packet recorded; exact controlled details required before first item. |
+| Source and sampling | `ready_with_limits` | Source category and sampling frame recorded; exact sensitive source details stay outside git. |
+| Storage and redaction | `ready_with_limits` | Storage category and redaction limits recorded; exact raw path/access list required outside git. |
 | Annotation operations | `ready_with_limits` | Guideline, onboarding, QA, and templates exist; real annotation waits on approved evidence. |
 | Baseline and evaluation | `ready_with_limits` | Scripts and protocols are dry-run tested on synthetic samples; real metrics wait on approved pilot data. |
-| Overall launch decision | `not_ready` | Governance and source gates are still blocking. |
+| Overall launch decision | `go_with_limits` | Use `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md`; no collection before controlled details are complete. |
 
 ## Launch Decision Rule
 

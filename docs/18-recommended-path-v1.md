@@ -14,11 +14,13 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: complete stakeholder pilot approval using `docs/36-stakeholder-authorization-packet.md`, `docs/25-stakeholder-pilot-kickoff.md`, and `templates/stakeholder_authorization_decision_record.md`; then pass `docs/26-pilot-go-no-go-checklist.md` and complete `docs/35-real-pilot-readiness-review.md` before real examples are collected.
+Immediate next action: complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git, then start the first 10-15 item checkpoint of the approved 50-item pilot.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
-If stakeholders approve the pilot and the readiness review ends in `go` or `go_with_limits`, execute it through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `templates/pilot_batch_work_order.md`, and `templates/pilot_result_summary.md`.
+The stakeholder outcome has been reported as approved. The launch packet is recorded under `governance/pilot-launch/` with status `go_with_limits`.
+
+Execute the pilot through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`.
 
 Before any pilot labels are treated as baseline-ready, onboard annotators with [30-annotator-onboarding-quickstart.md](30-annotator-onboarding-quickstart.md) and run QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 

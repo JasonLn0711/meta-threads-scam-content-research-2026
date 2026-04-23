@@ -111,5 +111,5 @@ By 2026-04-30:
 1. Complete report-v0 review using `reports/report-v0-review-checklist.md`.
 2. Collect reviewer comments with `templates/report_review_feedback.md`.
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
-4. Record whether stakeholders approve the pilot, approve with limits, or decline.
-5. If approved, complete the stakeholder authorization decision record, data authorization record, go/no-go checklist, and real-pilot readiness review before real collection.
+4. Record that the stakeholder outcome is approved with bounded launch limits.
+5. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits before real collection.

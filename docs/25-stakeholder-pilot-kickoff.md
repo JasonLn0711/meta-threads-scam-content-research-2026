@@ -6,7 +6,11 @@ This memo is the stakeholder-facing kickoff packet for the first Threads scam-co
 
 ## Current Position As Of 2026-04-23
 
-The pilot kickoff is not the immediate deliverable. The immediate deliverable is the CIB/165-facing report:
+The stakeholder outcome has now been recorded as approved for bounded pilot launch preparation. The launch status is `go_with_limits`, with non-sensitive records under `governance/pilot-launch/`.
+
+The remaining pre-collection action is not another approval meeting. It is completing the controlled launch record with exact source, storage, access, retention, and redaction limits outside git.
+
+The CIB/165-facing report remains the main external-facing deliverable:
 
 ```text
 reports/threads-scam-content-research-v0.md
@@ -14,13 +18,14 @@ reports/threads-scam-content-research-v0.md
 
 Target date: `2026-04-30`.
 
-First-principles order:
+Updated order:
 
-1. Write the report v0 to define the problem, scope, dataset plan, annotation plan, baselines, evaluation, budget fit, and approval gates.
-2. Use the report to align stakeholders on what counts as report-worthy Threads scam-like content.
-3. Only then run this pilot kickoff to request permission for real examples and annotation.
+1. Keep the report v0 as the external-facing research artifact.
+2. Use the approved pilot launch packet to complete exact controlled launch details.
+3. Start the first 10-15 item pilot checkpoint.
+4. Pause and review redaction, source skew, annotation clarity, and evidence completeness before completing all 50 items.
 
-Do not treat this pilot memo as authorization by itself.
+Do not treat this pilot memo as authorization by itself. Use the launch records and controlled details instead.
 
 ## Request
 
@@ -135,4 +140,4 @@ Pause the pilot if:
 
 ## Immediate Next Action
 
-Complete `docs/36-stakeholder-authorization-packet.md` for the first real source. If the decision is `approved` or `approved_with_limits`, fill `templates/stakeholder_authorization_decision_record.md`, update the governance registers, then continue through `docs/26-pilot-go-no-go-checklist.md`, `templates/pilot_batch_work_order.md`, and `docs/35-real-pilot-readiness-review.md`.
+Complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git. Then begin the first 10-15 item checkpoint using `docs/37-approved-pilot-launch-plan.md`.

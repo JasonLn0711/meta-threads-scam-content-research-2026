@@ -2,25 +2,22 @@
 
 ## Current Status
 
-As of `2026-04-23`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, and a completed synthetic validation/audit/baseline dry run.
+As of `2026-04-23`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, a completed synthetic validation/audit/baseline dry run, and an approved 50-item pilot launch packet.
 
-The remaining blocker before real data work is stakeholder approval of source, fields, storage, access, retention, screenshot/link handling, and redaction rules. The dry run used synthetic examples only and does not answer any legal, policy, or evidence-sharing question below.
+The remaining blocker before real data work is controlled launch detail: exact source, storage, access, retention, screenshot/link handling, and redaction limits must be written into the controlled launch record outside git. The dry run used synthetic examples only and does not answer any real-data evidence question below.
 
 ## Pilot Kickoff Questions
 
-These questions must be answered before the first real 50-item pilot batch:
+The approval decision has been recorded at the pilot level. These controlled-launch questions must still be answered before the first real item:
 
-- Which source type is approved first: stakeholder-provided cases, manually identified public examples, API-authorized examples, or another approved source?
-- What is the stakeholder authorization decision: `approved`, `approved_with_limits`, `revise_request`, or `rejected_or_paused`?
-- Which fields may be retained in annotation files?
-- May screenshots be retained, and must they be redacted before annotation?
-- May source URLs or visible links be stored, normalized, redacted, or omitted?
-- Who may access raw evidence?
-- What retention/deletion rule applies to raw evidence and derived annotation files?
-- Can aggregate metrics and redacted examples appear in internal memos?
-- Who is the final owner for `go`, `no_go`, or `go_with_limits` on the pilot?
+- What exact source or source list is approved, recorded outside git if sensitive?
+- What exact raw-storage location is approved outside git?
+- Who exactly may access raw evidence and derived annotation files?
+- What exact retention/deletion rule applies to raw evidence and derived annotation files?
+- What exact screenshot, URL, link, handle, and OCR redaction limits apply?
+- Who confirms the controlled launch record before item 1?
 
-Use `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md` to turn these answers into a recorded decision.
+Use `governance/pilot-launch/` as the non-sensitive index. Put sensitive exact values only in the approved controlled location.
 
 ## Criminal Investigation Stakeholders
 

@@ -13,6 +13,7 @@ annotation_qa_checklist.md
 annotator_onboarding_checklist.md
 adjudication_template.md
 collection_log_template.csv
+controlled_launch_details_template.md
 data_authorization_request.md
 dataset_manifest_template.md
 experiment_log_template.md
@@ -42,5 +43,7 @@ Use `source_candidate_intake.md` and `source_sampling_frame_template.csv` before
 Use `stakeholder_authorization_decision_record.md` with `docs/36-stakeholder-authorization-packet.md` to record source, field, storage, access, retention, redaction, and sharing decisions.
 
 Use `real_pilot_readiness_review.md` as the final owner-facing readiness record before any real 50-item pilot begins.
+
+Use `controlled_launch_details_template.md` only in a controlled location outside git after filling it with exact source, storage, access, retention, or redaction details.
 
 Do not put real Threads evidence, raw screenshots, credentials, browser exports, or stakeholder case material in templates.

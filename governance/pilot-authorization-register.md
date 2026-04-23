@@ -11,7 +11,7 @@ This file is a governance index, not a place for sensitive details. Do not paste
 | Date | Scope | Status | Notes |
 |---|---|---|---|
 | 2026-04-23 | Synthetic examples for templates, calibration, and tooling dry runs | `approved_synthetic_only` | No real Threads evidence, no personal data, no live URLs, no raw screenshots. |
-| 2026-04-23 | Real 50-item Threads pilot | `pending` | Requires stakeholder authorization decision record, authorization request, go/no-go checklist, and real-pilot readiness review before collection. |
+| 2026-04-23 | Real 50-item Threads pilot | `approved_with_limits` | Launch packet recorded; exact source, storage, access, retention, and redaction limits must be completed in controlled record before collection. |
 | 2026-04-23 | Immediate 500-item real collection without limitations | `rejected_or_paused` | Unlimited collection is not a valid authorization state. Use `docs/32-500-item-expansion-plan.md`. |
 
 ## Authorization Levels
@@ -29,7 +29,7 @@ This file is a governance index, not a place for sensitive details. Do not paste
 | Request ID | Date | Source type | Collection method | Approved fields summary | Raw storage | Retention | Status | Decision owner | Notes |
 |---|---|---|---|---|---|---|---|---|---|
 | SYNTH-2026-04-23 | 2026-04-23 | researcher_synthetic | synthetic | synthetic sample fields only | git-safe samples only; generated outputs ignored | keep as non-evidence templates | `approved_synthetic_only` | project owner | Used for dry-run QA. |
-| PILOT-TBD |  |  |  |  |  |  | `pending` |  | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md` before changing status. |
+| AUTH-THREADS-PILOT-V1-2026-04-23 | 2026-04-23 | stakeholder/manual public source category | manual only | post text, selected replies, OCR excerpts, redacted screenshot references, normalized/redacted links, redacted handles, visible redirects, metadata notes | controlled location outside git; exact path outside repo | pilot-only; review after decision memo | `approved_with_limits` | project owner | `go_with_limits`; exact source/storage/access/retention/redaction launch record required before first item. |
 | EXPAND-500-UNLIMITED-2026-04-23 | 2026-04-23 | unspecified | unspecified/unlimited | "all fields" requested, not accepted | unspecified | unspecified | `rejected_or_paused` | project owner | Replaced with staged expansion plan and work order. |
 
 ## Decision Summary Template

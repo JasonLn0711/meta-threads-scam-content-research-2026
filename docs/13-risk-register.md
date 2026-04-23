@@ -2,11 +2,12 @@
 
 ## Current Risk Posture
 
-As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry run, but data authorization risk remains active and blocking. No real Threads evidence should be collected until the pilot authorization, go/no-go gate, and real-pilot readiness review pass.
+As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry run and stakeholder approval has been recorded for bounded pilot launch preparation. The active blocker is now controlled launch detail: no real Threads evidence should be collected until exact source, storage, access, retention, and redaction limits are written outside git.
 
 | Risk | Why it matters | Likelihood | Impact | Mitigation |
 |---|---|---:|---:|---|
-| Data access risk | Threads data access may be limited or legally constrained. | High | High | Start with manual/stakeholder samples; record authorization before automation. |
+| Controlled launch-detail risk | Source, storage, access, retention, or redaction details may remain incomplete or too sensitive for git. | High | High | Complete controlled launch record outside git before first item. |
+| Data access risk | Threads data access may be limited or legally constrained. | Medium | High | Use only approved manual/stakeholder samples; no automation. |
 | Annotation inconsistency | Reviewers may disagree on ambiguous finance or marketing content. | High | High | Use clear labels, second review, disagreement logs, and guideline revisions. |
 | Legal and ethical risk | Mishandled data could expose personal information or investigative material. | Medium | High | Follow data governance, minimize personal data, store raw material outside git. |
 | Scope creep | Project may expand into all Meta platforms, video, or production tooling. | High | High | Use decision logs and budget-fit checks before expanding. |

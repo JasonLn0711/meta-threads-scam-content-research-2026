@@ -14,9 +14,11 @@ As of `2026-04-23`:
 - schema validation, audit, conversion, and rule-baseline scripts have been tested on synthetic records
 - report-v0 review package exists
 - pilot governance package exists
-- no real Threads evidence has been approved or collected
+- approved pilot launch packet exists under `governance/pilot-launch/`
+- launch status is `go_with_limits`
+- no real Threads evidence has been collected
 
-Default status remains `no_go` for real examples until authorization is recorded.
+Default collection status remains paused until exact source, storage, access, retention, and redaction limits are written into the controlled launch record outside git.
 
 ## Activation Criteria
 
@@ -38,6 +40,8 @@ Begin this execution plan only when all of the following are true:
 | Retention | Deletion or retention rule recorded |
 
 If any gate is incomplete, use only synthetic or fully redacted examples.
+
+For the current approved pilot, the non-sensitive launch records are under `governance/pilot-launch/`. Exact sensitive source and storage/access details should remain outside git.
 
 ## Pilot Batch Identity
 
@@ -85,7 +89,7 @@ Use pseudonymous IDs such as `collector_01`, `ann_01`, `ann_02`, `rev_01`, and `
 
 ### Step 1: Confirm Authorization
 
-Before touching real evidence:
+Before touching real evidence for a new pilot:
 
 1. Complete `docs/36-stakeholder-authorization-packet.md`.
 2. Complete `templates/stakeholder_authorization_decision_record.md`.
@@ -101,6 +105,8 @@ Before touching real evidence:
 12. Onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and `templates/annotator_onboarding_checklist.md`.
 
 Stop if the decision is `no_go`, `pending`, or unclear.
+
+For the current approved pilot, use `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md` and first complete the controlled launch details outside git.
 
 ### Step 2: Prepare Local Files
 

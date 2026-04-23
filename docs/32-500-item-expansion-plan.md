@@ -28,7 +28,7 @@ The correct path is staged expansion.
 | Gate | Required before moving forward | Decision |
 |---|---|---|
 | Synthetic dry run | validation, audit, conversion, and rule baseline succeed on safe sample | complete |
-| Authorization gate | source, fields, storage, access, retention, redaction, and sharing limits recorded | pending |
+| Authorization gate | source, fields, storage, access, retention, redaction, and sharing limits recorded | approved with limits for 50-item pilot only |
 | 50-item pilot | real pilot collected and annotated under approved limits | not started |
 | Pilot QA | label agreement, audit, disagreement, and baseline review completed | not started |
 | 100-200 item first usable batch | guideline/schema revised after pilot and expanded dataset annotated | not started |
@@ -248,4 +248,4 @@ Pause before or during 500-item expansion if:
 
 The project may plan for a 500-item expansion, but it must not collect 500 real items until the staged gates are completed.
 
-The immediate next action remains stakeholder authorization for the first real 50-item pilot.
+The immediate next action is to complete controlled launch details and run the first 50-item pilot checkpoint. The 500-item expansion remains unavailable until pilot results and intermediate expansion gates justify it.

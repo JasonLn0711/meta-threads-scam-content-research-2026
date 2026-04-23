@@ -57,13 +57,13 @@ Examples:
 
 ## Current Authorization Status
 
-As of repo initialization, there is no recorded approval for automated Threads or Meta collection.
+As of `2026-04-23`, the first real 50-item Threads pilot is approved for bounded launch preparation under `go_with_limits`.
 
 Phase-1 work should assume:
 
-- Manual or semi-manual sample collection only.
-- Stakeholder-provided examples only if they can be legally shared.
-- No crawler, scraper, browser automation, or bulk collection pipeline.
+- Manual or stakeholder-provided sample collection only.
+- Exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before the first item.
+- No crawler, scraper, browser automation, bulk collection pipeline, redirect expansion, landing-page capture, profile review, or production scoring.
 
 ## Authorization Levels
 
@@ -98,8 +98,8 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | Method | Current status | Notes |
 |---|---|---|
 | Synthetic examples | Allowed | Use only for templates and tooling tests. |
-| Stakeholder-provided examples | Conditional | Requires sharing, redaction, retention, and use approval. |
-| Manual public examples | Conditional | Requires documented permission/terms comfort and privacy minimization. |
+| Stakeholder-provided examples | Approved with limits for the 50-item pilot | Exact source, storage, access, retention, and redaction limits required before first item. |
+| Manual public examples | Approved with limits for the 50-item pilot | Manual-only, privacy-minimized, no automation. |
 | API-authorized collection | Not currently approved | Must be recorded before use. |
 | Browser automation, scraping, crawling, bulk export | Not approved | Do not add scripts or outputs for this. |
 | Landing-page crawling or redirect-chain capture | Not approved | Visible links may be recorded if permitted; do not crawl destinations. |

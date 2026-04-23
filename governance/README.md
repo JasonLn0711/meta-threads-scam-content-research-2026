@@ -7,7 +7,9 @@ This folder records data handling, authorization, privacy, platform, and evidenc
 As of `2026-04-23`:
 
 - synthetic examples are approved for templates, calibration, and tooling dry runs
-- no real Threads evidence has been approved for collection
+- the first real 50-item Threads pilot is approved for bounded launch preparation under `go_with_limits`
+- no real Threads evidence has been collected or committed
+- exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before the first item
 - no automated collection, scraping, crawling, browser automation, bulk export, landing-page crawling, or redirect expansion is approved
 - raw evidence must not be committed to git
 
@@ -18,22 +20,17 @@ As of `2026-04-23`:
 | `data-governance.md` | Main data-handling policy and collection boundary. |
 | `source-intake-register.md` | Candidate source review before authorization and collection. |
 | `pilot-authorization-register.md` | Register of pilot source approvals, pending requests, and decisions. |
+| `pilot-launch/` | Non-sensitive launch records for the approved 50-item pilot. |
 
 ## Required Before Real Pilot Data
 
-Before the 50-item pilot begins:
+Before the first real item is collected:
 
-1. Complete `docs/36-stakeholder-authorization-packet.md`.
-2. Complete `templates/source_candidate_intake.md`.
-3. Build `templates/source_sampling_frame_template.csv`.
-4. Complete `templates/stakeholder_authorization_decision_record.md`.
-5. Complete `templates/data_authorization_request.md`.
-6. Record the candidate in `source-intake-register.md`.
-7. Record the decision in `pilot-authorization-register.md`.
-8. Complete `docs/26-pilot-go-no-go-checklist.md`.
-9. Complete `templates/pilot_batch_work_order.md`.
-10. Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
-11. Confirm raw evidence storage outside git.
-12. Confirm redaction, access, retention, and sharing rules.
+1. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git using `templates/controlled_launch_details_template.md` as the blank structure.
+2. Confirm raw evidence storage outside git.
+3. Confirm redaction, access, retention, and sharing rules.
+4. Confirm collector, annotator, reviewer, adjudicator, and research engineer IDs.
+5. Create local-only files under ignored `data/interim/`.
+6. Start with the first 10-15 item checkpoint before completing all 50 items.
 
 If any item is unresolved, the project remains synthetic-only.

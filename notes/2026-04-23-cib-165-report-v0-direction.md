@@ -78,6 +78,8 @@ By later on `2026-04-23`, the Threads repo had advanced beyond the initial repor
 - Source intake and sampling-frame docs, templates, and register were added.
 - Integrated real-pilot readiness review docs and template were added.
 - Stakeholder authorization packet and decision-record template were added.
+- The stakeholder outcome was recorded as approved for bounded pilot launch preparation.
+- The approved pilot launch packet was added under `governance/pilot-launch/`.
 
 The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not data-ready until stakeholders approve the source, fields, raw-evidence storage, screenshot/link handling, access, retention, and redaction rules.
 
@@ -104,20 +106,15 @@ These are workflow QA numbers only, not real Threads performance claims.
 
 ## Current Blocker
 
-The next real research step is stakeholder approval:
+The stakeholder outcome is now recorded as approved for bounded launch preparation. The current blocker is controlled launch detail:
 
-1. Review `reports/threads-scam-content-research-v0-executive-brief.md`.
-2. Complete `reports/report-v0-review-checklist.md`.
-3. Collect comments using `templates/report_review_feedback.md`.
-4. Record pilot authorization using `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, and `templates/data_authorization_request.md`.
-5. Run `docs/26-pilot-go-no-go-checklist.md`.
-6. If approved, complete `templates/pilot_batch_work_order.md` and execute `docs/29-authorized-pilot-execution-plan.md`.
-7. Before annotation, onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and run QA with `docs/31-annotation-quality-control-plan.md`.
-8. Use `docs/32-500-item-expansion-plan.md` only after the 50-item pilot and 100-200 item first usable batch justify expansion.
-9. After the 50-item pilot, use `docs/33-pilot-analysis-and-decision-framework.md` and `templates/pilot_decision_memo.md` to decide whether to expand, revise, narrow, or pause.
-10. Before any real source is authorized, complete `templates/source_candidate_intake.md` and `templates/source_sampling_frame_template.csv`.
-11. Use `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md` to record the stakeholder decision.
-12. Before any real collection starts, complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
+1. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git.
+2. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
+3. Create local-only files under ignored `data/interim/`.
+4. Begin the first 10-15 item checkpoint before completing all 50 pilot items.
+5. Before annotation, onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and run QA with `docs/31-annotation-quality-control-plan.md`.
+6. After the 50-item pilot, use `docs/33-pilot-analysis-and-decision-framework.md` and `templates/pilot_decision_memo.md` to decide whether to expand, revise, narrow, or pause.
+7. Use `docs/32-500-item-expansion-plan.md` only after the 50-item pilot and 100-200 item first usable batch justify expansion.
 
 Until that gate passes, use only synthetic or fully redacted examples.
 
