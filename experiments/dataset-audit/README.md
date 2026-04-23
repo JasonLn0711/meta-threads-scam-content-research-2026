@@ -2,6 +2,13 @@
 
 Use this folder for first-batch dataset audits before baseline experiments. The audit should be lightweight and evidence-focused.
 
+## Current Logs
+
+| Audit | Purpose |
+|---|---|
+| `0001-pilot-audit-protocol.md` | Protocol for auditing the authorized 50-item pilot before baseline work. |
+| `0002-synthetic-sample-audit-dry-run.md` | Synthetic-only dry run confirming validation, conversion, and audit behavior. |
+
 ## Required Checks
 
 ### Class Balance

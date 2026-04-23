@@ -16,6 +16,8 @@ Build a phase-1 research MVP for Threads scam-like content triage.
 
 Immediate next action: complete stakeholder pilot approval using `docs/25-stakeholder-pilot-kickoff.md`, then pass `docs/26-pilot-go-no-go-checklist.md` before real examples are collected.
 
+The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
+
 The MVP should include:
 
 - Structured dataset schema.

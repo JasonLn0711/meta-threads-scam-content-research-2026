@@ -8,6 +8,11 @@ Use:
 - `modality-studies/` for text versus OCR, comments, image text, and link-signal comparisons.
 - `evaluation-notes/` for error analysis, reviewer burden studies, and metric summaries.
 
+Current dry-run artifacts:
+
+- `dataset-audit/0002-synthetic-sample-audit-dry-run.md`
+- `baselines/0002-synthetic-rule-baseline-dry-run.md`
+
 Each experiment must state:
 
 - Hypothesis

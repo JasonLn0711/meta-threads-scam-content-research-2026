@@ -6,6 +6,8 @@ Start with transparent, low-cost baselines that directly use the v1 dataset fiel
 
 Do not add heavy models, automated collection, long-video processing, or production scoring before the first annotated dataset slice proves that the basic evidence signals are useful.
 
+The synthetic dry run recorded in `docs/28-synthetic-pilot-dry-run-results.md` confirms that the local baseline scripts can compare the planned evidence fields. It does not establish real-world performance and should not be cited as a result on real Threads content.
+
 ## Dataset Fields Used
 
 | Evidence field | Baseline use |
@@ -63,6 +65,12 @@ evidence_sufficiency != sufficient
 ```
 
 These rules should be recorded as experiment artifacts before being tuned.
+
+The first synthetic dry run led to a small v1 rule calibration:
+
+- guaranteed-profit plus unrealistic-benefit evidence maps to high risk
+- redirect plus proof/authority plus urgency maps to high risk
+- generic "before and after" wording is not a testimonial/earnings signal by itself
 
 ## First Baseline-Ready Slice
 
