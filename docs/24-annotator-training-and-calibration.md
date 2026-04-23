@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document defines how to prepare annotators before the 50-item pilot. It gives the project a measurable way to decide whether the annotation guideline is ready, whether reviewers need more examples, and whether the taxonomy is too broad.
+This document defines how to prepare annotators before real annotation volume begins. It gives the project a practical way to decide whether the annotation guideline is ready, whether reviewers need more examples, and whether the taxonomy is too broad.
 
-Calibration is required before the first real pilot batch. It should use synthetic or redacted examples only unless data authorization is complete.
+Calibration is required before the first real pilot batch and before continuing beyond the first 10-15 item checkpoint. It should use synthetic or redacted examples only unless data authorization and controlled launch details are complete.
 
 Participants:
 
@@ -21,7 +21,7 @@ Annotators must read the required materials before they see the blind calibratio
 2. Read `docs/30-annotator-onboarding-quickstart.md`.
 3. Complete `templates/annotator_onboarding_checklist.md`.
 4. Review `docs/04-taxonomy.md` and `data-contracts/labeling_schema_v1.json`.
-5. Walk through the five synthetic examples in `templates/thread_item_sample_batch.json`.
+5. Walk through the five synthetic examples in `data/samples/thread_item_sample_batch.csv`.
 6. Discuss the expected labels and evidence notes.
 7. Run one blind calibration pass on five synthetic/redacted items.
 8. Compare annotation passes with `scripts/compare_annotation_passes.py`.
@@ -103,20 +103,13 @@ For a committed synthetic example of what blind calibration looks like, see:
 
 ## Agreement Targets
 
-Do not treat these as hard scientific thresholds on a tiny calibration set. They are practical readiness gates.
+Do not use fake precision on a five-item calibration set. Agreement summaries can count exact matches and list disagreements, but the decision should come from disagreement patterns and adjudication notes.
 
-| Measure | Ready to proceed | Pause and revise |
-|---|---:|---:|
-| `scam_label` agreement | at least 0.80 | below 0.70 |
-| `risk_level` agreement | at least 0.70 | below 0.60 |
-| `evidence_sufficiency` agreement | at least 0.70 | below 0.60 |
-| Mean `scam_type` Jaccard | at least 0.60 | below 0.50 |
-| Mean `signal_tags` Jaccard | at least 0.50 | below 0.40 |
-
-Kappa can be reported, but it is unstable for five examples. Use disagreement patterns and adjudication notes as the main signal.
+Kappa or other formal statistics are not meaningful for five examples and should not be used as the pass/fail basis.
 
 Minimum qualitative expectations before real pilot annotation:
 
+- annotators match on obvious benign and obvious high-risk examples
 - both annotators can explain every `scam`, `uncertain`, `non_scam`, and `insufficient_evidence` choice from collected evidence only
 - primary-label disagreements are isolated and adjudicable
 - annotators do not use `uncertain` as a substitute for missing evidence

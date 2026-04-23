@@ -11,9 +11,11 @@ The goal is to prevent the first real dataset from becoming source-skewed, priva
 As of `2026-04-23`:
 
 - synthetic examples are approved for dry runs
-- no real Threads source has been approved
+- no real Threads item has been collected or committed
+- the first real pilot is approved only for bounded `go_with_limits` launch preparation
+- exact sensitive source, storage, access, retention, and redaction details still must be completed outside git before item 1
 - immediate unlimited 500-item collection is rejected or paused
-- the next valid real-data step is a scoped 50-item pilot
+- the next valid real-data step is the first 10-15 item checkpoint inside the conditional 50-item pilot
 
 ## Source Intake Principle
 
@@ -88,7 +90,7 @@ Red authorization or red privacy means no real collection from that source.
 
 ## 50-Item Pilot Sampling Frame
 
-The 50-item pilot is diagnostic, not a prevalence sample.
+The 50-item pilot is diagnostic, not a prevalence sample. Do not complete it in one uninterrupted pass; the first 10-15 items must be reviewed before continuation.
 
 Target label buckets:
 
@@ -178,4 +180,3 @@ Before collection begins:
 6. Raw evidence storage and redaction rules are confirmed.
 
 If any item is missing, do not collect real evidence.
-

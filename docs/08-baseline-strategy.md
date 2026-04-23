@@ -119,4 +119,4 @@ Add a simple text classifier only after:
 - there are enough `scam` and `non_scam` examples to hold out an audit set
 - rule failures show patterns that a model might reasonably capture
 
-LLM-assisted review may be tested on a small sample for explanation quality, but it should not replace human labels or process sensitive data without approval.
+Model-assisted review is not part of the current Phase 1 launch. Revisit it only after governed real evidence exists, labels are stable, and a later decision record explicitly authorizes the scope.

@@ -11,7 +11,6 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Small manually reviewed dataset of 100 to 500 items across phases.
 - Lightweight OCR integration for approved images.
 - Simple keyword and rule baselines.
-- Small LLM-assisted review experiments.
 - Evaluation memos, error analysis, and narrowing recommendations.
 - Minimal scripts for schema validation and metrics.
 
@@ -43,6 +42,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Deepfake indicators until there is a concrete stakeholder sample and expert review path.
 - Automated collection until authorized.
 - Classifier training until labels are stable.
+- LLM-assisted review until Phase 1 produces governed real evidence and a later decision record authorizes that scope.
 - Dashboard or web app until reviewer workflow is proven.
 
 ## Ranked ROI
@@ -56,7 +56,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 | 5 | OCR augmentation | High | Medium | Add after text baseline |
 | 6 | Comment/reply context | High | Medium | Sample and compare |
 | 7 | Visible link/redirection features | High | Medium | Include without crawling |
-| 8 | LLM-assisted explanations | Medium | Medium | Test on small subset |
+| 8 | Later model-assisted explanations | Medium | Medium | Defer until separately authorized |
 | 9 | Text classifier | Medium | Medium to high | Wait for more labels |
 | 10 | Short video study | Medium | High | Later only if necessary |
 | 11 | Long video analysis | Low | High | Defer |

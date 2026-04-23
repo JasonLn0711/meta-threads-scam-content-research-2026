@@ -4,7 +4,7 @@ Experiments must be narrow, documented, and decision-oriented.
 
 Use:
 
-- `baselines/` for keyword, rule, classifier, and LLM-assisted baseline logs.
+- `baselines/` for keyword and rule baseline logs.
 - `modality-studies/` for text versus OCR, comments, image text, and link-signal comparisons.
 - `evaluation-notes/` for error analysis, reviewer burden studies, and metric summaries.
 

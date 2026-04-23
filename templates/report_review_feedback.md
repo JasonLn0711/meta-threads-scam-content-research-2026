@@ -53,6 +53,8 @@ Use one row per issue. Severity values: `blocker`, `required_revision`, `clarifi
 | Are screenshot and redaction limits clear? | `yes` / `no` |  |
 | Are URL/link handling limits clear? | `yes` / `no` |  |
 | Are access and retention decisions explicit enough? | `yes` / `no` |  |
+| Are controlled launch details outside git clearly required before item 1? | `yes` / `no` |  |
+| Are workspace initialization and item-1 preflight clear? | `yes` / `no` |  |
 
 ## Dataset And Annotation Review
 
@@ -63,6 +65,8 @@ Use one row per issue. Severity values: `blocker`, `required_revision`, `clarifi
 | Are `uncertain` and `insufficient_evidence` distinct enough? | `yes` / `no` |  |
 | Are risk levels and signal tags useful for pilot review? | `yes` / `no` |  |
 | Is the 50-item pilot composition defensible? | `yes` / `no` |  |
+| Is the 10-15 item checkpoint clear as a gate before completing 50? | `yes` / `no` |  |
+| Are rehearsal and calibration steps clear enough to execute? | `yes` / `no` |  |
 
 ## Baseline And Evaluation Review
 
@@ -94,4 +98,3 @@ Limits or required conditions:
 ```text
 
 ```
-

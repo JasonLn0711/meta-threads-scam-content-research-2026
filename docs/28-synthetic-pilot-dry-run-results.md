@@ -113,7 +113,7 @@ These are conservative baseline changes. They do not add automation, crawling, o
 
 ## What This Proves
 
-The repo is ready to run a local, governed pilot workflow once real data authorization exists:
+The repo is ready to run local governed pilot tooling once real data authorization and controlled launch details exist:
 
 - schema validation works on CSV and JSON
 - CSV-to-JSONL conversion works
@@ -135,6 +135,8 @@ This dry run does not prove:
 
 ## Decision
 
-Proceed to stakeholder report review and pilot authorization. Do not collect real examples until `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, and `templates/real_pilot_readiness_review.md` are completed.
+This historical dry run supported stakeholder report review and pilot authorization preparation. It is now superseded operationally by `experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md`.
 
-After authorization, repeat the same workflow on the 50-item pilot and record the result under `experiments/dataset-audit/` and `experiments/baselines/`.
+Do not collect real examples from this result alone. The current next step is to complete the controlled launch record outside git, initialize the local workspace, pass item-1 preflight, rehearse 1-2 manual records, complete 5-item calibration, and pause after the first 10-15 real items for checkpoint review.
+
+Only after that checkpoint supports continuation should the team complete the 50-item pilot and record aggregate results under `experiments/dataset-audit/` and `experiments/baselines/`.

@@ -4,7 +4,7 @@
 
 The phase-1 experiment program should determine which low-cost signals improve human-review-oriented triage for Threads scam-like content.
 
-The first program should start with a 5-item calibration and 50-item pilot, then use a manually reviewed first usable slice of 100-200 items after pilot review. If annotation capacity is limited, 100-150 high-quality items are preferable to a larger noisy slice.
+The first program should start with controlled launch details, local workspace preflight, 1-2 manual rehearsal records, 5-item calibration, and a first 10-15 item checkpoint before completing the conditional 50-item pilot. A manually reviewed 100-200 item slice is only a later option after pilot review. If annotation capacity is limited, fewer high-quality governed items are preferable to a larger noisy slice.
 
 ## Experiment A: Text-Only vs Text Plus OCR
 
@@ -30,17 +30,14 @@ The first program should start with a 5-item calibration and 50-item pilot, then
 | Failure modes | Comments are noisy, unrelated, or too time-consuming to annotate. |
 | Decision implications | Include comments in MVP if they materially improve triage for report-worthy cases. |
 
-## Experiment C: Rule-Based vs LLM-Assisted vs Hybrid
+## Deferred Experiment C: Model-Assisted Explanation
 
 | Field | Plan |
 |---|---|
-| Hypothesis | A hybrid approach gives better review support than either rules or LLM assistance alone. |
-| Data needed | Annotated sample with explainable reasons and uncertainty labels. |
-| Method | Compare rule baseline, LLM-assisted structured reasoning, and rules plus LLM for ambiguous cases. |
-| Output | Risk tier, reasons, uncertainty, and review recommendation. |
-| Metrics | Precision, recall, explanation quality, consistency, cost per 100 items, reviewer acceptance. |
-| Failure modes | LLM overstates certainty, inconsistent reasoning, privacy concerns, cost growth. |
-| Decision implications | Use LLM only where it improves explanation or ambiguity handling enough to justify cost. |
+| Current status | Not part of the governed Phase 1 launch. |
+| Prerequisites | Governed real evidence, stable labels, completed pilot decision memo, and a later decision record that explicitly authorizes model-assisted testing. |
+| Failure modes | Overstated certainty, inconsistent reasoning, privacy concerns, cost growth, and scope drift before manual evidence operations are stable. |
+| Decision implications | Revisit only after Phase 1 answers the manual collection, annotation, redaction, and baseline-readiness questions. |
 
 ## Experiment D: Binary Classification vs Risk Triage
 
@@ -73,8 +70,7 @@ The first program should start with a 5-item calibration and 50-item pilot, then
 3. Add OCR and compare.
 4. Add comments/replies and compare.
 5. Add visible link/redirection signals and compare.
-6. Test LLM-assisted explanation on a small subset.
-7. Write an error analysis and narrowing memo.
+6. Write an error analysis and narrowing memo.
 
 ## Minimum Experiment Output
 

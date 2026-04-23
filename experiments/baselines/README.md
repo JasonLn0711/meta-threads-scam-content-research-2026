@@ -1,8 +1,8 @@
 # Baseline Experiments
 
-Use this directory for keyword, rule, OCR-augmented, classifier, LLM-assisted, and hybrid triage experiment logs.
+Use this directory for keyword, rule, and OCR/reply/link-signal baseline experiment logs.
 
-Start with simple text rules before adding heavier methods.
+Start with simple text rules. Do not add classifier, model-assisted, or hybrid baselines until governed real evidence, stable labels, and a later decision record justify that scope.
 
 ## Current Logs
 

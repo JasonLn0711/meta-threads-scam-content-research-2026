@@ -14,12 +14,14 @@
 
 The next useful research step is a governed Threads-only pilot, not a production detector.
 
-Approve a small, manually reviewed phase-1 pilot only after source authorization, redaction rules, access rules, retention rules, and annotator calibration are recorded. The recommended path is:
+Approve a small, manually reviewed phase-1 pilot only after source authorization, redaction rules, access rules, retention rules, controlled launch details, and annotator calibration are recorded. The recommended path is:
 
-1. Run a 5-item synthetic or redacted annotation calibration.
-2. If calibration passes, collect and annotate a 50-item authorized pilot batch.
-3. Use the pilot to revise the annotation guide, data schema, and baseline rules.
-4. Expand to 100-200 items only after the pilot shows that labels, evidence fields, and review workflow are stable enough.
+1. Complete controlled launch details outside git and initialize the local workspace.
+2. Rehearse 1-2 manually prepared records and run a 5-item annotation calibration.
+3. Collect only the first 10-15 real items for checkpoint review.
+4. Continue to the conditional 50-item pilot only if the checkpoint permits it.
+5. Use the pilot to revise the annotation guide, data schema, and baseline rules.
+6. Expand to 100-200 items only after the pilot shows that labels, evidence fields, and review workflow are stable enough.
 
 This keeps the project useful under budget while avoiding unsupported claims about legal fraud, automated enforcement, or platform-scale detection.
 
@@ -45,6 +47,7 @@ The repo now supports a first research pilot through:
 - a label vocabulary for `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`
 - governance, collection, and redaction templates
 - pilot runbooks and go/no-go checks
+- controlled launch, local workspace, preflight, rehearsal, and first-checkpoint operating docs
 - synthetic calibration samples
 - local validation, audit, agreement, conversion, and rule-baseline scripts
 - an initial report tying scope, evidence, budget, governance, annotation, and baseline experiments together
@@ -65,7 +68,7 @@ Stakeholders should decide whether the project may proceed to the first real pil
 | Reporting | Can aggregate metrics and redacted examples appear in internal memos? |
 | Pilot decision | Is the first pilot `go`, `go_with_limits`, or `no_go`? |
 
-Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, and `docs/35-real-pilot-readiness-review.md` before any real evidence is collected.
+Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, `docs/35-real-pilot-readiness-review.md`, `docs/37-approved-pilot-launch-plan.md`, `docs/39-local-pilot-workspace.md`, and `docs/40-pilot-preflight-verification.md` before any real evidence is collected.
 
 ## What This Work Will Not Do
 
@@ -83,7 +86,7 @@ The v0 package does not authorize:
 
 ## First Pilot Design
 
-The recommended 50-item pilot is diagnostic, not a prevalence estimate.
+The recommended 50-item pilot is diagnostic, not a prevalence estimate. It must not be completed in one uninterrupted pass: the first 10-15 items are a checkpoint gate for governance, redaction, evidence quality, annotation consistency, and source skew.
 
 | Bucket | Target count | Purpose |
 |---|---:|---|
@@ -91,6 +94,8 @@ The recommended 50-item pilot is diagnostic, not a prevalence estimate.
 | likely `non_scam` comparator | 15 | Check false-positive risk. |
 | likely `uncertain` | 10 | Stress-test ambiguity rules. |
 | likely `insufficient_evidence` | 10 | Test evidence-quality and collection rules. |
+
+Continue past 10-15 items only after the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 The first baseline-ready slice should use high-confidence or adjudicated items with nonempty `post_text` or `ocr_text`, clear `scam` or `non_scam` labels, and sufficient evidence. `uncertain` and `insufficient_evidence` items should be retained for ambiguity and evidence-quality analysis, but excluded from binary precision/recall.
 
@@ -112,4 +117,5 @@ By 2026-04-30:
 2. Collect reviewer comments with `templates/report_review_feedback.md`.
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
 4. Record that the stakeholder outcome is approved with bounded launch limits.
-5. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits before real collection.
+5. Complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details before real collection.
+6. Initialize the local workspace, pass item-1 preflight, rehearse 1-2 records, run 5-item calibration, and prepare the first 10-15 item checkpoint.

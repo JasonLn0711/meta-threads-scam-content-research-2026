@@ -13,7 +13,9 @@ The first batch should answer:
 
 ## Recommended Batch Sizes
 
-Start with a 50-item pilot. This is large enough to expose label confusion, missing fields, and source skew, but small enough to revise quickly.
+Start with a first 10-15 item checkpoint inside the conditional 50-item pilot. This is large enough to expose early collection, redaction, label, missing-field, and source-skew problems, but small enough to revise quickly.
+
+Complete the 50-item pilot only if the checkpoint records `continue_to_50` or `continue_with_limits`.
 
 After revising the guide and schema from the pilot, build a first usable batch of 100-200 items. If annotation capacity is limited, target 100-150.
 
@@ -57,7 +59,7 @@ Use mixed collection only:
 
 Do not use crawlers, scrapers, browser automation, bulk export, or landing-page crawling unless approval is recorded in `governance/data-governance.md`.
 
-Use `docs/34-source-intake-and-sampling-frame.md` before collection to choose source candidates and build the sampling frame. Then complete `docs/35-real-pilot-readiness-review.md` before any real pilot collection begins. Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
+Use `docs/34-source-intake-and-sampling-frame.md` before collection to choose source candidates and build the sampling frame. Then complete `docs/35-real-pilot-readiness-review.md`, the controlled launch record outside git, local workspace initialization, item-1 preflight, manual rehearsal, and calibration before any real pilot collection begins. Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
 
 ## Evidence Preservation
 
@@ -159,4 +161,5 @@ If these appear, narrow the taxonomy for v1.1 rather than adding more fields.
 - Complete `docs/36-stakeholder-authorization-packet.md` and `templates/stakeholder_authorization_decision_record.md`.
 - Complete `templates/data_authorization_request.md` for any real source.
 - Complete `templates/real_pilot_readiness_review.md` before any real collection starts.
-- Run a 5-item dry annotation using the templates before collecting the full 50-item pilot.
+- Run 1-2 manual rehearsal records and a 5-item calibration before item 1.
+- Stop after the first 10-15 real items for checkpoint review before completing the conditional 50-item pilot.

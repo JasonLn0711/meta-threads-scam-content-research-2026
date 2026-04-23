@@ -32,26 +32,34 @@ Build a research scaffold containing:
 - annotation guide
 - signal taxonomy
 - stakeholder authorization gate
-- 5-item synthetic or redacted calibration
-- 50-item authorized pilot
-- 100-200 item first usable dataset after pilot review
+- controlled launch details completed outside git
+- local-only pilot workspace and item-1 preflight
+- 1-2 item manual collection rehearsal
+- 5-item annotator calibration
+- first 10-15 item checkpoint before completing the 50-item pilot
+- conditional 50-item pilot only after checkpoint review
+- conditional 100-200 item first usable dataset only after a pilot decision memo
 - rule-based risk scorer
 - OCR augmentation comparison
 - comment and link-signal ablation
-- optional LLM-assisted explanation test on a redacted, approved subset
+
+Defer optional LLM-assisted explanation tests until Phase 1 produces governed real evidence and a later decision record explicitly authorizes that scope.
 
 ## Current Status As Of 2026-04-23
 
-The scaffold, governance gate, report-v0 package, synthetic samples, and local QA/baseline scripts now exist.
+The scaffold, governance gate, report-v0 package, synthetic samples, local QA/baseline scripts, controlled-launch templates, local workspace tooling, preflight verification, rehearsal guidance, calibration guidance, and first-checkpoint protocol now exist.
 
-A synthetic-only dry run has validated the workflow:
+A synthetic-only integrated rehearsal has validated the repo tooling path:
 
 - schema validation passes on sample CSV and JSON
-- CSV-to-JSONL conversion works
-- dataset audit flags synthetic source skew
+- manual record building works on synthetic local input
+- calibration files can be prepared
+- agreement comparison can produce local disagreement artifacts
+- dataset audit flags synthetic source skew and evidence limitations
 - rule-baseline variants compare `post_text`, `reply_texts`, `ocr_text`, links, handles, and redirects
+- reviewer packets and synthesis drafts can be generated locally
 
-This does not authorize real collection and does not establish real-world performance. The next decision is whether stakeholders approve a governed 50-item pilot.
+This does not authorize real collection and does not establish real-world performance. The next human action is to complete the controlled launch record outside git. After that, initialize the local workspace, run item-1 preflight, rehearse 1-2 records, run 5-item calibration, and stop at the first 10-15 item checkpoint before deciding whether to continue to 50.
 
 ## What To Defer
 

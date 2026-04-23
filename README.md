@@ -119,6 +119,7 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The first 10-15 item checkpoint protocol exists.
 - A local-only pilot workspace initializer exists for creating ignored `data/interim/` working files after controlled launch details are complete.
 - A repo-safe pilot preflight verifier exists for checking launch mechanics before item 1.
+- A synthetic-only integrated launch rehearsal has exercised manual build, validation, calibration, audit, baseline, reviewer packet, and synthesis tooling.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - No real Threads evidence has been collected or committed.
 
@@ -132,18 +133,16 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, 5-item calibration completed, then a 10-15 item checkpoint before completing the 50-item authorized pilot.
-4. A 100-200 item first usable dataset only after pilot review and revisions.
-5. A governed 500-item expansion only after the earlier gates show the workflow is stable.
-6. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals.
-7. An evaluation memo deciding whether to continue, add LLM-assisted review, or cut scope further.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, 5-item calibration completed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
+4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
+5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
+6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
 
 Recommended first dataset slice:
 
 - 5 synthetic or redacted calibration items.
-- 50 authorized pilot examples.
-- 100-200 manually reviewed examples after pilot review.
-- 500 examples only as a later governed expansion.
+- 10-15 real checkpoint items before completing the conditional 50-item pilot.
+- 100-200 manually reviewed examples only after pilot review justifies expansion.
 - Include likely scam-like, likely non-scam, uncertain, and insufficient-evidence cases.
 - Cover text-only posts, text plus image posts, comments/replies, OCR text, and visible redirection or link signals.
 

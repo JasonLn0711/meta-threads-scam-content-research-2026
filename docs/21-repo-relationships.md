@@ -106,7 +106,8 @@ The active phase-1 MVP is a Threads scam-like content triage research package:
 - OCR augmentation.
 - Comment/reply context comparison.
 - Visible link and redirection signal extraction.
-- Optional LLM-assisted review explanation on approved redacted samples.
 - Human-review-oriented evaluation.
+
+Model-assisted review is deferred until governed real evidence and a later decision record justify it.
 
 This is not a production detector.

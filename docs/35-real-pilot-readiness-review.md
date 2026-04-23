@@ -35,8 +35,8 @@ Complete it before:
 | Level | Meaning | Allowed next action |
 |---|---|---|
 | `not_ready` | One or more required gates is missing, unclear, or unsafe. | Use only synthetic or fully redacted dry-run examples. |
-| `ready_with_limits` | Required gates are satisfied, but collection must stay within specific limits. | Run only the approved limited pilot scope. |
-| `ready` | Required gates are satisfied with no unresolved launch blockers. | Run the approved 50-item pilot exactly as documented. |
+| `ready_with_limits` | Required gates are satisfied, but collection must stay within specific limits. | Run only the approved limited pilot scope and stop at the first 10-15 item checkpoint. |
+| `ready` | Required gates are satisfied with no unresolved launch blockers. | Start the approved pilot exactly as documented, beginning with the first 10-15 item checkpoint. |
 
 Use `ready_with_limits` when approval is real but constrained, for example: one source type only, text-only capture, no screenshots, no stored URLs, no OCR retention, or a smaller batch than 50.
 
@@ -89,7 +89,7 @@ Readiness requires:
 - duplicate handling defined
 - exclusion reasons defined
 
-The first pilot should still target 50 items:
+The first pilot can target 50 items only conditionally. Start with the first 10-15 item checkpoint, then continue only if the checkpoint records `continue_to_50` or `continue_with_limits`.
 
 | Bucket | Target |
 |---|---:|

@@ -19,9 +19,17 @@ Share these files as the v0 report package:
 | `docs/36-stakeholder-authorization-packet.md` | Packet for source, field, storage, access, retention, and redaction approval. |
 | `docs/26-pilot-go-no-go-checklist.md` | Gate before real collection. |
 | `docs/35-real-pilot-readiness-review.md` | Integrated owner-facing readiness review before real collection. |
+| `docs/37-approved-pilot-launch-plan.md` | Repo-safe launch entrypoint after approval. |
+| `docs/38-first-pilot-checkpoint-protocol.md` | First 10-15 item checkpoint gate before completing 50. |
+| `docs/39-local-pilot-workspace.md` | Local-only workspace initialization instructions. |
+| `docs/40-pilot-preflight-verification.md` | Repo-safe preflight before item 1. |
 | `templates/data_authorization_request.md` | Record of allowed source, fields, storage, retention, and access. |
 | `templates/stakeholder_authorization_decision_record.md` | Meeting or written-approval decision record. |
 | `templates/real_pilot_readiness_review.md` | Fillable readiness review template. |
+| `templates/controlled_launch_details_template.md` | Blank controlled-launch structure; filled sensitive version stays outside git. |
+| `templates/manual_collection_rehearsal_checklist.md` | 1-2 item rehearsal checklist before real volume. |
+| `templates/annotator_calibration_packet_template.md` | 5-item calibration packet template. |
+| `templates/pilot_checkpoint_review.md` | First checkpoint worksheet. |
 | `templates/report_review_feedback.md` | Structured feedback form for reviewers. |
 
 ## Review Sequence
@@ -68,7 +76,7 @@ Every accepted material change should preserve these constraints:
 - no legal guilt determination is implied
 - no raw evidence enters git
 - uncertainty and evidence sufficiency remain first-class
-- the first real data step remains the governed 50-item pilot
+- the first real data step remains controlled launch, item-1 preflight, rehearsal, calibration, and the 10-15 item checkpoint before the governed 50-item pilot
 
 ## Stakeholder Readout Agenda
 
@@ -76,17 +84,18 @@ Every accepted material change should preserve these constraints:
 2. Explain why Threads is the phase-1 target.
 3. Review what evidence fields the `thread_item` schema preserves.
 4. Review the four primary annotation labels.
-5. Review the 5-item calibration and 50-item pilot plan.
-6. Review governance and privacy decisions that must be made before real collection.
-7. Ask for a concrete pilot decision: `go`, `go_with_limits`, `no_go`, or `revise_first`.
-8. Assign owners for authorization, raw storage, redaction, annotation, and adjudication.
+5. Review controlled launch details, local workspace, preflight, rehearsal, and 5-item calibration.
+6. Review the first 10-15 item checkpoint as the gate before completing 50.
+7. Review governance and privacy decisions that must be made before real collection.
+8. Ask for a concrete pilot decision: `go`, `go_with_limits`, `no_go`, or `revise_first`.
+9. Assign owners for authorization, raw storage, redaction, annotation, checkpoint review, and adjudication.
 
 ## Decision Outcomes
 
 | Decision | Meaning | Next action |
 |---|---|---|
-| `go` | Stakeholders approve the pilot as written. | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
-| `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the decision record and authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, then complete `templates/real_pilot_readiness_review.md`. |
+| `go` | Stakeholders approve the pilot as written. | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record before item 1. |
+| `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the decision record and authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record with those limits before item 1. |
 | `no_go` | Stakeholders do not approve real data work. | Continue only synthetic calibration, docs, and tooling; do not collect real examples. |
 | `revise_first` | Report or pilot design needs revision before decision. | Update the report package and rerun the review checklist. |
 
@@ -99,6 +108,8 @@ After the stakeholder readout, update or create:
 - `templates/data_authorization_request.md` filled for the first approved source, if any
 - `docs/26-pilot-go-no-go-checklist.md` with the initial gate status
 - `templates/real_pilot_readiness_review.md` with final launch status
+- outside-git controlled launch record using `templates/controlled_launch_details_template.md`
+- `notes/phase1-launch-decisions.md` if launch assumptions or gates change
 - `notes/` meeting note with decisions, open questions, and owners
 - `docs/16-open-questions-for-stakeholders.md` to remove answered questions and add new blockers
 
@@ -115,3 +126,5 @@ Do not start any of the following until the stakeholder decision and authorizati
 - profile or account review
 - unredacted data transfer to external services
 - model-assisted review on sensitive samples
+
+Even after stakeholder approval, do not start real item collection until controlled launch details are complete outside git, local workspace files are initialized, item-1 preflight has `ERROR: 0`, and the first 10-15 item checkpoint is scheduled.

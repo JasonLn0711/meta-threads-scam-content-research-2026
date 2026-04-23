@@ -10,9 +10,11 @@ The goal is not to make annotation slow or bureaucratic. The goal is to catch th
 
 Applies to:
 
-- 5-item synthetic or redacted calibration
-- 50-item authorized pilot
-- first 100-200 item usable dataset after pilot review
+- synthetic-only tooling rehearsals
+- 5-item annotator calibration after controlled launch materials are ready
+- first 10-15 real item checkpoint
+- conditional 50-item pilot only after checkpoint review
+- conditional 100-200 item usable dataset only after the pilot decision memo
 
 Does not authorize:
 
@@ -37,11 +39,11 @@ Does not authorize:
 | Stage | Timing | Main question |
 |---|---|---|
 | Pre-annotation QA | Before annotators start | Are rows complete enough and safe enough to label? |
-| Calibration QA | Before real pilot | Can annotators apply labels consistently on safe examples? |
+| Calibration QA | Before real annotation volume | Can annotators apply labels consistently on safe examples? |
 | In-pass QA | During the first 10-15 real pilot items | Are field errors or label drift appearing early? |
 | Second-review QA | After first-pass labels | Are high-risk, uncertain, low-confidence, and partial-evidence cases reviewed? |
 | Adjudication QA | After disagreements | Are final labels evidence-based and guideline-consistent? |
-| Post-pilot QA | After all 50 items | Is the dataset ready for baseline comparison or revision first? |
+| Post-pilot QA | After the checkpoint-approved 50 items | Is the dataset ready for baseline comparison or revision first? |
 
 ## Pre-Annotation QA
 
@@ -62,17 +64,16 @@ Use `templates/annotation_qa_checklist.md` for the batch-level check.
 
 ## Calibration QA
 
-Minimum ready-to-proceed thresholds:
+For a five-item calibration set, do not treat agreement as a formal statistic. Use simple counts and disagreement themes.
 
-| Measure | Ready | Pause and revise |
-|---|---:|---:|
-| `scam_label` agreement | at least 0.80 | below 0.70 |
-| `risk_level` agreement | at least 0.70 | below 0.60 |
-| `evidence_sufficiency` agreement | at least 0.70 | below 0.60 |
-| Mean `scam_type` Jaccard | at least 0.60 | below 0.50 |
-| Mean `signal_tags` Jaccard | at least 0.50 | below 0.40 |
+Minimum qualitative expectations before real annotation volume:
 
-For five examples, thresholds are only practical warnings. Use disagreement themes as the main evidence.
+- annotators match on the obvious benign and obvious high-risk cases
+- disagreements are explainable from guideline wording, not random interpretation
+- no annotator uses `uncertain` or `insufficient_evidence` as a catch-all
+- signal tags are anchored to collected evidence, not outside knowledge
+- OCR-only, reply-only, screenshot-heavy, and visible-link/handle cases are handled according to the controlled launch rules
+- any primary-label disagreement is reviewed before item 1 or before expanding beyond the first checkpoint, depending on timing
 
 Proceed only if annotators can explain:
 

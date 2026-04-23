@@ -24,7 +24,7 @@ Start with text, images, comments, OCR, and visible redirection signals. Defer v
 
 Include now.
 
-- Technical cost: low. Keyword, pattern, classifier, and LLM-assisted baselines can all operate on text.
+- Technical cost: low. Keyword, pattern, and rule baselines can all operate on text.
 - Operational cost: low to medium. Reviewers can annotate posts quickly if guidance is clear.
 - Evidence value: high. Scam lures often expose promises, urgency, fake authority, and redirection.
 - Budget fit: strong. This is the cheapest defensible starting point.

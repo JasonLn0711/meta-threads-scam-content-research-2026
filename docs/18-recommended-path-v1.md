@@ -14,7 +14,7 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git, initialize the local-only workspace with [39-local-pilot-workspace.md](39-local-pilot-workspace.md), pass the preflight in [40-pilot-preflight-verification.md](40-pilot-preflight-verification.md), then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md).
+Immediate next action: complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details outside git; initialize the local-only workspace with [39-local-pilot-workspace.md](39-local-pilot-workspace.md); pass the preflight in [40-pilot-preflight-verification.md](40-pilot-preflight-verification.md); rehearse 1-2 manual records; run 5-item calibration; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md).
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
@@ -33,13 +33,14 @@ The MVP should include:
 - Structured dataset schema.
 - Annotation guideline.
 - Scam-risk taxonomy.
-- 5-item calibration, 50-item pilot, and 100-200 item first usable dataset after pilot review.
+- 5-item calibration, first 10-15 item checkpoint, conditional 50-item pilot, and 100-200 item first usable dataset only after pilot review.
 - Rule-based risk scorer.
 - OCR augmentation for image and screenshot text.
 - Comment/reply context comparison.
 - Visible link and redirection signal extraction.
-- Optional LLM-assisted explanation test on redacted, approved samples.
 - Human-review-oriented evaluation.
+
+Do not add model-assisted explanation tests in the current launch. Revisit only after Phase 1 produces governed real evidence and a later decision record authorizes that scope.
 
 ## Why This Is The Best First Path
 
@@ -79,7 +80,7 @@ It should produce:
 - Baseline risk tiers.
 - Explainable reasons for each flag.
 - Error analysis.
-- A decision memo for phase 2.
+- A decision memo on whether to expand, revise, narrow, pause, or later define a next-phase direction.
 
 ## Success After 4 Weeks
 
@@ -88,7 +89,6 @@ Success means:
 - The team can annotate examples consistently enough to compare baselines.
 - The first baseline produces understandable reasons.
 - OCR, comments, or link signals show measurable value or are cut.
-- The team knows whether LLM-assisted explanation is worth further testing.
 - Stakeholders agree that risk triage is the right operational framing.
 
 ## Evidence That Justifies Continuing

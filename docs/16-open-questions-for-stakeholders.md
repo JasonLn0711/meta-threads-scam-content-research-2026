@@ -19,6 +19,28 @@ The approval decision has been recorded at the pilot level. These controlled-lau
 
 Use `governance/pilot-launch/` as the non-sensitive index. Put sensitive exact values only in the approved controlled location.
 
+## Controlled Launch Questions Before Item 1
+
+These questions are the immediate blocker for real evidence operations:
+
+| Area | Question |
+|---|---|
+| Source | What exact source or source category is approved for the first 10-15 items? |
+| Storage | What exact raw-storage location is approved outside git? |
+| Access | Which IDs may see raw evidence, redacted files, annotation files, and generated outputs? |
+| Retention | What must be deleted or reviewed after the checkpoint and after the decision memo? |
+| Redaction | What must be removed from screenshots, OCR text, URLs, links, handles, replies, and notes? |
+| Screenshots | Are screenshots allowed, redacted-only, or not retained? |
+| OCR | Is OCR allowed, and must it be risk-relevant excerpt only? |
+| URLs and links | Are source URLs omitted, redacted, normalized, or fully stored? Are visible links domain-only? |
+| Handles and contacts | Are contact handles category-only, redacted, or forbidden? |
+| Role IDs | Which collector, annotator, reviewer, adjudicator, and research engineer IDs are approved? |
+| Forbidden context | Which profile, account, landing-page, redirect-chain, or outside-source context is explicitly forbidden? |
+| Signoff | Who can mark the controlled record `ready_for_first_10_15_items`? |
+| Checkpoint | Who reviews the first 10-15 item checkpoint and decides whether 50 may continue? |
+
+If any answer is incomplete, collection remains paused and the repo should stay in synthetic-only or planning mode.
+
 ## Criminal Investigation Stakeholders
 
 - What counts as report-worthy Threads content from an investigative perspective?
@@ -61,6 +83,6 @@ Use `governance/pilot-launch/` as the non-sensitive index. Put sensitive exact v
 
 - Is CSV sufficient for first annotation, or is JSONL needed immediately?
 - What OCR tool is acceptable for the first local experiment?
-- Are LLM-assisted explanations permitted on redacted samples?
-- What minimum metrics should decide phase-2 continuation?
+- Should model-assisted explanations remain out of scope until the manual pilot decision memo?
+- What minimum evidence should decide continuation, pause, source narrowing, or later expansion?
 - Who owns dataset versioning and schema changes?

@@ -34,9 +34,11 @@ The goal is not to make the report longer. The goal is to make sure the report i
 | Report points to data authorization and go/no-go artifacts |  |  |  |
 | Report points to the stakeholder authorization packet and decision record |  |  |  |
 | Report points to the real-pilot readiness review before collection |  |  |  |
+| Report points to controlled launch, workspace, and preflight artifacts |  |  |  |
 | Raw evidence is described as outside git |  |  |  |
 | Screenshots, URLs, contact handles, and OCR privacy risks are acknowledged |  |  |  |
 | Retention, access, and redaction decisions are listed as stakeholder decisions |  |  |  |
+| Report makes the filled controlled launch record an outside-git requirement |  |  |  |
 | No real personal data, screenshots, source URLs, credentials, tokens, or investigative details are included |  |  |  |
 
 ## 3. Terminology Consistency
@@ -56,8 +58,9 @@ The goal is not to make the report longer. The goal is to make sure the report i
 |---|---|---|---|
 | `thread_item` is clearly defined as the unit of review |  |  |  |
 | Text, replies, OCR, links, handles, redirects, and screenshots are treated as evidence fields |  |  |  |
-| 5-item calibration, 50-item pilot, and 100-200 item expansion are staged clearly |  |  |  |
+| Controlled launch, workspace init, rehearsal, 5-item calibration, 10-15 checkpoint, 50-item pilot, and 100-200 item expansion are staged clearly |  |  |  |
 | Pilot composition is diagnostic and not presented as prevalence |  |  |  |
+| First 10-15 item checkpoint is described as the gate before completing 50 |  |  |  |
 | `uncertain` and `insufficient_evidence` boundaries are preserved |  |  |  |
 | Adjudication and second-review paths are described |  |  |  |
 
@@ -92,6 +95,8 @@ The goal is not to make the report longer. The goal is to make sure the report i
 | Field-retention questions are clear |  |  |  |
 | Screenshot and link-policy questions are clear |  |  |  |
 | Access and retention questions are clear |  |  |  |
+| Controlled launch details outside git are clear |  |  |  |
+| First checkpoint decisions and stop conditions are clear |  |  |  |
 | Report explains what happens after `go`, `go_with_limits`, or `no_go` |  |  |  |
 
 ## 8. Artifact Link Check
@@ -104,10 +109,18 @@ The goal is not to make the report longer. The goal is to make sure the report i
 | `docs/36-stakeholder-authorization-packet.md` |  |  |
 | `docs/26-pilot-go-no-go-checklist.md` |  |  |
 | `docs/35-real-pilot-readiness-review.md` |  |  |
+| `docs/37-approved-pilot-launch-plan.md` |  |  |
+| `docs/38-first-pilot-checkpoint-protocol.md` |  |  |
+| `docs/39-local-pilot-workspace.md` |  |  |
+| `docs/40-pilot-preflight-verification.md` |  |  |
 | `docs/27-report-v0-delivery-plan.md` |  |  |
 | `templates/data_authorization_request.md` |  |  |
 | `templates/stakeholder_authorization_decision_record.md` |  |  |
 | `templates/real_pilot_readiness_review.md` |  |  |
+| `templates/controlled_launch_details_template.md` |  |  |
+| `templates/manual_collection_rehearsal_checklist.md` |  |  |
+| `templates/annotator_calibration_packet_template.md` |  |  |
+| `templates/pilot_checkpoint_review.md` |  |  |
 | `templates/report_review_feedback.md` |  |  |
 
 ## Final Sign-Off

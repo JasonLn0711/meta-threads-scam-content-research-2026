@@ -56,7 +56,7 @@ The budget can support:
 - Data schema and annotation design.
 - A small manually reviewed dataset.
 - Lightweight OCR and link-signal extraction.
-- Simple keyword, rule, and possibly LLM-assisted baselines.
+- Simple keyword and rule baselines.
 - Error analysis and decision memos.
 
 The budget likely cannot support:

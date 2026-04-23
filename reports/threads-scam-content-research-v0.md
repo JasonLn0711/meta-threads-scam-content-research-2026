@@ -20,8 +20,12 @@ This v0 report recommends a Threads-only phase-1 research program for scam-like 
 
 The recommended first path is a small, evidence-centric study:
 
-- Run a 5-item synthetic or redacted annotator calibration before real collection.
-- Build a 50-item first pilot batch after authorization and calibration pass.
+- Complete controlled launch details outside git before item 1.
+- Initialize a local-only workspace and pass item-1 preflight.
+- Rehearse 1-2 manually prepared records before real volume.
+- Run a 5-item synthetic, redacted, or authorized annotator calibration before real annotation volume.
+- Collect only the first 10-15 real items for a checkpoint before completing 50.
+- Build a 50-item first pilot batch only if the checkpoint decision supports continuation.
 - Expand to a 100-200 item first usable dataset only after pilot review.
 - Balance examples across `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`.
 - Capture post text, reply/comment text, attached image paths or placeholders, OCR text, visible links, redirection language, and explainable risk signals.
@@ -113,7 +117,9 @@ The first useful dataset should be small enough to inspect manually and broad en
 Recommended staged size:
 
 - 5 synthetic or redacted calibration items.
-- 50 manually reviewed pilot items after authorization.
+- 1-2 manual rehearsal records after controlled launch details are complete outside git.
+- 10-15 real pilot items for the first checkpoint.
+- 50 manually reviewed pilot items after the checkpoint supports continuation.
 - 100-200 first usable items only after pilot review and any guideline/schema revisions.
 - Each item should preserve enough context for annotation.
 - No raw personal data or unnecessary screenshots should be committed to git.
@@ -126,6 +132,17 @@ Recommended 50-item pilot balance:
 | likely `non_scam` comparator | 15 | Calibrate false positives and hard negatives. |
 | likely `uncertain` | 10 | Stress-test ambiguity handling. |
 | likely `insufficient_evidence` | 10 | Test evidence status and collection quality. |
+
+The first 10-15 item checkpoint should approximate this mix without forcing unapproved evidence:
+
+| Checkpoint bucket | Suggested count | Purpose |
+|---|---:|---|
+| likely scam or high-risk scam-like | 3 to 5 | Test whether strong signals are captured safely. |
+| likely non-scam comparator | 3 to 5 | Catch early false-positive pressure. |
+| uncertain or ambiguous | 2 to 3 | Stress-test label boundaries. |
+| insufficient-evidence or low-context | 1 to 3 | Check whether source quality or collection rules are blocking review. |
+
+The checkpoint should include some variation across text-only, text plus image, reply/comment context, OCR-heavy or screenshot-style content, and visible link/handle/redirect signals when those forms are approved.
 
 Recommended first usable batch balance:
 
@@ -310,7 +327,8 @@ Hypothesis:
 
 Data needed:
 
-- 50 annotated pilot items for workflow and error analysis.
+- 10-15 checkpoint items to confirm governance, redaction, collection burden, annotation consistency, and evidence sufficiency before scale.
+- 50 annotated pilot items for workflow and error analysis only after checkpoint continuation.
 - At least 25 `scam` and 25 `non_scam` high-confidence or adjudicated items before reporting binary precision/recall as meaningful.
 - At least 10 items where OCR or reply context changes interpretation before making a strong modality claim.
 - Items with visible external link, handle, or private-channel redirection language before making a link-signal claim.
@@ -323,7 +341,7 @@ Outputs:
 - Confusion matrix against human labels.
 - Reviewer burden estimate.
 - Error analysis.
-- Narrowing decision for phase 2.
+- Decision on whether to continue, revise, narrow, or pause before any larger batch.
 
 ## Evaluation Framework
 
@@ -344,7 +362,7 @@ Do not evaluate only with model metrics. The project should measure both predict
 
 ## Budget-Fit Argument Under NTD 1.8M
 
-An NTD 1.8M research budget can support a focused dataset, annotation workflow, simple baselines, OCR augmentation, limited LLM-assisted review tests, and a serious evaluation memo.
+An NTD 1.8M research budget can support a focused dataset, annotation workflow, simple baselines, OCR augmentation, and a serious evaluation memo.
 
 It is not realistic for:
 
@@ -359,16 +377,16 @@ It is not realistic for:
 High-ROI work:
 
 1. Taxonomy and annotation guideline.
-2. 5-item calibration and 50-item pilot.
+2. Controlled launch details, local workspace, 1-2 item rehearsal, 5-item calibration, 10-15 item checkpoint, and conditional 50-item pilot.
 3. Text-only and text+OCR+comments/link-signal rule baselines.
 4. Evidence completeness scoring.
 5. Error analysis and reviewer workflow memo.
 
 Medium-ROI but risky work:
 
-1. LLM-assisted explanation testing on redacted samples.
-2. Lightweight destination-link categorization if links are lawfully captured.
-3. Inter-annotator agreement study if enough reviewer time exists.
+1. Lightweight destination-link categorization if links are lawfully captured and if separate approval permits it.
+2. Inter-annotator disagreement study if enough reviewer time exists.
+3. Later model-assisted explanation testing only after Phase 1 produces governed real evidence and a separate decision record authorizes it.
 
 Low-ROI or over-ambitious for phase 1:
 
@@ -383,8 +401,8 @@ Low-ROI or over-ambitious for phase 1:
 | Week | Target output |
 |---|---|
 | Week 1 | Finalize taxonomy, schema, data-governance gate, annotation guide, and stakeholder authorization request. Run synthetic/redacted calibration prep. |
-| Week 2 | Run annotator calibration, adjudicate disagreement, collect the authorized 50-item pilot if approved, and build text-only rule baseline. |
-| Week 3 | Add OCR, reply/comment, and link/redirection signals. Compare rule baseline variants and optional redacted LLM explanation. |
+| Week 2 | Complete controlled launch details, initialize local workspace, pass item-1 preflight, rehearse 1-2 records, run annotator calibration, and collect only the first 10-15 items for checkpoint review. |
+| Week 3 | If the checkpoint and conditional 50-item pilot permit it, add OCR, reply/comment, and link/redirection signals and compare rule baseline variants. |
 | Week 4 | Evaluate, write error analysis, summarize evidence, and decide whether to continue, narrow, or defer additional modalities. |
 
 ## Required Stakeholder Questions
@@ -422,12 +440,14 @@ Before real data work:
 - Record data authority in `governance/pilot-authorization-register.md`.
 - Pass `docs/26-pilot-go-no-go-checklist.md`.
 - Complete `templates/real_pilot_readiness_review.md`.
-- Decide what evidence can be stored in git, local storage, or private controlled folders.
-- Finalize redaction procedure.
-- Run annotator calibration and finalize adjudication process.
-- Confirm whether external links can be visited, archived, or only recorded as visible strings.
+- Complete the controlled launch record outside git with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details.
+- Initialize local-only workspace files and pass item-1 preflight.
+- Rehearse 1-2 manual records.
+- Run 5-item annotator calibration and finalize adjudication process.
+- Run the first 10-15 item checkpoint before completing the 50-item pilot.
+- Confirm whether external links can be stored only as visible strings or redacted/normalized references. Do not crawl or expand links without separate approval.
 
-Before any model-assisted workflow:
+Model-assisted workflow is not part of the current launch. Before any later model-assisted workflow:
 
 - Use only approved and redacted samples.
 - Preserve reason codes and evidence references.
@@ -470,12 +490,20 @@ By the deadline, the repo should contain:
 | `docs/36-stakeholder-authorization-packet.md` | Approval packet for source, field, storage, access, retention, and redaction decisions. |
 | `docs/26-pilot-go-no-go-checklist.md` | Required gate before real collection and annotation. |
 | `docs/35-real-pilot-readiness-review.md` | Integrated final readiness review before real collection. |
+| `docs/37-approved-pilot-launch-plan.md` | Repo-safe controlled launch entrypoint after approval. |
+| `docs/38-first-pilot-checkpoint-protocol.md` | First 10-15 item checkpoint gate before completing 50. |
+| `docs/39-local-pilot-workspace.md` | Local-only workspace initialization instructions. |
+| `docs/40-pilot-preflight-verification.md` | Repo-safe preflight before item 1. |
 | `data-contracts/thread_item_schema_v1.json` | Machine-readable item schema. |
 | `data-contracts/labeling_schema_v1.json` | Machine-readable label schema. |
 | `templates/annotation_sheet_template.csv` | Spreadsheet starter for manual review. |
 | `templates/data_authorization_request.md` | Source, field, retention, and redaction approval record. |
 | `templates/stakeholder_authorization_decision_record.md` | Stakeholder decision record for pilot approval or limits. |
 | `templates/real_pilot_readiness_review.md` | Fillable readiness decision record. |
+| `templates/controlled_launch_details_template.md` | Outside-git controlled detail structure for exact launch limits. |
+| `templates/manual_collection_rehearsal_checklist.md` | 1-2 item rehearsal checklist before real volume. |
+| `templates/annotator_calibration_packet_template.md` | 5-item calibration packet template. |
+| `templates/pilot_checkpoint_review.md` | First 10-15 item checkpoint worksheet. |
 | `templates/collection_log_template.csv` | Per-item collection readiness and evidence-status log. |
 | `templates/redaction_checklist.md` | Redaction QA before annotation or sharing. |
 | `scripts/validate_thread_dataset.py` | Local schema and consistency validation. |

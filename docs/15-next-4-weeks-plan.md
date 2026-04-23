@@ -23,6 +23,7 @@ Completed:
 - First 10-15 item checkpoint protocol and review template.
 - Local-only pilot workspace initializer and runbook.
 - Repo-safe item-1 preflight verifier and runbook.
+- Synthetic integrated launch rehearsal across manual build, validation, calibration, audit, baseline, packets, and synthesis.
 - Consolidated research day note: `notes/2026-04-23-research-day-notes.md`.
 
 Not completed:
@@ -30,13 +31,19 @@ Not completed:
 - controlled launch record with exact source, storage, access, retention, and redaction limits outside git
 - initialized local-only pilot workspace under ignored `data/interim/`
 - passing item-1 preflight after controlled launch acknowledgement
+- 1-2 item manual collection rehearsal
+- 5-item calibration for the real pilot team
 - real 50-item pilot collection
 - first 10-15 item checkpoint result
 - human annotation on real examples
 - real baseline evaluation
 - pilot decision memo from real results
+
+Explicitly not current work:
+
 - 500-item expansion
 - LLM-assisted review test
+- Phase 2 planning
 
 The next work is controlled launch execution: complete the non-git launch record, initialize the local workspace, pass item-1 preflight, then collect only the first 10-15 items for checkpoint review. It is not more abstract planning, broad collection, or automation.
 
@@ -91,6 +98,7 @@ Deliverables:
 
 Goals:
 
+- Only if the first 10-15 item checkpoint and conditional 50-item pilot permit baseline analysis.
 - Add OCR text for image and screenshot items.
 - Add selected replies/comments for thread-context items.
 - Extract visible link and redirection signals.
@@ -109,17 +117,17 @@ Deliverables:
 
 Goals:
 
+- Only after the conditional 50-item pilot produces governed, validated, annotated records.
 - Evaluate precision, recall, F1, reviewer burden, explainability, evidence completeness, and ambiguity handling.
-- Run a small LLM-assisted explanation comparison only if governance allows the sample content.
 - Summarize which signals are high-ROI.
-- Decide phase-2 direction or cut scope further.
+- Decide whether to continue, revise, narrow, or pause; do not define a next phase until the pilot decision memo supports it.
 
 Deliverables:
 
 - Phase-1 evaluation memo.
 - Updated risk register.
 - Recommended path v2.
-- Decision log entry on next phase.
+- Decision log entry on whether to continue, continue with limits, revise, narrow, pause, or later propose expansion.
 
 ## 4-Week Success Standard
 
@@ -129,5 +137,4 @@ At the end of 4 weeks, the project should know:
 - Whether OCR materially improves detection of image-heavy lures.
 - Whether comments/replies are essential for redirection detection.
 - Whether visible link signals improve triage without too many false positives.
-- Whether LLM assistance is worth testing further.
 - Whether the project should continue, narrow, or stop specific workstreams.
