@@ -161,7 +161,7 @@ Do not continue to 50 unless the decision is `continue_to_50` or `continue_with_
 
 ## Current Decision
 
-Current decision: `manual_rehearsal_intake_ready_waiting_for_approved_fields`
+Current decision: `manual_rehearsal_gate_verified_waiting_for_approved_fields`
 
 Reason:
 
@@ -170,6 +170,7 @@ Reason:
 - local-only workspace initialization completed
 - before-item-1 preflight reports `ERROR: 0`
 - local-only manual rehearsal intake files have been prepared under ignored `data/interim/`
+- pending manual rehearsal intake was blocked by governance checks before any record was generated
 - no real Threads evidence has been collected or committed as part of this start note
 
 Next action:
