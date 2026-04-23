@@ -35,7 +35,7 @@ Repo-safe:
 Run validation only if the annotation CSV has schema fields:
 
 ```bash
-python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv
+python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv --strict
 python scripts/audit_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv \
   > data/processed/threads_pilot_v1_checkpoint_audit.md
 ```
@@ -86,6 +86,8 @@ Pause before continuing to 50 items if:
 ## Output
 
 Create a non-sensitive checkpoint summary using `templates/pilot_checkpoint_review.md`.
+
+Do not run `scripts/summarize_pilot_results.py` to make an expansion decision at this stage. For fewer than 50 non-synthetic items, synthesis should return `first_checkpoint_review_required`.
 
 Decision values:
 

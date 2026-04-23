@@ -6,6 +6,8 @@ This framework defines how the project turns the first authorized 50-item pilot 
 
 It should be used after collection, annotation, QA, audit, adjudication, and rule-baseline comparison are complete. It does not authorize collection and should not be used with synthetic-only results to justify real-world claims.
 
+It is not the first 10-15 item checkpoint. Before using this post-50 framework, the checkpoint review must already have recorded `continue_to_50` or `continue_with_limits` under `docs/38-first-pilot-checkpoint-protocol.md`.
+
 ## Decision Question
 
 After the 50-item pilot, answer:
@@ -18,6 +20,7 @@ Do not make an expansion decision until all inputs exist:
 
 | Input | Expected artifact |
 |---|---|
+| First checkpoint decision | completed `templates/pilot_checkpoint_review.md` with `continue_to_50` or `continue_with_limits` |
 | Governance confirmation | `templates/data_authorization_request.md`, `governance/pilot-authorization-register.md` |
 | Work order | `templates/pilot_batch_work_order.md` |
 | Annotation QA | `templates/annotation_qa_checklist.md` |
@@ -27,7 +30,7 @@ Do not make an expansion decision until all inputs exist:
 | Error analysis | `experiments/evaluation-notes/0001-pilot-error-analysis-template.md` or filled equivalent |
 | Pilot result summary | `templates/pilot_result_summary.md` |
 | Decision memo | `templates/pilot_decision_memo.md` |
-| Optional synthesis draft | `scripts/summarize_pilot_results.py` output under `experiments/evaluation-notes/outputs/` |
+| Optional synthesis draft | `scripts/summarize_pilot_results.py` output under `experiments/evaluation-notes/outputs/`; only after 50 items |
 
 Local files under `data/interim/` and `data/processed/` are ignored by git. Commit only aggregate, non-sensitive summaries.
 

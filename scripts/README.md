@@ -198,6 +198,19 @@ python scripts/audit_thread_dataset.py data/interim/threads_pilot_v1_annotations
 
 Do not continue to the rest of the 50-item pilot unless the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
+Do not use `summarize_pilot_results.py` to make the first checkpoint decision. If it is run on fewer than 50 non-synthetic items, it should return `first_checkpoint_review_required`; complete `templates/pilot_checkpoint_review.md` instead.
+
+Draft the post-50 pilot synthesis only after the checkpoint-approved 50-item pilot is annotated, audited, and reviewed:
+
+```bash
+python scripts/summarize_pilot_results.py data/interim/threads_pilot_v1_annotations.csv \
+  --calibration-run-dir experiments/baselines/outputs/pilot-rule-calibration-v1 \
+  --run-name pilot-v1-decision-draft \
+  --governance-rating green \
+  --privacy-rating green \
+  --reviewer-burden-rating yellow
+```
+
 Recommended baseline variants:
 
 - `text_only`: use only `post_text`

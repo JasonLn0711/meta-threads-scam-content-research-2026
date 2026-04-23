@@ -1,5 +1,9 @@
 # Pilot Decision Memo
 
+Use this template after the checkpoint-approved 50-item pilot is complete. Do not use it for the first 10-15 item checkpoint; use `templates/pilot_checkpoint_review.md` for that gate.
+
+If `scripts/summarize_pilot_results.py` returns `first_checkpoint_review_required`, stop and complete the checkpoint review before preparing this memo.
+
 ## Memo Identity
 
 | Field | Value |
@@ -10,6 +14,7 @@
 | Pilot dataset ID |  |
 | Collection batch ID |  |
 | Authorization reference |  |
+| Memo stage | post_50_pilot |
 | Decision requested | `expand_to_100_200` / `revise_guideline_first` / `revise_schema_first` / `narrow_sources` / `pause` |
 
 ## Executive Decision
@@ -30,6 +35,7 @@ One-paragraph rationale:
 
 | Input | Reviewed? | Notes |
 |---|---|---|
+| First 10-15 item checkpoint review |  | Must show `continue_to_50` or `continue_with_limits`. |
 | Data authorization request |  |  |
 | Pilot work order |  |  |
 | Annotation QA checklist |  |  |
@@ -137,6 +143,8 @@ Choose one:
 - `narrow_sources`
 - `pause`
 
+Do not choose `expand_to_100_200` if the checkpoint was skipped, if fewer than 50 pilot items were reviewed, or if governance/privacy outcome is red.
+
 Recommendation:
 
 ```text
@@ -148,4 +156,3 @@ Recommendation:
 - Next review date:
 - Required artifact before next review:
 - Decision owner:
-

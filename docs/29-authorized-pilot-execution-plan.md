@@ -195,11 +195,11 @@ This runbook is the operating order for Phase 1. Do not skip ahead because a lat
 | Field | Requirement |
 |---|---|
 | Purpose | Convert pilot evidence into a non-sensitive decision: expand, revise, narrow, or pause. |
-| Required inputs | QA results, audit, calibration output, reviewer themes, governance/privacy/reviewer-burden ratings. |
+| Required inputs | Completed first 10-15 item checkpoint decision permitting continuation to 50; QA results; audit; calibration output; reviewer themes; governance/privacy/reviewer-burden ratings. |
 | Commands | `python scripts/summarize_pilot_results.py data/interim/threads_pilot_v1_annotations.csv --calibration-run-dir experiments/baselines/outputs/pilot-rule-calibration-v1 --run-name pilot-v1-decision-draft --governance-rating green --privacy-rating green --reviewer-burden-rating yellow`. |
 | Exit criteria | Human-finalized non-sensitive result summary and decision memo; decision-log entry created. |
-| Stop conditions | Any red governance/privacy issue; unresolved evidence-quality or label-quality blocker. |
-| Common failure modes | Publishing item-level evidence; making prevalence, legal, or production-performance claims. |
+| Stop conditions | First checkpoint was skipped; fewer than 50 non-sensitive aggregate items are ready for post-pilot synthesis; any red governance/privacy issue; unresolved evidence-quality or label-quality blocker. |
+| Common failure modes | Treating `first_checkpoint_review_required` as an expansion decision; publishing item-level evidence; making prevalence, legal, or production-performance claims. |
 
 ### Mission 11: Expand To 100-200 Only If Justified
 

@@ -1,5 +1,7 @@
 # Pilot Result Summary
 
+Use this after the checkpoint-approved 50-item pilot. For the first 10-15 item gate, use `templates/pilot_checkpoint_review.md` instead.
+
 ## Summary Identity
 
 | Field | Value |
@@ -9,6 +11,7 @@
 | Summary date |  |
 | Summary owner |  |
 | Authorization reference |  |
+| First checkpoint decision | `continue_to_50` / `continue_with_limits` / not_applicable |
 | Schema version | `thread_item_schema_v1` |
 | Annotation guideline | `docs/06-annotation-guideline-v1.md` |
 
@@ -99,6 +102,8 @@ Choose one:
 - `narrow_sources`
 - `pause`
 
+If fewer than 50 non-synthetic items were reviewed, the correct synthesis status is `first_checkpoint_review_required`, not an expansion recommendation.
+
 Rationale:
 
 ```text
@@ -110,4 +115,3 @@ Rationale:
 | Follow-up | Owner | Due date | Notes |
 |---|---|---|---|
 |  |  |  |  |
-

@@ -2,6 +2,8 @@
 
 Use this template after the first 10-15 real pilot items are collected or annotated. Keep this file free of raw Threads content, screenshots, URLs, handles, case IDs, credentials, browser exports, and sensitive investigative details.
 
+This is the gate before completing the conditional 50-item pilot. It is not a post-50 expansion memo and must not recommend `expand_to_100_200`.
+
 ## Checkpoint Identity
 
 | Field | Value |
@@ -131,6 +133,12 @@ Decision:
 
 ```
 
+Post-50 synthesis status:
+
+```text
+not_applicable_before_50_items
+```
+
 ## Decision Evidence
 
 | Decision option | Evidence supporting or rejecting this option |
@@ -166,3 +174,10 @@ Complete if the decision is `continue_with_limits`.
 Summarize the reason for the checkpoint decision in 3-6 bullets.
 
 - 
+
+## Recording Boundary
+
+- Record only non-sensitive aggregate findings in git.
+- Keep raw item records, local audit output, screenshots, source URLs, handles, and item-level reviewer packets outside git unless explicitly sanitized and approved.
+- If the decision is `continue_to_50` or `continue_with_limits`, the next repo-side decision artifact is the post-50 pilot decision memo.
+- If the decision is any pause or stop, update the relevant controlled launch, collection, annotation, source, or governance artifact before collecting more items.

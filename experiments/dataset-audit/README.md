@@ -120,4 +120,5 @@ Each audit note should include:
 - missing-field summary
 - top disagreement causes
 - recommended schema or guideline changes
-- decision: proceed to baseline, annotate more, or revise first
+- for the first 10-15 item checkpoint: `continue_to_50`, `continue_with_limits`, pause, revise, narrow, or stop
+- for the completed 50-item pilot: proceed to baseline, revise first, narrow sources, pause, or prepare the post-pilot decision memo

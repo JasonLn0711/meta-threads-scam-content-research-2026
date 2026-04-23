@@ -4,13 +4,15 @@
 
 This workflow turns an annotated dataset plus local calibration outputs into aggregate-only decision artifacts.
 
-It is the bridge between baseline evaluation and the project decision:
+It is the bridge between baseline evaluation and the post-50 pilot decision:
 
 ```text
 expand_to_100_200 / revise_guideline_first / revise_schema_first / narrow_sources / pause
 ```
 
 It does not authorize data collection, inspect raw screenshots, crawl links, or make platform-scale claims.
+
+Do not use this workflow as the first 10-15 item checkpoint decision. If the input has fewer than 50 non-synthetic items, the script should return `first_checkpoint_review_required`; use `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md` instead.
 
 ## Command
 
@@ -22,7 +24,7 @@ python scripts/summarize_pilot_results.py data/samples/rule_baseline_eval_sample
   --run-name synthetic-pilot-synthesis-smoke
 ```
 
-Real pilot use after annotation, audit, and calibration:
+Real pilot use after the checkpoint-approved 50-item pilot is annotated, audited, and calibrated:
 
 ```bash
 python scripts/summarize_pilot_results.py data/interim/threads_pilot_v1_annotations.csv \
@@ -54,17 +56,19 @@ The script can draft a recommendation, but the project owner owns the final deci
 Rules:
 
 - synthetic-only data produces `synthetic_dry_run_no_expansion_decision`
+- fewer than 50 non-synthetic items produces `first_checkpoint_review_required`
 - red governance or privacy rating produces `pause`
 - high `insufficient_evidence` rate suggests `revise_schema_first`
 - high `uncertain` rate suggests `revise_guideline_first`
 - baseline false positives suggest `revise_guideline_first` before expansion
 - red reviewer burden suggests `narrow_sources`
-- otherwise, the draft can recommend `expand_to_100_200`
+- otherwise, a completed 50-item pilot draft can recommend `expand_to_100_200`
 
 ## Human Review Required
 
 Before committing any real pilot decision:
 
+- confirm the first 10-15 item checkpoint was completed and allowed continuation to 50
 - confirm governance and privacy/redaction outcomes
 - inspect false positives and false negatives
 - check uncertain and insufficient-evidence rates

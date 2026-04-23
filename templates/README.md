@@ -42,9 +42,9 @@ Use `annotator_calibration_packet_template.md` for blind calibration setup and `
 
 Use `500_item_expansion_work_order.md` only after the staged expansion gates in `docs/32-500-item-expansion-plan.md` are satisfied.
 
-Use `pilot_decision_memo.md` and `baseline_error_review_table.csv` after the 50-item pilot to decide whether to expand, revise, narrow, or pause.
+Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.md` after the first 10-15 real pilot items before completing all 50 items. This is the gate to `continue_to_50`, `continue_with_limits`, pause, revise, or stop.
 
-Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.md` after the first 10-15 real pilot items before completing all 50 items.
+Use `pilot_decision_memo.md`, `pilot_result_summary.md`, and `baseline_error_review_table.csv` only after the checkpoint-approved 50-item pilot to decide whether to expand to 100-200, revise, narrow, or pause.
 
 Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
 
