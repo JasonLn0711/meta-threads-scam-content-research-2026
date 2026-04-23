@@ -1,0 +1,2 @@
+source_candidate_id,source_type,approval_status,approved_collection_method,approved_fields_summary,privacy_risk_level,redaction_burden,evidence_quality,source_skew_risk,expected_label_bucket,expected_content_forms,target_count,pilot_count_collected,include_in_pilot,exclusion_reason,notes
+

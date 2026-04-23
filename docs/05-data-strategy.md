@@ -6,6 +6,8 @@ Collect the minimum evidence needed to answer phase-1 research questions while p
 
 Operational collection and redaction steps are defined in `docs/23-collection-and-redaction-sop.md`.
 
+Candidate source intake and source-mix planning are defined in `docs/34-source-intake-and-sampling-frame.md`.
+
 ## Candidate Data Sources
 
 | Source | Use | Caution |
@@ -15,6 +17,8 @@ Operational collection and redaction steps are defined in `docs/23-collection-an
 | Researcher-created negative examples | Calibration for non-scam and benign marketing | Do not overrepresent artificial negatives. |
 | Public benign Threads content | Non-scam comparison set | Avoid broad automated collection without approval. |
 | Historical report summaries | Pattern discovery if available | May be sensitive or incomplete. |
+
+Before any real source is used, complete `templates/source_candidate_intake.md` and record the candidate in `governance/source-intake-register.md`.
 
 ## Manual Public Example Workflow
 
@@ -79,6 +83,8 @@ No automated Threads or Meta collection is approved at repo initialization. Any 
 ## Sampling Plan
 
 Start with a 50-item pilot, then expand to 100-200 items after guideline and schema review. If annotation capacity is limited, prefer 100-150 high-quality items over a larger weakly reviewed batch.
+
+The pilot sampling frame should be built with `templates/source_sampling_frame_template.csv` before collection begins.
 
 Pilot:
 
