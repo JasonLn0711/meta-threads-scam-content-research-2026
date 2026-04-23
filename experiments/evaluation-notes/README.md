@@ -13,5 +13,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0005-review-packet-workflow.md` | Local-only item packet workflow for baseline error and threshold review. |
 | `0006-manual-collection-assistant-smoke.md` | Synthetic smoke test for manual-only record building and governance checks. |
 | `0007-phase1-pilot-launch-readiness.md` | Operational readiness note for governed Phase 1 launch gates. |
+| `0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only integrated rehearsal of manual build, validation, calibration, audit, baseline, packets, and synthesis. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

@@ -7,6 +7,7 @@ This folder records data handling, authorization, privacy, platform, and evidenc
 As of `2026-04-23`:
 
 - synthetic examples are approved for templates, calibration, and tooling dry runs
+- the integrated synthetic launch rehearsal has been completed and recorded as tooling evidence only
 - the first real 50-item Threads pilot is approved for bounded launch preparation under `go_with_limits`
 - no real Threads evidence has been collected or committed
 - exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before the first item
@@ -22,6 +23,8 @@ As of `2026-04-23`:
 | `source-intake-register.md` | Candidate source review before authorization and collection. |
 | `pilot-authorization-register.md` | Register of pilot source approvals, pending requests, and decisions. |
 | `pilot-launch/` | Non-sensitive launch records for the approved 50-item pilot. |
+| `../decision-log/0017-record-integrated-synthetic-launch-rehearsal.md` | Decision record for the synthetic-only launch rehearsal and remaining real-collection gate. |
+| `../experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only integrated rehearsal results. |
 
 ## Required Before Real Pilot Data
 
@@ -35,3 +38,5 @@ Before the first real item is collected:
 6. Start with the first 10-15 item checkpoint before completing all 50 items.
 
 If any item is unresolved, the project remains synthetic-only.
+
+The synthetic rehearsal does not satisfy these requirements. It confirms repo tooling behavior only.

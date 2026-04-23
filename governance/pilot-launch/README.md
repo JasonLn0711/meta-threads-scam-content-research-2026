@@ -18,6 +18,8 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `../../docs/40-pilot-preflight-verification.md` | Repo and local workspace preflight before item 1. |
 | `../../docs/38-first-pilot-checkpoint-protocol.md` | Required first 10-15 item checkpoint protocol. |
 | `../../templates/pilot_checkpoint_review.md` | Checkpoint review template. |
+| `../../decision-log/0017-record-integrated-synthetic-launch-rehearsal.md` | Decision record preserving the controlled-launch gate after the synthetic rehearsal. |
+| `../../experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only launch rehearsal results. |
 
 ## Launch Status
 
@@ -33,5 +35,6 @@ Meaning:
 - Exact raw storage location, access list, and any sensitive source identifiers must be held in the approved controlled location, not in this repository.
 - The item-1 preflight must pass after local workspace initialization.
 - The pilot must pause after the first 10-15 collected or annotated rows for checkpoint review.
+- The integrated synthetic launch rehearsal is tooling evidence only; it does not authorize item 1.
 
 No real Threads evidence has been collected or committed in this folder.
