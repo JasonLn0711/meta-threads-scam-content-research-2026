@@ -31,11 +31,11 @@
 
 ## Domain Reviewers
 
-- Which signals are strong enough to mark `scam_like`?
+- Which signals are strong enough to mark `scam` under the research guideline?
 - Which finance or marketing examples are commonly misread as scam-like?
 - How should annotators handle celebrity references?
 - How should annotators handle political or medical claims?
-- What makes a case `uncertain` rather than `scam_like`?
+- What makes a case `uncertain` rather than `scam`?
 - Which evidence fields are most useful during review?
 
 ## Engineering And Research Stakeholders

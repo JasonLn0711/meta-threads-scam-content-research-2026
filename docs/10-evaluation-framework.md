@@ -22,7 +22,7 @@ Do not rely only on model metrics. The phase-1 system is useful only if it impro
 ## Suggested Quantitative Measures
 
 - Precision at high-risk tier.
-- Recall for `scam_like` items.
+- Recall for `scam` items.
 - False positive rate among legitimate finance or marketing posts.
 - Percentage of items requiring second review.
 - Average annotation minutes per item.
