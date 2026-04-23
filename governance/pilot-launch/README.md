@@ -20,6 +20,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_guideline_revision_log.md` | Accepted calibration-driven guideline revisions for the first governed rehearsal and pilot batch. |
 | `../../docs/40-pilot-preflight-verification.md` | Repo and local workspace preflight before item 1. |
 | `../../templates/manual_collection_rehearsal_checklist.md` | Checklist for the first 1-2 controlled real rehearsal items. |
+| `../../templates/controlled_rehearsal_review.md` | Aggregate-only review template for turning the 1-2 item rehearsal into a decision. |
 | `../../templates/annotation_qa_checklist.md` | Annotation and calibration QA checklist for the first pilot batch. |
 | `../../docs/38-first-pilot-checkpoint-protocol.md` | Required first 10-15 item checkpoint protocol. |
 | `../../templates/pilot_checkpoint_review.md` | Checkpoint review template. |
@@ -28,6 +29,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `../../experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only launch rehearsal results. |
 | `../../experiments/evaluation-notes/0012-synthetic-calibration-guideline-revision.md` | Calibration-driven guideline and answer-key revision note. |
 | `../../experiments/evaluation-notes/0013-controlled-rehearsal-boundary-watchlist.md` | Watchlist for the first 1-2 controlled real rehearsal items. |
+| `../../experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md` | Repo-safe decision protocol after the first 1-2 controlled real rehearsal items. |
 
 ## Launch Status
 

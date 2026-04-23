@@ -117,10 +117,13 @@ Pause the rehearsal and do not start the first 10-15 item checkpoint if:
 
 Record one outcome after the rehearsal review:
 
-- `pass_ready_for_first_10_15`
+- `pass_ready_for_calibration_or_first_10_15`
 - `pass_with_limits`
 - `pause_for_redaction_fix`
 - `pause_for_schema_or_guideline_fix`
 - `pause_for_authorization_review`
+- `stop_source_for_pilot`
 
-If the result is `pass_ready_for_first_10_15` or `pass_with_limits`, the next repo-side gate is `docs/38-first-pilot-checkpoint-protocol.md` with `templates/pilot_checkpoint_review.md`.
+Record the repo-safe rehearsal readout with `templates/controlled_rehearsal_review.md` and `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`.
+
+If the result is `pass_ready_for_calibration_or_first_10_15` or `pass_with_limits`, rerun calibration only if the annotator team changed; otherwise the next repo-side gate is `docs/38-first-pilot-checkpoint-protocol.md` with `templates/pilot_checkpoint_review.md`.

@@ -19,5 +19,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0011-approved-placeholder-gate-check.md` | Repo-safe gate check proving approved manual rehearsal intake with unresolved placeholders cannot generate a real record. |
 | `0012-synthetic-calibration-guideline-revision.md` | Repo-safe note recording calibration-driven guideline and answer-key revisions before real-item expansion. |
 | `0013-controlled-rehearsal-boundary-watchlist.md` | Repo-safe watchlist for the first 1-2 controlled real rehearsal items after the calibration-driven guideline revision. |
+| `0014-controlled-rehearsal-review-protocol.md` | Repo-safe bridge from the 1-2 item rehearsal to the first 10-15 item checkpoint decision. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
