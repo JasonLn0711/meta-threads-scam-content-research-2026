@@ -87,6 +87,131 @@ Use [39-local-pilot-workspace.md](39-local-pilot-workspace.md) and `scripts/init
 
 Use pseudonymous IDs such as `collector_01`, `ann_01`, `ann_02`, `rev_01`, and `adj_01`.
 
+## Phase 1 Runbook
+
+This runbook is the operating order for Phase 1. Do not skip ahead because a later mission has tooling ready.
+
+### Mission 1: Finish Controlled Launch Details
+
+| Field | Requirement |
+|---|---|
+| Purpose | Convert approval into exact, enforceable source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, and field limits. |
+| Required inputs | `governance/pilot-launch/`, `governance/data-governance.md`, `templates/controlled_launch_details_template.md`. |
+| Commands | None. This is a human governance step outside git. |
+| Exit criteria | Filled controlled launch record has status `ready_for_rehearsal` or `ready_for_first_10_15_items`. |
+| Stop conditions | Any unresolved source, storage, access, retention, redaction, screenshot, OCR, URL, handle, role, permitted-field, or forbidden-field decision. |
+| Common failure modes | Sensitive details copied into git; source category too vague; raw storage path missing; retention rule left as "TBD". |
+
+### Mission 2: Initialize Local Pilot Workspace
+
+| Field | Requirement |
+|---|---|
+| Purpose | Create ignored local working files with the committed schema and templates. |
+| Required inputs | Completed controlled launch record outside git; assigned role IDs. |
+| Commands | `python scripts/init_pilot_workspace.py --ack-controlled-details` and `python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details`. |
+| Exit criteria | Preflight exits with `ERROR: 0`; local workspace files exist under ignored `data/interim/`. |
+| Stop conditions | Any preflight error; missing local workspace files; raw files in repo evidence/data folders. |
+| Common failure modes | Running before controlled details exist; using `--force` over useful local work; ignoring preflight warnings. |
+
+### Mission 3: Collector Rehearsal
+
+| Field | Requirement |
+|---|---|
+| Purpose | Test 1-2 manually prepared local records before real volume. |
+| Required inputs | Approved local input JSON, controlled fields, `templates/manual_collection_rehearsal_checklist.md`. |
+| Commands | `python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json --ack-controlled-details --output data/interim/manual_record_0001.json --collection-log data/interim/threads_pilot_v1_collection_log.csv`; then `python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict`. |
+| Exit criteria | Governance errors zero; strict validation passes; redaction review passes; collector does not need unapproved context. |
+| Stop conditions | Full URLs, raw handles, unrelated personal data, profile/landing-page/redirect context, automation, or schema blockers. |
+| Common failure modes | Treating assistant normalization as approval; omitting redaction notes; failing to log collection burden. |
+
+### Mission 4: Annotator Calibration
+
+| Field | Requirement |
+|---|---|
+| Purpose | Confirm annotators can apply labels before real annotation volume. |
+| Required inputs | `docs/06-annotation-guideline-v1.md`, `docs/24-annotator-training-and-calibration.md`, 5-item calibration packet. |
+| Commands | `python scripts/compare_annotation_passes.py data/interim/calibration_ann_01.csv data/interim/calibration_ann_02.csv --name-a ann_01 --name-b ann_02 --output data/processed/calibration_agreement.md --disagreements-csv data/processed/calibration_disagreements.csv`. |
+| Exit criteria | Primary-label disagreements are isolated and adjudicable; no dangerous label drift; guideline changes are logged. |
+| Stop conditions | Repeated primary-label boundary failure; confusion between `uncertain` and `insufficient_evidence`; need for unapproved context. |
+| Common failure modes | Over-reading tiny-sample statistics; using five easy examples; failing to adjudicate disagreement themes. |
+
+### Mission 5: First 10-15 Item Checkpoint
+
+| Field | Requirement |
+|---|---|
+| Purpose | Inspect operational quality before scale. |
+| Required inputs | Local collection log, local annotation sheet if labels exist, `templates/pilot_checkpoint_review.md`. |
+| Commands | `python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv --strict`; then `python scripts/audit_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv > data/processed/threads_pilot_v1_checkpoint_audit.md`. |
+| Exit criteria | Decision is `continue_to_50` or `continue_with_limits`; follow-up limits are recorded. |
+| Stop conditions | Raw evidence in git, redaction failure, unapproved context, repeated label drift, schema blocker, source skew that makes the slice misleading. |
+| Common failure modes | Collecting all 50 before review; hiding low-context items; treating warnings as solved without owner decision. |
+
+### Mission 6: Complete 50-Item Pilot
+
+| Field | Requirement |
+|---|---|
+| Purpose | Finish the bounded diagnostic pilot only after checkpoint approval. |
+| Required inputs | Checkpoint decision; narrowed limits if any; controlled record updates if limits changed. |
+| Commands | Use manual collection and validation commands from Missions 3 and 5 as rows accumulate. |
+| Exit criteria | 50 or fewer approved records collected and redacted under the checkpoint decision. |
+| Stop conditions | Checkpoint did not permit continuation; new source/context needed; redaction burden becomes unstable. |
+| Common failure modes | Expanding source mix without approval; continuing after privacy or evidence-quality drift. |
+
+### Mission 7: Annotation QA And Adjudication
+
+| Field | Requirement |
+|---|---|
+| Purpose | Make labels reviewable and disagreement themes explicit. |
+| Required inputs | Completed annotation sheet, `templates/annotation_qa_checklist.md`, disagreement/adjudication templates. |
+| Commands | `python scripts/compare_annotation_passes.py` when dual passes exist; `python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv --strict`. |
+| Exit criteria | Required review routes completed; final labels/risk levels filled where adjudicated; guideline revision candidates logged. |
+| Stop conditions | Repeated unresolved primary-label disagreement; notes include raw personal data or legal conclusions. |
+| Common failure modes | Skipping second review for high-risk/uncertain items; failing to distinguish missing from ambiguous evidence. |
+
+### Mission 8: Baseline And Calibration Runs
+
+| Field | Requirement |
+|---|---|
+| Purpose | Run transparent local baselines only after labels and evidence are stable enough for interpretation. |
+| Required inputs | Strict-valid annotation file or JSONL; baseline config; calibration profiles. |
+| Commands | `python scripts/run_rule_baseline.py data/interim/threads_pilot_v1_annotations.csv --variant all --run-name pilot-rule-baseline-v1`; `python scripts/run_rule_calibration.py data/interim/threads_pilot_v1_annotations.csv --run-name pilot-rule-calibration-v1`. |
+| Exit criteria | Local-only summaries and reviewer worksheet generated; false-positive/false-negative themes are reviewable. |
+| Stop conditions | Strict validation fails; governance/privacy rating is red; baseline outputs would expose sensitive item evidence in git. |
+| Common failure modes | Treating baseline metrics as production performance; tuning on synthetic data alone. |
+
+### Mission 9: Reviewer Packets
+
+| Field | Requirement |
+|---|---|
+| Purpose | Prepare local item-level review packets for baseline error and reason-code review. |
+| Required inputs | Annotation file, optional predictions JSON, reviewer role IDs. |
+| Commands | `python scripts/build_review_packets.py data/interim/threads_pilot_v1_annotations.csv --variant all --run-name pilot-v1-review-packets`. |
+| Exit criteria | Local packet index and packets generated under ignored outputs; reviewer notes feed guideline/schema/baseline decisions. |
+| Stop conditions | Packets contain raw source URLs, raw handles, screenshots, credentials, or unnecessary personal data. |
+| Common failure modes | Committing real packets; using packets as a moderation queue rather than research review. |
+
+### Mission 10: Pilot Synthesis And Decision Memo
+
+| Field | Requirement |
+|---|---|
+| Purpose | Convert pilot evidence into a non-sensitive decision: expand, revise, narrow, or pause. |
+| Required inputs | QA results, audit, calibration output, reviewer themes, governance/privacy/reviewer-burden ratings. |
+| Commands | `python scripts/summarize_pilot_results.py data/interim/threads_pilot_v1_annotations.csv --calibration-run-dir experiments/baselines/outputs/pilot-rule-calibration-v1 --run-name pilot-v1-decision-draft --governance-rating green --privacy-rating green --reviewer-burden-rating yellow`. |
+| Exit criteria | Human-finalized non-sensitive result summary and decision memo; decision-log entry created. |
+| Stop conditions | Any red governance/privacy issue; unresolved evidence-quality or label-quality blocker. |
+| Common failure modes | Publishing item-level evidence; making prevalence, legal, or production-performance claims. |
+
+### Mission 11: Expand To 100-200 Only If Justified
+
+| Field | Requirement |
+|---|---|
+| Purpose | Expand only if the 50-item pilot proves the workflow is stable and useful. |
+| Required inputs | Final decision memo supporting `expand_to_100_200`; updated guideline/schema/source limits if needed. |
+| Commands | None until the decision is recorded; later workspace commands should use a new batch identity. |
+| Exit criteria | New authorized work order and controlled launch details for the next batch. |
+| Stop conditions | Decision is revise, narrow, or pause; 500-item expansion requested without intermediate evidence. |
+| Common failure modes | Jumping from 50 directly to 500; expanding based on baseline metrics alone. |
+
 ## Execution Sequence
 
 ### Step 1: Confirm Authorization

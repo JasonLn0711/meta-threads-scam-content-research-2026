@@ -10,6 +10,7 @@ baseline_error_review_table.csv
 annotation_sheet_template.csv
 annotation_disagreement_log_template.csv
 annotation_qa_checklist.md
+annotator_calibration_packet_template.md
 annotator_onboarding_checklist.md
 adjudication_template.md
 collection_log_template.csv
@@ -18,6 +19,7 @@ data_authorization_request.md
 dataset_manifest_template.md
 experiment_log_template.md
 guideline_revision_log_template.md
+manual_collection_rehearsal_checklist.md
 pilot_batch_work_order.md
 pilot_checkpoint_review.md
 pilot_decision_memo.md
@@ -35,6 +37,8 @@ thread_item_sample_batch.json
 ```
 
 Use the annotation, onboarding, QA, adjudication, disagreement, and guideline-revision templates for annotation workflow. Use the authorization, collection, redaction, work-order, result-summary, and manifest templates before or during the authorized pilot workflow. Use `report_review_feedback.md` for report-v0 stakeholder and reviewer comments.
+
+Use `annotator_calibration_packet_template.md` for blind calibration setup and `manual_collection_rehearsal_checklist.md` for the 1-2 item manual collection rehearsal before item 1.
 
 Use `500_item_expansion_work_order.md` only after the staged expansion gates in `docs/32-500-item-expansion-plan.md` are satisfied.
 

@@ -56,6 +56,20 @@ Use this template after the first 10-15 real pilot items are collected or annota
 | Source URLs omitted, normalized, or redacted |  |  |
 | Exclusion reasons recorded |  |  |
 
+## Review Dimensions
+
+| Dimension | Rating | Evidence or issue summary |
+|---|---|---|
+| Governance compliance | green / yellow / red |  |
+| Redaction quality | green / yellow / red |  |
+| Collection burden | green / yellow / red |  |
+| Annotation consistency | green / yellow / red / not_available |  |
+| Evidence sufficiency | green / yellow / red |  |
+| OCR quality | green / yellow / red / not_applicable |  |
+| Reply/comment usefulness | green / yellow / red / not_applicable |  |
+| Visible link/handle handling | green / yellow / red / not_applicable |  |
+| Unapproved context pressure | none / limited / blocking |  |
+
 ## Annotation QA
 
 Complete if first-pass labels exist.
@@ -96,6 +110,8 @@ Complete if labels exist.
 | annotators need unapproved context |  |  |
 | source skew already severe |  |  |
 | same label disagreement repeated |  |  |
+| schema field confusion or burden |  |  |
+| checkpoint item needed unapproved context |  |  |
 
 ## Decision
 
@@ -114,6 +130,30 @@ Decision:
 ```text
 
 ```
+
+## Decision Evidence
+
+| Decision option | Evidence supporting or rejecting this option |
+|---|---|
+| continue |  |
+| continue with limits |  |
+| pause |  |
+| revise guideline first |  |
+| revise schema first |  |
+| narrow sources |  |
+
+## Limits If Continuing
+
+Complete if the decision is `continue_with_limits`.
+
+| Limit type | Required limit before item 16 |
+|---|---|
+| Source/source category |  |
+| Permitted fields |  |
+| Redaction |  |
+| Screenshot/OCR |  |
+| URL/link/handle handling |  |
+| Review routing |  |
 
 ## Required Follow-Up
 

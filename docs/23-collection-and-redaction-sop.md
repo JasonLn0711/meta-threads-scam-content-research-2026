@@ -173,6 +173,60 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 
 This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits.
 
+## Manual Collection Rehearsal
+
+Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. The objective is to test whether the collector can turn manually observed or stakeholder-provided evidence into redacted, schema-valid local records without reaching for unapproved context.
+
+Use rehearsal records to catch operational mistakes, not to make pilot findings. A good rehearsal record:
+
+- has a non-identifying `item_id`
+- uses only an approved `source_type`, `collection_method`, and `authorization_status`
+- stores raw evidence only in the approved outside-git location
+- uses approved redacted or minimized forms for source URLs, visible links, contact handles, OCR text, screenshots, and replies
+- fills `screenshot_snapshot_status`, `link_snapshot_status`, `privacy_redaction_notes`, and `missing_evidence` where relevant
+- records collection burden and exclusion reasons in the local collection log
+
+Run:
+
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+
+python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+```
+
+Use `templates/manual_collection_rehearsal_checklist.md` for the human review.
+
+Common rehearsal mistakes to catch:
+
+- copying raw source URLs when only redacted references are approved
+- storing contact handles, phone numbers, emails, payment details, or referral codes in raw form
+- recording full OCR text that includes unrelated personal details
+- including reply or profile context because it seems useful rather than because it is approved
+- leaving screenshot/link status blank
+- failing to log collection burden or exclusion reason
+- treating warnings from the manual assistant as acceptable without governance review
+
+Rehearsal passes only when:
+
+- validation returns zero errors and zero strict warnings
+- the collection-log row uses only approved fields
+- redaction quality passes reviewer inspection
+- no raw evidence or sensitive controlled detail is in git
+- the collector can explain what was excluded and why
+
+Rehearsal fails and collection pauses if:
+
+- the collector needs unapproved profile/account/landing-page/redirect context
+- approved fields are too ambiguous to populate consistently
+- redaction cannot be done reliably
+- schema fields are missing, confusing, or too burdensome for the approved evidence
+- any item requires automation or live platform ingestion
+
+If the schema appears wrong during rehearsal, do not improvise new fields in local files. Record the issue as a schema-revision candidate and update `data-contracts/thread_item_schema_v1.json`, templates, and annotation guidance only after project-owner review.
+
 The full post-authorization execution sequence is in `docs/29-authorized-pilot-execution-plan.md`.
 
 ## Stop Conditions

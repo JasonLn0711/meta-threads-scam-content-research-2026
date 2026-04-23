@@ -17,6 +17,8 @@ The checkpoint exists to catch problems early while they are still cheap to fix:
 
 This protocol does not authorize new collection methods, additional sources, automation, link crawling, profile review, or expansion beyond the approved 50-item pilot.
 
+This checkpoint is a hard gate. Do not complete the 50-item pilot until the first 10-15 item checkpoint is reviewed and the project owner records `continue_to_50` or `continue_with_limits`.
+
 ## Preconditions
 
 Do not start the first checkpoint until:
@@ -65,6 +67,18 @@ Try to include at least some variation across:
 
 Do not force this mix if doing so would require unapproved evidence.
 
+Content coverage targets for the first checkpoint:
+
+| Content form | Target in first 10-15 | Notes |
+|---|---:|---|
+| text-only | at least 2 | Include suspicious and benign if available. |
+| text plus image | at least 2 if approved | Use redacted image references only. |
+| reply/comment context | at least 1-2 if approved | Selected relevant replies only. |
+| OCR-heavy or screenshot-style | at least 1 if approved | OCR must be privacy-reviewed. |
+| visible link, handle, or redirect signal | at least 2 if approved | Visible signals only; no crawling or redirect expansion. |
+
+If a coverage target cannot be met under the controlled launch limits, record that as a checkpoint finding rather than expanding the source or context.
+
 ## Collection Checkpoint
 
 Use `templates/pilot_checkpoint_review.md`.
@@ -83,6 +97,17 @@ Required checks:
 - source references are omitted, normalized, or redacted according to the controlled launch record
 - no item requires profile/account/landing-page context
 - duplicates are marked rather than silently removed
+
+Review dimensions:
+
+- governance compliance
+- redaction quality
+- collection burden
+- evidence sufficiency
+- OCR quality
+- reply/comment usefulness
+- visible link/handle handling
+- whether any item implicitly required unapproved context
 
 Pause immediately if:
 
@@ -109,6 +134,14 @@ Required checks:
 - notes are evidence-based and avoid legal conclusions
 - notes do not include raw personal data
 - `uncertain` and `insufficient_evidence` are not being used interchangeably
+
+Review dimensions:
+
+- annotation consistency
+- evidence-based notes
+- second-review routing
+- dangerous label drift
+- whether the guideline is clear enough to continue
 
 Warning thresholds for 10-15 items:
 
@@ -137,6 +170,17 @@ Choose one checkpoint decision:
 
 Do not choose `continue_to_50` if the team cannot explain why each warning is acceptable.
 
+Decision evidence:
+
+| Practical decision | Checkpoint decision value | Evidence needed |
+|---|---|---|
+| continue | `continue_to_50` | Zero blocking governance/privacy findings; redaction consistent; annotation fields usable; no repeated dangerous label drift. |
+| continue with limits | `continue_with_limits` | Issues are bounded by source, field, content-form, redaction, or review constraints that can be enforced immediately. |
+| pause | `pause_for_redaction_fix`, `pause_for_collection_fix`, `pause_for_authorization_review`, or `stop_pilot` | Raw-data, authorization, evidence quality, burden, or unapproved-context issue blocks safe continuation. |
+| revise guideline first | `pause_for_guideline_fix` | Repeated label-boundary, evidence-sufficiency, confidence, or signal-tag disagreement would make the next 35-40 items unreliable. |
+| revise schema first | `pause_for_collection_fix` plus schema follow-up | Required fields are missing, confusing, too sensitive, too burdensome, or cannot represent approved evidence. |
+| narrow sources | `continue_with_limits` or `pause_for_collection_fix` | Source mix causes low-context, privacy-heavy, or unreviewable items that would distort the 50-item pilot. |
+
 ## Minimum Checkpoint Output
 
 The checkpoint summary should include:
@@ -161,7 +205,7 @@ Use `templates/pilot_checkpoint_review.md`.
 When the first local annotation CSV exists:
 
 ```bash
-python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv
+python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv --strict
 python scripts/audit_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv \
   > data/processed/threads_pilot_v1_checkpoint_audit.md
 ```

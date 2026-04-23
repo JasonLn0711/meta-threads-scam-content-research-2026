@@ -6,6 +6,15 @@ This document defines how to prepare annotators before the 50-item pilot. It giv
 
 Calibration is required before the first real pilot batch. It should use synthetic or redacted examples only unless data authorization is complete.
 
+Participants:
+
+- at least two annotators or one annotator plus one reviewer
+- one annotation lead or adjudicator
+- one governance reviewer if calibration uses any real redacted evidence
+- the research engineer only for file preparation, comparison, and local report generation
+
+Annotators must read the required materials before they see the blind calibration file. Do not use calibration to teach the guideline from scratch.
+
 ## Training Sequence
 
 1. Read `docs/06-annotation-guideline-v1.md`.
@@ -30,6 +39,17 @@ The minimum calibration set is five items:
 - one ambiguous finance-related post
 - one screenshot-heavy suspicious post
 
+Select items that can create useful disagreement without requiring unapproved context. At least two of the five should stress likely boundary problems:
+
+- `scam` versus `uncertain`
+- `uncertain` versus `insufficient_evidence`
+- aggressive but legitimate marketing versus scam-like persuasion
+- OCR-only or reply-only evidence
+- visible link or contact-handle handling
+- source context absent by design
+
+Do not choose five obvious examples. A calibration set that produces no discussion may fail to reveal dangerous label drift.
+
 Use `data/samples/thread_item_sample_batch.csv` as a safe answer-key sample. For a blind exercise, use `scripts/prepare_calibration_files.py` to blank annotation fields before giving the file to annotators.
 
 Annotation fields to remove or blank for blind calibration:
@@ -48,6 +68,21 @@ Annotation fields to remove or blank for blind calibration:
 - `final_risk_level`
 
 The blind file is not expected to validate until annotators fill those fields.
+
+## Calibration Packet
+
+Use `templates/annotator_calibration_packet_template.md` to prepare the local calibration packet. The packet should include:
+
+- calibration ID and date
+- assigned annotator IDs
+- item IDs only, not raw source identifiers
+- permitted evidence fields
+- forbidden outside context
+- expected time box
+- disagreement review schedule
+- the exact guideline and schema versions used
+
+The packet may live outside git if it contains item-level real evidence. Commit only non-sensitive themes and guideline updates.
 
 ## Preparing Files
 
@@ -79,6 +114,30 @@ Do not treat these as hard scientific thresholds on a tiny calibration set. They
 | Mean `signal_tags` Jaccard | at least 0.50 | below 0.40 |
 
 Kappa can be reported, but it is unstable for five examples. Use disagreement patterns and adjudication notes as the main signal.
+
+Minimum qualitative expectations before real pilot annotation:
+
+- both annotators can explain every `scam`, `uncertain`, `non_scam`, and `insufficient_evidence` choice from collected evidence only
+- primary-label disagreements are isolated and adjudicable
+- annotators do not use `uncertain` as a substitute for missing evidence
+- annotators do not use `insufficient_evidence` for merely ambiguous but reviewable evidence
+- risk-level disagreements do not change which items need second review
+- signal-tag disagreement does not hide the main risk reason
+
+Dangerous label drift includes:
+
+- repeated `scam` versus `non_scam` disagreement on the same evidence pattern
+- one annotator labeling aggressive marketing as `scam` without concrete risk signals
+- one annotator requiring unapproved source/profile/landing-page context before labeling
+- OCR/reply-only evidence being treated as decisive by one annotator and ignored by another
+- `insufficient_evidence` used when evidence is present but uncomfortable or ambiguous
+- notes making legal fraud claims rather than research labels
+
+Acceptable disagreement includes:
+
+- subtype or signal-tag differences that do not change the primary label or review route
+- confidence differences that can be resolved through adjudication notes
+- one-off boundary disagreements that do not repeat across the five items
 
 ## Comparison Command
 
@@ -120,13 +179,22 @@ For each disagreement, ask:
 
 ## Pilot Readiness Decision
 
-Proceed to the 50-item pilot only when:
+Proceed to the first 10-15 real item checkpoint only when:
 
 - primary-label disagreements can be adjudicated without changing the entire taxonomy
 - annotators can explain why `uncertain` differs from `insufficient_evidence`
 - annotators agree on how to handle finance, recruitment, giveaway, celebrity, and screenshot-heavy cases
 - redaction and evidence-sufficiency rules are not blocking annotation
 
-If calibration fails, revise `docs/06-annotation-guideline-v1.md` before collecting more real examples.
+Proceed to the rest of the 50-item pilot only after the first 10-15 item checkpoint also supports continuation.
+
+Revise `docs/06-annotation-guideline-v1.md` before continuing when:
+
+- the same primary-label boundary fails more than once
+- annotators cannot explain `uncertain` versus `insufficient_evidence`
+- the guideline does not say how to handle an observed evidence pattern
+- disagreement themes imply a field or label is being interpreted differently
+
+If calibration fails, do not collect or annotate more real examples until the guideline or workflow is corrected and the affected calibration cases are reviewed again.
 
 Use `templates/annotation_qa_checklist.md` for batch-level QA before annotation, during the first 10-15 pilot items, and before baseline handoff.

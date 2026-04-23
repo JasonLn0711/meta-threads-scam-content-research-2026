@@ -86,6 +86,36 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 
 `data/interim/` is ignored by git. Do not commit generated real records if they contain item-level evidence.
 
+## 1-2 Item Rehearsal
+
+Run a rehearsal before real volume begins. The rehearsal proves the collector can prepare approved local inputs, build a schema-valid record, append the local collection log, and pass redaction review without using unapproved context.
+
+Use one or two local `data/interim/manual_entry_*.json` payloads prepared from approved manual or stakeholder-provided fields. The input JSON itself is local-only and must not contain raw personal data, full source URLs, unredacted contact handles, browser artifacts, credentials, or other forbidden fields.
+
+Command for the first rehearsal record:
+
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+
+python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+```
+
+Review `data/interim/manual_record_0001.json` and `data/interim/threads_pilot_v1_collection_log.csv` locally with `templates/manual_collection_rehearsal_checklist.md`.
+
+Pass criteria:
+
+- `governance_errors: 0`
+- `schema_errors: 0`
+- strict validation passes
+- any governance warning is reviewed against the controlled launch record before continuation
+- redaction notes explain links, handles, OCR, screenshots, or stakeholder context
+- no unapproved fields or outside context are needed to make the record reviewable
+
+Fail and pause if the collector reaches for profile review, landing-page content, redirect chains, broad comment history, raw handles, full URLs, or automation. If this happens, update governance or narrow the source before collecting more items.
+
 ## Outputs
 
 The script can write:
