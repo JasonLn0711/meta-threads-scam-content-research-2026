@@ -32,17 +32,18 @@ What is ready:
 - local checklist and aggregate review draft exist
 - manual collection tooling can run through the ignored `.venv`
 - controlled crawler acquisition plan and run-record template exist
+- tracked non-sensitive crawler run record `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_crawler_run_record_0001.md` exists
 
 What is not ready:
 
 - no specific controlled rehearsal item has been selected or entered
-- no controlled crawler run record has been filled for item 1
+- no concrete seed, URL, query, or access target has been provided for crawler execution
 - no schema-valid real rehearsal record exists
 - redaction burden has not been measured
 - boundary-watch behavior has not been observed
 - annotation readiness cannot be assessed
 
-Therefore the project cannot start the first 10-15 item checkpoint yet. The next required action is to complete a controlled crawler run record, run a one-item low-speed crawler rehearsal under that record, fill the local intake with only approved redacted fields, build the local record, run strict validation, and update the aggregate rehearsal review with a new decision.
+Therefore the project cannot start the first 10-15 item checkpoint yet. The next required action is to provide one concrete CIB-approved seed, URL, query, or access target, run a one-item low-speed crawler rehearsal under the tracked run record, fill the local intake with only approved redacted fields, build the local record, run strict validation, and update the aggregate rehearsal review with a new decision.
 
 ## Why 10-15 Items Come Before 50
 
