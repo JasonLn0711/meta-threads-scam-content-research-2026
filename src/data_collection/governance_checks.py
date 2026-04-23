@@ -23,6 +23,8 @@ BLOCKED_FLAGS = (
     "enable_profile_review",
 )
 
+PLACEHOLDER_MARKERS = ("FILL_", "REPLACE_", "PENDING_")
+
 
 @dataclass
 class GovernanceResult:
@@ -128,6 +130,7 @@ def _check_real_record(
         result.errors.append(f"real item has unsupported collection_method {collection_method!r}")
     if authorization_status != "approved":
         result.errors.append("real manual items must use authorization_status='approved'")
+    _check_no_unresolved_placeholders(result, record)
 
 
 def _check_privacy_minimization(
@@ -163,6 +166,22 @@ def _check_privacy_minimization(
             result.errors.append("captured_full_approved screenshots are disabled in manual assistant config")
         if record.get("link_snapshot_status") == "captured_full_approved":
             result.errors.append("captured_full_approved link snapshots are disabled in manual assistant config")
+
+
+def _check_no_unresolved_placeholders(result: GovernanceResult, record: dict[str, Any]) -> None:
+    for field, value in record.items():
+        for text in _string_values(value):
+            if any(marker in text for marker in PLACEHOLDER_MARKERS):
+                result.errors.append(f"real manual item contains unresolved placeholder in {field}")
+                break
+
+
+def _string_values(value: Any) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        return [str(item) for item in value]
+    return []
 
 
 def _looks_like_full_url(value: str) -> bool:
