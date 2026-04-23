@@ -20,6 +20,8 @@ Current intake status: `ready_for_controlled_item_entry`.
 
 CIB approval is not the current blocker. The remaining blocker is operational: exactly one controlled rehearsal item still needs to be selected, entered in redacted form, built, and strict-validated before a rehearsal decision can be made.
 
+As of `2026-04-24`, CIB and other units cannot provide redacted case examples, and manual controlled sampling is not available as the practical first path. The next acquisition path is therefore a one-item controlled low-speed crawler rehearsal under Decision 0022.
+
 What is ready:
 
 - CIB approval is recorded for the current controlled pilot path
@@ -29,16 +31,18 @@ What is ready:
 - local-only selection worksheet exists and records that no item has been selected yet
 - local checklist and aggregate review draft exist
 - manual collection tooling can run through the ignored `.venv`
+- controlled crawler acquisition plan and run-record template exist
 
 What is not ready:
 
 - no specific controlled rehearsal item has been selected or entered
+- no controlled crawler run record has been filled for item 1
 - no schema-valid real rehearsal record exists
 - redaction burden has not been measured
 - boundary-watch behavior has not been observed
 - annotation readiness cannot be assessed
 
-Therefore the project cannot start the first 10-15 item checkpoint yet. The next required action is to select one CIB-approved controlled rehearsal item, fill the local intake with only approved redacted fields, build the local record, run strict validation, and update the aggregate rehearsal review with a new decision.
+Therefore the project cannot start the first 10-15 item checkpoint yet. The next required action is to complete a controlled crawler run record, run a one-item low-speed crawler rehearsal under that record, fill the local intake with only approved redacted fields, build the local record, run strict validation, and update the aggregate rehearsal review with a new decision.
 
 ## Why 10-15 Items Come Before 50
 

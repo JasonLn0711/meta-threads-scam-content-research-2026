@@ -108,7 +108,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | API-authorized collection | Approved with limits for this CIB-authorized pilot | Use only approved API access paths, credential controls, run records, field limits, and controlled raw storage. |
 | Low-speed automated Threads/Meta collection without scope | Rejected or paused | Rate limiting alone is not authorization; Decision 0016 still applies to unscope automation. |
 | CIB-authorized automation-assisted collection | Approved with limits for this research case | Allowed only under Decision 0018 and the controlled launch record. |
-| Browser automation, scraping-like collection, crawling, bulk export | Approved only if run-scoped under the CIB controlled launch record | Raw outputs, credentials, browser/session artifacts, and logs stay outside git. |
+| Browser automation, scraping-like collection, crawling, bulk export | Approved only if run-scoped under the CIB controlled launch record | Raw outputs, credentials, browser/session artifacts, and logs stay outside git. Decision 0022 narrows the next crawler step to a one-item controlled low-speed rehearsal. |
 | Landing-page crawling or redirect-chain capture | Approved only if run-scoped under the CIB controlled launch record | Repo-visible outputs must be redacted or aggregate. |
 | Unlimited 500-item collection | Rejected or paused | Use `docs/32-500-item-expansion-plan.md`; no collection without staged authorization. |
 

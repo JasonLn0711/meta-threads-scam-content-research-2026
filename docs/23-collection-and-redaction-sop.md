@@ -37,16 +37,19 @@ If any precondition is unresolved, use only synthetic examples.
 | Manual public examples | Legal/platform comfort is documented | Governed by the controlled launch record. |
 | API-authorized examples | API approval is recorded | Approved for the CIB pilot under run-record controls. |
 | Automation-assisted examples | CIB automation authorization and run record exist | Raw outputs, credentials, session artifacts, and logs stay outside git. |
+| Controlled low-speed crawler rehearsal | CIB authorization and crawler run record exist | Use only for the current CIB-approved research path, starting with one selected item and strict stop conditions. |
 
 Not approved by this SOP unless explicitly run-scoped under the CIB controlled launch record:
 
-- scraping
-- browser automation
+- unscoped scraping
+- unscoped browser automation
 - bulk export
 - account/profile crawling
 - landing-page crawling
 - redirect-chain capture
 - raw browser profiles, cookies, or credentials
+
+For the current CIB-authorized pilot, a controlled low-speed crawler is allowed only through [50-controlled-crawler-acquisition-plan.md](50-controlled-crawler-acquisition-plan.md), `templates/controlled_crawler_run_record.md`, and Decision 0022. Low speed by itself is not sufficient; the run must also have a source category, item limit, field allowlist, storage boundary, redaction rule, and stop-condition review.
 
 ## Minimal Evidence To Record
 
@@ -174,9 +177,11 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 
 This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits. Use separate run records for API or automation-assisted capture.
 
+For a crawler-acquired first item, run the crawler under a completed controlled crawler run record first, then enter only the redacted selected item into `data/interim/manual_entry_0001.json`. Do not point the manual collection assistant at raw crawler output.
+
 ## Controlled Collection Rehearsal
 
-Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. The objective is to test whether the team can turn manual, stakeholder-provided, API, or automation-assisted evidence into redacted, schema-valid local records without exceeding the controlled run record.
+Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. Since CIB redacted handoff and manual controlled sampling are currently unavailable, the next practical path is a one-item controlled low-speed crawler rehearsal. The objective is to test whether the team can turn crawler-acquired evidence into redacted, schema-valid local records without exceeding the controlled run record.
 
 Use rehearsal records to catch operational mistakes, not to make pilot findings. A good rehearsal record:
 
@@ -228,6 +233,7 @@ Rehearsal fails and collection pauses if:
 - redaction cannot be done reliably
 - schema fields are missing, confusing, or too burdensome for the approved evidence
 - any item requires automation or live platform ingestion outside the CIB controlled launch record
+- the crawler hits access challenges, rate-limit blocks, captcha/challenge states, or any condition listed in the controlled crawler run record
 
 If the schema appears wrong during rehearsal, do not improvise new fields in local files. Record the issue as a schema-revision candidate and update `data-contracts/thread_item_schema_v1.json`, templates, and annotation guidance only after project-owner review.
 
@@ -243,6 +249,7 @@ Pause collection if:
 - annotators need context that is not approved to collect
 - stakeholder evidence has unclear retention or sharing restrictions
 - collection or automation is drifting beyond the controlled run record
+- a low-speed crawler starts accumulating candidates beyond the rehearsal cap before review
 
 ## Handoff To Annotation
 

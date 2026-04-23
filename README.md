@@ -128,6 +128,8 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 
 The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, record the repo-safe rehearsal decision, confirm calibration if annotators changed, and only then collect the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
+As of `2026-04-24`, CIB and other units cannot provide redacted case examples, and manual controlled sampling is unavailable. The next practical acquisition path is therefore a one-item controlled low-speed crawler rehearsal under Decision 0022, [docs/50-controlled-crawler-acquisition-plan.md](docs/50-controlled-crawler-acquisition-plan.md), and [templates/controlled_crawler_run_record.md](templates/controlled_crawler_run_record.md). Do not start the first 10-15 item checkpoint until the crawler rehearsal builds and strict-validates one local record and the aggregate rehearsal decision is `pass_ready_for_calibration_or_first_10_15` or `pass_with_limits`.
+
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
 ## Recommended First Milestone
@@ -136,7 +138,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, rehearsal review recorded, 5-item calibration completed if needed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, one-item controlled low-speed crawler rehearsal completed if no redacted/manual source item is available, rehearsal review recorded, 5-item calibration completed if needed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
 4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
 5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
 6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
