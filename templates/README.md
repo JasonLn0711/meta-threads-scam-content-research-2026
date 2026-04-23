@@ -25,6 +25,7 @@ pilot_result_summary.md
 real_pilot_readiness_review.md
 redaction_checklist.md
 report_review_feedback.md
+reviewer_triage_packet.md
 source_candidate_intake.md
 source_sampling_frame_template.csv
 stakeholder_authorization_decision_record.md
@@ -40,6 +41,8 @@ Use `500_item_expansion_work_order.md` only after the staged expansion gates in 
 Use `pilot_decision_memo.md` and `baseline_error_review_table.csv` after the 50-item pilot to decide whether to expand, revise, narrow, or pause.
 
 Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.md` after the first 10-15 real pilot items before completing all 50 items.
+
+Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
 
 Use `source_candidate_intake.md` and `source_sampling_frame_template.csv` before any real source enters authorization or collection.
 

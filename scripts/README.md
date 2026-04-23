@@ -19,7 +19,12 @@ thread_dataset_utils.py       Shared local file parsing and validation helpers
 validate_thread_dataset.py    Validate CSV/JSON/JSONL records against thread_item_schema_v1
 convert_thread_dataset.py     Convert records between CSV, JSON, and JSONL
 audit_thread_dataset.py       Produce a Markdown dataset audit summary
+build_manual_collection_record.py Build one schema-valid record from manually supplied local fields
 rule_baseline_v1.py           Run the first transparent rule baseline
+run_rule_baseline.py          Run the modular rule baseline and write JSON/Markdown outputs
+run_rule_calibration.py       Compare rule variants, threshold profiles, and export reviewer worksheet
+summarize_pilot_results.py    Draft aggregate-only pilot result summary and decision memo
+build_review_packets.py       Build local-only Markdown packets for item-level baseline review
 compare_rule_variants.py      Compare text/reply/OCR/all rule baseline variants
 compare_annotation_passes.py  Compare two annotator passes and export disagreements
 prepare_calibration_files.py  Create blind calibration sheets and answer keys
@@ -49,12 +54,51 @@ python scripts/convert_thread_dataset.py data/interim/threads_pilot_v1_annotatio
   --validate
 ```
 
+Build one manual collection record from a local JSON payload:
+
+```bash
+python scripts/build_manual_collection_record.py \
+  data/samples/manual_collection_assistant_input_synthetic.json \
+  --output experiments/evaluation-notes/outputs/synthetic-manual-collection-assistant/manual_record.json \
+  --collection-log experiments/evaluation-notes/outputs/synthetic-manual-collection-assistant/collection_log.csv
+```
+
 Run the v1 rule baseline:
 
 ```bash
 python scripts/rule_baseline_v1.py data/interim/threads_pilot_v1_annotations.csv \
   --variant all \
   --output data/processed/threads_pilot_v1_rule_baseline_predictions.csv
+```
+
+Run the modular baseline and write local JSON/Markdown outputs:
+
+```bash
+python scripts/run_rule_baseline.py data/samples/rule_baseline_eval_sample.json \
+  --variant all \
+  --run-name synthetic-eval-smoke
+```
+
+Run the calibration workbench:
+
+```bash
+python scripts/run_rule_calibration.py data/samples/rule_baseline_eval_sample.json \
+  --run-name synthetic-calibration-smoke
+```
+
+Draft a pilot result synthesis:
+
+```bash
+python scripts/summarize_pilot_results.py data/samples/rule_baseline_eval_sample.json \
+  --calibration-run-dir experiments/baselines/outputs/synthetic-calibration-smoke \
+  --run-name synthetic-pilot-synthesis-smoke
+```
+
+Build local-only reviewer packets:
+
+```bash
+python scripts/build_review_packets.py data/samples/rule_baseline_eval_sample.json \
+  --run-name synthetic-review-packets-smoke
 ```
 
 Compare all v1 rule variants:

@@ -8,6 +8,17 @@ Do not add heavy models, automated collection, long-video processing, or product
 
 The synthetic dry run recorded in `docs/28-synthetic-pilot-dry-run-results.md` confirms that the local baseline scripts can compare the planned evidence fields. It does not establish real-world performance and should not be cited as a result on real Threads content.
 
+The modular rule-baseline implementation is documented in:
+
+- `docs/41-rule-baseline-implementation-plan.md`
+- `docs/42-rule-system-design.md`
+- `docs/43-reason-codes-and-thresholds.md`
+- `docs/44-first-rule-baseline-evaluation.md`
+- `docs/45-rule-baseline-calibration-workflow.md`
+
+The tunable scoring surface is `configs/baseline_rule_config.yaml`.
+Threshold-profile probes are defined in `configs/rule_calibration_variants.yaml`.
+
 ## Dataset Fields Used
 
 | Evidence field | Baseline use |

@@ -40,3 +40,9 @@ evidence/private/
 outputs/
 reports/generated/
 *.log
+
+# Keep the baseline-output guard file trackable while generated runs stay ignored.
+!experiments/baselines/outputs/
+!experiments/baselines/outputs/.gitignore
+!experiments/evaluation-notes/outputs/
+!experiments/evaluation-notes/outputs/.gitignore
