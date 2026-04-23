@@ -71,6 +71,8 @@ data/processed/threads_pilot_v1_disagreements.csv
 
 These files are ignored by git. Commit only aggregate, non-sensitive experiment notes and decision records.
 
+Use [39-local-pilot-workspace.md](39-local-pilot-workspace.md) and `scripts/init_pilot_workspace.py` to create the empty `data/interim/` working files after controlled launch details are complete outside git.
+
 ## Roles
 
 | Role | Minimum assignment |
@@ -113,9 +115,11 @@ For the current approved pilot, use `governance/pilot-launch/threads_pilot_v1_20
 Create local working copies under ignored folders:
 
 ```bash
-cp templates/collection_log_template.csv data/interim/threads_pilot_v1_collection_log.csv
-cp templates/annotation_sheet_template.csv data/interim/threads_pilot_v1_annotations.csv
+python scripts/init_pilot_workspace.py --dry-run
+python scripts/init_pilot_workspace.py --ack-controlled-details
 ```
+
+This creates the collection log, primary annotation sheet, two annotator pass sheets, checkpoint worksheet, and local workspace manifest under ignored `data/interim/`.
 
 Do not copy raw screenshots, source exports, credentials, browser profiles, or stakeholder case packets into git.
 

@@ -81,6 +81,7 @@ By later on `2026-04-23`, the Threads repo had advanced beyond the initial repor
 - The stakeholder outcome was recorded as approved for bounded pilot launch preparation.
 - The approved pilot launch packet was added under `governance/pilot-launch/`.
 - First 10-15 item checkpoint protocol and review template were added.
+- Local pilot workspace initializer and runbook were added so empty ignored `data/interim/` working files can be created after the controlled launch record is complete.
 
 The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not data-ready until stakeholders approve the source, fields, raw-evidence storage, screenshot/link handling, access, retention, and redaction rules.
 
@@ -111,7 +112,7 @@ The stakeholder outcome is now recorded as approved for bounded launch preparati
 
 1. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git.
 2. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
-3. Create local-only files under ignored `data/interim/`.
+3. Create local-only files under ignored `data/interim/` with `scripts/init_pilot_workspace.py`.
 4. Begin the first 10-15 item checkpoint using `docs/38-first-pilot-checkpoint-protocol.md` before completing all 50 pilot items.
 5. Before annotation, onboard annotators with `docs/30-annotator-onboarding-quickstart.md` and run QA with `docs/31-annotation-quality-control-plan.md`.
 6. After the 50-item pilot, use `docs/33-pilot-analysis-and-decision-framework.md` and `templates/pilot_decision_memo.md` to decide whether to expand, revise, narrow, or pause.

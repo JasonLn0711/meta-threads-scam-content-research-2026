@@ -39,6 +39,7 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 | Go/no-go record | `governance/pilot-launch/threads_pilot_v1_2026-05_go_no_go.md` |
 | Pilot work order | `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md` |
 | Readiness review | `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md` |
+| Local workspace instructions | `docs/39-local-pilot-workspace.md` |
 | First checkpoint protocol | `docs/38-first-pilot-checkpoint-protocol.md` |
 | First checkpoint template | `templates/pilot_checkpoint_review.md` |
 
@@ -55,7 +56,7 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 2. Confirm exact raw evidence storage outside git in a controlled location.
 3. Confirm exact raw evidence access list outside git.
 4. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
-5. Create local-only working files under ignored `data/interim/`.
+5. Create local-only working files under ignored `data/interim/` using `scripts/init_pilot_workspace.py`.
 6. Collect the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
 7. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
 8. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
@@ -72,11 +73,18 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 
 Create these only after storage/access confirmation:
 
+```bash
+python scripts/init_pilot_workspace.py --dry-run
+python scripts/init_pilot_workspace.py --ack-controlled-details
+```
+
 ```text
 data/interim/threads_pilot_v1_collection_log.csv
 data/interim/threads_pilot_v1_annotations.csv
 data/interim/threads_pilot_v1_annotation_pass_ann_01.csv
 data/interim/threads_pilot_v1_annotation_pass_ann_02.csv
+data/interim/threads_pilot_v1_checkpoint_review.md
+data/interim/threads_pilot_v1_workspace_manifest.md
 ```
 
 Create these only after validation and annotation:
@@ -111,4 +119,4 @@ If any issue is severe, pause the pilot and update the relevant governance, sour
 
 ## Next Human Owner Action
 
-Before first collection, the project owner must complete the controlled launch record with exact source, raw storage location, access list, retention/deletion rule, and redaction limits outside git. Use `templates/controlled_launch_details_template.md` as the blank structure, but keep the filled version out of git unless it is fully non-sensitive and explicitly approved. Then the collector can create local-only working files and begin the first 10-15 item collection checkpoint.
+Before first collection, the project owner must complete the controlled launch record with exact source, raw storage location, access list, retention/deletion rule, and redaction limits outside git. Use `templates/controlled_launch_details_template.md` as the blank structure, but keep the filled version out of git unless it is fully non-sensitive and explicitly approved. Then the collector can initialize local-only working files using [39-local-pilot-workspace.md](39-local-pilot-workspace.md) and begin the first 10-15 item collection checkpoint.

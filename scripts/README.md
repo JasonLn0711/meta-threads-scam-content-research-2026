@@ -23,6 +23,7 @@ rule_baseline_v1.py           Run the first transparent rule baseline
 compare_rule_variants.py      Compare text/reply/OCR/all rule baseline variants
 compare_annotation_passes.py  Compare two annotator passes and export disagreements
 prepare_calibration_files.py  Create blind calibration sheets and answer keys
+init_pilot_workspace.py       Create empty local-only pilot files under ignored data/interim/
 ```
 
 ## Example Usage
@@ -82,6 +83,18 @@ python scripts/prepare_calibration_files.py data/samples/thread_item_sample_batc
   --answer-key-output data/processed/calibration_answer_key.csv \
   --annotator-copy ann_01:data/interim/calibration_ann_01.csv \
   --annotator-copy ann_02:data/interim/calibration_ann_02.csv
+```
+
+Preview local pilot workspace creation:
+
+```bash
+python scripts/init_pilot_workspace.py --dry-run
+```
+
+Initialize local pilot workspace files after controlled launch details are complete outside git:
+
+```bash
+python scripts/init_pilot_workspace.py --ack-controlled-details
 ```
 
 Recommended baseline variants:
