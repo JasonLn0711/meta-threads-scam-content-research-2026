@@ -1,5 +1,11 @@
 # Open Questions For Stakeholders
 
+## Current Status
+
+As of `2026-04-23`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, and a completed synthetic validation/audit/baseline dry run.
+
+The remaining blocker before real data work is stakeholder approval of source, fields, storage, access, retention, screenshot/link handling, and redaction rules. The dry run used synthetic examples only and does not answer any legal, policy, or evidence-sharing question below.
+
 ## Pilot Kickoff Questions
 
 These questions must be answered before the first real 50-item pilot batch:

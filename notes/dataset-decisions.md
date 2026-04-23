@@ -48,3 +48,17 @@ Review these after the 50-item pilot:
 - whether external link and contact-handle redaction rules are clear enough
 
 The first revision should simplify the package if annotators struggle. Do not add fields unless they solve a repeated, concrete annotation or baseline problem.
+
+## Same-Day Dry-Run Implications
+
+On `2026-04-23`, the synthetic sample batch was used to test validation, audit, conversion, and rule-baseline scripts.
+
+The dry run supports three dataset-design decisions:
+
+- keep `reply_texts` first-class because reply context changed synthetic risk decisions
+- keep `ocr_text` first-class because screenshot-style cases depended on image text
+- keep `uncertain` outside binary metrics because the ambiguous finance example should not be forced into `scam` or `non_scam`
+
+The audit also confirmed that source-skew warnings are useful. A synthetic-only or single-source batch should be flagged even when it is schema-valid.
+
+The first real pilot should therefore reuse the same workflow but must remain gated on authorization and redaction rules.

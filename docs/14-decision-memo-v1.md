@@ -28,14 +28,30 @@ These signals are cheaper, more explainable, and easier to review than video or 
 
 Build a research scaffold containing:
 
-- Dataset schema
-- Annotation guide
-- Signal taxonomy
-- First manually reviewed sample
-- Rule-based risk scorer design
+- dataset schema
+- annotation guide
+- signal taxonomy
+- stakeholder authorization gate
+- 5-item synthetic or redacted calibration
+- 50-item authorized pilot
+- 100-200 item first usable dataset after pilot review
+- rule-based risk scorer
 - OCR augmentation comparison
-- Comment and link-signal ablation
-- Optional LLM-assisted explanation test on a small subset
+- comment and link-signal ablation
+- optional LLM-assisted explanation test on a redacted, approved subset
+
+## Current Status As Of 2026-04-23
+
+The scaffold, governance gate, report-v0 package, synthetic samples, and local QA/baseline scripts now exist.
+
+A synthetic-only dry run has validated the workflow:
+
+- schema validation passes on sample CSV and JSON
+- CSV-to-JSONL conversion works
+- dataset audit flags synthetic source skew
+- rule-baseline variants compare `post_text`, `reply_texts`, `ocr_text`, links, handles, and redirects
+
+This does not authorize real collection and does not establish real-world performance. The next decision is whether stakeholders approve a governed 50-item pilot.
 
 ## What To Defer
 

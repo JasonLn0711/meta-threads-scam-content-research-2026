@@ -90,24 +90,43 @@ Read `docs/21-repo-relationships.md` before copying content across repos or chan
 The immediate deliverable is a CIB/165-facing initial research report:
 
 - [reports/threads-scam-content-research-v0.md](reports/threads-scam-content-research-v0.md)
+- [reports/threads-scam-content-research-v0-executive-brief.md](reports/threads-scam-content-research-v0-executive-brief.md)
+- [reports/report-v0-review-checklist.md](reports/report-v0-review-checklist.md)
 - Target date: `2026-04-30`
 - Status: research report v0, not a production detector or legal fraud determination
 
 This supersedes a concept-only stakeholder scoping memo as the next research artifact.
+
+## Current Research Status
+
+As of `2026-04-23`, the repo has moved from scaffold-only to pilot-ready pending authorization:
+
+- Dataset schema and labeling schema v1 exist.
+- Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
+- Report v0, executive brief, review checklist, and delivery plan exist.
+- Synthetic sample, calibration sheets, and sample manifest exist.
+- Validation, audit, conversion, annotation-agreement, and rule-baseline scripts exist.
+- The synthetic dataset/audit/baseline dry run completed successfully.
+- No real Threads evidence has been collected or committed.
+
+The next blocker is governance, not tooling: stakeholders must approve source, fields, screenshot/link handling, access, retention, and redaction rules before the first real pilot.
 
 ## Recommended First Milestone
 
 By `2026-04-30`, produce the readable report v0 above. Within the following 4 weeks, produce:
 
 1. A finalized phase-1 taxonomy and annotation guide.
-2. A first manually reviewed dataset slice of 100 to 150 Threads-related items.
-3. A rule-based text baseline.
-4. An OCR and comment/link signal augmentation comparison.
-5. An evaluation memo deciding whether to continue, add LLM-assisted review, or cut scope further.
+2. Stakeholder authorization and go/no-go approval for real pilot evidence.
+3. A 5-item calibration, then a 50-item authorized pilot.
+4. A 100-200 item first usable dataset only after pilot review and revisions.
+5. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals.
+6. An evaluation memo deciding whether to continue, add LLM-assisted review, or cut scope further.
 
 Recommended first dataset slice:
 
-- 100 to 150 manually reviewed examples.
+- 5 synthetic or redacted calibration items.
+- 50 authorized pilot examples.
+- 100-200 manually reviewed examples after pilot review.
 - Include likely scam-like, likely non-scam, uncertain, and insufficient-evidence cases.
 - Cover text-only posts, text plus image posts, comments/replies, OCR text, and visible redirection or link signals.
 

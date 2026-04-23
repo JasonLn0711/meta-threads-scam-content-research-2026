@@ -1,5 +1,28 @@
 # Next 4 Weeks Plan
 
+## Current Status As Of 2026-04-23
+
+Completed:
+
+- Threads-first repo scaffold.
+- Dataset schema and labeling schema v1.
+- Annotation guideline, dataset schema docs, and first batch plan.
+- Collection/redaction SOP, pilot runbook, annotator calibration, stakeholder kickoff, and go/no-go checklist.
+- Report-v0 package with executive brief, review checklist, delivery plan, and feedback template.
+- Synthetic sample and calibration CSVs.
+- Validation, audit, conversion, annotation-agreement, calibration, and rule-baseline scripts.
+- Synthetic validation, audit, conversion, and baseline dry run.
+
+Not completed:
+
+- stakeholder authorization for real Threads evidence
+- real 50-item pilot collection
+- human annotation on real examples
+- real baseline evaluation
+- LLM-assisted review test
+
+The next work is stakeholder review and authorization, not more collection or automation.
+
 ## Week 1: Scope, Taxonomy, Schema, And First Sample Design
 
 Goals:
@@ -9,7 +32,7 @@ Goals:
 - Confirm data governance constraints.
 - Draft annotation guideline v1.
 - Define first sample inclusion and exclusion criteria.
-- Collect or prepare the first small sample set if legally safe.
+- Prepare synthetic dry-run samples and collect no real evidence until approved.
 
 Deliverables:
 
@@ -21,15 +44,18 @@ Deliverables:
 - Annotation pilot runbook and dry-run workflow.
 - Collection/redaction SOP and authorization request template.
 - Annotator training and calibration protocol.
+- Synthetic dry-run result note.
 
 ## Week 2: Annotation And Text Baseline
 
 Goals:
 
-- Annotate first batch of 50 to 75 items.
+- Complete stakeholder authorization and go/no-go review.
+- Run 5-item calibration.
+- Annotate the first authorized 50-item pilot batch if the gate passes.
 - Track disagreement and unclear fields.
 - Build or specify simple keyword/rule baseline.
-- Run text-only baseline on the annotated batch.
+- Run text-only baseline on the authorized annotated batch.
 - Record first false positives and false negatives.
 
 Deliverables:

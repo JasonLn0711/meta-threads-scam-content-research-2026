@@ -78,12 +78,38 @@ The report package created on `2026-04-23`:
 
 Planning was also updated so W18 contains named report blocks and a deadline checkpoint. Google Calendar creation was attempted but blocked by connector unsupported-tool errors, so the planning repo now contains an `.ics` import fallback.
 
-After the report v0 is assembled, the next research move is the first dataset-slice design:
+After the report v0 package was assembled, the next research move became pilot authorization and synthetic workflow QA:
 
-- 100 to 150 manually reviewed Threads-related items.
+- 5 synthetic or redacted calibration items before real evidence.
+- 50 authorized pilot items after the go/no-go gate.
+- 100-200 first usable items after pilot review and any guideline/schema revisions.
 - Balanced likely scam-like, likely non-scam, uncertain, and insufficient-evidence examples.
 - Include text-only, text plus image/OCR, replies/comments, visible links, and redirection signals.
 - First experiment: text-only keyword/rule baseline versus text plus OCR plus comments/link-signal baseline.
+
+## Later Same-Day Status
+
+By the next update on `2026-04-23`, the repo had these additional research assets:
+
+- Report-v0 executive brief, review checklist, delivery plan, and feedback template.
+- Stakeholder pilot kickoff, go/no-go checklist, and pilot-readiness decision record.
+- Synthetic sample manifest.
+- Synthetic dataset audit dry-run log.
+- Synthetic rule-baseline dry-run log.
+- Synthetic dry-run summary doc.
+- Calibrated rule baseline after dry-run inspection.
+
+The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
+
+The synthetic dry run validated the local workflow:
+
+- 5 synthetic CSV records validated with 0 errors and 0 warnings.
+- 5 synthetic JSON records validated with 0 errors and 0 warnings.
+- Conversion to JSONL worked.
+- Audit correctly flagged synthetic-only source skew.
+- Rule variants showed expected evidence-surface behavior on synthetic examples.
+
+The dry-run metrics are not real-world performance claims. They only show the scripts and data contracts are coherent enough to use once authorized pilot data exists.
 
 ## Same-Day Git Checkpoints
 
@@ -97,6 +123,15 @@ Threads repo:
 - `886c719 docs: add pilot runbooks and governance SOP`
 - `a0f7851 experiments: add pilot audit and baseline protocols`
 - `4deb071 docs: create CIB 165 Threads report v0 package`
+- `bc05600 docs: add report v0 review package`
+- `952ca09 docs: add pilot readiness gate`
+
+Uncommitted same-day work at this note update:
+
+- Synthetic sample manifest.
+- Synthetic dry-run result docs.
+- Synthetic audit and baseline experiment logs.
+- Rule-baseline calibration from synthetic dry-run findings.
 
 Planning repo:
 

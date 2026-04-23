@@ -44,6 +44,9 @@ Do not overclaim:
 - [x] Record a decision log for the April 30 report deadline.
 - [x] Link the report from `README.md`.
 - [x] Mention the April 30 milestone in `docs/18-recommended-path-v1.md`.
+- [x] Create report-v0 executive brief, review checklist, delivery plan, and reviewer feedback template.
+- [x] Add pilot readiness gate, authorization workflow, and stakeholder kickoff materials.
+- [x] Run the synthetic sample through validation, audit, conversion, and rule-baseline variants.
 - [x] Update the planning repo W18 agenda and project file.
 - [ ] Create Google Calendar focus blocks and a deadline marker.
 
@@ -56,6 +59,53 @@ Google Calendar creation was attempted through the connector, but create/read ca
 ```text
 ../planning-everything-track/data/projects/2026-04-meta-scam-ad-research/2026-04-27-30-cib-165-threads-report-v0-calendar-blocks.ics
 ```
+
+## Same-Day Implementation Summary
+
+By later on `2026-04-23`, the Threads repo had advanced beyond the initial report direction:
+
+- Dataset and annotation v1 package exists.
+- Pilot governance, collection/redaction, calibration, and go/no-go docs exist.
+- Report v0 package exists with executive brief and review checklist.
+- Local scripts exist for validation, audit, conversion, annotation agreement, calibration-sheet preparation, and rule-baseline comparison.
+- Synthetic sample and calibration CSVs exist for dry-run use only.
+- Synthetic sample manifest and dry-run experiment logs were added.
+- `scripts/rule_baseline_v1.py` was calibrated after the synthetic run.
+
+The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not data-ready until stakeholders approve the source, fields, raw-evidence storage, screenshot/link handling, access, retention, and redaction rules.
+
+## Synthetic Dry-Run Result
+
+The synthetic dry run used `data/samples/thread_item_sample_batch.csv` and produced:
+
+- CSV strict validation: 5 records, 0 errors, 0 warnings.
+- JSON strict validation: 5 records, 0 errors, 0 warnings.
+- CSV-to-JSONL conversion: 5 records written locally under ignored `data/processed/`.
+- Dataset audit: 3 `scam`, 1 `non_scam`, 1 `uncertain`, no missing required fields, no exact duplicates.
+- Expected audit warning: 5/5 records are `researcher_synthetic`.
+
+Rule-baseline synthetic QA:
+
+| Variant | Precision | Recall | F1 | Note |
+|---|---:|---:|---:|---|
+| `text_only` | 1.000 | 0.333 | 0.500 | Catches only visible post-text lure. |
+| `text_reply` | 1.000 | 0.667 | 0.800 | Reply context recovers one fee/redirection case. |
+| `text_ocr` | 1.000 | 1.000 | 1.000 | OCR recovers synthetic screenshot-style cases. |
+| `all` | 1.000 | 1.000 | 1.000 | Combines text, replies, OCR, links, handles, and redirects. |
+
+These are workflow QA numbers only, not real Threads performance claims.
+
+## Current Blocker
+
+The next real research step is stakeholder approval:
+
+1. Review `reports/threads-scam-content-research-v0-executive-brief.md`.
+2. Complete `reports/report-v0-review-checklist.md`.
+3. Collect comments using `templates/report_review_feedback.md`.
+4. Record pilot authorization using `templates/data_authorization_request.md`.
+5. Run `docs/26-pilot-go-no-go-checklist.md`.
+
+Until that gate passes, use only synthetic or fully redacted examples.
 
 ## First-Principles Reasoning
 
