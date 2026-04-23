@@ -112,5 +112,4 @@ By 2026-04-30:
 2. Collect reviewer comments with `templates/report_review_feedback.md`.
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
 4. Record whether stakeholders approve the pilot, approve with limits, or decline.
-5. If approved, complete the data authorization record and run the go/no-go checklist before real collection.
-
+5. If approved, complete the data authorization record, go/no-go checklist, and real-pilot readiness review before real collection.

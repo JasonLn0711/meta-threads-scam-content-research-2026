@@ -17,6 +17,8 @@ Start with a 50-item pilot. This is large enough to expose label confusion, miss
 
 After revising the guide and schema from the pilot, build a first usable batch of 100-200 items. If annotation capacity is limited, target 100-150.
 
+A 500-item dataset should be treated as a later expansion, not the first real pilot. Use `docs/32-500-item-expansion-plan.md` after the 50-item pilot and 100-200 item first usable batch have passed governance, annotation QA, audit, and baseline review.
+
 ## Pilot Composition
 
 | Bucket | Target count | Purpose |
@@ -55,7 +57,7 @@ Use mixed collection only:
 
 Do not use crawlers, scrapers, browser automation, bulk export, or landing-page crawling unless approval is recorded in `governance/data-governance.md`.
 
-Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
+Use `docs/34-source-intake-and-sampling-frame.md` before collection to choose source candidates and build the sampling frame. Then complete `docs/35-real-pilot-readiness-review.md` before any real pilot collection begins. Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
 
 ## Evidence Preservation
 
@@ -149,8 +151,11 @@ If these appear, narrow the taxonomy for v1.1 rather than adding more fields.
 
 ## Human Owner Next Actions
 
+- Complete `templates/source_candidate_intake.md` for any proposed real source.
+- Add proposed sources to `governance/source-intake-register.md`.
 - Confirm whether stakeholder-provided examples are authorized for annotation.
 - Decide where local raw evidence will be stored outside git.
 - Assign at least two pseudonymous annotator IDs.
 - Complete `templates/data_authorization_request.md` for any real source.
+- Complete `templates/real_pilot_readiness_review.md` before any real collection starts.
 - Run a 5-item dry annotation using the templates before collecting the full 50-item pilot.

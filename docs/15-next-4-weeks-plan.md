@@ -12,13 +12,23 @@ Completed:
 - Synthetic sample and calibration CSVs.
 - Validation, audit, conversion, annotation-agreement, calibration, and rule-baseline scripts.
 - Synthetic validation, audit, conversion, and baseline dry run.
+- Authorized pilot execution plan, work-order template, result-summary template, and authorization register.
+- Annotator onboarding quickstart, annotation QA plan, QA checklist, onboarding checklist, and guideline revision log template.
+- Staged 500-item expansion plan, with unlimited immediate collection rejected or paused.
+- Pilot analysis and decision framework with decision memo and error review table.
+- Source intake and sampling-frame package.
+- Integrated real-pilot readiness review package.
 
 Not completed:
 
 - stakeholder authorization for real Threads evidence
+- approved source candidate and sampling frame
+- completed real-pilot readiness review
 - real 50-item pilot collection
 - human annotation on real examples
 - real baseline evaluation
+- pilot decision memo from real results
+- 500-item expansion
 - LLM-assisted review test
 
 The next work is stakeholder review and authorization, not more collection or automation.
@@ -50,7 +60,7 @@ Deliverables:
 
 Goals:
 
-- Complete stakeholder authorization and go/no-go review.
+- Complete stakeholder authorization, go/no-go review, and real-pilot readiness review.
 - Run 5-item calibration.
 - Annotate the first authorized 50-item pilot batch if the gate passes.
 - Track disagreement and unclear fields.

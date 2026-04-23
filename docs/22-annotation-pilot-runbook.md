@@ -6,7 +6,7 @@ This runbook turns the dataset v1 package into a repeatable annotation pilot. It
 
 Do not use this runbook as authorization to collect data. Collection remains governed by `governance/data-governance.md`.
 
-Before real examples are collected, follow `docs/23-collection-and-redaction-sop.md`.
+Before real examples are collected, follow `docs/23-collection-and-redaction-sop.md` and complete the readiness review in `docs/35-real-pilot-readiness-review.md`.
 
 ## Roles
 
@@ -26,17 +26,27 @@ Use pseudonymous IDs such as `ann_01`, `rev_01`, and `adj_01`.
 | File | Purpose |
 |---|---|
 | `templates/annotation_sheet_template.csv` | Manual annotation sheet header. |
+| `templates/annotator_onboarding_checklist.md` | Per-annotator readiness checklist. |
+| `templates/annotation_qa_checklist.md` | Batch-level annotation QA checklist. |
 | `templates/annotation_disagreement_log_template.csv` | Disagreement tracking sheet. |
 | `templates/adjudication_template.md` | Disagreement resolution. |
+| `templates/guideline_revision_log_template.md` | Guideline change candidates from calibration, adjudication, and audit. |
 | `templates/dataset_manifest_template.md` | Dataset version record. |
 | `templates/collection_log_template.csv` | Per-item collection and evidence-status log. |
 | `templates/redaction_checklist.md` | Redaction QA before annotation or sharing. |
+| `templates/pilot_batch_work_order.md` | Batch-level authorization, roles, fields, and stop conditions. |
+| `templates/pilot_result_summary.md` | Post-pilot audit, annotation, baseline, and decision summary. |
+| `templates/real_pilot_readiness_review.md` | Final owner-facing readiness record before real collection. |
 | `data-contracts/thread_item_schema_v1.json` | Authoritative field schema. |
 | `docs/06-annotation-guideline-v1.md` | Human annotation rules. |
 | `docs/20-first-dataset-batch-plan.md` | Batch size and composition. |
+| `docs/29-authorized-pilot-execution-plan.md` | Exact execution sequence after authorization. |
+| `docs/35-real-pilot-readiness-review.md` | Integrated source, governance, annotation, QA, and baseline launch gate. |
 | `experiments/dataset-audit/0001-pilot-audit-protocol.md` | Audit protocol. |
 | `experiments/baselines/0001-rule-baseline-v1.md` | First baseline protocol. |
 | `docs/24-annotator-training-and-calibration.md` | Annotator training and agreement workflow. |
+| `docs/30-annotator-onboarding-quickstart.md` | Short annotator desk reference. |
+| `docs/31-annotation-quality-control-plan.md` | QA stages, thresholds, review routing, and baseline-readiness checks. |
 
 ## 5-Item Dry Run
 
@@ -47,7 +57,8 @@ Use five synthetic or redacted items before any real pilot collection.
 3. Have Annotator 1 label all five.
 4. Have the reviewer independently review at least two: one high-risk, one uncertain or ambiguous.
 5. Run validation and audit.
-6. Fix the workflow before touching the 50-item pilot.
+6. Complete the relevant parts of `templates/annotation_qa_checklist.md`.
+7. Fix the workflow before touching the 50-item pilot.
 
 Commands:
 
@@ -97,6 +108,8 @@ Use `docs/24-annotator-training-and-calibration.md` to decide whether to proceed
 
 ## 50-Item Pilot
 
+Use `docs/29-authorized-pilot-execution-plan.md` after the authorization gate and real-pilot readiness review pass.
+
 Use the composition in `docs/20-first-dataset-batch-plan.md`:
 
 - 15 likely scam or high-risk scam-like items
@@ -117,9 +130,10 @@ data/processed/threads_pilot_v1_rule_variant_comparison.md
 
 1. Collector fills identity, provenance, and content fields.
 2. Annotator 1 fills `scam_label`, `scam_type`, `risk_level`, `signal_tags`, `evidence_sufficiency`, `annotation_confidence`, `missing_evidence`, and `annotation_notes`.
-3. Reviewer checks all `scam` high-risk items, all `uncertain` items, all low-confidence items, and a sample of `non_scam` items.
-4. Adjudicator resolves disagreements with `templates/adjudication_template.md`.
-5. Research engineer validates, audits, converts, and runs baseline comparison.
+3. Run in-pass QA after the first 10-15 rows using `docs/31-annotation-quality-control-plan.md`.
+4. Reviewer checks all `scam` high-risk items, all `uncertain` items, all low-confidence items, partial/insufficient evidence items, OCR-only decisive cases, reply-only decisive cases, and a sample of `non_scam` items.
+5. Adjudicator resolves disagreements with `templates/adjudication_template.md`.
+6. Research engineer validates, audits, converts, and runs baseline comparison.
 
 ## Validation And Conversion
 
@@ -166,4 +180,5 @@ At the end of the 50-item pilot, produce:
 - disagreement/adjudication summary
 - annotation agreement summary
 - rule baseline variant comparison
+- completed `templates/pilot_result_summary.md`
 - recommendation: expand, revise guideline, revise schema, or narrow scope

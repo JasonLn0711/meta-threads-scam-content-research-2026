@@ -14,9 +14,15 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: complete stakeholder pilot approval using `docs/25-stakeholder-pilot-kickoff.md`, then pass `docs/26-pilot-go-no-go-checklist.md` before real examples are collected.
+Immediate next action: complete stakeholder pilot approval using `docs/25-stakeholder-pilot-kickoff.md`, pass `docs/26-pilot-go-no-go-checklist.md`, then complete `docs/35-real-pilot-readiness-review.md` before real examples are collected.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
+
+If stakeholders approve the pilot and the readiness review ends in `go` or `go_with_limits`, execute it through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `templates/pilot_batch_work_order.md`, and `templates/pilot_result_summary.md`.
+
+Before any pilot labels are treated as baseline-ready, onboard annotators with [30-annotator-onboarding-quickstart.md](30-annotator-onboarding-quickstart.md) and run QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
+
+Do not jump directly to a 500-item real dataset. The safe path to that scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md).
 
 The MVP should include:
 

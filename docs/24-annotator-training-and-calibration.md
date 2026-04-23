@@ -9,13 +9,16 @@ Calibration is required before the first real pilot batch. It should use synthet
 ## Training Sequence
 
 1. Read `docs/06-annotation-guideline-v1.md`.
-2. Review `docs/04-taxonomy.md` and `data-contracts/labeling_schema_v1.json`.
-3. Walk through the five synthetic examples in `templates/thread_item_sample_batch.json`.
-4. Discuss the expected labels and evidence notes.
-5. Run one blind calibration pass on five synthetic/redacted items.
-6. Compare annotation passes with `scripts/compare_annotation_passes.py`.
-7. Adjudicate disagreements.
-8. Revise the guideline if disagreement reveals unclear rules.
+2. Read `docs/30-annotator-onboarding-quickstart.md`.
+3. Complete `templates/annotator_onboarding_checklist.md`.
+4. Review `docs/04-taxonomy.md` and `data-contracts/labeling_schema_v1.json`.
+5. Walk through the five synthetic examples in `templates/thread_item_sample_batch.json`.
+6. Discuss the expected labels and evidence notes.
+7. Run one blind calibration pass on five synthetic/redacted items.
+8. Compare annotation passes with `scripts/compare_annotation_passes.py`.
+9. Adjudicate disagreements.
+10. Record guideline revision candidates in `templates/guideline_revision_log_template.md`.
+11. Use `docs/31-annotation-quality-control-plan.md` to decide whether the pilot can proceed.
 
 ## Calibration Set
 
@@ -125,3 +128,5 @@ Proceed to the 50-item pilot only when:
 - redaction and evidence-sufficiency rules are not blocking annotation
 
 If calibration fails, revise `docs/06-annotation-guideline-v1.md` before collecting more real examples.
+
+Use `templates/annotation_qa_checklist.md` for batch-level QA before annotation, during the first 10-15 pilot items, and before baseline handoff.

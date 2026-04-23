@@ -81,7 +81,7 @@ Planning was also updated so W18 contains named report blocks and a deadline che
 After the report v0 package was assembled, the next research move became pilot authorization and synthetic workflow QA:
 
 - 5 synthetic or redacted calibration items before real evidence.
-- 50 authorized pilot items after the go/no-go gate.
+- 50 authorized pilot items after authorization, go/no-go, and readiness-review gates.
 - 100-200 first usable items after pilot review and any guideline/schema revisions.
 - Balanced likely scam-like, likely non-scam, uncertain, and insufficient-evidence examples.
 - Include text-only, text plus image/OCR, replies/comments, visible links, and redirection signals.
@@ -98,6 +98,12 @@ By the next update on `2026-04-23`, the repo had these additional research asset
 - Synthetic rule-baseline dry-run log.
 - Synthetic dry-run summary doc.
 - Calibrated rule baseline after dry-run inspection.
+- Authorized pilot execution plan, work-order template, result-summary template, authorization register, and pilot execution decision record.
+- Annotator onboarding quickstart, annotation QA plan, QA checklist, onboarding checklist, and guideline revision log template.
+- 500-item expansion plan and decision record rejecting unlimited immediate collection.
+- Pilot analysis and decision framework, decision memo template, error review table, and decision-analysis protocol.
+- Source intake and sampling-frame package for evaluating candidate sources before collection.
+- Integrated real-pilot readiness review package tying source, governance, annotation, QA, and baseline gates together.
 
 The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
 

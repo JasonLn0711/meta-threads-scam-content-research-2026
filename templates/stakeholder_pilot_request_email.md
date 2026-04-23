@@ -29,7 +29,7 @@ The approval questions are:
 
 The detailed kickoff memo is in `docs/25-stakeholder-pilot-kickoff.md`, and the authorization record template is `templates/data_authorization_request.md`.
 
-Once approval is recorded, we will run the pilot through the go/no-go checklist in `docs/26-pilot-go-no-go-checklist.md`.
+Once approval is recorded, we will run the pilot through the go/no-go checklist in `docs/26-pilot-go-no-go-checklist.md` and the real-pilot readiness review in `docs/35-real-pilot-readiness-review.md`.
 
 Best,
 

@@ -465,10 +465,12 @@ By the deadline, the repo should contain:
 | `docs/24-annotator-training-and-calibration.md` | Training and agreement workflow before the pilot. |
 | `docs/25-stakeholder-pilot-kickoff.md` | Stakeholder-facing approval memo for real pilot data. |
 | `docs/26-pilot-go-no-go-checklist.md` | Required gate before real collection and annotation. |
+| `docs/35-real-pilot-readiness-review.md` | Integrated final readiness review before real collection. |
 | `data-contracts/thread_item_schema_v1.json` | Machine-readable item schema. |
 | `data-contracts/labeling_schema_v1.json` | Machine-readable label schema. |
 | `templates/annotation_sheet_template.csv` | Spreadsheet starter for manual review. |
 | `templates/data_authorization_request.md` | Source, field, retention, and redaction approval record. |
+| `templates/real_pilot_readiness_review.md` | Fillable readiness decision record. |
 | `templates/collection_log_template.csv` | Per-item collection readiness and evidence-status log. |
 | `templates/redaction_checklist.md` | Redaction QA before annotation or sharing. |
 | `scripts/validate_thread_dataset.py` | Local schema and consistency validation. |

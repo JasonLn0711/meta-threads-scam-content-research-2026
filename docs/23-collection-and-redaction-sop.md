@@ -10,6 +10,9 @@ This document does not authorize automated collection. It is an operating proced
 
 Before collecting any real item:
 
+- Complete source candidate intake in `templates/source_candidate_intake.md`.
+- Record the source candidate in `governance/source-intake-register.md`.
+- Build the source sampling frame with `templates/source_sampling_frame_template.csv`.
 - Confirm the source is allowed under `governance/data-governance.md`.
 - Complete or link `templates/data_authorization_request.md`.
 - Decide where raw evidence will live outside git.
@@ -18,6 +21,8 @@ Before collecting any real item:
 - Confirm whether source URLs may be stored, redacted, normalized, or omitted.
 - Assign a `collection_batch_id`.
 - Assign pseudonymous collector and annotator IDs.
+- Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
+- Complete `templates/pilot_batch_work_order.md` when preparing the 50-item pilot.
 
 If any precondition is unresolved, use only synthetic examples.
 
@@ -154,6 +159,8 @@ Use:
 ```bash
 python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv
 ```
+
+The full post-authorization execution sequence is in `docs/29-authorized-pilot-execution-plan.md`.
 
 ## Stop Conditions
 

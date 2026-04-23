@@ -82,7 +82,6 @@ The main limitation is expected: a five-item synthetic set cannot test real sour
 
 ## Decision
 
-Use this workflow for the first real pilot audit after the data authorization gate passes.
+Use this workflow for the first real pilot audit after the data authorization gate, go/no-go checklist, and real-pilot readiness review pass.
 
 Do not relax the source-skew warning. It should remain noisy for synthetic-only and single-source batches because that warning is useful during the real pilot.
-

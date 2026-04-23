@@ -16,6 +16,8 @@ Do not automate collection from Threads or any Meta surface unless all of the fo
 
 Semi-manual collection, stakeholder-provided samples, and documented public examples may be used for early planning if privacy and platform constraints are respected.
 
+"Without limitations" is not an acceptable authorization state. Every real collection must define source, method, fields, storage, access, retention, redaction, and sharing limits.
+
 ## Prohibited Repository Contents
 
 Do not commit:
@@ -77,6 +79,8 @@ Phase-1 work should assume:
 
 Before any real Threads item enters `data/interim/` or annotation workflow:
 
+- source candidate intake is completed
+- source sampling frame is completed
 - data owner or source category is identified
 - collection method is manual or stakeholder-provided
 - allowed fields are listed
@@ -85,6 +89,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 - retention rule is known
 - publication/demo restrictions are known
 - `templates/data_authorization_request.md` has been completed or linked from a governance decision
+- `templates/real_pilot_readiness_review.md` has been completed with `go` or `go_with_limits`
 
 ## Collection Method Status
 
@@ -96,11 +101,24 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | API-authorized collection | Not currently approved | Must be recorded before use. |
 | Browser automation, scraping, crawling, bulk export | Not approved | Do not add scripts or outputs for this. |
 | Landing-page crawling or redirect-chain capture | Not approved | Visible links may be recorded if permitted; do not crawl destinations. |
+| Unlimited 500-item collection | Rejected or paused | Use `docs/32-500-item-expansion-plan.md`; no collection without staged authorization. |
 
 ## Governance Records To Use
 
+- Source intake plan: `docs/34-source-intake-and-sampling-frame.md`
+- Source candidate intake template: `templates/source_candidate_intake.md`
+- Source sampling frame template: `templates/source_sampling_frame_template.csv`
+- Source intake register: `governance/source-intake-register.md`
 - Collection and redaction SOP: `docs/23-collection-and-redaction-sop.md`
 - Authorization request template: `templates/data_authorization_request.md`
+- Authorization register: `governance/pilot-authorization-register.md`
+- Real-pilot readiness review: `docs/35-real-pilot-readiness-review.md`
+- Real-pilot readiness template: `templates/real_pilot_readiness_review.md`
+- Pilot execution plan: `docs/29-authorized-pilot-execution-plan.md`
+- 500-item expansion plan: `docs/32-500-item-expansion-plan.md`
+- Pilot batch work order: `templates/pilot_batch_work_order.md`
+- 500-item expansion work order: `templates/500_item_expansion_work_order.md`
 - Collection log template: `templates/collection_log_template.csv`
 - Redaction checklist: `templates/redaction_checklist.md`
 - Dataset manifest: `templates/dataset_manifest_template.md`
+- Pilot result summary: `templates/pilot_result_summary.md`

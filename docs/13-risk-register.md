@@ -2,7 +2,7 @@
 
 ## Current Risk Posture
 
-As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry run, but data authorization risk remains active and blocking. No real Threads evidence should be collected until the pilot authorization and go/no-go gate pass.
+As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry run, but data authorization risk remains active and blocking. No real Threads evidence should be collected until the pilot authorization, go/no-go gate, and real-pilot readiness review pass.
 
 | Risk | Why it matters | Likelihood | Impact | Mitigation |
 |---|---|---:|---:|---|

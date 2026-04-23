@@ -107,26 +107,34 @@ As of `2026-04-23`, the repo has moved from scaffold-only to pilot-ready pending
 - Synthetic sample, calibration sheets, and sample manifest exist.
 - Validation, audit, conversion, annotation-agreement, and rule-baseline scripts exist.
 - The synthetic dataset/audit/baseline dry run completed successfully.
+- The authorized pilot execution plan, work-order template, result-summary template, and authorization register exist.
+- The annotator onboarding and annotation QA package exists.
+- A staged 500-item expansion plan exists, but immediate unlimited 500-item collection is rejected or paused.
+- The post-pilot analysis and decision framework exists.
+- The source intake and sampling-frame package exists.
+- The integrated real-pilot readiness review package exists.
 - No real Threads evidence has been collected or committed.
 
-The next blocker is governance, not tooling: stakeholders must approve source, fields, screenshot/link handling, access, retention, and redaction rules before the first real pilot.
+The next blocker is governance, not tooling: stakeholders must approve source, fields, screenshot/link handling, access, retention, and redaction rules, then pass the real-pilot readiness review before the first real pilot.
 
 ## Recommended First Milestone
 
 By `2026-04-30`, produce the readable report v0 above. Within the following 4 weeks, produce:
 
 1. A finalized phase-1 taxonomy and annotation guide.
-2. Stakeholder authorization and go/no-go approval for real pilot evidence.
-3. A 5-item calibration, then a 50-item authorized pilot.
+2. Stakeholder authorization, go/no-go approval, and readiness review for real pilot evidence.
+3. A real-pilot readiness review, then a 5-item calibration and 50-item authorized pilot.
 4. A 100-200 item first usable dataset only after pilot review and revisions.
-5. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals.
-6. An evaluation memo deciding whether to continue, add LLM-assisted review, or cut scope further.
+5. A governed 500-item expansion only after the earlier gates show the workflow is stable.
+6. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals.
+7. An evaluation memo deciding whether to continue, add LLM-assisted review, or cut scope further.
 
 Recommended first dataset slice:
 
 - 5 synthetic or redacted calibration items.
 - 50 authorized pilot examples.
 - 100-200 manually reviewed examples after pilot review.
+- 500 examples only as a later governed expansion.
 - Include likely scam-like, likely non-scam, uncertain, and insufficient-evidence cases.
 - Cover text-only posts, text plus image posts, comments/replies, OCR text, and visible redirection or link signals.
 

@@ -6,11 +6,15 @@ Use this checklist before moving from synthetic calibration to any real 50-item 
 
 The default decision is no-go until each gate is explicitly satisfied.
 
+After a `go` or `go_with_limits` decision, complete `templates/pilot_batch_work_order.md` and `templates/real_pilot_readiness_review.md`, then use `docs/29-authorized-pilot-execution-plan.md` before collection begins.
+
 ## Gate 1: Governance
 
 | Check | Status | Owner | Notes |
 |---|---|---|---|
 | Data authorization request completed |  |  |  |
+| Source candidate intake completed |  |  |  |
+| Source sampling frame completed |  |  |  |
 | Approved source type recorded |  |  |  |
 | Approved fields listed |  |  |  |
 | Raw storage location outside git confirmed |  |  |  |
@@ -41,12 +45,15 @@ Go only if the collector can explain what must not be stored.
 | Check | Status | Owner | Notes |
 |---|---|---|---|
 | Annotators read guideline |  |  |  |
+| Annotators read onboarding quickstart |  |  |  |
+| Annotator onboarding checklists completed |  |  |  |
 | 5-item blind calibration completed |  |  |  |
 | Agreement report generated |  |  |  |
 | Disagreements adjudicated |  |  |  |
 | `scam` vs `uncertain` boundary understood |  |  |  |
 | `uncertain` vs `insufficient_evidence` boundary understood |  |  |  |
 | Guideline changes recorded if needed |  |  |  |
+| Annotation QA checklist ready |  |  |  |
 
 Suggested go threshold:
 
@@ -62,6 +69,7 @@ Suggested go threshold:
 | Pseudonymous annotator IDs assigned |  |  |  |
 | Second-review routing rule understood |  |  |  |
 | Adjudicator assigned |  |  |  |
+| Pilot batch work order completed |  |  |  |
 | Dataset manifest draft started |  |  |  |
 | Validation command tested |  |  |  |
 | Audit command tested |  |  |  |
