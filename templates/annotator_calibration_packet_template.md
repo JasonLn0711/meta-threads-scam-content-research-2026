@@ -1,99 +1,116 @@
 # Annotator Calibration Packet Template
 
-Use this template to prepare a local blind calibration packet before real pilot annotation. Keep committed copies free of raw Threads content, screenshots, full URLs, unredacted handles, personal data, stakeholder-sensitive details, and answer keys.
+Use this packet for the 5-item calibration before real annotation volume begins. Keep completed packets local-only if they contain item-level real evidence, source details, URLs, handles, OCR text, screenshots, or sensitive notes.
 
 ## Calibration Identity
 
 | Field | Value |
 |---|---|
 | Calibration ID |  |
-| Date prepared |  |
-| Dataset or sample source | synthetic / redacted real / other approved |
+| Dataset or batch ID | `threads_pilot_v1_2026-05` |
+| Calibration date |  |
 | Guideline version | `docs/06-annotation-guideline-v1.md` |
 | Schema version | `thread_item_schema_v1` |
-| Calibration owner |  |
+| Labeling schema version | `labeling_schema_v1` |
+| Annotation lead |  |
+| Adjudicator |  |
 | Governance reviewer, if real redacted evidence is used |  |
-| Expected completion date |  |
 
 ## Participants
 
-| Role | ID | Notes |
-|---|---|---|
-| Annotator 1 |  |  |
-| Annotator 2 or reviewer |  |  |
-| Annotation lead or adjudicator |  |  |
-| Research engineer |  | file preparation and comparison only |
+| Role | ID | Completed required reading? | Notes |
+|---|---|---|---|
+| Annotator 1 | `ann_01` | yes / no |  |
+| Annotator 2 | `ann_02` | yes / no |  |
+| Reviewer or adjudicator |  | yes / no |  |
 
 ## Required Reading
 
-| Item | Required? | Complete? |
+| Material | Confirmed? | Notes |
 |---|---|---|
-| `docs/06-annotation-guideline-v1.md` | yes |  |
-| `docs/04-taxonomy.md` | yes |  |
-| `docs/07-dataset-schema.md` | yes |  |
-| `docs/23-collection-and-redaction-sop.md` | yes |  |
-| `docs/24-annotator-training-and-calibration.md` | yes |  |
+| `docs/06-annotation-guideline-v1.md` | yes / no |  |
+| `docs/04-taxonomy.md` | yes / no |  |
+| `docs/24-annotator-training-and-calibration.md` | yes / no |  |
+| `docs/30-annotator-onboarding-quickstart.md` | yes / no |  |
+| `data-contracts/labeling_schema_v1.json` | yes / no |  |
 
-## Calibration Item Roster
+## Five Calibration Items
 
-List item IDs only. Do not include raw source identifiers or raw evidence in a committed packet.
+Do not include raw source identifiers in this table. Use item IDs or local packet references only.
 
-| Item ID | Intended boundary stress | Evidence fields included | Notes |
+| Item ID | Intended stress case | Evidence forms included | Notes |
 |---|---|---|---|
-|  | scam / uncertain / non_scam / insufficient_evidence |  |  |
-|  | scam / uncertain / non_scam / insufficient_evidence |  |  |
-|  | scam / uncertain / non_scam / insufficient_evidence |  |  |
-|  | scam / uncertain / non_scam / insufficient_evidence |  |  |
-|  | scam / uncertain / non_scam / insufficient_evidence |  |  |
+|  | obvious scam/high-risk scam-like | text / image / OCR / reply / link / handle |  |
+|  | likely benign comparator | text / image / OCR / reply / link / handle |  |
+|  | uncertain or ambiguous | text / image / OCR / reply / link / handle |  |
+|  | insufficient-evidence or low-context | text / image / OCR / reply / link / handle |  |
+|  | OCR/reply/link/handle boundary case | text / image / OCR / reply / link / handle |  |
 
-## Permitted Evidence
+## Calibration Rules For Annotators
 
-| Evidence field | Included? | Limits |
+- Use only the evidence fields in the packet.
+- Do not inspect live Threads pages, profiles, accounts, landing pages, redirect chains, or outside sources.
+- Preserve uncertainty; do not force binary labels.
+- Use `uncertain` for suspicious but incomplete or mixed evidence.
+- Use `insufficient_evidence` when the capture cannot support a judgment.
+- Avoid legal conclusions.
+- Do not add raw personal data to notes.
+
+## Files And Commands
+
+Annotator files:
+
+```text
+data/interim/calibration_ann_01.csv
+data/interim/calibration_ann_02.csv
+```
+
+Comparison command:
+
+```bash
+python scripts/compare_annotation_passes.py \
+  data/interim/calibration_ann_01.csv \
+  data/interim/calibration_ann_02.csv \
+  --name-a ann_01 \
+  --name-b ann_02 \
+  --output data/processed/calibration_agreement.md \
+  --disagreements-csv data/processed/calibration_disagreements.csv
+```
+
+## Qualitative Agreement Review
+
+| Review question | Result | Notes |
 |---|---|---|
-| `post_text` | yes / no |  |
-| `reply_texts` | yes / no |  |
-| `ocr_text` | yes / no |  |
-| `external_links` | yes / no |  |
-| `visible_contact_handles` | yes / no |  |
-| `visible_platform_redirects` | yes / no |  |
-| `metadata_notes` | yes / no | non-sensitive only |
+| Primary-label disagreements are isolated and explainable | yes / no |  |
+| `uncertain` and `insufficient_evidence` are used differently | yes / no |  |
+| Risk-level differences do not break second-review routing | yes / no |  |
+| Signal-tag differences do not hide decisive evidence | yes / no |  |
+| OCR/reply/link evidence is handled consistently enough | yes / no |  |
+| Notes are evidence-based and non-legal | yes / no |  |
+| No annotator required unapproved outside context | yes / no |  |
 
-## Forbidden Context
+## Disagreement Themes
 
-Annotators must not use:
-
-- profile or account research outside the packet
-- landing-page visits or redirect-chain inspection
-- browser automation, crawling, scraping, or bulk export
-- source URLs, screenshots, or handles outside approved packet fields
-- legal fraud determinations or accusation language
-
-## Instructions To Annotators
-
-- Annotate independently before discussion.
-- Use only the evidence fields in the blind file.
-- Preserve uncertainty when evidence is weak or incomplete.
-- Explain labels with evidence references, not assumptions.
-- Mark low-confidence and boundary cases clearly for adjudication.
-
-## Disagreement Review Plan
-
-| Review item | Owner | Due date | Notes |
+| Theme | Item IDs | Guideline change needed? | Owner |
 |---|---|---|---|
-| Compare completed blind files | research engineer |  |  |
-| Review primary-label disagreements | annotation lead |  |  |
-| Review `uncertain` versus `insufficient_evidence` cases | annotation lead |  |  |
-| Identify guideline revision needs | adjudicator |  |  |
-| Record non-sensitive themes | governance reviewer / annotation lead |  |  |
+| scam vs uncertain |  | yes / no |  |
+| uncertain vs insufficient_evidence |  | yes / no |  |
+| risk level |  | yes / no |  |
+| scam type |  | yes / no |  |
+| signal tags |  | yes / no |  |
+| OCR/reply/link interpretation |  | yes / no |  |
+| note quality or overclaiming |  | yes / no |  |
 
-## Readiness Decision
+## Calibration Decision
 
 Choose one:
 
-- `ready_for_first_10_15_items`
-- `ready_with_narrower_rules`
-- `revise_guideline_and_repeat`
-- `pause_annotation`
+- `ready_for_first_10_15_annotation`
+- `ready_with_limits`
+- `revise_guideline_first`
+- `revise_schema_first`
+- `rerun_calibration`
+- `pause`
 
 Decision:
 
@@ -101,6 +118,8 @@ Decision:
 
 ```
 
-Non-sensitive rationale:
+Required follow-up:
 
--
+| Follow-up | Owner | Required before first 10-15 item annotation? |
+|---|---|---|
+|  |  | yes / no |
