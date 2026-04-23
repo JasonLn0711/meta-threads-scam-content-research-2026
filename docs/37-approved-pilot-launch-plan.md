@@ -39,6 +39,8 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 | Go/no-go record | `governance/pilot-launch/threads_pilot_v1_2026-05_go_no_go.md` |
 | Pilot work order | `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md` |
 | Readiness review | `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md` |
+| First checkpoint protocol | `docs/38-first-pilot-checkpoint-protocol.md` |
+| First checkpoint template | `templates/pilot_checkpoint_review.md` |
 
 ## Launch Register Status
 
@@ -54,15 +56,17 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 3. Confirm exact raw evidence access list outside git.
 4. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
 5. Create local-only working files under ignored `data/interim/`.
-6. Collect up to 50 items using the 15/15/10/10 diagnostic composition.
-7. Apply redaction QA before annotation.
-8. Validate the annotation CSV before annotation expands.
-9. Run first-pass annotation.
-10. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
-11. Adjudicate disagreements.
-12. Convert to JSONL locally after strict validation.
-13. Run audit and rule-baseline comparison locally.
-14. Produce a non-sensitive pilot result summary and decision memo.
+6. Collect the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
+7. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
+8. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+9. Apply redaction QA before annotation.
+10. Validate the annotation CSV before annotation expands.
+11. Run first-pass annotation.
+12. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
+13. Adjudicate disagreements.
+14. Convert to JSONL locally after strict validation.
+15. Run audit and rule-baseline comparison locally.
+16. Produce a non-sensitive pilot result summary and decision memo.
 
 ## First Local Files To Create
 
@@ -90,6 +94,8 @@ These paths are ignored by git. Commit only aggregate, non-sensitive findings.
 ## First Review Checkpoint
 
 Pause after the first 10-15 collected or annotated rows.
+
+Use [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md) and `templates/pilot_checkpoint_review.md`.
 
 Review:
 

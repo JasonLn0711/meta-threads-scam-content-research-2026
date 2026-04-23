@@ -110,6 +110,8 @@ Use `docs/24-annotator-training-and-calibration.md` to decide whether to proceed
 
 Use `docs/29-authorized-pilot-execution-plan.md` after the authorization gate and real-pilot readiness review pass.
 
+For the approved pilot launch, run the first 10-15 item checkpoint in `docs/38-first-pilot-checkpoint-protocol.md` before completing all 50 items.
+
 Use the composition in `docs/20-first-dataset-batch-plan.md`:
 
 - 15 likely scam or high-risk scam-like items

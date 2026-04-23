@@ -30,3 +30,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Added an integrated real-pilot readiness review before any real 50-item pilot begins | `0010-add-real-pilot-readiness-review.md` |
 | 2026-04-23 | Added a stakeholder authorization packet and decision record before real source approval | `0011-add-stakeholder-authorization-packet.md` |
 | 2026-04-23 | Recorded approved pilot launch preparation with `go_with_limits` launch records | `0012-record-approved-pilot-launch-prep.md` |
+| 2026-04-23 | Added a required first 10-15 item checkpoint before completing the 50-item pilot | `0013-add-first-pilot-checkpoint-protocol.md` |

@@ -19,6 +19,7 @@ dataset_manifest_template.md
 experiment_log_template.md
 guideline_revision_log_template.md
 pilot_batch_work_order.md
+pilot_checkpoint_review.md
 pilot_decision_memo.md
 pilot_result_summary.md
 real_pilot_readiness_review.md
@@ -37,6 +38,8 @@ Use the annotation, onboarding, QA, adjudication, disagreement, and guideline-re
 Use `500_item_expansion_work_order.md` only after the staged expansion gates in `docs/32-500-item-expansion-plan.md` are satisfied.
 
 Use `pilot_decision_memo.md` and `baseline_error_review_table.csv` after the 50-item pilot to decide whether to expand, revise, narrow, or pause.
+
+Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.md` after the first 10-15 real pilot items before completing all 50 items.
 
 Use `source_candidate_intake.md` and `source_sampling_frame_template.csv` before any real source enters authorization or collection.
 

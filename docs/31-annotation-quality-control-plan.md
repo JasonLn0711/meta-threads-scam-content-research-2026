@@ -86,6 +86,8 @@ Proceed only if annotators can explain:
 
 After the first 10-15 pilot rows, pause for a quick check.
 
+Use `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md` for the combined collection/redaction and annotation checkpoint.
+
 Look for:
 
 - blank required annotation fields
@@ -185,4 +187,3 @@ At pilot exit, produce:
 - dataset audit summary
 - rule baseline variant summary
 - recommendation: expand, revise guideline, revise schema, narrow source, or pause
-

@@ -132,6 +132,8 @@ Use the diagnostic composition:
 
 The collector should complete collection fields and evidence-status fields first. If an item cannot be redacted or documented safely, exclude it and record the reason in the collection log.
 
+For the current approved pilot, do not collect all 50 items in one uninterrupted pass. Pause after the first 10-15 collected or annotated rows and run `docs/38-first-pilot-checkpoint-protocol.md`.
+
 ### Step 4: Redaction QA
 
 Before annotation:

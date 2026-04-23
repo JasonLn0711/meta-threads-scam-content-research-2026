@@ -20,11 +20,13 @@ Completed:
 - Integrated real-pilot readiness review package.
 - Stakeholder authorization packet and decision-record template.
 - Approved pilot launch packet with `go_with_limits` records.
+- First 10-15 item checkpoint protocol and review template.
 
 Not completed:
 
 - controlled launch record with exact source, storage, access, retention, and redaction limits outside git
 - real 50-item pilot collection
+- first 10-15 item checkpoint result
 - human annotation on real examples
 - real baseline evaluation
 - pilot decision memo from real results

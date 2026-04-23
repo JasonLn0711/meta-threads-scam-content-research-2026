@@ -8,6 +8,7 @@ Use this folder for first-batch dataset audits before baseline experiments. The 
 |---|---|
 | `0001-pilot-audit-protocol.md` | Protocol for auditing the authorized 50-item pilot before baseline work. |
 | `0002-synthetic-sample-audit-dry-run.md` | Synthetic-only dry run confirming validation, conversion, and audit behavior. |
+| `0003-first-checkpoint-audit-protocol.md` | Safety and usefulness audit for the first 10-15 real pilot items. |
 
 ## Required Checks
 
