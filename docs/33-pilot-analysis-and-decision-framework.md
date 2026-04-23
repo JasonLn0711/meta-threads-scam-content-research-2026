@@ -27,6 +27,7 @@ Do not make an expansion decision until all inputs exist:
 | Error analysis | `experiments/evaluation-notes/0001-pilot-error-analysis-template.md` or filled equivalent |
 | Pilot result summary | `templates/pilot_result_summary.md` |
 | Decision memo | `templates/pilot_decision_memo.md` |
+| Optional synthesis draft | `scripts/summarize_pilot_results.py` output under `experiments/evaluation-notes/outputs/` |
 
 Local files under `data/interim/` and `data/processed/` are ignored by git. Commit only aggregate, non-sensitive summaries.
 
@@ -127,3 +128,6 @@ After completing `templates/pilot_decision_memo.md`, create a decision-log entry
 
 If the decision is expansion, update `docs/18-recommended-path-v1.md` or create a v2 recommended path.
 
+## Synthesis Workbench
+
+Use `docs/46-pilot-result-synthesis-workflow.md` for the aggregate-only synthesis command that drafts a pilot result summary and decision memo from local dataset and calibration outputs.
