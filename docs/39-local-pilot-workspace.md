@@ -54,6 +54,7 @@ After the controlled launch record is complete outside git:
 
 ```bash
 python scripts/init_pilot_workspace.py --ack-controlled-details
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
 To use a different dataset or batch ID:
@@ -79,6 +80,12 @@ After initialization:
 6. Complete `data/interim/threads_pilot_v1_checkpoint_review.md` without raw Threads content.
 
 ## Local Checks
+
+Before item 1:
+
+```bash
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
+```
 
 Once annotation rows exist:
 

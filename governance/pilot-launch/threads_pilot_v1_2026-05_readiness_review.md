@@ -32,6 +32,7 @@
 | Annotator onboarding checklist | scheduled | `templates/annotator_onboarding_checklist.md` | Complete before annotation starts. |
 | Annotation QA checklist | yes | `templates/annotation_qa_checklist.md` | Use after first 10-15 rows. |
 | Baseline/evaluation protocol | yes | `docs/08-baseline-strategy.md`; `docs/33-pilot-analysis-and-decision-framework.md` | Preserve uncertainty. |
+| Mechanical preflight | pending before item 1 | `docs/40-pilot-preflight-verification.md`; `scripts/check_pilot_preflight.py` | Run after local workspace setup. |
 
 ## Gate Review
 
@@ -70,7 +71,7 @@
 | Decision date | `2026-04-23` |
 | First allowed collection date | after exact raw storage location and access list are confirmed outside git |
 | Required next review date | after first 10-15 collected or annotated rows |
-| Conditions that must be met before collection | confirm exact storage/access outside git; assign pseudonymous IDs; apply redaction checklist; no automation |
+| Conditions that must be met before collection | confirm exact storage/access outside git; assign pseudonymous IDs; pass item-1 preflight; apply redaction checklist; no automation |
 
 ## Decision Rationale
 

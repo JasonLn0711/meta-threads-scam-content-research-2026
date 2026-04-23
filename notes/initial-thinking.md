@@ -108,6 +108,7 @@ By the next update on `2026-04-23`, the repo had these additional research asset
 - Approved pilot launch packet with `go_with_limits` records under `governance/pilot-launch/`.
 - First 10-15 item checkpoint protocol to catch collection, redaction, source, and annotation issues before completing all 50 items.
 - Local pilot workspace initializer and runbook for creating empty ignored `data/interim/` working files once controlled launch details are complete outside git.
+- Pilot preflight verifier and runbook for checking repo mechanics, local workspace setup, and tracked-file hygiene before item 1.
 
 The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
 

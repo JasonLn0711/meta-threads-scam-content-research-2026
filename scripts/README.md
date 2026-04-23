@@ -24,6 +24,7 @@ compare_rule_variants.py      Compare text/reply/OCR/all rule baseline variants
 compare_annotation_passes.py  Compare two annotator passes and export disagreements
 prepare_calibration_files.py  Create blind calibration sheets and answer keys
 init_pilot_workspace.py       Create empty local-only pilot files under ignored data/interim/
+check_pilot_preflight.py      Check repo and local workspace readiness before item 1
 ```
 
 ## Example Usage
@@ -95,6 +96,18 @@ Initialize local pilot workspace files after controlled launch details are compl
 
 ```bash
 python scripts/init_pilot_workspace.py --ack-controlled-details
+```
+
+Run repo-only pilot preflight checks:
+
+```bash
+python scripts/check_pilot_preflight.py
+```
+
+Run the item-1 preflight after controlled launch details and local workspace setup:
+
+```bash
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
 Recommended baseline variants:

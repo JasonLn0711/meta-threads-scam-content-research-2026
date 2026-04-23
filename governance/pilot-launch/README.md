@@ -15,6 +15,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_go_no_go.md` | Go/no-go decision record. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
+| `../../docs/40-pilot-preflight-verification.md` | Repo and local workspace preflight before item 1. |
 | `../../docs/38-first-pilot-checkpoint-protocol.md` | Required first 10-15 item checkpoint protocol. |
 | `../../templates/pilot_checkpoint_review.md` | Checkpoint review template. |
 
@@ -30,6 +31,7 @@ Meaning:
 - No scraping, crawling, browser automation, bulk export, landing-page crawling, redirect-chain capture, profile review, or production scoring is approved.
 - Raw evidence must stay outside git.
 - Exact raw storage location, access list, and any sensitive source identifiers must be held in the approved controlled location, not in this repository.
+- The item-1 preflight must pass after local workspace initialization.
 - The pilot must pause after the first 10-15 collected or annotated rows for checkpoint review.
 
 No real Threads evidence has been collected or committed in this folder.

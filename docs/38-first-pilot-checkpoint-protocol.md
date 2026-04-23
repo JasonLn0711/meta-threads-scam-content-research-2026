@@ -24,11 +24,12 @@ Do not start the first checkpoint until:
 - controlled launch details are completed outside git
 - exact source, storage, access, retention, and redaction limits are recorded in the controlled location
 - local-only files under ignored `data/interim/` exist, preferably initialized with `scripts/init_pilot_workspace.py`
+- item-1 preflight has passed with `scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details`
 - collector and reviewer IDs are assigned
 - raw evidence storage is outside git
 - the collector understands screenshot, URL, handle, OCR, and reply/comment limits
 
-The non-sensitive launch record is [37-approved-pilot-launch-plan.md](37-approved-pilot-launch-plan.md). Local workspace instructions are in [39-local-pilot-workspace.md](39-local-pilot-workspace.md). Use `templates/controlled_launch_details_template.md` only as a blank structure for the controlled, non-git copy.
+The non-sensitive launch record is [37-approved-pilot-launch-plan.md](37-approved-pilot-launch-plan.md). Local workspace instructions are in [39-local-pilot-workspace.md](39-local-pilot-workspace.md). Preflight instructions are in [40-pilot-preflight-verification.md](40-pilot-preflight-verification.md). Use `templates/controlled_launch_details_template.md` only as a blank structure for the controlled, non-git copy.
 
 ## Checkpoint Timing
 

@@ -118,9 +118,10 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The first real 50-item pilot is approved for `go_with_limits` launch preparation.
 - The first 10-15 item checkpoint protocol exists.
 - A local-only pilot workspace initializer exists for creating ignored `data/interim/` working files after controlled launch details are complete.
+- A repo-safe pilot preflight verifier exists for checking launch mechanics before item 1.
 - No real Threads evidence has been collected or committed.
 
-The next blocker is operational governance, not tooling: before item 1, the project owner must complete the controlled launch record with exact source, raw-storage, access, retention, and redaction limits outside git. After that, initialize the local workspace with [docs/39-local-pilot-workspace.md](docs/39-local-pilot-workspace.md).
+The next blocker is operational governance, not tooling: before item 1, the project owner must complete the controlled launch record with exact source, raw-storage, access, retention, and redaction limits outside git. After that, initialize the local workspace with [docs/39-local-pilot-workspace.md](docs/39-local-pilot-workspace.md) and run the preflight in [docs/40-pilot-preflight-verification.md](docs/40-pilot-preflight-verification.md).
 
 ## Recommended First Milestone
 
@@ -128,7 +129,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, followed by a 5-item calibration refresh if the annotation team changed, then a 10-15 item checkpoint before completing the 50-item authorized pilot.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, followed by a 5-item calibration refresh if the annotation team changed, then a 10-15 item checkpoint before completing the 50-item authorized pilot.
 4. A 100-200 item first usable dataset only after pilot review and revisions.
 5. A governed 500-item expansion only after the earlier gates show the workflow is stable.
 6. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals.

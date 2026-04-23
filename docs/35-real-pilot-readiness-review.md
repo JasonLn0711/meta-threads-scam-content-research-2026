@@ -57,6 +57,7 @@ The readiness review should point to completed local artifacts. Do not paste raw
 | Annotation onboarding | `docs/30-annotator-onboarding-quickstart.md` and `templates/annotator_onboarding_checklist.md` | Confirms annotators can apply labels consistently. |
 | QA plan | `docs/31-annotation-quality-control-plan.md` and `templates/annotation_qa_checklist.md` | Confirms review, disagreement, and adjudication flow. |
 | Baseline plan | `docs/08-baseline-strategy.md` and `docs/33-pilot-analysis-and-decision-framework.md` | Confirms evaluation will preserve uncertainty and not overclaim. |
+| Mechanical preflight | `docs/40-pilot-preflight-verification.md` and `scripts/check_pilot_preflight.py` | Confirms repo and local workspace mechanics before item 1. |
 
 ## Review Gates
 
@@ -170,6 +171,12 @@ The readiness review should confirm that the team will stop or pause if:
 | Annotation operations | `ready_with_limits` | Guideline, onboarding, QA, and templates exist; real annotation waits on approved evidence. |
 | Baseline and evaluation | `ready_with_limits` | Scripts and protocols are dry-run tested on synthetic samples; real metrics wait on approved pilot data. |
 | Overall launch decision | `go_with_limits` | Use `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md`; no collection before controlled details are complete. |
+
+Before item 1, run:
+
+```bash
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
+```
 
 ## Launch Decision Rule
 

@@ -32,6 +32,7 @@ Use this template before starting the first real 50-item Threads pilot. Do not p
 | Annotator onboarding checklist |  |  |  |
 | Annotation QA checklist |  |  |  |
 | Baseline/evaluation protocol |  |  |  |
+| Mechanical preflight |  |  |  |
 
 ## Gate Review
 

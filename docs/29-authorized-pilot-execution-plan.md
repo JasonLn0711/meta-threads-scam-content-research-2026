@@ -71,7 +71,7 @@ data/processed/threads_pilot_v1_disagreements.csv
 
 These files are ignored by git. Commit only aggregate, non-sensitive experiment notes and decision records.
 
-Use [39-local-pilot-workspace.md](39-local-pilot-workspace.md) and `scripts/init_pilot_workspace.py` to create the empty `data/interim/` working files after controlled launch details are complete outside git.
+Use [39-local-pilot-workspace.md](39-local-pilot-workspace.md) and `scripts/init_pilot_workspace.py` to create the empty `data/interim/` working files after controlled launch details are complete outside git. Then use [40-pilot-preflight-verification.md](40-pilot-preflight-verification.md) and `scripts/check_pilot_preflight.py` before item 1.
 
 ## Roles
 
@@ -117,11 +117,12 @@ Create local working copies under ignored folders:
 ```bash
 python scripts/init_pilot_workspace.py --dry-run
 python scripts/init_pilot_workspace.py --ack-controlled-details
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
 This creates the collection log, primary annotation sheet, two annotator pass sheets, checkpoint worksheet, and local workspace manifest under ignored `data/interim/`.
 
-Do not copy raw screenshots, source exports, credentials, browser profiles, or stakeholder case packets into git.
+Do not copy raw screenshots, source exports, credentials, browser profiles, or stakeholder case packets into git. If preflight reports an `ERROR`, fix it before collecting item 1.
 
 ### Step 3: Collect 50 Candidate Items
 
