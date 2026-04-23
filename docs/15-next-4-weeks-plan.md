@@ -18,6 +18,9 @@ Deliverables:
 - Validated `data-contracts/thread_item_schema_v1.json`.
 - First dataset manifest draft.
 - Stakeholder open questions list.
+- Annotation pilot runbook and dry-run workflow.
+- Collection/redaction SOP and authorization request template.
+- Annotator training and calibration protocol.
 
 ## Week 2: Annotation And Text Baseline
 
@@ -35,6 +38,8 @@ Deliverables:
 - Text-only baseline experiment log.
 - Guideline revision notes.
 - Initial error analysis.
+- Dataset audit and rule-variant comparison report.
+- Annotation agreement report.
 
 ## Week 3: OCR, Comments, And Link Signals
 

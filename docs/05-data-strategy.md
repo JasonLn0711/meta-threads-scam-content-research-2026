@@ -4,6 +4,8 @@
 
 Collect the minimum evidence needed to answer phase-1 research questions while preserving auditability, privacy, and uncertainty.
 
+Operational collection and redaction steps are defined in `docs/23-collection-and-redaction-sop.md`.
+
 ## Candidate Data Sources
 
 | Source | Use | Caution |
@@ -16,11 +18,13 @@ Collect the minimum evidence needed to answer phase-1 research questions while p
 
 ## Manual Public Example Workflow
 
-1. Record only the fields needed for the dataset schema.
-2. Avoid unnecessary account identifiers.
-3. Redact personal information where possible.
-4. Capture evidence status as `complete`, `partial`, `redacted`, or `unavailable`.
-5. Store raw screenshots outside git unless explicitly approved and redacted.
+1. Confirm the source and collection method are permitted.
+2. Record only the fields needed for `data-contracts/thread_item_schema_v1.json`.
+3. Avoid unnecessary account identifiers.
+4. Redact personal information where possible.
+5. Capture `screenshot_snapshot_status` and `link_snapshot_status`.
+6. Store raw screenshots outside git unless explicitly approved and redacted.
+7. Record collection decisions in `templates/collection_log_template.csv`.
 
 ## Stakeholder-Provided Examples
 
@@ -50,13 +54,13 @@ Before using stakeholder samples, confirm:
 - Image paths or redacted references
 - OCR text
 - External links or normalized link evidence
-- Observed signals
+- Signal tags
 - Scam label
 - Scam type
-- Confidence
+- Annotation confidence
 - Annotation notes
 - Review status
-- Evidence snapshot status
+- Screenshot and link snapshot status
 - Collection timestamp
 
 ## Privacy And Ethical Cautions
@@ -74,13 +78,24 @@ No automated Threads or Meta collection is approved at repo initialization. Any 
 
 ## Sampling Plan
 
-Start with 100 to 150 items:
+Start with a 50-item pilot, then expand to 100 to 200 items after guideline and schema review.
+
+Pilot:
 
 | Bucket | Target count | Purpose |
 |---|---:|---|
-| Likely scam-like | 35 to 45 | Learn high-risk signals. |
-| Likely non-scam | 35 to 45 | Calibrate false positives. |
-| Uncertain | 20 to 30 | Stress-test ambiguity handling. |
+| Likely scam or high-risk scam-like | 15 | Learn positive signals. |
+| Likely non-scam | 15 | Calibrate false positives. |
+| Uncertain | 10 | Stress-test ambiguity handling. |
+| Insufficient evidence | 10 | Test evidence status rules. |
+
+First usable batch:
+
+| Bucket | Target count | Purpose |
+|---|---:|---|
+| Likely scam-like | 40 to 60 | Learn high-risk signals. |
+| Likely non-scam | 40 to 60 | Calibrate false positives. |
+| Uncertain | 20 to 40 | Stress-test ambiguity handling. |
 | Insufficient evidence | 10 to 20 | Test evidence status rules. |
 
 Include a mixture of:
@@ -120,7 +135,7 @@ Weak labels can help triage review, but should not replace annotation. Candidate
 - Urgency terms
 - OCR-detected contact handles
 
-All weak labels must be stored as observed signals, not final truth.
+All weak labels must be stored as `signal_tags` or notes, not final truth.
 
 ## Dataset Versioning
 

@@ -55,6 +55,8 @@ Use mixed collection only:
 
 Do not use crawlers, scrapers, browser automation, bulk export, or landing-page crawling unless approval is recorded in `governance/data-governance.md`.
 
+Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
+
 ## Evidence Preservation
 
 Every item should record:
@@ -150,4 +152,5 @@ If these appear, narrow the taxonomy for v1.1 rather than adding more fields.
 - Confirm whether stakeholder-provided examples are authorized for annotation.
 - Decide where local raw evidence will be stored outside git.
 - Assign at least two pseudonymous annotator IDs.
+- Complete `templates/data_authorization_request.md` for any real source.
 - Run a 5-item dry annotation using the templates before collecting the full 50-item pilot.
