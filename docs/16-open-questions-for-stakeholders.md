@@ -1,5 +1,18 @@
 # Open Questions For Stakeholders
 
+## Pilot Kickoff Questions
+
+These questions must be answered before the first real 50-item pilot batch:
+
+- Which source type is approved first: stakeholder-provided cases, manually identified public examples, API-authorized examples, or another approved source?
+- Which fields may be retained in annotation files?
+- May screenshots be retained, and must they be redacted before annotation?
+- May source URLs or visible links be stored, normalized, redacted, or omitted?
+- Who may access raw evidence?
+- What retention/deletion rule applies to raw evidence and derived annotation files?
+- Can aggregate metrics and redacted examples appear in internal memos?
+- Who is the final owner for `go`, `no_go`, or `go_with_limits` on the pilot?
+
 ## Criminal Investigation Stakeholders
 
 - What counts as report-worthy Threads content from an investigative perspective?

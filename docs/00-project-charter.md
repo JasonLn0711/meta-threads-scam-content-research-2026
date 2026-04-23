@@ -75,6 +75,6 @@ Phase 1 succeeds if it produces:
 - A stable definition of Threads scam-like content for research purposes.
 - A usable taxonomy and annotation guide.
 - A dataset schema that preserves evidence and uncertainty.
-- A first reviewed sample of 100 to 150 items.
+- A 50-item pilot and a 100-200 item first usable batch after pilot review.
 - A baseline comparison showing which signals add value.
 - A clear recommendation on continuing, narrowing, or stopping specific workstreams.

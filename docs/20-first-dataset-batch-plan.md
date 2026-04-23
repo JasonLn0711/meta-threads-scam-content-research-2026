@@ -15,7 +15,7 @@ The first batch should answer:
 
 Start with a 50-item pilot. This is large enough to expose label confusion, missing fields, and source skew, but small enough to revise quickly.
 
-After revising the guide and schema from the pilot, build a first usable batch of 100 to 200 items. If annotation capacity is limited, target 100 to 150.
+After revising the guide and schema from the pilot, build a first usable batch of 100-200 items. If annotation capacity is limited, target 100-150.
 
 ## Pilot Composition
 

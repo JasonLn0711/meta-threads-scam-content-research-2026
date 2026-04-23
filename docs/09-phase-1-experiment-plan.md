@@ -4,7 +4,7 @@
 
 The phase-1 experiment program should determine which low-cost signals improve human-review-oriented triage for Threads scam-like content.
 
-The first program should use a manually reviewed dataset slice of 100 to 150 items and compare simple baselines before adding expensive methods.
+The first program should start with a 5-item calibration and 50-item pilot, then use a manually reviewed first usable slice of 100-200 items after pilot review. If annotation capacity is limited, 100-150 high-quality items are preferable to a larger noisy slice.
 
 ## Experiment A: Text-Only vs Text Plus OCR
 
@@ -13,7 +13,7 @@ The first program should use a manually reviewed dataset slice of 100 to 150 ite
 | Hypothesis | OCR text from images improves recall for scam-like items where key claims are embedded in images or screenshots. |
 | Data needed | Items with post text, attached images, OCR output, and human labels. |
 | Method | Run the same rule baseline on post text only, then on post text plus OCR text. |
-| Output | Risk tier, observed signals, explainable reasons, and changed decisions. |
+| Output | Risk tier, `signal_tags`, explainable reasons, and changed decisions. |
 | Metrics | Precision, recall, F1, evidence completeness, OCR error rate, reviewer burden. |
 | Failure modes | OCR misses text, image contains irrelevant personal data, OCR adds false positives, screenshots are low quality. |
 | Decision implications | Continue OCR if it improves recall or evidence completeness without unacceptable false positives. |

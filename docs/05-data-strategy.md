@@ -42,7 +42,7 @@ Before using stakeholder samples, confirm:
 1. Assign each item an `item_id`.
 2. Capture text, reply text, image references, OCR text, and visible links.
 3. Annotator labels scam status and scam type.
-4. Annotator records observed signals and explanation.
+4. Annotator records `signal_tags` and explanation.
 5. A second reviewer checks uncertain and high-risk cases.
 6. Disagreements are logged and used to revise the guideline.
 
@@ -78,7 +78,7 @@ No automated Threads or Meta collection is approved at repo initialization. Any 
 
 ## Sampling Plan
 
-Start with a 50-item pilot, then expand to 100 to 200 items after guideline and schema review.
+Start with a 50-item pilot, then expand to 100-200 items after guideline and schema review. If annotation capacity is limited, prefer 100-150 high-quality items over a larger weakly reviewed batch.
 
 Pilot:
 
