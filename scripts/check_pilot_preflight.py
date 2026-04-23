@@ -43,6 +43,7 @@ REQUIRED_PACKAGE_FILES = (
     "governance/pilot-launch/threads_pilot_v1_2026-05_sampling_frame.csv",
     "governance/pilot-launch/threads_pilot_v1_2026-05_authorization_decision.md",
     "governance/pilot-launch/threads_pilot_v1_2026-05_data_authorization.md",
+    "governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md",
     "governance/pilot-launch/threads_pilot_v1_2026-05_go_no_go.md",
     "governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md",
     "governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md",
