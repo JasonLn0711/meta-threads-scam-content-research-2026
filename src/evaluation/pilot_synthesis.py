@@ -12,6 +12,7 @@ from src.evaluation.triage_metrics import preferred_gold_risk
 
 
 DECISION_OPTIONS = {
+    "first_checkpoint_review_required",
     "expand_to_100_200",
     "revise_guideline_first",
     "revise_schema_first",
@@ -73,7 +74,8 @@ def dataset_summary(records: list[dict[str, Any]]) -> dict[str, Any]:
         "evidence_sufficiency_counts": dict(sorted(evidence_counts.items())),
         "annotation_confidence_counts": dict(sorted(confidence_counts.items())),
         "content_shape_counts": dict(sorted(content_counts.items())),
-        "all_synthetic": all(str(record.get("authorization_status")) == "synthetic_only" for record in records),
+        "all_synthetic": total > 0
+        and all(str(record.get("authorization_status")) == "synthetic_only" for record in records),
         "review_status_counts": dict(
             sorted(Counter(str(record.get("review_status") or "<blank>") for record in records).items())
         ),
@@ -107,6 +109,14 @@ def warning_flags(dataset: dict[str, Any], calibration: dict[str, Any]) -> list[
                 "code": "synthetic_only",
                 "severity": "info",
                 "message": "Dataset is synthetic-only; do not make pilot expansion claims.",
+            }
+        )
+    if total < 50 and not dataset.get("all_synthetic"):
+        warnings.append(
+            {
+                "code": "below_full_pilot_count",
+                "severity": "checkpoint",
+                "message": f"Dataset has {total} item(s), below the 50-item pilot decision point; use the first-checkpoint review process.",
             }
         )
     if uncertain_rate > 0.30:
@@ -164,6 +174,11 @@ def recommend_decision(
         return {
             "recommendation": "pause",
             "rationale": "Governance or privacy/redaction was rated red; expansion is blocked.",
+        }
+    if int(dataset.get("total_items", 0)) < 50:
+        return {
+            "recommendation": "first_checkpoint_review_required",
+            "rationale": "This dataset is below the 50-item pilot decision point. Use the first 10-15 item checkpoint review to decide whether to continue to 50; do not make an expansion decision from this run.",
         }
     codes = {warning["code"] for warning in warnings}
     if "high_insufficient_evidence_rate" in codes:
