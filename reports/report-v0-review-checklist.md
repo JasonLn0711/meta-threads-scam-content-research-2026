@@ -58,8 +58,9 @@ The goal is not to make the report longer. The goal is to make sure the report i
 |---|---|---|---|
 | `thread_item` is clearly defined as the unit of review |  |  |  |
 | Text, replies, OCR, links, handles, redirects, and screenshots are treated as evidence fields |  |  |  |
-| Controlled launch, workspace init, rehearsal, 5-item calibration, 10-15 checkpoint, 50-item pilot, and 100-200 item expansion are staged clearly |  |  |  |
+| Controlled launch, workspace init, rehearsal, rehearsal review, 5-item calibration if needed, 10-15 checkpoint, 50-item pilot, and 100-200 item expansion are staged clearly |  |  |  |
 | Pilot composition is diagnostic and not presented as prevalence |  |  |  |
+| Rehearsal review is described as the bridge from 1-2 records to the first 10-15 item checkpoint |  |  |  |
 | First 10-15 item checkpoint is described as the gate before completing 50 |  |  |  |
 | `uncertain` and `insufficient_evidence` boundaries are preserved |  |  |  |
 | Adjudication and second-review paths are described |  |  |  |
@@ -119,8 +120,10 @@ The goal is not to make the report longer. The goal is to make sure the report i
 | `templates/real_pilot_readiness_review.md` |  |  |
 | `templates/controlled_launch_details_template.md` |  |  |
 | `templates/manual_collection_rehearsal_checklist.md` |  |  |
+| `templates/controlled_rehearsal_review.md` |  |  |
 | `templates/annotator_calibration_packet_template.md` |  |  |
 | `templates/pilot_checkpoint_review.md` |  |  |
+| `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md` |  |  |
 | `templates/report_review_feedback.md` |  |  |
 
 ## Final Sign-Off

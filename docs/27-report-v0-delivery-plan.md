@@ -76,7 +76,7 @@ Every accepted material change should preserve these constraints:
 - no legal guilt determination is implied
 - no raw evidence enters git
 - uncertainty and evidence sufficiency remain first-class
-- the first real data step remains controlled launch, item-1 preflight, rehearsal, calibration, and the 10-15 item checkpoint before the governed 50-item pilot
+- the first real data step remains controlled launch, item-1 preflight, rehearsal, rehearsal review, calibration if needed, and the 10-15 item checkpoint before the governed 50-item pilot
 
 ## Stakeholder Readout Agenda
 
@@ -84,7 +84,7 @@ Every accepted material change should preserve these constraints:
 2. Explain why Threads is the phase-1 target.
 3. Review what evidence fields the `thread_item` schema preserves.
 4. Review the four primary annotation labels.
-5. Review controlled launch details, local workspace, preflight, rehearsal, and 5-item calibration.
+5. Review controlled launch details, local workspace, preflight, rehearsal, rehearsal review, and 5-item calibration if needed.
 6. Review the first 10-15 item checkpoint as the gate before completing 50.
 7. Review governance and privacy decisions that must be made before real collection.
 8. Ask for a concrete pilot decision: `go`, `go_with_limits`, `no_go`, or `revise_first`.

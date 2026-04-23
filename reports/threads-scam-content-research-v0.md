@@ -23,6 +23,7 @@ The recommended first path is a small, evidence-centric study:
 - Complete controlled launch details outside git before item 1.
 - Initialize a local-only workspace and pass item-1 preflight.
 - Rehearse 1-2 manually prepared records before real volume.
+- Record a repo-safe rehearsal review before the first 10-15 item checkpoint begins.
 - Run a 5-item synthetic, redacted, or authorized annotator calibration before real annotation volume.
 - Collect only the first 10-15 real items for a checkpoint before completing 50.
 - Build a 50-item first pilot batch only if the checkpoint decision supports continuation.
@@ -118,6 +119,7 @@ Recommended staged size:
 
 - 5 synthetic or redacted calibration items.
 - 1-2 manual rehearsal records after controlled launch details are complete outside git.
+- 1 aggregate rehearsal review before the first 10-15 item checkpoint.
 - 10-15 real pilot items for the first checkpoint.
 - 50 manually reviewed pilot items after the checkpoint supports continuation.
 - 100-200 first usable items only after pilot review and any guideline/schema revisions.
@@ -377,7 +379,7 @@ It is not realistic for:
 High-ROI work:
 
 1. Taxonomy and annotation guideline.
-2. Controlled launch details, local workspace, 1-2 item rehearsal, 5-item calibration, 10-15 item checkpoint, and conditional 50-item pilot.
+2. Controlled launch details, local workspace, 1-2 item rehearsal, rehearsal review, 5-item calibration if needed, 10-15 item checkpoint, and conditional 50-item pilot.
 3. Text-only and text+OCR+comments/link-signal rule baselines.
 4. Evidence completeness scoring.
 5. Error analysis and reviewer workflow memo.
@@ -401,7 +403,7 @@ Low-ROI or over-ambitious for phase 1:
 | Week | Target output |
 |---|---|
 | Week 1 | Finalize taxonomy, schema, data-governance gate, annotation guide, and stakeholder authorization request. Run synthetic/redacted calibration prep. |
-| Week 2 | Complete controlled launch details, initialize local workspace, pass item-1 preflight, rehearse 1-2 records, run annotator calibration, and collect only the first 10-15 items for checkpoint review. |
+| Week 2 | Complete controlled launch details, initialize local workspace, pass item-1 preflight, rehearse 1-2 records, record the rehearsal review, run annotator calibration if needed, and collect only the first 10-15 items for checkpoint review. |
 | Week 3 | If the checkpoint and conditional 50-item pilot permit it, add OCR, reply/comment, and link/redirection signals and compare rule baseline variants. |
 | Week 4 | Evaluate, write error analysis, summarize evidence, and decide whether to continue, narrow, or defer additional modalities. |
 
@@ -443,6 +445,7 @@ Before real data work:
 - Complete the controlled launch record outside git with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details.
 - Initialize local-only workspace files and pass item-1 preflight.
 - Rehearse 1-2 manual records.
+- Record the rehearsal outcome with `templates/controlled_rehearsal_review.md`.
 - Run 5-item annotator calibration and finalize adjudication process.
 - Run the first 10-15 item checkpoint before completing the 50-item pilot.
 - Confirm whether external links can be stored only as visible strings or redacted/normalized references. Do not crawl or expand links without separate approval.
@@ -502,8 +505,10 @@ By the deadline, the repo should contain:
 | `templates/real_pilot_readiness_review.md` | Fillable readiness decision record. |
 | `templates/controlled_launch_details_template.md` | Outside-git controlled detail structure for exact launch limits. |
 | `templates/manual_collection_rehearsal_checklist.md` | 1-2 item rehearsal checklist before real volume. |
+| `templates/controlled_rehearsal_review.md` | Aggregate-only bridge from the first 1-2 rehearsal items to the first 10-15 item checkpoint. |
 | `templates/annotator_calibration_packet_template.md` | 5-item calibration packet template. |
 | `templates/pilot_checkpoint_review.md` | First 10-15 item checkpoint worksheet. |
+| `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md` | Repo-safe review protocol for the first 1-2 controlled real rehearsal items. |
 | `templates/collection_log_template.csv` | Per-item collection readiness and evidence-status log. |
 | `templates/redaction_checklist.md` | Redaction QA before annotation or sharing. |
 | `scripts/validate_thread_dataset.py` | Local schema and consistency validation. |

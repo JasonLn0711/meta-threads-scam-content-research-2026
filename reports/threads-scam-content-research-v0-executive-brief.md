@@ -17,11 +17,12 @@ The next useful research step is a governed Threads-only pilot, not a production
 Approve a small, manually reviewed phase-1 pilot only after source authorization, redaction rules, access rules, retention rules, controlled launch details, and annotator calibration are recorded. The recommended path is:
 
 1. Complete controlled launch details outside git and initialize the local workspace.
-2. Rehearse 1-2 manually prepared records and run a 5-item annotation calibration.
-3. Collect only the first 10-15 real items for checkpoint review.
-4. Continue to the conditional 50-item pilot only if the checkpoint permits it.
-5. Use the pilot to revise the annotation guide, data schema, and baseline rules.
-6. Expand to 100-200 items only after the pilot shows that labels, evidence fields, and review workflow are stable enough.
+2. Rehearse 1-2 approved records and record a repo-safe rehearsal review.
+3. Run a 5-item annotation calibration if annotators changed or real annotation is about to begin.
+4. Collect only the first 10-15 real items for checkpoint review.
+5. Continue to the conditional 50-item pilot only if the checkpoint permits it.
+6. Use the pilot to revise the annotation guide, data schema, and baseline rules.
+7. Expand to 100-200 items only after the pilot shows that labels, evidence fields, and review workflow are stable enough.
 
 This keeps the project useful under budget while avoiding unsupported claims about legal fraud, automated enforcement, or platform-scale detection.
 
@@ -47,7 +48,7 @@ The repo now supports a first research pilot through:
 - a label vocabulary for `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`
 - governance, collection, and redaction templates
 - pilot runbooks and go/no-go checks
-- controlled launch, local workspace, preflight, rehearsal, and first-checkpoint operating docs
+- controlled launch, local workspace, preflight, rehearsal, rehearsal-review, and first-checkpoint operating docs
 - synthetic calibration samples
 - local validation, audit, agreement, conversion, and rule-baseline scripts
 - an initial report tying scope, evidence, budget, governance, annotation, and baseline experiments together
@@ -74,9 +75,9 @@ Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_author
 
 The v0 package does not authorize:
 
-- automated Threads collection or scraping
-- account or profile crawling
-- landing-page crawling or redirect expansion
+- uncontrolled automated Threads collection or scraping outside the approved controlled launch record
+- uncontrolled account or profile crawling
+- uncontrolled landing-page crawling or redirect expansion
 - production scoring
 - enforcement actions
 - legal fraud determinations
@@ -87,6 +88,8 @@ The v0 package does not authorize:
 ## First Pilot Design
 
 The recommended 50-item pilot is diagnostic, not a prevalence estimate. It must not be completed in one uninterrupted pass: the first 10-15 items are a checkpoint gate for governance, redaction, evidence quality, annotation consistency, and source skew.
+
+Before that checkpoint starts, the first 1-2 rehearsal items should be converted into a repo-safe rehearsal review so early redaction burden, schema friction, or label-boundary confusion is recorded explicitly rather than carried forward informally.
 
 | Bucket | Target count | Purpose |
 |---|---:|---|
@@ -118,4 +121,4 @@ By 2026-04-30:
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
 4. Record that the stakeholder outcome is approved with bounded launch limits.
 5. Complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details before real collection.
-6. Initialize the local workspace, pass item-1 preflight, rehearse 1-2 records, run 5-item calibration, and prepare the first 10-15 item checkpoint.
+6. Initialize the local workspace, pass item-1 preflight, rehearse 1-2 records, record the rehearsal review, run 5-item calibration if needed, and prepare the first 10-15 item checkpoint.
