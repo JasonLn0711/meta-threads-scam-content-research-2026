@@ -154,6 +154,50 @@ Run the item-1 preflight after controlled launch details and local workspace set
 python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
+## Governed Phase 1 Launch Sequence
+
+These commands support manual governed operations only. They do not collect Threads data, scrape, crawl, browse, expand redirects, capture landing pages, inspect profiles, run live ingestion, or authorize any source.
+
+Initialize the local workspace only after controlled launch details are complete outside git:
+
+```bash
+python scripts/init_pilot_workspace.py --ack-controlled-details
+python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
+```
+
+Run the 1-2 item manual collection rehearsal from a manually prepared local input:
+
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+
+python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+```
+
+Compare the 5-item annotator calibration passes:
+
+```bash
+python scripts/compare_annotation_passes.py \
+  data/interim/calibration_ann_01.csv \
+  data/interim/calibration_ann_02.csv \
+  --name-a ann_01 \
+  --name-b ann_02 \
+  --output data/processed/calibration_agreement.md \
+  --disagreements-csv data/processed/calibration_disagreements.csv
+```
+
+Run the first 10-15 item checkpoint audit after the local annotation CSV exists:
+
+```bash
+python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv --strict
+python scripts/audit_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv \
+  > data/processed/threads_pilot_v1_checkpoint_audit.md
+```
+
+Do not continue to the rest of the 50-item pilot unless the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+
 Recommended baseline variants:
 
 - `text_only`: use only `post_text`
