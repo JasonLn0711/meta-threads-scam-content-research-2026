@@ -79,3 +79,15 @@ Cut or narrow if:
 - Most useful evidence is unavailable.
 - Baselines are dominated by false positives.
 - Reviewer burden is too high for the expected operational value.
+
+## Pilot Decision Framework
+
+After the authorized 50-item pilot, use `docs/33-pilot-analysis-and-decision-framework.md` and `templates/pilot_decision_memo.md` to make one explicit decision:
+
+- `expand_to_100_200`
+- `revise_guideline_first`
+- `revise_schema_first`
+- `narrow_sources`
+- `pause`
+
+Do not expand based on model metrics alone. The decision must include governance, privacy, annotation quality, evidence completeness, source/content skew, baseline usefulness, and reviewer burden.
