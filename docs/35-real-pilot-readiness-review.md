@@ -8,7 +8,7 @@ This document is the integrated readiness gate. It does not replace the source i
 
 Default status: `not_ready`.
 
-As of `2026-04-23`, the first real 50-item pilot has a `go_with_limits` launch packet under `governance/pilot-launch/`. No real Threads evidence has been collected, annotated, or committed. Collection remains blocked until exact source, storage, access, retention, and redaction limits are written into the controlled launch record outside git.
+As of `2026-04-23`, the first real 50-item pilot has a `go_with_limits` launch packet under `governance/pilot-launch/`. Exact source, storage, access, retention, and redaction limits live in the outside-git controlled launch record. Item-level controlled pilot artifacts, if present, remain outside git; this repo should contain only non-sensitive launch records, aggregate notes, and decision artifacts.
 
 ## When To Use This Review
 
@@ -76,7 +76,7 @@ Readiness requires:
 - redaction rule
 - publication and demo restrictions
 
-Current default finding: `not_ready` until these are recorded.
+Current default finding: `ready_with_limits` only for the controlled run path recorded outside git; any unrecorded source, method, field, or storage change is `not_ready`.
 
 ### Gate 2: Source And Sampling
 

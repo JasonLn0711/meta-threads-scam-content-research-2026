@@ -15,8 +15,8 @@ As of `2026-04-23`:
 - pilot preflight verifier exists
 - manual collection assistant exists for manually supplied local fields
 - first 10-15 item checkpoint protocol exists
-- no real Threads evidence has been collected or committed
-- controlled launch details remain the blocker before item 1
+- item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed here
+- controlled launch details are no longer the named blocker for the approved path; controlled rehearsal, redaction review, and checkpoint discipline are the next blockers
 
 The latest repo-only preflight observed during planning produced `0 ERROR`, with expected warnings for missing local workspace, missing controlled-details acknowledgement, and dirty worktree.
 

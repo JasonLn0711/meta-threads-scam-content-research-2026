@@ -66,7 +66,7 @@ As of `2026-04-23`, the first real 50-item Threads pilot is approved for bounded
 Phase-1 work should assume:
 
 - Manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted sample collection are approved only under the controlled launch record.
-- Exact source, storage, access, retention, redaction, API credential, automation log, screenshot, OCR, URL/link, handle/contact, reply/comment, and run-record limits must be written into the controlled launch record before the first item.
+- Exact source, storage, access, retention, redaction, API credential, automation log, screenshot, OCR, URL/link, handle/contact, reply/comment, and run-record limits are governed by the outside-git controlled launch record. Any new source, method, field, or storage change must be recorded there before use.
 - Production scoring, public accusation, and legal fraud determination remain out of scope.
 
 ## Authorization Levels

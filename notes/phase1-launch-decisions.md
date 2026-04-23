@@ -8,8 +8,8 @@ The project is not moving to Phase 2.
 
 Reason:
 
-- Phase 1 has not yet produced governed real evidence.
-- The controlled launch record is still the next blocker before item 1.
+- Phase 1 has not yet produced checkpoint-reviewed evidence.
+- The controlled launch record is no longer the named blocker; the next blocker is safe controlled rehearsal, redaction review, and first 10-15 item checkpoint discipline.
 - The workflow must prove safe manual collection, redaction, annotation, checkpoint review, and local baseline readiness before scale.
 - No automation, scraping, live ingestion, production scoring, or new model layer is approved.
 
@@ -94,4 +94,4 @@ Pause or narrow the pilot if:
 - annotation disagreement repeats on the same primary-label boundary
 - baseline review would expose item-level sensitive evidence or produce misleading claims
 
-The default next action is still outside git: complete the controlled launch record, then initialize the local workspace and run item-1 preflight.
+The default next action is still outside git: use the controlled launch record, keep controlled-store artifacts out of git, validate the controlled rehearsal records, and stop at the first 10-15 item checkpoint before any 50-item continuation.

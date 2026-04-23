@@ -36,3 +36,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Rejected low-speed automated Threads/Meta collection without recorded legal/platform/stakeholder scope | `0016-reject-low-speed-automation-without-scope.md` |
 | 2026-04-23 | Recorded the integrated synthetic launch rehearsal while keeping real collection blocked until controlled launch details are complete | `0017-record-integrated-synthetic-launch-rehearsal.md` |
 | 2026-04-23 | Recorded CIB authorization for API access and all research-required automation under a controlled launch record | `0018-record-cib-api-and-automation-authorization.md` |
+| 2026-04-23 | Corrected controlled-store status so real controlled pilot artifacts are not mislabeled as examples or synthetic files | `0019-correct-controlled-store-artifact-status.md` |

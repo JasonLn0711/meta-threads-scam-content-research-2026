@@ -8,7 +8,7 @@ The stakeholder outcome has been reported as approved. The repo therefore moves 
 
 Launch status: `go_with_limits`.
 
-No real Threads evidence has been collected or committed.
+Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed here.
 
 Owner follow-up approval: the project owner approved the repo's requirement that exact source, storage, access, retention, and redaction limits must be written into the launch record before collection. Sensitive values should be kept in the approved controlled location rather than this git repo.
 
@@ -70,7 +70,7 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 
 ## Controlled Launch Checklist
 
-Complete this checklist outside git before item 1. Use `templates/controlled_launch_details_template.md` as the blank structure, but keep the filled record in the approved controlled location if it contains sensitive details.
+Confirm this checklist outside git before continuing controlled pilot data work. Use `templates/controlled_launch_details_template.md` as the blank structure for revisions, but keep the filled record in the approved controlled location if it contains sensitive details.
 
 | Required controlled detail | Status before item 1 |
 |---|---|
@@ -91,11 +91,11 @@ Complete this checklist outside git before item 1. Use `templates/controlled_lau
 | Unresolved uncertainties | marked blocking or non-blocking |
 | Final signoff status | `ready_for_rehearsal` or `ready_for_first_10_15_items` |
 
-If any required detail is incomplete, collection remains paused and the repo may be used only for synthetic examples, dry runs, and planning.
+If any required detail is incomplete for the intended path, collection on that path remains paused and the repo may be used only for synthetic examples, dry runs, and planning.
 
 ## Launch Sequence
 
-1. Complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, permitted-field, forbidden-field, role-ID, uncertainty, and signoff details. Use `templates/controlled_launch_details_template.md` only in the controlled location after filling it.
+1. Confirm the controlled launch record has exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, permitted-field, forbidden-field, role-ID, uncertainty, and signoff details. Use `templates/controlled_launch_details_template.md` only in the controlled location after filling it.
 2. Confirm exact raw evidence storage outside git in a controlled location.
 3. Confirm exact raw evidence access list outside git.
 4. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.

@@ -4,11 +4,11 @@
 
 As of `2026-04-23`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, a completed synthetic validation/audit/baseline dry run, and an approved 50-item pilot launch packet.
 
-The remaining blocker before real data work is controlled launch detail: exact source, storage, access, retention, screenshot/link handling, and redaction limits must be written into the controlled launch record outside git. The dry run used synthetic examples only and does not answer any real-data evidence question below.
+The controlled launch detail now lives outside git in the controlled launch record. Exact source, storage, access, retention, screenshot/link handling, and redaction limits must stay there, not in this repo. The synthetic dry run still answers tooling questions only; real-data questions require the controlled rehearsal and first 10-15 item checkpoint.
 
 ## Pilot Kickoff Questions
 
-The approval decision has been recorded at the pilot level. These controlled-launch questions must still be answered before the first real item:
+The approval decision has been recorded at the pilot level. These controlled-launch questions are tracked in the outside-git controlled launch record and must be rechecked before any new source, method, or field change:
 
 - What exact source or source list is approved, recorded outside git if sensitive?
 - What exact raw-storage location is approved outside git?
@@ -39,7 +39,7 @@ These questions are the immediate blocker for real evidence operations:
 | Signoff | Who can mark the controlled record `ready_for_first_10_15_items`? |
 | Checkpoint | Who reviews the first 10-15 item checkpoint and decides whether 50 may continue? |
 
-If any answer is incomplete, collection remains paused and the repo should stay in synthetic-only or planning mode.
+If any answer is incomplete for the current path, collection on that path remains paused and the repo should stay in synthetic-only tooling, planning, or governance-repair mode.
 
 ## Criminal Investigation Stakeholders
 

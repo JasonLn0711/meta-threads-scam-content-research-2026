@@ -16,9 +16,9 @@ As of `2026-04-23`:
 - pilot governance package exists
 - approved pilot launch packet exists under `governance/pilot-launch/`
 - launch status is `go_with_limits`
-- no real Threads evidence has been collected
+- item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed here
 
-Default collection status remains paused until exact source, storage, access, retention, and redaction limits are written into the controlled launch record outside git.
+Default collection status is limited to the outside-git controlled launch record. Pause any source, method, field, or storage change that is not already covered there.
 
 ## Activation Criteria
 
@@ -39,7 +39,7 @@ Begin this execution plan only when all of the following are true:
 | Access | Named people or roles allowed to see raw evidence |
 | Retention | Deletion or retention rule recorded |
 
-If any gate is incomplete, use only synthetic or fully redacted examples.
+If any gate is incomplete for the intended path, use only synthetic or fully redacted examples and repair governance before continuing.
 
 For the current approved pilot, the non-sensitive launch records are under `governance/pilot-launch/`. Exact sensitive source and storage/access details should remain outside git.
 
