@@ -137,6 +137,6 @@ This dry run does not prove:
 
 This historical dry run supported stakeholder report review and pilot authorization preparation. It is now superseded operationally by `experiments/evaluation-notes/0008-phase1-synthetic-launch-rehearsal.md`.
 
-Do not collect real examples from this result alone. The current next step is to complete the controlled launch record outside git, initialize the local workspace, pass item-1 preflight, rehearse 1-2 manual records, complete 5-item calibration, and pause after the first 10-15 real items for checkpoint review.
+Do not collect real examples from this result alone. The current next step is to complete the controlled launch record outside git, initialize the local workspace, pass item-1 preflight, rehearse 1-2 manual records, record the rehearsal review, complete 5-item calibration if needed, and pause after the first 10-15 real items for checkpoint review.
 
 Only after that checkpoint supports continuation should the team complete the 50-item pilot and record aggregate results under `experiments/dataset-audit/` and `experiments/baselines/`.

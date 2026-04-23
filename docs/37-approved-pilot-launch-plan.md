@@ -12,7 +12,7 @@ Item-level controlled pilot artifacts, if present, live only in the outside-git 
 
 Owner follow-up approval: the project owner approved the repo's requirement that exact source, storage, access, retention, and redaction limits must be written into the launch record before collection. Sensitive values should be kept in the approved controlled location rather than this git repo.
 
-This is the repo-safe entrypoint for controlled launch. It does not store the sensitive controlled launch record. It points the project owner to the outside-git record, then routes the team through local workspace initialization, manual rehearsal, annotator calibration, the first 10-15 item checkpoint, and only then the rest of the 50-item pilot.
+This is the repo-safe entrypoint for controlled launch. It does not store the sensitive controlled launch record. It points the project owner to the outside-git record, then routes the team through local workspace initialization, manual rehearsal, controlled rehearsal review, annotator calibration if needed, the first 10-15 item checkpoint, and only then the rest of the 50-item pilot.
 
 ## What Approval Means Here
 
@@ -56,6 +56,8 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 | Pilot work order | `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md` |
 | Readiness review | `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md` |
 | Controlled launch record | `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md` |
+| Controlled rehearsal review template | `templates/controlled_rehearsal_review.md` |
+| Controlled rehearsal review protocol | `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md` |
 | Local workspace instructions | `docs/39-local-pilot-workspace.md` |
 | Pilot preflight instructions | `docs/40-pilot-preflight-verification.md` |
 | First checkpoint protocol | `docs/38-first-pilot-checkpoint-protocol.md` |
@@ -102,18 +104,19 @@ If any required detail is incomplete for the intended path, collection on that p
 5. Create local-only working files under ignored `data/interim/` using `scripts/init_pilot_workspace.py`.
 6. Run `scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details`.
 7. Rehearse 1-2 controlled records using the intended manual, API, or automation path and the approved fields, run-record rules, and redaction rules.
-8. Run 5-item annotator calibration if annotators changed or real pilot annotation is about to begin.
-9. Collect only the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
-10. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
-11. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
-12. Apply redaction QA before annotation expands.
-13. Validate the annotation CSV before annotation expands.
-14. Run first-pass annotation.
-15. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
-16. Adjudicate disagreements.
-17. Convert to JSONL locally after strict validation.
-18. Run audit and rule-baseline comparison locally.
-19. Produce a non-sensitive pilot result summary and decision memo.
+8. Record the rehearsal outcome with `templates/controlled_rehearsal_review.md` and `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`.
+9. Run 5-item annotator calibration only if annotators changed or real pilot annotation is about to begin.
+10. Collect only the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
+11. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
+12. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+13. Apply redaction QA before annotation expands.
+14. Validate the annotation CSV before annotation expands.
+15. Run first-pass annotation.
+16. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
+17. Adjudicate disagreements.
+18. Convert to JSONL locally after strict validation.
+19. Run audit and rule-baseline comparison locally.
+20. Produce a non-sensitive pilot result summary and decision memo.
 
 ## First Local Files To Create
 

@@ -118,11 +118,11 @@ This runbook is the operating order for Phase 1. Do not skip ahead because a lat
 | Field | Requirement |
 |---|---|
 | Purpose | Test 1-2 controlled local records before real volume. |
-| Required inputs | Approved local input JSON or run-scoped API/automation output, controlled fields, `templates/manual_collection_rehearsal_checklist.md`, and CIB run record if automation is used. |
+| Required inputs | Approved local input JSON or run-scoped API/automation output, controlled fields, `templates/manual_collection_rehearsal_checklist.md`, `templates/controlled_rehearsal_review.md`, `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`, and CIB run record if automation is used. |
 | Commands | `python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json --ack-controlled-details --output data/interim/manual_record_0001.json --collection-log data/interim/threads_pilot_v1_collection_log.csv`; then `python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict`. |
-| Exit criteria | Governance errors zero; strict validation passes; redaction review passes; collector does not need unapproved context. |
+| Exit criteria | Governance errors zero; strict validation passes; redaction review passes; collector does not need unapproved context; rehearsal review records one explicit decision before the first 10-15 item checkpoint begins. |
 | Stop conditions | Full URLs, raw handles, unrelated personal data, profile/landing-page/redirect context outside the run record, automation outside the controlled launch record, or schema blockers. |
-| Common failure modes | Treating assistant normalization as approval; omitting redaction notes; failing to log collection burden. |
+| Common failure modes | Treating assistant normalization as approval; omitting redaction notes; failing to log collection burden; starting the first 10-15 items without recording the rehearsal decision. |
 
 ### Mission 4: Annotator Calibration
 
@@ -249,11 +249,34 @@ This creates the collection log, primary annotation sheet, two annotator pass sh
 
 Do not copy raw screenshots, source exports, credentials, browser profiles, or stakeholder case packets into git. If preflight reports an `ERROR`, fix it before collecting item 1.
 
-### Step 3: Collect 50 Candidate Items
+### Step 3: Run The Controlled Rehearsal And Record The Decision
+
+Build only the first 1-2 approved rehearsal items under the controlled launch record:
+
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+
+python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+```
+
+Then complete the repo-safe rehearsal readout with `templates/controlled_rehearsal_review.md`.
+
+Do not move to the first 10-15 item checkpoint until the rehearsal review records one of:
+
+- `pass_ready_for_calibration_or_first_10_15`
+- `pass_with_limits`
+- a pause or stop outcome
+
+If the decision is any pause or stop outcome, update the relevant guideline, schema, SOP, or authorization artifact before more collection.
+
+### Step 4: Start The First 10-15 Candidate Items
 
 Use the diagnostic composition:
 
-| Bucket | Target |
+| Bucket | Target in the full 50-item pilot |
 |---|---:|
 | likely scam or high-risk scam-like | 15 |
 | likely non-scam comparator | 15 |
@@ -262,9 +285,9 @@ Use the diagnostic composition:
 
 The collector should complete collection fields and evidence-status fields first. If an item cannot be redacted or documented safely, exclude it and record the reason in the collection log.
 
-For the current approved pilot, do not collect all 50 items in one uninterrupted pass. Pause after the first 10-15 collected or annotated rows and run `docs/38-first-pilot-checkpoint-protocol.md`.
+For the current approved pilot, do not collect all 50 items in one uninterrupted pass. Start with only the first 10-15 items, then run `docs/38-first-pilot-checkpoint-protocol.md`.
 
-### Step 4: Redaction QA
+### Step 5: Redaction QA
 
 Before annotation:
 
@@ -274,9 +297,9 @@ Before annotation:
 4. Confirm `privacy_redaction_notes` is filled where redaction occurred.
 5. Confirm raw evidence is outside git.
 
-### Step 5: Validate Before Annotation
+### Step 6: Validate Before Annotation
 
-Run validation as soon as the 50 rows have collection/content fields:
+Run validation as soon as the current approved rows have collection/content fields:
 
 ```bash
 python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv
@@ -284,7 +307,7 @@ python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotati
 
 Fix schema errors before annotators begin. Warnings should be reviewed and either fixed or explained in `metadata_notes` or `missing_evidence`.
 
-### Step 6: Annotate
+### Step 7: Annotate
 
 Annotator 1 fills:
 
@@ -303,7 +326,7 @@ Do not force `uncertain` or `insufficient_evidence` into binary labels.
 
 After the first 10-15 annotated rows, pause for in-pass QA using `docs/31-annotation-quality-control-plan.md` and `templates/annotation_qa_checklist.md`.
 
-### Step 7: Second Review And Adjudication
+### Step 8: Second Review And Adjudication
 
 Second review is required for:
 
@@ -320,7 +343,7 @@ Use:
 
 Fill `final_label` and `final_risk_level` only after adjudication.
 
-### Step 8: Audit And Convert
+### Step 9: Audit And Convert
 
 After first annotation and required reviews:
 
@@ -335,7 +358,7 @@ python scripts/audit_thread_dataset.py data/processed/threads_pilot_v1.jsonl \
 
 If strict validation fails, pause baseline work until the dataset is corrected.
 
-### Step 9: Run Baseline Variants
+### Step 10: Run Baseline Variants
 
 ```bash
 python scripts/compare_rule_variants.py data/processed/threads_pilot_v1.jsonl \
@@ -350,7 +373,7 @@ Review:
 - false positives among benign finance, marketing, creator, recruitment, health, or giveaway cases
 - false negatives where OCR, replies, or visible redirects carried decisive evidence
 
-### Step 10: Package Results
+### Step 11: Package Results
 
 Create a non-sensitive summary using `templates/pilot_result_summary.md`.
 

@@ -112,11 +112,12 @@ Each real checkpoint item must satisfy these before annotation:
 3. Research engineer runs item-1 preflight and confirms `ERROR: 0`.
 4. Collector prepares 1-2 manual rehearsal records using approved fields only.
 5. Collector and governance reviewer apply the manual rehearsal checklist.
-6. Annotation lead confirms calibration or reruns it if annotators changed.
-7. Collector records only the first 10-15 candidate items.
-8. Team pauses and completes `data/interim/threads_pilot_v1_checkpoint_review.md`.
-9. Research engineer runs validation/audit only on approved local files.
-10. Project owner records one checkpoint decision before any move toward 50.
+6. Team records the rehearsal outcome with `templates/controlled_rehearsal_review.md`.
+7. Annotation lead confirms calibration or reruns it if annotators changed.
+8. Collector records only the first 10-15 candidate items.
+9. Team pauses and completes `data/interim/threads_pilot_v1_checkpoint_review.md`.
+10. Research engineer runs validation/audit only on approved local files.
+11. Project owner records one checkpoint decision before any move toward 50.
 
 ## Local Commands After Real Local Files Exist
 
@@ -179,6 +180,7 @@ Next action:
 - replace all `FILL_*` values in `data/interim/manual_entry_0001.json` with approved, redacted manual fields
 - build 1-2 manual rehearsal records under the approved controlled limits
 - validate the rehearsal records locally
+- record the rehearsal outcome in `templates/controlled_rehearsal_review.md`
 - proceed to the first 10-15 real items only if rehearsal passes redaction and schema review
 
 ## Commit Boundary

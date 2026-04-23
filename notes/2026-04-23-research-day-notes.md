@@ -47,6 +47,9 @@ The repo now contains the core phase-1 research package:
 - Source intake and sampling-frame package.
 - Stakeholder authorization packet, approval records, and approved launch packet under `governance/pilot-launch/`.
 - First 10-15 item checkpoint protocol.
+- Controlled rehearsal review template and protocol bridging the 1-2 item rehearsal to the first 10-15 item checkpoint.
+- Core launch, execution, and recommended-path docs synchronized to require the rehearsal review before the first 10-15 item checkpoint.
+- Report v0 package, executive brief, and review checklist synchronized to the same rehearsal-review gate.
 - Local-only pilot workspace initializer.
 - Repo-safe item-1 preflight verifier.
 
@@ -62,6 +65,7 @@ The durable decision path now says:
 - Reject immediate unlimited 500-item real collection.
 - Use a staged path: synthetic dry run, 50-item governed pilot, 100-200 item first usable dataset, then possible 500-item expansion.
 - Require controlled launch details outside git before real item 1.
+- Require a repo-safe controlled rehearsal review after the first 1-2 rehearsal items and before the first 10-15 item checkpoint.
 - Require a 10-15 item checkpoint before completing the 50-item pilot.
 - Require local preflight before item 1.
 
@@ -98,7 +102,7 @@ Those values should remain outside git unless they are fully non-sensitive and e
 
 ## Next Research Move
 
-The next research move is the first controlled 10-15 item pilot checkpoint.
+The next research move is the controlled rehearsal review followed by the first controlled 10-15 item pilot checkpoint.
 
 Sequence:
 
@@ -116,8 +120,10 @@ python scripts/init_pilot_workspace.py --ack-controlled-details
 python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
-5. Collect only the first 10-15 real pilot items under approved limits.
-6. Run the first checkpoint before continuing to 50.
+5. Build and validate 1-2 controlled rehearsal records under approved limits.
+6. Record the rehearsal outcome in the repo-safe controlled rehearsal review.
+7. Collect only the first 10-15 real pilot items under approved limits.
+8. Run the first checkpoint before continuing to 50.
 
 ## What Not To Do Next
 

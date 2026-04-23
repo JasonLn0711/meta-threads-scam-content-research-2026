@@ -59,7 +59,7 @@ A synthetic-only integrated rehearsal has validated the repo tooling path:
 - rule-baseline variants compare `post_text`, `reply_texts`, `ocr_text`, links, handles, and redirects
 - reviewer packets and synthesis drafts can be generated locally
 
-This does not authorize real collection and does not establish real-world performance. The next human action is to complete the controlled launch record outside git. After that, initialize the local workspace, run item-1 preflight, rehearse 1-2 records, run 5-item calibration, and stop at the first 10-15 item checkpoint before deciding whether to continue to 50.
+This does not authorize real collection and does not establish real-world performance. The next human action is to complete the controlled launch record outside git. After that, initialize the local workspace, run item-1 preflight, rehearse 1-2 records, record the rehearsal review, run 5-item calibration if needed, and stop at the first 10-15 item checkpoint before deciding whether to continue to 50.
 
 ## What To Defer
 

@@ -116,6 +116,7 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The stakeholder authorization packet and decision-record template exist.
 - The approved pilot launch packet exists under `governance/pilot-launch/`.
 - The first real 50-item pilot is approved for `go_with_limits` launch preparation.
+- A controlled rehearsal review template and protocol now exist to turn the first 1-2 rehearsal items into a repo-safe decision before the first 10-15 item checkpoint.
 - The first 10-15 item checkpoint protocol exists.
 - A local-only pilot workspace initializer exists and has created ignored `data/interim/` working files after controlled launch confirmation.
 - A repo-safe pilot preflight verifier exists and the before-item-1 check has passed with `ERROR: 0`.
@@ -125,7 +126,7 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed to this repo.
 
-The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, confirm calibration if annotators changed, and then collect only the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, record the repo-safe rehearsal decision, confirm calibration if annotators changed, and only then collect the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
@@ -135,7 +136,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, 5-item calibration completed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, rehearsal review recorded, 5-item calibration completed if needed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
 4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
 5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
 6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
