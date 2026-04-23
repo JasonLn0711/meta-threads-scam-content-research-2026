@@ -121,10 +121,11 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - A repo-safe pilot preflight verifier exists and the before-item-1 check has passed with `ERROR: 0`.
 - A synthetic-only integrated launch rehearsal has exercised manual build, validation, calibration, audit, baseline, reviewer packet, and synthesis tooling.
 - The outside-git controlled launch record has been confirmed with final status `ready_for_first_10_15_items`.
+- A non-sensitive controlled launch record now records CIB authorization for API access and all research-required automation under explicit run-record, storage, access, retention, and redaction controls.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - No real Threads evidence has been collected or committed.
 
-The next blocker is operational practice, not tooling: complete the 1-2 item manual rehearsal under the controlled limits, validate local records, review redaction quality, confirm calibration if annotators changed, and then collect only the first 10-15 items before the checkpoint. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+The next blocker is operational practice, not tooling: complete the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, confirm calibration if annotators changed, and then collect only the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 

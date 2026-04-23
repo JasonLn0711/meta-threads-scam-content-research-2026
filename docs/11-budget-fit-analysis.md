@@ -9,6 +9,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Taxonomy and annotation guideline development.
 - Stakeholder interviews and evidence-standard clarification.
 - Small manually reviewed dataset of 100 to 500 items across phases.
+- CIB-authorized API and automation support for controlled collection, OCR, parsing, redaction support, validation, audit, baseline scoring, and reporting.
 - Lightweight OCR integration for approved images.
 - Simple keyword and rule baselines.
 - Evaluation memos, error analysis, and narrowing recommendations.
@@ -16,7 +17,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 
 ## Not Realistic Under NTD 1.8M
 
-- Continuous platform monitoring.
+- Continuous platform monitoring outside the CIB-approved research case.
 - Full Meta cross-platform integration.
 - Production enforcement tooling.
 - Large-scale labeling operation.
@@ -40,7 +41,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Short video until text/image/comment evidence is proven insufficient.
 - Long video until there is a separate budget and annotation plan.
 - Deepfake indicators until there is a concrete stakeholder sample and expert review path.
-- Automated collection until authorized.
+- Unscoped automated collection outside the CIB controlled launch record.
 - Classifier training until labels are stable.
 - LLM-assisted review until Phase 1 produces governed real evidence and a later decision record authorizes that scope.
 - Dashboard or web app until reviewer workflow is proven.
@@ -55,12 +56,13 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 | 4 | Text keyword/rule baseline | High | Low | Do immediately |
 | 5 | OCR augmentation | High | Medium | Add after text baseline |
 | 6 | Comment/reply context | High | Medium | Sample and compare |
-| 7 | Visible link/redirection features | High | Medium | Include without crawling |
-| 8 | Later model-assisted explanations | Medium | Medium | Defer until separately authorized |
-| 9 | Text classifier | Medium | Medium to high | Wait for more labels |
-| 10 | Short video study | Medium | High | Later only if necessary |
-| 11 | Long video analysis | Low | High | Defer |
-| 12 | Deepfake detection | Low for phase 1 | Very high | Defer |
+| 7 | Visible link/redirection features | High | Medium | Include with CIB run-record controls |
+| 8 | CIB-authorized API and automation support | High | Medium to high | Include with credential, logging, redaction, and checkpoint controls |
+| 9 | Later model-assisted explanations | Medium | Medium | Defer until separately authorized |
+| 10 | Text classifier | Medium | Medium to high | Wait for more labels |
+| 11 | Short video study | Medium | High | Later only if necessary |
+| 12 | Long video analysis | Low | High | Defer |
+| 13 | Deepfake detection | Low for phase 1 | Very high | Defer |
 
 ## Budget Guardrail
 

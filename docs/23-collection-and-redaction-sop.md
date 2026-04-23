@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This SOP defines how to prepare the first Threads dataset batch without violating the project boundary. It covers manual/stakeholder collection, evidence minimization, redaction, local storage, collection logging, and handoff to annotation.
+This SOP defines how to prepare the first Threads dataset batch without violating the project boundary. It covers manual/stakeholder/API/automation-assisted collection, evidence minimization, redaction, local storage, collection logging, and handoff to annotation.
 
-This document does not authorize automated collection. It is an operating procedure for approved manual or stakeholder-provided evidence only.
+For the CIB-authorized pilot, API access and all research-required automation are authorized only through `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md` and Decision 0018. This SOP does not authorize unscope automation or production use.
 
 ## Preconditions
 
@@ -34,10 +34,11 @@ If any precondition is unresolved, use only synthetic examples.
 |---|---|---|
 | Synthetic dry run | Always allowed | No real Threads evidence. |
 | Stakeholder-provided cases | Sharing, retention, redaction, and use are approved | Preserve stakeholder report reference only if allowed. |
-| Manual public examples | Legal/platform comfort is documented | Manual recording only; no automation. |
-| API-authorized examples | API approval is recorded | Not currently approved by default. |
+| Manual public examples | Legal/platform comfort is documented | Governed by the controlled launch record. |
+| API-authorized examples | API approval is recorded | Approved for the CIB pilot under run-record controls. |
+| Automation-assisted examples | CIB automation authorization and run record exist | Raw outputs, credentials, session artifacts, and logs stay outside git. |
 
-Not approved by this SOP:
+Not approved by this SOP unless explicitly run-scoped under the CIB controlled launch record:
 
 - scraping
 - browser automation
@@ -133,7 +134,7 @@ Set `link_snapshot_status`:
 - `captured_full_approved`: full destination evidence is retained with approval.
 - `unavailable`: link could not be accessed or retained.
 
-Do not crawl links, expand redirects, visit suspicious destinations, or capture landing pages unless approved. Visible link text can still be useful as a signal.
+Redirect and landing evidence may be captured only when approved in the CIB run record. Otherwise, retain visible link text or domain as the signal.
 
 ## OCR Handling
 
@@ -171,11 +172,11 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
   --collection-log data/interim/threads_pilot_v1_collection_log.csv
 ```
 
-This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits.
+This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits. Use separate run records for API or automation-assisted capture.
 
-## Manual Collection Rehearsal
+## Controlled Collection Rehearsal
 
-Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. The objective is to test whether the collector can turn manually observed or stakeholder-provided evidence into redacted, schema-valid local records without reaching for unapproved context.
+Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. The objective is to test whether the team can turn manual, stakeholder-provided, API, or automation-assisted evidence into redacted, schema-valid local records without exceeding the controlled run record.
 
 Use rehearsal records to catch operational mistakes, not to make pilot findings. A good rehearsal record:
 
@@ -204,7 +205,7 @@ Common rehearsal mistakes to catch:
 - copying raw source URLs when only redacted references are approved
 - storing contact handles, phone numbers, emails, payment details, or referral codes in raw form
 - recording full OCR text that includes unrelated personal details
-- including reply or profile context because it seems useful rather than because it is approved
+- including reply, profile, redirect, or landing context because it seems useful rather than because it is approved in the run record
 - leaving screenshot/link status blank
 - failing to log collection burden or exclusion reason
 - treating warnings from the manual assistant as acceptable without governance review
@@ -219,11 +220,11 @@ Rehearsal passes only when:
 
 Rehearsal fails and collection pauses if:
 
-- the collector needs unapproved profile/account/landing-page/redirect context
+- the collector or automation operator needs unapproved profile/account/landing-page/redirect context
 - approved fields are too ambiguous to populate consistently
 - redaction cannot be done reliably
 - schema fields are missing, confusing, or too burdensome for the approved evidence
-- any item requires automation or live platform ingestion
+- any item requires automation or live platform ingestion outside the CIB controlled launch record
 
 If the schema appears wrong during rehearsal, do not improvise new fields in local files. Record the issue as a schema-revision candidate and update `data-contracts/thread_item_schema_v1.json`, templates, and annotation guidance only after project-owner review.
 
@@ -238,7 +239,7 @@ Pause collection if:
 - source URLs include sensitive tracking or personal information and no redaction rule exists
 - annotators need context that is not approved to collect
 - stakeholder evidence has unclear retention or sharing restrictions
-- collection is drifting toward automation
+- collection or automation is drifting beyond the controlled run record
 
 ## Handoff To Annotation
 

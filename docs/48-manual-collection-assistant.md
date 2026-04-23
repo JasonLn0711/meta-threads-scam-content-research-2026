@@ -19,7 +19,7 @@ The assistant exists because the first pilot depends on consistent, privacy-mini
 
 ## Current Authorization Boundary
 
-The current approved pilot method is manual only.
+The manual collection assistant remains manual-only. The broader CIB pilot now has separate API and automation authorization in `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md`; this assistant is only for manually supplied local fields.
 
 The assistant therefore uses:
 
@@ -36,9 +36,9 @@ The config explicitly keeps these disabled:
 - redirect expansion
 - profile review
 
-Changing a config flag is not authorization. A later governance record would be required before any automated mode could exist.
+Changing a config flag is not authorization for this assistant. API or automation work must use the controlled launch record and a separate run record.
 
-Low-speed automation is still automation. As of `2026-04-23`, the project has rejected or paused low-speed automated Threads/Meta collection without recorded legal approval, platform access conditions, stakeholder authorization, and approved scope.
+Low-speed automation is still automation. Decision 0016 still rejects unscope low-speed automation; Decision 0018 records the separate CIB-authorized API and automation scope for this pilot.
 
 ## Input Shape
 

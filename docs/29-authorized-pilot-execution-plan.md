@@ -117,11 +117,11 @@ This runbook is the operating order for Phase 1. Do not skip ahead because a lat
 
 | Field | Requirement |
 |---|---|
-| Purpose | Test 1-2 manually prepared local records before real volume. |
-| Required inputs | Approved local input JSON, controlled fields, `templates/manual_collection_rehearsal_checklist.md`. |
+| Purpose | Test 1-2 controlled local records before real volume. |
+| Required inputs | Approved local input JSON or run-scoped API/automation output, controlled fields, `templates/manual_collection_rehearsal_checklist.md`, and CIB run record if automation is used. |
 | Commands | `python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json --ack-controlled-details --output data/interim/manual_record_0001.json --collection-log data/interim/threads_pilot_v1_collection_log.csv`; then `python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict`. |
 | Exit criteria | Governance errors zero; strict validation passes; redaction review passes; collector does not need unapproved context. |
-| Stop conditions | Full URLs, raw handles, unrelated personal data, profile/landing-page/redirect context, automation, or schema blockers. |
+| Stop conditions | Full URLs, raw handles, unrelated personal data, profile/landing-page/redirect context outside the run record, automation outside the controlled launch record, or schema blockers. |
 | Common failure modes | Treating assistant normalization as approval; omitting redaction notes; failing to log collection burden. |
 
 ### Mission 4: Annotator Calibration
@@ -381,7 +381,7 @@ Pause immediately if:
 - raw screenshots or personal data enter tracked files
 - source URLs include sensitive tracking or personal data with no redaction rule
 - annotators need unapproved profile/account/landing-page context
-- collection drifts toward automation
+- collection or automation exceeds the controlled run record
 - `uncertain` exceeds 30 percent without a clear explanation
 - `insufficient_evidence` exceeds 20 percent without a collection-quality fix
 - reviewers repeatedly disagree on the same edge case

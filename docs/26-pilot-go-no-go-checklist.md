@@ -22,7 +22,7 @@ After a `go` or `go_with_limits` decision, complete `templates/pilot_batch_work_
 | Retention rule confirmed |  |  |  |
 | Access list confirmed |  |  |  |
 | Publication/demo restrictions confirmed |  |  |  |
-| No automation required |  |  |  |
+| API/automation scope recorded if used |  |  |  |
 
 Go only if every governance check is complete.
 

@@ -20,8 +20,9 @@ Approval means the project may prepare and run the first 50-item pilot under exp
 
 - 50 items maximum
 - Threads-first only
-- manual or stakeholder-provided examples only
-- no scraping, crawling, browser automation, bulk export, landing-page crawling, redirect-chain capture, profile review, or production scoring
+- manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted examples under the controlled launch record
+- API access and all research-required automation are explicitly authorized by CIB under `CTRL-THREADS-PILOT-V1-CIB-2026-04-23`
+- production scoring, public accusation, and legal fraud determination remain out of scope
 - raw evidence outside git
 - redacted or derived annotation files only
 - internal aggregate reporting only by default
@@ -32,14 +33,14 @@ Approval does not mean unlimited collection, production detection, public accusa
 
 This launch plan is limited to governed Phase 1 evidence operations:
 
-- controlled manual or stakeholder-provided collection only
+- controlled manual, stakeholder-provided, API-authorized, or automation-assisted collection only
 - local-only workspace files under ignored `data/interim/`
 - manual collection rehearsal on 1-2 records
 - 5-item annotator calibration
 - first 10-15 item checkpoint before completing 50 items
 - 50-item pilot only after checkpoint review supports continuation
 
-This plan does not authorize Phase 2, scraping, browser automation, crawling, live platform ingestion, redirect expansion, landing-page capture, production scoring, or new model layers.
+This plan authorizes CIB-controlled API access and research-required automation for Phase 1 only. It does not authorize production enforcement, public accusation workflows, legal fraud determinations, Phase 2 expansion, or new model layers.
 
 ## Launch Packet
 
@@ -54,6 +55,7 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 | Go/no-go record | `governance/pilot-launch/threads_pilot_v1_2026-05_go_no_go.md` |
 | Pilot work order | `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md` |
 | Readiness review | `governance/pilot-launch/threads_pilot_v1_2026-05_readiness_review.md` |
+| Controlled launch record | `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md` |
 | Local workspace instructions | `docs/39-local-pilot-workspace.md` |
 | Pilot preflight instructions | `docs/40-pilot-preflight-verification.md` |
 | First checkpoint protocol | `docs/38-first-pilot-checkpoint-protocol.md` |
@@ -99,7 +101,7 @@ If any required detail is incomplete, collection remains paused and the repo may
 4. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
 5. Create local-only working files under ignored `data/interim/` using `scripts/init_pilot_workspace.py`.
 6. Run `scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details`.
-7. Rehearse 1-2 manual collection records using the approved fields and redaction rules.
+7. Rehearse 1-2 controlled records using the intended manual, API, or automation path and the approved fields, run-record rules, and redaction rules.
 8. Run 5-item annotator calibration if annotators changed or real pilot annotation is about to begin.
 9. Collect only the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
 10. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.

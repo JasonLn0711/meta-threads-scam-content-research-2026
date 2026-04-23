@@ -14,7 +14,7 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: run the 1-2 item manual rehearsal under the confirmed controlled launch limits; validate local records; review redaction quality; confirm or rerun 5-item calibration if annotators changed; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md). The outside-git controlled launch record is confirmed, the local-only workspace has been initialized, and before-item-1 preflight has passed with `ERROR: 0`.
+Immediate next action: run the 1-2 item controlled rehearsal under the confirmed controlled launch limits; validate local records; review redaction quality; confirm or rerun 5-item calibration if annotators changed; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md). The rehearsal may use the intended manual, API, or automation path, but every API or automation run must follow the CIB controlled launch record. The outside-git controlled launch record is confirmed, the local-only workspace has been initialized, and before-item-1 preflight has passed with `ERROR: 0`.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
@@ -38,6 +38,7 @@ The MVP should include:
 - OCR augmentation for image and screenshot text.
 - Comment/reply context comparison.
 - Visible link and redirection signal extraction.
+- CIB-authorized API and automation run records where automated collection or processing is used.
 - Human-review-oriented evaluation.
 
 Do not add model-assisted explanation tests in the current launch. Revisit only after Phase 1 produces governed real evidence and a later decision record authorizes that scope.

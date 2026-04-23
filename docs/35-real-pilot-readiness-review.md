@@ -69,7 +69,7 @@ Readiness requires:
 - approved collection fields
 - approved collection method
 - clear authorization status
-- no automation unless separately approved in writing
+- automation scope approved in writing; for this CIB pilot, API and automation are approved only under the controlled launch record and Decision 0018
 - raw evidence storage location outside git
 - access list for raw evidence
 - retention rule
@@ -153,7 +153,7 @@ The readiness review should confirm that the team will stop or pause if:
 
 - authorization is unclear
 - raw evidence enters tracked files
-- collection drifts toward automation
+- collection or automation exceeds the controlled run record
 - redaction is inconsistent
 - source skew makes the batch uninformative
 - annotators repeatedly disagree on label boundaries

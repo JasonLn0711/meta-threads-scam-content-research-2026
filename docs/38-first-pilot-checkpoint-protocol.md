@@ -75,7 +75,7 @@ Content coverage targets for the first checkpoint:
 | text plus image | at least 2 if approved | Use redacted image references only. |
 | reply/comment context | at least 1-2 if approved | Selected relevant replies only. |
 | OCR-heavy or screenshot-style | at least 1 if approved | OCR must be privacy-reviewed. |
-| visible link, handle, or redirect signal | at least 2 if approved | Visible signals only; no crawling or redirect expansion. |
+| visible link, handle, or redirect signal | at least 2 if approved | Use redacted repo-visible fields; redirect or landing evidence must come from an approved run record. |
 
 If a coverage target cannot be met under the controlled launch limits, record that as a checkpoint finding rather than expanding the source or context.
 

@@ -57,7 +57,7 @@ The first program should start with controlled launch details, local workspace p
 |---|---|
 | Hypothesis | Visible link and redirection signals improve precision for high-risk triage. |
 | Data needed | Items with visible links, handles, private-channel instructions, or link text. |
-| Method | Compare baseline features with and without link/redirection fields. Do not crawl links without approval. |
+| Method | Compare baseline features with and without link/redirection fields. Capture redirect or landing evidence only under approved CIB run records. |
 | Output | Risk tier changes and reasons involving external movement. |
 | Metrics | Precision, recall, false positive rate on legitimate links, reviewer usefulness. |
 | Failure modes | Legitimate creators use links, shorteners create overflagging, link context unavailable. |

@@ -7,7 +7,7 @@ As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry 
 | Risk | Why it matters | Likelihood | Impact | Mitigation |
 |---|---|---:|---:|---|
 | Controlled launch-detail risk | Source, storage, access, retention, or redaction details may remain incomplete or too sensitive for git. | High | High | Complete controlled launch record outside git before first item. |
-| Data access risk | Threads data access may be limited or legally constrained. | Medium | High | Use only approved manual/stakeholder samples; no automation. |
+| Data access risk | Threads data access may be limited or legally constrained. | Medium | High | Use only CIB-approved manual, stakeholder, API, or automation-assisted paths with run records and controlled storage. |
 | Annotation inconsistency | Reviewers may disagree on ambiguous finance or marketing content. | High | High | Use clear labels, second review, disagreement logs, and guideline revisions. |
 | Legal and ethical risk | Mishandled data could expose personal information or investigative material. | Medium | High | Follow data governance, minimize personal data, store raw material outside git. |
 | Scope creep | Project may expand into all Meta platforms, video, or production tooling. | High | High | Use decision logs and budget-fit checks before expanding. |
@@ -16,7 +16,7 @@ As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry 
 | Platform change risk | Threads formats, policies, or access paths may change. | Medium | Medium | Keep schema flexible and avoid overfitting to current UI details. |
 | False accusation risk | False positives may unfairly characterize benign users or businesses. | Medium | High | Preserve evidence, use human review, avoid public accusations. |
 | OCR quality risk | OCR may miss or distort key text, especially in screenshots. | Medium | Medium | Track OCR error cases and require reviewer verification. |
-| Link interpretation risk | Legitimate links may be overflagged as suspicious. | High | Medium | Distinguish link presence from maliciousness; avoid crawling without approval. |
+| Link interpretation risk | Legitimate links may be overflagged as suspicious. | High | Medium | Distinguish link presence from maliciousness; use redirect or landing evidence only under CIB run records. |
 | Budget exhaustion | Too many workstreams could consume funds before learning occurs. | Medium | High | Rank work by ROI and stop low-value branches early. |
 | Synthetic overconfidence | Dry-run metrics may be mistaken for real-world baseline performance. | Medium | High | Label synthetic dry-run results as workflow QA only; repeat all metrics on authorized pilot data. |
 

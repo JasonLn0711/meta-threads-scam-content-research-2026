@@ -2,7 +2,7 @@
 
 ## Phase-1 Recommendation
 
-Start with text, images, comments, OCR, and visible redirection signals. Defer video-heavy and deepfake-heavy work until the first dataset and baseline comparison show that these signals are insufficient.
+Start with text, images, comments, OCR, visible redirection signals, and CIB-authorized API/automation support for the first governed pilot. Defer video-heavy, deepfake-heavy, and production-enforcement work until the first dataset and baseline comparison show that these signals are insufficient.
 
 ## Scope Matrix
 
@@ -12,7 +12,8 @@ Start with text, images, comments, OCR, and visible redirection signals. Defer v
 | Text plus image posts | High | Medium | Medium | Low to medium | Medium | Core phase 1 with OCR | Yes |
 | Comments / replies | High | Medium | Medium to high | Low | Medium | Core phase 1 sample | Yes |
 | OCR from images | High | Medium | Medium | Low to medium | Medium | Add after text baseline | Yes |
-| External links | High | Medium | Medium | Low | High | Capture visible signals, avoid unauthorized crawling | Yes |
+| External links | High | Medium | Medium | Low | High | Capture visible, API, redirect, and landing signals only under CIB run records | Yes |
+| API and automation support | High | Medium | Medium | Low to medium | High | Include as governed CIB-authorized collection and processing support | Yes, controlled |
 | Screenshot-heavy posts | Medium to high | Medium | High | Low to medium | Medium | Include selectively with privacy controls | Yes, selective |
 | Short video | Medium | Low to medium | High | Medium to high | High | Later study only if sample demands it | Later |
 | Long video | Low to medium | Low | Very high | High | High | Defer | No |
@@ -74,7 +75,16 @@ Include selectively.
 - Evidence value: medium to high. Screenshots can carry fake endorsements, testimonials, or proof-of-profit claims.
 - Budget fit: acceptable only with privacy minimization and sample limits.
 
-### 7. Short Video
+### 7. API And Automation Support
+
+Include now under the CIB controlled launch record.
+
+- Technical cost: medium. Automation reduces collection and normalization friction but introduces credential, logging, and redaction duties.
+- Operational cost: medium. Every run needs purpose, operator, source, field, output, retention, and stop-condition records.
+- Evidence value: high. API and automation can make source capture more complete, reproducible, and auditable.
+- Budget fit: good if limited to governed collection, OCR, parsing, validation, audit, and baseline automation; poor if it expands into production monitoring or enforcement.
+
+### 8. Short Video
 
 Defer unless stakeholders show that short videos dominate the report queue.
 
@@ -83,7 +93,7 @@ Defer unless stakeholders show that short videos dominate the report queue.
 - Evidence value: uncertain for phase 1.
 - Budget fit: weak for the first 4 weeks, possible as a later narrow study.
 
-### 8. Long Video
+### 9. Long Video
 
 Defer.
 
@@ -92,7 +102,7 @@ Defer.
 - Evidence value: uncertain relative to cost.
 - Budget fit: poor under NTD 1.8 million for phase 1.
 
-### 9. Deepfake Indicators
+### 10. Deepfake Indicators
 
 Do not include as a mainline phase-1 workstream.
 
