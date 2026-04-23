@@ -44,6 +44,7 @@ TAG_PATTERNS: dict[str, list[str]] = {
         r"\blast chance\b",
         r"\btoday only\b",
         r"\bfew spots\b",
+        r"\bfirst\s+\d+\s+(members|people|spots|users)\b",
         r"\blimited seats\b",
         r"\bact now\b",
         r"\bdeadline\b",
@@ -52,9 +53,9 @@ TAG_PATTERNS: dict[str, list[str]] = {
         r"\btestimonial\b",
         r"\bproof\b",
         r"\bmember results\b",
+        r"\bmember screenshots\b",
         r"\bearnings screenshot\b",
         r"\bprofit screenshot\b",
-        r"\bbefore and after\b",
     ],
     "pseudo_official_language": [
         r"\bofficial\b",
@@ -203,7 +204,11 @@ def risk_from_tags(tags: set[str]) -> str:
 
     if tags & severe and (tags & benefit or tags & redirect or tags & proof_or_authority):
         return "high"
+    if tags & {"guaranteed_or_risk_free_claim"} and tags & {"unrealistic_profit_or_benefit"}:
+        return "high"
     if tags & {"guaranteed_or_risk_free_claim"} and (tags & redirect or tags & proof_or_authority):
+        return "high"
+    if tags & redirect and tags & proof_or_authority and tags & {"urgency_or_scarcity"}:
         return "high"
     if tags & benefit and tags & redirect and tags & {"urgency_or_scarcity", "testimonial_or_earnings_screenshot"}:
         return "high"
