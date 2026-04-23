@@ -109,8 +109,9 @@ By the next update on `2026-04-23`, the repo had these additional research asset
 - First 10-15 item checkpoint protocol to catch collection, redaction, source, and annotation issues before completing all 50 items.
 - Local pilot workspace initializer and runbook for creating empty ignored `data/interim/` working files once controlled launch details are complete outside git.
 - Pilot preflight verifier and runbook for checking repo mechanics, local workspace setup, and tracked-file hygiene before item 1.
+- Consolidated research day note at `notes/2026-04-23-research-day-notes.md`.
 
-The main conclusion is that the repo is ready for stakeholder review and authorized pilot setup, but not for real Threads collection yet.
+The main conclusion is that the repo is ready for governed pilot setup, but not for real Threads item 1 yet. The next evidence-producing move is a controlled 10-15 item checkpoint after the non-git launch record is complete, local files are initialized, and item-1 preflight passes.
 
 The synthetic dry run validated the local workflow:
 
@@ -136,13 +137,22 @@ Threads repo:
 - `4deb071 docs: create CIB 165 Threads report v0 package`
 - `bc05600 docs: add report v0 review package`
 - `952ca09 docs: add pilot readiness gate`
+- `a6583f3 scripts: calibrate rule baseline signals`
+- `7fde585 experiments: record synthetic workflow dry run`
+- `2edaad5 docs: consolidate same-day research status`
+- `491b44e docs: add authorized pilot execution package`
+- `b91de24 docs: add annotator onboarding and QA gates`
+- `b8b62f2 docs: add governed 500-item expansion plan`
+- `c8e6b9e docs: add pilot analysis decision framework`
+- `d110b16 docs: add source intake and sampling frame`
+- `76f139b docs: add real pilot readiness review gate`
+- `286c99d docs: add stakeholder authorization packet`
+- `5abebd1 docs: record approved pilot launch prep`
+- `86da5fa docs: add first pilot checkpoint protocol`
+- `b286451 scripts: add local pilot workspace initializer`
+- `0f24e28 scripts: add pilot preflight verifier`
 
-Uncommitted same-day work at this note update:
-
-- Synthetic sample manifest.
-- Synthetic dry-run result docs.
-- Synthetic audit and baseline experiment logs.
-- Rule-baseline calibration from synthetic dry-run findings.
+No uncommitted same-day work remained at the latest note refresh.
 
 Planning repo:
 

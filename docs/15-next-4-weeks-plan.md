@@ -21,10 +21,15 @@ Completed:
 - Stakeholder authorization packet and decision-record template.
 - Approved pilot launch packet with `go_with_limits` records.
 - First 10-15 item checkpoint protocol and review template.
+- Local-only pilot workspace initializer and runbook.
+- Repo-safe item-1 preflight verifier and runbook.
+- Consolidated research day note: `notes/2026-04-23-research-day-notes.md`.
 
 Not completed:
 
 - controlled launch record with exact source, storage, access, retention, and redaction limits outside git
+- initialized local-only pilot workspace under ignored `data/interim/`
+- passing item-1 preflight after controlled launch acknowledgement
 - real 50-item pilot collection
 - first 10-15 item checkpoint result
 - human annotation on real examples
@@ -33,7 +38,7 @@ Not completed:
 - 500-item expansion
 - LLM-assisted review test
 
-The next work is stakeholder review and authorization, not more collection or automation.
+The next work is controlled launch execution: complete the non-git launch record, initialize the local workspace, pass item-1 preflight, then collect only the first 10-15 items for checkpoint review. It is not more abstract planning, broad collection, or automation.
 
 ## Week 1: Scope, Taxonomy, Schema, And First Sample Design
 
@@ -63,8 +68,11 @@ Deliverables:
 Goals:
 
 - Complete controlled launch details for exact source, storage, access, retention, and redaction limits.
+- Initialize local-only pilot files under ignored `data/interim/`.
+- Pass the item-1 preflight.
 - Run 5-item calibration.
-- Annotate the first authorized 50-item pilot batch if the gate passes.
+- Collect and review the first 10-15 real pilot items before completing the 50-item batch.
+- Annotate the authorized 50-item pilot batch only if the checkpoint gate passes.
 - Track disagreement and unclear fields.
 - Build or specify simple keyword/rule baseline.
 - Run text-only baseline on the authorized annotated batch.

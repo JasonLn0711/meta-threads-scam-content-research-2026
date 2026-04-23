@@ -20,6 +20,8 @@ The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run
 
 The stakeholder outcome has been reported as approved. The launch packet is recorded under `governance/pilot-launch/` with status `go_with_limits`.
 
+The same-day research status and first-principles rationale are summarized in [../notes/2026-04-23-research-day-notes.md](../notes/2026-04-23-research-day-notes.md).
+
 Execute the pilot through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`.
 
 Before any pilot labels are treated as baseline-ready, onboard annotators with [30-annotator-onboarding-quickstart.md](30-annotator-onboarding-quickstart.md) and run QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).

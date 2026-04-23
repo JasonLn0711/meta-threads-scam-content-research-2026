@@ -119,6 +119,7 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The first 10-15 item checkpoint protocol exists.
 - A local-only pilot workspace initializer exists for creating ignored `data/interim/` working files after controlled launch details are complete.
 - A repo-safe pilot preflight verifier exists for checking launch mechanics before item 1.
+- The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - No real Threads evidence has been collected or committed.
 
 The next blocker is operational governance, not tooling: before item 1, the project owner must complete the controlled launch record with exact source, raw-storage, access, retention, and redaction limits outside git. After that, initialize the local workspace with [docs/39-local-pilot-workspace.md](docs/39-local-pilot-workspace.md) and run the preflight in [docs/40-pilot-preflight-verification.md](docs/40-pilot-preflight-verification.md).

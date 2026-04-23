@@ -83,8 +83,9 @@ By later on `2026-04-23`, the Threads repo had advanced beyond the initial repor
 - First 10-15 item checkpoint protocol and review template were added.
 - Local pilot workspace initializer and runbook were added so empty ignored `data/interim/` working files can be created after the controlled launch record is complete.
 - Pilot preflight verifier and runbook were added so repo mechanics and local workspace readiness can be checked before item 1.
+- Consolidated day note added at `notes/2026-04-23-research-day-notes.md`.
 
-The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not data-ready until stakeholders approve the source, fields, raw-evidence storage, screenshot/link handling, access, retention, and redaction rules.
+The repo is now pilot-ready in the narrow sense that the workflow can be exercised locally. It is not item-1-ready until the controlled launch record is completed outside git, local-only files are initialized, and item-1 preflight passes.
 
 ## Synthetic Dry-Run Result
 
@@ -109,7 +110,9 @@ These are workflow QA numbers only, not real Threads performance claims.
 
 ## Current Blocker
 
-The stakeholder outcome is now recorded as approved for bounded launch preparation. The current blocker is controlled launch detail:
+The stakeholder outcome is now recorded as approved for bounded launch preparation. Repo-only preflight currently has no errors and two expected warnings: local workspace files are not initialized, and controlled launch details cannot be verified from git.
+
+The current blocker is controlled launch detail:
 
 1. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits outside git.
 2. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
@@ -131,3 +134,11 @@ The April 30 artifact must be a report, not another concept memo, because:
 3. NTD 1.8M can support a governed dataset slice and baseline study, but not full Meta production detection.
 4. Human-review triage is the correct phase-1 output because it preserves uncertainty and avoids legal overclaiming.
 5. The report creates the approval and narrowing path needed before collection, annotation, or baseline claims.
+
+The same first-principles logic now points to a controlled 10-15 item checkpoint as the next research move:
+
+1. Real claims need real evidence, but real evidence must be governed first.
+2. Annotation quality should be tested before model performance is discussed.
+3. Small batches expose collection, redaction, and label failures before they become expensive.
+4. Scaling to 50, 100-200, or 500 items should be earned by passing checkpoints.
+5. Tooling readiness is not data readiness; the controlled launch record remains the gate.
