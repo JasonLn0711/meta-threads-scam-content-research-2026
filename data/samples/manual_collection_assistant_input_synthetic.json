@@ -1,0 +1,32 @@
+{
+  "annotation_notes": "Synthetic manual-entry smoke payload. Not real Threads evidence.",
+  "authorization_status": "synthetic_only",
+  "candidate_bucket": "synthetic_tooling_check",
+  "collection_batch_id": "manual_collection_assistant_synthetic_2026-04",
+  "collection_method": "synthetic",
+  "collector_id": "collector_synth",
+  "collector_notes": "Used only to verify manual collection assistant output shape.",
+  "evidence_sufficiency": "partial",
+  "image_count": 1,
+  "image_paths": [
+    "synthetic_redacted/manual_assistant_0001.png"
+  ],
+  "item_id": "threads-synth-manual-assist-0001",
+  "language": "en",
+  "ocr_text": "Join the Telegram group for today's reward instructions.",
+  "post_text": "Synthetic example: comment 1 and join the group for details.",
+  "privacy_redaction_notes": "Synthetic payload; contact handle represented only as a redacted platform category.",
+  "reply_texts": [
+    "DM for the private Telegram link."
+  ],
+  "risk_level": "low",
+  "scam_label": "uncertain",
+  "scam_type": [
+    "none"
+  ],
+  "screenshot_style": "screenshot_style",
+  "signal_tags": [
+    "none"
+  ],
+  "source_type": "researcher_synthetic"
+}

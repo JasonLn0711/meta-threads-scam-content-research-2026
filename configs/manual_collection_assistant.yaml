@@ -1,0 +1,74 @@
+# Manual collection assistant config.
+#
+# This config deliberately does not enable scraping, crawling, browser automation,
+# landing-page capture, redirect expansion, or profile review.
+
+collection_mode: manual_only
+
+network_access_allowed: false
+enable_scraping: false
+enable_browser_automation: false
+enable_landing_capture: false
+enable_redirect_expansion: false
+enable_profile_review: false
+
+require_controlled_details_ack_for_real_items: true
+
+defaults:
+  schema_version: thread_item_schema_v1
+  source_platform: threads
+  collection_batch_id: threads_pilot_v1_2026-05
+  source_type: manual_public
+  collection_method: manual_capture
+  authorization_status: approved
+  language: und
+  screenshot_style: none
+  scam_label: uncertain
+  scam_type:
+    - none
+  risk_level: low
+  signal_tags:
+    - none
+  evidence_sufficiency: partial
+  annotation_confidence: low
+  review_status: new
+  adjudication_status: not_needed
+  disagreement_flag: false
+  final_label: ""
+  final_risk_level: ""
+  screenshot_snapshot_status: not_applicable
+  link_snapshot_status: not_applicable
+  baseline_split: unassigned
+
+allowed_real_source_types:
+  - stakeholder_provided
+  - manual_public
+  - other_approved
+
+allowed_real_collection_methods:
+  - stakeholder_provided
+  - manual_capture
+
+allowed_synthetic_source_types:
+  - researcher_synthetic
+  - synthetic_redacted
+
+allowed_synthetic_collection_methods:
+  - synthetic
+
+privacy:
+  external_link_storage: domain_only
+  source_url_storage: redacted_or_empty
+  contact_handle_storage: redacted_only
+  allow_captured_full_snapshots: false
+  require_redaction_notes_for_links_or_handles: true
+
+manual_record_builder:
+  auto_extract_visible_metadata: true
+  auto_generate_dedupe_key: true
+  default_ready_for_annotation: "no"
+
+action_log:
+  enabled: true
+  path: data/interim/manual_collection_actions.jsonl
+  include_target_url: false

@@ -162,6 +162,17 @@ Use:
 python scripts/validate_thread_dataset.py data/interim/threads_pilot_v1_annotations.csv
 ```
 
+The optional manual collection assistant can help structure one manually supplied local JSON payload into a schema-valid record and collection-log row:
+
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+```
+
+This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits.
+
 The full post-authorization execution sequence is in `docs/29-authorized-pilot-execution-plan.md`.
 
 ## Stop Conditions

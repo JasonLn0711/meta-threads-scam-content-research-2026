@@ -122,6 +122,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 - Real-pilot readiness review: `docs/35-real-pilot-readiness-review.md`
 - Real-pilot readiness template: `templates/real_pilot_readiness_review.md`
 - Pilot execution plan: `docs/29-authorized-pilot-execution-plan.md`
+- Manual collection assistant: `docs/48-manual-collection-assistant.md`
 - 500-item expansion plan: `docs/32-500-item-expansion-plan.md`
 - Pilot batch work order: `templates/pilot_batch_work_order.md`
 - 500-item expansion work order: `templates/500_item_expansion_work_order.md`
