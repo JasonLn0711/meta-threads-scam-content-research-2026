@@ -25,6 +25,7 @@
 | Source intake register entry | yes | `governance/source-intake-register.md` | Updated in repo. |
 | Pilot authorization register entry | yes | `governance/pilot-authorization-register.md` | Updated in repo. |
 | Go/no-go checklist | yes | `threads_pilot_v1_2026-05_go_no_go.md` | `go_with_limits`. |
+| Controlled rehearsal work order | yes | `threads_pilot_v1_2026-05_controlled_rehearsal_work_order.md` | first operational gate before broader real-item accumulation |
 | Pilot batch work order | yes | `threads_pilot_v1_2026-05_work_order.md` | `ready_to_collect` after local controlled setup. |
 | Raw storage plan | limited | controlled location outside git | Exact path must remain outside git and be confirmed before first item. |
 | Controlled launch details | limited | outside git controlled launch record | Owner approved requirement; exact source/storage/access/retention/redaction values required before first item. |
@@ -32,7 +33,7 @@
 | Annotator onboarding checklist | scheduled | `templates/annotator_onboarding_checklist.md` | Complete before annotation starts. |
 | Annotation QA checklist | yes | `templates/annotation_qa_checklist.md` | Use after first 10-15 rows. |
 | Baseline/evaluation protocol | yes | `docs/08-baseline-strategy.md`; `docs/33-pilot-analysis-and-decision-framework.md` | Preserve uncertainty. |
-| Mechanical preflight | pending before item 1 | `docs/40-pilot-preflight-verification.md`; `scripts/check_pilot_preflight.py` | Run after local workspace setup. |
+| Mechanical preflight | pending before item 1 | `docs/40-pilot-preflight-verification.md`; `scripts/check_pilot_preflight.py` | Run after local workspace setup and before the controlled rehearsal item. |
 
 ## Gate Review
 

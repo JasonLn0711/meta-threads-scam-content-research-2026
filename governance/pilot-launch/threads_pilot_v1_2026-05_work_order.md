@@ -120,6 +120,8 @@ python scripts/compare_rule_variants.py data/processed/threads_pilot_v1.jsonl \
 - Decision owner: project owner
 - Decision date: `2026-04-23`
 - Limits or conditions:
+  - The first operational step remains the separate 1-2 item controlled rehearsal documented in `threads_pilot_v1_2026-05_controlled_rehearsal_work_order.md`.
+  - Do not treat this 50-item work order as permission to skip the rehearsal gate.
   - Ready to collect only after exact raw storage location and access list are confirmed outside git.
   - Exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before collection.
   - Collection may use manual, stakeholder-provided, API-authorized, or automation-assisted paths under the controlled launch record and remains limited to 50 items before checkpoint and decision review.

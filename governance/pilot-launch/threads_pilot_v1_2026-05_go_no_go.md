@@ -47,11 +47,14 @@ No real Threads evidence is stored in this record.
 | Annotator onboarding checklists completed | scheduled | annotation lead | required before annotation |
 | 5-item blind calibration completed | pass | research engineer | synthetic calibration files exist |
 | Agreement report generated | pass | research engineer | synthetic workflow validated; repeat if annotator team changes |
-| Disagreements adjudicated | scheduled | adjudicator | required for real pilot disagreements |
-| `scam` vs `uncertain` boundary understood | scheduled | annotation lead | confirm in onboarding |
-| `uncertain` vs `insufficient_evidence` boundary understood | scheduled | annotation lead | confirm in onboarding |
-| Guideline changes recorded if needed | scheduled | annotation lead | use revision log |
-| Annotation QA checklist ready | pass | annotation lead | template exists |
+| Disagreements adjudicated | scheduled | adjudicator | synthetic revision note exists; real pilot disagreements still require adjudication |
+| `scam` vs `uncertain` boundary understood | scheduled | annotation lead | confirm in onboarding with `docs/06` and watchlist `0013` |
+| `uncertain` vs `insufficient_evidence` boundary understood | scheduled | annotation lead | confirm in onboarding with `docs/06` |
+| Finance-without-funnel boundary understood | scheduled | annotation lead | confirm before real rehearsal review |
+| OCR sufficiency boundary understood | scheduled | annotation lead | confirm before real rehearsal review |
+| Generic verification wording tag boundary understood | scheduled | annotation lead | confirm before real rehearsal review |
+| Guideline changes recorded if needed | pass | annotation lead | launch-packet revision log plus `0012-synthetic-calibration-guideline-revision.md` recorded |
+| Annotation QA checklist ready | pass | annotation lead | template updated with current boundary checks |
 
 ## Gate 4: Annotation Operations
 
