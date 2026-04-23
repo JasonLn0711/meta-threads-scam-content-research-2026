@@ -1,0 +1,68 @@
+{
+  "item_id": "threads-synth-v1-0001",
+  "schema_version": "thread_item_schema_v1",
+  "source_platform": "threads",
+  "source_type": "researcher_synthetic",
+  "collection_batch_id": "threads_template_examples_2026-04",
+  "collection_timestamp": "2026-04-23T10:00:00+08:00",
+  "collection_method": "synthetic",
+  "authorization_status": "synthetic_only",
+  "post_text": "I used this simple trading plan to make steady daily profit. Only a few spots left in the private group. Message the assistant for access.",
+  "reply_texts": [
+    "Reply with INFO and our assistant will send the group link."
+  ],
+  "image_paths": [
+    "data/samples/synthetic-redacted-placeholder-0001.png"
+  ],
+  "image_count": 1,
+  "has_image": true,
+  "has_reply": true,
+  "has_external_link": false,
+  "external_links": [],
+  "visible_contact_handles": [
+    "telegram:[redacted_synthetic_handle]"
+  ],
+  "visible_platform_redirects": [
+    "telegram"
+  ],
+  "ocr_text": "Member results: daily profit, no experience needed. Join the private signal group today.",
+  "language": "en",
+  "screenshot_style": "screenshot_style",
+  "scam_label": "scam",
+  "scam_type": [
+    "investment_lure",
+    "guaranteed_profit_claim",
+    "redirect_to_private_chat",
+    "suspicious_testimonial"
+  ],
+  "risk_level": "high",
+  "signal_tags": [
+    "unrealistic_profit_or_benefit",
+    "guaranteed_or_risk_free_claim",
+    "private_channel_redirect",
+    "contact_handle_visible",
+    "testimonial_or_earnings_screenshot",
+    "ocr_only_lure"
+  ],
+  "evidence_sufficiency": "sufficient",
+  "annotation_confidence": "high",
+  "annotation_notes": "Synthetic example. Text and OCR combine profit guarantee, private-channel redirect, and testimonial-style proof.",
+  "annotator_id": "ann_synthetic",
+  "reviewer_id": "",
+  "review_status": "annotated",
+  "adjudication_status": "not_needed",
+  "disagreement_flag": false,
+  "final_label": "",
+  "final_risk_level": "",
+  "source_url_if_stored": "",
+  "screenshot_snapshot_status": "captured_redacted",
+  "link_snapshot_status": "not_applicable",
+  "metadata_notes": "Synthetic non-evidence record for schema testing only.",
+  "privacy_redaction_notes": "No real personal data; handle is synthetic and redacted.",
+  "dedupe_key": "synthetic:daily-profit-private-group",
+  "near_duplicate_group_id": "",
+  "missing_evidence": [
+    "none"
+  ],
+  "baseline_split": "unassigned"
+}

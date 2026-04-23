@@ -1,0 +1,396 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/thread_item_schema_v1.json",
+  "title": "Threads Scam Content Research Thread Item Schema v1",
+  "description": "Authoritative flat JSON schema for one phase-1 Threads scam-content research item. This is a research and annotation schema, not a production platform data model.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "schema_version",
+    "source_platform",
+    "source_type",
+    "collection_batch_id",
+    "collection_timestamp",
+    "collection_method",
+    "authorization_status",
+    "post_text",
+    "reply_texts",
+    "image_paths",
+    "image_count",
+    "has_image",
+    "has_reply",
+    "has_external_link",
+    "external_links",
+    "visible_contact_handles",
+    "visible_platform_redirects",
+    "ocr_text",
+    "language",
+    "screenshot_style",
+    "scam_label",
+    "scam_type",
+    "risk_level",
+    "signal_tags",
+    "evidence_sufficiency",
+    "annotation_confidence",
+    "review_status",
+    "adjudication_status",
+    "disagreement_flag",
+    "screenshot_snapshot_status",
+    "link_snapshot_status"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable unique identifier for the research item. Do not encode personal data."
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "thread_item_schema_v1"
+    },
+    "source_platform": {
+      "type": "string",
+      "enum": [
+        "threads"
+      ],
+      "description": "Phase-1 platform surface."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "stakeholder_provided",
+        "manual_public",
+        "api_authorized",
+        "synthetic_redacted",
+        "researcher_synthetic",
+        "other_approved"
+      ],
+      "description": "Origin category for the item."
+    },
+    "collection_batch_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Dataset or collection batch identifier, such as threads_pilot_v1_2026-05."
+    },
+    "collection_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp for when the item was recorded."
+    },
+    "collection_method": {
+      "type": "string",
+      "enum": [
+        "stakeholder_provided",
+        "manual_capture",
+        "api_authorized",
+        "synthetic",
+        "other"
+      ]
+    },
+    "authorization_status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "pending",
+        "synthetic_only",
+        "rejected"
+      ]
+    },
+    "post_text": {
+      "type": "string",
+      "description": "Captured or redacted Threads post text. Use an empty string when no post text exists."
+    },
+    "reply_texts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant captured or redacted replies/comments. Use an empty array when none are captured."
+    },
+    "image_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Local redacted image references or placeholders. Do not point to unredacted screenshots in git."
+    },
+    "image_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of images represented by image_paths or known from the capture."
+    },
+    "has_image": {
+      "type": "boolean"
+    },
+    "has_reply": {
+      "type": "boolean"
+    },
+    "has_external_link": {
+      "type": "boolean"
+    },
+    "external_links": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Visible, redacted, or normalized external links. Avoid storing full tracking URLs unless approved."
+    },
+    "visible_contact_handles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Visible contact handles or redacted handle evidence, such as Telegram/LINE/WhatsApp references."
+    },
+    "visible_platform_redirects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "line",
+          "whatsapp",
+          "telegram",
+          "messenger",
+          "instagram_dm",
+          "threads_dm",
+          "external_site",
+          "private_group",
+          "phone",
+          "email",
+          "other",
+          "none"
+        ]
+      },
+      "description": "Visible destination or private-channel migration signals."
+    },
+    "ocr_text": {
+      "type": "string",
+      "description": "OCR text extracted from images or screenshot-style posts. Redact unrelated personal data."
+    },
+    "language": {
+      "type": "string",
+      "description": "Primary language code such as en, zh-TW, mixed, or und."
+    },
+    "screenshot_style": {
+      "type": "string",
+      "enum": [
+        "none",
+        "screenshot_style",
+        "screenshot_heavy",
+        "unknown"
+      ],
+      "description": "Whether the image is primarily a screenshot of messages, profits, news, testimonials, or another interface."
+    },
+    "scam_label": {
+      "type": "string",
+      "enum": [
+        "scam",
+        "non_scam",
+        "uncertain",
+        "insufficient_evidence"
+      ]
+    },
+    "scam_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "investment_lure",
+          "guaranteed_profit_claim",
+          "fake_endorsement",
+          "redirect_to_private_chat",
+          "impersonation_pseudo_official",
+          "urgency_scarcity_pressure",
+          "suspicious_testimonial",
+          "recruitment_side_hustle_lure",
+          "suspicious_crypto_trading_lure",
+          "medical_health_miracle_claim",
+          "giveaway_reward_prize_lure",
+          "other_high_risk_persuasion",
+          "none"
+        ]
+      },
+      "minItems": 1
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "signal_tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "unrealistic_profit_or_benefit",
+          "guaranteed_or_risk_free_claim",
+          "private_channel_redirect",
+          "visible_external_link",
+          "suspicious_domain_or_shortener",
+          "contact_handle_visible",
+          "celebrity_or_public_figure_reference",
+          "brand_or_institution_reference",
+          "pseudo_official_language",
+          "urgency_or_scarcity",
+          "testimonial_or_earnings_screenshot",
+          "payment_deposit_or_fee_request",
+          "credential_or_personal_data_request",
+          "reply_only_lure",
+          "ocr_only_lure",
+          "vague_offer_strong_benefit",
+          "medical_cure_or_miracle_claim",
+          "giveaway_reward_or_prize_claim",
+          "recruitment_or_easy_income_claim",
+          "none"
+        ]
+      },
+      "minItems": 1
+    },
+    "evidence_sufficiency": {
+      "type": "string",
+      "enum": [
+        "sufficient",
+        "partial",
+        "insufficient",
+        "not_reviewable"
+      ]
+    },
+    "annotation_confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "annotation_notes": {
+      "type": "string",
+      "description": "Short evidence-based annotation note. Avoid legal conclusions."
+    },
+    "annotator_id": {
+      "type": "string",
+      "description": "Pseudonymous annotator ID."
+    },
+    "reviewer_id": {
+      "type": "string",
+      "description": "Pseudonymous second reviewer or adjudicator ID."
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "annotated",
+        "needs_second_review",
+        "adjudicated",
+        "excluded"
+      ]
+    },
+    "adjudication_status": {
+      "type": "string",
+      "enum": [
+        "not_needed",
+        "pending",
+        "resolved"
+      ]
+    },
+    "disagreement_flag": {
+      "type": "boolean"
+    },
+    "final_label": {
+      "type": "string",
+      "enum": [
+        "scam",
+        "non_scam",
+        "uncertain",
+        "insufficient_evidence",
+        ""
+      ],
+      "description": "Final label after adjudication. Use empty string until adjudicated or final review is complete."
+    },
+    "final_risk_level": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        ""
+      ],
+      "description": "Final risk level after adjudication. Use empty string until adjudicated or final review is complete."
+    },
+    "source_url_if_stored": {
+      "type": "string",
+      "description": "Source URL only if storing it is approved. Otherwise store a redacted reference or empty string."
+    },
+    "screenshot_snapshot_status": {
+      "type": "string",
+      "enum": [
+        "not_applicable",
+        "not_captured",
+        "captured_redacted",
+        "captured_full_approved",
+        "unavailable"
+      ]
+    },
+    "link_snapshot_status": {
+      "type": "string",
+      "enum": [
+        "not_applicable",
+        "not_captured",
+        "captured_redacted",
+        "captured_full_approved",
+        "unavailable"
+      ]
+    },
+    "metadata_notes": {
+      "type": "string",
+      "description": "Non-sensitive notes about metadata availability, capture limits, or missing context."
+    },
+    "privacy_redaction_notes": {
+      "type": "string",
+      "description": "What personal or sensitive information was minimized or removed."
+    },
+    "dedupe_key": {
+      "type": "string",
+      "description": "Research-created key for exact or near-duplicate review. Do not encode personal data."
+    },
+    "near_duplicate_group_id": {
+      "type": "string",
+      "description": "Cluster identifier for reused text, OCR, links, handles, or screenshots."
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "post_text_missing",
+          "reply_context_missing",
+          "image_missing",
+          "ocr_missing_or_low_quality",
+          "external_link_missing",
+          "link_snapshot_missing",
+          "source_context_missing",
+          "authorization_missing",
+          "capture_unreadable",
+          "none"
+        ]
+      },
+      "description": "Evidence that would make the judgment stronger or more reviewable."
+    },
+    "baseline_split": {
+      "type": "string",
+      "enum": [
+        "unassigned",
+        "train",
+        "validation",
+        "test",
+        "audit_holdout",
+        "excluded"
+      ],
+      "description": "Optional split assignment for baseline experiments."
+    }
+  }
+}

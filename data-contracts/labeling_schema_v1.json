@@ -1,0 +1,91 @@
+{
+  "schema_version": "labeling_schema_v1",
+  "title": "Threads Scam Content Research Labeling Schema v1",
+  "description": "Machine-readable annotation vocabulary for first-round Threads scam-content research. These are research labels and signal codes, not legal findings.",
+  "label_values": {
+    "scam_label": [
+      "scam",
+      "non_scam",
+      "uncertain",
+      "insufficient_evidence"
+    ],
+    "risk_level": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "evidence_sufficiency": [
+      "sufficient",
+      "partial",
+      "insufficient",
+      "not_reviewable"
+    ],
+    "annotation_confidence": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "review_status": [
+      "new",
+      "annotated",
+      "needs_second_review",
+      "adjudicated",
+      "excluded"
+    ],
+    "adjudication_status": [
+      "not_needed",
+      "pending",
+      "resolved"
+    ]
+  },
+  "scam_types": {
+    "investment_lure": "Investment, trading, crypto, loan, or financial opportunity lure.",
+    "guaranteed_profit_claim": "Guaranteed, risk-free, unusually high, or fixed-return claim.",
+    "fake_endorsement": "Celebrity, expert, government, media, brand, or institution endorsement that appears unsupported or misleading.",
+    "redirect_to_private_chat": "Pushes the user to private chat, private group, or off-platform contact before transparent details are provided.",
+    "impersonation_pseudo_official": "Uses official-looking names, logos, news format, authority language, or profile styling.",
+    "urgency_scarcity_pressure": "Uses scarcity, deadline, fear, limited slots, or act-now pressure.",
+    "suspicious_testimonial": "Uses unverifiable success stories, proof-of-profit screenshots, before-after claims, or repeated praise patterns.",
+    "recruitment_side_hustle_lure": "Promises easy work, task income, passive income, or unrealistic side-hustle compensation.",
+    "suspicious_crypto_trading_lure": "Crypto, wallet, trading signal, mining, exchange, or token opportunity with suspicious persuasion signals.",
+    "medical_health_miracle_claim": "Health, cure, treatment, or miracle product claim tied to payment, urgency, or suspicious redirection.",
+    "giveaway_reward_prize_lure": "Prize, reward, grant, giveaway, subsidy, or benefit claim with suspicious requirements.",
+    "other_high_risk_persuasion": "High-risk fraud-like persuasion pattern not captured by the listed subtypes.",
+    "none": "No scam subtype applies."
+  },
+  "signal_tags": {
+    "unrealistic_profit_or_benefit": "Unusually high financial, health, prize, or personal benefit claim.",
+    "guaranteed_or_risk_free_claim": "Guarantee, no-risk, fixed-return, or certain-outcome language.",
+    "private_channel_redirect": "Instructions to DM, join a group, message an assistant, or move off Threads.",
+    "visible_external_link": "A visible external link, shortened link, landing-page reference, or URL-like string appears.",
+    "suspicious_domain_or_shortener": "Domain, shortener, or visible URL looks mismatched, vague, deceptive, or newly introduced.",
+    "contact_handle_visible": "A contact handle, phone, email, LINE/WhatsApp/Telegram ID, or similar is visible.",
+    "celebrity_or_public_figure_reference": "A public figure is used as attention, authority, proof, or endorsement.",
+    "brand_or_institution_reference": "Brand, government, news, school, bank, exchange, or institution reference is central to the lure.",
+    "pseudo_official_language": "Official-looking format, authority tone, fake notice, support account, or verification-style phrasing.",
+    "urgency_or_scarcity": "Today only, limited slots, last chance, countdown, fear, or pressure language.",
+    "testimonial_or_earnings_screenshot": "Message screenshots, profit screenshots, before-after claims, or praise used as proof.",
+    "payment_deposit_or_fee_request": "Asks for deposit, fee, wallet transfer, purchase, shipping fee, or payment setup.",
+    "credential_or_personal_data_request": "Asks for login, account verification, identity data, bank info, or personal details.",
+    "reply_only_lure": "The suspicious signal appears mainly in replies or comments, not the post text.",
+    "ocr_only_lure": "The suspicious signal appears mainly in image OCR text.",
+    "vague_offer_strong_benefit": "The offer is vague while promising a strong benefit.",
+    "medical_cure_or_miracle_claim": "Miracle cure, guaranteed health outcome, or unsupported treatment claim.",
+    "giveaway_reward_or_prize_claim": "Free reward, prize, grant, subsidy, or giveaway claim.",
+    "recruitment_or_easy_income_claim": "Easy job, task work, passive income, or fast side-hustle claim.",
+    "none": "No signal tag applies."
+  },
+  "missing_evidence_values": [
+    "post_text_missing",
+    "reply_context_missing",
+    "image_missing",
+    "ocr_missing_or_low_quality",
+    "external_link_missing",
+    "link_snapshot_missing",
+    "source_context_missing",
+    "authorization_missing",
+    "capture_unreadable",
+    "none"
+  ],
+  "decision_note": "Use scam only when observable evidence is strong enough for a scam-like research label. Use uncertain for mixed or suspicious-but-incomplete cases. Use insufficient_evidence when the capture cannot support a judgment."
+}

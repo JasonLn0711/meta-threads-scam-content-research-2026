@@ -1,0 +1,319 @@
+[
+  {
+    "item_id": "threads-synth-v1-0001",
+    "schema_version": "thread_item_schema_v1",
+    "source_platform": "threads",
+    "source_type": "researcher_synthetic",
+    "collection_batch_id": "threads_template_examples_2026-04",
+    "collection_timestamp": "2026-04-23T10:00:00+08:00",
+    "collection_method": "synthetic",
+    "authorization_status": "synthetic_only",
+    "post_text": "Turn 200 into 2,000 this week with our private trading method. Guaranteed daily profit for the first 20 members.",
+    "reply_texts": [
+      "Send START and I will add you to the private group."
+    ],
+    "image_paths": [],
+    "image_count": 0,
+    "has_image": false,
+    "has_reply": true,
+    "has_external_link": false,
+    "external_links": [],
+    "visible_contact_handles": [
+      "telegram:[redacted_synthetic_handle]"
+    ],
+    "visible_platform_redirects": [
+      "telegram"
+    ],
+    "ocr_text": "",
+    "language": "en",
+    "screenshot_style": "none",
+    "scam_label": "scam",
+    "scam_type": [
+      "investment_lure",
+      "guaranteed_profit_claim",
+      "redirect_to_private_chat",
+      "urgency_scarcity_pressure"
+    ],
+    "risk_level": "high",
+    "signal_tags": [
+      "unrealistic_profit_or_benefit",
+      "guaranteed_or_risk_free_claim",
+      "private_channel_redirect",
+      "contact_handle_visible",
+      "urgency_or_scarcity",
+      "reply_only_lure"
+    ],
+    "evidence_sufficiency": "sufficient",
+    "annotation_confidence": "high",
+    "annotation_notes": "Synthetic obvious scam-like text lure: guaranteed profit, urgency, and private-channel redirect.",
+    "annotator_id": "ann_synthetic",
+    "reviewer_id": "",
+    "review_status": "annotated",
+    "adjudication_status": "not_needed",
+    "disagreement_flag": false,
+    "final_label": "",
+    "final_risk_level": "",
+    "source_url_if_stored": "",
+    "screenshot_snapshot_status": "not_applicable",
+    "link_snapshot_status": "not_applicable",
+    "metadata_notes": "Synthetic non-evidence record.",
+    "privacy_redaction_notes": "No real personal data.",
+    "dedupe_key": "synthetic:guaranteed-profit-first-20",
+    "near_duplicate_group_id": "synth-profit-lures",
+    "missing_evidence": [
+      "none"
+    ],
+    "baseline_split": "unassigned"
+  },
+  {
+    "item_id": "threads-synth-v1-0002",
+    "schema_version": "thread_item_schema_v1",
+    "source_platform": "threads",
+    "source_type": "researcher_synthetic",
+    "collection_batch_id": "threads_template_examples_2026-04",
+    "collection_timestamp": "2026-04-23T10:05:00+08:00",
+    "collection_method": "synthetic",
+    "authorization_status": "synthetic_only",
+    "post_text": "New member screenshots are in. If you want the same results, contact the support account shown in the image.",
+    "reply_texts": [],
+    "image_paths": [
+      "data/samples/synthetic-redacted-placeholder-0002.png"
+    ],
+    "image_count": 1,
+    "has_image": true,
+    "has_reply": false,
+    "has_external_link": true,
+    "external_links": [
+      "https://example.invalid/redacted-landing"
+    ],
+    "visible_contact_handles": [
+      "line:[redacted_synthetic_handle]"
+    ],
+    "visible_platform_redirects": [
+      "line",
+      "external_site"
+    ],
+    "ocr_text": "Proof from today's members. Limited seats. Add LINE [redacted] to receive the registration page.",
+    "language": "en",
+    "screenshot_style": "screenshot_heavy",
+    "scam_label": "scam",
+    "scam_type": [
+      "redirect_to_private_chat",
+      "urgency_scarcity_pressure",
+      "suspicious_testimonial"
+    ],
+    "risk_level": "high",
+    "signal_tags": [
+      "private_channel_redirect",
+      "visible_external_link",
+      "contact_handle_visible",
+      "urgency_or_scarcity",
+      "testimonial_or_earnings_screenshot",
+      "ocr_only_lure"
+    ],
+    "evidence_sufficiency": "sufficient",
+    "annotation_confidence": "high",
+    "annotation_notes": "Synthetic text plus image case. OCR contains the decisive redirection and limited-seats claim.",
+    "annotator_id": "ann_synthetic",
+    "reviewer_id": "",
+    "review_status": "annotated",
+    "adjudication_status": "not_needed",
+    "disagreement_flag": false,
+    "final_label": "",
+    "final_risk_level": "",
+    "source_url_if_stored": "",
+    "screenshot_snapshot_status": "captured_redacted",
+    "link_snapshot_status": "not_captured",
+    "metadata_notes": "Synthetic link is example.invalid and should not be crawled.",
+    "privacy_redaction_notes": "No real personal data; contact handle is synthetic.",
+    "dedupe_key": "synthetic:line-registration-proof",
+    "near_duplicate_group_id": "synth-image-redirects",
+    "missing_evidence": [
+      "link_snapshot_missing"
+    ],
+    "baseline_split": "unassigned"
+  },
+  {
+    "item_id": "threads-synth-v1-0003",
+    "schema_version": "thread_item_schema_v1",
+    "source_platform": "threads",
+    "source_type": "researcher_synthetic",
+    "collection_batch_id": "threads_template_examples_2026-04",
+    "collection_timestamp": "2026-04-23T10:10:00+08:00",
+    "collection_method": "synthetic",
+    "authorization_status": "synthetic_only",
+    "post_text": "I finally finished my weekend garden project. The before and after photos make me happy.",
+    "reply_texts": [
+      "This looks great. What plants did you use?"
+    ],
+    "image_paths": [],
+    "image_count": 0,
+    "has_image": false,
+    "has_reply": true,
+    "has_external_link": false,
+    "external_links": [],
+    "visible_contact_handles": [],
+    "visible_platform_redirects": [
+      "none"
+    ],
+    "ocr_text": "",
+    "language": "en",
+    "screenshot_style": "none",
+    "scam_label": "non_scam",
+    "scam_type": [
+      "none"
+    ],
+    "risk_level": "low",
+    "signal_tags": [
+      "none"
+    ],
+    "evidence_sufficiency": "sufficient",
+    "annotation_confidence": "high",
+    "annotation_notes": "Synthetic non-scam normal post. No lure, redirect, payment, credential, or suspicious benefit claim.",
+    "annotator_id": "ann_synthetic",
+    "reviewer_id": "",
+    "review_status": "annotated",
+    "adjudication_status": "not_needed",
+    "disagreement_flag": false,
+    "final_label": "",
+    "final_risk_level": "",
+    "source_url_if_stored": "",
+    "screenshot_snapshot_status": "not_applicable",
+    "link_snapshot_status": "not_applicable",
+    "metadata_notes": "Synthetic benign comparator.",
+    "privacy_redaction_notes": "No real personal data.",
+    "dedupe_key": "synthetic:benign-garden-post",
+    "near_duplicate_group_id": "",
+    "missing_evidence": [
+      "none"
+    ],
+    "baseline_split": "unassigned"
+  },
+  {
+    "item_id": "threads-synth-v1-0004",
+    "schema_version": "thread_item_schema_v1",
+    "source_platform": "threads",
+    "source_type": "researcher_synthetic",
+    "collection_batch_id": "threads_template_examples_2026-04",
+    "collection_timestamp": "2026-04-23T10:15:00+08:00",
+    "collection_method": "synthetic",
+    "authorization_status": "synthetic_only",
+    "post_text": "I am testing a new savings and investing routine this month. Curious if anyone else is tracking weekly gains and losses.",
+    "reply_texts": [
+      "Do you share the spreadsheet?",
+      "What risk level are you using?"
+    ],
+    "image_paths": [],
+    "image_count": 0,
+    "has_image": false,
+    "has_reply": true,
+    "has_external_link": false,
+    "external_links": [],
+    "visible_contact_handles": [],
+    "visible_platform_redirects": [
+      "none"
+    ],
+    "ocr_text": "",
+    "language": "en",
+    "screenshot_style": "none",
+    "scam_label": "uncertain",
+    "scam_type": [
+      "investment_lure"
+    ],
+    "risk_level": "low",
+    "signal_tags": [
+      "vague_offer_strong_benefit"
+    ],
+    "evidence_sufficiency": "partial",
+    "annotation_confidence": "low",
+    "annotation_notes": "Synthetic ambiguous finance-related post. Investment context exists, but no guarantee, redirect, payment ask, or fake authority is visible.",
+    "annotator_id": "ann_synthetic",
+    "reviewer_id": "",
+    "review_status": "needs_second_review",
+    "adjudication_status": "pending",
+    "disagreement_flag": false,
+    "final_label": "",
+    "final_risk_level": "",
+    "source_url_if_stored": "",
+    "screenshot_snapshot_status": "not_applicable",
+    "link_snapshot_status": "not_applicable",
+    "metadata_notes": "Synthetic ambiguity case for guideline testing.",
+    "privacy_redaction_notes": "No real personal data.",
+    "dedupe_key": "synthetic:ambiguous-investing-routine",
+    "near_duplicate_group_id": "",
+    "missing_evidence": [
+      "source_context_missing"
+    ],
+    "baseline_split": "audit_holdout"
+  },
+  {
+    "item_id": "threads-synth-v1-0005",
+    "schema_version": "thread_item_schema_v1",
+    "source_platform": "threads",
+    "source_type": "researcher_synthetic",
+    "collection_batch_id": "threads_template_examples_2026-04",
+    "collection_timestamp": "2026-04-23T10:20:00+08:00",
+    "collection_method": "synthetic",
+    "authorization_status": "synthetic_only",
+    "post_text": "People keep asking how this program works. The details are in the screenshot.",
+    "reply_texts": [
+      "Is this official?",
+      "The account in the screenshot says to pay a small verification fee."
+    ],
+    "image_paths": [
+      "data/samples/synthetic-redacted-placeholder-0005.png"
+    ],
+    "image_count": 1,
+    "has_image": true,
+    "has_reply": true,
+    "has_external_link": false,
+    "external_links": [],
+    "visible_contact_handles": [
+      "whatsapp:[redacted_synthetic_handle]"
+    ],
+    "visible_platform_redirects": [
+      "whatsapp"
+    ],
+    "ocr_text": "Official reward notice. Verify your account today. Pay the small release fee to receive your bonus.",
+    "language": "en",
+    "screenshot_style": "screenshot_heavy",
+    "scam_label": "scam",
+    "scam_type": [
+      "impersonation_pseudo_official",
+      "giveaway_reward_prize_lure",
+      "redirect_to_private_chat",
+      "urgency_scarcity_pressure"
+    ],
+    "risk_level": "high",
+    "signal_tags": [
+      "pseudo_official_language",
+      "giveaway_reward_or_prize_claim",
+      "credential_or_personal_data_request",
+      "payment_deposit_or_fee_request",
+      "private_channel_redirect",
+      "ocr_only_lure",
+      "reply_only_lure"
+    ],
+    "evidence_sufficiency": "sufficient",
+    "annotation_confidence": "high",
+    "annotation_notes": "Synthetic screenshot-heavy suspicious post. OCR and replies show official-looking reward, verification, fee, and private contact.",
+    "annotator_id": "ann_synthetic",
+    "reviewer_id": "",
+    "review_status": "annotated",
+    "adjudication_status": "not_needed",
+    "disagreement_flag": false,
+    "final_label": "",
+    "final_risk_level": "",
+    "source_url_if_stored": "",
+    "screenshot_snapshot_status": "captured_redacted",
+    "link_snapshot_status": "not_applicable",
+    "metadata_notes": "Synthetic screenshot-only style case.",
+    "privacy_redaction_notes": "No real personal data; contact handle is synthetic.",
+    "dedupe_key": "synthetic:official-reward-release-fee",
+    "near_duplicate_group_id": "synth-reward-fee",
+    "missing_evidence": [
+      "none"
+    ],
+    "baseline_split": "unassigned"
+  }
+]

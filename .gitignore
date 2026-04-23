@@ -1,0 +1,42 @@
+.DS_Store
+Thumbs.db
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.token
+
+# Sensitive or raw research material
+data/raw/*
+data/interim/*
+data/processed/*
+data/private/
+data/sensitive/
+data/screenshots/
+data/browser-exports/
+data/browser-profiles/
+evidence/raw/
+evidence/private/
+
+# Keep data folder guidance trackable.
+!data/raw/README.md
+!data/interim/README.md
+!data/processed/README.md
+!data/samples/
+!data/samples/README.md
+
+# Generated outputs
+outputs/
+reports/generated/
+*.log
