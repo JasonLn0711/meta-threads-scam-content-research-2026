@@ -17,5 +17,7 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0009-first-10-15-real-pilot-start-note.md` | Repo-safe start note for the first governed 10-15 real-item checkpoint. |
 | `0010-manual-rehearsal-intake-gate-check.md` | Repo-safe gate check proving pending manual rehearsal intake cannot generate a real record. |
 | `0011-approved-placeholder-gate-check.md` | Repo-safe gate check proving approved manual rehearsal intake with unresolved placeholders cannot generate a real record. |
+| `0012-synthetic-calibration-guideline-revision.md` | Repo-safe note recording calibration-driven guideline and answer-key revisions before real-item expansion. |
+| `0013-controlled-rehearsal-boundary-watchlist.md` | Repo-safe watchlist for the first 1-2 controlled real rehearsal items after the calibration-driven guideline revision. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

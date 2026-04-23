@@ -35,6 +35,13 @@ Do not add extra background research unless the collection protocol explicitly p
 
 Use `scam` only when you can write a short evidence note beginning with "The item shows..." and name the observable signals. If the note depends mainly on "this feels suspicious," use `uncertain` or `insufficient_evidence`.
 
+### Boundary Checks
+
+- Use `non_scam` when the item is readable and only shows ordinary discussion, education, commentary, or opinion. Topic alone is not a scam signal.
+- Use `uncertain` only when at least one concrete suspicious signal is visible, but not strong enough for `scam`.
+- Use `insufficient_evidence` only when the captured item is not reviewable enough to support even a weak judgment.
+- Do not downgrade to `insufficient_evidence` only because full profile history, destination pages, or broader off-item context were not captured.
+
 ## Scam Subtypes
 
 Select all applicable `scam_type` values. Use `none` for `non_scam` unless a subtype is being recorded for a hard-negative analysis.
@@ -78,6 +85,8 @@ For `insufficient_evidence`, usually use `low` risk unless the visible fragments
 
 Evidence sufficiency is separate from label. A case can be `uncertain` with `partial` evidence, or `insufficient_evidence` with `not_reviewable` evidence.
 
+Mark evidence as `sufficient` when the captured text, OCR, replies, or visible handles/links support the core label without needing uncaptured destinations or profile history. Record missing link destination, source identity, or off-screen context in `missing_evidence` instead of lowering sufficiency by default.
+
 ## Annotation Confidence
 
 | Value | Meaning |
@@ -87,6 +96,8 @@ Evidence sufficiency is separate from label. A case can be `uncertain` with `par
 | `low` | The evidence is weak, ambiguous, low quality, or likely to cause disagreement. |
 
 Use low confidence freely. The goal is not to force certainty; the goal is to learn where the guideline needs improvement.
+
+Choose confidence based on likely agreement on the primary label and core reason, not on whether every subtype or marginal tag will match exactly. A case can be high-confidence `scam` even if subtype or tag selection may need adjudication.
 
 ## Signal Tags
 
@@ -116,6 +127,8 @@ Select all observable `signal_tags`. Use `none` only when no signal applies.
 
 Signal tags are evidence features. They do not automatically determine the label.
 
+Do not add a broader tag when a narrower visible tag already explains the evidence. Generic "verify your account" wording supports `pseudo_official_language`; add `credential_or_personal_data_request` only when the item explicitly asks for login, identity, bank, or other personal information. Use `vague_offer_strong_benefit` only when a strong benefit is promised or strongly implied; ordinary discussion about savings, gains, losses, or risk level is not enough.
+
 ## Decision Principles
 
 - Label what is visible in the collected item.
@@ -135,11 +148,15 @@ Hard-selling, hype, discounts, influencer copy, urgency, and testimonials are co
 
 ### Legitimate Financial Education
 
-Posts explaining investing, trading risk, crypto concepts, budgeting, or market opinion are not scams by default. Use `non_scam` when the content includes risk warnings, educational framing, no private redirect, and no guaranteed profit. Use `uncertain` if it becomes a vague funnel.
+Posts explaining investing, trading risk, crypto concepts, budgeting, or market opinion are not scams by default. Use `non_scam` when the content includes risk warnings, educational framing, neutral discussion, ordinary recordkeeping, no private redirect, and no guaranteed profit. Use `uncertain` if it becomes a vague funnel.
 
 ### Legitimate Investment Discussion
 
 Do not label a post `scam` just because it discusses stocks, crypto, options, trading, or side income. Escalate when investment content adds guaranteed returns, private signal groups, fake endorsement, deposit request, wallet transfer, or pressure.
+
+### Finance Discussion Without A Conversion Step
+
+A post about routines, spreadsheets, gains/losses, or risk level is usually `non_scam` when it does not ask the reader to join, DM, pay, trust special access, or follow a secret method. Do not treat mild curiosity or investment vocabulary alone as `investment_lure`. Move to `uncertain` only when a visible funnel or a strong implied benefit is actually present.
 
 ### Satire Or Parody
 
@@ -161,6 +178,8 @@ Celebrity news or gossip may be benign. Use `fake_endorsement` only when the pub
 
 Use OCR when available. If OCR shows clear scam-like claims, annotate those signals and mark `screenshot_style`. If the screenshot is unreadable or lacks source context, use `insufficient_evidence` or `uncertain` and record `ocr_missing_or_low_quality`.
 
+If OCR alone contains the decisive lure, the case may still be `sufficient` evidence even when the source profile, full landing page, or destination link was not captured. Mark the missing context in `missing_evidence` rather than downgrading automatically.
+
 ### Incomplete Posts With Suspicious Comments
 
 If the post is benign but replies contain a clear lure, use `reply_only_lure` and label based on the whole `thread_item` if replies were intentionally captured as context. If comments are secondhand claims without direct evidence, use `uncertain`.
@@ -176,6 +195,8 @@ Legitimate hiring can include pay, remote work, and contact instructions. Escala
 ### Giveaway, Reward, Or Prize Posts
 
 Legitimate giveaways exist. Escalate when the item requests fees, credentials, personal data, private contact, suspicious links, or official-looking reward claims with weak source identity.
+
+Official-looking reward language plus a fee or private-channel step supports `scam` and often `impersonation_pseudo_official`. Do not add `credential_or_personal_data_request` unless the item actually asks for account, identity, login, or other personal details.
 
 ## Required Annotation Note Style
 

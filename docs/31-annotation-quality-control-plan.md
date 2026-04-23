@@ -82,6 +82,9 @@ Proceed only if annotators can explain:
 - aggressive marketing versus scam-like persuasion
 - legitimate finance discussion versus investment lure
 - OCR-only and reply-only evidence handling
+- readable finance discussion without a funnel versus a real investment lure
+- when missing destination context should stay in `missing_evidence` instead of lowering `evidence_sufficiency`
+- why generic verification language alone does not automatically create a credential-request tag
 
 ## In-Pass QA
 

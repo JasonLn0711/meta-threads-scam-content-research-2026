@@ -156,6 +156,9 @@ For each disagreement, ask:
 - Did annotators use `uncertain` differently?
 - Did one annotator overuse `scam` for aggressive marketing?
 - Did screenshot-only or OCR-only evidence drive the disagreement?
+- Did a readable finance post get treated as suspicious even though no lure or conversion step was visible?
+- Did uncaptured destination or profile context get treated as an automatic downgrade from `sufficient` evidence?
+- Did generic verification language trigger `credential_or_personal_data_request` without an explicit data ask?
 - Were `scam_type` values too overlapping?
 - Were too many `signal_tags` selected?
 - Would an example in the guideline prevent this disagreement?
@@ -177,6 +180,8 @@ Proceed to the first 10-15 real item checkpoint only when:
 - primary-label disagreements can be adjudicated without changing the entire taxonomy
 - annotators can explain why `uncertain` differs from `insufficient_evidence`
 - annotators agree on how to handle finance, recruitment, giveaway, celebrity, and screenshot-heavy cases
+- annotators agree that readable finance discussion without a funnel stays `non_scam`
+- annotators agree that decisive OCR can still support `sufficient` evidence without captured destination context
 - redaction and evidence-sufficiency rules are not blocking annotation
 
 Proceed to the rest of the 50-item pilot only after the first 10-15 item checkpoint also supports continuation.
