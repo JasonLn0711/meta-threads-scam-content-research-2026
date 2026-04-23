@@ -6,6 +6,8 @@ By `2026-04-30`, produce [../reports/threads-scam-content-research-v0.md](../rep
 
 This report is the immediate research deliverable. It should turn the current scaffold into a readable v0 initial research report with problem definition, Threads-only scope, dataset v0 plan, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and four-week execution path.
 
+Use [27-report-v0-delivery-plan.md](27-report-v0-delivery-plan.md), [../reports/threads-scam-content-research-v0-executive-brief.md](../reports/threads-scam-content-research-v0-executive-brief.md), and [../reports/report-v0-review-checklist.md](../reports/report-v0-review-checklist.md) to make the report package reviewable before delivery.
+
 The report supersedes a concept-only stakeholder scoping memo as the next artifact.
 
 ## What To Do Now
@@ -19,7 +21,7 @@ The MVP should include:
 - Structured dataset schema.
 - Annotation guideline.
 - Scam-risk taxonomy.
-- Manually reviewed sample of 100 to 150 items.
+- 5-item calibration, 50-item pilot, and 100-200 item first usable dataset after pilot review.
 - Rule-based risk scorer.
 - OCR augmentation for image and screenshot text.
 - Comment/reply context comparison.

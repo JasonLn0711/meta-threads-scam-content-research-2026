@@ -39,10 +39,30 @@ Do not overclaim:
 
 ## Action Items
 
-- Create `reports/threads-scam-content-research-v0.md`.
-- Add a report index at `reports/README.md`.
-- Record a decision log for the April 30 report deadline.
-- Link the report from `README.md`.
-- Mention the April 30 milestone in `docs/18-recommended-path-v1.md`.
-- Update the planning repo W18 agenda and project file.
-- Create Google Calendar focus blocks and a deadline marker.
+- [x] Create `reports/threads-scam-content-research-v0.md`.
+- [x] Add a report index at `reports/README.md`.
+- [x] Record a decision log for the April 30 report deadline.
+- [x] Link the report from `README.md`.
+- [x] Mention the April 30 milestone in `docs/18-recommended-path-v1.md`.
+- [x] Update the planning repo W18 agenda and project file.
+- [ ] Create Google Calendar focus blocks and a deadline marker.
+
+## Implementation Note
+
+The report package and planning agenda were implemented on `2026-04-23`.
+
+Google Calendar creation was attempted through the connector, but create/read calls returned unsupported-tool errors. Because live calendar creation could not be verified, the planning repo now contains an importable `.ics` fallback:
+
+```text
+../planning-everything-track/data/projects/2026-04-meta-scam-ad-research/2026-04-27-30-cib-165-threads-report-v0-calendar-blocks.ics
+```
+
+## First-Principles Reasoning
+
+The April 30 artifact must be a report, not another concept memo, because:
+
+1. Threads report pressure needs to be translated into a research question before data work begins.
+2. The project has no authorized real dataset yet, so the report must distinguish stakeholder context from evidence.
+3. NTD 1.8M can support a governed dataset slice and baseline study, but not full Meta production detection.
+4. Human-review triage is the correct phase-1 output because it preserves uncertainty and avoids legal overclaiming.
+5. The report creates the approval and narrowing path needed before collection, annotation, or baseline claims.

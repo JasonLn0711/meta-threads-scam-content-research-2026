@@ -22,7 +22,7 @@ The recommended first path is a small, evidence-centric study:
 
 - Run a 5-item synthetic or redacted annotator calibration before real collection.
 - Build a 50-item first pilot batch after authorization and calibration pass.
-- Expand to a 100 to 200 item first usable dataset only after pilot review.
+- Expand to a 100-200 item first usable dataset only after pilot review.
 - Balance examples across `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`.
 - Capture post text, reply/comment text, attached image paths or placeholders, OCR text, visible links, redirection language, and explainable risk signals.
 - Compare a text-only rule baseline against a richer rule baseline using OCR, comments/replies, and link/redirection signals.
@@ -114,7 +114,7 @@ Recommended staged size:
 
 - 5 synthetic or redacted calibration items.
 - 50 manually reviewed pilot items after authorization.
-- 100 to 200 first usable items only after pilot review and any guideline/schema revisions.
+- 100-200 first usable items only after pilot review and any guideline/schema revisions.
 - Each item should preserve enough context for annotation.
 - No raw personal data or unnecessary screenshots should be committed to git.
 

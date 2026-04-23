@@ -59,9 +59,47 @@ This avoids turning the work into a duplicated documentation pile. Use links and
 
 ## Immediate Next Research Move
 
-The next useful research move is not code. It is a Threads-first stakeholder scoping memo plus a first dataset-slice design:
+The next useful research move is not code. It is a CIB/165-facing Threads research report `v0` due `2026-04-30`.
+
+The report is the right next artifact because it turns a stakeholder signal into a defensible research object:
+
+- stakeholder report pressure is not a verified dataset
+- scam-like content must preserve uncertainty and evidence quality
+- the NTD 1.8M budget fits governed research, not full production detection
+- real collection should wait for authorization and redaction rules
+- the first experiment should compare evidence surfaces, not claim final truth
+
+The report package created on `2026-04-23`:
+
+- `reports/README.md`
+- `reports/threads-scam-content-research-v0.md`
+- `decision-log/0002-create-report-v0-deadline.md`
+- `notes/2026-04-23-cib-165-report-v0-direction.md`
+
+Planning was also updated so W18 contains named report blocks and a deadline checkpoint. Google Calendar creation was attempted but blocked by connector unsupported-tool errors, so the planning repo now contains an `.ics` import fallback.
+
+After the report v0 is assembled, the next research move is the first dataset-slice design:
 
 - 100 to 150 manually reviewed Threads-related items.
 - Balanced likely scam-like, likely non-scam, uncertain, and insufficient-evidence examples.
 - Include text-only, text plus image/OCR, replies/comments, visible links, and redirection signals.
 - First experiment: text-only keyword/rule baseline versus text plus OCR plus comments/link-signal baseline.
+
+## Same-Day Git Checkpoints
+
+Threads repo:
+
+- `be5f2b5 docs: initialize Threads scam content research repo`
+- `653e679 docs: align Threads taxonomy vocabulary`
+- `ee3b2d5 templates: add pilot governance and annotation forms`
+- `3f4d8ed data: add synthetic calibration sample sheets`
+- `aa06301 scripts: add dataset QA and baseline tooling`
+- `886c719 docs: add pilot runbooks and governance SOP`
+- `a0f7851 experiments: add pilot audit and baseline protocols`
+- `4deb071 docs: create CIB 165 Threads report v0 package`
+
+Planning repo:
+
+- `13b60ea plan: record Threads research repo bridge`
+- `67559f3 plan: update Threads research next action`
+- `ca9c65d plan: schedule CIB 165 Threads report v0`
