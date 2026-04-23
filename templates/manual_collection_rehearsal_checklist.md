@@ -1,82 +1,89 @@
 # Manual Collection Rehearsal Checklist
 
-Use this checklist for the 1-2 item manual collection rehearsal before the first 10-15 real pilot items. Keep this file free of raw Threads content, screenshots, full URLs, unredacted handles, personal data, browser artifacts, credentials, and sensitive controlled-launch details.
+Use this checklist for the 1-2 item manual collection rehearsal before real pilot volume begins. Keep completed versions local-only if they contain item-level evidence, source details, raw storage details, URLs, handles, or sensitive operational notes.
 
 ## Rehearsal Identity
 
 | Field | Value |
 |---|---|
 | Rehearsal ID |  |
-| Date |  |
+| Dataset or batch ID | `threads_pilot_v1_2026-05` |
+| Rehearsal date |  |
 | Collector ID |  |
 | Reviewer ID |  |
-| Controlled launch status | `ready_for_rehearsal` / `ready_for_first_10_15_items` |
-| Rehearsal item count |  |
-| Local-only record path(s) |  |
-| Local collection log path |  |
+| Controlled launch details confirmed? | yes / no |
+| Input file reviewed |  |
+| Output record reviewed |  |
+| Collection log reviewed |  |
 
-## Controlled-Launch Prerequisites
+## Command Record
 
-| Check | Status | Notes |
+```bash
+python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+  --ack-controlled-details \
+  --output data/interim/manual_record_0001.json \
+  --collection-log data/interim/threads_pilot_v1_collection_log.csv
+
+python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+```
+
+## Pass/Fail Checks
+
+| Check | Pass? | Notes |
 |---|---|---|
-| Filled controlled launch record exists outside git |  |  |
-| Exact source/source category is approved |  |  |
-| Exact storage and access limits are approved |  |  |
-| Retention and deletion rules are approved |  |  |
-| Redaction rules are approved |  |  |
-| Screenshot, OCR, URL/link, and contact-handle policies are approved |  |  |
-| Collector understands forbidden fields and contexts |  |  |
-| No automation, crawling, scraping, redirect expansion, or landing-page capture is used |  |  |
+| Controlled launch record exists outside git | yes / no |  |
+| Input JSON uses only approved fields | yes / no |  |
+| Item ID contains no source, handle, URL, or person name | yes / no |  |
+| Source type and collection method are approved | yes / no |  |
+| Authorization status is correct | yes / no |  |
+| Raw evidence storage is outside git | yes / no |  |
+| Raw storage reference follows controlled policy | yes / no |  |
+| Source URL handling follows controlled policy | yes / no |  |
+| Visible links are normalized or redacted as approved | yes / no |  |
+| Contact handles are omitted, categorical, or redacted as approved | yes / no |  |
+| OCR text is risk-relevant and privacy-reviewed | yes / no / n/a |  |
+| Screenshot status is filled and allowed | yes / no / n/a |  |
+| Reply/comment context is selected and approved | yes / no / n/a |  |
+| `privacy_redaction_notes` explains redaction | yes / no |  |
+| Collection burden is logged | yes / no |  |
+| Exclusion reason is logged if needed | yes / no / n/a |  |
+| Manual assistant governance errors are zero | yes / no |  |
+| Manual assistant warnings were reviewed | yes / no / n/a |  |
+| Strict schema validation passes | yes / no |  |
+| No raw evidence or sensitive controlled details entered git | yes / no |  |
 
-## Manual Input Payload Review
+## Common Mistakes Found
 
-| Check | Status | Notes |
+| Mistake | Found? | Fix before continuing |
 |---|---|---|
-| Input payload stayed under `data/interim/` or another approved local-only path |  |  |
-| `item_id` is non-identifying |  |  |
-| `source_type`, `collection_method`, and `authorization_status` are approved |  |  |
-| Source URL is omitted, redacted, or represented as approved |  |  |
-| Visible links use the approved representation |  |  |
-| Contact handles are omitted, categorized, or redacted as approved |  |  |
-| OCR text is minimized and privacy-reviewed |  |  |
-| Reply/comment text is limited to approved evidence |  |  |
-| No unapproved profile, account, landing-page, or redirect context is included |  |  |
+| Full source URL copied into local record | yes / no |  |
+| Raw contact handle, phone, email, payment detail, or referral code retained | yes / no |  |
+| OCR includes unrelated personal details | yes / no |  |
+| Screenshot retained without approved status or redaction | yes / no |  |
+| Collector used profile/account/landing-page/redirect context | yes / no |  |
+| Collection log missing burden or exclusion notes | yes / no |  |
+| Schema field needed but unclear | yes / no |  |
 
-## Generated Record QA
+## Schema Or Guideline Revision Signals
 
-| Check | Status | Notes |
+| Signal | Observed? | Owner |
 |---|---|---|
-| `governance_errors: 0` |  |  |
-| `schema_errors: 0` |  |  |
-| Strict validation passes |  |  |
-| Required schema fields are populated or intentionally blank |  |  |
-| `screenshot_snapshot_status` is accurate |  |  |
-| `link_snapshot_status` is accurate |  |  |
-| `privacy_redaction_notes` explains minimized fields |  |  |
-| `missing_evidence` explains unavailable approved evidence |  |  |
-| Label fields remain preliminary when annotation has not started |  |  |
+| Approved evidence cannot fit current schema | yes / no |  |
+| Required field is too ambiguous for collector | yes / no |  |
+| Redaction rule conflicts with annotation need | yes / no |  |
+| Collector needs unapproved context to make item reviewable | yes / no |  |
+| Current guideline does not explain expected note format | yes / no |  |
 
-## Collection Log QA
-
-| Check | Status | Notes |
-|---|---|---|
-| Collection log row was appended locally |  |  |
-| Collection burden is recorded |  |  |
-| Redaction burden is recorded |  |  |
-| Exclusion reason is recorded if applicable |  |  |
-| Ready-for-annotation value is justified |  |  |
-| No raw or sensitive details are written into the log |  |  |
-
-## Decision
+## Rehearsal Decision
 
 Choose one:
 
-- `rehearsal_passed`
-- `revise_input_payload`
-- `revise_redaction_rules`
-- `revise_schema_or_template`
-- `pause_for_governance_review`
-- `stop_before_collection`
+- `pass_ready_for_calibration_or_first_10_15`
+- `pass_with_limits`
+- `pause_for_redaction_fix`
+- `pause_for_schema_or_guideline_fix`
+- `pause_for_authorization_review`
+- `stop_source_for_pilot`
 
 Decision:
 
@@ -84,8 +91,8 @@ Decision:
 
 ```
 
-Required follow-up before item 1:
+Required follow-up before real item 1:
 
-| Follow-up | Owner | Required before continuing? |
+| Follow-up | Owner | Required before item 1? |
 |---|---|---|
 |  |  | yes / no |
