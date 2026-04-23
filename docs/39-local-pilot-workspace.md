@@ -27,14 +27,14 @@ The non-sensitive launch plan is [37-approved-pilot-launch-plan.md](37-approved-
 
 The initializer creates these empty working files under ignored `data/interim/`:
 
-```text
-data/interim/threads_pilot_v1_collection_log.csv
-data/interim/threads_pilot_v1_annotations.csv
-data/interim/threads_pilot_v1_annotation_pass_ann_01.csv
-data/interim/threads_pilot_v1_annotation_pass_ann_02.csv
-data/interim/threads_pilot_v1_checkpoint_review.md
-data/interim/threads_pilot_v1_workspace_manifest.md
-```
+| Local-only file | Purpose |
+|---|---|
+| `data/interim/threads_pilot_v1_collection_log.csv` | Collector-facing operational log for candidates, redaction status, source type, authorization status, and ready-for-annotation state. |
+| `data/interim/threads_pilot_v1_annotations.csv` | Primary schema-shaped annotation sheet for redacted/approved item records. |
+| `data/interim/threads_pilot_v1_annotation_pass_ann_01.csv` | First independent annotator pass when dual annotation or calibration is needed. |
+| `data/interim/threads_pilot_v1_annotation_pass_ann_02.csv` | Second independent annotator or reviewer pass when comparison is needed. |
+| `data/interim/threads_pilot_v1_checkpoint_review.md` | Local first 10-15 item checkpoint worksheet. |
+| `data/interim/threads_pilot_v1_workspace_manifest.md` | Local manifest recording generated file names, dataset ID, batch ID, and safety notes. |
 
 These are local-only files. After collection begins, they may contain sensitive or source-specific information. Do not commit them unless a later explicit decision says a specific file is fully redacted, approved, and safe to track.
 
@@ -68,6 +68,35 @@ python scripts/init_pilot_workspace.py \
 
 The script refuses to overwrite existing local files unless `--force` is supplied. Use `--force` only after confirming the existing local files contain no needed work.
 
+## Before Item 1 Checklist
+
+Before recording the first real item, confirm:
+
+- filled controlled launch record exists in the approved outside-git location
+- controlled record has final status `ready_for_rehearsal` or `ready_for_first_10_15_items`
+- exact source/source category, storage, access, retention, redaction, screenshot, OCR, URL/link, and handle/contact policies are complete
+- approved collector, annotator, reviewer, adjudicator, and research engineer IDs are assigned
+- local workspace files exist under ignored `data/interim/`
+- item-1 preflight has zero `ERROR` findings
+- any `WARN` findings are explained by expected local state or fixed before item 1
+- no raw evidence exists under repo-controlled raw/screenshot/browser/evidence folders
+- the first 10-15 item checkpoint is scheduled before any attempt to complete all 50 items
+
+Zero-error readiness means `scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details` exits successfully with `ERROR: 0`. Warnings do not automatically block the script, but the project owner must explain or fix them before item 1.
+
+Acceptable warnings before item 1:
+
+- dirty git worktree caused only by planned repo documentation/tooling changes
+- non-sensitive untracked files that are part of the implementation work
+
+Warnings that require pausing before item 1:
+
+- missing local workspace files during the `--before-item-1` run
+- any local raw evidence in repo-controlled raw/screenshot/browser/evidence folders
+- controlled details not acknowledged
+- unexplained worktree changes in data, evidence, governance, or source-sensitive paths
+- any warning that suggests template/schema mismatch or unsafe tracked files
+
 ## First Working Order
 
 After initialization:
@@ -86,6 +115,8 @@ Before item 1:
 ```bash
 python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
+
+If preflight reports an `ERROR`, do not collect. Fix the issue, rerun the command, and proceed only after `ERROR: 0`. If preflight reports a warning, either fix it or record a non-sensitive explanation in the launch notes before item 1.
 
 Once annotation rows exist:
 
@@ -124,6 +155,9 @@ Do not commit:
 - browser exports, profiles, cookies, tokens, credentials, or HAR files
 - local annotation CSVs after real evidence has been entered
 - generated JSONL, audit, agreement, or baseline outputs that contain item-level real evidence
+- filled controlled launch records if they contain sensitive source, storage, access, or investigative details
+- manual rehearsal records containing real evidence
+- calibration or checkpoint outputs containing item-level real evidence
 
 Commit only aggregate, non-sensitive findings, decision records, guide revisions, and schema changes.
 

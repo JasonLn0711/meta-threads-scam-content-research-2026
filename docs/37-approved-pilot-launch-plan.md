@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document records the post-approval launch plan for the first real Threads pilot.
+This document records the post-approval Phase 1 launch plan for the first real Threads pilot.
 
 The stakeholder outcome has been reported as approved. The repo therefore moves from approval preparation into controlled pilot launch preparation.
 
@@ -11,6 +11,8 @@ Launch status: `go_with_limits`.
 No real Threads evidence has been collected or committed.
 
 Owner follow-up approval: the project owner approved the repo's requirement that exact source, storage, access, retention, and redaction limits must be written into the launch record before collection. Sensitive values should be kept in the approved controlled location rather than this git repo.
+
+This is the repo-safe entrypoint for controlled launch. It does not store the sensitive controlled launch record. It points the project owner to the outside-git record, then routes the team through local workspace initialization, manual rehearsal, annotator calibration, the first 10-15 item checkpoint, and only then the rest of the 50-item pilot.
 
 ## What Approval Means Here
 
@@ -25,6 +27,19 @@ Approval means the project may prepare and run the first 50-item pilot under exp
 - internal aggregate reporting only by default
 
 Approval does not mean unlimited collection, production detection, public accusation, or legal fraud determination.
+
+## Phase 1 Boundary
+
+This launch plan is limited to governed Phase 1 evidence operations:
+
+- controlled manual or stakeholder-provided collection only
+- local-only workspace files under ignored `data/interim/`
+- manual collection rehearsal on 1-2 records
+- 5-item annotator calibration
+- first 10-15 item checkpoint before completing 50 items
+- 50-item pilot only after checkpoint review supports continuation
+
+This plan does not authorize Phase 2, scraping, browser automation, crawling, live platform ingestion, redirect expansion, landing-page capture, production scoring, or new model layers.
 
 ## Launch Packet
 
@@ -51,25 +66,52 @@ The non-sensitive launch records are in `governance/pilot-launch/`.
 | `governance/source-intake-register.md` | `SRC-REAL-PILOT-APPROVED-2026-04-23` approved for the 50-item pilot under limits. |
 | `governance/pilot-authorization-register.md` | `AUTH-THREADS-PILOT-V1-2026-04-23` approved with limits. |
 
+## Controlled Launch Checklist
+
+Complete this checklist outside git before item 1. Use `templates/controlled_launch_details_template.md` as the blank structure, but keep the filled record in the approved controlled location if it contains sensitive details.
+
+| Required controlled detail | Status before item 1 |
+|---|---|
+| Exact source or source category | complete outside git |
+| Exact raw storage location | complete outside git |
+| Access list for raw and redacted evidence | complete outside git |
+| Retention/deletion rule | complete outside git |
+| Redaction rules | complete outside git |
+| Screenshot policy | complete outside git |
+| OCR policy | complete outside git |
+| Source URL/link policy | complete outside git |
+| Handle/contact info policy | complete outside git |
+| Approved collector IDs | complete outside git or in non-sensitive form |
+| Approved annotator IDs | complete outside git or in non-sensitive form |
+| Approved reviewer/adjudicator IDs | complete outside git or in non-sensitive form |
+| Permitted fields | complete outside git |
+| Forbidden fields and contexts | complete outside git |
+| Unresolved uncertainties | marked blocking or non-blocking |
+| Final signoff status | `ready_for_rehearsal` or `ready_for_first_10_15_items` |
+
+If any required detail is incomplete, collection remains paused and the repo may be used only for synthetic examples, dry runs, and planning.
+
 ## Launch Sequence
 
-1. Complete the controlled launch record with exact source, storage, access, retention, and redaction limits. Use `templates/controlled_launch_details_template.md` only in the controlled location after filling it.
+1. Complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, permitted-field, forbidden-field, role-ID, uncertainty, and signoff details. Use `templates/controlled_launch_details_template.md` only in the controlled location after filling it.
 2. Confirm exact raw evidence storage outside git in a controlled location.
 3. Confirm exact raw evidence access list outside git.
 4. Assign collector, annotator, reviewer, adjudicator, and research engineer IDs.
 5. Create local-only working files under ignored `data/interim/` using `scripts/init_pilot_workspace.py`.
 6. Run `scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details`.
-7. Collect the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
-8. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
-9. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
-10. Apply redaction QA before annotation.
-11. Validate the annotation CSV before annotation expands.
-12. Run first-pass annotation.
-13. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
-14. Adjudicate disagreements.
-15. Convert to JSONL locally after strict validation.
-16. Run audit and rule-baseline comparison locally.
-17. Produce a non-sensitive pilot result summary and decision memo.
+7. Rehearse 1-2 manual collection records using the approved fields and redaction rules.
+8. Run 5-item annotator calibration if annotators changed or real pilot annotation is about to begin.
+9. Collect only the first 10-15 items using the 15/15/10/10 diagnostic composition as a guide.
+10. Run the first checkpoint with `docs/38-first-pilot-checkpoint-protocol.md` and `templates/pilot_checkpoint_review.md`.
+11. Continue to 50 items only if the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+12. Apply redaction QA before annotation expands.
+13. Validate the annotation CSV before annotation expands.
+14. Run first-pass annotation.
+15. Review all high-risk, uncertain, low-confidence, and partial-evidence cases.
+16. Adjudicate disagreements.
+17. Convert to JSONL locally after strict validation.
+18. Run audit and rule-baseline comparison locally.
+19. Produce a non-sensitive pilot result summary and decision memo.
 
 ## First Local Files To Create
 
@@ -119,6 +161,18 @@ Review:
 - whether source skew is already too strong
 
 If any issue is severe, pause the pilot and update the relevant governance, source, annotation, or schema document before continuing.
+
+Allowed checkpoint decisions are:
+
+- `continue_to_50`: continue under current limits.
+- `continue_with_limits`: continue only with narrower source, field, redaction, or review constraints.
+- `pause_for_redaction_fix`: fix storage/redaction before more collection.
+- `pause_for_collection_fix`: fix evidence capture, source mix, or missing fields before more collection.
+- `pause_for_guideline_fix`: revise annotation guidance before more annotation.
+- `pause_for_authorization_review`: update authorization or exclude items that need unapproved context.
+- `stop_pilot`: stop because the risk or burden is too high.
+
+The 50-item pilot is blocked unless the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 ## Next Human Owner Action
 
