@@ -9,9 +9,36 @@ The project is not moving to Phase 2.
 Reason:
 
 - Phase 1 has not yet produced checkpoint-reviewed evidence.
+- As of `2026-04-24`, CIB approval is treated as complete for the current controlled pilot path; the current intake status is `ready_for_controlled_item_entry`.
 - The controlled launch record is no longer the named blocker; the next blocker is safe controlled rehearsal, redaction review, a repo-safe rehearsal decision, and first 10-15 item checkpoint discipline.
 - The workflow must prove safe manual collection, redaction, annotation, checkpoint review, and local baseline readiness before scale.
 - No automation, scraping, live ingestion, production scoring, or new model layer is approved.
+
+## Current Rehearsal Gate Status
+
+Current intake status: `ready_for_controlled_item_entry`.
+
+CIB approval is not the current blocker. The remaining blocker is operational: exactly one controlled rehearsal item still needs to be selected, entered in redacted form, built, and strict-validated before a rehearsal decision can be made.
+
+What is ready:
+
+- CIB approval is recorded for the current controlled pilot path
+- ignored local workspace files exist under `data/interim/`
+- item-1 preflight has passed with zero errors
+- local-only `manual_entry_0001.json` exists as an intake skeleton
+- local-only selection worksheet exists and records that no item has been selected yet
+- local checklist and aggregate review draft exist
+- manual collection tooling can run through the ignored `.venv`
+
+What is not ready:
+
+- no specific controlled rehearsal item has been selected or entered
+- no schema-valid real rehearsal record exists
+- redaction burden has not been measured
+- boundary-watch behavior has not been observed
+- annotation readiness cannot be assessed
+
+Therefore the project cannot start the first 10-15 item checkpoint yet. The next required action is to select one CIB-approved controlled rehearsal item, fill the local intake with only approved redacted fields, build the local record, run strict validation, and update the aggregate rehearsal review with a new decision.
 
 ## Why 10-15 Items Come Before 50
 

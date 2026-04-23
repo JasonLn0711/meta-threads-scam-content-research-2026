@@ -27,6 +27,13 @@ The assistant therefore uses:
 configs/manual_collection_assistant.yaml
 ```
 
+Install the local script dependency before using the assistant:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
 The config explicitly keeps these disabled:
 
 - network access
@@ -95,12 +102,12 @@ Use one or two local `data/interim/manual_entry_*.json` payloads prepared from a
 Command for the first rehearsal record:
 
 ```bash
-python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+.venv/bin/python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
   --ack-controlled-details \
   --output data/interim/manual_record_0001.json \
   --collection-log data/interim/threads_pilot_v1_collection_log.csv
 
-python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+.venv/bin/python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
 ```
 
 Review `data/interim/manual_record_0001.json` and `data/interim/threads_pilot_v1_collection_log.csv` locally with `templates/manual_collection_rehearsal_checklist.md`.

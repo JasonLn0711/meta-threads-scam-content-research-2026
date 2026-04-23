@@ -38,3 +38,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Recorded CIB authorization for API access and all research-required automation under a controlled launch record | `0018-record-cib-api-and-automation-authorization.md` |
 | 2026-04-23 | Corrected controlled-store status so real controlled pilot artifacts are not mislabeled as examples or synthetic files | `0019-correct-controlled-store-artifact-status.md` |
 | 2026-04-23 | Added a repo-safe controlled rehearsal review bridge before the first 10-15 item checkpoint | `0020-add-controlled-rehearsal-review-bridge.md` |
+| 2026-04-24 | Recorded CIB-approved rehearsal intake readiness while keeping the first checkpoint blocked until one controlled item is built and strict-validated | `0021-record-cib-approved-rehearsal-intake-ready.md` |

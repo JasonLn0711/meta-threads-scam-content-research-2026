@@ -32,12 +32,29 @@ init_pilot_workspace.py       Create empty local-only pilot files under ignored 
 check_pilot_preflight.py      Check repo and local workspace readiness before item 1
 ```
 
+## Local Python Setup
+
+Some scripts read YAML config files under `configs/` and require `PyYAML`.
+
+Recommended local setup:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+Then run governed pilot tooling with `.venv/bin/python`:
+
+```bash
+.venv/bin/python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
+```
+
 ## Example Usage
 
 Validate a JSON sample:
 
 ```bash
-python scripts/validate_thread_dataset.py templates/thread_item_sample_batch.json
+.venv/bin/python scripts/validate_thread_dataset.py templates/thread_item_sample_batch.json
 ```
 
 Audit a first annotation CSV:
@@ -161,19 +178,19 @@ These commands support manual governed operations only. They do not collect Thre
 Initialize the local workspace only after controlled launch details are complete outside git:
 
 ```bash
-python scripts/init_pilot_workspace.py --ack-controlled-details
-python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
+.venv/bin/python scripts/init_pilot_workspace.py --ack-controlled-details
+.venv/bin/python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
 
 Run the 1-2 item manual collection rehearsal from a manually prepared local input:
 
 ```bash
-python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+.venv/bin/python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
   --ack-controlled-details \
   --output data/interim/manual_record_0001.json \
   --collection-log data/interim/threads_pilot_v1_collection_log.csv
 
-python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+.venv/bin/python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
 ```
 
 The manual input must not contain unresolved placeholder markers such as `FILL_`, `REPLACE_`, or `PENDING_`. The assistant blocks real records with those markers even when `authorization_status` is `approved`.
