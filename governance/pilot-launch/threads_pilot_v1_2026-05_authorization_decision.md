@@ -24,9 +24,9 @@ Follow-up owner confirmation: the project owner also approved the repo's require
 | Outcome | `approved` |
 | Approved sample size | 50 pilot items |
 | Approved collection window | after readiness sign-off through `2026-05-31`, unless stakeholder limits specify otherwise |
-| Approved source type | stakeholder-provided cases and/or manually identified public examples under pilot limits |
-| Approved collection method | manual only |
-| Automation approved? | no |
+| Approved source type | stakeholder-provided cases, manually identified public examples, API-authorized samples, and CIB-authorized automation-collected examples under pilot limits |
+| Approved collection method | manual, stakeholder-provided, API-authorized, and automation-assisted under the controlled launch record |
+| Automation approved? | yes, for all research-required automation under `CTRL-THREADS-PILOT-V1-CIB-2026-04-23` |
 | Can real collection begin now? | yes only after go/no-go, work order, readiness review, and controlled raw-storage/access confirmation |
 
 ## Approved Fields
@@ -37,12 +37,12 @@ Follow-up owner confirmation: the project owner also approved the repo's require
 | `reply_texts` | `approved_with_redaction` | Selected relevant replies/comments only. |
 | `ocr_text` | `approved_with_redaction` | Risk-relevant OCR text after privacy review. |
 | `image_paths` or screenshot references | `approved_with_limits` | Redacted local references only; no raw screenshots in git. |
-| `external_links` | `approved_with_limits` | Normalized domain or redacted visible-link reference; no crawling. |
+| `external_links` | `approved_with_limits` | Normalized domain or redacted visible-link reference in repo-visible files; redirect or landing evidence outside git if run-scoped. |
 | `visible_contact_handles` | `approved_with_redaction` | Category or redacted handle only. |
 | `visible_platform_redirects` | `approved` | Platform/category labels allowed. |
 | `source_url_if_stored` | `approved_with_limits` | Redacted source reference only in repo-visible files. |
 | screenshot snapshot | `approved_with_limits` | Redacted snapshots outside git only. |
-| link snapshot | `denied` | Do not crawl, expand, or capture landing pages in this pilot. |
+| link snapshot | `approved_with_limits` | Redirect-chain and landing-page capture allowed under CIB run records; raw outputs outside git. |
 | limited metadata notes | `approved_with_redaction` | Non-sensitive metadata notes only. |
 
 ## Storage, Access, And Retention
@@ -105,8 +105,8 @@ Follow-up owner confirmation: the project owner also approved the repo's require
 
 - The project owner reported the stakeholder outcome as approved.
 - The project owner approved the requirement to record exact source, storage, access, retention, and redaction limits before collection.
-- The pilot remains bounded to 50 items and manual/stakeholder-provided evidence only.
-- The approval is recorded as usable only under privacy-minimized, redacted, non-automated conditions.
+- The pilot remains bounded to 50 items before checkpoint and decision review, with manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted evidence allowed under the controlled launch record.
+- The approval is recorded as usable only under privacy-minimized, redacted, controlled API/automation conditions.
 - No real Threads evidence is stored in this record.
 
 ## Sign-Off

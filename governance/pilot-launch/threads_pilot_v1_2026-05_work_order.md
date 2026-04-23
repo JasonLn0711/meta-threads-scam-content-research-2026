@@ -18,7 +18,7 @@
 | Question | Answer |
 |---|---|
 | Approved source type | stakeholder-provided cases and/or manually identified public examples under pilot limits |
-| Approved collection method | manual only |
+| Approved collection method | manual, stakeholder-provided, API-authorized, and automation-assisted under controlled launch record |
 | Approved sample size | 50 |
 | Approved collection window | after readiness sign-off through `2026-05-31`, unless stakeholder limits specify otherwise |
 | Raw storage location outside git | approved controlled location outside git; exact path not recorded here |
@@ -62,7 +62,7 @@
 | text plus image | 10-15 | 0 | use redacted screenshot references only |
 | reply/comment context | 10-15 | 0 | selected relevant replies only |
 | OCR-heavy image or screenshot | 5-10 | 0 | only if OCR privacy review passes |
-| visible link or redirection signal | 10-15 | 0 | visible signals only; no crawling |
+| visible link or redirection signal | 10-15 | 0 | visible, API, redirect, or landing evidence allowed only under run records and redaction controls |
 
 ## Assigned Roles
 
@@ -70,7 +70,8 @@
 |---|---|---|---|
 | Project owner | `owner_01` | held outside git if sensitive | final pilot decision owner |
 | Governance reviewer | `gov_01` | held outside git if sensitive | confirms storage, access, retention, redaction |
-| Collector | `collector_01` | held outside git if sensitive | manual collection only |
+| Collector | `collector_01` | held outside git if sensitive | manual and stakeholder-provided collection |
+| Automation operator | `auto_op_01` | held outside git if sensitive | API and automation runs under controlled launch record |
 | Annotator 1 | `ann_01` | held outside git if sensitive | first-pass annotation |
 | Annotator 2 or reviewer | `rev_01` | held outside git if sensitive | second review |
 | Adjudicator | `adj_01` | held outside git if sensitive | final label decisions |
@@ -107,10 +108,10 @@ python scripts/compare_rule_variants.py data/processed/threads_pilot_v1.jsonl \
 |---|---|---|
 | Authorization unclear | yes | Approval recorded, but conditions must stay visible. |
 | Raw personal data entering git | yes | Stop immediately if this occurs. |
-| Screenshot/link policy unclear | yes | Redacted only; no link crawling. |
+| Screenshot/link policy unclear | yes | Redacted repo-visible fields; raw and expanded link evidence outside git only. |
 | Collector needs unapproved fields | yes | Stop and revise authorization. |
 | Annotators need unapproved context | yes | Stop and revise scope. |
-| Collection drifting toward automation | yes | Stop immediately. |
+| Collection or automation exceeds run record | yes | Stop immediately and revise governance. |
 | Redaction cannot be completed safely | yes | Exclude item or pause. |
 
 ## Work Order Decision
@@ -121,6 +122,6 @@ python scripts/compare_rule_variants.py data/processed/threads_pilot_v1.jsonl \
 - Limits or conditions:
   - Ready to collect only after exact raw storage location and access list are confirmed outside git.
   - Exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before collection.
-  - Collection remains manual-only and limited to 50 items.
+  - Collection may use manual, stakeholder-provided, API-authorized, or automation-assisted paths under the controlled launch record and remains limited to 50 items before checkpoint and decision review.
   - Commit only aggregate, non-sensitive notes and decision records.
 - Next review date: after first 10-15 collected or annotated rows, whichever comes first.

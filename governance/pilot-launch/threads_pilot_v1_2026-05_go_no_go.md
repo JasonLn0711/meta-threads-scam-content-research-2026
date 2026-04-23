@@ -16,14 +16,14 @@ No real Threads evidence is stored in this record.
 | Data authorization request completed | pass | project owner | `DREQ-THREADS-PILOT-V1-2026-04-23` |
 | Source candidate intake completed | pass | project owner | `SRC-REAL-PILOT-APPROVED-2026-04-23` |
 | Source sampling frame completed | pass | project owner | 15/15/10/10 diagnostic frame |
-| Approved source type recorded | pass | governance reviewer | stakeholder/manual public source category only |
+| Approved source type recorded | pass | governance reviewer | stakeholder/manual public/API-authorized/CIB automation source category |
 | Approved fields listed | pass | governance reviewer | field limits recorded in data authorization |
 | Raw storage location outside git confirmed | limited | project owner | controlled-location category approved; exact path outside git before first item |
 | Retention rule confirmed | limited | governance reviewer | pilot-only retention; review after decision memo |
 | Access list confirmed | limited | governance reviewer | roles listed; exact names outside git if sensitive |
 | Exact source/storage/access/retention/redaction launch details approved | limited | project owner | owner approved requirement; controlled details must be filled before first item |
 | Publication/demo restrictions confirmed | pass | project owner | no external examples without later approval |
-| No automation required | pass | research engineer | manual only |
+| API and automation authorization recorded | pass | research engineer | CIB-authorized under controlled launch record |
 
 ## Gate 2: Collection And Redaction
 
@@ -84,8 +84,8 @@ No real Threads evidence is stored in this record.
 - Decision date: `2026-04-23`
 - Limits or conditions:
   - 50 pilot items maximum.
-  - Manual or stakeholder-provided examples only.
-  - No automation, scraping, crawling, redirect expansion, landing-page capture, profile review, or production scoring.
+  - Manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted examples are allowed under the controlled launch record.
+  - Production scoring, public accusation, and legal fraud determination remain out of scope.
   - Exact raw evidence storage path and access list must be confirmed outside git before first item.
   - Exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before first item.
   - Raw evidence, screenshots, full sensitive URLs, handles, and stakeholder case details must not be committed.

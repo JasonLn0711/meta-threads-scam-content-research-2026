@@ -11,7 +11,7 @@
 | Collection lead | `collector_01` |
 | Annotation lead | `ann_01` / `rev_01` |
 | Proposed collection batch ID | `threads_pilot_v1_2026-05` |
-| Proposed source name or category | stakeholder-provided cases and/or manual public examples under pilot limits |
+| Proposed source name or category | stakeholder-provided, manual public, API-authorized, and CIB-authorized automation-assisted examples under pilot limits |
 | Proposed readiness decision | `ready_with_limits` |
 
 ## Evidence Bundle
@@ -43,18 +43,18 @@
 | Storage and redaction | `ready_with_limits` | raw evidence outside git; redaction required | `gov_01` / `collector_01` | data authorization |
 | Annotation operations | `ready_with_limits` | assign annotator IDs and complete onboarding before annotation | `ann_01` | work order |
 | Baseline and evaluation | `ready_with_limits` | run only after validation/adjudication | `eng_01` | baseline docs |
-| Stop conditions | `ready_with_limits` | stop if raw data enters git, automation appears, or redaction fails | all roles | work order |
+| Stop conditions | `ready_with_limits` | stop if raw data enters git, automation exceeds run record, credentials/session artifacts enter git, or redaction fails | all roles | work order |
 
 ## Approved Pilot Limits
 
 | Limit area | Approved limit | Reason | Review date |
 |---|---|---|---|
 | Source type | stakeholder-provided cases and/or manual public examples | approved pilot sources only | `2026-04-23` |
-| Collection method | manual only | no automation approved | `2026-04-23` |
+| Collection method | manual, stakeholder-provided, API-authorized, and automation-assisted | CIB API and automation authorization recorded | `2026-04-23` |
 | Batch size | 50 items | diagnostic pilot | `2026-04-23` |
 | Screenshots | redacted only, outside git | privacy minimization | `2026-04-23` |
 | Source URLs | redacted reference only in repo-visible files | avoid sensitive URL retention | `2026-04-23` |
-| External links | normalized or redacted visible references only | no crawling | `2026-04-23` |
+| External links | normalized/redacted repo-visible references; raw or expanded evidence outside git | redirect and landing capture allowed only under run records | `2026-04-23` |
 | Contact handles | category or redacted handle only | reduce personal data | `2026-04-23` |
 | OCR text | risk-relevant excerpt after privacy review | avoid unnecessary personal data | `2026-04-23` |
 | Replies/comments | selected relevant only | reduce overcollection | `2026-04-23` |
@@ -71,13 +71,13 @@
 | Decision date | `2026-04-23` |
 | First allowed collection date | after exact raw storage location and access list are confirmed outside git |
 | Required next review date | after first 10-15 collected or annotated rows |
-| Conditions that must be met before collection | confirm exact storage/access outside git; assign pseudonymous IDs; pass item-1 preflight; apply redaction checklist; no automation |
+| Conditions that must be met before collection | confirm exact storage/access/API credential/automation log locations outside git; assign pseudonymous IDs; pass item-1 preflight; apply redaction checklist; run API/automation only with run records |
 
 ## Decision Rationale
 
 - Stakeholder outcome was reported as approved by the project owner.
 - Project owner approved the requirement to write exact source, storage, access, retention, and redaction limits into the controlled launch record before collection.
-- The pilot is limited to 50 manually collected or stakeholder-provided items.
+- The pilot is limited to 50 items before checkpoint and decision review; manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted collection paths are approved under the controlled launch record.
 - The launch packet preserves the repo boundary: no raw evidence, screenshots, full sensitive URLs, handles, or case material in git.
 - The pilot remains diagnostic and cannot be used for prevalence or production claims.
 

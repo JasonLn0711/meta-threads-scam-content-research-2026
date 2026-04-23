@@ -10,9 +10,9 @@
 
 ## Proposed Source
 
-- Source type: `stakeholder_provided` / `manual_public`
+- Source type: `stakeholder_provided` / `manual_public` / `api_authorized` / `other_approved`
 - Platform: Threads
-- Proposed collection method: manual only
+- Proposed collection method: manual, stakeholder-provided, API-authorized, and automation-assisted under the controlled launch record
 - Proposed sample size: 50
 - Proposed date range: after readiness sign-off through `2026-05-31`, unless stakeholder limits specify otherwise
 - Expected content forms: text, text plus image, selected replies/comments, OCR text, visible links, redacted handles, visible platform redirects, screenshot-style posts where approved
@@ -32,12 +32,12 @@
 | `reply_texts` | approved | Selected relevant replies/comments only. |
 | `image_paths` / screenshot reference | approved_with_limits | Redacted local reference only; no raw screenshots in git. |
 | `ocr_text` | approved_with_limits | Risk-relevant OCR text after privacy review. |
-| `external_links` | approved_with_limits | Normalized or redacted visible-link references; no crawling. |
+| `external_links` | approved_with_limits | Normalized or redacted visible-link references in repo-visible files; raw or expanded link evidence outside git when run-scoped. |
 | `visible_contact_handles` | approved_with_limits | Category or redacted handle only. |
 | `visible_platform_redirects` | approved | Platform/category labels allowed. |
 | `source_url_if_stored` | approved_with_limits | Redacted reference only in repo-visible files. |
 | screenshot snapshot | approved_with_limits | Redacted snapshot outside git only. |
-| link snapshot | denied | Do not crawl, expand, visit, or snapshot destinations. |
+| link snapshot | approved_with_limits | Redirect-chain and landing-page evidence capture allowed under CIB run records; raw outputs outside git. |
 | limited metadata notes | approved | Non-sensitive notes only. |
 
 ## Privacy And Redaction
@@ -63,18 +63,18 @@
 
 - Platform terms reviewed: must be confirmed by governance reviewer before first item.
 - Legal/policy reviewer: governance reviewer role.
-- Known restrictions: no automation, scraping, crawling, redirect expansion, landing-page capture, or profile/account review.
-- Open concerns: exact raw storage path and access list must remain outside git and be confirmed before first item.
+- Known restrictions: no production scoring, legal fraud determination, public accusation workflow, unmanaged raw-data sharing, or credentials/session artifacts in git.
+- Open concerns: exact raw storage path, API credential storage, automation log location, and access list must remain outside git and be confirmed before first item.
 
 ## Decision
 
 - Decision: `approved_with_limits`
 - Approved fields: post text, selected replies, risk-relevant OCR, normalized/redacted visible links, redacted contact handles, visible platform redirects, limited metadata, redacted screenshot references
-- Disallowed fields: raw screenshots in git, full sensitive URLs in repo-visible files, link snapshots, landing-page captures, account/profile graph data
+- Disallowed fields: raw screenshots in git, full sensitive URLs in repo-visible files, credentials/session artifacts in git, production enforcement outputs, and unrelated personal-data enrichment
 - Approved collection window: after readiness sign-off through `2026-05-31`, unless stakeholder limits specify otherwise
 - Approved sample size: 50
 - Required follow-up: confirm exact raw storage and access list outside git before first item
-- Required controlled launch record: exact source, storage, access, retention, and redaction limits
+- Required controlled launch record: exact source, storage, access, retention, redaction, API credential, automation log, and run-record limits
 - Decision owner: project owner / stakeholder owner
 - Decision date: `2026-04-23`
 
