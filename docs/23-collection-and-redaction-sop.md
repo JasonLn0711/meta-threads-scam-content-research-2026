@@ -198,7 +198,7 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
 ```
 
-Use `templates/manual_collection_rehearsal_checklist.md` for the human review.
+Use `templates/manual_collection_rehearsal_checklist.md` for the human review, even when the rehearsal item came from an approved API or automation-assisted run.
 
 Common rehearsal mistakes to catch:
 
@@ -206,6 +206,9 @@ Common rehearsal mistakes to catch:
 - storing contact handles, phone numbers, emails, payment details, or referral codes in raw form
 - recording full OCR text that includes unrelated personal details
 - including reply, profile, redirect, or landing context because it seems useful rather than because it is approved in the run record
+- treating finance vocabulary alone as enough to label a readable post `uncertain`
+- downgrading decisive OCR evidence only because destination/profile context was not captured
+- treating generic verification language as a credential request without an explicit data ask
 - leaving screenshot/link status blank
 - failing to log collection burden or exclusion reason
 - treating warnings from the manual assistant as acceptable without governance review

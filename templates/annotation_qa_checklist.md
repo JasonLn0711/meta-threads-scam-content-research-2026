@@ -17,6 +17,7 @@
 |---|---|---|
 | Data authorization completed for real evidence |  |  |
 | Raw evidence storage outside git confirmed |  |  |
+| Controlled rehearsal checklist completed for current source path |  |  |
 | Approved fields match annotation sheet fields |  |  |
 | Collection batch ID filled |  |  |
 | Required identity/provenance fields filled |  |  |
@@ -39,6 +40,9 @@
 | Primary-label disagreements reviewed |  |  |
 | `scam` versus `uncertain` boundary understood |  |  |
 | `uncertain` versus `insufficient_evidence` boundary understood |  |  |
+| Readable finance discussion without a funnel stays `non_scam` |  |  |
+| Decisive OCR can still support `sufficient` evidence without destination capture |  |  |
+| Generic verification wording is not tagged as a credential request without an explicit data ask |  |  |
 | Guideline revisions logged if needed |  |  |
 
 ## In-Pass QA
@@ -109,4 +113,3 @@ Required follow-up:
 | Follow-up | Owner | Due date |
 |---|---|---|
 |  |  |  |
-

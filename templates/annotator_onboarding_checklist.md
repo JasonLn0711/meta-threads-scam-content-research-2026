@@ -20,6 +20,8 @@ Use pseudonymous IDs. Do not record unnecessary personal information in this fil
 | `docs/04-taxonomy.md` |  |  |
 | `docs/07-dataset-schema.md` |  |  |
 | `docs/23-collection-and-redaction-sop.md` redaction boundaries |  |  |
+| `governance/pilot-launch/threads_pilot_v1_2026-05_guideline_revision_log.md` |  |  |
+| `experiments/evaluation-notes/0013-controlled-rehearsal-boundary-watchlist.md` |  |  |
 
 ## Label Understanding
 
@@ -29,6 +31,9 @@ Annotator can explain:
 |---|---|---|
 | `scam` versus `uncertain` |  |  |
 | `uncertain` versus `insufficient_evidence` |  |  |
+| readable finance discussion without a funnel versus a real investment lure |  |  |
+| decisive OCR evidence versus missing destination/profile context |  |  |
+| pseudo-official verification wording versus explicit credential request |  |  |
 | `high`, `medium`, and `low` risk |  |  |
 | evidence sufficiency values |  |  |
 | annotation confidence values |  |  |
@@ -41,6 +46,7 @@ Annotator can explain:
 | aggressive but legal marketing |  |  |
 | legitimate financial education |  |  |
 | legitimate investment discussion |  |  |
+| finance discussion without a conversion step |  |  |
 | screenshot-only claims |  |  |
 | reply-only lures |  |  |
 | recruitment/job opportunity posts |  |  |
@@ -79,4 +85,3 @@ Annotator acknowledges:
 - Onboarding owner:
 - Date:
 - Status: `ready` / `needs_retraining` / `not_ready`
-
