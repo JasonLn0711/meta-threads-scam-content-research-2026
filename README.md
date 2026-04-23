@@ -117,13 +117,14 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - The approved pilot launch packet exists under `governance/pilot-launch/`.
 - The first real 50-item pilot is approved for `go_with_limits` launch preparation.
 - The first 10-15 item checkpoint protocol exists.
-- A local-only pilot workspace initializer exists for creating ignored `data/interim/` working files after controlled launch details are complete.
-- A repo-safe pilot preflight verifier exists for checking launch mechanics before item 1.
+- A local-only pilot workspace initializer exists and has created ignored `data/interim/` working files after controlled launch confirmation.
+- A repo-safe pilot preflight verifier exists and the before-item-1 check has passed with `ERROR: 0`.
 - A synthetic-only integrated launch rehearsal has exercised manual build, validation, calibration, audit, baseline, reviewer packet, and synthesis tooling.
+- The outside-git controlled launch record has been confirmed with final status `ready_for_first_10_15_items`.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - No real Threads evidence has been collected or committed.
 
-The next blocker is operational governance, not tooling: before item 1, the project owner must complete the controlled launch record with exact source, raw-storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details outside git. After that, initialize the local workspace with [docs/39-local-pilot-workspace.md](docs/39-local-pilot-workspace.md), run the preflight in [docs/40-pilot-preflight-verification.md](docs/40-pilot-preflight-verification.md), complete the 1-2 item rehearsal and 5-item calibration, then run the first 10-15 item checkpoint before completing the 50-item pilot.
+The next blocker is operational practice, not tooling: complete the 1-2 item manual rehearsal under the controlled limits, validate local records, review redaction quality, confirm calibration if annotators changed, and then collect only the first 10-15 items before the checkpoint. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 

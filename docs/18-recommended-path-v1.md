@@ -14,7 +14,7 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details outside git; initialize the local-only workspace with [39-local-pilot-workspace.md](39-local-pilot-workspace.md); pass the preflight in [40-pilot-preflight-verification.md](40-pilot-preflight-verification.md); rehearse 1-2 manual records; run 5-item calibration; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md).
+Immediate next action: run the 1-2 item manual rehearsal under the confirmed controlled launch limits; validate local records; review redaction quality; confirm or rerun 5-item calibration if annotators changed; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md). The outside-git controlled launch record is confirmed, the local-only workspace has been initialized, and before-item-1 preflight has passed with `ERROR: 0`.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 

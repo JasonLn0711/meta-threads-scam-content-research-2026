@@ -8,7 +8,7 @@ This note is repo-safe. It does not contain raw Threads content, screenshots, so
 
 ## Current Start Status
 
-As of `2026-04-23`, the repo is mechanically ready for the next governed step, and an outside-git controlled workspace scaffold has been created. Real item collection remains blocked until the controlled launch record is completed and approved outside git.
+As of `2026-04-23`, the outside-git controlled launch record has been confirmed by the project owner with final status `ready_for_first_10_15_items`. The local-only pilot workspace has been initialized, and item-1 preflight has passed.
 
 Repo-safe checks run for this start note:
 
@@ -22,17 +22,16 @@ Observed preflight result:
 | Check | Result |
 |---|---|
 | Repo-only preflight | `OK: 14`, `WARN: 3`, `ERROR: 0` |
-| Local workspace dry run | expected local-only files listed; no files written |
+| Local workspace initialization | completed under ignored `data/interim/` |
+| Before-item-1 preflight | `OK: 20`, `WARN: 1`, `ERROR: 0` |
 | Tracked raw/interim/processed/private evidence | none detected |
 | Local raw files in repo-controlled raw/screenshot/browser/evidence folders | none detected |
 
-Expected warnings:
+Remaining warning:
 
-- local workspace files are not initialized yet
-- controlled launch details cannot be verified from this repo
 - git worktree has local uncommitted or untracked changes
 
-These warnings are acceptable before collection only if the project owner completes the outside-git controlled launch record, changes its final decision to `ready_for_rehearsal` or `ready_for_first_10_15_items`, and can explain local worktree state before item 1.
+This warning is acceptable only if the project owner can explain the dirty worktree and confirm it does not contain raw evidence or source-sensitive material.
 
 ## Research Question For The Checkpoint
 
@@ -162,15 +161,24 @@ Do not continue to 50 unless the decision is `continue_to_50` or `continue_with_
 
 ## Current Decision
 
-Current decision: `controlled_workspace_scaffold_created_waiting_for_owner_completion`
+Current decision: `manual_rehearsal_intake_ready_waiting_for_approved_fields`
 
 Reason:
 
 - repo-only preflight has no errors
-- local workspace dry run is ready
-- an outside-git controlled workspace scaffold exists
-- real local files should not be created until the project owner/governance reviewer completes and confirms the outside-git controlled launch record
+- outside-git controlled launch confirmation has been received
+- local-only workspace initialization completed
+- before-item-1 preflight reports `ERROR: 0`
+- local-only manual rehearsal intake files have been prepared under ignored `data/interim/`
 - no real Threads evidence has been collected or committed as part of this start note
+
+Next action:
+
+- fill `data/interim/manual_entry_0001.json` and optionally `data/interim/manual_entry_0002.json` with approved, redacted manual fields
+- change `authorization_status` from `pending` to `approved` only after controlled review
+- build 1-2 manual rehearsal records under the approved controlled limits
+- validate the rehearsal records locally
+- proceed to the first 10-15 real items only if rehearsal passes redaction and schema review
 
 ## Commit Boundary
 
