@@ -161,7 +161,7 @@ Do not continue to 50 unless the decision is `continue_to_50` or `continue_with_
 
 ## Current Decision
 
-Current decision: `manual_rehearsal_gate_verified_waiting_for_approved_fields`
+Current decision: `approved_placeholder_gate_verified_waiting_for_redacted_fields`
 
 Reason:
 
@@ -171,12 +171,12 @@ Reason:
 - before-item-1 preflight reports `ERROR: 0`
 - local-only manual rehearsal intake files have been prepared under ignored `data/interim/`
 - pending manual rehearsal intake was blocked by governance checks before any record was generated
+- approved manual rehearsal intake with unresolved placeholders was also blocked before any record was generated
 - no real Threads evidence has been collected or committed as part of this start note
 
 Next action:
 
-- fill `data/interim/manual_entry_0001.json` and optionally `data/interim/manual_entry_0002.json` with approved, redacted manual fields
-- change `authorization_status` from `pending` to `approved` only after controlled review
+- replace all `FILL_*` values in `data/interim/manual_entry_0001.json` with approved, redacted manual fields
 - build 1-2 manual rehearsal records under the approved controlled limits
 - validate the rehearsal records locally
 - proceed to the first 10-15 real items only if rehearsal passes redaction and schema review

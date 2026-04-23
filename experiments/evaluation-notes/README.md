@@ -16,5 +16,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0008-phase1-synthetic-launch-rehearsal.md` | Synthetic-only integrated rehearsal of manual build, validation, calibration, audit, baseline, packets, and synthesis. |
 | `0009-first-10-15-real-pilot-start-note.md` | Repo-safe start note for the first governed 10-15 real-item checkpoint. |
 | `0010-manual-rehearsal-intake-gate-check.md` | Repo-safe gate check proving pending manual rehearsal intake cannot generate a real record. |
+| `0011-approved-placeholder-gate-check.md` | Repo-safe gate check proving approved manual rehearsal intake with unresolved placeholders cannot generate a real record. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

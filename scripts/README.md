@@ -176,6 +176,8 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
 ```
 
+The manual input must not contain unresolved placeholder markers such as `FILL_`, `REPLACE_`, or `PENDING_`. The assistant blocks real records with those markers even when `authorization_status` is `approved`.
+
 Compare the 5-item annotator calibration passes:
 
 ```bash

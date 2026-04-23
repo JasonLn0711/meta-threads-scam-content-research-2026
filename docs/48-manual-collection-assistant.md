@@ -137,6 +137,7 @@ The assistant blocks:
 - unsupported source types
 - unsupported collection methods
 - real records without `authorization_status: approved`
+- real records that still contain unresolved placeholder markers such as `FILL_`, `REPLACE_`, or `PENDING_`
 - full source URLs when config requires redacted or empty source references
 - full snapshots when config disables `captured_full_approved`
 - any config that enables scraping, automation, landing capture, redirect expansion, profile review, or network access
