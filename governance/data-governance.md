@@ -18,6 +18,8 @@ Semi-manual collection, stakeholder-provided samples, and documented public exam
 
 "Without limitations" is not an acceptable authorization state. Every real collection must define source, method, fields, storage, access, retention, redaction, and sharing limits.
 
+On `2026-04-23`, a scope-change request proposed accepting low-speed automated Threads/Meta collection without legal approval, platform access conditions, stakeholder authorization, or approved scope. That request is not adopted in this repo. Low speed does not remove the need for authorization, platform-condition review, field limits, storage limits, access limits, retention limits, redaction rules, and auditability.
+
 ## Prohibited Repository Contents
 
 Do not commit:
@@ -101,6 +103,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | Stakeholder-provided examples | Approved with limits for the 50-item pilot | Exact source, storage, access, retention, and redaction limits required before first item. |
 | Manual public examples | Approved with limits for the 50-item pilot | Manual-only, privacy-minimized, no automation. |
 | API-authorized collection | Not currently approved | Must be recorded before use. |
+| Low-speed automated Threads/Meta collection | Rejected or paused | Rate limiting alone is not authorization; requires the same written approval and scope controls as any automated collection. |
 | Browser automation, scraping, crawling, bulk export | Not approved | Do not add scripts or outputs for this. |
 | Landing-page crawling or redirect-chain capture | Not approved | Visible links may be recorded if permitted; do not crawl destinations. |
 | Unlimited 500-item collection | Rejected or paused | Use `docs/32-500-item-expansion-plan.md`; no collection without staged authorization. |

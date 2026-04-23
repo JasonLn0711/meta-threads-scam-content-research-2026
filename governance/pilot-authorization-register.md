@@ -13,6 +13,7 @@ This file is a governance index, not a place for sensitive details. Do not paste
 | 2026-04-23 | Synthetic examples for templates, calibration, and tooling dry runs | `approved_synthetic_only` | No real Threads evidence, no personal data, no live URLs, no raw screenshots. |
 | 2026-04-23 | Real 50-item Threads pilot | `approved_with_limits` | Launch packet recorded; exact source, storage, access, retention, and redaction limits must be completed in controlled record before collection. |
 | 2026-04-23 | Immediate 500-item real collection without limitations | `rejected_or_paused` | Unlimited collection is not a valid authorization state. Use `docs/32-500-item-expansion-plan.md`. |
+| 2026-04-23 | Low-speed automated Threads/Meta collection without legal/platform/stakeholder scope | `rejected_or_paused` | Low-speed automation is still automation. It is not accepted without recorded authorization, platform access conditions, approved scope, field limits, storage, access, retention, and redaction rules. |
 
 ## Authorization Levels
 
@@ -31,6 +32,7 @@ This file is a governance index, not a place for sensitive details. Do not paste
 | SYNTH-2026-04-23 | 2026-04-23 | researcher_synthetic | synthetic | synthetic sample fields only | git-safe samples only; generated outputs ignored | keep as non-evidence templates | `approved_synthetic_only` | project owner | Used for dry-run QA. |
 | AUTH-THREADS-PILOT-V1-2026-04-23 | 2026-04-23 | stakeholder/manual public source category | manual only | post text, selected replies, OCR excerpts, redacted screenshot references, normalized/redacted links, redacted handles, visible redirects, metadata notes | controlled location outside git; exact path outside repo | pilot-only; review after decision memo | `approved_with_limits` | project owner | `go_with_limits`; exact source/storage/access/retention/redaction launch record required before first item. |
 | EXPAND-500-UNLIMITED-2026-04-23 | 2026-04-23 | unspecified | unspecified/unlimited | "all fields" requested, not accepted | unspecified | unspecified | `rejected_or_paused` | project owner | Replaced with staged expansion plan and work order. |
+| AUTO-LOW-SPEED-NO-SCOPE-2026-04-23 | 2026-04-23 | Threads/Meta public surfaces | low-speed automated collection | not approved | unspecified | unspecified | `rejected_or_paused` | project owner | Request to accept low-speed automation without legal/platform/stakeholder scope was not adopted; see `decision-log/0016-reject-low-speed-automation-without-scope.md`. |
 
 ## Decision Summary Template
 

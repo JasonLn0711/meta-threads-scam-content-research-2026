@@ -13,6 +13,7 @@ This register is not a place for sensitive source details. Do not include raw ev
 | 2026-04-23 | `SRC-SYNTH-2026-04-23` | `approved_synthetic_only` | Synthetic examples for templates, calibration, and dry-run QA. |
 | 2026-04-23 | `SRC-REAL-PILOT-APPROVED-2026-04-23` | `approved_for_50_item_pilot` | Approved for bounded 50-item pilot launch prep; exact sensitive source details must be recorded outside git before collection. |
 | 2026-04-23 | `SRC-UNLIMITED-500-2026-04-23` | `rejected_or_paused` | Unlimited 500-item collection is not a valid source authorization. |
+| 2026-04-23 | `SRC-AUTO-LOW-SPEED-NO-SCOPE-2026-04-23` | `rejected_or_paused` | Low-speed automated Threads/Meta collection without legal/platform/stakeholder scope is not accepted. |
 
 ## Status Values
 
@@ -33,6 +34,7 @@ This register is not a place for sensitive source details. Do not include raw ev
 | SRC-SYNTH-2026-04-23 | `researcher_synthetic` | calibration and workflow QA | `approved_synthetic_only` | low | useful for tooling only | high if treated as real data | use only as synthetic | Not real evidence. |
 | SRC-REAL-PILOT-APPROVED-2026-04-23 | `stakeholder_provided_case` / `manual_public_example` | 50-item pilot | `approved_with_limits` | medium | useful for pilot | medium | approved for launch prep | Manual-only; exact source, storage, access, retention, and redaction limits required before collection. |
 | SRC-UNLIMITED-500-2026-04-23 | unspecified | immediate 500-item collection | `rejected_or_paused` | red | unknown | red | rejected or paused | Use staged expansion plan instead. |
+| SRC-AUTO-LOW-SPEED-NO-SCOPE-2026-04-23 | Threads/Meta public surfaces | low-speed automated collection | `rejected_or_paused` | red | unknown | red | rejected or paused | Rate limiting alone does not satisfy authorization, platform, storage, retention, redaction, or audit requirements. |
 
 ## Review Requirements
 

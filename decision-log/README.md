@@ -33,3 +33,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Added a required first 10-15 item checkpoint before completing the 50-item pilot | `0013-add-first-pilot-checkpoint-protocol.md` |
 | 2026-04-23 | Added a local pilot workspace initializer for ignored `data/interim/` working files | `0014-add-local-pilot-workspace-initializer.md` |
 | 2026-04-23 | Added a mechanical pilot preflight verifier before item 1 | `0015-add-pilot-preflight-verification.md` |
+| 2026-04-23 | Rejected low-speed automated Threads/Meta collection without recorded legal/platform/stakeholder scope | `0016-reject-low-speed-automation-without-scope.md` |

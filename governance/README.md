@@ -11,6 +11,7 @@ As of `2026-04-23`:
 - no real Threads evidence has been collected or committed
 - exact source, storage, access, retention, and redaction limits must be written into the controlled launch record before the first item
 - no automated collection, scraping, crawling, browser automation, bulk export, landing-page crawling, or redirect expansion is approved
+- low-speed automated Threads/Meta collection is not accepted without the same recorded legal/platform/stakeholder scope required for any automation
 - raw evidence must not be committed to git
 
 ## Current Governance Records
