@@ -61,6 +61,7 @@ Deferred in phase 1:
 ## Repo Map
 
 ```text
+reports/         External-facing research reports and report index
 docs/             Research framing, taxonomy, experiment plans, budget analysis
 data-contracts/   Machine-readable dataset schema drafts
 templates/        Annotation and experiment templates
@@ -84,9 +85,19 @@ This repo is the active Threads execution repo in a small research repo family.
 
 Read `docs/21-repo-relationships.md` before copying content across repos or changing the boundary between Threads execution and umbrella strategy.
 
+## Current Report Deliverable
+
+The immediate deliverable is a CIB/165-facing initial research report:
+
+- [reports/threads-scam-content-research-v0.md](reports/threads-scam-content-research-v0.md)
+- Target date: `2026-04-30`
+- Status: research report v0, not a production detector or legal fraud determination
+
+This supersedes a concept-only stakeholder scoping memo as the next research artifact.
+
 ## Recommended First Milestone
 
-Within 4 weeks, produce:
+By `2026-04-30`, produce the readable report v0 above. Within the following 4 weeks, produce:
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. A first manually reviewed dataset slice of 100 to 150 Threads-related items.

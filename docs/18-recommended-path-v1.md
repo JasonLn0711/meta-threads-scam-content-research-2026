@@ -1,8 +1,18 @@
 # Recommended Path v1
 
+## Immediate Report Milestone
+
+By `2026-04-30`, produce [../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md) for CIB/165-facing review.
+
+This report is the immediate research deliverable. It should turn the current scaffold into a readable v0 initial research report with problem definition, Threads-only scope, dataset v0 plan, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and four-week execution path.
+
+The report supersedes a concept-only stakeholder scoping memo as the next artifact.
+
 ## What To Do Now
 
 Build a phase-1 research MVP for Threads scam-like content triage.
+
+Immediate next action: complete stakeholder pilot approval using `docs/25-stakeholder-pilot-kickoff.md`, then pass `docs/26-pilot-go-no-go-checklist.md` before real examples are collected.
 
 The MVP should include:
 
