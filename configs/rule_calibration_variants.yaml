@@ -1,0 +1,47 @@
+# Calibration profiles for the modular rule baseline.
+# These are not separate models. They are transparent threshold/weight probes.
+
+profiles:
+  baseline:
+    description: Current recommended conservative defaults.
+    overrides: {}
+
+  precision_first:
+    description: Higher high-risk bar for early reviewer trust and false-positive control.
+    overrides:
+      scoring:
+        thresholds:
+          medium_threshold: 6
+          high_threshold: 12
+          high_min_categories: 3
+
+  recall_probe:
+    description: Lower medium-risk bar to inspect whether weak missed cases should enter review.
+    overrides:
+      scoring:
+        thresholds:
+          medium_threshold: 4
+          high_threshold: 9
+          high_min_categories: 2
+
+  redirect_strict:
+    description: Tests whether private redirects and contact handles should dominate less.
+    overrides:
+      signal_weights:
+        PRIVATE_REDIRECT: 3.0
+        CONTACT_HANDLE_PRESENT: 2.0
+      scoring:
+        thresholds:
+          medium_threshold: 5
+          high_threshold: 10
+
+  ocr_sensitive:
+    description: Tests whether OCR-heavy evidence should enter review more readily.
+    overrides:
+      signal_weights:
+        OCR_SUSPICIOUS_TEXT: 2.0
+        SCREENSHOT_EVIDENCE: 1.5
+      scoring:
+        thresholds:
+          medium_threshold: 5
+          high_threshold: 9

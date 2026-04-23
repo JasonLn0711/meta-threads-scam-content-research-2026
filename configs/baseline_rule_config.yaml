@@ -1,0 +1,94 @@
+# Rule baseline v1 configuration for Threads scam-content research.
+# Keep this file easy to tune after the first 30-50 real annotated items.
+
+signal_weights:
+  GUARANTEED_PROFIT: 4.0
+  LOW_EFFORT_HIGH_RETURN: 3.0
+  BEGINNER_EASY_MONEY: 2.0
+  MENTOR_COPYTRADE_LANGUAGE: 3.0
+  PRIVATE_REDIRECT: 4.0
+  CONTACT_HANDLE_PRESENT: 3.0
+  EXTERNAL_LINK_PRESENT: 1.5
+  URGENCY_PRESSURE: 2.0
+  TESTIMONIAL_PATTERN: 2.5
+  SCREENSHOT_EVIDENCE: 1.0
+  PSEUDO_OFFICIAL_LANGUAGE: 3.0
+  CELEBRITY_ENDORSEMENT_PATTERN: 2.5
+  PAYMENT_OR_CREDENTIAL_REQUEST: 5.0
+  OCR_SUSPICIOUS_TEXT: 1.0
+  REPLY_FUNNEL_PATTERN: 1.5
+
+reason_code_order:
+  - PAYMENT_OR_CREDENTIAL_REQUEST
+  - GUARANTEED_PROFIT
+  - LOW_EFFORT_HIGH_RETURN
+  - BEGINNER_EASY_MONEY
+  - MENTOR_COPYTRADE_LANGUAGE
+  - PRIVATE_REDIRECT
+  - CONTACT_HANDLE_PRESENT
+  - EXTERNAL_LINK_PRESENT
+  - URGENCY_PRESSURE
+  - TESTIMONIAL_PATTERN
+  - SCREENSHOT_EVIDENCE
+  - PSEUDO_OFFICIAL_LANGUAGE
+  - CELEBRITY_ENDORSEMENT_PATTERN
+  - OCR_SUSPICIOUS_TEXT
+  - REPLY_FUNNEL_PATTERN
+  - MULTI_SIGNAL_CONVERGENCE
+
+scoring:
+  max_signal_instances_per_code: 2
+  thresholds:
+    medium_threshold: 5
+    high_threshold: 9
+    high_min_categories: 2
+    multi_signal_convergence_min_categories: 3
+    binary_positive_policy: medium_or_high
+
+  combination_bonuses:
+    - code: lure_plus_redirect
+      reason_code: MULTI_SIGNAL_CONVERGENCE
+      weight: 3.0
+      required_categories:
+        - textual_lure
+        - redirect_contact
+      description: Textual lure and redirect/contact evidence co-occur.
+    - code: payment_plus_redirect
+      reason_code: MULTI_SIGNAL_CONVERGENCE
+      weight: 2.0
+      required_categories:
+        - payment_credential
+        - redirect_contact
+      description: Payment/credential request and redirect/contact evidence co-occur.
+    - code: three_family_convergence
+      reason_code: MULTI_SIGNAL_CONVERGENCE
+      weight: 2.0
+      min_categories: 3
+      description: Three or more independent signal families co-occur.
+
+  subtype_mappings:
+    - subtype: investment_lure
+      min_total_score: 6
+      required_any_signal_codes:
+        - GUARANTEED_PROFIT
+        - LOW_EFFORT_HIGH_RETURN
+        - MENTOR_COPYTRADE_LANGUAGE
+    - subtype: redirect_to_private_chat
+      min_total_score: 5
+      required_any_signal_codes:
+        - PRIVATE_REDIRECT
+        - CONTACT_HANDLE_PRESENT
+    - subtype: impersonation_pseudo_official
+      min_total_score: 5
+      required_any_signal_codes:
+        - PSEUDO_OFFICIAL_LANGUAGE
+        - CELEBRITY_ENDORSEMENT_PATTERN
+    - subtype: suspicious_testimonial
+      min_total_score: 5
+      required_any_signal_codes:
+        - TESTIMONIAL_PATTERN
+        - SCREENSHOT_EVIDENCE
+    - subtype: other_high_risk_persuasion
+      min_total_score: 9
+      required_any_categories:
+        - payment_credential
