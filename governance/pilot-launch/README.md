@@ -18,6 +18,10 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_controlled_crawler_run_record_0001.md` | Non-sensitive tracked run record for the first controlled low-speed crawler rehearsal. |
 | `threads_pilot_v1_2026-05_controlled_crawler_run_record_0002.md` | Non-sensitive tracked run record for the next one-item browser-rendered or API/session-aware rehearsal. |
 | `threads_pilot_v1_2026-05_checkpoint_browser_run_record_0003.md` | Non-sensitive tracked run record for collecting local records 0002-0010 for the first 10-item checkpoint. |
+| `threads_pilot_v1_2026-05_limited_extension_run_record_0004.md` | Non-sensitive tracked run record for the item 11-15 limited extension after the first checkpoint decision. |
+| `threads_pilot_v1_2026-05_risk_probe_run_record_0005.md` | Non-sensitive tracked run record for the first multi-term high-risk case-finding probe before item 16. |
+| `threads_pilot_v1_2026-05_risk_probe_run_record_0006.md` | Non-sensitive tracked run record for the normalized no-space risk-probe retry before item 16. |
+| `threads_pilot_v1_2026-05_access_path_review_run_record_0007.md` | Non-sensitive tracked run record for the approved session/API access-path review before item 16. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
 | `threads_pilot_v1_2026-05_guideline_revision_log.md` | Accepted calibration-driven guideline revisions for the first governed rehearsal and pilot batch. |
@@ -52,4 +56,4 @@ Meaning:
 - The pilot must pause after the first 10-15 collected or annotated rows for checkpoint review.
 - The integrated synthetic launch rehearsal is tooling evidence only; it does not authorize item 1.
 
-No real Threads evidence has been collected or committed in this folder.
+No raw Threads evidence has been collected or committed in this folder. As of `2026-04-24`, the first 15 controlled local records have been collected under ignored local files and summarized only in repo-safe aggregate notes. Risk-probe runs 0005 and 0006 did not produce extractable item content, and access-path review run 0007 did not attempt collection, so item 0016 remains uncreated.

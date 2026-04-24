@@ -99,7 +99,7 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot launch preparation:
+As of `2026-04-24`, the repo has moved from scaffold-only to a controlled, checkpointed pilot:
 
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
@@ -125,10 +125,14 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - A non-sensitive controlled launch record now records CIB authorization for API access and all research-required automation under explicit run-record, storage, access, retention, and redaction controls.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed to this repo.
+- The first 15 controlled local records have been collected under ignored `data/interim/`, built, strict-validated, and summarized in repo-safe aggregate notes.
+- The first 15-item aggregate remains low-risk skewed: 14 `non_scam`, 1 adjudicated `uncertain`, 0 `scam`, and 0 medium/high-risk records.
+- Risk-probe runs 0005 and 0006 tested domain plus signal-family seeds, but public unauthenticated browser-rendered search returned no extractable item content; item 0016 remains uncreated.
+- Access-path review run 0007 confirmed controlled-store access governance material exists outside git, but no loadable browser storage-state/session artifact or ready API client path was available; item 0016 remains uncreated.
 
-The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, record the repo-safe rehearsal decision, confirm calibration if annotators changed, and only then collect the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+The next blocker is executable access path, not query wording: before item 16, prepare a loadable browser session artifact in controlled storage or an approved API/session-aware client path. The current topic-only seed path is useful for comparator and boundary examples, but it has not produced high-risk scam-like cases; the public risk-probe path also does not expose item content. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until a later checkpoint decision records adequate source mix, content-form mix, and evidence mix.
 
-As of `2026-04-24`, CIB and other units cannot provide redacted case examples, and manual controlled sampling is unavailable. The next practical acquisition path is therefore a one-item controlled low-speed crawler rehearsal under Decision 0022, [docs/50-controlled-crawler-acquisition-plan.md](docs/50-controlled-crawler-acquisition-plan.md), and [templates/controlled_crawler_run_record.md](templates/controlled_crawler_run_record.md). Do not start the first 10-15 item checkpoint until the crawler rehearsal builds and strict-validates one local record and the aggregate rehearsal decision is `pass_ready_for_calibration_or_first_10_15` or `pass_with_limits`.
+As of `2026-04-24`, CIB and other units cannot provide redacted case examples, and manual controlled sampling is unavailable. The practical acquisition path remains controlled browser-rendered or API/session-aware collection under explicit run records, [docs/50-controlled-crawler-acquisition-plan.md](docs/50-controlled-crawler-acquisition-plan.md), and [templates/controlled_crawler_run_record.md](templates/controlled_crawler_run_record.md). The next run must be an approved session/API risk-probe access run, not another public unauthenticated query-string experiment.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
@@ -138,7 +142,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, one-item controlled low-speed crawler rehearsal completed if no redacted/manual source item is available, rehearsal review recorded, 5-item calibration completed if needed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, controlled browser-rendered rehearsal completed, first 15 controlled records strict-validated, risk-probe method tested, and approved session/API risk-probe access reviewed before item 16.
 4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
 5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
 6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
@@ -146,7 +150,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 Recommended first dataset slice:
 
 - 5 synthetic or redacted calibration items.
-- 10-15 real checkpoint items before completing the conditional 50-item pilot.
+- 10-15 real checkpoint items before completing the conditional 50-item pilot; this lower-bound checkpoint is complete, but high-risk case-finding still needs a method study before item 16.
 - 100-200 manually reviewed examples only after pilot review justifies expansion.
 - Include likely scam-like, likely non-scam, uncertain, and insufficient-evidence cases.
 - Cover text-only posts, text plus image posts, comments/replies, OCR text, and visible redirection or link signals.

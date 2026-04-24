@@ -24,5 +24,10 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0016-controlled-browser-rehearsal-run-0002.md` | Repo-safe result note for the first browser-rendered rehearsal that produced one strict-valid local record. |
 | `0017-first-10-item-checkpoint-start.md` | Repo-safe start note for the first 10-item checkpoint under run-0002 limits. |
 | `0018-first-10-item-checkpoint-result.md` | Repo-safe aggregate result and `continue_with_limits` decision for the first 10-item checkpoint. |
+| `0019-first-15-item-limited-extension-result.md` | Repo-safe aggregate result for the item 11-15 limited extension and source-strategy gate before item 16. |
+| `0020-high-risk-case-finding-method-study.md` | Repo-safe method-study design for finding higher-risk cases without uncontrolled scraping or label leakage. |
+| `0021-risk-probe-run-0005-result.md` | Repo-safe result note for the multi-term risk-probe run that returned no extractable item content. |
+| `0022-risk-probe-run-0006-result.md` | Repo-safe result note for the normalized no-space risk-probe retry that also returned no extractable item content. |
+| `0023-access-path-review-run-0007-result.md` | Repo-safe result note for the approved session/API access-path review before item 16. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

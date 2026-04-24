@@ -40,3 +40,5 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Added a repo-safe controlled rehearsal review bridge before the first 10-15 item checkpoint | `0020-add-controlled-rehearsal-review-bridge.md` |
 | 2026-04-24 | Recorded CIB-approved rehearsal intake readiness while keeping the first checkpoint blocked until one controlled item is built and strict-validated | `0021-record-cib-approved-rehearsal-intake-ready.md` |
 | 2026-04-24 | Accepted a controlled low-speed crawler as the next practical acquisition path under the existing CIB-authorized automation scope | `0022-record-controlled-low-speed-crawler-path.md` |
+| 2026-04-24 | Required a controlled risk-probe method before item 16 after the first 15 records yielded no high-risk examples | `0023-require-risk-probe-method-before-item-16.md` |
+| 2026-04-24 | Required approved session/API risk-probe access after public browser-rendered risk probes returned no extractable item content | `0024-require-approved-session-or-api-risk-probe-access.md` |
