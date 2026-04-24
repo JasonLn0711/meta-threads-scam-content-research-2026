@@ -21,5 +21,8 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0013-controlled-rehearsal-boundary-watchlist.md` | Repo-safe watchlist for the first 1-2 controlled real rehearsal items after the calibration-driven guideline revision. |
 | `0014-controlled-rehearsal-review-protocol.md` | Repo-safe bridge from the 1-2 item rehearsal to the first 10-15 item checkpoint decision. |
 | `0015-controlled-crawler-rehearsal-run-0001.md` | Repo-safe result note for the first seed-1 controlled crawler rehearsal and its no-extractable-item stop condition. |
+| `0016-controlled-browser-rehearsal-run-0002.md` | Repo-safe result note for the first browser-rendered rehearsal that produced one strict-valid local record. |
+| `0017-first-10-item-checkpoint-start.md` | Repo-safe start note for the first 10-item checkpoint under run-0002 limits. |
+| `0018-first-10-item-checkpoint-result.md` | Repo-safe aggregate result and `continue_with_limits` decision for the first 10-item checkpoint. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

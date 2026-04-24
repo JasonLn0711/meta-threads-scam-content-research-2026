@@ -16,6 +16,8 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_go_no_go.md` | Go/no-go decision record. |
 | `threads_pilot_v1_2026-05_controlled_rehearsal_work_order.md` | Execution sheet for the first 1-2 controlled real rehearsal items. |
 | `threads_pilot_v1_2026-05_controlled_crawler_run_record_0001.md` | Non-sensitive tracked run record for the first controlled low-speed crawler rehearsal. |
+| `threads_pilot_v1_2026-05_controlled_crawler_run_record_0002.md` | Non-sensitive tracked run record for the next one-item browser-rendered or API/session-aware rehearsal. |
+| `threads_pilot_v1_2026-05_checkpoint_browser_run_record_0003.md` | Non-sensitive tracked run record for collecting local records 0002-0010 for the first 10-item checkpoint. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
 | `threads_pilot_v1_2026-05_guideline_revision_log.md` | Accepted calibration-driven guideline revisions for the first governed rehearsal and pilot batch. |
