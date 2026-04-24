@@ -20,5 +20,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0012-synthetic-calibration-guideline-revision.md` | Repo-safe note recording calibration-driven guideline and answer-key revisions before real-item expansion. |
 | `0013-controlled-rehearsal-boundary-watchlist.md` | Repo-safe watchlist for the first 1-2 controlled real rehearsal items after the calibration-driven guideline revision. |
 | `0014-controlled-rehearsal-review-protocol.md` | Repo-safe bridge from the 1-2 item rehearsal to the first 10-15 item checkpoint decision. |
+| `0015-controlled-crawler-rehearsal-run-0001.md` | Repo-safe result note for the first seed-1 controlled crawler rehearsal and its no-extractable-item stop condition. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

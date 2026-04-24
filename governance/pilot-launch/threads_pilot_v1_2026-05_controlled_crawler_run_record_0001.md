@@ -18,7 +18,7 @@ Do not add raw Threads content, screenshots, full URLs, raw handles, case IDs, c
 | Controlled launch record | `CTRL-THREADS-PILOT-V1-CIB-2026-04-23` |
 | Purpose | first one-item controlled crawler rehearsal |
 | Current gate | `ready_for_controlled_item_entry` |
-| Run status | `ready_pending_seed_or_target` |
+| Run status | `completed_no_extractable_item` |
 
 ## Access, Session, And Output Confirmation
 
@@ -26,13 +26,23 @@ Do not add raw Threads content, screenshots, full URLs, raw handles, case IDs, c
 |---|---|---|
 | CIB authorization applies to this run | complete | Approved under Decision 0018 and Decision 0022. |
 | Source category is approved | complete | CIB-authorized Threads scam/scam-like content research examples. |
-| Platform/access conditions checked | complete_with_sensitive_details_outside_git | Exact access path, account/session state, and any platform-specific constraints remain in the CIB-controlled store. |
-| Credentials/session storage outside git | complete | Use `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-CREDENTIALS` and `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-SESSION-ARTIFACTS`; no credentials, cookies, tokens, browser profiles, or HAR files enter git. |
-| Raw output storage outside git | complete | Use `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-RAW` with run ID `CRAWL-THREADS-PILOT-V1-0001`; exact path outside git. |
+| Platform/access conditions checked | complete_with_stop_condition | Seed 1 returned a platform canonical redirect, then a 200 search-page app shell. No login, captcha, 403, 429, or platform warning was observed in the static fetch. |
+| Credentials/session storage outside git | complete | The canonical response included a session-related header artifact; its value was not copied into git. Use `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-CREDENTIALS` and `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-SESSION-ARTIFACTS`; no credentials, cookies, tokens, browser profiles, or HAR files enter git. |
+| Raw output storage outside git | complete | Raw headers and HTML were retained outside the repo for run review only. Use `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-RAW` with run ID `CRAWL-THREADS-PILOT-V1-0001`; exact path outside git. |
 | Automation log storage outside git | complete | Use `CIB-CONTROLLED-STORE-THREADS-PILOT-V1-AUTOMATION-LOGS`; repo may keep only non-sensitive summary. |
 | Redacted local output path prepared | complete | `data/interim/manual_entry_0001.json` remains ignored/local working data. |
-| Run does not require unapproved source/context | pending_execution | Confirm during execution; stop if the crawler needs context outside this record. |
-| Concrete seed, URL, query, or access target available | missing | Required before execution; do not invent a seed or target. |
+| Run does not require unapproved source/context | complete_with_stop_condition | Static search fetch produced no extractable public item. Selecting an item now requires a browser-rendered, API, or otherwise updated run path before continuing. |
+| Concrete seed, URL, query, or access target available | complete | Seed set supplied by project owner; first run uses only seed 1. |
+
+## Seed Set
+
+| Seed | Query | URL | Use in run 0001 |
+|---:|---|---|---|
+| 1 | `投資` | `https://www.threads.net/search?q=投資` | yes |
+| 2 | `賺錢` | `https://www.threads.net/search?q=賺錢` | reserve |
+| 3 | `股票` | `https://www.threads.net/search?q=股票` | reserve |
+| 4 | `虛擬貨幣` | `https://www.threads.net/search?q=虛擬貨幣` | reserve |
+| 5 | `加密貨幣` | `https://www.threads.net/search?q=加密貨幣` | reserve |
 
 ## Run Limits
 
@@ -45,7 +55,7 @@ Do not add raw Threads content, screenshots, full URLs, raw handles, case IDs, c
 | Minimum delay between fetches | 30 seconds |
 | Retry cap per failed fetch | 1 |
 | Burst behavior | none |
-| Redirect capture allowed? | no for first run unless this record is updated before execution |
+| Redirect capture allowed? | platform canonical redirect only; no external redirect capture |
 | Landing-page capture allowed? | no for first run unless this record is updated before execution |
 | Profile/account context allowed? | no for first run unless this record is updated before execution |
 | Broad reply/comment capture allowed? | no |
@@ -79,24 +89,25 @@ Stop immediately if:
 - broad profile/account graph capture becomes necessary
 - redirect, landing-page, or profile context is needed but not allowed above
 - no concrete seed, URL, query, or target is available
+- static search fetch returns only a dynamic app shell and no extractable candidate item
 
 ## Run Result
 
 | Result field | Value |
 |---|---|
-| Run started? | no |
-| Run completed? | no |
+| Run started? | yes |
+| Run completed? | yes; stopped after seed 1 static-fetch assessment |
 | Candidates reviewed | 0 |
 | Selected items | 0 |
 | Stop condition triggered? | yes |
-| Stop condition | concrete seed, URL, query, or access target missing |
-| Raw output path recorded outside git? | prepared |
+| Stop condition | Seed 1 produced a 301 platform canonical redirect followed by a 200 search-page app shell with no extractable post text fields; item selection would require an updated browser-rendered/API/session-aware run path. |
+| Raw output path recorded outside git? | yes; raw headers and HTML retained outside the repo only |
 | Redacted item entered into `manual_entry_0001.json`? | no |
 | `manual_record_0001.json` built? | no |
-| Strict validation result | not_run |
-| Redaction review result | not_run |
-| Decision after run | blocked_missing_seed_or_target |
+| Strict validation result | not_run; build correctly blocked because no selected item exists |
+| Redaction review result | blocked_no_item |
+| Decision after run | pause_for_collection_fix |
 
 ## Next Action
 
-Provide or select one concrete CIB-approved seed, URL, query, or access target outside git. Then execute the one-item crawler rehearsal under this record, redact the selected item into `data/interim/manual_entry_0001.json`, build `manual_record_0001.json`, and run strict validation.
+Do not move to the first 10-15 item checkpoint. Prepare the next controlled run record update before any additional collection: either test one reserve seed at the same low rate with the same stop condition, or switch to the already authorized browser/API path with explicit session, rendering, raw-output, and redaction controls. Only after one selected item is redacted, built, and strict-validated can the project reassess checkpoint readiness.
