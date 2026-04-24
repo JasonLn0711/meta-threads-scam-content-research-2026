@@ -70,9 +70,8 @@ pause_for_collection_fix
 
 ## Next Action
 
-Before any additional collection, update the controlled run path for exactly one of these options:
+Before any additional collection, use `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_crawler_run_record_0002.md`.
 
-- test one reserve seed at the same low rate and the same stop conditions
-- use the already authorized browser-rendered/API/session-aware path with explicit session, rendering, raw-output, and redaction controls
+Run 0002 selects the already authorized browser-rendered session-aware path with explicit session, rendering, raw-output, and redaction controls. API/session-aware retrieval remains a later fallback only if run 0002 is updated or a later record is opened.
 
 Do not start the first 10-15 item checkpoint until the aggregate rehearsal review records either `pass_ready_for_calibration_or_first_10_15` or `pass_with_limits`.

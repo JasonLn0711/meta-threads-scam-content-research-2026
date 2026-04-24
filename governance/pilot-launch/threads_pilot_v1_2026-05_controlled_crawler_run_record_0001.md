@@ -110,4 +110,4 @@ Stop immediately if:
 
 ## Next Action
 
-Do not move to the first 10-15 item checkpoint. Prepare the next controlled run record update before any additional collection: either test one reserve seed at the same low rate with the same stop condition, or switch to the already authorized browser/API path with explicit session, rendering, raw-output, and redaction controls. Only after one selected item is redacted, built, and strict-validated can the project reassess checkpoint readiness.
+Do not move to the first 10-15 item checkpoint. The next controlled run is tracked in `threads_pilot_v1_2026-05_controlled_crawler_run_record_0002.md`, which switches from static fetch to a single browser-rendered session-aware path with explicit session, rendering, raw-output, and redaction controls. API/session-aware retrieval remains a later fallback only if the run record is updated or a later record is opened. Only after one selected item is redacted, built, and strict-validated can the project reassess checkpoint readiness.
