@@ -8,14 +8,15 @@ The goal is to prevent the first real dataset from becoming source-skewed, priva
 
 ## Current State
 
-As of `2026-04-23`:
+As of `2026-04-24`:
 
 - synthetic examples are approved for dry runs
-- no real Threads item has been collected or committed
-- the first real pilot is approved only for bounded `go_with_limits` launch preparation
-- exact sensitive source, storage, access, retention, and redaction details still must be completed outside git before item 1
+- 15 controlled local Threads records have been collected under ignored `data/interim/`, built, strict-validated, and summarized only in aggregate repo-safe notes
+- no raw Threads evidence, source URLs, handles, screenshots, browser profiles, cookies, or session artifacts have been committed
+- the first real pilot is approved only for bounded `go_with_limits` execution under explicit run records
+- exact sensitive source, storage, access, retention, and redaction details remain outside git
 - immediate unlimited 500-item collection is rejected or paused
-- the next valid real-data step is the first 10-15 item checkpoint inside the conditional 50-item pilot
+- the next valid real-data step before item 16 is an approved browser-rendered session/access or API/session-aware risk-probe access review, because public unauthenticated risk-probe searches yielded 0 extractable item-content candidates
 
 ## Source Intake Principle
 
@@ -127,6 +128,14 @@ Suggested pilot mix:
 | ambiguous or insufficient-evidence cases | 5-10 |
 
 If only one real source is approved, the pilot may still proceed, but the pilot result summary must mark source skew as a limitation.
+
+## Risk-Probe Seed Strategy
+
+The first 15 controlled local records show that topic-only seeds can overproduce low-risk comparators. Risk-probe runs 0005 and 0006 then showed that public unauthenticated browser-rendered risk-probe searches do not expose extractable item content. Before item 16, use [0020-high-risk-case-finding-method-study.md](../experiments/evaluation-notes/0020-high-risk-case-finding-method-study.md) and Decision 0024 to define an approved session/API-aware risk-probe run record.
+
+Risk-probe seeds should combine an approved domain with one visible signal family, such as guaranteed outcome, private-channel migration, trading authority, payment/wallet action, urgency, testimonial proof, or reward/giveaway language. These probe terms are candidate-generation aids only; they are not labels.
+
+Do not expand into profile review, landing pages, redirect chains, screenshots, OCR, or broad replies unless the new run record explicitly authorizes those fields and their redaction/storage handling.
 
 ## Comparator Strategy
 
