@@ -18,8 +18,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Controlled launch record | `CTRL-THREADS-PILOT-V1-CIB-2026-04-23` |
 | Prior run | `CRAWL-THREADS-PILOT-V1-0007` |
 | Purpose | prepare a usable approved browser storage-state path or API/session-aware client path before item 0016 |
-| Current gate | `access_path_prepared_not_yet_executed` |
-| Run status | `prepared_no_collection_attempted` |
+| Current gate | `browser_storage_state_ready_next_execution_run_opened` |
+| Run status | `completed_storage_state_ready_no_collection_attempted` |
 
 ## Required Pre-Run Gate
 
@@ -36,7 +36,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Path | Status | Repo-safe observation |
 |---|---|---|
 | Browser storage-state slot | prepared | Controlled-store `SESSION-ARTIFACTS/` slot and template are prepared outside git. |
-| Browser storage-state artifact | pending | A real approved exported storage-state file still must be placed outside git before browser execution. |
+| Browser storage-state artifact | ready_outside_git | Approved browser storage-state artifact exists in controlled storage and passes shape validation. |
 | API credential env path | prepared | Controlled-store env shape can be checked without printing values. |
 | API/session-aware client helper | prepared | Client helper can dry-run readiness and, if explicitly executed, writes raw output only to controlled storage. |
 | Item 0016 collection | not_attempted | This run prepares access only; it does not select or build an item. |
@@ -108,15 +108,15 @@ Stop immediately if:
 | Stop condition triggered? | no |
 | Local records built? | no; no `manual_entry_0016.json` was created |
 | Strict validation result | existing 15-record aggregate still strict-valid |
-| Decision after run | `await_real_approved_storage_state_or_api_probe_inputs_before_item_16` |
+| Browser storage-state readiness | pass |
+| Decision after run | `open_single_item_browser_session_execution_run_0009` |
 
 ## Decision
 
 Do not create item 0016 from run 0008.
 
-The next execution run may attempt item 0016 only after one of the following is true:
+The next execution run may attempt item 0016 because the approved browser storage-state/session artifact now exists in controlled storage and passes shape validation.
 
-- a real approved browser storage-state/session artifact exists in controlled storage and passes shape validation, or
-- the controlled API env has a real approved access token and probe URL, the dry-run readiness check passes, and the run record authorizes execution.
+The API path remains optional and not ready until the controlled API env has a real approved probe URL and the dry-run readiness check passes.
 
 Query terms remain candidate-generation probes only and cannot become labels or item evidence.
