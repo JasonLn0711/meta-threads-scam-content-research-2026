@@ -43,3 +43,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-24 | Required a controlled risk-probe method before item 16 after the first 15 records yielded no high-risk examples | `0023-require-risk-probe-method-before-item-16.md` |
 | 2026-04-24 | Required approved session/API risk-probe access after public browser-rendered risk probes returned no extractable item content | `0024-require-approved-session-or-api-risk-probe-access.md` |
 | 2026-04-25 | Prepared controlled browser storage-state and API/session-aware access paths while keeping secrets and raw output outside git | `0025-prepare-controlled-session-api-access-path.md` |
+| 2026-04-25 | Required method revision after run 0010 exhausted all five item 0017 seeds without selecting a safe redacted item | `0026-require-method-revision-after-run-0010.md` |
