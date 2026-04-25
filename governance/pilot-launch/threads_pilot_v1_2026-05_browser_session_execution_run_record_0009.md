@@ -18,8 +18,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Controlled launch record | `CTRL-THREADS-PILOT-V1-CIB-2026-04-23` |
 | Prior run | `CRAWL-THREADS-PILOT-V1-0008` |
 | Purpose | attempt exactly one item-0016 candidate through the approved browser storage-state path |
-| Current gate | `ready_for_single_item_browser_session_execution` |
-| Run status | `opened_not_yet_executed` |
+| Current gate | `item_0016_built_strict_validated_review_required` |
+| Run status | `completed_one_item_built_strict_validated` |
 
 ## Required Pre-Run Gate
 
@@ -120,18 +120,20 @@ python scripts/validate_thread_dataset.py data/interim/manual_record_0016.json -
 
 | Result field | Value |
 |---|---|
-| Run started? | no |
-| Run completed? | no |
-| Candidates reviewed | 0 |
-| Extractable candidates reviewed | 0 |
-| Selected items | 0 |
-| Stop condition triggered? | not_applicable_not_executed |
-| Local records built? | no; no `manual_entry_0016.json` was created |
-| Strict validation result | not_applicable_not_executed |
-| Decision after run | `execute_single_item_browser_session_attempt_before_item_16` |
+| Run started? | yes |
+| Run completed? | yes |
+| Candidates reviewed | 5 |
+| Extractable candidates reviewed | 1 selected candidate |
+| Selected items | 1 |
+| Stop condition triggered? | no |
+| Local records built? | yes; local-only `manual_entry_0016.json` and `manual_record_0016.json` |
+| Strict validation result | pass; 1 record, 0 errors, 0 warnings |
+| 16-record aggregate validation | pass; 16 records, 0 errors, 0 warnings |
+| Preliminary label / risk | `uncertain` / `medium` |
+| Decision after run | `review_item_0016_before_any_further_extension` |
 
 ## Decision
 
-Run 0009 is opened and ready for a single item-0016 browser-session execution attempt.
+Run 0009 selected one item 0016 candidate through the approved browser-session path and built a strict-valid local record.
 
-Do not treat storage-state readiness as permission to expand the batch. This run is only for one selected item, with at most 5 candidates reviewed for the selected probe seed.
+Do not treat this as permission to expand the batch. The next action is reviewer confirmation of item 0016's redaction and preliminary `uncertain` / `medium` label before any additional item 17-20 extension.

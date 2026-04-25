@@ -61,3 +61,5 @@ No raw Threads evidence has been collected or committed in this folder. As of `2
 As of `2026-04-25`, access-path preparation run 0008 has prepared the repo-safe browser/API access tooling. The next execution run still must wait for a real approved browser storage-state/session artifact in controlled storage or real approved API probe inputs in the controlled env file. Templates, manifests, query echoes, and UI text cannot become item 0016.
 
 Later on `2026-04-25`, the approved browser storage-state artifact was exported into the outside-git controlled store and passed shape validation. Run 0009 is now opened as the next single-item browser-session execution run for item 0016. It allows at most one selected item and at most 5 candidates for the selected probe seed.
+
+Run 0009 then selected one item 0016 candidate and built a strict-valid local record under ignored `data/interim/`. The repo-safe next gate is reviewer confirmation of item 0016 before any item 17-20 extension.
