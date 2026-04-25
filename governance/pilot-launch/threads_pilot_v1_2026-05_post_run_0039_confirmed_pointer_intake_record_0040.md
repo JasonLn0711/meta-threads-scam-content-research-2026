@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0075-add-post-run-0039-confirmed-pointer-request` |
 | Target local item range if pointers pass intake | starts at `threads_pilot_v1_0076`; maximum through `threads_pilot_v1_0080` before checkpoint |
 | Purpose | obtain a small confirmed-pointer tranche after browser-session expansion failed to add new final scam/high-risk examples |
-| Current gate | `pending_pointer_delivery` |
-| Intake status | `opened_waiting_for_confirmed_pointers` |
+| Current gate | `receipt_ready_waiting_for_pointer_delivery` |
+| Intake status | `receipt_ready_waiting_for_confirmed_pointers` |
 
 ## Why This Intake Exists
 
@@ -128,6 +128,7 @@ Stop intake if:
 | Local records built? | no |
 | Strict validation result | not run |
 | Official checkpoint promoted? | no |
+| Receipt readiness note | `experiments/evaluation-notes/0071-run-0040-receipt-readiness.md` |
 
 ## Next Action
 
