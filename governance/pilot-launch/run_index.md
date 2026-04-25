@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | items `0043-0055` are included in the 55-record checkpoint synthesis |
-| Current collection gate | C2 selected; item `0056` remains blocked while the 55-record report package is reviewed/refined |
+| Current collection gate | checkpoint 0055 package approved under C2; item `0056` remains blocked |
 | Next authorized prospective tranche | none; run `0038` is closed after reaching its 20-candidate and 10-selected caps |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
@@ -140,7 +140,7 @@ Current state:
 
 - collection remains paused;
 - item `0056` is not authorized;
-- the 55-record checkpoint report package is the current CIB/165-facing review object;
+- the 55-record checkpoint package is approved as the current CIB/165-facing evidence-system checkpoint;
 - further collection requires a later decision.
 
 The next authorized prospective tranche is `none`.
