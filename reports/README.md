@@ -9,6 +9,7 @@ Reports should be more polished than working notes, but they should remain hones
 | Version | Target date | Audience | File |
 |---|---:|---|---|
 | v0 | 2026-04-30 | CIB/165-facing review and internal research alignment | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) |
+| checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 
 ## Review Package
 
@@ -16,6 +17,8 @@ Reports should be more polished than working notes, but they should remain hones
 |---|---|
 | [threads-scam-content-research-v0-executive-brief.md](threads-scam-content-research-v0-executive-brief.md) | Short stakeholder brief and pilot decision request. |
 | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) | Full v0 research report. |
+| [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) | 42-record checkpoint report and collection-pause decision package. |
+| [checkpoint-0042-review-checklist.md](checkpoint-0042-review-checklist.md) | Checklist for reviewing the 42-record checkpoint package before CIB/165-facing use. |
 | [report-v0-review-checklist.md](report-v0-review-checklist.md) | Pre-delivery quality and sign-off checklist. |
 | [../docs/51-stakeholder-evidence-expansion-memo.md](../docs/51-stakeholder-evidence-expansion-memo.md) | Current checkpoint addendum asking what evidence expansion is approved after item 0017 stopped. |
 | [../docs/27-report-v0-delivery-plan.md](../docs/27-report-v0-delivery-plan.md) | Review sequence, feedback handling, and delivery workflow. |

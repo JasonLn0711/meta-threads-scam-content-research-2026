@@ -16,6 +16,8 @@ Build a phase-1 research MVP for Threads scam-like content triage.
 
 Immediate next action: review the 42-record checkpoint synthesis in [../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md) and the run index in [../governance/pilot-launch/run_index.md](../governance/pilot-launch/run_index.md), then make an explicit checkpoint decision before continuing collection.
 
+Decision 0058 selects the next path: pause new collection by default and start the CIB/165-facing checkpoint report v0.1 in [../reports/threads-scam-content-checkpoint-0042-v0.1.md](../reports/threads-scam-content-checkpoint-0042-v0.1.md).
+
 The checkpoint decision should choose one of two paths:
 
 - Continue approved confirmed-pointer intake, one item at a time, with controlled capture, redacted records, second review, strict validation, and a fixed next checkpoint boundary.
