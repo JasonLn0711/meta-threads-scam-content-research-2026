@@ -25,6 +25,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Next intake scaffold | `threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md` |
 | Next intake status | `receipt_ready_waiting_for_pointer_delivery` |
 | Browser candidate quality test | run `0041` completed with no extracted candidates; no official promotion |
+| Browser rendering diagnostic | run `0042` completed; body-line plus post-href method selected |
 
 ## What Is Complete
 
@@ -92,6 +93,7 @@ Without another decision record, only these actions are allowed:
 - confirmed-pointer request preparation and delivery;
 - run `0040` intake preparation while status remains `receipt_ready_waiting_for_pointer_delivery`;
 - browser-method revision only; do not repeat run `0041` article-based extraction with higher caps;
+- next browser method design using body-line segmentation plus post-href discovery;
 - repo-safe method clarification;
 - dedupe-first/full-thread-ready gate use;
 - browser candidate promotion review template use after a new decision authorizes a candidate run.
