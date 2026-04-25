@@ -17,7 +17,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Supplemental source path | approved browser-session or API/session-aware candidate discovery for evidence-family diversity |
 | Raw output location | controlled store only |
 | Repo-visible raw output | no |
-| Run status | `preflight_passed_ready_for_first_candidate` |
+| Run status | `completed_closed` |
 
 ## Authorization And Scope
 
@@ -42,10 +42,24 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 
 | Counter | Limit | Current |
 |---|---:|---:|
-| Candidates reviewed | 50 | 0 |
-| Selected items | 20 | 0 |
-| Strict-valid selected items | 20 | 0 |
-| Second-reviewed selected items | 20 | 0 |
+| Candidates reviewed | 50 | 50 |
+| Selected candidate entries | 20 | 20 |
+| Strict-valid local candidate records | 20 | 20 |
+| Second-reviewed candidate entries | 20 | 20 |
+
+## Execution Result
+
+| Field | Value |
+|---|---|
+| Execution status | completed |
+| Source path used | approved browser-session supplement |
+| Reason supplemental path was used | no new confirmed pointer was available at execution time |
+| Local selected candidate entries | `0056-0075` |
+| Fast second-review result | 11 adjudicated `uncertain`; 9 excluded duplicate or near-duplicate |
+| Final scam/high-risk items added | 0 |
+| Official checkpoint promoted | no |
+| Local candidate aggregate strict validation | pass: 75 records, 0 errors, 0 warnings |
+| Evaluation note | `experiments/evaluation-notes/0070-run-0039-aggressive-tranche-result.md` |
 
 ## Aggressive Selection Strategy
 
@@ -106,8 +120,12 @@ Stop this run if:
 
 ## Current Decision
 
-Run 0039 is authorized but not started.
+Run 0039 is completed and closed.
 
 Run-level preflight passed in `experiments/evaluation-notes/0069-run-0039-preflight.md`.
 
-The next concrete action is selection of the first approved candidate under this run record. No item may be counted until the required per-item workflow is complete.
+Execution result is recorded in `experiments/evaluation-notes/0070-run-0039-aggressive-tranche-result.md`.
+
+The aggressive browser-session supplement produced strict-valid local candidate records, but second review found no new final scam/high-risk examples. The run should not be extended by adding more seeds or raising caps.
+
+The next concrete action is to return to confirmed pointers or design a narrower dedupe-first/full-thread-ready method before any future browser candidate promotion.

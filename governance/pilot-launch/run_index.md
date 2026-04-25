@@ -9,9 +9,9 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | items `0043-0055` are included in the 55-record checkpoint synthesis |
-| Current collection gate | run `0039` preflight passed; ready for first approved candidate |
-| Next authorized prospective tranche | run `0039`, items `0056-0075`, at most 50 candidates reviewed and 20 selected |
+| Latest local work visible in tree | run `0039` completed as a local candidate tranche; no new official checkpoint promoted |
+| Current collection gate | run `0039` closed; next work should prioritize confirmed pointers or dedupe-first/full-thread-ready method |
+| Next authorized prospective tranche | none open after run `0039` closure |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -51,7 +51,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0027-0033` | confirmed-pointer | item run records `0035-0041` | evaluation notes `0056-0062` | `0035-0041` | all strict-valid | Additional scam/high-risk evidence families added. |
 | `0034` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0042` | 42 records strict-valid | Anti-scam warning hard negative recorded. |
 | `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | `0067-option-a-run-0038-result.md` | `0046-0055` | 55 records strict-valid | Option A completed and closed after 20 candidates reviewed and 10 selected; no final scam/high-risk items added. |
-| `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | `0069-run-0039-preflight.md` | `0056-0075` prospective | preflight passed; no item selected yet | Aggressive but bounded tranche: max 50 candidates reviewed, max 20 selected; strict validation and second review required. |
+| `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | `0069-run-0039-preflight.md`; `0070-run-0039-aggressive-tranche-result.md` | `0056-0075` local candidate entries | local 75-record candidate aggregate strict-valid; no official checkpoint promoted | Run closed after 50 candidates reviewed and 20 local candidate entries; second review found 11 uncertain and 9 duplicate/excluded, with 0 new final scam/high-risk items. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -133,15 +133,17 @@ Items `0046-0055` were selected under stakeholder Option A run `0038`. They are 
 
 Synthesis: `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md`.
 
-## Current Gate Before Item 0056
+## Current Gate After Run 0039
 
 The checkpoint 0055 report package is complete. `checkpoint_0055_stakeholder_decision_record.md` records `C2`.
 
 Current state:
 
-- run `0039` preflight passed;
-- item `0056` is authorized only within run `0039` after first approved candidate selection;
+- run `0039` completed and closed;
+- local candidate entries `0056-0075` were strict-valid but not promoted into a new official checkpoint;
+- second review found 11 `uncertain` entries and 9 duplicate/excluded entries;
+- no new final scam/high-risk example was added by the aggressive browser-session supplement;
 - the 55-record checkpoint package is approved as the current CIB/165-facing evidence-system checkpoint;
-- selected items must complete controlled capture, redacted record build, strict validation, and second review before they count.
+- future selected items must complete controlled capture, redacted record build, strict validation, and second review before they count.
 
-The next authorized prospective tranche is run `0039`: items `0056-0075`, at most 50 candidates reviewed and 20 selected.
+The next preferred path is confirmed-pointer intake. If browser-session search is used again, it needs a dedupe-first and full-thread/reply-context-ready gate before candidate promotion.
