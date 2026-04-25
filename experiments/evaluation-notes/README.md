@@ -36,5 +36,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0028-run-0011-method-revision-start.md` | Repo-safe start note for the item 0017 method-revision diagnostic run. |
 | `0029-item-0017-second-review.md` | Repo-safe second-review note excluding item 0017 because retained visible text was only a query echo. |
 | `0030-item-0017-evidence-path-study-start.md` | Repo-safe start note for deciding the next evidence path after text-only item 0017 methods failed. |
+| `0031-evidence-path-study-decision.md` | Repo-safe evidence-path decision selecting run 0012 design boundaries. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
