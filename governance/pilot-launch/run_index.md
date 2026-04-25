@@ -9,8 +9,9 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | items `0043` through `0045` also exist as post-checkpoint work, but are not part of the 42-record checkpoint synthesis |
-| Next authorized prospective tranche | Option A run `0038`, items `0046-0055`, at most 20 candidates reviewed and 10 selected |
+| Latest local work visible in tree | items `0043-0055` are included in the 55-record checkpoint synthesis |
+| Current collection gate | item `0056` is blocked until `checkpoint_0055_stakeholder_decision_record.md` records C1, C2, or C3 |
+| Next authorized prospective tranche | none; run `0038` is closed after reaching its 20-candidate and 10-selected caps |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -93,17 +94,17 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 
 ## Post-Checkpoint Work Not Included In 0042 Synthesis
 
-Items `0043`, `0044`, and `0045` were captured after the 42-record checkpoint and should remain post-checkpoint work until a later checkpoint synthesis explicitly includes them. Stakeholder Option A now opens a prospective item `0046-0055` tranche under run `0038`; the new run does not retroactively consume the `0043-0045` post-checkpoint items.
+Items `0043`, `0044`, and `0045` were captured after the 42-record checkpoint and are now included in the 55-record checkpoint synthesis. They remain listed here to preserve the transition from checkpoint 0042 to checkpoint 0055.
 
 | Item | Evaluation note | Decision log | Status |
 |---|---|---|---|
-| `0043` | `0064-confirmed-pointer-0043-result.md` | `0055-record-coded-animal-stock-limit-up-group-funnel-rule.md` | post-checkpoint, strict-valid locally |
-| `0044` | `0065-confirmed-pointer-0044-result.md` | `0056-record-trading-rules-wealth-authority-follow-gate-rule.md` | post-checkpoint, strict-valid locally |
-| `0045` | `0066-confirmed-pointer-0045-result.md` | `0057-record-brand-patent-extreme-roi-contact-funnel-rule.md` | post-checkpoint, strict-valid locally |
+| `0043` | `0064-confirmed-pointer-0043-result.md` | `0055-record-coded-animal-stock-limit-up-group-funnel-rule.md` | included in 55-record synthesis |
+| `0044` | `0065-confirmed-pointer-0044-result.md` | `0056-record-trading-rules-wealth-authority-follow-gate-rule.md` | included in 55-record synthesis |
+| `0045` | `0066-confirmed-pointer-0045-result.md` | `0057-record-brand-patent-extreme-roi-contact-funnel-rule.md` | included in 55-record synthesis |
 
 ## Option A Run 0038 Post-Checkpoint Tranche
 
-Items `0046-0055` were selected under stakeholder Option A run `0038`. They are strict-valid and second-reviewed, but they are not part of the 42-record checkpoint synthesis.
+Items `0046-0055` were selected under stakeholder Option A run `0038`. They are strict-valid, second-reviewed, and included in the 55-record checkpoint synthesis.
 
 | Range | Evaluation note | Decision log | Status |
 |---|---|---|---|
@@ -130,3 +131,13 @@ Items `0046-0055` were selected under stakeholder Option A run `0038`. They are 
 | Baseline false negatives | 0 |
 
 Synthesis: `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md`.
+
+## Current Gate Before Item 0056
+
+The checkpoint 0055 report package is complete. No item `0056` collection should begin until `checkpoint_0055_stakeholder_decision_record.md` records one of:
+
+- `C1`: pause browser-session expansion and wait for confirmed pointers;
+- `C2`: keep collection paused and review/refine the 55-record checkpoint report;
+- `C3`: open another bounded browser-session tranche for calibration only.
+
+Until that decision is recorded, the next authorized prospective tranche is `none`.
