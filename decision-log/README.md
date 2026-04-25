@@ -59,3 +59,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Selected C2: keep collection paused and review/refine the 55-record checkpoint report package | `0062-select-c2-checkpoint-0055-report-review.md` |
 | 2026-04-25 | Refined the checkpoint 0055 report language after C2 so reviewers see report review as the active path | `0063-refine-checkpoint-0055-report-after-c2.md` |
 | 2026-04-25 | Added role-specific checkpoint 0055 review questions for the selected C2 report-review path | `0064-add-checkpoint-0055-review-questions.md` |
+| 2026-04-25 | Added a short checkpoint 0055 executive addendum for CIB/165-facing C2 review | `0065-add-checkpoint-0055-executive-addendum.md` |
