@@ -8,6 +8,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 |---|---|
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
+| Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | items `0043` through `0045` also exist as post-checkpoint work, but are not part of the 42-record checkpoint synthesis |
 | Next authorized prospective tranche | Option A run `0038`, items `0046-0055`, at most 20 candidates reviewed and 10 selected |
 | Raw evidence location | controlled store only |
@@ -107,3 +108,25 @@ Items `0046-0055` were selected under stakeholder Option A run `0038`. They are 
 | Range | Evaluation note | Decision log | Status |
 |---|---|---|---|
 | `0046-0055` | `0067-option-a-run-0038-result.md` | `0060-close-option-a-run-0038-after-caps.md` | post-checkpoint, 55-record aggregate strict-valid; run closed after caps |
+
+## Checkpoint 0055 Aggregate
+
+| Metric | Value |
+|---|---:|
+| Total records | 55 |
+| `scam` | 17 |
+| `non_scam` | 23 |
+| `uncertain` | 9 |
+| `insufficient_evidence` | 6 |
+| `high` risk | 17 |
+| `medium` risk | 7 |
+| `low` risk | 31 |
+| Strict validation errors | 0 |
+| Strict validation warnings | 0 |
+| Baseline precision | 0.708 |
+| Baseline recall | 1.000 |
+| Baseline F1 | 0.829 |
+| Baseline false positives | 7 |
+| Baseline false negatives | 0 |
+
+Synthesis: `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md`.

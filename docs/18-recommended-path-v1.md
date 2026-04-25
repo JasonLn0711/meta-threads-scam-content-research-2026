@@ -14,16 +14,17 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: review the 42-record checkpoint synthesis in [../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md) and the run index in [../governance/pilot-launch/run_index.md](../governance/pilot-launch/run_index.md), then make an explicit checkpoint decision before continuing collection.
+Immediate next action: review the 55-record checkpoint synthesis in [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) and the run index in [../governance/pilot-launch/run_index.md](../governance/pilot-launch/run_index.md), then decide whether to pause browser-session expansion or continue only with new confirmed pointers.
 
-Decision 0058 selects the next path: pause new collection by default and start the CIB/165-facing checkpoint report v0.1 in [../reports/threads-scam-content-checkpoint-0042-v0.1.md](../reports/threads-scam-content-checkpoint-0042-v0.1.md).
+Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items.
 
-The checkpoint decision should choose one of two paths:
+The next checkpoint decision should choose one of three paths:
 
-- Continue approved confirmed-pointer intake, one item at a time, with controlled capture, redacted records, second review, strict validation, and a fixed next checkpoint boundary.
-- Pause new collection and turn the 42-record pilot into a CIB/165-facing checkpoint report v0.1.
+- Pause additional browser-session candidate search and wait for CIB/stakeholder confirmed pointers if more final scam/high-risk rule families are needed.
+- Pause collection and turn the 55-record pilot into an updated CIB/165-facing checkpoint report.
+- Open another browser-session tranche only if stakeholders explicitly accept that its main value is false-positive and uncertainty calibration, not high-risk scam discovery.
 
-Do not continue by habit. The repo now has enough item/run/rule material that reviewability, indexing, and synthesis are the bottleneck.
+Do not continue by habit. Run 0038 shows that approved browser-session search can produce strict-valid records, but it did not add final scam/high-risk items. Confirmed pointers remain the higher-yield path for rule-family learning.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
