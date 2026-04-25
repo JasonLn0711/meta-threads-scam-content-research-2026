@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0032-close-run-0015-and-require-new-run-design` |
 | Target local item range | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
 | Purpose | test reply/comment-aware, high-recall evidence discovery without letting one seed consume the full candidate budget |
-| Current gate | `execution_complete_pending_second_review` |
-| Run status | `local_records_built_strict_valid` |
+| Current gate | `second_review_complete` |
+| Run status | `local_records_built_second_reviewed_strict_valid` |
 
 ## Scope Rationale
 
@@ -147,6 +147,19 @@ A candidate may pass reviewability only if all are true:
 
 Run 0016 corrected the run 0015 budget problem: every evidence family received exactly 4 reviewed candidates before selection. Query terms remain candidate-finding hints only and do not determine labels.
 
+### Second-Review Result
+
+| Metric | Value |
+|---|---|
+| Items second-reviewed | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
+| Final run 0016 labels | 2 `non_scam`; 2 `uncertain` |
+| Final run 0016 risk levels | 2 `low`; 2 `medium` |
+| False-positive pressure cases | 2 |
+| Boundary/uncertainty cases | 2 |
+| Strict validation after second review | pass; 27 checked, 0 errors, 0 warnings |
+
+The second review kept high-recall private-channel/link/contact triage intact, but did not let those categories alone determine final labels. Security-warning or ordinary messaging-app discussion patterns were finalized as `non_scam` / `low`; crypto/account/deposit-management context and private-channel risk-property context remained `uncertain` / `medium`.
+
 ## Stop Conditions
 
 Stop immediately if:
@@ -169,8 +182,8 @@ Stop immediately if:
 | Selected item count | 4 |
 | Local records built? | yes |
 | Strict validation result | pass; 27 checked, 0 errors, 0 warnings |
-| Second review complete? | no |
+| Second review complete? | yes |
 
 ## Next Action
 
-Second-review items `0024` through `0027` before counting them as accepted pilot evidence or opening item `0028`.
+Update the checkpoint interpretation from 23 to 27 strict-valid local records, then decide whether item `0028` requires a new run record, decision gate, or stop/pause decision.
