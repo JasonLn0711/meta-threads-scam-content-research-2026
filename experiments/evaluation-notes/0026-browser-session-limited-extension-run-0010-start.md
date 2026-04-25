@@ -93,3 +93,22 @@ Try item 0017 again with `RP-0010-04` only after re-checking approved browser st
 ## Next Allowed Action After Fourth Attempt
 
 Try item 0017 again with `RP-0010-05` only after re-checking approved browser storage-state readiness. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
+
+## Fifth Attempt Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0010-05` |
+| Candidates reviewed | 5 |
+| Negation/risk-warning filter applied | yes |
+| Selected item 0017 | no |
+| `manual_entry_0017.json` created | no |
+| Raw/session material in git | no |
+
+## Run 0010 Outcome
+
+Run 0010 attempted all five planned risk-probe seeds for item 0017 and selected no safe redacted item. Across the run, 25 candidates were reviewed under the approved browser-session path, with no local record created.
+
+## Next Required Action
+
+Pause for method review before any further item 0017 attempt. The review should decide whether the next attempt changes seed design, candidate extraction, evidence requirements, or acquisition path. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
