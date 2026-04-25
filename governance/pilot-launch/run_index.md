@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | run `0043` completed as a candidate-quality method test; no new official checkpoint promoted |
-| Current collection gate | run `0043` closed; browser discovery is viable but future search runs require query diversification and candidate promotion requires a new decision |
+| Current collection gate | run `0043` promotion review opened; run `0044` closed as controlled candidate-quality test only |
 | Next authorized prospective tranche | none for official checkpoint promotion; run `0041` is candidate quality test only |
 | Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
 | Next intake scaffold | run `0040`, receipt-ready and waiting for confirmed-pointer delivery for possible items `0076-0080` |
@@ -58,6 +58,8 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0041` | browser-session | `threads_pilot_v1_2026-05_dedupe_first_browser_candidate_quality_run_record_0041.md` | `0072-run-0041-preflight.md`; `0073-run-0041-result.md` | none | completed; no candidates extracted; no item built | Article-based browser-search extractor produced no candidates across 12 seeds; next browser method must revise extraction before another run. |
 | `0042` | browser-session diagnostic | `threads_pilot_v1_2026-05_browser_rendering_diagnostic_run_record_0042.md` | `0074-run-0042-browser-rendering-diagnostic-result.md` | none | completed; no item built | Diagnostic found 0 article elements, 21 post-like hrefs, and 110 candidate body lines; next method should use body-line segmentation plus post-href discovery. |
 | `0043` | browser-session | `threads_pilot_v1_2026-05_diverse_body_line_post_href_candidate_run_record_0043.md` | `0075-run-0043-diverse-body-line-post-href-result.md` | none | completed; no item built | Diverse body-line/post-href method reached 60 reviewed candidates after 10 seeds, with 51 dedupe-pass candidates and 24 quality-review selections; no manual entries or official promotion. |
+| `0043-review` | browser-session promotion review | `threads_pilot_v1_2026-05_run_0043_promotion_review_record.md` | pending | `0076` prospective only | opened; no item built | Formal promotion review opened for 24 run `0043` quality-review candidates; promotion requires all gates and strict validation. |
+| `0044` | browser-session | `threads_pilot_v1_2026-05_aggressive_dedupe_first_browser_candidate_quality_run_record_0044.md` | `0076-run-0044-aggressive-dedupe-first-browser-candidate-quality-result.md` | none | completed; no item built | Aggressive controlled-store-only candidate-quality test reviewed 200 candidates, found 190 dedupe-pass, selected 180 local traces, and completed 131 context-ready attempts; no manual entries or official promotion. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 

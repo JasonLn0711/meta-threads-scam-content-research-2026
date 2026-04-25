@@ -80,3 +80,6 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Authorized a diverse body-line plus post-href browser candidate method run | `0083-authorize-diverse-body-line-post-href-run.md` |
 | 2026-04-26 | Closed run 0043 after the diverse browser method reached candidate cap with no item promotion | `0084-close-run-0043-diverse-browser-result.md` |
 | 2026-04-26 | Adopted a browser query diversification rule for future candidate-discovery runs | `0085-adopt-browser-query-diversification-rule.md` |
+| 2026-04-26 | Authorized a formal browser-candidate promotion review for run 0043 quality-review candidates | `0086-authorize-run-0043-browser-candidate-promotion-review.md` |
+| 2026-04-26 | Authorized aggressive dedupe-first browser candidate-quality run 0044 with 200 reviewed and 180 local-selected caps | `0087-authorize-aggressive-dedupe-first-browser-candidate-quality-run-0044.md` |
+| 2026-04-26 | Closed run 0044 after aggressive browser candidate-quality test reached 200 reviewed and 180 local-selected candidates | `0088-close-run-0044-aggressive-browser-candidate-quality-result.md` |
