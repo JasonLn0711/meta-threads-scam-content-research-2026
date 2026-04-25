@@ -83,3 +83,9 @@ Stakeholders should answer these questions before collection resumes:
 4. What is the maximum candidate-review burden for the next run?
 5. Who second-reviews any `uncertain`, low-confidence, or medium/high-risk item?
 6. What result would justify continuing toward the 50-item pilot rather than stopping or revising scope?
+
+Record the decision in:
+
+```text
+governance/pilot-launch/threads_pilot_v1_2026-05_evidence_scope_review_gate_0014.md
+```
