@@ -63,3 +63,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Recorded that all reviewer roles approved the checkpoint 0055 package under C2 | `0066-record-checkpoint-0055-reviewer-approval.md` |
 | 2026-04-25 | Added the canonical approved-package index for checkpoint 0055 delivery and handoff | `0067-add-checkpoint-0055-approved-package-index.md` |
 | 2026-04-25 | Aligned the README and recommended path so the approved checkpoint 0055 package index is the main entry point | `0068-align-readme-and-recommended-path-to-approved-package.md` |
+| 2026-04-25 | Added checkpoint 0055 next-decision handoff describing what is required before item 0056 or any new collection | `0069-add-checkpoint-0055-next-decision-handoff.md` |
