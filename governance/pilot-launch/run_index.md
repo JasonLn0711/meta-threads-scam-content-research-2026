@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | items `0043-0055` are included in the 55-record checkpoint synthesis |
-| Current collection gate | aggressive prospective tranche run `0039` authorized but not started |
+| Current collection gate | run `0039` preflight passed; ready for first approved candidate |
 | Next authorized prospective tranche | run `0039`, items `0056-0075`, at most 50 candidates reviewed and 20 selected |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
@@ -51,7 +51,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0027-0033` | confirmed-pointer | item run records `0035-0041` | evaluation notes `0056-0062` | `0035-0041` | all strict-valid | Additional scam/high-risk evidence families added. |
 | `0034` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0042` | 42 records strict-valid | Anti-scam warning hard negative recorded. |
 | `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | `0067-option-a-run-0038-result.md` | `0046-0055` | 55 records strict-valid | Option A completed and closed after 20 candidates reviewed and 10 selected; no final scam/high-risk items added. |
-| `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | pending | `0056-0075` prospective | authorized_not_started | Aggressive but bounded tranche: max 50 candidates reviewed, max 20 selected; strict validation and second review required. |
+| `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | `0069-run-0039-preflight.md` | `0056-0075` prospective | preflight passed; no item selected yet | Aggressive but bounded tranche: max 50 candidates reviewed, max 20 selected; strict validation and second review required. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -139,8 +139,8 @@ The checkpoint 0055 report package is complete. `checkpoint_0055_stakeholder_dec
 
 Current state:
 
-- run `0039` is authorized but not started;
-- item `0056` is authorized only within run `0039` after run-level preflight;
+- run `0039` preflight passed;
+- item `0056` is authorized only within run `0039` after first approved candidate selection;
 - the 55-record checkpoint package is approved as the current CIB/165-facing evidence-system checkpoint;
 - selected items must complete controlled capture, redacted record build, strict validation, and second review before they count.
 

@@ -17,7 +17,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Supplemental source path | approved browser-session or API/session-aware candidate discovery for evidence-family diversity |
 | Raw output location | controlled store only |
 | Repo-visible raw output | no |
-| Run status | `authorized_not_started` |
+| Run status | `preflight_passed_ready_for_first_candidate` |
 
 ## Authorization And Scope
 
@@ -108,4 +108,6 @@ Stop this run if:
 
 Run 0039 is authorized but not started.
 
-The next concrete action is run-level preflight and selection of the first approved candidate under this run record. No item may be counted until the required per-item workflow is complete.
+Run-level preflight passed in `experiments/evaluation-notes/0069-run-0039-preflight.md`.
+
+The next concrete action is selection of the first approved candidate under this run record. No item may be counted until the required per-item workflow is complete.
