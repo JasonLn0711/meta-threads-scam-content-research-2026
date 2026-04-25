@@ -4,6 +4,8 @@
 
 This is the canonical entry point for the approved checkpoint 0055 package.
 
+For work after the approved 55-record package, use [checkpoint-0076-hard-negative-addendum.md](checkpoint-0076-hard-negative-addendum.md) as a narrow repo-safe addendum. The addendum does not replace the approved 0055 package; it records one additional local hard-negative item.
+
 It summarizes what is approved, which artifacts belong to the package, and what remains blocked. It contains no raw Threads URLs, handles, screenshots, raw post text, raw reply text, contact IDs, stock names, stock codes, price values, credentials, browser/session artifacts, or stakeholder case IDs.
 
 ## Approval Status
@@ -15,9 +17,10 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Selected decision | `C2` |
 | Reviewer outcome | `approve_as_checkpoint_package` |
 | Approved use | CIB/165-facing redacted evidence-system checkpoint review/use |
-| Collection status | next tranche authorized but not started |
-| Item `0056` | authorized only within run `0039` after run-level preflight |
-| Next authorized prospective tranche | run `0039`, items `0056-0075`, max 50 candidates reviewed and 20 selected |
+| Collection status | run `0039` and later browser-method follow-ups closed |
+| Item `0056-0075` | local candidate entries only; not promoted into approved 0055 package |
+| Item `0076` | local strict-valid hard-negative addendum item |
+| Next authorized prospective tranche | none open |
 
 ## Package Artifacts
 
@@ -33,6 +36,8 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `governance/pilot-launch/run_index.md` | Run, item, checkpoint, and gate index. |
 | `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md` | Detailed repo-safe synthesis. |
 | `decision-log/0066-record-checkpoint-0055-reviewer-approval.md` | Decision recording all-reviewer approval. |
+| `reports/checkpoint-0076-hard-negative-addendum.md` | Post-0055 narrow hard-negative addendum. |
+| `experiments/evaluation-notes/0080-checkpoint-0076-hard-negative-inclusion-synthesis.md` | Detailed repo-safe 76-record local inclusion synthesis. |
 
 ## Approved Findings
 
@@ -44,13 +49,14 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | The latest browser-session tranche added no final scam/high-risk records | approved checkpoint fact |
 | Baseline recall remains `1.000` on the current binary-evaluable slice | approved checkpoint fact |
 | False positives remain reviewer workload, not a harmless metric | approved checkpoint interpretation |
+| Local item `0076` adds a hard-negative anti-scam warning boundary, not scam/high-risk evidence | post-0055 addendum fact |
 
 ## Explicit Non-Claims
 
 - This package does not claim scam prevalence on Threads.
 - This package does not make legal fraud determinations.
 - This package does not authorize production detection.
-- This package does not authorize item `0056`.
+- This package does not authorize broad item expansion beyond the explicitly recorded local addenda.
 - This package does not authorize broad crawler expansion.
 - This package does not authorize embedding/model training.
 - This package does not put raw evidence into git.
@@ -63,8 +69,8 @@ Likely future choices:
 
 | Future path | When to consider |
 |---|---|
-| Run `0039` aggressive confirmed-pointer-first tranche | Authorized now for items `0056-0075` under hard caps and validation gates. |
+| Targeted confirmed-pointer tranche | Consider when new scam/high-risk rule-family learning is needed. |
 | Later calibration-only browser tranche | Requires a separate later decision if run `0039` is not enough. |
 | Report-only maintenance | Only wording, link, checklist, or packaging updates are needed. |
 
-The approved next action is run `0039` preflight, not unbounded collection.
+The approved next action is report/checkpoint maintenance or targeted confirmed-pointer intake, not unbounded collection.

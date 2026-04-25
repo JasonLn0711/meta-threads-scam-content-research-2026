@@ -81,3 +81,13 @@ Use `reports/checkpoint-0055-review-questions.md` for the full question set.
 All reviewer roles approved the package on `2026-04-25`.
 
 Future edits should remain at the aggregate, rule-family, governance, or report-section level. Do not paste raw evidence into tracked files.
+
+## Post-Approval Addendum
+
+After the 55-record package, local item `0076` was accepted as a strict-valid hard-negative calibration item:
+
+```text
+non_scam / low
+```
+
+Use [checkpoint-0076-hard-negative-addendum.md](checkpoint-0076-hard-negative-addendum.md) for the narrow post-0055 update. This does not change the approved 0055 package and does not add scam/high-risk evidence.

@@ -99,9 +99,10 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a reviewable 55-record synthesis and checkpoint report package:
+As of `2026-04-26`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with an approved 55-record synthesis, plus a narrow local 0076 hard-negative addendum:
 
 - The canonical entry point for the approved checkpoint 0055 package is [reports/checkpoint-0055-approved-package-index.md](reports/checkpoint-0055-approved-package-index.md).
+- The post-0055 hard-negative addendum is [reports/checkpoint-0076-hard-negative-addendum.md](reports/checkpoint-0076-hard-negative-addendum.md).
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
 - Report v0, executive brief, review checklist, and delivery plan exist.
@@ -145,8 +146,9 @@ As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, check
 - The checkpoint 0042 baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
 - The 55-record baseline smoke result is precision 0.708, recall 1.000, F1 0.829, 7 false positives, and 0 false negatives.
 - The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
+- Local item `0076` extends this hard-negative lesson as `non_scam` / `low`; the 76-record local aggregate is strict-valid and does not add scam/high-risk evidence.
 
-The next blocker is no longer basic access-path readiness, A/B checkpoint selection, run 0038 execution, checkpoint 0055 report drafting, C1/C2/C3 selection, or reviewer approval. Stakeholders selected C2 in [governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md](governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md), and all reviewer roles approved the 55-record checkpoint package. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to item `0056`, broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
+The next blocker is no longer basic access-path readiness, A/B checkpoint selection, run 0038 execution, checkpoint 0055 report drafting, C1/C2/C3 selection, reviewer approval, or local item `0076` inclusion. Stakeholders selected C2 in [governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md](governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md), and all reviewer roles approved the 55-record checkpoint package. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
 
 Confirmed pointers are the preferred next source for final scam/high-risk rule learning. Browser-session capture should continue only if stakeholders explicitly approve another bounded tranche for false-positive and uncertainty calibration, with controlled capture, redacted records, fast different-angle second review, strict validation, and checkpoint synthesis. Query terms and crawler seeds remain candidate-finding tools only, not labels.
 
