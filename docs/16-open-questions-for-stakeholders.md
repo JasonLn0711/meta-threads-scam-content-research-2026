@@ -101,5 +101,16 @@ These questions now block any future item 0017 retry, item 0018 attempt, or high
 - Is CSV sufficient for first annotation, or is JSONL needed immediately?
 - What OCR tool is acceptable for the first local experiment?
 - Should model-assisted explanations remain out of scope until the manual pilot decision memo?
+- When the confirmed-pointer dataset is large enough, may researchers test embedding-based scam-spectrum clustering on redacted or controlled-store-governed text?
+- If embedding experiments are approved later, what model, storage, redaction, and evaluation limits apply?
 - What minimum evidence should decide continuation, pause, source narrowing, or later expansion?
 - Who owns dataset versioning and schema changes?
+
+## Future Exposure And Victim-Risk Research Questions
+
+- May the project later study resharers, commenters, quote-like interactions, or other amplifiers of confirmed scam posts as a potential exposure population?
+- What approval is required before collecting interaction-level user identifiers or profile/account context?
+- What is the correct terminology: exposure cohort, possible victim-risk audience, suspected victim, or confirmed victim?
+- What evidence is required before a person can be called a victim rather than merely exposed?
+- What redaction, pseudonymization, retention, access-control, and deletion rules apply to interaction-level data?
+- Is prevention/outreach research in scope, or is the project limited to content and rule-library research?

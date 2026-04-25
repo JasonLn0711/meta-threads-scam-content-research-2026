@@ -39,6 +39,28 @@ The first program should start with controlled launch details, local workspace p
 | Failure modes | Overstated certainty, inconsistent reasoning, privacy concerns, cost growth, and scope drift before manual evidence operations are stable. |
 | Decision implications | Revisit only after Phase 1 answers the manual collection, annotation, redaction, and baseline-readiness questions. |
 
+## Deferred Experiment F: Embedding-Based Scam Spectrum
+
+| Field | Plan |
+|---|---|
+| Current status | Brainstorming only; not part of the active pilot. |
+| Hypothesis | When enough confirmed scam and comparator examples exist, embeddings may help map scam-like content into families, boundary zones, and nearest-neighbor review examples. |
+| Prerequisites | Larger governed dataset, stable second-reviewed labels, redacted or controlled-store-governed text, non-scam comparators, and a later decision record authorizing model-assisted analysis. |
+| Method | Embed redacted item text, selected reply context, and OCR text if approved; inspect clusters and nearest neighbors; compare against rule-library families. |
+| Failure modes | Embedding similarity is mistaken for proof, false positives cluster around legitimate finance education, sensitive text leaks into model artifacts, or clusters overfit to a small confirmed-pointer set. |
+| Decision implications | Use only as a reviewer aid or method-study tool unless a later evaluation proves value and governance approves expansion. |
+
+## Deferred Experiment G: Potential Exposure Or Victim-Risk Study
+
+| Field | Plan |
+|---|---|
+| Current status | Brainstorming only; not approved for active collection. |
+| Hypothesis | Reshares, quote-like activity, replies, and other interactions around confirmed scam posts may help study exposure patterns and possible victim-risk cohorts. |
+| Prerequisites | Explicit CIB/stakeholder approval for interaction-level data, stricter user-identifier governance, controlled-store-only raw graph storage, redaction/pseudonymization plan, and ethics/legal review. |
+| Method | If approved later, represent interactors as pseudonymous exposure nodes, not confirmed victims; separate exposure, suspected victimization, and confirmed victimization. |
+| Failure modes | Resharers or commenters are falsely labeled as victims, raw identifiers leak, profile graph scope expands too quickly, or outreach implications are mishandled. |
+| Decision implications | Treat this as a possible prevention/research dataset, not an enforcement or accusation workflow. |
+
 ## Experiment D: Binary Classification vs Risk Triage
 
 | Field | Plan |
@@ -71,6 +93,7 @@ The first program should start with controlled launch details, local workspace p
 4. Add comments/replies and compare.
 5. Add visible link/redirection signals and compare.
 6. Write an error analysis and narrowing memo.
+7. Revisit deferred embedding or exposure/victim-risk studies only after a later decision record approves the scope.
 
 ## Minimum Experiment Output
 

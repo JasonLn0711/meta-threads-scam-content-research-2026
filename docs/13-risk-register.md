@@ -13,8 +13,10 @@ As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry 
 | Scope creep | Project may expand into all Meta platforms, video, or production tooling. | High | High | Use decision logs and budget-fit checks before expanding. |
 | Overclaiming risk | Research outputs may be mistaken for legal or production conclusions. | Medium | High | Use triage language, uncertainty labels, and explicit disclaimers. |
 | Model brittleness | Keyword/rule baselines may fail under wording variation. | High | Medium | Evaluate robustness and treat failures as research findings. |
+| Model-assisted overreach | Embedding clusters or nearest-neighbor results may be mistaken for proof that a case is scam. | Medium | High | Treat embeddings as research aids only, require later decision approval, preserve human review, and evaluate false positives/false negatives. |
 | Platform change risk | Threads formats, policies, or access paths may change. | Medium | Medium | Keep schema flexible and avoid overfitting to current UI details. |
 | False accusation risk | False positives may unfairly characterize benign users or businesses. | Medium | High | Preserve evidence, use human review, avoid public accusations. |
+| Victim-labeling risk | Resharers, commenters, or other interactors around a confirmed scam post may be incorrectly labeled as victims. | Medium | High | Use exposure or possible-victim-risk language, require explicit approval before interaction-level collection, and never infer confirmed victim status from interaction alone. |
 | OCR quality risk | OCR may miss or distort key text, especially in screenshots. | Medium | Medium | Track OCR error cases and require reviewer verification. |
 | Link interpretation risk | Legitimate links may be overflagged as suspicious. | High | Medium | Distinguish link presence from maliciousness; use redirect or landing evidence only under CIB run records. |
 | Budget exhaustion | Too many workstreams could consume funds before learning occurs. | Medium | High | Rank work by ROI and stop low-value branches early. |
