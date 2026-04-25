@@ -43,6 +43,7 @@ Continuing collection without review would increase item count but not answer th
 | Artifact | Purpose |
 |---|---|
 | `reports/threads-scam-content-checkpoint-0042-v0.1.md` | Main checkpoint report. |
+| `reports/checkpoint-0042-stakeholder-handoff-note.md` | Suggested handoff note for reviewers. |
 | `reports/checkpoint-0042-review-checklist.md` | Self-review checklist and sign-off scaffold. |
 | `experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` | Repo-safe synthesis of the 42-record aggregate. |
 | `governance/pilot-launch/run_index.md` | Index connecting run records, items, decisions, labels, risks, and validation outcomes. |
