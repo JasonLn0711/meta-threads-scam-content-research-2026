@@ -70,3 +70,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Adopted a dedupe-first/full-thread-ready gate before future browser candidate promotion | `0073-adopt-dedupe-first-full-thread-ready-gate.md` |
 | 2026-04-26 | Added a browser candidate promotion review template for the dedupe-first/full-thread-ready gate | `0074-add-browser-candidate-promotion-review-template.md` |
 | 2026-04-26 | Added the post-run 0039 confirmed-pointer request as the next stakeholder-facing evidence path | `0075-add-post-run-0039-confirmed-pointer-request.md` |
+| 2026-04-26 | Opened the post-run 0039 confirmed-pointer intake scaffold for possible items 0076-0080 | `0076-open-post-run-0039-confirmed-pointer-intake.md` |

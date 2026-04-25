@@ -22,6 +22,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Next authorized prospective tranche | none open |
 | Next preferred source path | confirmed-pointer tranche request |
 | Next request artifact | `../../reports/post-run-0039-confirmed-pointer-request.md` |
+| Next intake scaffold | `threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md` |
 
 ## What Is Complete
 
@@ -37,6 +38,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 - Dedupe-first/full-thread-ready gate.
 - Browser candidate promotion review template.
 - Post-run `0039` confirmed-pointer request.
+- Post-run `0039` confirmed-pointer intake scaffold.
 
 ## What Remains Blocked
 
@@ -86,6 +88,7 @@ Without another decision record, only these actions are allowed:
 - review-status documentation;
 - planning notes outside raw evidence;
 - confirmed-pointer request preparation and delivery;
+- run `0040` intake preparation while status remains `pending_pointer_delivery`;
 - repo-safe method clarification;
 - dedupe-first/full-thread-ready gate use;
 - browser candidate promotion review template use after a new decision authorizes a candidate run.

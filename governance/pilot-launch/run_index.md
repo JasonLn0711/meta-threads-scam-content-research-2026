@@ -13,6 +13,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Current collection gate | run `0039` closed; `docs/53-dedupe-first-full-thread-ready-gate.md` required before any future browser candidate promotion |
 | Next authorized prospective tranche | none open after run `0039` closure |
 | Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
+| Next intake scaffold | run `0040`, pending confirmed-pointer delivery for possible items `0076-0080` |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -53,6 +54,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0034` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0042` | 42 records strict-valid | Anti-scam warning hard negative recorded. |
 | `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | `0067-option-a-run-0038-result.md` | `0046-0055` | 55 records strict-valid | Option A completed and closed after 20 candidates reviewed and 10 selected; no final scam/high-risk items added. |
 | `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | `0069-run-0039-preflight.md`; `0070-run-0039-aggressive-tranche-result.md` | `0056-0075` local candidate entries | local 75-record candidate aggregate strict-valid; no official checkpoint promoted | Run closed after 50 candidates reviewed and 20 local candidate entries; second review found 11 uncertain and 9 duplicate/excluded, with 0 new final scam/high-risk items. |
+| `0040` | confirmed-pointer | `threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md` | pending | `0076-0080` prospective only | pending pointer delivery; no item built | Opened intake scaffold for 3-5 confirmed pointers, maximum 5 before checkpoint; collection has not started. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -150,3 +152,5 @@ Current state:
 The next preferred path is confirmed-pointer intake. If browser-session search is used again, it must pass `docs/53-dedupe-first-full-thread-ready-gate.md` before candidate promotion.
 
 Stakeholder request artifact: `reports/post-run-0039-confirmed-pointer-request.md`.
+
+Confirmed-pointer intake scaffold: `governance/pilot-launch/threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md`.
