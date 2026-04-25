@@ -46,5 +46,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0038-run-0015-second-review.md` | Repo-safe second-review result for items 0018-0023, finalizing 4 non-scam false-positive pressure cases and 2 uncertain boundary cases. |
 | `0039-checkpoint-0023-interpretation.md` | Repo-safe 23-record checkpoint interpretation closing run 0015 for collection and requiring a new run design before item 0024. |
 | `0040-run-0016-reply-aware-recall-design.md` | Repo-safe design note opening run 0016 as a bounded reply/comment-aware recall run before item 0024. |
+| `0041-run-0016-preflight.md` | Repo-safe preflight showing run 0016 is ready for browser/session execution while the API path remains blocked. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

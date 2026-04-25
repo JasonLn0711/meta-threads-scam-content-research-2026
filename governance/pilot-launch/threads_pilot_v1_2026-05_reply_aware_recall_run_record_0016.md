@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0032-close-run-0015-and-require-new-run-design` |
 | Target local item range | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
 | Purpose | test reply/comment-aware, high-recall evidence discovery without letting one seed consume the full candidate budget |
-| Current gate | `design_open_preflight_required` |
-| Run status | `not_started` |
+| Current gate | `browser_session_execution_ready_api_path_blocked` |
+| Run status | `preflight_complete_not_started` |
 
 ## Scope Rationale
 
@@ -106,6 +106,17 @@ A candidate may pass reviewability only if all are true:
 | Redaction rule | approved fields only; no raw identifiers in git |
 | Second-review owner | assigned before selected items count |
 
+## Preflight Result
+
+| Check | Result |
+|---|---|
+| Browser storage-state shape | pass; cookie and origin arrays present |
+| API dry-run readiness | blocked; `META_API_PROBE_URL` missing or empty |
+| Latest local aggregate strict validation | pass; 23 checked, 0 errors, 0 warnings |
+| Pilot preflight | pass; 21 OK, 0 WARN, 0 ERROR |
+| Execution path allowed now | browser/session only |
+| API execution allowed now | no |
+
 ## Stop Conditions
 
 Stop immediately if:
@@ -132,4 +143,4 @@ Stop immediately if:
 
 ## Next Action
 
-Run preflight for the approved browser/session or API/session-aware path, confirm checkpoint 0023 strict validation, then execute only this bounded reply-aware recall design for item `0024`.
+Execute only through the approved browser/session path unless the API path is later completed and rechecked. Start with item `0024` under the run 0016 per-family candidate caps.
