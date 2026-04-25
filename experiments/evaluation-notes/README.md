@@ -51,5 +51,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0043-run-0016-second-review.md` | Repo-safe second-review result for items 0024-0027, finalizing 2 non-scam false-positive pressure cases and 2 uncertain boundary cases. |
 | `0044-checkpoint-0027-interpretation.md` | Repo-safe 27-record checkpoint interpretation closing run 0016 for collection and requiring a method decision before item 0028. |
 | `0045-item-0028-method-decision.md` | Repo-safe method decision blocking item 0028 until API/session-aware readiness or targeted redacted exemplars are available. |
+| `0046-targeted-exemplar-intake-start.md` | Repo-safe start note for targeted redacted exemplar intake after the API dry-run remained blocked. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
