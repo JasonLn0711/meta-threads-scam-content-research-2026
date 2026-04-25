@@ -150,3 +150,26 @@ Run only the next revised diagnostic seed, `RP-0011-03`, with the query-echo fil
 ## Next Required Action After Third Revised Diagnostic
 
 Run only the final revised diagnostic seed, `RP-0011-04`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.
+
+## Fourth Revised Diagnostic Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0011-04` |
+| Query echoes excluded | 0 |
+| Candidates reviewed | 5 |
+| Negation/risk-warning count | 0 |
+| Single-signal candidates | 0 |
+| Multi-signal candidates | 0 |
+| Reviewable candidates | 0 |
+| Signal-family metadata | none detected |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Run 0011 Outcome
+
+Run 0011 tested the revised candidate-diagnostic design, added a query-echo filter, and attempted all four revised seeds. The only local item 0017 trace was excluded after second review because it was query echo only. After the filter patch, no revised seed produced a reviewable candidate.
+
+## Next Required Action After Run 0011
+
+Pause collection again for method decision. Do not advance to item 0018. The next decision should choose whether to change the evidence scope, change acquisition path, revise candidate extraction beyond visible search-result text, or stop the item 0017 extension.

@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0010` |
 | Prior decision | `pause_item_0017_collection_and_open_method_revision_before_run_0011` |
 | Purpose | revise the item 0017 candidate-diagnostic method before any further item attempt |
-| Current gate | `rp0011_04_diagnostic_required_after_no_reviewable_rp0011_03` |
-| Run status | `query_echo_filter_patched_rp0011_03_no_reviewable_candidate` |
+| Current gate | `method_decision_required_after_no_reviewable_item_0017` |
+| Run status | `completed_no_accepted_item_after_revised_diagnostics` |
 
 ## Required Pre-Run Gate
 
@@ -184,10 +184,27 @@ Stop immediately if:
 | Local records built? | no new item created |
 | Decision after diagnostic | `try_rp0011_04_with_query_echo_filter` |
 
+## RP-0011-04 Diagnostic Result
+
+| Result field | Value |
+|---|---|
+| Seed attempted | `RP-0011-04` |
+| Query echoes excluded | 0 |
+| Candidates reviewed | 5 |
+| Negation/risk-warning count | 0 |
+| Single-signal candidate count | 0 |
+| Multi-signal candidate count | 0 |
+| Reviewable candidate count | 0 |
+| Signal-family metadata | none detected |
+| Local records built? | no new item created |
+| Decision after diagnostic | `pause_for_method_decision_after_no_reviewable_item_0017` |
+
 ## Next Action
 
 The `RP-0011-01` diagnostic pass found one apparent reviewable candidate under the approved field allowlist. After controlled-store review, the candidate was reduced to approved redacted local fields and built as a local item 0017 trace.
 
 Second review found that the retained visible text was only a query echo, not independent item content. Item 0017 is excluded and must not count as an accepted research item. Do not advance to item 0018. Before any further item 0017 attempt, patch the diagnostic gate to reject exact-query and near-query echoes.
 
-The query-echo filter has now been patched and retried against `RP-0011-01`; no reviewable candidate remained. `RP-0011-02` and `RP-0011-03` also produced no reviewable candidate under the current field allowlist. The next allowed action is the final revised diagnostic pass, `RP-0011-04`, with the same filter enabled.
+The query-echo filter has now been patched and retried against `RP-0011-01`; no reviewable candidate remained. `RP-0011-02`, `RP-0011-03`, and `RP-0011-04` also produced no reviewable candidate under the current field allowlist. The local item 0017 trace remains excluded and must not count as an accepted research item.
+
+The next allowed action is a method decision, not another automatic collection attempt. Do not advance to item 0018. Decide whether to change the evidence scope, change acquisition path, revise candidate extraction beyond visible search-result text, or stop the item 0017 extension.
