@@ -24,6 +24,12 @@ C2: keep collection paused and review/refine the 55-record checkpoint report
 
 If more high-risk examples are needed after review, prefer C1 over C3.
 
+## Decision Outcome
+
+Stakeholders selected `C2` on `2026-04-25`.
+
+Collection remains paused. The 55-record checkpoint report package is the current CIB/165-facing review object. Item `0056` is not authorized by this decision.
+
 ## Why This Decision Is Needed Now
 
 The project has enough evidence-system material to review:
@@ -94,16 +100,16 @@ C3 should be framed as calibration work, not as the primary path for finding hig
 
 | Field | Response |
 |---|---|
-| Selected option | `C1` / `C2` / `C3` |
-| Decision owner |  |
-| Date |  |
-| Required changes before sharing |  |
-| If C1, confirmed-pointer source owner |  |
-| If C1, next tranche size |  |
-| If C2, report reviewer(s) |  |
-| If C3, candidate review cap |  |
-| If C3, selected-item cap |  |
-| If C3, allowed source path |  |
-| Notes |  |
+| Selected option | `C2` |
+| Decision owner | project owner |
+| Date | `2026-04-25` |
+| Required changes before sharing | Review/refine the 55-record checkpoint report package; keep collection paused. |
+| If C1, confirmed-pointer source owner | not selected |
+| If C1, next tranche size | not selected |
+| If C2, report reviewer(s) | pending |
+| If C3, candidate review cap | not selected |
+| If C3, selected-item cap | not selected |
+| If C3, allowed source path | not selected |
+| Notes | Do not collect item `0056`; use the current checkpoint package for review. |
 
-After the reviewer returns this table, record the final decision before collecting item `0056`.
+The final decision is recorded in `governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md`.

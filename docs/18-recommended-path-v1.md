@@ -14,9 +14,9 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: review the 55-record checkpoint report package in [../reports/threads-scam-content-checkpoint-0055-v0.1.md](../reports/threads-scam-content-checkpoint-0055-v0.1.md), [../reports/checkpoint-0055-decision-request.md](../reports/checkpoint-0055-decision-request.md), and [../reports/checkpoint-0055-review-checklist.md](../reports/checkpoint-0055-review-checklist.md), then record whether stakeholders choose C1, C2, or C3 before any item `0056` collection.
+Immediate next action: execute the selected C2 path by reviewing and refining the 55-record checkpoint report package in [../reports/threads-scam-content-checkpoint-0055-v0.1.md](../reports/threads-scam-content-checkpoint-0055-v0.1.md), [../reports/checkpoint-0055-decision-request.md](../reports/checkpoint-0055-decision-request.md), and [../reports/checkpoint-0055-review-checklist.md](../reports/checkpoint-0055-review-checklist.md). Do not collect item `0056`.
 
-Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocks item `0056` until a new decision is recorded.
+Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocked item `0056` until a new decision was recorded. Decision 0062 selects C2: keep collection paused and review/refine the 55-record checkpoint report package.
 
 The next checkpoint decision should choose one of three paths:
 

@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | items `0043-0055` are included in the 55-record checkpoint synthesis |
-| Current collection gate | item `0056` is blocked until `checkpoint_0055_stakeholder_decision_record.md` records C1, C2, or C3 |
+| Current collection gate | C2 selected; item `0056` remains blocked while the 55-record report package is reviewed/refined |
 | Next authorized prospective tranche | none; run `0038` is closed after reaching its 20-candidate and 10-selected caps |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
@@ -134,10 +134,13 @@ Synthesis: `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md`.
 
 ## Current Gate Before Item 0056
 
-The checkpoint 0055 report package is complete. No item `0056` collection should begin until `checkpoint_0055_stakeholder_decision_record.md` records one of:
+The checkpoint 0055 report package is complete. `checkpoint_0055_stakeholder_decision_record.md` records `C2`.
 
-- `C1`: pause browser-session expansion and wait for confirmed pointers;
-- `C2`: keep collection paused and review/refine the 55-record checkpoint report;
-- `C3`: open another bounded browser-session tranche for calibration only.
+Current state:
 
-Until that decision is recorded, the next authorized prospective tranche is `none`.
+- collection remains paused;
+- item `0056` is not authorized;
+- the 55-record checkpoint report package is the current CIB/165-facing review object;
+- further collection requires a later decision.
+
+The next authorized prospective tranche is `none`.

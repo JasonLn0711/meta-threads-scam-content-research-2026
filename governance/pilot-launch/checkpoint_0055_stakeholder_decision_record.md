@@ -12,12 +12,12 @@ This record contains no raw Threads URLs, handles, screenshots, raw post text, r
 |---|---|
 | Decision ID | `CHECKPOINT-0055-STAKEHOLDER-DECISION` |
 | Checkpoint | `threads_pilot_v1_0055` |
-| Decision status | `pending` |
+| Decision status | `accepted` |
 | Recommended option | `C2` |
-| Selected option | `pending` |
-| Decision owner | pending |
-| Decision date | pending |
-| Reviewer(s) | pending |
+| Selected option | `C2` |
+| Decision owner | project owner |
+| Decision date | `2026-04-25` |
+| Reviewer(s) | report reviewers pending |
 | Recorded by | `AUTO-OP-01` |
 
 ## Evidence Package To Review
@@ -49,35 +49,35 @@ Recommended choice: `C2`.
 
 | Field | Response |
 |---|---|
-| Selected option | `C1` / `C2` / `C3` |
-| Decision owner |  |
-| Date |  |
-| Required changes before sharing |  |
-| If C1, confirmed-pointer source owner |  |
-| If C1, next tranche size |  |
-| If C2, report reviewer(s) |  |
-| If C3, candidate review cap |  |
-| If C3, selected-item cap |  |
-| If C3, allowed source path |  |
-| Notes |  |
+| Selected option | `C2` |
+| Decision owner | project owner |
+| Date | `2026-04-25` |
+| Required changes before sharing | Review/refine the 55-record checkpoint report package; keep collection paused. |
+| If C1, confirmed-pointer source owner | not selected |
+| If C1, next tranche size | not selected |
+| If C2, report reviewer(s) | pending |
+| If C3, candidate review cap | not selected |
+| If C3, selected-item cap | not selected |
+| If C3, allowed source path | not selected |
+| Notes | Do not collect item `0056`; use the current 55-record checkpoint package as the review object. |
 
 ## Conditions And Blockers
 
 | Condition | Status | Notes |
 |---|---|---|
-| Raw evidence reviewed only in controlled store when necessary | `required` | Do not copy raw evidence into this repo. |
-| Stakeholder selects C1, C2, or C3 | `pending` | No item `0056` collection before this is recorded. |
-| Any C1 confirmed-pointer tranche is bounded before collection resumes | `pending_if_selected` | Define tranche size and checkpoint boundary. |
-| Any C2 report edits are captured in tracked report/checklist files | `pending_if_selected` | Keep edits repo-safe and evidence-limited. |
-| Any C3 browser-session tranche is explicitly calibration-scoped | `pending_if_selected` | Define caps and do not treat C3 as high-risk discovery by default. |
+| Raw evidence reviewed only in controlled store when necessary | `accepted` | Do not copy raw evidence into this repo. |
+| Stakeholder selects C1, C2, or C3 | `accepted` | C2 selected. |
+| Any C1 confirmed-pointer tranche is bounded before collection resumes | `not_selected` | Confirmed-pointer intake remains available only after a later decision. |
+| Any C2 report edits are captured in tracked report/checklist files | `required` | Keep edits repo-safe and evidence-limited. |
+| Any C3 browser-session tranche is explicitly calibration-scoped | `not_selected` | No browser-session tranche is authorized. |
 
 ## Sign-Off
 
 | Role | Name | Status | Date | Notes |
 |---|---|---|---|---|
-| Project owner | pending | `pending` | pending | Must select C1, C2, or C3. |
+| Project owner | project owner | `accepted` | `2026-04-25` | Selected C2: keep collection paused and review/refine the 55-record checkpoint report. |
 | CIB/165-facing reviewer | pending | `pending` | pending | Review checkpoint package and decision request. |
-| Research reviewer | pending | `pending` | pending | Confirm whether more high-risk rule families are needed. |
+| Research reviewer | pending | `pending` | pending | Confirm whether the report needs more clarity or missing-evidence notes. |
 | Data governance reviewer | pending | `pending` | pending | Confirm continued redaction and controlled-store boundary. |
 
 ## Post-Decision Follow-Up

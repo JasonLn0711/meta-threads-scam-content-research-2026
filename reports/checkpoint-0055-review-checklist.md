@@ -96,14 +96,14 @@ The goal is to verify that the 55-record checkpoint package is reviewable, redac
 
 | Role | Name | Decision | Date | Notes |
 |---|---|---|---|---|
-| Research owner | pending | `revise` / `approve` / `block` | pending | External sign-off still required. |
+| Research owner | project owner | `approve` | `2026-04-25` | Approved C2: keep collection paused and review/refine the 55-record checkpoint report. |
 | Domain reviewer | pending | `revise` / `approve` / `block` | pending | External sign-off still required. |
 | Legal/privacy reviewer | pending | `revise` / `approve` / `block` | pending | External sign-off still required. |
 | Technical reviewer | pending | `revise` / `approve` / `block` | pending | External sign-off still required. |
-| Stakeholder owner | pending | `revise` / `approve` / `block` | pending | External sign-off still required. |
+| Stakeholder owner | project owner | `approve` | `2026-04-25` | Selected C2; item `0056` remains blocked. |
 
 ## Blocker Log
 
 | Blocker | Owner | Required fix | Due date | Resolved? |
 |---|---|---|---|
-| No internal self-review blocker found | AUTO-OP-01 | Send to human/stakeholder review for sign-off decision | before stakeholder use | no; sign-off pending |
+| No internal self-review blocker found | AUTO-OP-01 | Continue external/domain/legal/technical review before broader use | before stakeholder use | partially; C2 selected, external review rows still pending |
