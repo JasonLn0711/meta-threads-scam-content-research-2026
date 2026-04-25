@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0031-record-stakeholder-evidence-expansion-approval` |
 | Target local item range | starts at `threads_pilot_v1_0018`; at most 10 selected items |
 | Purpose | attempt a bounded evidence-expansion tranche using approved expanded evidence families |
-| Current gate | `browser_session_execution_ready_api_path_blocked` |
-| Run status | `preflight_complete_not_started` |
+| Current gate | `execution_complete_pending_second_review` |
+| Run status | `local_records_built_strict_valid` |
 
 ## Stakeholder Scope Approval
 
@@ -53,6 +53,37 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Pilot preflight | pass; 21 OK, 0 WARN, 0 ERROR |
 | Execution path allowed now | browser/session only |
 | API execution allowed now | no |
+
+## Execution Result
+
+| Field | Result |
+|---|---|
+| Execution path used | approved browser/session path |
+| API path used | no |
+| Candidates reviewed | 20 |
+| Selected local items | 6 |
+| Local item range created | `threads_pilot_v1_0018` through `threads_pilot_v1_0023` |
+| Raw output location | controlled store only |
+| Git-safe output | redacted local manual entries and local manual records only |
+| Candidate cap reached? | yes |
+| Selected item cap reached? | no |
+| Stop condition | candidate review cap reached before later seeds were sampled |
+
+All reviewed candidates came from the first risk-probe seed because the total candidate-review cap was reached there. This does not convert the seed into a label; it only records the query path used to find candidates.
+
+### Repo-Safe Aggregate
+
+| Metric | Value |
+|---|---|
+| `manual_entry_0018.json` through `manual_entry_0023.json` created locally | yes |
+| `manual_record_0018.json` through `manual_record_0023.json` built locally | yes |
+| Checkpoint file | `data/interim/manual_records_checkpoint_0023.jsonl` |
+| Strict validation | pass; 23 checked, 0 errors, 0 warnings |
+| Run 0015 labels before second review | 6 `uncertain` |
+| Run 0015 risk levels before second review | 1 `low`, 5 `medium` |
+| Run 0015 visible signal tags | 6 `visible_external_link`; 3 `contact_handle_visible`; 3 `private_channel_redirect`; 2 `guaranteed_or_risk_free_claim`; 2 `unrealistic_profit_or_benefit` |
+
+The local entries were normalized to existing schema enums before record build. No new taxonomy value was introduced by this run.
 
 ## Run Limits
 
@@ -90,13 +121,13 @@ Stop immediately if:
 
 | Field | Value |
 |---|---|
-| Run started? | no |
-| Candidate reviewed count | 0 |
-| Selected item count | 0 |
-| Local records built? | no |
-| Strict validation result | not_applicable |
+| Run started? | yes |
+| Candidate reviewed count | 20 |
+| Selected item count | 6 |
+| Local records built? | yes |
+| Strict validation result | pass; 23 checked, 0 errors, 0 warnings |
 | Second review complete? | no |
 
 ## Next Action
 
-Execute only through the approved browser/session path unless the API path is later completed and rechecked. Keep the run bounded to at most 20 candidates reviewed and at most 10 selected items, from item 0018 through item 0027. Do not open item 0028 in this run.
+Second-review items `0018` through `0023` before counting them as accepted pilot evidence or opening additional expansion candidates. Do not open item `0028` in this run.

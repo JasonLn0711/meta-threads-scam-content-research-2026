@@ -42,5 +42,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0034-run-0013-method-review.md` | Repo-safe method review stopping the item 0017 extension for the current pilot tranche after the scoped evidence path found no reviewable candidate. |
 | `0035-pilot-synthesis-after-item-0017-stop.md` | Repo-safe checkpoint addendum preparing stakeholder evidence-scope review after the accepted dataset remained at 16 records. |
 | `0036-run-0015-preflight.md` | Repo-safe preflight showing run 0015 is ready for browser/session execution while the API path remains blocked. |
+| `0037-run-0015-execution-result.md` | Repo-safe execution result for run 0015: 20 candidates reviewed, 6 local records built, strict-valid checkpoint 0023, second review pending. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
