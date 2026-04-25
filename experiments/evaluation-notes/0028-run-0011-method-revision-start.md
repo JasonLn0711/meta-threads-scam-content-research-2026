@@ -131,3 +131,22 @@ Run only the next revised diagnostic seed, `RP-0011-02`, with the query-echo fil
 ## Next Required Action After Second Revised Diagnostic
 
 Run only the next revised diagnostic seed, `RP-0011-03`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.
+
+## Third Revised Diagnostic Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0011-03` |
+| Query echoes excluded | 0 |
+| Candidates reviewed | 5 |
+| Negation/risk-warning count | 0 |
+| Single-signal candidates | 0 |
+| Multi-signal candidates | 0 |
+| Reviewable candidates | 0 |
+| Signal-family metadata | none detected |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Next Required Action After Third Revised Diagnostic
+
+Run only the final revised diagnostic seed, `RP-0011-04`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.
