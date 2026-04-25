@@ -47,7 +47,7 @@ Aggregate result:
 
 The follow-up improved the evidence state for a small subset of run `0043` candidates. Two candidates are now tied to item-level context strongly enough for second-review consideration.
 
-However, this run still does not create `manual_entry_0076`. The ready candidates need fast different-angle second review, redacted field construction, one-item validation, aggregate validation, and explicit final promotion decision before any official item is created.
+After run closure, a separate second-review decision selected one ready candidate as a redacted hard-negative calibration item. `manual_entry_0076` and `manual_record_0076` were built locally and strict-validated with 0 errors and 0 warnings.
 
 ## Required Workflow
 
@@ -70,6 +70,6 @@ Stop if:
 
 ## Current Decision
 
-Run `0045` is complete as a source-linkage follow-up only.
+Run `0045` is complete as a source-linkage follow-up.
 
-It must not create `manual_entry_0076`, manual records, or official checkpoint items.
+It did not itself create official checkpoint items during execution. A later second-review/build step created local redacted item `0076` as `non_scam` / `low`, not as a scam/high-risk expansion.

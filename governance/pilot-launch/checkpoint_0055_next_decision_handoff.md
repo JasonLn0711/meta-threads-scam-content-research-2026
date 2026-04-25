@@ -30,7 +30,8 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Query diversification rule | adopted for future search-based browser runs |
 | Run 0043 promotion review | first pass complete; no candidate promotable yet |
 | Aggressive candidate-quality test | run `0044` completed; no official expansion |
-| Source-linkage follow-up | run `0045` completed; 2 candidates eligible for second review |
+| Source-linkage follow-up | run `0045` completed; local item `0076` built as non-scam hard negative |
+| Local item `0076` | strict-valid `non_scam` / `low`; checkpoint inclusion pending separate synthesis decision |
 
 ## What Is Complete
 
@@ -51,7 +52,8 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 ## What Remains Blocked
 
 - Collection outside a new recorded decision.
-- Any item beyond `0075`.
+- Any item beyond local `0076`.
+- Checkpoint inclusion for item `0076` without a separate synthesis decision.
 - Any new browser-session candidate promotion that does not pass the dedupe-first/full-thread-ready gate.
 - Broad crawler expansion.
 - Landing-page or redirect-chain expansion.
