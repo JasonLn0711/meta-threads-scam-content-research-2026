@@ -6,6 +6,8 @@ Use this method when the project owner, CIB, or another approved stakeholder sup
 
 The goal is to preserve raw evidence in the controlled store, convert only redacted fields into local records, update the rule library when the case reveals a reusable pattern, and keep the repo documentation-first.
 
+As of the 42-record checkpoint, this is the highest-yield approved method for adding high-risk scam-like rule families. It should remain bounded: one pointer at a time, controlled capture, redacted record, second review, strict validation, and checkpoint synthesis. It does not authorize broad crawler expansion or prevalence claims.
+
 ## Method
 
 1. Record the full source pointer only in the controlled store.
@@ -18,6 +20,7 @@ The goal is to preserve raw evidence in the controlled store, convert only redac
 8. Complete second review before counting the item.
 9. Add or update taxonomy, annotation guidance, reason codes, and baseline rules only when the case shows a reusable evidence family.
 10. Add a repo-safe run/evaluation note with hashes, counts, and limitations.
+11. Update `governance/pilot-launch/run_index.md` or the next checkpoint synthesis when the item crosses a checkpoint boundary.
 
 ## Boundaries
 

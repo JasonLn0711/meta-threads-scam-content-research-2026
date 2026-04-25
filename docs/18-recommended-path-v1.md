@@ -14,7 +14,14 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 Build a phase-1 research MVP for Threads scam-like content triage.
 
-Immediate next action: run the 1-2 item controlled rehearsal under the confirmed controlled launch limits; validate local records; review redaction quality; record the repo-safe rehearsal decision with `templates/controlled_rehearsal_review.md` and `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`; confirm or rerun 5-item calibration if annotators changed; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md). The rehearsal may use the intended manual, API, or automation path, but every API or automation run must follow the CIB controlled launch record. The outside-git controlled launch record is confirmed, the local-only workspace has been initialized, and before-item-1 preflight has passed with `ERROR: 0`.
+Immediate next action: review the 42-record checkpoint synthesis in [../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md) and the run index in [../governance/pilot-launch/run_index.md](../governance/pilot-launch/run_index.md), then make an explicit checkpoint decision before continuing collection.
+
+The checkpoint decision should choose one of two paths:
+
+- Continue approved confirmed-pointer intake, one item at a time, with controlled capture, redacted records, second review, strict validation, and a fixed next checkpoint boundary.
+- Pause new collection and turn the 42-record pilot into a CIB/165-facing checkpoint report v0.1.
+
+Do not continue by habit. The repo now has enough item/run/rule material that reviewability, indexing, and synthesis are the bottleneck.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
@@ -26,7 +33,7 @@ Execute the pilot through [29-authorized-pilot-execution-plan.md](29-authorized-
 
 Before any pilot labels are treated as baseline-ready, onboard annotators with [30-annotator-onboarding-quickstart.md](30-annotator-onboarding-quickstart.md) and run QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Do not jump directly to a 500-item real dataset. The safe path to that scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md).
+Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
 
 The MVP should include:
 

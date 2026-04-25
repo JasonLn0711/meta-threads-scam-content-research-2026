@@ -10,7 +10,7 @@
 | Primary repo | `meta-threads-scam-content-research-2026` |
 | Related planning repo | `planning-everything-track` |
 | Audience | CIB/165-facing review, anti-fraud research planning, professors, investigators, and engineers |
-| Status | Initial research report. No production promise. No annotated-result claim. |
+| Status | Initial research report with 42-record checkpoint synthesis. No production promise. No legal determination claim. |
 
 ## Executive Summary
 
@@ -34,6 +34,26 @@ The recommended first path is a small, evidence-centric study:
 - Evaluate usefulness for human review, not only model metrics.
 
 This approach fits the practical NTD 1.8M research budget better than a full Meta-wide production system, video-heavy pipeline, deepfake detector, or automated enforcement architecture.
+
+## Checkpoint 0042 Update
+
+As of the 42-record checkpoint, the repo has enough controlled evidence to require synthesis before more collection. The current checkpoint is documented in `experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` and indexed in `governance/pilot-launch/run_index.md`.
+
+Checkpoint summary:
+
+| Metric | Value |
+|---|---:|
+| Strict-valid records | 42 |
+| `scam` / `high` | 14 |
+| `non_scam` | 22 |
+| `uncertain` | 5 |
+| `insufficient_evidence` | 1 |
+| Baseline precision | 0.700 |
+| Baseline recall | 1.000 |
+| Baseline false positives | 6 |
+| Baseline false negatives | 0 |
+
+Confirmed-pointer intake is currently the highest-yield approved path for high-risk rule learning. Broad crawler expansion is not the next default step. The next decision should explicitly choose either continued bounded confirmed-pointer intake or a CIB/165-facing checkpoint report v0.1.
 
 ## CIB/165 Stakeholder Context
 

@@ -99,7 +99,7 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-04-24`, the repo has moved from scaffold-only to a controlled, checkpointed pilot:
+As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a reviewable 42-record synthesis:
 
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
@@ -127,12 +127,17 @@ As of `2026-04-24`, the repo has moved from scaffold-only to a controlled, check
 - Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed to this repo.
 - The first 15 controlled local records have been collected under ignored `data/interim/`, built, strict-validated, and summarized in repo-safe aggregate notes.
 - The first 15-item aggregate remains low-risk skewed: 14 `non_scam`, 1 adjudicated `uncertain`, 0 `scam`, and 0 medium/high-risk records.
-- Risk-probe runs 0005 and 0006 tested domain plus signal-family seeds, but public unauthenticated browser-rendered search returned no extractable item content; item 0016 remains uncreated.
-- Access-path review run 0007 confirmed controlled-store access governance material exists outside git, but no loadable browser storage-state/session artifact or ready API client path was available; item 0016 remains uncreated.
+- Risk-probe runs 0005 and 0006 tested domain plus signal-family seeds, but public unauthenticated browser-rendered search returned no extractable item content.
+- Approved browser-session execution, scoped reply/link evidence runs, confirmed-pointer intake, account-source context, and a hard-negative anti-scam warning example have now produced a 42-record strict-valid checkpoint.
+- The repo-safe run index is [governance/pilot-launch/run_index.md](governance/pilot-launch/run_index.md).
+- The 42-record checkpoint synthesis is [experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md).
+- Checkpoint `0042` contains 14 `scam` / high-risk records, 22 `non_scam`, 5 `uncertain`, and 1 `insufficient_evidence`.
+- The checkpoint baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
+- The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
 
-The next blocker is executable access path, not query wording: before item 16, prepare a loadable browser session artifact in controlled storage or an approved API/session-aware client path. The current topic-only seed path is useful for comparator and boundary examples, but it has not produced high-risk scam-like cases; the public risk-probe path also does not expose item content. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until a later checkpoint decision records adequate source mix, content-form mix, and evidence mix.
+The next blocker is no longer basic access-path readiness. The next blocker is checkpoint decision quality: decide whether to continue bounded confirmed-pointer intake or pause collection and prepare a CIB/165-facing checkpoint report v0.1. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not continue collection by habit, and do not move to broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
 
-As of `2026-04-24`, CIB and other units cannot provide redacted case examples, and manual controlled sampling is unavailable. The practical acquisition path remains controlled browser-rendered or API/session-aware collection under explicit run records, [docs/50-controlled-crawler-acquisition-plan.md](docs/50-controlled-crawler-acquisition-plan.md), and [templates/controlled_crawler_run_record.md](templates/controlled_crawler_run_record.md). The next run must be an approved session/API risk-probe access run, not another public unauthenticated query-string experiment.
+Confirmed-pointer intake is now the highest-yield approved acquisition method for rule-family learning. Continue it only one item at a time, with controlled capture, redacted records, second review, strict validation, and checkpoint synthesis. Query terms and crawler seeds remain candidate-finding tools only, not labels.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
@@ -142,7 +147,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, controlled browser-rendered rehearsal completed, first 15 controlled records strict-validated, risk-probe method tested, and approved session/API risk-probe access reviewed before item 16.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, controlled browser-rendered rehearsal completed, 42 controlled records strict-validated, run index created, and checkpoint synthesis reviewed before further collection.
 4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
 5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
 6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
