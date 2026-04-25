@@ -51,3 +51,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Recorded stakeholder approval for all proposed evidence families while preserving run-level limits and raw-data boundaries before item 0018 | `0031-record-stakeholder-evidence-expansion-approval.md` |
 | 2026-04-25 | Closed run 0015 for collection after its candidate-review cap was exhausted and required a new bounded run design before item 0024 | `0032-close-run-0015-and-require-new-run-design.md` |
 | 2026-04-25 | Closed run 0016 for collection after item 0027 and required a method decision before item 0028 | `0033-close-run-0016-and-require-method-decision-before-item-0028.md` |
+| 2026-04-25 | Selected API/session-aware readiness or targeted redacted exemplars as the required method before item 0028 | `0034-select-api-or-targeted-exemplar-method-before-item-0028.md` |
