@@ -12,6 +12,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Latest local work visible in tree | run `0039` completed as a local candidate tranche; no new official checkpoint promoted |
 | Current collection gate | run `0039` closed; `docs/53-dedupe-first-full-thread-ready-gate.md` required before any future browser candidate promotion |
 | Next authorized prospective tranche | none open after run `0039` closure |
+| Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -147,3 +148,5 @@ Current state:
 - future selected items must complete controlled capture, redacted record build, strict validation, and second review before they count.
 
 The next preferred path is confirmed-pointer intake. If browser-session search is used again, it must pass `docs/53-dedupe-first-full-thread-ready-gate.md` before candidate promotion.
+
+Stakeholder request artifact: `reports/post-run-0039-confirmed-pointer-request.md`.

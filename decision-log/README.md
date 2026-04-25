@@ -69,3 +69,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Closed run 0039 after aggressive browser-session supplement produced no new final scam/high-risk items | `0072-close-run-0039-after-aggressive-browser-result.md` |
 | 2026-04-26 | Adopted a dedupe-first/full-thread-ready gate before future browser candidate promotion | `0073-adopt-dedupe-first-full-thread-ready-gate.md` |
 | 2026-04-26 | Added a browser candidate promotion review template for the dedupe-first/full-thread-ready gate | `0074-add-browser-candidate-promotion-review-template.md` |
+| 2026-04-26 | Added the post-run 0039 confirmed-pointer request as the next stakeholder-facing evidence path | `0075-add-post-run-0039-confirmed-pointer-request.md` |

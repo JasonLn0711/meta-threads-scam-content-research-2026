@@ -12,7 +12,7 @@ Subject: Checkpoint decision request: Threads scam-content research 55-record re
 
 Hi [Name],
 
-The Threads scam-content research repo has reached a 55-record checkpoint. We are pausing new collection by default because the latest approved browser-session tranche reached its caps and did not add final scam/high-risk examples.
+The Threads scam-content research repo has reached a 55-record checkpoint. We are pausing broad browser-session expansion because the latest approved browser-session tranches reached their caps and did not add final scam/high-risk examples.
 
 Please review the checkpoint package and choose one path:
 
@@ -22,7 +22,7 @@ Please review the checkpoint package and choose one path:
 
 The research recommendation is **C2 first**, with **C1** as the preferred next data path if reviewers need more final scam/high-risk examples.
 
-Do not begin item `0056` until this decision is returned and recorded.
+After run `0039`, do not open another broad browser-session tranche. If more evidence is needed, use `reports/post-run-0039-confirmed-pointer-request.md` to request a small confirmed-pointer tranche.
 
 ## What To Read First
 
@@ -35,6 +35,7 @@ Do not begin item `0056` until this decision is returned and recorded.
 | 5 | `experiments/evaluation-notes/0067-option-a-run-0038-result.md` | Result note for the capped Option A browser-session tranche. |
 | 6 | `governance/pilot-launch/run_index.md` | Auditable index of runs, items, decisions, validation, and baseline outcomes. |
 | 7 | `decision-log/0061-select-checkpoint-0055-report-package.md` | Decision explaining why the next step is report review, not item `0056`. |
+| 8 | `reports/post-run-0039-confirmed-pointer-request.md` | Follow-up request if reviewers need more final scam/high-risk examples. |
 
 ## Key Checkpoint Facts
 
@@ -48,6 +49,8 @@ Do not begin item `0056` until this decision is returned and recorded.
 - False positives: `7`.
 - Run 0038 reviewed 20 candidates and selected 10 items, reaching its approved caps.
 - Run 0038 added no final scam/high-risk records.
+- Run 0039 reviewed 50 candidates and created 20 local candidate entries, but added no final scam/high-risk records.
+- Run 0039 second review found 11 `uncertain` entries and 9 duplicate or near-duplicate exclusions.
 - Confirmed pointers remain the higher-yield source for final scam/high-risk rule learning.
 - Hard-negative lesson remains active: anti-scam warning content is not itself scam content unless the item introduces a conversion path.
 
@@ -71,7 +74,7 @@ Please return the filled decision fields from `reports/checkpoint-0055-decision-
 | Date |  |
 | Required changes before sharing |  |
 | If C1, confirmed-pointer source owner |  |
-| If C1, next tranche size |  |
+| If C1, next tranche size | recommended 3-5, maximum 5 before next checkpoint |
 | If C2, report reviewer(s) |  |
 | If C3, candidate review cap |  |
 | If C3, selected-item cap |  |
