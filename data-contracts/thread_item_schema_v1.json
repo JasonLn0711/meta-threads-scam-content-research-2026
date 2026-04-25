@@ -228,7 +228,9 @@
         "enum": [
           "unrealistic_profit_or_benefit",
           "guaranteed_or_risk_free_claim",
+          "high_fee_course_or_membership_funnel",
           "private_channel_redirect",
+          "implicit_dm_contact_request",
           "visible_external_link",
           "suspicious_domain_or_shortener",
           "contact_handle_visible",

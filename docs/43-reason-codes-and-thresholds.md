@@ -6,9 +6,11 @@
 |---|---|---|
 | `GUARANTEED_PROFIT` | Guaranteed, fixed, no-loss, or risk-free outcome language | post, reply, OCR |
 | `LOW_EFFORT_HIGH_RETURN` | Easy money, passive income, unusually large benefit | post, reply, OCR |
+| `HIGH_FEE_COURSE_FUNNEL` | High-fee course, academy, membership, coaching, or trading-education funnel | post, reply, OCR |
 | `BEGINNER_EASY_MONEY` | Beginner or no-experience earning framing | post, reply, OCR |
 | `MENTOR_COPYTRADE_LANGUAGE` | Teacher, mentor, signal group, copy-trade lure | post, reply, OCR |
 | `PRIVATE_REDIRECT` | DM, group, LINE, WhatsApp, Telegram, private channel | text or structured redirect field |
+| `IMPLICIT_DM_CONTACT_REQUEST` | DM/private-message request that withholds public contact details and may move delivery of links or handles into private chat | post, reply, OCR |
 | `CONTACT_HANDLE_PRESENT` | Visible handle, phone, email, or messaging ID | contact-handle field or text |
 | `EXTERNAL_LINK_PRESENT` | Visible link, URL, shortener, or click-link instruction | link field or text |
 | `URGENCY_PRESSURE` | Scarcity, deadline, today-only, act-now pressure | post, reply, OCR |
@@ -43,6 +45,8 @@ Configured in `configs/baseline_rule_config.yaml`.
 | Screenshot-style evidence | Weak alone; useful when paired with claim, proof, OCR, or redirect. |
 | Urgency | Weak alone; common in legitimate marketing. |
 | Guaranteed profit | Strong, but strongest when paired with redirect/proof/payment evidence. |
+| High-fee course funnel | Weak to medium alone; stronger when paired with financial outcome, guarantee, private contact, testimonial, or reply-dispute evidence. |
+| Implicit DM request | Weak alone; stronger when paired with investment/profit framing, anti-scam camouflage, proof, urgency, or payment cues. |
 | Payment or credential ask | Severe signal, but high-risk assignment still requires guardrails. |
 | OCR-only lure | Adds evidence-context value and explains why images matter. |
 | Reply-only funnel | Adds evidence-context value and explains why replies matter. |

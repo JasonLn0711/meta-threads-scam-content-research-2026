@@ -93,7 +93,9 @@ High-value tags to watch:
 
 - `guaranteed_or_risk_free_claim`
 - `unrealistic_profit_or_benefit`
+- `high_fee_course_or_membership_funnel`
 - `private_channel_redirect`
+- `implicit_dm_contact_request`
 - `visible_external_link`
 - `contact_handle_visible`
 - `pseudo_official_language`
@@ -137,6 +139,8 @@ Set `review_status` to `needs_second_review` when:
 - `evidence_sufficiency` is `partial`, `insufficient`, or `not_reviewable`
 - the item depends mainly on OCR-only or reply-only evidence
 - you are unsure whether the item is aggressive legal marketing or scam-like
+- the item asks users to private-message the poster for investment/profit-related details while public contact details are absent
+- a high-fee trading or investment course funnel is paired with guaranteed-profit, private-contact, payment, testimonial, or reply-context dispute evidence
 
 ## Common Mistakes
 
@@ -145,6 +149,8 @@ Set `review_status` to `needs_second_review` when:
 | Labeling all finance content as `scam` | Require visible guarantee, fake authority, private redirect, payment/credential ask, or suspicious testimonial. |
 | Using `uncertain` for unreadable records | Use `insufficient_evidence` when the item cannot be reviewed. |
 | Treating any link as malicious | Record `visible_external_link`, but label based on surrounding evidence. |
+| Treating a missing public LINE/link as automatically benign | Check whether the post or replies ask users to DM for investment/profit details; use `implicit_dm_contact_request` when visible. |
+| Treating all paid education as benign or all expensive courses as scams | Look for the whole pattern: price, financial outcome claims, private contact, testimonials, payment path, and reply-context disputes. |
 | Overusing signal tags | Use tags only for visible evidence. Do not infer hidden intent. |
 | Forgetting missing evidence | Fill `missing_evidence` when OCR, link, image, or context is absent. |
 | Making legal claims | Use research labels only; do not claim criminal fraud. |
@@ -161,4 +167,3 @@ Before handing off your annotation file:
 - `annotation_notes` explains the strongest evidence or uncertainty
 - high-risk, uncertain, low-confidence, and partial-evidence items are marked for review
 - no raw personal data was pasted into notes
-

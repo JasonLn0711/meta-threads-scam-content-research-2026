@@ -9,9 +9,11 @@ from .types import MatchedSignal, ScoreBreakdown
 EXPLANATION_TEMPLATES = {
     "GUARANTEED_PROFIT": "Detected guaranteed-profit language in {source}.",
     "LOW_EFFORT_HIGH_RETURN": "Detected low-effort or high-return benefit language in {source}.",
+    "HIGH_FEE_COURSE_FUNNEL": "Detected high-fee course, academy, coaching, or membership funnel language in {source}.",
     "BEGINNER_EASY_MONEY": "Detected beginner/no-experience earning language in {source}.",
     "MENTOR_COPYTRADE_LANGUAGE": "Detected mentor, signal-group, or copy-trade language in {source}.",
     "PRIVATE_REDIRECT": "Detected private-channel redirect language in {source}.",
+    "IMPLICIT_DM_CONTACT_REQUEST": "Detected implicit DM/contact-request language in {source}.",
     "CONTACT_HANDLE_PRESENT": "Detected visible contact-handle evidence in {source}.",
     "EXTERNAL_LINK_PRESENT": "Detected visible external-link evidence in {source}.",
     "URGENCY_PRESSURE": "Detected urgency or scarcity pressure in {source}.",

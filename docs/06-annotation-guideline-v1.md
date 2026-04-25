@@ -107,7 +107,9 @@ Select all observable `signal_tags`. Use `none` only when no signal applies.
 |---|---|
 | `unrealistic_profit_or_benefit` | The item promises unusually large money, health, job, prize, or status benefit. |
 | `guaranteed_or_risk_free_claim` | The item says or strongly implies guaranteed, certain, no-risk, fixed, or loss-free outcome. |
+| `high_fee_course_or_membership_funnel` | The item promotes or defends a high-fee course, academy, coaching, membership, or trading-education funnel tied to financial outcomes. |
 | `private_channel_redirect` | The item directs users to private chat, group, assistant, or off-platform contact. |
+| `implicit_dm_contact_request` | The item asks users to private-message the poster or another account to receive details, even when no public LINE/link/site/contact handle is visible. |
 | `visible_external_link` | A visible URL, link text, shortener, or landing-page reference appears. |
 | `suspicious_domain_or_shortener` | The visible URL looks mismatched, shortened, disguised, vague, or unrelated to the claimed source. |
 | `contact_handle_visible` | A handle, phone number, email, LINE/WhatsApp/Telegram ID, or similar contact appears. |
@@ -161,6 +163,22 @@ Do not label a post `scam` just because it discusses stocks, crypto, options, tr
 Do not treat anti-scam wording as automatically benign. Some items may repeatedly say they hate, oppose, or warn against scams while also telling readers they can earn money through the author's investment path, group, method, teacher, account, or channel.
 
 Escalate to `uncertain` or `scam` when anti-scam language appears together with any concrete funnel signal: suspicious website or link, LINE/Telegram/WhatsApp/Facebook Messenger/Instagram contact, add-friend link, private group, contact handle, wallet/deposit/payment instruction, guaranteed or unusually strong profit claim, or testimonial proof. Use second review for these cases because the anti-scam wording may be camouflage rather than genuine negation.
+
+### Implicit DM Funnel Without Public Contact Details
+
+Do not require a public LINE link, scam website, contact handle, or visible external URL before recognizing a private-channel funnel. A CIB-confirmed stakeholder exemplar showed that a scam-like investment lure may be wrapped inside another story or ordinary-looking content, then ask users in the post or replies to private-message the poster. The contact route, LINE link, scam site, or other off-platform step may be delivered only after the victim enters DM.
+
+Use `implicit_dm_contact_request` when the visible item asks readers to DM/private-message for details, opportunities, methods, quotas, instructions, or investment/profit information while withholding public contact details. Combine it with `private_channel_redirect`; add `reply_only_lure` when the DM request appears only in selected replies/comments.
+
+Escalate to `uncertain` or `scam` when an implicit DM request co-occurs with investment/profit framing, guaranteed or unusually strong benefit language, testimonial proof, anti-scam camouflage, urgency, payment/deposit/wallet cues, or fake authority. Use second review because legitimate creators also ask for DMs, and the label must rest on the whole evidence pattern, not the DM request alone.
+
+### High-Fee Trading Course Or Membership Funnel
+
+Do not label a course, academy, mentor, or membership offer as `scam` only because it is expensive. Paid education can be legitimate.
+
+Escalate when a high-fee trading, investing, crypto, or financial-education funnel appears together with scam-like evidence: guaranteed or disputed guaranteed-profit claims, vague or defensive legitimacy framing, private-channel contact, screenshots/testimonials, fake authority, pressure to join, unusual payment structure, or selected replies/comments that expose claims not obvious in the top-level post.
+
+Use `high_fee_course_or_membership_funnel` when the collected evidence shows a course, academy, membership, coaching, or trading-education funnel whose price, promised outcome, or reply context is central to the risk assessment. Add `reply_only_lure` when the decisive guarantee, dispute, contact, or payment detail appears mainly in selected replies/comments.
 
 ### Finance Discussion Without A Conversion Step
 
@@ -235,6 +253,8 @@ Send an item to second review when:
 - evidence sufficiency is `partial`, `insufficient`, or `not_reviewable`
 - the top-level post appears benign but selected replies/comments contain links, contact handles, private-channel migration, add-friend instructions, wallet/deposit/payment instructions, or suspicious domains
 - the item uses anti-scam, scam-hating, or scam-warning language while also promoting an investment/profit path or showing contact/link/private-channel signals
+- the item asks users to private-message the poster for investment/profit-related details while public contact details are absent
+- a high-fee trading, investing, crypto, or financial-education funnel is paired with guaranteed-profit, private-contact, testimonial, payment, or reply-context dispute evidence
 - annotators disagree on primary label, risk level, or key scam subtype
 
 Use `templates/adjudication_template.md` to resolve disagreements. If the same disagreement appears repeatedly, revise this guideline after the 50-item pilot.

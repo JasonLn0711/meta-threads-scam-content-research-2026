@@ -15,8 +15,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0034-select-api-or-targeted-exemplar-method-before-item-0028` |
 | Target local item range if exemplars pass intake | starts at `threads_pilot_v1_0028` |
 | Purpose | obtain targeted redacted high-risk examples or pointers without repeating broad browser/session search |
-| Current gate | `intake_open_waiting_for_redacted_exemplars` |
-| Intake status | `not_received` |
+| Current gate | `first_redacted_exemplar_received_and_converted` |
+| Intake status | `first_exemplar_received` |
 
 ## Why This Intake Exists
 
@@ -108,12 +108,27 @@ Stop intake if:
 | Field | Value |
 |---|---|
 | Exemplar received? | no |
-| Redaction owner assigned? | pending |
-| Second-review owner assigned? | pending |
-| `manual_entry_0028.json` created? | no |
-| Local records built? | no |
-| Strict validation result | not_applicable |
+| Redaction owner assigned? | yes: `annotation_lead_01` |
+| Second-review owner assigned? | yes: `rev_01` |
+| `manual_entry_0028.json` created? | yes |
+| Local records built? | yes: `manual_record_0028.json`, `manual_records_checkpoint_0028.jsonl` |
+| Strict validation result | pass: 1 item, 28-record aggregate; 0 errors, 0 warnings |
+
+## First Exemplar Receipt
+
+| Field | Value |
+|---|---|
+| Receipt date | `2026-04-25` |
+| Exemplar source | CIB-confirmed targeted stakeholder pointer |
+| Repo-safe item ID | `threads_pilot_v1_0028` |
+| Evidence family | `implicit_dm_contact_request` plus investment/profit funnel |
+| Public contact/link visible? | no, based on redacted stakeholder description |
+| DM request visible? | yes, based on redacted stakeholder description |
+| Raw URL or handle stored in git? | no |
+| Raw post/replies stored in git? | no |
+| Raw post/replies stored in controlled store? | yes: run `CAPTURE-THREADS-PILOT-V1-0028-FULL-THREAD` |
+| Second review required? | complete in local redacted record |
 
 ## Next Action
 
-Request 1 to 3 targeted redacted exemplars or exemplar-like pointers from CIB/stakeholders using this intake boundary. Do not create item `0028` until at least one approved exemplar is received, redacted, built, strict-validated, and second-reviewed.
+Use checkpoint `0028` and run 0018 for the next method review. Treat the first targeted exemplar as calibration evidence that stakeholder/CIB pointers have higher high-risk yield than repeated broad browser/session search-result collection. Do not infer prevalence from this one item.

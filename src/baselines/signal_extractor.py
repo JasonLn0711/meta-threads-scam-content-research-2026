@@ -90,6 +90,7 @@ def extract_textual_lure_signals(
         (
             "GUARANTEED_PROFIT",
             "LOW_EFFORT_HIGH_RETURN",
+            "HIGH_FEE_COURSE_FUNNEL",
             "BEGINNER_EASY_MONEY",
             "MENTOR_COPYTRADE_LANGUAGE",
         ),
@@ -105,7 +106,7 @@ def extract_redirect_signals(
     return _extract_pattern_signals(
         record,
         source_field,
-        ("PRIVATE_REDIRECT", "CONTACT_HANDLE_PRESENT", "EXTERNAL_LINK_PRESENT"),
+        ("PRIVATE_REDIRECT", "IMPLICIT_DM_CONTACT_REQUEST", "CONTACT_HANDLE_PRESENT", "EXTERNAL_LINK_PRESENT"),
         config,
     )
 
@@ -155,8 +156,14 @@ def extract_payment_credential_signals(
 def extract_ocr_signals(record: dict[str, Any], config: RuleConfig) -> list[MatchedSignal]:
     signals: list[MatchedSignal] = []
     for signal_codes in (
-        ("GUARANTEED_PROFIT", "LOW_EFFORT_HIGH_RETURN", "BEGINNER_EASY_MONEY", "MENTOR_COPYTRADE_LANGUAGE"),
-        ("PRIVATE_REDIRECT", "CONTACT_HANDLE_PRESENT", "EXTERNAL_LINK_PRESENT"),
+        (
+            "GUARANTEED_PROFIT",
+            "LOW_EFFORT_HIGH_RETURN",
+            "HIGH_FEE_COURSE_FUNNEL",
+            "BEGINNER_EASY_MONEY",
+            "MENTOR_COPYTRADE_LANGUAGE",
+        ),
+        ("PRIVATE_REDIRECT", "IMPLICIT_DM_CONTACT_REQUEST", "CONTACT_HANDLE_PRESENT", "EXTERNAL_LINK_PRESENT"),
         ("URGENCY_PRESSURE",),
         ("TESTIMONIAL_PATTERN", "SCREENSHOT_EVIDENCE"),
         ("PSEUDO_OFFICIAL_LANGUAGE", "CELEBRITY_ENDORSEMENT_PATTERN"),

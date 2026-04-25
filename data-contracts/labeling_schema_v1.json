@@ -56,7 +56,9 @@
   "signal_tags": {
     "unrealistic_profit_or_benefit": "Unusually high financial, health, prize, or personal benefit claim.",
     "guaranteed_or_risk_free_claim": "Guarantee, no-risk, fixed-return, or certain-outcome language.",
+    "high_fee_course_or_membership_funnel": "High-fee course, academy, coaching, membership, or trading-education funnel tied to financial outcomes.",
     "private_channel_redirect": "Instructions to DM, join a group, message an assistant, or move off Threads.",
+    "implicit_dm_contact_request": "Asks users to private-message the poster or another account to receive details while public contact details are withheld.",
     "visible_external_link": "A visible external link, shortened link, landing-page reference, or URL-like string appears.",
     "suspicious_domain_or_shortener": "Domain, shortener, or visible URL looks mismatched, vague, deceptive, or newly introduced.",
     "contact_handle_visible": "A contact handle, phone, email, LINE/WhatsApp/Telegram ID, or similar is visible.",

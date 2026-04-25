@@ -45,7 +45,9 @@ Multiple types may apply, but over-selection is a taxonomy warning sign. Most it
 |---|---|
 | `unrealistic_profit_or_benefit` | Large money, health, job, prize, or status benefit. |
 | `guaranteed_or_risk_free_claim` | Guaranteed return, no-risk, daily income, fixed ROI. |
+| `high_fee_course_or_membership_funnel` | High-fee course, academy, membership, coaching, or trading-education funnel tied to financial outcomes. |
 | `private_channel_redirect` | DM me, join group, contact assistant, LINE/WhatsApp/Telegram handle. |
+| `implicit_dm_contact_request` | Public post or reply asks users to private-message the poster, even when no LINE/link/site/contact handle is visible. |
 | `visible_external_link` | Visible URL, link text, shortener, landing-page reference. |
 | `suspicious_domain_or_shortener` | Mismatched URL, vague domain, shortened link, disguised link text. |
 | `contact_handle_visible` | Contact handle, phone, email, messaging ID. |
@@ -97,6 +99,8 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 
 - "Promises guaranteed profit."
 - "Redirects user to private messaging channel."
+- "Requests private messages as the conversion path while withholding public contact details."
+- "Uses a high-fee trading course or membership funnel around financial outcomes."
 - "Uses suspicious testimonial screenshot."
 - "Claims official or celebrity association without evidence."
 - "Post text is vague, but replies contain contact instructions."
