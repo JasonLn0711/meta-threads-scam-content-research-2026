@@ -26,6 +26,7 @@ Keep this file free of raw Threads content, full source URLs, raw handles, scree
 |---|---|---|
 | Authorization gate | pass / fail | Approved run record exists with candidate and selected-item caps. |
 | Access gate | pass / fail | Approved browser/session-aware or API/session-aware readiness passed. |
+| Query-diversification gate | pass / fail / n/a | Search-query matrix varied risk domains, visible signal families, and wording styles; repeated seeds justified if used. |
 | Dedupe gate | pass / fail | Candidate is not an exact or near duplicate of existing items/candidates. |
 | Source-context gate | pass / fail | Visible claim can be interpreted without relying on query terms. |
 | Reply-context gate | pass / fail | Replies/comments captured, unavailable, or not needed due to confirmed-pointer context. |
@@ -67,6 +68,7 @@ not_duplicate / near_duplicate_promotable_with_new_context / duplicate_exclude
 | Are visible links tied to the item rather than only the page? | yes / no / none_visible |  |
 | Are contact/action gates tied to the item? | yes / no / none_visible |  |
 | Are query terms excluded from label evidence? | yes / no |  |
+| Did the source run avoid repeating a narrow topic-only seed set? | yes / no / n/a |  |
 | Is anti-scam or warning language protective rather than conversion-oriented? | yes / no / not_observed |  |
 | Is the evidence sufficient for a final `scam` or `non_scam` label? | yes / no |  |
 

@@ -21,6 +21,8 @@ Use this gate only when:
 - the approved browser/session-aware or API/session-aware path is ready;
 - the goal is candidate discovery or false-positive pressure, not prevalence measurement.
 
+If the run uses search queries, it must also satisfy [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution.
+
 Do not use it to justify broad crawler expansion, private-message access, profile graph capture, landing-page capture, redirect-chain capture, embedding/model training, or production detection.
 
 ## Promotion Rule
@@ -31,6 +33,7 @@ A browser-session candidate may become an official selected item only if all req
 |---|---|
 | Authorization gate | approved run record exists with candidate and selected-item caps |
 | Access gate | approved browser/session-aware or API/session-aware path passes readiness check |
+| Query-diversification gate | if search queries are used, the seed matrix varies risk domain, visible signal family, and wording style |
 | Dedupe gate | candidate is not an exact or near duplicate of an existing item or local candidate |
 | Source-context gate | enough source context exists to interpret the visible claim without relying on query terms |
 | Reply-context gate | replies/comments are captured or explicitly determined unavailable |
@@ -81,6 +84,8 @@ Browser-session candidates should default conservatively:
 - `non_scam` only when protective, warning, ordinary discussion, or comparator context is sufficiently clear.
 
 Query terms may help find candidates, but they must not become label evidence.
+
+If the same or similar query set has already been used, the run record must explain why repetition is necessary and how the new run changes source path, extraction surface, context capture, or candidate caps.
 
 ## Preferred Next Source Order
 
