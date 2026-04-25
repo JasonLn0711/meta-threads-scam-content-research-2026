@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0031-record-stakeholder-evidence-expansion-approval` |
 | Target local item range | starts at `threads_pilot_v1_0018`; at most 10 selected items |
 | Purpose | attempt a bounded evidence-expansion tranche using approved expanded evidence families |
-| Current gate | `execution_complete_pending_second_review` |
-| Run status | `local_records_built_strict_valid` |
+| Current gate | `second_review_complete` |
+| Run status | `local_records_built_second_reviewed_strict_valid` |
 
 ## Stakeholder Scope Approval
 
@@ -85,6 +85,19 @@ All reviewed candidates came from the first risk-probe seed because the total ca
 
 The local entries were normalized to existing schema enums before record build. No new taxonomy value was introduced by this run.
 
+### Second-Review Result
+
+| Metric | Value |
+|---|---|
+| Items second-reviewed | `threads_pilot_v1_0018` through `threads_pilot_v1_0023` |
+| Final run 0015 labels | 4 `non_scam`; 2 `uncertain` |
+| Final run 0015 risk levels | 4 `low`; 2 `medium` |
+| False-positive pressure cases | 4 |
+| Boundary/uncertainty cases | 2 |
+| Strict validation after second review | pass; 23 checked, 0 errors, 0 warnings |
+
+The second review treated explicit negation around private-channel or recruitment language as false-positive pressure evidence, not scam evidence. Two profit or testimonial-style partial-evidence items remain final `uncertain` / `medium` because the redacted evidence is risk-relevant but not sufficient for a scam determination.
+
 ## Run Limits
 
 | Limit | Value |
@@ -126,8 +139,8 @@ Stop immediately if:
 | Selected item count | 6 |
 | Local records built? | yes |
 | Strict validation result | pass; 23 checked, 0 errors, 0 warnings |
-| Second review complete? | no |
+| Second review complete? | yes |
 
 ## Next Action
 
-Second-review items `0018` through `0023` before counting them as accepted pilot evidence or opening additional expansion candidates. Do not open item `0028` in this run.
+Update the aggregate checkpoint interpretation from 17 to 23 strict-valid local records, then decide whether to use the remaining selected-item capacity in run 0015. Do not open item `0028` in this run.
