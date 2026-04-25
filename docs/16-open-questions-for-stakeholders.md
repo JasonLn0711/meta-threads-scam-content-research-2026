@@ -2,9 +2,11 @@
 
 ## Current Status
 
-As of `2026-04-23`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, a completed synthetic validation/audit/baseline dry run, and an approved 50-item pilot launch packet.
+As of `2026-04-25`, the repo has a schema, annotation guide, pilot governance package, report-v0 package, synthetic samples, a completed synthetic validation/audit/baseline dry run, an approved 50-item pilot launch packet, 16 accepted controlled local records, and one excluded item 0017 method-review trace.
 
-The controlled launch detail now lives outside git in the controlled launch record. Exact source, storage, access, retention, screenshot/link handling, and redaction limits must stay there, not in this repo. The synthetic dry run still answers tooling questions only; real-data questions require the controlled rehearsal and first 10-15 item checkpoint.
+The controlled launch detail now lives outside git in the controlled launch record. Exact source, storage, access, retention, screenshot/link handling, and redaction limits must stay there, not in this repo. The current blocker is no longer item-1 readiness. Decision 0029 stopped the item 0017 extension because the approved evidence scope did not produce independent reviewable item-level evidence for higher-risk discovery.
+
+Use `docs/51-stakeholder-evidence-expansion-memo.md` for the current evidence-scope decision request before any future item 0017 retry or item 0018 attempt.
 
 ## Pilot Kickoff Questions
 
@@ -40,6 +42,21 @@ These questions are the immediate blocker for real evidence operations:
 | Checkpoint | Who reviews the first 10-15 item checkpoint and decides whether 50 may continue? |
 
 If any answer is incomplete for the current path, collection on that path remains paused and the repo should stay in synthetic-only tooling, planning, or governance-repair mode.
+
+## Current Evidence-Expansion Questions After Run 0013
+
+These questions now block any future item 0017 retry, item 0018 attempt, or higher-risk case-finding run:
+
+| Area | Question |
+|---|---|
+| Tranche status | Do stakeholders accept stopping the current item 0017 extension and reporting the checkpoint as 16 accepted records plus 1 excluded trace? |
+| Evidence families | Which evidence families are approved next: redacted stakeholder examples, risk-relevant OCR excerpts, narrow reply context, visible-link domain/category, redirect evidence, or none? |
+| Screenshots/OCR | If screenshots or OCR are approved, may raw images be stored only in the controlled store with repo-safe OCR excerpts? |
+| Reply context | If narrow reply context is approved, what maximum reply window is allowed and what redaction is mandatory? |
+| Links and redirects | Is domain/category evidence enough, or is any landing-page or redirect-chain capture approved? |
+| Candidate burden | What is the maximum number of candidates the next run may review? |
+| Counting rule | Can a future evidence-expansion result count toward the 50-item pilot, or is it method-only? |
+| Review ownership | Who second-reviews `uncertain`, low-confidence, or medium/high-risk candidates before they count? |
 
 ## Criminal Investigation Stakeholders
 
