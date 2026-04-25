@@ -33,3 +33,18 @@ open_run_0010_but_execute_only_after_access_and_aggregate_validation
 - Use query terms only for candidate retrieval, not labels.
 - Reject candidates where the only risk signal is a warning, denial, or negation of guaranteed profit.
 - Stop if the item would require profile graph, landing-page capture, broad comments, screenshot/OCR evidence, or raw identifiers to be retained.
+
+## First Attempt Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0010-01` |
+| Candidates reviewed | 5 |
+| Negation/risk-warning filter applied | yes |
+| Selected item 0017 | no |
+| `manual_entry_0017.json` created | no |
+| Raw/session material in git | no |
+
+## Next Allowed Action
+
+Try item 0017 again with `RP-0010-02` only after re-checking approved browser storage-state readiness. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.

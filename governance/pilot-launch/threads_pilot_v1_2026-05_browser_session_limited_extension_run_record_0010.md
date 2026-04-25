@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0009` |
 | Prior decision | `open_limited_browser_session_extension_0010_with_negation_filter` |
 | Purpose | attempt a limited item 0017-0020 extension through the approved browser storage-state path |
-| Current gate | `ready_for_single_item_0017_attempt_after_access_check` |
-| Run status | `opened_not_started` |
+| Current gate | `item_0017_rp0010_02_or_method_review_required` |
+| Run status | `started_no_selected_item_from_first_seed` |
 
 ## Required Pre-Run Gate
 
@@ -129,15 +129,17 @@ For each selected item:
 
 | Result field | Value |
 |---|---|
-| Run started? | no |
-| Run completed? | no |
-| Candidates reviewed | 0 |
+| Run started? | yes |
+| Run completed? | partial; first seed only |
+| Candidates reviewed | 5 for `RP-0010-01` |
 | Selected items | 0 |
-| Stop condition triggered? | not_applicable |
+| Stop condition triggered? | no |
 | Local records built? | no |
-| Strict validation result | pending |
-| Decision after run | pending |
+| Strict validation result | not_applicable; no item built |
+| Decision after run | `no_selected_item_from_rp0010_01_try_next_seed_only_after_review` |
 
 ## Next Action
 
-Before execution, run the approved access-path readiness check and strict-validate the existing 16-record local aggregate. If both pass, attempt item 0017 only; do not jump directly to all four items.
+The first item 0017 attempt used `RP-0010-01`, reviewed 5 candidates, applied the negation/risk-warning exclusion, and selected no item. No `manual_entry_0017.json` was created.
+
+The next allowed action is a separate item 0017 attempt using `RP-0010-02` only after confirming the approved browser storage-state remains ready. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
