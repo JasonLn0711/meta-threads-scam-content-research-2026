@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0012` |
 | Prior decision | `open_run_0013_scoped_execution_record_only` |
 | Purpose | attempt at most one item 0017 candidate under scoped evidence-path boundaries |
-| Current gate | `ready_for_pre_execution_checks_not_started` |
-| Run status | `opened_not_started` |
+| Current gate | `method_review_required_after_no_reviewable_scoped_candidate` |
+| Run status | `completed_no_reviewable_candidate` |
 
 ## Required Pre-Execution Gate
 
@@ -105,15 +105,22 @@ Use one seed only for the first execution attempt.
 
 | Result field | Value |
 |---|---|
-| Run started? | no |
-| Run completed? | no |
-| Candidates reviewed | 0 |
+| Run started? | yes |
+| Run completed? | yes |
+| Candidates reviewed | 4 after query-echo filter |
+| Query echoes excluded | 1 |
+| Domain-only evidence | `external_domain`: 15 |
+| Redirect-category evidence | `unknown`: 15 |
+| Signal-family metadata | `wallet_or_deposit`: 2 |
+| Narrow reply-context feasible count | 0 |
 | Reviewable candidates | 0 |
 | Selected items | 0 |
 | Local records built? | no |
-| Strict validation result | pending |
-| Decision after run | pending |
+| Strict validation result | not_applicable; no item built |
+| Decision after run | `pause_for_method_review_after_scoped_evidence_no_reviewable_candidate` |
 
 ## Next Action
 
-Before execution, validate the latest local aggregate, confirm approved browser storage-state readiness, and confirm the existing item 0017 remains excluded. Then execute only `RP-0013-01`; do not attempt item 0018.
+Run 0013 found domain-only external-link evidence in aggregate form, but no reviewable candidate under the scoped field allowlist. Redirect categories were `unknown`, no narrow reply-context feasibility was available, and no local item was built.
+
+Do not attempt item 0018. The next action is method review: decide whether to stop item 0017 extension, refine domain/redirect classification without opening landing pages, or request a separately scoped evidence expansion.

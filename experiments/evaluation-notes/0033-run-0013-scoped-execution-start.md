@@ -30,3 +30,22 @@ It may not use screenshots/OCR, landing pages, full redirect chains, broad profi
 ## Next Required Action
 
 Before execution, re-check approved browser storage-state readiness and strict-validate the latest local aggregate. Then execute only `RP-0013-01`; do not attempt item 0018.
+
+## Execution Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0013-01` |
+| Query echoes excluded | 1 |
+| Candidates reviewed after filter | 4 |
+| Domain-only evidence | `external_domain`: 15 |
+| Redirect-category evidence | `unknown`: 15 |
+| Signal-family metadata | `wallet_or_deposit`: 2 |
+| Narrow reply-context feasible count | 0 |
+| Reviewable candidates | 0 |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Next Required Action After Execution
+
+Pause for method review. The scoped evidence path surfaced external-domain counts, but without reviewable candidate content, known redirect categories, or narrow reply-context feasibility. Do not attempt item 0018.
