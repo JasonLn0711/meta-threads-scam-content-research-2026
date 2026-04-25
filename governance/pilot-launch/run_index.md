@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | run `0039` completed as a local candidate tranche; no new official checkpoint promoted |
-| Current collection gate | run `0041` authorized as candidate quality test; preflight required before execution |
+| Current collection gate | run `0041` preflight passed; ready for controlled candidate-quality execution |
 | Next authorized prospective tranche | none for official checkpoint promotion; run `0041` is candidate quality test only |
 | Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
 | Next intake scaffold | run `0040`, receipt-ready and waiting for confirmed-pointer delivery for possible items `0076-0080` |
@@ -55,7 +55,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | `0067-option-a-run-0038-result.md` | `0046-0055` | 55 records strict-valid | Option A completed and closed after 20 candidates reviewed and 10 selected; no final scam/high-risk items added. |
 | `0039` | confirmed-pointer + browser-session supplement | `threads_pilot_v1_2026-05_aggressive_prospective_tranche_run_record_0039.md` | `0069-run-0039-preflight.md`; `0070-run-0039-aggressive-tranche-result.md` | `0056-0075` local candidate entries | local 75-record candidate aggregate strict-valid; no official checkpoint promoted | Run closed after 50 candidates reviewed and 20 local candidate entries; second review found 11 uncertain and 9 duplicate/excluded, with 0 new final scam/high-risk items. |
 | `0040` | confirmed-pointer | `threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md` | `0071-run-0040-receipt-readiness.md` | `0076-0080` prospective only | receipt-ready; waiting for pointer delivery; no item built | Intake scaffold is ready for 3-5 confirmed pointers, maximum 5 before checkpoint; collection has not started. |
-| `0041` | browser-session | `threads_pilot_v1_2026-05_dedupe_first_browser_candidate_quality_run_record_0041.md` | pending | candidate quality-review entries only | authorized, preflight pending; no item built | More aggressive dedupe-first browser candidate quality test: review max 60 candidates, select max 30 for quality review, no official checkpoint promotion. |
+| `0041` | browser-session | `threads_pilot_v1_2026-05_dedupe_first_browser_candidate_quality_run_record_0041.md` | `0072-run-0041-preflight.md` | candidate quality-review entries only | preflight passed; no item built | More aggressive dedupe-first browser candidate quality test: review max 60 candidates, select max 30 for quality review, no official checkpoint promotion. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 

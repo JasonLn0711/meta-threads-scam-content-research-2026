@@ -20,7 +20,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Raw output location | controlled store only |
 | Repo-visible raw output | no |
 | Official checkpoint promotion | no, unless a later decision explicitly promotes validated items |
-| Run status | `authorized_not_started_pending_preflight` |
+| Run status | `preflight_passed_ready_for_candidate_quality_execution` |
 
 ## Authorization And Scope
 
@@ -127,4 +127,6 @@ Run `0041` is authorized as a candidate quality test only.
 
 It is not an official checkpoint expansion and does not create item `0076` or any later official item.
 
-The next concrete action is run `0041` preflight: confirm approved browser-session readiness, controlled-store path, dedupe inputs, full-thread/reply-ready feasibility, and repo-safe output boundaries before execution.
+Run-level preflight passed in `experiments/evaluation-notes/0072-run-0041-preflight.md`.
+
+The next concrete action is controlled execution within the run caps. Do not create official checkpoint items or promote candidates without a later decision.

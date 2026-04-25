@@ -24,7 +24,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Next request artifact | `../../reports/post-run-0039-confirmed-pointer-request.md` |
 | Next intake scaffold | `threads_pilot_v1_2026-05_post_run_0039_confirmed_pointer_intake_record_0040.md` |
 | Next intake status | `receipt_ready_waiting_for_pointer_delivery` |
-| Browser candidate quality test | run `0041` authorized; preflight required before execution; no official promotion |
+| Browser candidate quality test | run `0041` preflight passed; ready for controlled execution; no official promotion |
 
 ## What Is Complete
 
