@@ -38,3 +38,19 @@ exclude_item_0017_query_echo_and_patch_diagnostic_gate
 - Do not create `manual_entry_0017.json` from query echoes or interface/search text.
 - Keep query terms as retrieval hints only; they cannot become labels or evidence.
 - Do not advance to item 0018.
+
+## Query-Echo Filter Retry
+
+| Check | Result |
+|---|---|
+| Filter patched | yes; exact-query and near-query echoes excluded before diagnostic selection |
+| Seed retried | `RP-0011-01` |
+| Query echoes excluded | 1 |
+| Candidates reviewed after filter | 4 |
+| Reviewable candidates after filter | 0 |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Next Required Action
+
+Continue item 0017 method revision with the next revised seed, `RP-0011-02`, under the patched query-echo filter. Do not advance to item 0018.

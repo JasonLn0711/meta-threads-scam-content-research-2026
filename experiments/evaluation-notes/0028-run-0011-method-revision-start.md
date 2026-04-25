@@ -97,3 +97,18 @@ Second-review item 0017 before any move to item 0018. The review should confirm 
 ## Next Required Action After Second Review
 
 Patch the diagnostic gate to reject exact-query and near-query echoes before any further item 0017 attempt. Do not treat the excluded item 0017 trace as permission to advance to item 0018.
+
+## Query-Echo Filter Retry Result
+
+| Check | Result |
+|---|---|
+| Seed retried | `RP-0011-01` |
+| Query echoes excluded | 1 |
+| Candidates reviewed after filter | 4 |
+| Reviewable candidates after filter | 0 |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Next Required Action After Filter Retry
+
+Run only the next revised diagnostic seed, `RP-0011-02`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.

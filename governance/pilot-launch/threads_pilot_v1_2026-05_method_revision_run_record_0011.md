@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0010` |
 | Prior decision | `pause_item_0017_collection_and_open_method_revision_before_run_0011` |
 | Purpose | revise the item 0017 candidate-diagnostic method before any further item attempt |
-| Current gate | `query_echo_filter_patch_required_before_item_0017_retry` |
-| Run status | `item_0017_excluded_after_second_review` |
+| Current gate | `rp0011_02_diagnostic_required_after_query_echo_filter` |
+| Run status | `query_echo_filter_patched_rp0011_01_no_reviewable_candidate` |
 
 ## Required Pre-Run Gate
 
@@ -142,8 +142,22 @@ Stop immediately if:
 | Second-review status | `excluded`; retained visible text was only a query echo |
 | Decision after run | `patch_query_echo_filter_before_any_item_0017_retry` |
 
+## Query-Echo Filter Retry Result
+
+| Result field | Value |
+|---|---|
+| Filter patched? | yes |
+| Seed retried | `RP-0011-01` |
+| Query echoes excluded | 1 |
+| Candidates reviewed after filter | 4 |
+| Reviewable candidates after filter | 0 |
+| Local records built? | no new item created |
+| Decision after retry | `try_rp0011_02_with_query_echo_filter` |
+
 ## Next Action
 
 The `RP-0011-01` diagnostic pass found one apparent reviewable candidate under the approved field allowlist. After controlled-store review, the candidate was reduced to approved redacted local fields and built as a local item 0017 trace.
 
 Second review found that the retained visible text was only a query echo, not independent item content. Item 0017 is excluded and must not count as an accepted research item. Do not advance to item 0018. Before any further item 0017 attempt, patch the diagnostic gate to reject exact-query and near-query echoes.
+
+The query-echo filter has now been patched and retried against `RP-0011-01`; no reviewable candidate remained. The next allowed action is a diagnostic pass for `RP-0011-02` with the same filter enabled.
