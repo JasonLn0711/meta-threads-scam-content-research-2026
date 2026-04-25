@@ -112,3 +112,22 @@ Patch the diagnostic gate to reject exact-query and near-query echoes before any
 ## Next Required Action After Filter Retry
 
 Run only the next revised diagnostic seed, `RP-0011-02`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.
+
+## Second Revised Diagnostic Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0011-02` |
+| Query echoes excluded | 0 |
+| Candidates reviewed | 5 |
+| Negation/risk-warning count | 0 |
+| Single-signal candidates | 2 |
+| Multi-signal candidates | 1 |
+| Reviewable candidates | 0 |
+| Signal-family metadata | `crypto_domain`: 2; `testimonial`: 1; `wallet_or_deposit`: 1 |
+| `manual_entry_0017.json` recreated | no |
+| Raw/session material in git | no |
+
+## Next Required Action After Second Revised Diagnostic
+
+Run only the next revised diagnostic seed, `RP-0011-03`, with the query-echo filter still enabled. Do not create item 0017 unless a non-query-echo candidate passes the reviewability gate.
