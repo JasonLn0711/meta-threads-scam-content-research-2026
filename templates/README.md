@@ -7,6 +7,7 @@ Reusable templates for dataset collection, annotation, governance, and experimen
 ```text
 500_item_expansion_work_order.md
 baseline_error_review_table.csv
+browser_candidate_promotion_review.md
 annotation_sheet_template.csv
 annotation_disagreement_log_template.csv
 annotation_qa_checklist.md
@@ -47,6 +48,8 @@ Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.m
 Use `pilot_decision_memo.md`, `pilot_result_summary.md`, and `baseline_error_review_table.csv` only after the checkpoint-approved 50-item pilot to decide whether to expand to 100-200, revise, narrow, or pause.
 
 Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
+
+Use `browser_candidate_promotion_review.md` with `docs/53-dedupe-first-full-thread-ready-gate.md` before any future browser-session candidate is promoted into an official selected item after run `0039`.
 
 Use `source_candidate_intake.md` and `source_sampling_frame_template.csv` before any real source enters authorization or collection.
 

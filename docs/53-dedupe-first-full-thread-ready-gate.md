@@ -10,6 +10,8 @@ This gate prevents browser candidates from becoming official checkpoint items un
 
 This method is repo-safe. Do not add raw Threads content, full URLs, handles, screenshots, HTML, credentials, cookies, browser storage state, contact IDs, stock names, stock codes, price values, or sensitive investigative notes to this file.
 
+Use `templates/browser_candidate_promotion_review.md` to record the gate result for any future candidate review.
+
 ## When To Use
 
 Use this gate only when:
@@ -38,6 +40,12 @@ A browser-session candidate may become an official selected item only if all req
 | Second-review gate | fast different-angle review accepts final label/risk/evidence family |
 
 If any gate fails, the candidate may stay as a local controlled-run trace, but it must not be promoted into the official checkpoint.
+
+The repo-safe promotion review should use:
+
+```text
+templates/browser_candidate_promotion_review.md
+```
 
 ## Dedupe Gate
 
