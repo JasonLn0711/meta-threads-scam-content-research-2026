@@ -30,6 +30,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Query diversification rule | adopted for future search-based browser runs |
 | Run 0043 promotion review | first pass complete; no candidate promotable yet |
 | Aggressive candidate-quality test | run `0044` completed; no official expansion |
+| Source-linkage follow-up | run `0045` completed; 2 candidates eligible for second review |
 
 ## What Is Complete
 

@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | run `0043` completed as a candidate-quality method test; no new official checkpoint promoted |
-| Current collection gate | run `0043` promotion first pass closed with no promotable candidate; next blocker is source-linkage/full-thread capture |
+| Current collection gate | run `0045` closed with 2 source-linkage-ready candidates; next gate is second review before any `manual_entry_0076` build |
 | Next authorized prospective tranche | none for official checkpoint promotion; run `0041` is candidate quality test only |
 | Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
 | Next intake scaffold | run `0040`, receipt-ready and waiting for confirmed-pointer delivery for possible items `0076-0080` |
@@ -60,6 +60,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0043` | browser-session | `threads_pilot_v1_2026-05_diverse_body_line_post_href_candidate_run_record_0043.md` | `0075-run-0043-diverse-body-line-post-href-result.md` | none | completed; no item built | Diverse body-line/post-href method reached 60 reviewed candidates after 10 seeds, with 51 dedupe-pass candidates and 24 quality-review selections; no manual entries or official promotion. |
 | `0043-review` | browser-session promotion review | `threads_pilot_v1_2026-05_run_0043_promotion_review_record.md` | `0077-run-0043-promotion-review-first-pass-result.md` | `0076` prospective only | first pass completed; no item built | All 24 candidates failed source-context, reply-context, and evidence-attribution gates; next step is narrow source-linkage/full-thread capture before any promotion. |
 | `0044` | browser-session | `threads_pilot_v1_2026-05_aggressive_dedupe_first_browser_candidate_quality_run_record_0044.md` | `0076-run-0044-aggressive-dedupe-first-browser-candidate-quality-result.md` | none | completed; no item built | Aggressive controlled-store-only candidate-quality test reviewed 200 candidates, found 190 dedupe-pass, selected 180 local traces, and completed 131 context-ready attempts; no manual entries or official promotion. |
+| `0045` | browser-session follow-up | `threads_pilot_v1_2026-05_source_linkage_follow_up_run_record_0045.md` | `0078-run-0045-source-linkage-follow-up-result.md` | `0076` prospective only | completed; no item built | Attempted 5 run `0043` candidates; 2 became source-linkage-ready and second-review-eligible; no manual entries or official promotion. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 

@@ -84,3 +84,5 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Authorized aggressive dedupe-first browser candidate-quality run 0044 with 200 reviewed and 180 local-selected caps | `0087-authorize-aggressive-dedupe-first-browser-candidate-quality-run-0044.md` |
 | 2026-04-26 | Closed run 0044 after aggressive browser candidate-quality test reached 200 reviewed and 180 local-selected candidates | `0088-close-run-0044-aggressive-browser-candidate-quality-result.md` |
 | 2026-04-26 | Closed run 0043 promotion first pass with no candidate promotable into manual_entry_0076 yet | `0089-close-run-0043-promotion-first-pass-no-promotable-candidate.md` |
+| 2026-04-26 | Authorized run 0045 source-linkage/full-thread follow-up for run 0043 promotion candidates | `0090-authorize-run-0045-source-linkage-follow-up.md` |
+| 2026-04-26 | Closed run 0045 source-linkage follow-up with 2 candidates eligible for second review | `0091-close-run-0045-source-linkage-follow-up.md` |
