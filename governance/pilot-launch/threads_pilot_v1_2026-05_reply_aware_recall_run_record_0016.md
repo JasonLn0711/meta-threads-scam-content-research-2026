@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0032-close-run-0015-and-require-new-run-design` |
 | Target local item range | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
 | Purpose | test reply/comment-aware, high-recall evidence discovery without letting one seed consume the full candidate budget |
-| Current gate | `browser_session_execution_ready_api_path_blocked` |
-| Run status | `preflight_complete_not_started` |
+| Current gate | `execution_complete_pending_second_review` |
+| Run status | `local_records_built_strict_valid` |
 
 ## Scope Rationale
 
@@ -117,6 +117,36 @@ A candidate may pass reviewability only if all are true:
 | Execution path allowed now | browser/session only |
 | API execution allowed now | no |
 
+## Execution Result
+
+| Field | Result |
+|---|---|
+| Execution path used | approved browser/session path |
+| API path used | no |
+| Candidates reviewed | 20 |
+| Per-family candidate cap | respected; 4 candidates in each of 5 families |
+| Selected local items | 4 |
+| Local item range created | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
+| Raw output location | controlled store only |
+| Git-safe output | redacted local manual entries and local manual records only |
+| Candidate cap reached? | yes |
+| Selected item cap reached? | yes |
+| Anti-scam camouflage candidates observed | 2 |
+
+### Repo-Safe Aggregate
+
+| Metric | Value |
+|---|---|
+| `manual_entry_0024.json` through `manual_entry_0027.json` created locally | yes |
+| `manual_record_0024.json` through `manual_record_0027.json` built locally | yes |
+| Checkpoint file | `data/interim/manual_records_checkpoint_0027.jsonl` |
+| Strict validation | pass; 27 checked, 0 errors, 0 warnings |
+| Run 0016 labels before second review | 4 `uncertain` |
+| Run 0016 risk levels before second review | 4 `medium` |
+| Run 0016 visible signal tags | 4 `visible_external_link`; 4 `private_channel_redirect`; 4 `contact_handle_visible`; 1 `payment_deposit_or_fee_request`; 1 `vague_offer_strong_benefit` |
+
+Run 0016 corrected the run 0015 budget problem: every evidence family received exactly 4 reviewed candidates before selection. Query terms remain candidate-finding hints only and do not determine labels.
+
 ## Stop Conditions
 
 Stop immediately if:
@@ -134,13 +164,13 @@ Stop immediately if:
 
 | Field | Value |
 |---|---|
-| Run started? | no |
-| Candidate reviewed count | 0 |
-| Selected item count | 0 |
-| Local records built? | no |
-| Strict validation result | not_applicable |
+| Run started? | yes |
+| Candidate reviewed count | 20 |
+| Selected item count | 4 |
+| Local records built? | yes |
+| Strict validation result | pass; 27 checked, 0 errors, 0 warnings |
 | Second review complete? | no |
 
 ## Next Action
 
-Execute only through the approved browser/session path unless the API path is later completed and rechecked. Start with item `0024` under the run 0016 per-family candidate caps.
+Second-review items `0024` through `0027` before counting them as accepted pilot evidence or opening item `0028`.
