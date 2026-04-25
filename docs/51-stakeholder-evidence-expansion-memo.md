@@ -56,7 +56,9 @@ Before any new collection run, stakeholders should decide whether the next step 
 | Narrow adjacent reply context | Funnel behavior may appear in replies rather than the top-level item. | Capturing unrelated people or broad comments. | Small fixed reply window; aggregate/redacted only; no handles in git. |
 | Visible link domain and category | May identify funnel behavior without storing full URLs. | Domain evidence alone can overstate risk. | Domain/category only; no full URL in git; not enough by itself for `scam`. |
 | Redirect or landing-page evidence | May reveal destination risk beyond Threads. | Much larger platform, privacy, and legal scope. | Defer unless separately approved with exact capture, storage, and stop rules. |
-| Profile/account context | May reveal coordinated behavior. | High privacy and scope expansion. | Out of scope for the next run unless explicitly approved. |
+| Narrow poster identity/profile context | Supports dedupe, repeat-source review, confirmed-pointer clustering, and profile-level funnel interpretation. | High privacy and scope expansion if it becomes broad account surveillance. | Top-level poster only; raw ID/profile in controlled store; repo-safe salted hash, redacted reference, and category signals only. No follower/following graph. |
+| Account-level multi-post style sampling | Some scam-like accounts distribute evidence across several posts/replies instead of one decisive post. | Can become broad profile surveillance or over-label all posts by association. | CIB-detected/approved accounts only; small candidate cap; no follower/following graph; selected posts still require item-level evidence before labeling. |
+| Account posting cadence metadata | Helps prioritize high-density or repeated recent candidate accounts for full-thread review. | Can drift into continuous monitoring or over-weight creator activity level. | One controlled account sample at a time; repo-safe counts/time buckets only; no continuous monitoring; not a standalone label. |
 
 ## Recommended Next Approval Request
 
@@ -67,9 +69,11 @@ Suggested boundary for a future run record:
 - target at most 10 selected items;
 - review at most 20 candidates;
 - keep one browser-rendered page/object at a time;
+- for approved account-level sampling, review only a small fixed candidate window before selecting any item for full-thread capture;
+- record account cadence only as aggregate counts/time buckets and candidate-density notes;
 - allow only risk-relevant OCR excerpt, narrow adjacent reply-context summary, and domain/category link evidence if explicitly approved;
-- keep screenshots, raw URLs, handles, full raw text, cookies, browser profiles, and session artifacts outside git;
-- continue to forbid profile graph review, broad comments, landing-page capture, and full redirect-chain capture unless separately approved;
+- keep screenshots, raw URLs, raw handles, full raw text, raw poster IDs, cookies, browser profiles, and session artifacts outside git;
+- continue to forbid profile graph review, follower/following capture, broad comments, landing-page capture, and full redirect-chain capture unless separately approved;
 - second-review any `uncertain`, low-confidence, or medium/high-risk candidate before it counts;
 - stop if the candidate cannot be reduced to approved redacted fields.
 

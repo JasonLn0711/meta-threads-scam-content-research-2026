@@ -94,6 +94,11 @@ List only fields approved for this pilot. Use the least sensitive approved repre
 | `external_links` | yes / no | domain-only / redacted / blank |  |
 | `visible_contact_handles` | yes / no | category only / redacted handle / blank |  |
 | `visible_platform_redirects` | yes / no | schema categories only |  |
+| `poster_threads_id_ref` | yes / no | controlled-store reference / salted hash / redacted handle / blank | Top-level poster only; not ordinary commenters. |
+| `poster_profile_context_status` | yes / no | schema status only | Use `captured_redacted` for repo-safe records when raw ID/profile stays controlled. |
+| `poster_profile_signals` | yes / no | schema categories only | Context for dedupe/repeat-source review, not a standalone label. |
+| `poster_profile_notes` | yes / no | redacted context note only | No raw profile URL, profile photo, follower/following list, or unrelated personal data in git. |
+| account cadence metadata | yes / no | aggregate counts/time buckets only | No continuous monitoring; no raw profile history in git. |
 | `source_url_if_stored` | yes / no | omitted / redacted reference / normalized URL |  |
 | `metadata_notes` | yes / no | non-sensitive operational note only |  |
 | `privacy_redaction_notes` | yes / no | required when redaction occurs |  |
@@ -105,7 +110,7 @@ List only fields approved for this pilot. Use the least sensitive approved repre
 | Raw personal data unrelated to risk evidence | yes |  |
 | Raw ordinary user handles | yes |  |
 | Full contact handles, phone numbers, emails, payment details, or referral codes | yes |  |
-| Profile history, follower/following lists, or broad account metadata | yes |  |
+| Profile history, follower/following lists, or broad account metadata | yes | Narrow top-level poster ID/profile-context capture is allowed only when a run record explicitly approves it. |
 | Landing-page content or redirect-chain evidence | yes |  |
 | Browser exports, cookies, tokens, credentials, profiles, or HAR files | yes |  |
 | Bulk exports or automated collection outputs | yes |  |
@@ -116,6 +121,8 @@ List only fields approved for this pilot. Use the least sensitive approved repre
 | Evidence type | Exact approved handling | Required notes |
 |---|---|---|
 | Ordinary user handles |  |  |
+| Top-level poster Threads ID | controlled-store raw; repo-safe salted hash, redacted handle, or controlled reference only |  |
+| Poster profile context | narrow risk-relevant categories only |  |
 | Contact handles |  |  |
 | Personal names, faces, profile photos |  |  |
 | Source URLs |  |  |

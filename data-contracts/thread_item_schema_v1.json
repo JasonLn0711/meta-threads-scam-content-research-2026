@@ -164,6 +164,45 @@
       },
       "description": "Visible destination or private-channel migration signals."
     },
+    "poster_threads_id_ref": {
+      "type": "string",
+      "description": "Controlled-store reference, salted hash, or redacted handle for the top-level poster's Threads ID. Do not store raw handles in git unless separately approved."
+    },
+    "poster_profile_context_status": {
+      "type": "string",
+      "enum": [
+        "not_applicable",
+        "not_captured",
+        "captured_redacted",
+        "captured_full_approved",
+        "unavailable"
+      ],
+      "description": "Whether the poster identity/profile context was captured and how it is retained."
+    },
+    "poster_profile_signals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "investment_identity_claim",
+          "profile_redirect_or_contact",
+          "repeated_confirmed_pointer_source",
+          "authority_or_guru_positioning",
+          "profit_or_stock_picking_positioning",
+          "multi_post_style_cluster_observed",
+          "posting_cadence_metadata_available",
+          "high_frequency_posting_observed",
+          "cross_post_or_repost_amplification",
+          "unknown_or_not_reviewed",
+          "none"
+        ]
+      },
+      "description": "Redacted profile-level context observed for the top-level poster. These are context signals, not standalone labels."
+    },
+    "poster_profile_notes": {
+      "type": "string",
+      "description": "Repo-safe redacted notes about poster identity/profile context and controlled-store linkage. Do not include raw Threads IDs, profile URLs, profile photos, follower lists, or unrelated personal data in git."
+    },
     "ocr_text": {
       "type": "string",
       "description": "OCR text extracted from images or screenshot-style posts. Redact unrelated personal data."
@@ -228,9 +267,24 @@
         "enum": [
           "unrealistic_profit_or_benefit",
           "guaranteed_or_risk_free_claim",
+          "past_performance_profit_proof",
           "high_fee_course_or_membership_funnel",
+          "stock_rescue_group_funnel",
+          "individual_stock_advice_reply_funnel",
+          "market_direction_herding_chorus",
+          "institutional_flow_authority_lure",
+          "lifestyle_trust_market_reassurance_funnel",
+          "account_multi_post_style_cluster",
+          "account_posting_cadence_metadata",
+          "poster_identity_context",
           "private_channel_redirect",
           "implicit_dm_contact_request",
+          "comment_code_lead_magnet",
+          "stock_pick_playbook_keyword_funnel",
+          "trapped_position_dm_playbook_reply",
+          "dark_horse_stock_target_price_dm_funnel",
+          "mass_stock_command_list_group_funnel",
+          "reply_impersonation_contact_hijack",
           "visible_external_link",
           "suspicious_domain_or_shortener",
           "contact_handle_visible",
