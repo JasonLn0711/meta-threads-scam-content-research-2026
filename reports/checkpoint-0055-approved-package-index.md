@@ -15,9 +15,9 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Selected decision | `C2` |
 | Reviewer outcome | `approve_as_checkpoint_package` |
 | Approved use | CIB/165-facing redacted evidence-system checkpoint review/use |
-| Collection status | paused |
-| Item `0056` | not authorized |
-| Next authorized prospective tranche | none |
+| Collection status | next tranche authorized but not started |
+| Item `0056` | authorized only within run `0039` after run-level preflight |
+| Next authorized prospective tranche | run `0039`, items `0056-0075`, max 50 candidates reviewed and 20 selected |
 
 ## Package Artifacts
 
@@ -63,8 +63,8 @@ Likely future choices:
 
 | Future path | When to consider |
 |---|---|
-| Later `C1` confirmed-pointer tranche | Reviewers or stakeholders need more final scam/high-risk evidence families. |
-| Later calibration-only browser tranche | Reviewers explicitly need more false-positive or uncertainty pressure examples. |
+| Run `0039` aggressive confirmed-pointer-first tranche | Authorized now for items `0056-0075` under hard caps and validation gates. |
+| Later calibration-only browser tranche | Requires a separate later decision if run `0039` is not enough. |
 | Report-only maintenance | Only wording, link, checklist, or packaging updates are needed. |
 
-Until a later decision is recorded, the approved next action is package use/review only.
+The approved next action is run `0039` preflight, not unbounded collection.

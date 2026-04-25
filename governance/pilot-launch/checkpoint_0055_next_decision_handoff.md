@@ -17,9 +17,9 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Decision path completed | `C2` |
 | Reviewer outcome | `approve_as_checkpoint_package` |
 | Canonical package index | `../../reports/checkpoint-0055-approved-package-index.md` |
-| Collection status | paused |
-| Item `0056` | not authorized |
-| Next authorized prospective tranche | none |
+| Collection status | next tranche authorized but not started |
+| Item `0056` | authorized only within run `0039` after run-level preflight |
+| Next authorized prospective tranche | run `0039`, items `0056-0075`, max 50 candidates reviewed and 20 selected |
 
 ## What Is Complete
 
@@ -34,9 +34,10 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 
 ## What Remains Blocked
 
-- Item `0056`.
-- New confirmed-pointer intake.
-- New browser-session tranche.
+- Collection outside run `0039`.
+- Any item beyond `0075`.
+- Any candidate review beyond the 50-candidate cap.
+- Any selected item beyond the 20-selected cap.
 - Broad crawler expansion.
 - Landing-page or redirect-chain expansion.
 - Embedding/model training.
@@ -46,13 +47,13 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 
 ## Future Decision Requirements
 
-Any future collection decision must create a new decision record before execution.
+Run `0039` now authorizes the next bounded prospective tranche. Any collection beyond run `0039` must create a new decision record before execution.
 
 Minimum required fields:
 
 | Field | Required answer |
 |---|---|
-| Decision path | later `C1` confirmed-pointer tranche / later calibration-only browser tranche / other |
+| Decision path | later extension / later calibration-only browser tranche / other |
 | Purpose | high-risk rule learning / false-positive calibration / report-only maintenance |
 | Source path | confirmed pointer / approved browser session / approved API/session-aware path |
 | Candidate cap | exact number, or `not applicable` |
@@ -63,19 +64,20 @@ Minimum required fields:
 | Controlled-store boundary | raw evidence remains outside git |
 | Report update requirement | what synthesis/report/checklist must be updated after execution |
 
-## Preferred Future Path If More Evidence Is Needed
+## Preferred Source Path For Run 0039
 
-If reviewers or stakeholders later need more final scam/high-risk evidence families, prefer a later `C1` confirmed-pointer tranche.
+For run `0039`, prefer confirmed pointers first.
 
 Reason: checkpoint 0055 showed that confirmed pointers were higher-yield for final scam/high-risk rule learning, while the latest browser-session tranche mainly produced uncertainty, insufficient evidence, and false-positive pressure.
 
 ## Current Allowed Work
 
-Without a new decision record, only these actions are allowed:
+Without another decision record, only these actions are allowed:
 
 - package use or sharing;
 - report wording maintenance;
 - link/index cleanup;
 - governance-safe clarification;
 - review-status documentation;
-- planning notes outside raw evidence.
+- planning notes outside raw evidence;
+- run `0039` preflight and execution within its explicit caps and source boundaries.

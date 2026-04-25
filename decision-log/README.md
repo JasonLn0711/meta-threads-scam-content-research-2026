@@ -64,3 +64,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Added the canonical approved-package index for checkpoint 0055 delivery and handoff | `0067-add-checkpoint-0055-approved-package-index.md` |
 | 2026-04-25 | Aligned the README and recommended path so the approved checkpoint 0055 package index is the main entry point | `0068-align-readme-and-recommended-path-to-approved-package.md` |
 | 2026-04-25 | Added checkpoint 0055 next-decision handoff describing what is required before item 0056 or any new collection | `0069-add-checkpoint-0055-next-decision-handoff.md` |
+| 2026-04-26 | Authorized aggressive but bounded prospective tranche 0056-0075 with confirmed-pointer-first source path and strict caps | `0070-authorize-aggressive-prospective-tranche-0056-0075.md` |
