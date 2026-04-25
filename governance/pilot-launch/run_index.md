@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | run `0039` completed as a local candidate tranche; no new official checkpoint promoted |
-| Current collection gate | run `0039` closed; next work should prioritize confirmed pointers or dedupe-first/full-thread-ready method |
+| Current collection gate | run `0039` closed; `docs/53-dedupe-first-full-thread-ready-gate.md` required before any future browser candidate promotion |
 | Next authorized prospective tranche | none open after run `0039` closure |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
@@ -146,4 +146,4 @@ Current state:
 - the 55-record checkpoint package is approved as the current CIB/165-facing evidence-system checkpoint;
 - future selected items must complete controlled capture, redacted record build, strict validation, and second review before they count.
 
-The next preferred path is confirmed-pointer intake. If browser-session search is used again, it needs a dedupe-first and full-thread/reply-context-ready gate before candidate promotion.
+The next preferred path is confirmed-pointer intake. If browser-session search is used again, it must pass `docs/53-dedupe-first-full-thread-ready-gate.md` before candidate promotion.
