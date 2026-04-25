@@ -14,6 +14,8 @@ The reason is practical: scam-like evidence can appear in comments rather than t
 
 The design also implements the CIB policy preference that false negatives are more costly than explainable false positives at the triage stage.
 
+The design treats anti-scam wording as ambiguous when it appears together with an investment/profit funnel. Repeated claims such as hating or warning against scams do not lower risk by themselves if the same item or selected replies direct people toward investment paths, profit claims, links, messaging apps, add-friend flows, or contact handles.
+
 ## Limits
 
 | Limit | Value |
@@ -36,6 +38,7 @@ The design also implements the CIB policy preference that false negatives are mo
 | reply/comment contact handle or messaging-app migration | catch off-platform conversion |
 | guarantee plus link/contact/comment signal | catch high-recall financial lures |
 | earnings/proof screenshot plus link/contact/comment signal | catch testimonial-proof lures |
+| anti-scam wording plus investment/profit funnel | catch camouflage patterns that could otherwise become false negatives |
 
 ## Decision
 

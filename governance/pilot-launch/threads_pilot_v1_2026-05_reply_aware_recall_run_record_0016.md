@@ -27,6 +27,7 @@ Run 0016 changes the method:
 
 - distribute candidate reviews across evidence families;
 - inspect a narrow approved reply/comment window when available;
+- treat anti-scam wording plus investment/profit funnel signals as a recall-priority pattern, not as automatic negation;
 - prioritize false-negative reduction at triage;
 - preserve human second review before final labels;
 - keep raw/session/candidate material outside git.
@@ -70,6 +71,8 @@ Queries are only candidate-finding hints. Query terms cannot become labels, evid
 | `RP-0016-04` | guaranteed outcome | guarantee plus link/contact/comment signal | 4 | at most 1 item |
 | `RP-0016-05` | testimonial proof | earnings/proof screenshot plus link/contact/comment signal | 4 | at most 1 item |
 
+Anti-scam wording is not a safe-control signal by itself. If a candidate says it hates, dislikes, rejects, or warns against scams while also offering an investment/profit path or showing links, contact handles, add-friend instructions, private-channel migration, wallet/deposit/payment language, or testimonial proof, route it to high-recall triage and second review.
+
 ## Reply/Comment Review Window
 
 For each candidate, review only the approved narrow context:
@@ -77,6 +80,7 @@ For each candidate, review only the approved narrow context:
 - the top-level visible candidate content;
 - at most 3 selected relevant replies/comments visible in the approved browser/session path;
 - only replies/comments with risk-relevant links, handles, private-channel migration, add-friend instructions, wallet/deposit/payment language, suspicious domains, or explicit negation/control evidence;
+- anti-scam wording plus investment/profit funnel signals must be preserved as a review note in redacted form;
 - no broad comment scrolling, profile graph review, follower/following review, or unrelated replies.
 
 ## Candidate Reviewability Rule

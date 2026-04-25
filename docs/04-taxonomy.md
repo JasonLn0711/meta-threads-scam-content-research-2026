@@ -101,6 +101,7 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 - "Claims official or celebrity association without evidence."
 - "Post text is vague, but replies contain contact instructions."
 - "Top-level post is benign, but selected replies contain suspicious links or private-channel migration."
+- "Anti-scam wording appears together with investment/profit funnel signals."
 - "OCR reveals a financial lure not present in visible post text."
 
 ## Uncertainty States

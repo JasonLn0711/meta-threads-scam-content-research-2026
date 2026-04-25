@@ -156,6 +156,12 @@ Posts explaining investing, trading risk, crypto concepts, budgeting, or market 
 
 Do not label a post `scam` just because it discusses stocks, crypto, options, trading, or side income. Escalate when investment content adds guaranteed returns, private signal groups, fake endorsement, deposit request, wallet transfer, or pressure.
 
+### Anti-Scam Camouflage With Investment Funnel
+
+Do not treat anti-scam wording as automatically benign. Some items may repeatedly say they hate, oppose, or warn against scams while also telling readers they can earn money through the author's investment path, group, method, teacher, account, or channel.
+
+Escalate to `uncertain` or `scam` when anti-scam language appears together with any concrete funnel signal: suspicious website or link, LINE/Telegram/WhatsApp/Facebook Messenger/Instagram contact, add-friend link, private group, contact handle, wallet/deposit/payment instruction, guaranteed or unusually strong profit claim, or testimonial proof. Use second review for these cases because the anti-scam wording may be camouflage rather than genuine negation.
+
 ### Finance Discussion Without A Conversion Step
 
 A post about routines, spreadsheets, gains/losses, or risk level is usually `non_scam` when it does not ask the reader to join, DM, pay, trust special access, or follow a secret method. Do not treat mild curiosity or investment vocabulary alone as `investment_lure`. Move to `uncertain` only when a visible funnel or a strong implied benefit is actually present.
@@ -228,6 +234,7 @@ Send an item to second review when:
 - annotation confidence is `low`
 - evidence sufficiency is `partial`, `insufficient`, or `not_reviewable`
 - the top-level post appears benign but selected replies/comments contain links, contact handles, private-channel migration, add-friend instructions, wallet/deposit/payment instructions, or suspicious domains
+- the item uses anti-scam, scam-hating, or scam-warning language while also promoting an investment/profit path or showing contact/link/private-channel signals
 - annotators disagree on primary label, risk level, or key scam subtype
 
 Use `templates/adjudication_template.md` to resolve disagreements. If the same disagreement appears repeatedly, revise this guideline after the 50-item pilot.
