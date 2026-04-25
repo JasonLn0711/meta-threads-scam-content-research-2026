@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0031-record-stakeholder-evidence-expansion-approval` |
 | Target local item range | starts at `threads_pilot_v1_0018`; at most 10 selected items |
 | Purpose | attempt a bounded evidence-expansion tranche using approved expanded evidence families |
-| Current gate | `pre_execution_readiness_required` |
-| Run status | `not_started` |
+| Current gate | `browser_session_execution_ready_api_path_blocked` |
+| Run status | `preflight_complete_not_started` |
 
 ## Stakeholder Scope Approval
 
@@ -35,13 +35,24 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 
 | Check | Required result |
 |---|---|
-| Approved browser/session/API access path | ready |
-| Controlled store | ready for raw screenshot/OCR/reply/link/redirect/profile evidence |
-| Latest local aggregate | strict-valid |
+| Approved browser/session/API access path | browser/session path ready; API path blocked |
+| Controlled store | ready for browser/session raw screenshot/OCR/reply/link/redirect/profile evidence |
+| Latest local aggregate | strict-valid; 17 checked, 0 errors, 0 warnings |
 | Candidate cap | at most 20 candidates |
 | Selected item cap | at most 10 items |
 | Second-review owner | assigned before item counts |
 | Redaction rule | approved fields only; no raw identifiers in git |
+
+## Preflight Result
+
+| Check | Result |
+|---|---|
+| Browser storage-state shape | pass |
+| API dry-run readiness | blocked; `META_API_PROBE_URL` missing or empty |
+| Latest local aggregate strict validation | pass |
+| Pilot preflight | pass; 21 OK, 0 WARN, 0 ERROR |
+| Execution path allowed now | browser/session only |
+| API execution allowed now | no |
 
 ## Run Limits
 
@@ -88,4 +99,4 @@ Stop immediately if:
 
 ## Next Action
 
-Before execution, verify approved access readiness, controlled-store readiness for the expanded evidence families, and latest local aggregate strict validation. Then execute only this run's bounded item 0018-to-0027 evidence-expansion tranche under the caps above.
+Execute only through the approved browser/session path unless the API path is later completed and rechecked. Keep the run bounded to at most 20 candidates reviewed and at most 10 selected items, from item 0018 through item 0027. Do not open item 0028 in this run.
