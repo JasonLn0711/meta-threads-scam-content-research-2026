@@ -22,6 +22,8 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_risk_probe_run_record_0005.md` | Non-sensitive tracked run record for the first multi-term high-risk case-finding probe before item 16. |
 | `threads_pilot_v1_2026-05_risk_probe_run_record_0006.md` | Non-sensitive tracked run record for the normalized no-space risk-probe retry before item 16. |
 | `threads_pilot_v1_2026-05_access_path_review_run_record_0007.md` | Non-sensitive tracked run record for the approved session/API access-path review before item 16. |
+| `threads_pilot_v1_2026-05_browser_session_execution_run_record_0009.md` | Non-sensitive tracked run record for the first approved browser-session item 0016 attempt. |
+| `threads_pilot_v1_2026-05_browser_session_limited_extension_run_record_0010.md` | Non-sensitive tracked run record for the item 0017-0020 limited browser-session extension with negation filtering. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
 | `threads_pilot_v1_2026-05_guideline_revision_log.md` | Accepted calibration-driven guideline revisions for the first governed rehearsal and pilot batch. |
@@ -62,4 +64,4 @@ As of `2026-04-25`, access-path preparation run 0008 has prepared the repo-safe 
 
 Later on `2026-04-25`, the approved browser storage-state artifact was exported into the outside-git controlled store and passed shape validation. Run 0009 is now opened as the next single-item browser-session execution run for item 0016. It allows at most one selected item and at most 5 candidates for the selected probe seed.
 
-Run 0009 then selected one item 0016 candidate and built a strict-valid local record under ignored `data/interim/`. The repo-safe next gate is reviewer confirmation of item 0016 before any item 17-20 extension.
+Run 0009 then selected one item 0016 candidate and built a strict-valid local record under ignored `data/interim/`. Second review changed item 0016 from preliminary `uncertain` / `medium` to final `non_scam` / `low`; it is now treated as a false-positive pressure example. Run 0010 is opened but not started for a limited item 0017-0020 extension, with candidate screening updated to exclude negated guaranteed-profit or risk-warning statements before selection.

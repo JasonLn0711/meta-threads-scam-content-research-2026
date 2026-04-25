@@ -31,5 +31,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0023-access-path-review-run-0007-result.md` | Repo-safe result note for the approved session/API access-path review before item 16. |
 | `0024-access-path-preparation-run-0008-result.md` | Repo-safe result note for preparing browser storage-state and API/session-aware paths before item 16. |
 | `0025-browser-session-run-0009-result.md` | Repo-safe result note for the approved browser-session run that produced strict-valid item 0016. |
+| `0026-browser-session-limited-extension-run-0010-start.md` | Repo-safe start note for the item 0017-0020 limited extension with negation/risk-warning candidate filtering. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

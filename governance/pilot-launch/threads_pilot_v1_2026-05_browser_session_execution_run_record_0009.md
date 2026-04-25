@@ -18,8 +18,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Controlled launch record | `CTRL-THREADS-PILOT-V1-CIB-2026-04-23` |
 | Prior run | `CRAWL-THREADS-PILOT-V1-0008` |
 | Purpose | attempt exactly one item-0016 candidate through the approved browser storage-state path |
-| Current gate | `item_0016_built_strict_validated_review_required` |
-| Run status | `completed_one_item_built_strict_validated` |
+| Current gate | `item_0016_second_review_complete_run_0010_can_open` |
+| Run status | `completed_one_item_built_strict_validated_second_reviewed` |
 
 ## Required Pre-Run Gate
 
@@ -130,10 +130,12 @@ python scripts/validate_thread_dataset.py data/interim/manual_record_0016.json -
 | Strict validation result | pass; 1 record, 0 errors, 0 warnings |
 | 16-record aggregate validation | pass; 16 records, 0 errors, 0 warnings |
 | Preliminary label / risk | `uncertain` / `medium` |
-| Decision after run | `review_item_0016_before_any_further_extension` |
+| Second-review final label / risk | `non_scam` / `low` |
+| Second-review finding | query-keyword false positive; retained visible text negated guaranteed-profit framing |
+| Decision after run | `open_limited_browser_session_extension_0010_with_negation_filter` |
 
 ## Decision
 
-Run 0009 selected one item 0016 candidate through the approved browser-session path and built a strict-valid local record.
+Run 0009 selected one item 0016 candidate through the approved browser-session path and built a strict-valid local record. Second review found that the preliminary `uncertain` / `medium` label was too aggressive because the retained visible text negated guaranteed-profit framing rather than promoting it.
 
-Do not treat this as permission to expand the batch. The next action is reviewer confirmation of item 0016's redaction and preliminary `uncertain` / `medium` label before any additional item 17-20 extension.
+The final local label for item 0016 is `non_scam` / `low`. Treat it as a false-positive pressure example for risk-probe retrieval. The next run may open only as a limited item 17-20 browser-session extension with a candidate-screening rule that excludes negated guaranteed-profit or risk-warning statements before selection.

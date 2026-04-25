@@ -21,20 +21,23 @@ This note contains no raw Threads content, item URLs, handles, screenshots, cook
 | Raw output in git | no |
 | Session/cookie/token in git | no |
 | Preliminary label / risk | `uncertain` / `medium` |
+| Second-review final label / risk | `non_scam` / `low` |
+| Second-review finding | query-keyword false positive; visible retained text negated guaranteed-profit framing |
 
 ## Finding
 
-Run 0009 shows that the approved browser-session path can produce at least one extractable, redacted, strict-valid item after the public unauthenticated risk-probe path failed. The selected item is not treated as a confirmed scam or legal fraud determination. It is a partial-evidence research item with a preliminary `uncertain` / `medium` label that needs reviewer confirmation before any additional extension.
+Run 0009 shows that the approved browser-session path can produce at least one extractable, redacted, strict-valid item after the public unauthenticated risk-probe path failed. Second review found that the first-pass `uncertain` / `medium` label was too aggressive because the retained text negated guaranteed-profit framing rather than promoting it. The final item 0016 label is `non_scam` / `low`.
+
+This is useful as a false-positive pressure example: risk-probe candidate generation must exclude negated guarantee/risk-warning language before escalating an item.
 
 ## Decision
 
 ```text
-review_item_0016_before_any_further_extension
+open_limited_browser_session_extension_0010_with_negation_filter
 ```
 
 ## Required Before Item 17
 
-- Review `manual_entry_0016.json` and `manual_record_0016.json` locally.
-- Confirm the minimized text is enough for the preliminary label, or revise the label to `insufficient_evidence`.
-- Confirm no raw URL, handle, screenshot, cookie, token, browser profile, or raw output entered git.
-- Only after review, decide whether to open a limited item 17-20 extension under the same browser-session limits.
+- Before item 17, update candidate screening to exclude negated guaranteed-profit/risk-warning statements.
+- Keep the same approved browser-session limits: one item at a time, at most 5 candidates per selected probe seed, no raw output in git.
+- Do not expand to the full 50-item pilot from this result.
