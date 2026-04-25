@@ -16,15 +16,15 @@ Build a phase-1 research MVP for Threads scam-like content triage.
 
 Immediate next action: use the approved 55-record checkpoint package as the current CIB/165-facing evidence-system checkpoint. Do not collect item `0056` unless a later decision records a new bounded collection scope.
 
-Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocked item `0056` until a new decision was recorded. Decision 0062 selects C2: keep collection paused and review/refine the 55-record checkpoint report package. Decision 0066 records that all reviewer roles approved the checkpoint 0055 package.
+Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocked item `0056` until a new decision was recorded. Decision 0062 selects C2: keep collection paused and review/refine the 55-record checkpoint report package. Decision 0066 records that all reviewer roles approved the checkpoint 0055 package. Decision 0067 adds the canonical approved-package index at [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md).
 
-The next checkpoint decision should choose one of three paths:
+The current approved package should be used from:
 
-- Pause additional browser-session candidate search and wait for CIB/stakeholder confirmed pointers if more final scam/high-risk rule families are needed.
-- Pause collection and turn the 55-record pilot into an updated CIB/165-facing checkpoint report.
-- Open another browser-session tranche only if stakeholders explicitly accept that its main value is false-positive and uncertainty calibration, not high-risk scam discovery.
+- [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md)
+- [../reports/checkpoint-0055-executive-addendum.md](../reports/checkpoint-0055-executive-addendum.md)
+- [../reports/threads-scam-content-checkpoint-0055-v0.1.md](../reports/threads-scam-content-checkpoint-0055-v0.1.md)
 
-Do not continue by habit. Run 0038 shows that approved browser-session search can produce strict-valid records, but it did not add final scam/high-risk items. Confirmed pointers remain the higher-yield path for rule-family learning.
+Do not continue collection by habit. Run 0038 shows that approved browser-session search can produce strict-valid records, but it did not add final scam/high-risk items. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more evidence.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 

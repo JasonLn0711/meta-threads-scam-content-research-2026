@@ -101,6 +101,7 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a reviewable 55-record synthesis and checkpoint report package:
 
+- The canonical entry point for the approved checkpoint 0055 package is [reports/checkpoint-0055-approved-package-index.md](reports/checkpoint-0055-approved-package-index.md).
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
 - Report v0, executive brief, review checklist, and delivery plan exist.
@@ -140,6 +141,7 @@ As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, check
 - Option A run 0038 then selected items `0046-0055` from 20 browser-session candidates; after strict validation and second review, the 55-record aggregate contains 17 `scam`, 23 `non_scam`, 9 `uncertain`, and 6 `insufficient_evidence`.
 - The 55-record checkpoint synthesis is [experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md).
 - Decision 0061 selects the 55-record CIB/165-facing checkpoint report package: [reports/threads-scam-content-checkpoint-0055-v0.1.md](reports/threads-scam-content-checkpoint-0055-v0.1.md).
+- Decision 0067 adds the approved package index: [reports/checkpoint-0055-approved-package-index.md](reports/checkpoint-0055-approved-package-index.md).
 - The checkpoint 0042 baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
 - The 55-record baseline smoke result is precision 0.708, recall 1.000, F1 0.829, 7 false positives, and 0 false negatives.
 - The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
