@@ -20,6 +20,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [threads-scam-content-research-v0-executive-brief.md](threads-scam-content-research-v0-executive-brief.md) | Short stakeholder brief and pilot decision request. |
 | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) | Full v0 research report. |
 | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
+| [checkpoint-0055-stakeholder-handoff-note.md](checkpoint-0055-stakeholder-handoff-note.md) | Suggested handoff note for sending the 55-record checkpoint package to reviewers. |
 | [checkpoint-0055-decision-request.md](checkpoint-0055-decision-request.md) | One-page stakeholder decision request for the 55-record checkpoint. |
 | [checkpoint-0055-review-checklist.md](checkpoint-0055-review-checklist.md) | Checklist for reviewing the 55-record checkpoint package before CIB/165-facing use. |
 | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) | 42-record checkpoint report and collection-pause decision package. |
