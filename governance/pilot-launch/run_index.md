@@ -10,7 +10,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
 | Latest local work visible in tree | run `0043` completed as a candidate-quality method test; no new official checkpoint promoted |
-| Current collection gate | local `manual_entry_0076` built as strict-valid non-scam hard negative; checkpoint inclusion still needs separate synthesis decision |
+| Current collection gate | local item `0076` accepted for next checkpoint inclusion as strict-valid non-scam hard negative |
 | Next authorized prospective tranche | none for official checkpoint promotion; run `0041` is candidate quality test only |
 | Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
 | Next intake scaffold | run `0040`, receipt-ready and waiting for confirmed-pointer delivery for possible items `0076-0080` |

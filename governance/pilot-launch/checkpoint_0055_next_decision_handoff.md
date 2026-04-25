@@ -31,7 +31,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Run 0043 promotion review | first pass complete; no candidate promotable yet |
 | Aggressive candidate-quality test | run `0044` completed; no official expansion |
 | Source-linkage follow-up | run `0045` completed; local item `0076` built as non-scam hard negative |
-| Local item `0076` | strict-valid `non_scam` / `low`; checkpoint inclusion pending separate synthesis decision |
+| Local item `0076` | strict-valid `non_scam` / `low`; accepted for next checkpoint inclusion |
 
 ## What Is Complete
 
@@ -53,7 +53,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 
 - Collection outside a new recorded decision.
 - Any item beyond local `0076`.
-- Checkpoint inclusion for item `0076` without a separate synthesis decision.
+- Any checkpoint report update that treats item `0076` as scam/high-risk evidence.
 - Any new browser-session candidate promotion that does not pass the dedupe-first/full-thread-ready gate.
 - Broad crawler expansion.
 - Landing-page or redirect-chain expansion.
