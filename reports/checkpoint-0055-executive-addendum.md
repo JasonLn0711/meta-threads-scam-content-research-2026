@@ -8,7 +8,7 @@ It is a repo-safe summary. It contains no raw Threads URLs, handles, screenshots
 
 ## Bottom Line
 
-The 55-record checkpoint is ready for review as an evidence-system checkpoint, not as a production detector or legal determination.
+The 55-record checkpoint is approved by all reviewer roles as an evidence-system checkpoint, not as a production detector or legal determination.
 
 The selected decision is:
 
@@ -17,6 +17,12 @@ C2: keep collection paused and review/refine the 55-record checkpoint report pac
 ```
 
 Item `0056` is not authorized. Any future collection requires a later decision.
+
+Reviewer outcome:
+
+```text
+approve_as_checkpoint_package
+```
 
 ## Key Numbers
 
@@ -70,14 +76,8 @@ Use `reports/checkpoint-0055-review-questions.md` for the full question set.
 | `governance/pilot-launch/run_index.md` | Run and item index. |
 | `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md` | Detailed checkpoint synthesis. |
 
-## Requested Reviewer Output
+## Reviewer Output
 
-Please return one of:
+All reviewer roles approved the package on `2026-04-25`.
 
-- `approve_as_checkpoint_package`
-- `minor_report_edits_only`
-- `needs_short_executive_addendum`
-- `needs_later_c1_decision`
-- `blocked_for_governance_reason`
-
-If edits are needed, describe them at the aggregate, rule-family, governance, or report-section level. Do not paste raw evidence into tracked files.
+Future edits should remain at the aggregate, rule-family, governance, or report-section level. Do not paste raw evidence into tracked files.
