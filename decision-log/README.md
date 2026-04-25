@@ -74,3 +74,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Recorded run 0040 receipt readiness while waiting for confirmed-pointer delivery | `0077-record-run-0040-receipt-readiness.md` |
 | 2026-04-26 | Authorized a dedupe-first browser candidate quality run with 60-candidate and 30-quality-review caps | `0078-authorize-dedupe-first-browser-candidate-quality-run.md` |
 | 2026-04-26 | Recorded run 0041 preflight and moved it to candidate-quality execution readiness | `0079-record-run-0041-preflight.md` |
+| 2026-04-26 | Closed run 0041 after the article-based browser extractor produced no candidates | `0080-close-run-0041-no-candidates.md` |

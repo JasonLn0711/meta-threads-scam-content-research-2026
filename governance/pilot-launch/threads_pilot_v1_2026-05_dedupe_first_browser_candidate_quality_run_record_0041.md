@@ -20,7 +20,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Raw output location | controlled store only |
 | Repo-visible raw output | no |
 | Official checkpoint promotion | no, unless a later decision explicitly promotes validated items |
-| Run status | `preflight_passed_ready_for_candidate_quality_execution` |
+| Run status | `completed_closed_no_candidates` |
 
 ## Authorization And Scope
 
@@ -55,6 +55,20 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Candidates passing full-thread/reply-ready gate | 30 | 0 |
 | Candidates second-reviewed | 30 | 0 |
 | Official checkpoint items promoted | 0 | 0 |
+
+## Execution Result
+
+| Field | Value |
+|---|---|
+| Execution status | completed |
+| Source path used | approved browser session |
+| Search seeds attempted | 12 |
+| Candidates extracted | 0 |
+| Quality-review candidates selected | 0 |
+| Full-thread attempts | 0 |
+| Manual entries created | 0 |
+| Official checkpoint items promoted | 0 |
+| Result note | `experiments/evaluation-notes/0073-run-0041-result.md` |
 
 ## Required Candidate Workflow
 
@@ -123,10 +137,12 @@ Stop the run if:
 
 ## Current Decision
 
-Run `0041` is authorized as a candidate quality test only.
+Run `0041` is completed and closed.
 
 It is not an official checkpoint expansion and does not create item `0076` or any later official item.
 
 Run-level preflight passed in `experiments/evaluation-notes/0072-run-0041-preflight.md`.
 
-The next concrete action is controlled execution within the run caps. Do not create official checkpoint items or promote candidates without a later decision.
+Execution result is recorded in `experiments/evaluation-notes/0073-run-0041-result.md`.
+
+The article-based browser-search extractor produced no candidates. The next browser method must revise extraction rather than repeat this run with higher caps.
