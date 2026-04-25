@@ -89,8 +89,8 @@ The goal is to verify that the 55-record checkpoint package is reviewable, redac
 | Report presents C1: pause browser-session expansion and wait for confirmed pointers | `pass` | AUTO-OP-01 | Recommended Decision section includes C1. |
 | Report presents C2: use this as the CIB/165-facing checkpoint package | `pass` | AUTO-OP-01 | Recommended Decision section includes C2. |
 | Report presents C3: open another bounded browser-session tranche for calibration only | `pass` | AUTO-OP-01 | Recommended Decision section includes C3. |
-| Report recommends C2 first and C1 if more high-risk examples are needed | `pass` | AUTO-OP-01 | Recommendation is explicit. |
-| Report requires a new decision before item `0056` collection | `pass` | AUTO-OP-01 | Next work items and decision request state this. |
+| Report records C2 as selected and keeps C1/C3 unselected | `pass` | AUTO-OP-01 | Current Decision section reflects the accepted C2 decision. |
+| Report requires a later decision before item `0056` collection | `pass` | AUTO-OP-01 | Next work items state this. |
 
 ## Final Sign-Off
 

@@ -57,3 +57,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Closed Option A run 0038 after it reached 20 reviewed candidates and 10 selected items | `0060-close-option-a-run-0038-after-caps.md` |
 | 2026-04-25 | Selected the 55-record CIB/165-facing checkpoint report package and blocked item 0056 until a new decision is recorded | `0061-select-checkpoint-0055-report-package.md` |
 | 2026-04-25 | Selected C2: keep collection paused and review/refine the 55-record checkpoint report package | `0062-select-c2-checkpoint-0055-report-review.md` |
+| 2026-04-25 | Refined the checkpoint 0055 report language after C2 so reviewers see report review as the active path | `0063-refine-checkpoint-0055-report-after-c2.md` |

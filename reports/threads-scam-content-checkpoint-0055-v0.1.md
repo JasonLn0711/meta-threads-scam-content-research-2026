@@ -14,6 +14,7 @@
 | Decision request | `reports/checkpoint-0055-decision-request.md` |
 | Review checklist | `reports/checkpoint-0055-review-checklist.md` |
 | Primary synthesis | `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md` |
+| Current decision | `C2`: keep collection paused and review/refine this report package |
 
 ## Executive Summary
 
@@ -24,13 +25,13 @@ The project has completed a 55-record checkpoint after two distinct phases:
 
 The 55-record checkpoint is strict-valid and reviewable. It also gives a clear acquisition lesson: approved browser-session candidate search is operationally feasible, but in this tranche it mostly produced uncertainty, insufficient evidence, and false-positive pressure. Confirmed pointers remain the highest-yield path for final scam/high-risk rule learning.
 
-Recommended checkpoint decision:
+Checkpoint decision:
 
 ```text
-pause_browser_session_expansion_and_prioritize_confirmed_pointers_or_report_review
+C2: keep collection paused and review/refine the 55-record checkpoint report
 ```
 
-The project should not open another browser-session tranche by habit. The next stakeholder choice should be whether to use this checkpoint as a CIB/165-facing report package or wait for additional CIB/stakeholder confirmed pointers.
+The project should not open another browser-session tranche by habit. Item `0056` is not authorized by the current decision. The immediate task is to review and refine this checkpoint package for CIB/165-facing use.
 
 ## What This Checkpoint Proves
 
@@ -179,21 +180,21 @@ This report excludes:
 
 Raw evidence remains in the approved controlled store. Git contains only redacted research records, hashes/counts, rule-family summaries, run indices, decision logs, and validation outcomes.
 
-## Recommended Decision
+## Current Decision
 
-Choose one path explicitly:
+Stakeholders selected `C2` on `2026-04-25`.
 
-| Path | Meaning | When to choose |
+| Path | Status | Meaning |
 |---|---|---|
-| C1. Pause browser-session expansion and wait for confirmed pointers | Do not collect more browser-session candidates until CIB/stakeholders provide new confirmed pointers or specific evidence gaps. | Choose if the priority is high-risk rule learning. |
-| C2. Use this as the current CIB/165-facing checkpoint package | Review and refine this 55-record report before any new collection. | Choose if the priority is stakeholder reviewability now. |
-| C3. Open another browser-session tranche for calibration only | Authorize another bounded tranche with candidate and selected caps, knowing its likely value is false-positive and uncertainty calibration. | Choose only if reviewers explicitly want more calibration examples. |
+| C1. Pause browser-session expansion and wait for confirmed pointers | Not selected now | Still the preferred future data path if reviewers request more final scam/high-risk examples. |
+| C2. Use this as the current CIB/165-facing checkpoint package | Selected | Review and refine this 55-record report before any new collection. |
+| C3. Open another browser-session tranche for calibration only | Not selected now | No browser-session tranche is currently authorized. |
 
-This report recommends C2 first, with C1 as the next data path if more confirmed high-risk examples are needed.
+The selected C2 path keeps collection paused. Any future C1 or C3 work requires a later decision record.
 
 ## Next Work Items
 
 1. Review this report against `reports/checkpoint-0055-review-checklist.md`.
-2. Record stakeholder decision in a new decision record before any item `0056` collection.
-3. If continuing collection, define source path, review cap, selected-item cap, second-review rule, and strict-validation requirement before the next run.
-4. If pausing collection, refine this report into the next CIB/165-facing delivery package.
+2. Fill remaining domain, legal/privacy, and technical review rows as reviewers respond.
+3. Revise report language only for clarity, missing caveats, or stakeholder questions.
+4. Keep item `0056` blocked unless a later decision records a new bounded collection scope.
