@@ -64,8 +64,8 @@ The most conservative useful next request is a one-run evidence-expansion feasib
 
 Suggested boundary for a future run record:
 
-- target at most 1 selected item;
-- review at most 5 candidates;
+- target at most 10 selected items;
+- review at most 20 candidates;
 - keep one browser-rendered page/object at a time;
 - allow only risk-relevant OCR excerpt, narrow adjacent reply-context summary, and domain/category link evidence if explicitly approved;
 - keep screenshots, raw URLs, handles, full raw text, cookies, browser profiles, and session artifacts outside git;
@@ -89,3 +89,15 @@ Record the decision in:
 ```text
 governance/pilot-launch/threads_pilot_v1_2026-05_evidence_scope_review_gate_0014.md
 ```
+
+## Decision Recorded
+
+As of `2026-04-25`, stakeholders approved all proposed evidence families for the next bounded evidence-expansion step. The approval is recorded as `approved_with_limits`, meaning field scope is expanded but run-level controls still apply.
+
+The next artifact is:
+
+```text
+governance/pilot-launch/threads_pilot_v1_2026-05_evidence_expansion_run_record_0015.md
+```
+
+No collection should start until run 0015 passes pre-execution readiness.
