@@ -22,6 +22,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
 | [checkpoint-0055-stakeholder-handoff-note.md](checkpoint-0055-stakeholder-handoff-note.md) | Suggested handoff note for sending the 55-record checkpoint package to reviewers. |
 | [checkpoint-0055-decision-request.md](checkpoint-0055-decision-request.md) | One-page stakeholder decision request for the 55-record checkpoint. |
+| [../governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md](../governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md) | Repo-safe place to record the final checkpoint C1/C2/C3 decision and sign-off. |
 | [checkpoint-0055-review-checklist.md](checkpoint-0055-review-checklist.md) | Checklist for reviewing the 55-record checkpoint package before CIB/165-facing use. |
 | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) | 42-record checkpoint report and collection-pause decision package. |
 | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) | 55-record synthesis after post-checkpoint confirmed pointers and Option A run 0038. |
