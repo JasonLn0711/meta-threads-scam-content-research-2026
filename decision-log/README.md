@@ -55,3 +55,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Paused collection by default and selected checkpoint report v0.1 after the 42-record synthesis | `0058-select-checkpoint-report-v0-1-after-0042-synthesis.md` |
 | 2026-04-25 | Selected Option A: limited approved-browser-session tranche for prospective items 0046-0055 | `0059-select-option-a-limited-browser-tranche-after-checkpoint-0042.md` |
 | 2026-04-25 | Closed Option A run 0038 after it reached 20 reviewed candidates and 10 selected items | `0060-close-option-a-run-0038-after-caps.md` |
+| 2026-04-25 | Selected the 55-record CIB/165-facing checkpoint report package and blocked item 0056 until a new decision is recorded | `0061-select-checkpoint-0055-report-package.md` |

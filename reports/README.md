@@ -9,6 +9,7 @@ Reports should be more polished than working notes, but they should remain hones
 | Version | Target date | Audience | File |
 |---|---:|---|---|
 | v0 | 2026-04-30 | CIB/165-facing review and internal research alignment | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) |
+| checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
 
@@ -18,6 +19,9 @@ Reports should be more polished than working notes, but they should remain hones
 |---|---|
 | [threads-scam-content-research-v0-executive-brief.md](threads-scam-content-research-v0-executive-brief.md) | Short stakeholder brief and pilot decision request. |
 | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) | Full v0 research report. |
+| [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
+| [checkpoint-0055-decision-request.md](checkpoint-0055-decision-request.md) | One-page stakeholder decision request for the 55-record checkpoint. |
+| [checkpoint-0055-review-checklist.md](checkpoint-0055-review-checklist.md) | Checklist for reviewing the 55-record checkpoint package before CIB/165-facing use. |
 | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) | 42-record checkpoint report and collection-pause decision package. |
 | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) | 55-record synthesis after post-checkpoint confirmed pointers and Option A run 0038. |
 | [checkpoint-0042-stakeholder-handoff-note.md](checkpoint-0042-stakeholder-handoff-note.md) | Suggested handoff note for sending the checkpoint package to reviewers. |

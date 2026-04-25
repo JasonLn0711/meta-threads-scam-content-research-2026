@@ -99,7 +99,7 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a reviewable 42-record synthesis:
+As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a reviewable 55-record synthesis and checkpoint report package:
 
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
@@ -139,13 +139,14 @@ As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, check
 - Checkpoint `0042` contains 14 `scam` / high-risk records, 22 `non_scam`, 5 `uncertain`, and 1 `insufficient_evidence`.
 - Option A run 0038 then selected items `0046-0055` from 20 browser-session candidates; after strict validation and second review, the 55-record aggregate contains 17 `scam`, 23 `non_scam`, 9 `uncertain`, and 6 `insufficient_evidence`.
 - The 55-record checkpoint synthesis is [experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md).
-- The checkpoint baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
+- Decision 0061 selects the 55-record CIB/165-facing checkpoint report package: [reports/threads-scam-content-checkpoint-0055-v0.1.md](reports/threads-scam-content-checkpoint-0055-v0.1.md).
+- The checkpoint 0042 baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
 - The 55-record baseline smoke result is precision 0.708, recall 1.000, F1 0.829, 7 false positives, and 0 false negatives.
 - The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
 
-The next blocker is no longer basic access-path readiness, A/B checkpoint selection, or run 0038 execution. The 55-record checkpoint is now synthesized. The next decision is whether to pause browser-session expansion and wait for CIB/stakeholder confirmed pointers, pause collection and update the CIB/165-facing checkpoint report, or explicitly approve another browser-session tranche for false-positive and uncertainty calibration. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
+The next blocker is no longer basic access-path readiness, A/B checkpoint selection, run 0038 execution, or checkpoint 0055 report drafting. The next decision is whether stakeholders choose C1, C2, or C3 in [reports/checkpoint-0055-decision-request.md](reports/checkpoint-0055-decision-request.md). Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to item `0056`, broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
 
-Approved browser-session capture is now the primary source path for the next bounded tranche, with confirmed pointers as supplemental high-quality inputs. Continue only within the run caps, with controlled capture, redacted records, fast different-angle second review, strict validation, and checkpoint synthesis. Query terms and crawler seeds remain candidate-finding tools only, not labels.
+Confirmed pointers are the preferred next source for final scam/high-risk rule learning. Browser-session capture should continue only if stakeholders explicitly approve another bounded tranche for false-positive and uncertainty calibration, with controlled capture, redacted records, fast different-angle second review, strict validation, and checkpoint synthesis. Query terms and crawler seeds remain candidate-finding tools only, not labels.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
