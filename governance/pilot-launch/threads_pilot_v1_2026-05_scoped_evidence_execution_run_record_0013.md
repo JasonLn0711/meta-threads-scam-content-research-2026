@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0012` |
 | Prior decision | `open_run_0013_scoped_execution_record_only` |
 | Purpose | attempt at most one item 0017 candidate under scoped evidence-path boundaries |
-| Current gate | `method_review_required_after_no_reviewable_scoped_candidate` |
-| Run status | `completed_no_reviewable_candidate` |
+| Current gate | `item_0017_extension_stopped_pending_new_scope_decision` |
+| Run status | `method_review_complete_no_accepted_item` |
 
 ## Required Pre-Execution Gate
 
@@ -117,10 +117,24 @@ Use one seed only for the first execution attempt.
 | Selected items | 0 |
 | Local records built? | no |
 | Strict validation result | not_applicable; no item built |
-| Decision after run | `pause_for_method_review_after_scoped_evidence_no_reviewable_candidate` |
+| Decision after run | `stop_item_0017_extension_for_current_pilot_tranche` |
 
 ## Next Action
 
 Run 0013 found domain-only external-link evidence in aggregate form, but no reviewable candidate under the scoped field allowlist. Redirect categories were `unknown`, no narrow reply-context feasibility was available, and no local item was built.
 
-Do not attempt item 0018. The next action is method review: decide whether to stop item 0017 extension, refine domain/redirect classification without opening landing pages, or request a separately scoped evidence expansion.
+Method review selected stopping the item 0017 extension for the current pilot tranche. Do not attempt item 0018 from the current method. Any future item 0017 retry or item 0018 attempt requires a new stakeholder-approved scope decision before collection.
+
+## Method Review Result
+
+| Review question | Result |
+|---|---|
+| Was the blocker access readiness? | no |
+| Was the blocker schema validation? | no |
+| Was the blocker query-echo filtering? | no; query echoes were filtered |
+| Was there enough independent item-level evidence? | no |
+| Can aggregate external-domain evidence alone create item 0017? | no |
+| Should the current item 0017 extension continue? | no |
+| Should item 0018 open? | no |
+
+The next repo-safe work is pilot synthesis or a stakeholder evidence-expansion memo, not another collection run.

@@ -39,5 +39,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0031-evidence-path-study-decision.md` | Repo-safe evidence-path decision selecting run 0012 design boundaries. |
 | `0032-run-0012-evidence-path-design-start.md` | Repo-safe start note for the design-only run 0012 scoped evidence-path boundaries. |
 | `0033-run-0013-scoped-execution-start.md` | Repo-safe start note for the future single item 0017 scoped evidence execution attempt. |
+| `0034-run-0013-method-review.md` | Repo-safe method review stopping the item 0017 extension for the current pilot tranche after the scoped evidence path found no reviewable candidate. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

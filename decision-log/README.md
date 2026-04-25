@@ -46,3 +46,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Required method revision after run 0010 exhausted all five item 0017 seeds without selecting a safe redacted item | `0026-require-method-revision-after-run-0010.md` |
 | 2026-04-25 | Paused the text-only item 0017 extension and required a scoped evidence-path study before any further item 0017 attempt | `0027-pause-text-only-item-0017-extension.md` |
 | 2026-04-25 | Selected a scoped evidence-path study using domain-only link/redirect-category evidence plus narrow reply-context feasibility before any further item 0017 attempt | `0028-select-scoped-evidence-path-study.md` |
+| 2026-04-25 | Stopped the item 0017 extension for the current pilot tranche after run 0013 produced no reviewable candidate under the scoped evidence-path boundaries | `0029-stop-item-0017-extension-after-run-0013.md` |
