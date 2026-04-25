@@ -21,7 +21,10 @@
 | `STOCK_PICK_PLAYBOOK_KEYWORD_FUNNEL` | Named short-term stock-pick lure with follow/message/code gate for complete operation script or playbook | post, reply, OCR |
 | `TRAPPED_POSITION_DM_PLAYBOOK_REPLY` | Trapped-position or loss-anxiety reply moved into DM/private playbook guidance | reply, OCR |
 | `DARK_HORSE_STOCK_TARGET_PRICE_DM_FUNNEL` | Hidden or dark-horse stock target-price lure gated behind follow, message, code, or private-share action | post, reply, OCR |
+| `CODED_ANIMAL_STOCK_LIMIT_UP_GROUP_FUNNEL` | Animal-coded or obscured low-price stock lure with near-term limit-up/exit claim and group/message gate | post, reply, OCR |
 | `MASS_STOCK_COMMAND_LIST_GROUP_FUNNEL` | Mass stock buy/sell/limit-up command list that converts readers into a daily stock-signal group or quota | post, reply, OCR |
+| `TRADING_RULES_WEALTH_AUTHORITY_FOLLOW_GATE` | Trading-rule list and wealth/experience authority lure gated behind like, follow, `+1`, or get-on-board action | post, reply, OCR |
+| `BRAND_PATENT_EXTREME_ROI_CONTACT_FUNNEL` | Brand, patent, order-backlog, or catalyst authority plus extreme ROI and contact/private-message gate | post, reply, OCR |
 | `REPLY_IMPERSONATION_CONTACT_HIJACK` | Replies impersonate/certify/ride on poster identity to redirect readers to contact or group paths | reply, OCR |
 | `CONTACT_HANDLE_PRESENT` | Visible handle, phone, email, or messaging ID | contact-handle field or text |
 | `EXTERNAL_LINK_PRESENT` | Visible link, URL, shortener, or click-link instruction | link field or text |
@@ -69,7 +72,10 @@ Configured in `configs/baseline_rule_config.yaml`.
 | Stock-pick playbook keyword funnel | Strong when a named short-term pick, FOMO, prior winners, and a follow/message/code action gate converge. |
 | Trapped-position DM playbook reply | Strong when loss anxiety or trapped-position help becomes a private-message or operation-playbook conversion point. |
 | Dark-horse stock target-price DM funnel | Strong when a hidden stock, high target-price lure, catalyst claim, urgency, and follow/message/code/private-share action gate converge. |
+| Coded animal stock limit-up group funnel | Strong when an animal-coded/obscured low-price target, near-term limit-up/exit claim, prepared-data framing, and group/message action gate converge. |
 | Mass stock-command list group funnel | Strong when many specific buy/sell/limit-up commands, claimed call accuracy, free daily signals, and group/quota conversion converge. |
+| Trading-rules wealth-authority follow gate | Strong when wealth/experience authority, compact trading-rule guidance, and like/follow/`+1`/get-on-board gating converge. |
+| Brand/patent extreme-ROI contact funnel | Strong when brand/patent/catalyst authority, extreme small-stake-to-large-return framing, and contact/private-message gating converge. |
 | Reply impersonation/contact hijack | Strong when repeated under high-attention investment posts, especially with LINE/group paths, official-contact claims, anti-scam camouflage, or daily list/holding-viewpoint offers. |
 | Payment or credential ask | Severe signal, but high-risk assignment still requires guardrails. |
 | OCR-only lure | Adds evidence-context value and explains why images matter. |

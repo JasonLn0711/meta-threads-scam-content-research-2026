@@ -123,7 +123,10 @@ Select all observable `signal_tags`. Use `none` only when no signal applies.
 | `stock_pick_playbook_keyword_funnel` | The item names a short-term stock pick and offers a complete operation script/playbook through follow, message, or numeric-code action. |
 | `trapped_position_dm_playbook_reply` | A reply about being trapped, losing money, or needing stock help is moved into private message or detailed operation playbook guidance. |
 | `dark_horse_stock_target_price_dm_funnel` | The item teases a hidden or dark-horse stock with low-current/high-target-price framing, catalyst claims, urgency, and follow/message/code/private-share gating. |
+| `coded_animal_stock_limit_up_group_funnel` | The item uses an animal-coded or obscured low-price stock name with near-term limit-up/exit claims and gates details through group, follow, message, or +1 action. |
 | `mass_stock_command_list_group_funnel` | The item gives a mass list of stock buy/sell/limit-up commands, then offers daily accurate stock calls, free group sharing, entry quota, or similar funnel. |
+| `trading_rules_wealth_authority_follow_gate` | The item uses wealth or long-experience authority plus a trading-rule/discipline list, then gates follow-up stock help behind like, follow, `+1`, or get-on-board action. |
+| `brand_patent_extreme_roi_contact_funnel` | The item uses major-brand, patent, order-backlog, or catalyst authority with extreme small-stake-to-large-return claims and contact/private-message gating. |
 | `reply_impersonation_contact_hijack` | Replies appear to impersonate, certify, or ride on the poster's identity to redirect readers to LINE/contact/group paths. |
 | `visible_external_link` | A visible URL, link text, shortener, or landing-page reference appears. |
 | `suspicious_domain_or_shortener` | The visible URL looks mismatched, shortened, disguised, vague, or unrelated to the claimed source. |
@@ -207,7 +210,13 @@ Use `stock_pick_playbook_keyword_funnel` when the item combines a named short-te
 
 Use `dark_horse_stock_target_price_dm_funnel` when the item hides or teases a "dark horse" stock, compares a low current price to a much higher target or expected price, adds catalyst claims such as major technology or brand cooperation, then gates the promised stock details behind follow, like, private message, numeric code, or free-share action. Do not use this tag for ordinary target-price discussion unless the hidden-stock lure and private/action gate are both visible.
 
+Use `coded_animal_stock_limit_up_group_funnel` when the item uses an animal-coded or obscured stock nickname, frames it as a low-price target, promises near-term limit-up or exit timing, and gates the prepared details through a group, follow, message, or `+1` action. This is a narrower variant of hidden-stock and stock-pick funnels; do not use it when an animal nickname appears without an investment-action gate.
+
 Use `mass_stock_command_list_group_funnel` when the item publishes a large list of specific stock buy, sell, hold, exit, limit-up, or get-on/get-off commands, claims unusually accurate stock calls or free sharing, and then moves readers toward a daily stock-signal group, quota, follow/comment action, or similar conversion path. Do not use this tag for ordinary watchlists or market notes unless the mass command list and group/quota/free-signal funnel both appear.
+
+Use `trading_rules_wealth_authority_follow_gate` when the item presents the poster as wealthy, highly experienced, or unusually successful, gives a compact trading-rule or discipline list, and then asks readers to like, follow, comment `+1`, or get on board to receive stock help, picks, or buy-timing guidance. Do not use this tag for ordinary educational checklists unless the authority framing and action gate both appear.
+
+Use `brand_patent_extreme_roi_contact_funnel` when the item uses major-brand, patent, order-backlog, exclusive-technology, or catalyst authority to justify an extreme small-stake-to-large-return claim, then gates the stock detail, reference, entry timing, or follow-up through a contact handle, private message, like/follow action, or `+1`. Do not use this tag for ordinary company news or analyst target-price discussion unless the extreme ROI and contact/action gate are both visible.
 
 Escalate to `uncertain` or `scam` when this signal co-occurs with past-performance proof, limit-up or multi-day board claims, private-channel migration, stock-community/group language, contact handles, or urgency such as do-not-miss, enter on a specific day, close-eyes entry, or break-high certainty. This is a funnel pattern: the public post creates urgency and the reply/action gate moves readers toward a private playbook.
 

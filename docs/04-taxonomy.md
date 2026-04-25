@@ -61,6 +61,7 @@ Multiple types may apply, but over-selection is a taxonomy warning sign. Most it
 | `stock_pick_playbook_keyword_funnel` | Named short-term stock-pick lure offers a complete operation script/playbook through follow, message, or numeric-code action. |
 | `trapped_position_dm_playbook_reply` | Reply-level trapped-position or loss-anxiety cue is moved into DM/private playbook guidance. |
 | `dark_horse_stock_target_price_dm_funnel` | Hidden or dark-horse stock target-price lure uses catalyst, urgency, and follow/message/code/private-share gating. |
+| `coded_animal_stock_limit_up_group_funnel` | Animal-coded or obscured low-price stock lure promises near-term limit-up/exit timing and gates details through group/follow/message action. |
 | `mass_stock_command_list_group_funnel` | Mass stock buy/sell/limit-up command list converts readers into a daily stock-signal group, quota, or free-sharing funnel. |
 | `reply_impersonation_contact_hijack` | Replies appear to impersonate, certify, or ride on the poster's identity to redirect readers to LINE/contact/group paths. |
 | `visible_external_link` | Visible URL, link text, shortener, landing-page reference. |
@@ -129,6 +130,9 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 - "Requests private messages as the conversion path while withholding public contact details."
 - "Uses a comment-code or keyword lead magnet to move readers from public hype into a follow-up funnel."
 - "Uses a named stock-pick, FOMO, and numeric-code/action gate to deliver a complete operation script."
+- "Uses an animal-coded or obscured low-price stock name with near-term limit-up/exit claims and group/private-message gating."
+- "Uses wealth or long-experience authority plus a trading-rule list, then gates follow-up stock help behind like/follow/`+1`/get-on-board action."
+- "Uses major-brand, patent, order-backlog, or catalyst authority plus extreme small-stake-to-large-return claims and contact/private-message gating."
 - "Moves a trapped-position or loss-anxiety reply into private detailed operation guidance."
 - "Reply thread contains apparent impersonation or contact hijack that redirects readers to a group/contact path while claiming other contacts are scams."
 - "Uses a high-fee trading course or membership funnel around financial outcomes."

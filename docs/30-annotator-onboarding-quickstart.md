@@ -110,6 +110,7 @@ High-value tags to watch:
 - `stock_pick_playbook_keyword_funnel`
 - `trapped_position_dm_playbook_reply`
 - `dark_horse_stock_target_price_dm_funnel`
+- `coded_animal_stock_limit_up_group_funnel`
 - `mass_stock_command_list_group_funnel`
 - `reply_impersonation_contact_hijack`
 - `visible_external_link`
@@ -167,6 +168,8 @@ Set `review_status` to `needs_second_review` when:
 - the item asks users to private-message the poster for investment/profit-related details while public contact details are absent
 - an author reply asks users to follow, comment a code, or use a keyword to receive investment/profit-related material
 - a named short-term stock pick is paired with FOMO and a follow/message/code gate for a complete operation playbook
+- wealth or long-experience authority plus a trading-rule list is paired with like/follow/`+1`/get-on-board action gating
+- major-brand/patent/catalyst authority plus extreme small-stake-to-large-return claims are paired with contact/private-message gating
 - a trapped-position or loss-anxiety reply is moved into private message or detailed operation playbook guidance
 - replies appear to impersonate/certify a poster identity and redirect readers to LINE/contact/group paths
 - a high-fee trading or investment course funnel is paired with guaranteed-profit, private-contact, payment, testimonial, or reply-context dispute evidence
@@ -190,6 +193,8 @@ Set `review_status` to `needs_second_review` when:
 | Treating a missing public LINE/link as automatically benign | Check whether the post or replies ask users to DM for investment/profit details; use `implicit_dm_contact_request` when visible. |
 | Treating every comment-code prompt as scam | A code/keyword prompt is review-worthy when it converges with investment/profit framing, stock picks, fake authority, target-price claims, or suspicious reply context. |
 | Treating every named stock pick as scam | Stock-pick playbook funnels require FOMO or strong outcome framing plus a follow/message/code action gate. |
+| Treating every trading-rule checklist as scam | Trading-rule authority funnels require wealth/experience authority plus an action gate for follow-up stock help. |
+| Treating every company-news catalyst as scam | Brand/patent catalyst funnels require extreme ROI framing plus contact or action-gated follow-up. |
 | Treating every loss question as scam | Trapped-position risk matters when the answer moves into private guidance or a playbook funnel. |
 | Assuming suspicious replies are authored by the poster | Record attribution uncertainty. Reply-level impersonation/contact hijack can still create thread-level scam risk. |
 | Treating all paid education as benign or all expensive courses as scams | Look for the whole pattern: price, financial outcome claims, private contact, testimonials, payment path, and reply-context disputes. |
