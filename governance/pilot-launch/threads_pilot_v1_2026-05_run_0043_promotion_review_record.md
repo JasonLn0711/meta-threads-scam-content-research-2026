@@ -19,7 +19,7 @@ Do not add raw Threads text, full URLs, handles, screenshots, HTML, browser/sess
 | Gate | `docs/53-dedupe-first-full-thread-ready-gate.md` |
 | Query rule | `docs/54-browser-query-diversification-rule.md` |
 | Intended first item if promoted | `manual_entry_0076` |
-| Review status | `controlled_review_packet_created` |
+| Review status | `first_pass_completed_no_promotable_candidate` |
 
 ## Gate Status
 
@@ -44,7 +44,7 @@ Do not add raw Threads text, full URLs, handles, screenshots, HTML, browser/sess
 | Candidates reviewed under promotion gate | 0 |
 | Candidates rejected as duplicate/near duplicate | 0 |
 | Candidates kept as local candidate traces | 0 |
-| Candidates paused for full-thread capture | 0 |
+| Candidates paused for full-thread capture | 24 |
 | Candidates promoted to `manual_entry_0076` | 0 |
 
 ## Controlled Packet Status
@@ -67,6 +67,29 @@ Seed-family coverage in the packet:
 - authority/free-group framing: 1;
 - private-channel reward framing: 1.
 
+## First-Pass Gate Review Result
+
+The controlled-store first-pass promotion review has completed.
+
+Repo-safe aggregate:
+
+- candidates reviewed: 24;
+- promotable candidates: 0;
+- candidates allowed for `manual_entry_0076`: 0;
+- candidates paused for full-thread/source-linkage capture: 24;
+- manual entries created: 0;
+- official items created: 0.
+
+Gate failures:
+
+- source-context gate: 24;
+- reply-context gate: 24;
+- evidence-attribution gate: 24.
+
+Interpretation: run `0043` candidates contain useful surface signal families, but the extraction method retained them as search body lines with page-level post-href context only. That is not enough to tie a candidate line to a specific item, thread, or reply context.
+
+This is a method limitation, not a negative label decision.
+
 ## Review Rule
 
 Review one candidate at a time from the controlled-store packet.
@@ -75,4 +98,6 @@ Promotion is allowed only if every required gate passes. If the evidence support
 
 ## Next Action
 
-Review the controlled-store packet one candidate at a time. The tracked repo may then record only aggregate gate outcomes and whether a single candidate is eligible for `manual_entry_0076`.
+Do not create `manual_entry_0076` from first-pass run `0043` candidates.
+
+The next method step is a source-linkage/full-thread capture attempt for a small subset of these candidates. A candidate can be reconsidered only if item-level source context and reply-context status become tied to the candidate evidence.

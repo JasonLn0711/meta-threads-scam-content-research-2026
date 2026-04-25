@@ -28,7 +28,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Browser rendering diagnostic | run `0042` completed; body-line plus post-href method selected |
 | Diverse browser candidate method | run `0043` completed; no item creation |
 | Query diversification rule | adopted for future search-based browser runs |
-| Run 0043 promotion review | opened for 24 quality-review candidates; no item promoted yet |
+| Run 0043 promotion review | first pass complete; no candidate promotable yet |
 | Aggressive candidate-quality test | run `0044` completed; no official expansion |
 
 ## What Is Complete
@@ -99,7 +99,7 @@ Without another decision record, only these actions are allowed:
 - browser-method revision only; do not repeat run `0041` article-based extraction with higher caps;
 - next browser method design using body-line segmentation plus post-href discovery;
 - run `0043` diverse body-line/post-href result review with repo-safe aggregate results only;
-- run `0043` formal promotion review packet preparation under decision `0086`;
+- run `0043` source-linkage/full-thread follow-up design after first-pass gate failures;
 - run `0044` controlled-store-only aggressive candidate-quality test under decision `0087`;
 - query matrix design under `docs/54-browser-query-diversification-rule.md`;
 - repo-safe method clarification;
