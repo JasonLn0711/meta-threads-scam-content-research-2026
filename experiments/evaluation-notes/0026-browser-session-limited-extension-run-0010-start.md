@@ -78,3 +78,18 @@ Try item 0017 again with `RP-0010-03` only after re-checking approved browser st
 ## Next Allowed Action After Third Attempt
 
 Try item 0017 again with `RP-0010-04` only after re-checking approved browser storage-state readiness. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
+
+## Fourth Attempt Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0010-04` |
+| Candidates reviewed | 5 |
+| Negation/risk-warning filter applied | yes |
+| Selected item 0017 | no |
+| `manual_entry_0017.json` created | no |
+| Raw/session material in git | no |
+
+## Next Allowed Action After Fourth Attempt
+
+Try item 0017 again with `RP-0010-05` only after re-checking approved browser storage-state readiness. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.

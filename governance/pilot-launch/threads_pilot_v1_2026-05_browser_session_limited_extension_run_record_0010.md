@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0009` |
 | Prior decision | `open_limited_browser_session_extension_0010_with_negation_filter` |
 | Purpose | attempt a limited item 0017-0020 extension through the approved browser storage-state path |
-| Current gate | `item_0017_rp0010_04_or_method_review_required` |
-| Run status | `started_no_selected_item_from_first_three_seeds` |
+| Current gate | `item_0017_rp0010_05_or_method_review_required` |
+| Run status | `started_no_selected_item_from_first_four_seeds` |
 
 ## Required Pre-Run Gate
 
@@ -130,16 +130,16 @@ For each selected item:
 | Result field | Value |
 |---|---|
 | Run started? | yes |
-| Run completed? | partial; first three seeds only |
-| Candidates reviewed | 15 total; 5 for `RP-0010-01`, 5 for `RP-0010-02`, 5 for `RP-0010-03` |
+| Run completed? | partial; first four seeds only |
+| Candidates reviewed | 20 total; 5 for `RP-0010-01`, 5 for `RP-0010-02`, 5 for `RP-0010-03`, 5 for `RP-0010-04` |
 | Selected items | 0 |
 | Stop condition triggered? | no |
 | Local records built? | no |
 | Strict validation result | not_applicable; no item built |
-| Decision after run | `no_selected_item_from_rp0010_01_to_rp0010_03_try_next_seed_only_after_review` |
+| Decision after run | `no_selected_item_from_rp0010_01_to_rp0010_04_try_next_seed_only_after_review` |
 
 ## Next Action
 
-The first item 0017 attempt used `RP-0010-01`, reviewed 5 candidates, applied the negation/risk-warning exclusion, and selected no item. The second item 0017 attempt used `RP-0010-02`, reviewed 5 candidates, applied the same exclusion, and selected no item. The third item 0017 attempt used `RP-0010-03`, reviewed 5 candidates, applied the same exclusion, and selected no item. No `manual_entry_0017.json` was created.
+The first item 0017 attempt used `RP-0010-01`, reviewed 5 candidates, applied the negation/risk-warning exclusion, and selected no item. The second item 0017 attempt used `RP-0010-02`, reviewed 5 candidates, applied the same exclusion, and selected no item. The third item 0017 attempt used `RP-0010-03`, reviewed 5 candidates, applied the same exclusion, and selected no item. The fourth item 0017 attempt used `RP-0010-04`, reviewed 5 candidates, applied the same exclusion, and selected no item. No `manual_entry_0017.json` was created.
 
-The next allowed action is a separate item 0017 attempt using `RP-0010-04` only after confirming the approved browser storage-state remains ready. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
+The next allowed action is a separate item 0017 attempt using `RP-0010-05` only after confirming the approved browser storage-state remains ready. Do not advance to item 0018 until item 0017 is selected, built, and strict-validated.
