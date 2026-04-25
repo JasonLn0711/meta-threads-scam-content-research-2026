@@ -47,3 +47,21 @@ open_run_0011_method_revision_but_execute_diagnostic_pass_only_first
 - Run only `RP-0011-01` diagnostic pass first.
 - Keep raw candidate text, URLs, handles, screenshots, cookies, and session material outside git.
 - Do not advance to item 0018.
+
+## First Diagnostic Result
+
+| Check | Result |
+|---|---|
+| Seed attempted | `RP-0011-01` |
+| Candidates reviewed | 5 |
+| Negation/risk-warning count | 0 |
+| Single-signal candidates | 2 |
+| Multi-signal candidates | 1 |
+| Reviewable candidates | 1 |
+| Signal-family metadata | `crypto_domain`: 1; `private_channel`: 1; `wallet_or_deposit`: 3 |
+| `manual_entry_0017.json` created | no |
+| Raw/session material in git | no |
+
+## Next Required Action
+
+Review the controlled-store candidate outside git before building item 0017. Build `manual_entry_0017.json` only if the candidate can be reduced to approved redacted fields under the run 0011 field allowlist.

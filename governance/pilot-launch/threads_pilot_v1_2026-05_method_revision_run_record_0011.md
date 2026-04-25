@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0010` |
 | Prior decision | `pause_item_0017_collection_and_open_method_revision_before_run_0011` |
 | Purpose | revise the item 0017 candidate-diagnostic method before any further item attempt |
-| Current gate | `candidate_diagnostic_design_ready_not_executed` |
-| Run status | `opened_not_started` |
+| Current gate | `reviewable_candidate_gate_before_item_0017_build` |
+| Run status | `diagnostic_pass_found_one_reviewable_candidate` |
 
 ## Required Pre-Run Gate
 
@@ -125,14 +125,21 @@ Stop immediately if:
 
 | Result field | Value |
 |---|---|
-| Run started? | no |
-| Run completed? | no |
-| Diagnostic candidates reviewed | 0 |
+| Run started? | yes |
+| Run completed? | partial; diagnostic pass only |
+| Diagnostic candidates reviewed | 5 for `RP-0011-01` |
+| Negation/risk-warning count | 0 |
+| Single-signal candidate count | 2 |
+| Multi-signal candidate count | 1 |
+| Reviewable candidate count | 1 |
+| Signal-family metadata | `crypto_domain`: 1; `private_channel`: 1; `wallet_or_deposit`: 3 |
 | Selected items | 0 |
 | Local records built? | no |
-| Strict validation result | pending |
-| Decision after run | pending |
+| Strict validation result | not_applicable; no item built |
+| Decision after run | `review_candidate_before_manual_entry_0017_build` |
 
 ## Next Action
 
-Before execution, re-check approved browser storage-state readiness, strict-validate the existing 16-record aggregate, and confirm `manual_entry_0017.json` is absent. Then run only the diagnostic pass for `RP-0011-01`; do not create item 0017 unless a candidate is reviewable under this run record.
+The `RP-0011-01` diagnostic pass found one reviewable candidate under the approved field allowlist. No `manual_entry_0017.json` was created during the diagnostic pass.
+
+Before building item 0017, review the controlled-store candidate outside git and confirm that it can be reduced to approved redacted fields without requiring replies, screenshots/OCR, landing pages, profile context, broad comments, raw identifiers, or raw source URLs in git.
