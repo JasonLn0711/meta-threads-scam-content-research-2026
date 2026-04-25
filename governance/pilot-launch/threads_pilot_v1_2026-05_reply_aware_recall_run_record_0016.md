@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0032-close-run-0015-and-require-new-run-design` |
 | Target local item range | `threads_pilot_v1_0024` through `threads_pilot_v1_0027` |
 | Purpose | test reply/comment-aware, high-recall evidence discovery without letting one seed consume the full candidate budget |
-| Current gate | `second_review_complete` |
-| Run status | `local_records_built_second_reviewed_strict_valid` |
+| Current gate | `closed_for_collection_method_decision_required` |
+| Run status | `local_records_built_second_reviewed_strict_valid_closed` |
 
 ## Scope Rationale
 
@@ -186,4 +186,4 @@ Stop immediately if:
 
 ## Next Action
 
-Update the checkpoint interpretation from 23 to 27 strict-valid local records, then decide whether item `0028` requires a new run record, decision gate, or stop/pause decision.
+Open a method decision or new bounded run record before item `0028`. Run 0016 cannot continue because its target range, candidate-review cap, and selected-item cap are exhausted.

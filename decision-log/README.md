@@ -50,3 +50,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-25 | Required a stakeholder evidence-scope review gate before any item 0017 retry, item 0018 attempt, or high-risk evidence-expansion collection run | `0030-require-stakeholder-evidence-scope-review.md` |
 | 2026-04-25 | Recorded stakeholder approval for all proposed evidence families while preserving run-level limits and raw-data boundaries before item 0018 | `0031-record-stakeholder-evidence-expansion-approval.md` |
 | 2026-04-25 | Closed run 0015 for collection after its candidate-review cap was exhausted and required a new bounded run design before item 0024 | `0032-close-run-0015-and-require-new-run-design.md` |
+| 2026-04-25 | Closed run 0016 for collection after item 0027 and required a method decision before item 0028 | `0033-close-run-0016-and-require-method-decision-before-item-0028.md` |

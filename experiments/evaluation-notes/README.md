@@ -49,5 +49,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0041-run-0016-preflight.md` | Repo-safe preflight showing run 0016 is ready for browser/session execution while the API path remains blocked. |
 | `0042-run-0016-execution-result.md` | Repo-safe execution result for run 0016: 20 candidates reviewed across all five families, 4 local records built, strict-valid checkpoint 0027, second review pending. |
 | `0043-run-0016-second-review.md` | Repo-safe second-review result for items 0024-0027, finalizing 2 non-scam false-positive pressure cases and 2 uncertain boundary cases. |
+| `0044-checkpoint-0027-interpretation.md` | Repo-safe 27-record checkpoint interpretation closing run 0016 for collection and requiring a method decision before item 0028. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
