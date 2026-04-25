@@ -21,6 +21,12 @@ Recommended decision:
 B: keep collection paused and review/refine checkpoint report
 ```
 
+## Decision Outcome
+
+Stakeholders selected Option `A` on `2026-04-25`.
+
+The approved prospective tranche starts at item `0046` and may continue through item `0055`, with at most 20 candidates reviewed and at most 10 selected items. The primary source path is approved browser-session capture. CIB/stakeholder confirmed pointers may supplement the tranche if provided. Fast different-angle second review and strict validation are required before any selected item counts.
+
 ## Why This Decision Is Needed Now
 
 The project has enough evidence-system material to review:
@@ -49,6 +55,8 @@ Continuing collection without review would increase item count but not answer th
 | `governance/pilot-launch/run_index.md` | Index connecting run records, items, decisions, labels, risks, and validation outcomes. |
 | `governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md` | Repo-safe place to record the final stakeholder A/B decision and sign-off. |
 | `decision-log/0058-select-checkpoint-report-v0-1-after-0042-synthesis.md` | Decision to pause collection by default and create checkpoint report v0.1. |
+| `decision-log/0059-select-option-a-limited-browser-tranche-after-checkpoint-0042.md` | Decision selecting Option A bounded continuation after checkpoint 0042. |
+| `governance/pilot-launch/threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | Bounded run record for the prospective item `0046-0055` tranche. |
 
 ## Option A Requirements
 

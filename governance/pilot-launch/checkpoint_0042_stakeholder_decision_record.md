@@ -12,13 +12,13 @@ This record contains no raw Threads URLs, handles, screenshots, raw post text, r
 |---|---|
 | Decision ID | `CHECKPOINT-0042-STAKEHOLDER-DECISION` |
 | Checkpoint | `threads_pilot_v1_0042` |
-| Decision status | `pending` |
+| Decision status | `accepted` |
 | Recommended option | `B` |
-| Selected option | `pending` |
-| Decision owner |  |
-| Decision date |  |
-| Reviewer(s) |  |
-| Recorded by |  |
+| Selected option | `A` |
+| Decision owner | stakeholder/project owner |
+| Decision date | `2026-04-25` |
+| Reviewer(s) | fast different-angle second review required per selected item |
+| Recorded by | `AUTO-OP-01` |
 
 ## Evidence Package Reviewed
 
@@ -31,6 +31,8 @@ This record contains no raw Threads URLs, handles, screenshots, raw post text, r
 | `run_index.md` | Auditable index of runs, items, decisions, validation, and baseline outcomes. |
 | `../../experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` | Repo-safe synthesis of the 42-record aggregate. |
 | `../../decision-log/0058-select-checkpoint-report-v0-1-after-0042-synthesis.md` | Decision to pause collection by default and create checkpoint report v0.1. |
+| `../../decision-log/0059-select-option-a-limited-browser-tranche-after-checkpoint-0042.md` | Decision selecting bounded Option A continuation after stakeholder review. |
+| `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | Open bounded run record for prospective item `0046-0055` tranche. |
 
 ## Decision Options
 
@@ -46,32 +48,32 @@ Recommended choice: `B`.
 | Field | Response |
 |---|---|
 | Selected option | `A` / `B` |
-| Decision owner |  |
-| Date |  |
-| Required changes before sharing |  |
-| If Option A, next tranche size |  |
-| If Option A, allowed source path |  |
-| If Option A, review cap and selected-item cap |  |
-| If Option B, report reviewer(s) |  |
-| Notes |  |
+| Decision owner | stakeholder/project owner |
+| Date | `2026-04-25` |
+| Required changes before sharing | Open bounded run record before item `0046`; keep raw evidence in controlled store; require strict validation and second review. |
+| If Option A, next tranche size | 10 items |
+| If Option A, allowed source path | primary: approved browser-session capture; supplemental: CIB/stakeholder confirmed pointer if provided |
+| If Option A, review cap and selected-item cap | review at most 20 candidates; select at most 10 items |
+| If Option B, report reviewer(s) | not selected |
+| Notes | Second review must be fast and from a different angle; no item counts unless strict validation passes. |
 
 ## Conditions And Blockers
 
 | Condition | Status | Notes |
 |---|---|---|
-| Raw evidence reviewed only in controlled store when necessary | `pending` | Do not copy raw evidence into this repo. |
-| Stakeholder accepts or revises the recommended pause | `pending` | Record as selected option above. |
-| Any Option A tranche is bounded before collection resumes | `pending` | Required before item `0046`. |
-| Any Option B report edits are captured in tracked report/checklist files | `pending` | Required before external sharing. |
+| Raw evidence reviewed only in controlled store when necessary | `accepted` | Do not copy raw evidence into this repo. |
+| Stakeholder accepts or revises the recommended pause | `accepted` | Stakeholder selected Option `A`, revising the recommended pause. |
+| Any Option A tranche is bounded before collection resumes | `accepted` | Run record 0038 bounds the prospective `0046-0055` tranche. |
+| Any Option B report edits are captured in tracked report/checklist files | `not_selected` | Option `B` is not selected for the next action. |
 
 ## Sign-Off
 
 | Role | Name | Status | Date | Notes |
 |---|---|---|---|---|
-| Project owner |  | `pending` |  |  |
-| CIB/165-facing reviewer |  | `pending` |  |  |
-| Research reviewer |  | `pending` |  |  |
-| Data governance reviewer |  | `pending` |  |  |
+| Project owner | stakeholder/project owner | `accepted` | `2026-04-25` | Selected Option `A` with 10-item tranche, 20-candidate cap, and 10-selected cap. |
+| CIB/165-facing reviewer |  | `pending_per_item` |  | Fast different-angle second review required for selected items. |
+| Research reviewer |  | `pending_per_item` |  | Validate label/risk/evidence-family before counting. |
+| Data governance reviewer |  | `implicit_gate` | `2026-04-25` | Strict validation and repo-safe redaction scan required. |
 
 ## Post-Decision Follow-Up
 

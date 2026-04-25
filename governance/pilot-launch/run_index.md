@@ -9,6 +9,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest local work visible in tree | items `0043` through `0045` also exist as post-checkpoint work, but are not part of the 42-record checkpoint synthesis |
+| Next authorized prospective tranche | Option A run `0038`, items `0046-0055`, at most 20 candidates reviewed and 10 selected |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -47,6 +48,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0025-0026` | account-source | account source run records `0025-0026` | `0054-account-source-0001-result.md`, `0055-account-source-0002-result.md` | account samples only | repo-safe context only | Account-level samples support candidate discovery, not standalone labels. |
 | `0027-0033` | confirmed-pointer | item run records `0035-0041` | evaluation notes `0056-0062` | `0035-0041` | all strict-valid | Additional scam/high-risk evidence families added. |
 | `0034` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0042` | 42 records strict-valid | Anti-scam warning hard negative recorded. |
+| `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | pending | prospective `0046-0055` | open, not executed | Option A selected: primary approved browser-session capture; supplemental confirmed pointers allowed; 20-candidate and 10-selected caps. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -90,7 +92,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 
 ## Post-Checkpoint Work Not Included In 0042 Synthesis
 
-Items `0043`, `0044`, and `0045` were captured after the 42-record checkpoint and should be treated as the next tranche until a later checkpoint synthesis explicitly includes them.
+Items `0043`, `0044`, and `0045` were captured after the 42-record checkpoint and should remain post-checkpoint work until a later checkpoint synthesis explicitly includes them. Stakeholder Option A now opens a prospective item `0046-0055` tranche under run `0038`; the new run does not retroactively consume the `0043-0045` post-checkpoint items.
 
 | Item | Evaluation note | Decision log | Status |
 |---|---|---|---|
