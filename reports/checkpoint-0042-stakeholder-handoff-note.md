@@ -30,6 +30,7 @@ The research recommendation is **B** first.
 | 3 | `reports/checkpoint-0042-review-checklist.md` | Self-review status and sign-off scaffold. |
 | 4 | `governance/pilot-launch/run_index.md` | Auditable index of runs, items, decisions, validation, and baseline outcomes. |
 | 5 | `experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` | Detailed repo-safe synthesis of the 42-record aggregate. |
+| 6 | `governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md` | Final place to record the A/B decision and sign-off. |
 
 ## Key Checkpoint Facts
 
@@ -63,8 +64,11 @@ Please return the filled decision fields from `reports/checkpoint-0042-decision-
 | Required changes before sharing |  |
 | If Option A, next tranche size |  |
 | If Option A, allowed source path |  |
+| If Option A, review cap and selected-item cap |  |
 | If Option B, report reviewer(s) |  |
 | Notes |  |
+
+After the reply is received, please record the final decision in `governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md`.
 
 Best,
 

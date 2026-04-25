@@ -31,6 +31,7 @@ Do not place raw Threads content, screenshots, URLs, handles, stakeholder case I
 | `threads_pilot_v1_2026-05_evidence_expansion_run_record_0015.md` | Non-sensitive tracked run record for the first bounded item 0018-to-0027 evidence-expansion tranche after gate 0014 approval. |
 | `threads_pilot_v1_2026-05_reply_aware_recall_run_record_0016.md` | Non-sensitive tracked run record for the bounded reply/comment-aware recall design before item 0024. |
 | `threads_pilot_v1_2026-05_targeted_exemplar_intake_record_0017.md` | Non-sensitive targeted redacted exemplar intake record before item 0028. |
+| `checkpoint_0042_stakeholder_decision_record.md` | Repo-safe stakeholder A/B decision record for the 42-record checkpoint before item 0046. |
 | `threads_pilot_v1_2026-05_work_order.md` | Pilot batch work order. |
 | `threads_pilot_v1_2026-05_readiness_review.md` | Real-pilot readiness review. |
 | `threads_pilot_v1_2026-05_guideline_revision_log.md` | Accepted calibration-driven guideline revisions for the first governed rehearsal and pilot batch. |

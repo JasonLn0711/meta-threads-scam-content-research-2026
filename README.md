@@ -134,6 +134,7 @@ As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, check
 - Decision 0058 selects a temporary collection pause and starts the CIB/165-facing checkpoint report v0.1: [reports/threads-scam-content-checkpoint-0042-v0.1.md](reports/threads-scam-content-checkpoint-0042-v0.1.md).
 - The stakeholder decision request is [reports/checkpoint-0042-decision-request.md](reports/checkpoint-0042-decision-request.md).
 - The stakeholder handoff note is [reports/checkpoint-0042-stakeholder-handoff-note.md](reports/checkpoint-0042-stakeholder-handoff-note.md).
+- The stakeholder decision record is [governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md](governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md).
 - Checkpoint `0042` contains 14 `scam` / high-risk records, 22 `non_scam`, 5 `uncertain`, and 1 `insufficient_evidence`.
 - The checkpoint baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
 - The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.

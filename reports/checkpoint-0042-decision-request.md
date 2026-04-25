@@ -47,6 +47,7 @@ Continuing collection without review would increase item count but not answer th
 | `reports/checkpoint-0042-review-checklist.md` | Self-review checklist and sign-off scaffold. |
 | `experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` | Repo-safe synthesis of the 42-record aggregate. |
 | `governance/pilot-launch/run_index.md` | Index connecting run records, items, decisions, labels, risks, and validation outcomes. |
+| `governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md` | Repo-safe place to record the final stakeholder A/B decision and sign-off. |
 | `decision-log/0058-select-checkpoint-report-v0-1-after-0042-synthesis.md` | Decision to pause collection by default and create checkpoint report v0.1. |
 
 ## Option A Requirements
@@ -85,5 +86,8 @@ If stakeholders choose Option B, the next work should be:
 | Required changes before sharing |  |
 | If Option A, next tranche size |  |
 | If Option A, allowed source path |  |
+| If Option A, review cap and selected-item cap |  |
 | If Option B, report reviewer(s) |  |
 | Notes |  |
+
+After the reviewer returns this table, record the final decision in `governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md`.

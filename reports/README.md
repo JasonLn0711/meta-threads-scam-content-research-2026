@@ -20,6 +20,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) | 42-record checkpoint report and collection-pause decision package. |
 | [checkpoint-0042-stakeholder-handoff-note.md](checkpoint-0042-stakeholder-handoff-note.md) | Suggested handoff note for sending the checkpoint package to reviewers. |
 | [checkpoint-0042-decision-request.md](checkpoint-0042-decision-request.md) | One-page stakeholder decision request for choosing whether to resume collection or keep reviewing the checkpoint package. |
+| [../governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md](../governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md) | Repo-safe place to record the final checkpoint A/B decision and sign-off. |
 | [checkpoint-0042-review-checklist.md](checkpoint-0042-review-checklist.md) | Checklist for reviewing the 42-record checkpoint package before CIB/165-facing use. |
 | [report-v0-review-checklist.md](report-v0-review-checklist.md) | Pre-delivery quality and sign-off checklist. |
 | [../docs/51-stakeholder-evidence-expansion-memo.md](../docs/51-stakeholder-evidence-expansion-memo.md) | Current checkpoint addendum asking what evidence expansion is approved after item 0017 stopped. |
