@@ -30,6 +30,7 @@ compare_annotation_passes.py  Compare two annotator passes and export disagreeme
 prepare_calibration_files.py  Create blind calibration sheets and answer keys
 init_pilot_workspace.py       Create empty local-only pilot files under ignored data/interim/
 check_pilot_preflight.py      Check repo and local workspace readiness before item 1
+prepare_controlled_access_path.py Prepare approved browser/API access paths without exposing secrets
 ```
 
 ## Local Python Setup
@@ -170,6 +171,45 @@ Run the item-1 preflight after controlled launch details and local workspace set
 ```bash
 python scripts/check_pilot_preflight.py --before-item-1 --ack-controlled-details
 ```
+
+## Controlled Access Path Preparation
+
+Run 0008 prepares the next approved access path after run 0007 found governance material but no loadable browser session artifact and no ready API/session-aware client. These commands do not collect Threads items and do not print secrets.
+
+Initialize the controlled-store slots and templates:
+
+```bash
+python scripts/prepare_controlled_access_path.py --init-controlled-store
+```
+
+After the approved browser-rendered session is exported outside git, import and validate it:
+
+```bash
+python scripts/prepare_controlled_access_path.py \
+  --import-storage-state /path/to/approved/storage_state.json \
+  --check-storage-state \
+  --require-ready
+```
+
+Check API/session-aware credential readiness without printing token values:
+
+```bash
+python scripts/prepare_controlled_access_path.py --check-api-env
+```
+
+Dry-run the API probe readiness without a network request:
+
+```bash
+python scripts/prepare_controlled_access_path.py --api-dry-run
+```
+
+Execute the approved API probe only after the run record authorizes it and `META_API_PROBE_URL` plus `META_API_ACCESS_TOKEN` are set in the outside-git controlled env file:
+
+```bash
+python scripts/prepare_controlled_access_path.py --execute-api-probe
+```
+
+Raw API output and automation logs are written only to the outside-git controlled store. Do not copy them into `data/interim/`, `data/processed/`, or git.
 
 ## Governed Phase 1 Launch Sequence
 

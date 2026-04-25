@@ -29,5 +29,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0021-risk-probe-run-0005-result.md` | Repo-safe result note for the multi-term risk-probe run that returned no extractable item content. |
 | `0022-risk-probe-run-0006-result.md` | Repo-safe result note for the normalized no-space risk-probe retry that also returned no extractable item content. |
 | `0023-access-path-review-run-0007-result.md` | Repo-safe result note for the approved session/API access-path review before item 16. |
+| `0024-access-path-preparation-run-0008-result.md` | Repo-safe result note for preparing browser storage-state and API/session-aware paths before item 16. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

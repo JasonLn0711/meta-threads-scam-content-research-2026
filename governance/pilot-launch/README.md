@@ -57,3 +57,5 @@ Meaning:
 - The integrated synthetic launch rehearsal is tooling evidence only; it does not authorize item 1.
 
 No raw Threads evidence has been collected or committed in this folder. As of `2026-04-24`, the first 15 controlled local records have been collected under ignored local files and summarized only in repo-safe aggregate notes. Risk-probe runs 0005 and 0006 did not produce extractable item content, and access-path review run 0007 did not attempt collection, so item 0016 remains uncreated.
+
+As of `2026-04-25`, access-path preparation run 0008 has prepared the repo-safe browser/API access tooling. The next execution run still must wait for a real approved browser storage-state/session artifact in controlled storage or real approved API probe inputs in the controlled env file. Templates, manifests, query echoes, and UI text cannot become item 0016.
