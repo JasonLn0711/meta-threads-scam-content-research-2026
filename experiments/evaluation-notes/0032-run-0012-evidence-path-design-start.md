@@ -38,3 +38,19 @@ design_only_no_collection_until_run_0012_reviewed
 ## Next Required Action
 
 Review run 0012 design. If accepted, open a separate execution run record for at most one item 0017 attempt. Do not collect from this design note.
+
+## Design Review Result
+
+| Check | Result |
+|---|---|
+| Design reviewed | yes |
+| Field boundaries sufficient | yes |
+| Collection authorized by run 0012 | no |
+| Next run record required | yes; run 0013 |
+| Item 0018 | blocked |
+
+## Decision After Review
+
+```text
+open_run_0013_scoped_execution_record_only
+```

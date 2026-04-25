@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0011` |
 | Prior decision | `open_scoped_evidence_path_design_run_0012` |
 | Purpose | define scoped evidence-path field boundaries before any further item 0017 attempt |
-| Current gate | `design_review_required_before_execution` |
-| Run status | `opened_design_only_not_executed` |
+| Current gate | `open_separate_execution_run_0013_before_collection` |
+| Run status | `design_reviewed_accepted_no_collection` |
 
 ## Required Pre-Run Gate
 
@@ -105,14 +105,14 @@ Stop immediately if:
 | Result field | Value |
 |---|---|
 | Run started? | no; design only |
-| Run completed? | no |
+| Run completed? | yes; design reviewed |
 | Collection performed? | no |
 | Candidate reviewed? | no |
 | Selected items | 0 |
 | Local records built? | no |
-| Strict validation result | pending |
-| Decision after design | pending |
+| Strict validation result | local aggregate remains strict-valid |
+| Decision after design | `open_run_0013_scoped_execution_record_only` |
 
 ## Next Action
 
-Review this design record. If accepted, open a separate execution run record for at most one item 0017 attempt under these boundaries. Do not execute collection directly from this design record.
+Open a separate execution run record for at most one item 0017 attempt under these boundaries. Do not execute collection directly from this design record.
