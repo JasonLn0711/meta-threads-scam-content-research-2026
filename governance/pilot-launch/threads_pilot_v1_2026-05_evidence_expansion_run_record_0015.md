@@ -16,8 +16,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Prior decision | `0031-record-stakeholder-evidence-expansion-approval` |
 | Target local item range | starts at `threads_pilot_v1_0018`; at most 10 selected items |
 | Purpose | attempt a bounded evidence-expansion tranche using approved expanded evidence families |
-| Current gate | `second_review_complete` |
-| Run status | `local_records_built_second_reviewed_strict_valid` |
+| Current gate | `closed_for_collection_new_run_required` |
+| Run status | `local_records_built_second_reviewed_strict_valid_closed` |
 
 ## Stakeholder Scope Approval
 
@@ -143,4 +143,4 @@ Stop immediately if:
 
 ## Next Action
 
-Update the aggregate checkpoint interpretation from 17 to 23 strict-valid local records, then decide whether to use the remaining selected-item capacity in run 0015. Do not open item `0028` in this run.
+Open a new bounded run record or decision before item `0024`. Run 0015 cannot continue because its 20-candidate review cap is exhausted, even though only 6 of 10 selected-item slots were used. Do not open item `0028` in this run.

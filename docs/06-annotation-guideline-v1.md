@@ -132,11 +132,13 @@ Do not add a broader tag when a narrower visible tag already explains the eviden
 ## Decision Principles
 
 - Label what is visible in the collected item.
+- Treat the approved `thread_item` as the evidence unit: top-level post, selected replies/comments, OCR, visible links, handles, and redirects can all carry decisive evidence.
 - Preserve uncertainty when context is missing.
 - Do not claim criminality or intent.
 - Do not label content `scam` based on a single weak signal unless that signal is severe, such as a direct credential or payment ask.
 - Separate "suspicious but plausible" from "evidence supports scam-like classification."
-- Treat false positives as serious. Legitimate finance, health, recruitment, political, and promotional speech can look intense without being a scam.
+- Treat false negatives as especially serious for the CIB-authorized pilot. If approved evidence shows a concrete scam-like redirect, payment/deposit, credential, wallet, private-channel, or add-friend step, escalate to `uncertain` or `scam` instead of dismissing the item because the top-level post looks benign.
+- Treat false positives as serious but acceptable when they are explainable and routed to review. Legitimate finance, health, recruitment, political, and promotional speech can look intense without being a scam, so second review must separate high-recall triage from final labels.
 - Record missing evidence instead of filling gaps from memory or assumptions.
 - Use `annotation_notes` to explain the strongest evidence and the biggest uncertainty.
 
@@ -184,6 +186,8 @@ If OCR alone contains the decisive lure, the case may still be `sufficient` evid
 
 If the post is benign but replies contain a clear lure, use `reply_only_lure` and label based on the whole `thread_item` if replies were intentionally captured as context. If comments are secondhand claims without direct evidence, use `uncertain`.
 
+For the CIB-authorized pilot, narrow relevant reply/comment context is a high-value evidence surface, not optional decoration. Scam-like behavior may appear only in comments, including suspicious websites, shortened or disguised links, LINE/WhatsApp/Telegram/contact links, add-friend links, wallet/deposit instructions, or private-channel migration. When a run record authorizes reply capture, reviewers must inspect the approved narrow reply window before finalizing a low-risk label.
+
 ### Medical Or Health Miracle Claims
 
 Health content is high-risk when it claims guaranteed cure, miracle result, fake doctor/authority support, urgent purchase, or suspicious redirect. Ordinary wellness discussion or personal experience is not enough.
@@ -223,6 +227,7 @@ Send an item to second review when:
 - label is `uncertain`
 - annotation confidence is `low`
 - evidence sufficiency is `partial`, `insufficient`, or `not_reviewable`
+- the top-level post appears benign but selected replies/comments contain links, contact handles, private-channel migration, add-friend instructions, wallet/deposit/payment instructions, or suspicious domains
 - annotators disagree on primary label, risk level, or key scam subtype
 
 Use `templates/adjudication_template.md` to resolve disagreements. If the same disagreement appears repeatedly, revise this guideline after the 50-item pilot.

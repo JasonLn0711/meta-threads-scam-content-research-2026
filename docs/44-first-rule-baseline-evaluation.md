@@ -29,7 +29,9 @@ For records with gold risk levels, report:
 - confusion matrix
 - per-class support
 
-High-risk precision matters first because false positives can waste reviewer time and can unfairly burden legitimate finance, recruitment, health, creator, or promotional content.
+For the CIB-authorized pilot, false-negative reduction matters first at the triage stage. A higher false-positive rate is acceptable when the evidence is explainable, routed to human review, and not treated as a legal or platform-enforcement finding.
+
+Precision still matters at the final label/adjudication stage because legitimate finance, recruitment, health, creator, or promotional content can look intense without being a scam. The baseline should therefore report both recall-oriented triage behavior and final-label false-positive burden.
 
 ## Error Analysis
 

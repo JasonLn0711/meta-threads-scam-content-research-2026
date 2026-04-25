@@ -84,6 +84,7 @@ Long video, heavy video understanding, deepfake detection, account graph analysi
 ## Evidence Type
 
 - `direct_text`: signal appears in post or comment text.
+- `reply_comment_context`: signal appears in selected replies/comments, including links, contact handles, private-channel migration, add-friend instructions, wallet/deposit/payment instructions, or suspicious domains.
 - `ocr_text`: signal appears in extracted image text.
 - `visible_link`: signal appears in URL, domain, or visible link text.
 - `redirection_instruction`: signal appears as an instruction to move elsewhere.
@@ -99,6 +100,7 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 - "Uses suspicious testimonial screenshot."
 - "Claims official or celebrity association without evidence."
 - "Post text is vague, but replies contain contact instructions."
+- "Top-level post is benign, but selected replies contain suspicious links or private-channel migration."
 - "OCR reveals a financial lure not present in visible post text."
 
 ## Uncertainty States
