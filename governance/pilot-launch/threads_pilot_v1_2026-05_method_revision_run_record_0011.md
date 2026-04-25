@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0010` |
 | Prior decision | `pause_item_0017_collection_and_open_method_revision_before_run_0011` |
 | Purpose | revise the item 0017 candidate-diagnostic method before any further item attempt |
-| Current gate | `item_0017_second_review_required_before_item_0018` |
-| Run status | `item_0017_built_strict_validated` |
+| Current gate | `query_echo_filter_patch_required_before_item_0017_retry` |
+| Run status | `item_0017_excluded_after_second_review` |
 
 ## Required Pre-Run Gate
 
@@ -133,16 +133,17 @@ Stop immediately if:
 | Multi-signal candidate count | 1 |
 | Reviewable candidate count | 1 |
 | Signal-family metadata | `crypto_domain`: 1; `private_channel`: 1; `wallet_or_deposit`: 3 |
-| Selected items | 1 |
-| Local records built? | yes; local-only `manual_entry_0017.json` and `manual_record_0017.json` |
-| Strict validation result | pass; item 0017 checked_records 1, errors 0, warnings 0 |
-| 17-record aggregate validation | pass; checked_records 17, errors 0, warnings 0 |
+| Selected items | 0 accepted; 1 excluded local trace |
+| Local records built? | yes; local-only item 0017 trace, then second-review excluded |
+| Strict validation result | pass after exclusion update; item 0017 checked_records 1, errors 0, warnings 0 |
+| 17-record aggregate validation | pass after exclusion update; checked_records 17, errors 0, warnings 0 |
 | Preliminary label / risk | `uncertain` / `medium` |
-| Preliminary signal summary | private-channel redirect plus wallet/deposit action |
-| Decision after run | `second_review_item_0017_before_item_0018` |
+| Second-review final label / risk | `insufficient_evidence` / `low` |
+| Second-review status | `excluded`; retained visible text was only a query echo |
+| Decision after run | `patch_query_echo_filter_before_any_item_0017_retry` |
 
 ## Next Action
 
-The `RP-0011-01` diagnostic pass found one reviewable candidate under the approved field allowlist. After controlled-store review, the candidate was reduced to approved redacted local fields and built as item 0017.
+The `RP-0011-01` diagnostic pass found one apparent reviewable candidate under the approved field allowlist. After controlled-store review, the candidate was reduced to approved redacted local fields and built as a local item 0017 trace.
 
-Do not advance to item 0018 until item 0017 receives second review. The second review should confirm the redaction, the preliminary `uncertain` / `medium` label, and whether private-channel plus wallet/deposit visible metadata is enough for the current field allowlist.
+Second review found that the retained visible text was only a query echo, not independent item content. Item 0017 is excluded and must not count as an accepted research item. Do not advance to item 0018. Before any further item 0017 attempt, patch the diagnostic gate to reject exact-query and near-query echoes.

@@ -34,5 +34,6 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0026-browser-session-limited-extension-run-0010-start.md` | Repo-safe start note for the item 0017-0020 limited extension with negation/risk-warning candidate filtering. |
 | `0027-run-0010-method-review.md` | Repo-safe method review after all five run 0010 seeds failed to produce item 0017. |
 | `0028-run-0011-method-revision-start.md` | Repo-safe start note for the item 0017 method-revision diagnostic run. |
+| `0029-item-0017-second-review.md` | Repo-safe second-review note excluding item 0017 because retained visible text was only a query echo. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

@@ -82,3 +82,18 @@ Review the controlled-store candidate outside git before building item 0017. Bui
 ## Next Required Action After Build
 
 Second-review item 0017 before any move to item 0018. The review should confirm redaction, the preliminary label/risk, and whether the visible retained fields are sufficient under the current approved field allowlist.
+
+## Second-Review Result
+
+| Check | Result |
+|---|---|
+| Second-review decision | excluded |
+| Final label / risk | `insufficient_evidence` / `low` |
+| Evidence sufficiency | `not_reviewable` |
+| Reason | retained visible text was only a query echo, not independent item content |
+| Item 0017 strict validation after update | pass; 1 record, 0 errors, 0 warnings |
+| 17-record aggregate strict validation after update | pass; 17 records, 0 errors, 0 warnings |
+
+## Next Required Action After Second Review
+
+Patch the diagnostic gate to reject exact-query and near-query echoes before any further item 0017 attempt. Do not treat the excluded item 0017 trace as permission to advance to item 0018.
