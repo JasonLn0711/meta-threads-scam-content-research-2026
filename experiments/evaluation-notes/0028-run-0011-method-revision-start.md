@@ -65,3 +65,20 @@ open_run_0011_method_revision_but_execute_diagnostic_pass_only_first
 ## Next Required Action
 
 Review the controlled-store candidate outside git before building item 0017. Build `manual_entry_0017.json` only if the candidate can be reduced to approved redacted fields under the run 0011 field allowlist.
+
+## Item 0017 Build Result
+
+| Check | Result |
+|---|---|
+| Controlled-store reviewability gate | pass |
+| `manual_entry_0017.json` created | yes; local-only ignored file |
+| `manual_record_0017.json` built | yes; local-only ignored file |
+| Item 0017 strict validation | pass; 1 record, 0 errors, 0 warnings |
+| 17-record aggregate strict validation | pass; 17 records, 0 errors, 0 warnings |
+| Preliminary label / risk | `uncertain` / `medium` |
+| Preliminary signal summary | private-channel redirect plus wallet/deposit action |
+| Raw/session material in git | no |
+
+## Next Required Action After Build
+
+Second-review item 0017 before any move to item 0018. The review should confirm redaction, the preliminary label/risk, and whether the visible retained fields are sufficient under the current approved field allowlist.

@@ -19,8 +19,8 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, creden
 | Prior run | `CRAWL-THREADS-PILOT-V1-0010` |
 | Prior decision | `pause_item_0017_collection_and_open_method_revision_before_run_0011` |
 | Purpose | revise the item 0017 candidate-diagnostic method before any further item attempt |
-| Current gate | `reviewable_candidate_gate_before_item_0017_build` |
-| Run status | `diagnostic_pass_found_one_reviewable_candidate` |
+| Current gate | `item_0017_second_review_required_before_item_0018` |
+| Run status | `item_0017_built_strict_validated` |
 
 ## Required Pre-Run Gate
 
@@ -133,13 +133,16 @@ Stop immediately if:
 | Multi-signal candidate count | 1 |
 | Reviewable candidate count | 1 |
 | Signal-family metadata | `crypto_domain`: 1; `private_channel`: 1; `wallet_or_deposit`: 3 |
-| Selected items | 0 |
-| Local records built? | no |
-| Strict validation result | not_applicable; no item built |
-| Decision after run | `review_candidate_before_manual_entry_0017_build` |
+| Selected items | 1 |
+| Local records built? | yes; local-only `manual_entry_0017.json` and `manual_record_0017.json` |
+| Strict validation result | pass; item 0017 checked_records 1, errors 0, warnings 0 |
+| 17-record aggregate validation | pass; checked_records 17, errors 0, warnings 0 |
+| Preliminary label / risk | `uncertain` / `medium` |
+| Preliminary signal summary | private-channel redirect plus wallet/deposit action |
+| Decision after run | `second_review_item_0017_before_item_0018` |
 
 ## Next Action
 
-The `RP-0011-01` diagnostic pass found one reviewable candidate under the approved field allowlist. No `manual_entry_0017.json` was created during the diagnostic pass.
+The `RP-0011-01` diagnostic pass found one reviewable candidate under the approved field allowlist. After controlled-store review, the candidate was reduced to approved redacted local fields and built as item 0017.
 
-Before building item 0017, review the controlled-store candidate outside git and confirm that it can be reduced to approved redacted fields without requiring replies, screenshots/OCR, landing pages, profile context, broad comments, raw identifiers, or raw source URLs in git.
+Do not advance to item 0018 until item 0017 receives second review. The second review should confirm the redaction, the preliminary `uncertain` / `medium` label, and whether private-channel plus wallet/deposit visible metadata is enough for the current field allowlist.
