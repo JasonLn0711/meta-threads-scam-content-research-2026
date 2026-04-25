@@ -77,3 +77,5 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Closed run 0041 after the article-based browser extractor produced no candidates | `0080-close-run-0041-no-candidates.md` |
 | 2026-04-26 | Authorized a browser-rendering diagnostic after run 0041 produced no extracted candidates | `0081-authorize-browser-rendering-diagnostic-run.md` |
 | 2026-04-26 | Closed run 0042 and selected body-line segmentation plus post-href discovery for the next browser method | `0082-close-run-0042-and-select-body-line-post-href-method.md` |
+| 2026-04-26 | Authorized a diverse body-line plus post-href browser candidate method run | `0083-authorize-diverse-body-line-post-href-run.md` |
+| 2026-04-26 | Closed run 0043 after the diverse browser method reached candidate cap with no item promotion | `0084-close-run-0043-diverse-browser-result.md` |

@@ -26,6 +26,7 @@ This handoff contains no raw Threads URLs, handles, screenshots, raw post text, 
 | Next intake status | `receipt_ready_waiting_for_pointer_delivery` |
 | Browser candidate quality test | run `0041` completed with no extracted candidates; no official promotion |
 | Browser rendering diagnostic | run `0042` completed; body-line plus post-href method selected |
+| Diverse browser candidate method | run `0043` completed; no item creation |
 
 ## What Is Complete
 
@@ -94,6 +95,24 @@ Without another decision record, only these actions are allowed:
 - run `0040` intake preparation while status remains `receipt_ready_waiting_for_pointer_delivery`;
 - browser-method revision only; do not repeat run `0041` article-based extraction with higher caps;
 - next browser method design using body-line segmentation plus post-href discovery;
+- run `0043` diverse body-line/post-href result review with repo-safe aggregate results only;
 - repo-safe method clarification;
 - dedupe-first/full-thread-ready gate use;
-- browser candidate promotion review template use after a new decision authorizes a candidate run.
+- browser candidate promotion review template use after a new decision authorizes candidate promotion.
+
+## Run 0043 Method Update
+
+Run `0043` showed that a more diverse query matrix plus body-line segmentation can produce a much larger candidate surface than the prior article-only extraction path.
+
+Repo-safe result:
+
+- 10 seeds checked before cap;
+- 60 candidates reviewed;
+- 51 dedupe-pass candidates;
+- 24 quality-review candidates;
+- 30 post-href context attempts;
+- 30 context-ready attempts;
+- 0 manual entries created;
+- 0 official checkpoint items promoted.
+
+Next decision must choose whether to open a formal browser-candidate promotion review. Without that new decision, `manual_entry_0076.json` remains absent.
