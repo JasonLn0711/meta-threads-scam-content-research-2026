@@ -11,6 +11,7 @@
 | Records | 42 |
 | Audience | CIB/165-facing review, research reviewers, investigators, professors, engineers |
 | Status | Checkpoint report, not production detector, not legal determination |
+| Decision request | `reports/checkpoint-0042-decision-request.md` |
 | Review checklist | `reports/checkpoint-0042-review-checklist.md` |
 
 ## Executive Summary

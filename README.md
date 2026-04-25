@@ -132,6 +132,7 @@ As of `2026-04-25`, the repo has moved from scaffold-only to a controlled, check
 - The repo-safe run index is [governance/pilot-launch/run_index.md](governance/pilot-launch/run_index.md).
 - The 42-record checkpoint synthesis is [experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md).
 - Decision 0058 selects a temporary collection pause and starts the CIB/165-facing checkpoint report v0.1: [reports/threads-scam-content-checkpoint-0042-v0.1.md](reports/threads-scam-content-checkpoint-0042-v0.1.md).
+- The stakeholder decision request is [reports/checkpoint-0042-decision-request.md](reports/checkpoint-0042-decision-request.md).
 - Checkpoint `0042` contains 14 `scam` / high-risk records, 22 `non_scam`, 5 `uncertain`, and 1 `insufficient_evidence`.
 - The checkpoint baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
 - The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
