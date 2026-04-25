@@ -17,7 +17,7 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 | Supplemental source path | CIB/stakeholder confirmed pointer, if provided |
 | Raw output location | controlled store only |
 | Repo-visible raw output | no |
-| Run status | `open_not_executed` |
+| Run status | `completed_closed` |
 
 ## Authorization And Scope
 
@@ -42,10 +42,28 @@ Do not add raw Threads content, screenshots, full item URLs, raw handles, stakeh
 
 | Counter | Limit | Current |
 |---|---:|---:|
-| Candidates reviewed | 20 | 0 |
-| Selected items | 10 | 0 |
-| Strict-valid selected items | 10 | 0 |
-| Second-reviewed selected items | 10 | 0 |
+| Candidates reviewed | 20 | 20 |
+| Selected items | 10 | 10 |
+| Strict-valid selected items | 10 | 10 |
+| Second-reviewed selected items | 10 | 10 |
+
+## Execution Result
+
+| Field | Value |
+|---|---|
+| Execution status | completed |
+| Selected items | `0046-0055` |
+| Final scam/high-risk items added | 0 |
+| Final non-scam items added | 1 |
+| Final uncertain items added | 4 |
+| Final insufficient-evidence items added | 5 |
+| 55-record aggregate strict validation | pass: 0 errors, 0 warnings |
+| Baseline smoke run | `checkpoint-0055-option-a-run-0038-smoke-v1` |
+| Baseline precision | 0.708 |
+| Baseline recall | 1.000 |
+| Baseline F1 | 0.829 |
+| Baseline false positives | 7 |
+| Baseline false negatives | 0 |
 
 ## Candidate Review Rules
 
@@ -102,6 +120,8 @@ Stop this run if:
 
 ## Current Decision
 
-Run 0038 is opened but not executed.
+Run 0038 is completed and closed.
 
-The next concrete execution step is to review the first approved browser-session candidate for item `0046`, unless a CIB/stakeholder confirmed pointer is provided first.
+Both stakeholder-approved caps are exhausted: 20 candidates reviewed and 10 selected items.
+
+The next concrete step is not to continue this run. The next step is to synthesize the 55-record checkpoint or wait for CIB/stakeholder confirmed pointers if more final scam/high-risk examples are needed.

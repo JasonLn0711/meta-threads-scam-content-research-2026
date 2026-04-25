@@ -48,7 +48,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0025-0026` | account-source | account source run records `0025-0026` | `0054-account-source-0001-result.md`, `0055-account-source-0002-result.md` | account samples only | repo-safe context only | Account-level samples support candidate discovery, not standalone labels. |
 | `0027-0033` | confirmed-pointer | item run records `0035-0041` | evaluation notes `0056-0062` | `0035-0041` | all strict-valid | Additional scam/high-risk evidence families added. |
 | `0034` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0042` | 42 records strict-valid | Anti-scam warning hard negative recorded. |
-| `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | pending | prospective `0046-0055` | open, not executed | Option A selected: primary approved browser-session capture; supplemental confirmed pointers allowed; 20-candidate and 10-selected caps. |
+| `0038` | browser-session | `threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md` | `0067-option-a-run-0038-result.md` | `0046-0055` | 55 records strict-valid | Option A completed and closed after 20 candidates reviewed and 10 selected; no final scam/high-risk items added. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -99,3 +99,11 @@ Items `0043`, `0044`, and `0045` were captured after the 42-record checkpoint an
 | `0043` | `0064-confirmed-pointer-0043-result.md` | `0055-record-coded-animal-stock-limit-up-group-funnel-rule.md` | post-checkpoint, strict-valid locally |
 | `0044` | `0065-confirmed-pointer-0044-result.md` | `0056-record-trading-rules-wealth-authority-follow-gate-rule.md` | post-checkpoint, strict-valid locally |
 | `0045` | `0066-confirmed-pointer-0045-result.md` | `0057-record-brand-patent-extreme-roi-contact-funnel-rule.md` | post-checkpoint, strict-valid locally |
+
+## Option A Run 0038 Post-Checkpoint Tranche
+
+Items `0046-0055` were selected under stakeholder Option A run `0038`. They are strict-valid and second-reviewed, but they are not part of the 42-record checkpoint synthesis.
+
+| Range | Evaluation note | Decision log | Status |
+|---|---|---|---|
+| `0046-0055` | `0067-option-a-run-0038-result.md` | `0060-close-option-a-run-0038-after-caps.md` | post-checkpoint, 55-record aggregate strict-valid; run closed after caps |
