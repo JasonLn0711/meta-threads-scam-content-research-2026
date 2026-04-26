@@ -9,10 +9,10 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | work order `0049`; items `0077-0079` full-thread/reply capture gate opened |
-| Current collection gate | items `0077-0079` full-thread/reply capture pending; manual entry build blocked |
+| Latest local work visible in tree | work order `0050`; existing checkpoint 0076 ambiguous/medium-risk second-review queue opened |
+| Current collection gate | review existing redacted records first; items `0077-0079` full-thread/reply capture still pending |
 | Next authorized prospective tranche | none |
-| Next stakeholder request | complete controlled full-thread capture attempts for items `0077-0079` and second-review the redacted summaries |
+| Next stakeholder request | item-by-item second review of 35 existing `uncertain` / `insufficient_evidence` / `medium` records |
 | Next intake scaffold | no item `0080`; any additional confirmed-pointer intake requires a new decision record |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
@@ -66,6 +66,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0047` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0078_confirmed_pointer_intake_run_record_0047.md` | `0082-confirmed-pointer-0078-preliminary-rule-result.md` | `0078` prospective only | preliminary top-level rule extracted; no manual entry built | Single stakeholder-confirmed pointer opened under decision `0098`; full reply/comment capture remains pending before promotion. |
 | `0048` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0079_confirmed_pointer_intake_run_record_0048.md` | `0083-confirmed-pointer-0079-preliminary-rule-result.md` | `0079` prospective only | preliminary top-level rule extracted; no manual entry built | Single stakeholder-confirmed pointer opened under decision `0099`; full reply/comment capture remains pending before promotion. |
 | `0049` | confirmed-pointer work order | `threads_pilot_v1_2026-05_items_0077_0079_full_thread_capture_work_order_0049.md` | `0084-confirmed-pointer-0077-0079-mini-tranche-synthesis.md` | `0077-0079` prospective only | work order opened; no manual entries built | Decision `0100` authorizes controlled full-thread/reply capture attempts for existing items `0077-0079` only; no item `0080` or broader tranche. |
+| `0050` | second-review work order | `threads_pilot_v1_2026-05_existing_ambiguous_medium_second_review_work_order_0050.md` | `0085-existing-ambiguous-medium-review-queue.md` | existing items only | review queue opened; no labels changed | Decision `0101` authorizes second review of 35 existing checkpoint 0076 `uncertain`, `insufficient_evidence`, or `medium` risk records using existing redacted records only. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
