@@ -8,11 +8,17 @@ It tells reviewers what to read, what decision is needed, and what must not be i
 
 ## Suggested Message
 
-Subject: Threads scam-content research v0: post-0076 review and next-decision request
+Subject: Request for Path Selection: Threads scam-content research v0 post-0076 review package
 
 Hi [Name],
 
 The Threads scam-content research repo is ready for report-v0 review after the approved checkpoint 0055 package and the local 0076 hard-negative addendum.
+
+Package version: post-0076 report v0.
+Current package status: `revise_before_delivery`.
+Base package commit reviewed: `21ed7b2`.
+Current canonical checkpoint: `threads_pilot_v1_0055`.
+Post-checkpoint addendum: local item `0076` hard-negative calibration.
 
 The current recommendation is not to open more collection by default. The repo now has enough evidence-system material to review the method, limits, labels, false-positive pressure, and next decision.
 
@@ -44,7 +50,7 @@ The research recommendation is `report_only_delivery` unless there is a concrete
 - The hard-negative lesson is active: anti-scam warning or scam-method vocabulary is not enough to label an item `scam`.
 - Browser-session search has been useful for calibration and candidate-quality testing, but it has not justified unbounded collection.
 - Confirmed-pointer intake remains the higher-yield path if new final scam/high-risk rule-family learning is needed.
-- Report-v0 self-review found no internal repo blocker; external sign-off and next-path selection remain pending.
+- Reviewer-required package consistency revisions have been applied; external sign-off and next-path confirmation remain pending.
 
 ## What This Package Does Not Claim
 
@@ -57,6 +63,8 @@ The research recommendation is `report_only_delivery` unless there is a concrete
 - It does not put raw evidence, credentials, session artifacts, or sensitive item-level outputs into git.
 
 ## Requested Reply
+
+Please use the response table below as the canonical decision form. Some historical pilot templates remain in the repo for context; the current post-0076 decision is limited to the three paths listed here.
 
 Please return:
 

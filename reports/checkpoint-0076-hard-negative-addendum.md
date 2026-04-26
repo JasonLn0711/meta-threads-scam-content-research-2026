@@ -37,6 +37,8 @@ The item strengthens the anti-scam warning boundary: scam-method vocabulary and 
 | Baseline false positives | 7 |
 | Baseline false negatives | 0 |
 
+"Strict-valid" means schema and validation checks passed. It does not mean the 76-record local aggregate replaces the approved 55-record checkpoint package or that every local record is reviewer-approved. Only checkpoint 0055 is currently approved for CIB/165-facing checkpoint use; item 0076 is a narrow local hard-negative addendum.
+
 ## Delta From Local 0075 Aggregate
 
 | Metric | Delta |

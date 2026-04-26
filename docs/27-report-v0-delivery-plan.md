@@ -2,36 +2,35 @@
 
 ## Purpose
 
-This plan turns the Threads scam-content research v0 report into a controlled stakeholder review package.
+This plan turns the Threads scam-content research v0 report into a controlled post-0076 stakeholder review package.
 
-The immediate deliverable is a readable research report and pilot-decision packet by 2026-04-30. This plan does not authorize real Threads data collection, automation, scraping, model deployment, or production scoring.
+The immediate deliverable is a selected reviewer package for path selection by 2026-04-30. This plan does not authorize item `0077`, real Threads data collection, automation, scraping, model deployment, production scoring, or legal fraud determinations.
+
+Current package status: `revise_before_delivery`.
+Current selected path under review: `report_only_delivery`.
 
 ## Delivery Package
 
-Share these files as the v0 report package:
+Share the selected post-0076 reviewer package, not a full repo snapshot. `PACKAGE_MANIFEST.md` and `REVIEWER_README.md` are the package entrypoints.
 
 | Artifact | Purpose |
 |---|---|
+| `PACKAGE_MANIFEST.md` | Selected package manifest, reading order, and full-repo reference boundary. |
+| `REVIEWER_README.md` | Canonical reviewer entrypoint and response table. |
 | `reports/threads-scam-content-research-v0-executive-brief.md` | Short stakeholder brief and decision request. |
 | `reports/threads-scam-content-research-v0.md` | Full research report. |
 | `reports/post-0076-next-decision-memo.md` | Bounded decision memo after checkpoint 0055 and 0076. |
+| `reports/post-0076-validation-provenance.md` | Repo-safe validation and baseline provenance. |
 | `reports/report-v0-review-checklist.md` | Pre-delivery and reviewer sign-off checklist. |
-| `docs/25-stakeholder-pilot-kickoff.md` | Pilot approval memo. |
-| `docs/36-stakeholder-authorization-packet.md` | Packet for source, field, storage, access, retention, and redaction approval. |
-| `docs/26-pilot-go-no-go-checklist.md` | Gate before real collection. |
-| `docs/35-real-pilot-readiness-review.md` | Integrated owner-facing readiness review before real collection. |
-| `docs/37-approved-pilot-launch-plan.md` | Repo-safe launch entrypoint after approval. |
-| `docs/38-first-pilot-checkpoint-protocol.md` | First 10-15 item checkpoint gate before completing 50. |
-| `docs/39-local-pilot-workspace.md` | Local-only workspace initialization instructions. |
-| `docs/40-pilot-preflight-verification.md` | Repo-safe preflight before item 1. |
-| `templates/data_authorization_request.md` | Record of allowed source, fields, storage, retention, and access. |
-| `templates/stakeholder_authorization_decision_record.md` | Meeting or written-approval decision record. |
-| `templates/real_pilot_readiness_review.md` | Fillable readiness review template. |
-| `templates/controlled_launch_details_template.md` | Blank controlled-launch structure; filled sensitive version stays outside git. |
-| `templates/manual_collection_rehearsal_checklist.md` | 1-2 item rehearsal checklist before real volume. |
-| `templates/annotator_calibration_packet_template.md` | 5-item calibration packet template. |
-| `templates/pilot_checkpoint_review.md` | First checkpoint worksheet. |
+| `reports/checkpoint-0055-approved-package-index.md` | Canonical approved checkpoint package index. |
+| `reports/checkpoint-0076-hard-negative-addendum.md` | Narrow local hard-negative addendum. |
+| `governance/pilot-launch/run_index.md` | Repo-safe run and item index. |
+| `decision-log/0096-record-post-0076-reviewer-path-selection.md` | Current reviewer path-selection decision record. |
 | `templates/report_review_feedback.md` | Structured feedback form for reviewers. |
+| `data-contracts/thread_item_schema_v1.json` | Repo-safe item schema contract. |
+| `data-contracts/labeling_schema_v1.json` | Repo-safe label schema contract. |
+
+Historical pilot-launch documents and authorization templates remain available in the full repo for context, but they are not the current reviewer decision form and do not authorize new evidence collection.
 
 ## Review Sequence
 
@@ -43,7 +42,7 @@ Share these files as the v0 report package:
 | Technical review | 2026-04-27 | Engineering/research reviewer | Schema, tooling, baseline, and evaluation comments. |
 | Report revision | 2026-04-28 | Research owner | Updated report and executive brief. |
 | Stakeholder readout prep | 2026-04-29 | Research owner and stakeholder owner | Final package and meeting agenda. |
-| CIB/165-facing delivery | 2026-04-30 | Stakeholder owner | Decision: `go`, `go_with_limits`, `no_go`, or `revise_first`. |
+| CIB/165-facing delivery | 2026-04-30 | Stakeholder owner | Decision: `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche`. |
 
 Dates can move if reviewer availability requires it, but the review order should stay intact: scope, governance, domain, technical, then delivery.
 
@@ -64,7 +63,7 @@ Reviewers should identify the affected artifact and section whenever possible.
 | Feedback type | Action |
 |---|---|
 | Legal/privacy blocker | Stop delivery until resolved or explicitly scoped out. |
-| Data authorization blocker | Keep report delivery, but mark pilot as `no_go` until authorization is recorded. |
+| Data authorization blocker | Keep report delivery if safe, but do not open new evidence collection until a new capped decision and authorization record exist. |
 | Scope expansion request | Defer unless it is needed to prevent misunderstanding. |
 | Request for production detection | Reframe as deferred phase-2 or out-of-scope work. |
 | Request for real results before pilot approval | Mark as impossible until authorized data exists. |
@@ -77,19 +76,18 @@ Every accepted material change should preserve these constraints:
 - no legal guilt determination is implied
 - no raw evidence enters git
 - uncertainty and evidence sufficiency remain first-class
-- the first real data step remains controlled launch, item-1 preflight, rehearsal, rehearsal review, calibration if needed, and the 10-15 item checkpoint before the governed 50-item pilot
+- any later evidence step must first receive a new capped decision, controlled storage plan, redaction plan, second review, and strict-validation requirement
 
 ## Stakeholder Readout Agenda
 
-1. Confirm the report is a research-plan and pilot-readiness package.
+1. Confirm the report is a selected post-0076 reviewer package, not a full repo snapshot.
 2. Explain why Threads is the phase-1 target.
 3. Review what evidence fields the `thread_item` schema preserves.
 4. Review the four primary annotation labels.
-5. Review controlled launch details, local workspace, preflight, rehearsal, rehearsal review, and 5-item calibration if needed.
-6. Review the first 10-15 item checkpoint as the gate before completing 50.
-7. Review governance and privacy decisions that must be made before real collection.
-8. Ask for a concrete post-0076 path: `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche`.
-9. If new evidence is approved, assign owners for authorization, raw storage, redaction, annotation, checkpoint review, and adjudication.
+5. Review why historical pilot-launch materials are context only.
+6. Review governance and privacy decisions that would be required before any later new evidence.
+7. Ask for a concrete post-0076 path: `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche`.
+8. If a new evidence path is chosen, require a new decision record with caps, source rules, storage rules, second review, and validation before collection.
 
 ## Decision Outcomes
 
@@ -98,22 +96,15 @@ Every accepted material change should preserve these constraints:
 | `report_only_delivery` | Stakeholders want the checkpoint package delivered or refined without new evidence. | Harden the report, executive brief, checklist, and handoff notes. Do not open a new collection run. |
 | `targeted_confirmed_pointer_tranche` | Stakeholders need new scam/high-risk rule-family learning from approved pointers. | Record a new decision with caps and source rules, then use controlled capture, redaction, second review, build, and strict validation. |
 | `calibration_only_browser_tranche` | Stakeholders need hard negatives, uncertainty, or false-positive calibration. | Record a new decision with caps and stop conditions; do not count the tranche as official scam expansion. |
-| `go` | Stakeholders approve the pilot as written. | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record before item 1. |
-| `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the decision record and authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record with those limits before item 1. |
-| `no_go` | Stakeholders do not approve real data work. | Continue only synthetic calibration, docs, and tooling; do not collect real examples. |
-| `revise_first` | Report or pilot design needs revision before decision. | Update the report package and rerun the review checklist. |
 
 ## Required Records After Delivery
 
-After the stakeholder readout, update or create:
+After the stakeholder readout, update or create only the records required by the selected post-0076 path:
 
-- a decision-log entry with the stakeholder outcome
-- `templates/stakeholder_authorization_decision_record.md` filled for the stakeholder decision
-- `templates/data_authorization_request.md` filled for the first approved source, if any
-- `docs/26-pilot-go-no-go-checklist.md` with the initial gate status
-- `templates/real_pilot_readiness_review.md` with final launch status
-- outside-git controlled launch record using `templates/controlled_launch_details_template.md`
-- `notes/phase1-launch-decisions.md` if launch assumptions or gates change
+- a decision-log entry with the post-0076 outcome
+- revised package status and checklist if delivery remains report-only
+- a new capped collection decision only if stakeholders explicitly choose a new evidence path
+- authorization, controlled-storage, redaction, second-review, and strict-validation records only after a new evidence path is approved
 - `notes/` meeting note with decisions, open questions, and owners
 - `docs/16-open-questions-for-stakeholders.md` to remove answered questions and add new blockers
 
@@ -121,6 +112,7 @@ After the stakeholder readout, update or create:
 
 Do not start any of the following until the stakeholder decision and authorization record allow it:
 
+- item `0077`
 - real Threads collection
 - screenshot storage
 - source URL storage
@@ -131,4 +123,4 @@ Do not start any of the following until the stakeholder decision and authorizati
 - unredacted data transfer to external services
 - model-assisted review on sensitive samples
 
-Even after stakeholder approval, do not start real item collection until controlled launch details are complete outside git, local workspace files are initialized, item-1 preflight has `ERROR: 0`, and the first 10-15 item checkpoint is scheduled.
+Historical pilot vocabulary and runbooks remain in the full repo for governance history. They are not the current post-0076 authorization state.

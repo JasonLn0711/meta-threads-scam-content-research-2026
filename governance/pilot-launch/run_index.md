@@ -9,11 +9,11 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | run `0043` completed as a candidate-quality method test; no new official checkpoint promoted |
-| Current collection gate | local item `0076` accepted for next checkpoint inclusion as strict-valid non-scam hard negative |
-| Next authorized prospective tranche | none for official checkpoint promotion; run `0041` is candidate quality test only |
-| Next stakeholder request | `reports/post-run-0039-confirmed-pointer-request.md` |
-| Next intake scaffold | run `0040`, receipt-ready and waiting for confirmed-pointer delivery for possible items `0076-0080` |
+| Latest local work visible in tree | run `0045-build`; item `0076` accepted as local strict-valid hard-negative addendum |
+| Current collection gate | no new prospective tranche open |
+| Next authorized prospective tranche | none |
+| Next stakeholder request | post-0076 reviewer path selection |
+| Next intake scaffold | none active; confirmed-pointer intake requires a new decision record |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 

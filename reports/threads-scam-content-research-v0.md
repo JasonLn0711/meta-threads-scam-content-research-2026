@@ -52,11 +52,14 @@ Approved checkpoint 0055 summary:
 | `non_scam` records | 23 |
 | `uncertain` records | 9 |
 | `insufficient_evidence` records | 6 |
+| Binary-evaluable items | 40 |
 | Baseline precision | 0.708 |
 | Baseline recall | 1.000 |
 | Baseline F1 | 0.829 |
 | Baseline false positives | 7 |
 | Baseline false negatives | 0 |
+
+These are smoke-test baseline metrics on the current binary-evaluable slice, not production performance estimates.
 
 Local 0076 aggregate snapshot:
 
@@ -74,6 +77,8 @@ Local 0076 aggregate snapshot:
 | Baseline recall | 1.000 |
 | Baseline false positives | 7 |
 | Baseline false negatives | 0 |
+
+"Strict-valid" means schema and validation checks passed. It does not mean the 76-record local aggregate replaces the approved 55-record checkpoint package. Only checkpoint 0055 is currently approved for CIB/165-facing checkpoint use; item 0076 is a narrow local hard-negative addendum.
 
 Interpretation:
 
@@ -160,7 +165,9 @@ The following should not be phase-1 mainline work.
 | Automated production detection | Requires platform integration, monitoring, QA, appeals, and legal/policy controls beyond research scope. |
 | Automated collection/scraping | Not authorized unless written approval, API access, and governance controls are recorded. |
 
-## Dataset v0 Plan
+## Historical Phase-1 Dataset Design
+
+This section records the original governed pilot design. It is not the current post-0076 authorization state. The current decision is limited to `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche`.
 
 The first useful dataset should be small enough to inspect manually and broad enough to expose label ambiguity.
 
@@ -212,6 +219,10 @@ Candidate source types:
 - Negative controls from ordinary Threads content if collection and privacy handling are approved.
 
 Do not begin automated collection until governance approval is recorded in `governance/data-governance.md`.
+
+Some fields may exist only in the controlled local or interim evidence store. Tracked repo artifacts must use redacted, normalized, hashed, counted, or presence-only representations where raw text, URLs, handles, screenshots, contact IDs, or sensitive notes would otherwise appear.
+
+In reviewer-facing tracked reports, `post_text`, `reply_texts`, and `ocr_text` are represented through summaries, labels, reason codes, or redacted excerpts only. `external_links` is represented through a domain category, presence flag, or redacted reference only. `visible_contact_handles` is represented through platform or contact-type signal only.
 
 ## Minimum Evidence Fields
 
@@ -447,7 +458,9 @@ Low-ROI or over-ambitious for phase 1:
 4. Automated collection.
 5. Custom large model training.
 
-## Four-Week Execution Path After v0
+## Historical Four-Week Plan, Superseded By Post-0076 Decision Gate
+
+This plan is retained for context. It does not authorize new collection after checkpoint 0055 and item 0076.
 
 | Week | Target output |
 |---|---|
@@ -481,7 +494,9 @@ For domain reviewers:
 - How should ambiguous financial education, legitimate marketing, celebrity references, politics, satire, and medical claims be handled?
 - How much reviewer burden is acceptable?
 
-## Approval Gates
+## Historical Approval Gates
+
+These gates remain useful if a later decision reopens evidence work. They do not authorize another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding experiment, or model-training pass under the current post-0076 report-only path.
 
 Before real data work:
 
@@ -510,7 +525,9 @@ Model-assisted workflow is not part of the current launch. Before any later mode
 
 This v0 report is an initial research report. It does not promise production detection, automated enforcement, legal fraud determination, platform integration, deepfake detection, or broad Meta coverage. Its deliverable is a structured, defensible path for studying Threads scam-like content and deciding what a budget-fit phase-1 research MVP should include.
 
-## Recommended v0 Deliverables By 2026-04-30
+## Historical v0 Deliverables By 2026-04-30
+
+This list records the original April 30 package target. The current deliverable is the selected post-0076 reviewer package and path-selection decision.
 
 By the deadline, the repo should contain:
 
@@ -519,10 +536,10 @@ By the deadline, the repo should contain:
 - CIB/165 direction note.
 - Link from `README.md`.
 - Updated recommended path with the April 30 milestone.
-- Stakeholder pilot kickoff memo and go/no-go checklist.
+- Stakeholder pilot kickoff memo and historical launch-gate checklist.
 - Planning repo agenda blocks and Google Calendar events.
 
-## Appendix: Active Repo Artifacts
+## Appendix: Historical And Active Repo Artifacts
 
 | Artifact | Purpose |
 |---|---|
@@ -540,7 +557,7 @@ By the deadline, the repo should contain:
 | `docs/24-annotator-training-and-calibration.md` | Training and agreement workflow before the pilot. |
 | `docs/25-stakeholder-pilot-kickoff.md` | Stakeholder-facing approval memo for real pilot data. |
 | `docs/36-stakeholder-authorization-packet.md` | Approval packet for source, field, storage, access, retention, and redaction decisions. |
-| `docs/26-pilot-go-no-go-checklist.md` | Required gate before real collection and annotation. |
+| `docs/26-pilot-go-no-go-checklist.md` | Historical required gate before real collection and annotation. |
 | `docs/35-real-pilot-readiness-review.md` | Integrated final readiness review before real collection. |
 | `docs/37-approved-pilot-launch-plan.md` | Repo-safe controlled launch entrypoint after approval. |
 | `docs/38-first-pilot-checkpoint-protocol.md` | First 10-15 item checkpoint gate before completing 50. |

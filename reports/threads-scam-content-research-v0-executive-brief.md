@@ -24,6 +24,8 @@ The current evidence-system state is:
 
 This keeps the project useful under budget while avoiding unsupported claims about legal fraud, automated enforcement, platform-scale detection, or collection authority.
 
+"Strict-valid" means schema and validation checks passed. It does not mean the 76-record local aggregate replaces the approved 55-record checkpoint package or that every local record is reviewer-approved. Only checkpoint 0055 is currently approved for CIB/165-facing checkpoint use; item 0076 is a narrow local hard-negative addendum.
+
 ## Why Threads First
 
 Threads is the recommended first surface because stakeholder discussion suggests high scam-content report pressure there, and the first evidence surfaces are realistic to inspect:
@@ -45,7 +47,7 @@ The repo now supports a first research pilot through:
 - a human annotation guideline
 - a label vocabulary for `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`
 - governance, collection, and redaction templates
-- pilot runbooks and go/no-go checks
+- pilot runbooks and historical launch-gate checks
 - controlled launch, local workspace, preflight, rehearsal, rehearsal-review, and first-checkpoint operating docs
 - synthetic calibration samples
 - local validation, audit, agreement, conversion, and rule-baseline scripts
