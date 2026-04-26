@@ -21,6 +21,8 @@ Reports should be more polished than working notes, but they should remain hones
 | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) | Full v0 research report. |
 | [post-0076-report-v0-delivery-handoff-note.md](post-0076-report-v0-delivery-handoff-note.md) | Suggested handoff note for report-v0 delivery after 0055 + 0076. |
 | [post-0076-next-decision-memo.md](post-0076-next-decision-memo.md) | Bounded next-decision memo after the approved 0055 package and 0076 addendum. |
+| [post-0076-revised-package-qa.md](post-0076-revised-package-qa.md) | Repo-safe QA record for the rebuilt selected reviewer package. |
+| [post-0076-validation-provenance.md](post-0076-validation-provenance.md) | Repo-safe validation and baseline provenance for technical reviewers. |
 | [checkpoint-0055-approved-package-index.md](checkpoint-0055-approved-package-index.md) | Canonical index for the approved 55-record checkpoint package. |
 | [checkpoint-0055-executive-addendum.md](checkpoint-0055-executive-addendum.md) | Short CIB/165-facing entry point for the selected C2 checkpoint review. |
 | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
