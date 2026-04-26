@@ -10,50 +10,79 @@
 | Primary repo | `meta-threads-scam-content-research-2026` |
 | Related planning repo | `planning-everything-track` |
 | Audience | CIB/165-facing review, anti-fraud research planning, professors, investigators, and engineers |
-| Status | Initial research report with 42-record checkpoint synthesis. No production promise. No legal determination claim. |
+| Status | Report-delivery version aligned to the approved 55-record checkpoint package plus 0076 hard-negative addendum. No production promise. No legal determination claim. |
 
 ## Executive Summary
 
-This v0 report recommends a Threads-only phase-1 research program for scam-like content triage. The immediate goal is not to build a production detector and not to decide legal guilt. The goal is to build a defensible research scaffold that can answer a narrower practical question:
+This v0 report recommends a Threads-only phase-1 research program for scam-like content triage. The immediate goal is not to build a production detector and not to decide legal guilt. The goal is to maintain a defensible evidence system that can answer a narrower practical question:
 
 > Can Threads scam-like content be structured, annotated, and triaged using text, image OCR, comments/replies, visible redirection signals, and external-link evidence under a budget-constrained research program?
 
-The recommended first path is a small, evidence-centric study:
+The repo has now moved beyond concept-only planning. It has an approved checkpoint package and a post-approval hard-negative addendum:
 
-- Complete controlled launch details outside git before item 1.
-- Initialize a local-only workspace and pass item-1 preflight.
-- Rehearse 1-2 manually prepared records before real volume.
-- Record a repo-safe rehearsal review before the first 10-15 item checkpoint begins.
-- Run a 5-item synthetic, redacted, or authorized annotator calibration before real annotation volume.
-- Collect only the first 10-15 real items for a checkpoint before completing 50.
-- Build a 50-item first pilot batch only if the checkpoint decision supports continuation.
-- Expand to a 100-200 item first usable dataset only after pilot review.
-- Balance examples across `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`.
-- Capture post text, reply/comment text, attached image paths or placeholders, OCR text, visible links, redirection language, and explainable risk signals.
-- Compare a text-only rule baseline against a richer rule baseline using OCR, comments/replies, and link/redirection signals.
-- Evaluate usefulness for human review, not only model metrics.
+- Checkpoint 0055 is the current approved package for CIB/165-facing review.
+- Item 0076 is a narrow post-0055 hard-negative addendum: `non_scam` / `low`.
+- The local 76-record aggregate is strict-valid, but it does not replace the approved 55-record checkpoint package.
+- Browser-session search has been useful for calibration and candidate-quality testing, but it has not justified unbounded collection.
+- Confirmed-pointer intake remains the highest-yield path when new scam/high-risk rule-family learning is needed.
 
-This approach fits the practical NTD 1.8M research budget better than a full Meta-wide production system, video-heavy pipeline, deepfake detector, or automated enforcement architecture.
+The recommended next path is report hardening and decision support, not more collection by default. This approach fits the practical NTD 1.8M research budget better than a full Meta-wide production system, video-heavy pipeline, deepfake detector, or automated enforcement architecture.
 
-## Checkpoint 0042 Update
+## Current Checkpoint State
 
-As of the 42-record checkpoint, the repo has enough controlled evidence to require synthesis before more collection. The current checkpoint is documented in `experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md` and indexed in `governance/pilot-launch/run_index.md`.
+The current approved package is checkpoint 0055, documented in:
 
-Checkpoint summary:
+- `reports/checkpoint-0055-approved-package-index.md`
+- `reports/checkpoint-0055-executive-addendum.md`
+- `reports/threads-scam-content-checkpoint-0055-v0.1.md`
+- `governance/pilot-launch/checkpoint_0055_stakeholder_decision_record.md`
+- `experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md`
+
+The post-approval addendum is:
+
+- `reports/checkpoint-0076-hard-negative-addendum.md`
+- `experiments/evaluation-notes/0080-checkpoint-0076-hard-negative-inclusion-synthesis.md`
+
+Approved checkpoint 0055 summary:
 
 | Metric | Value |
 |---|---:|
-| Strict-valid records | 42 |
-| `scam` / `high` | 14 |
-| `non_scam` | 22 |
-| `uncertain` | 5 |
-| `insufficient_evidence` | 1 |
-| Baseline precision | 0.700 |
+| Strict-valid records | 55 |
+| `scam` / high-risk records | 17 |
+| `non_scam` records | 23 |
+| `uncertain` records | 9 |
+| `insufficient_evidence` records | 6 |
+| Baseline precision | 0.708 |
 | Baseline recall | 1.000 |
-| Baseline false positives | 6 |
+| Baseline F1 | 0.829 |
+| Baseline false positives | 7 |
 | Baseline false negatives | 0 |
 
-Confirmed-pointer intake is currently the highest-yield approved path for high-risk rule learning. Broad crawler expansion is not the next default step. The next decision should explicitly choose either continued bounded confirmed-pointer intake or a CIB/165-facing checkpoint report v0.1.
+Local 0076 aggregate snapshot:
+
+| Metric | Value |
+|---|---:|
+| Strict-valid records | 76 |
+| `scam` records | 17 |
+| `non_scam` records | 24 |
+| `uncertain` records | 29 |
+| `insufficient_evidence` records | 6 |
+| `high` risk | 17 |
+| `medium` risk | 13 |
+| `low` risk | 46 |
+| Baseline precision | 0.708 |
+| Baseline recall | 1.000 |
+| Baseline false positives | 7 |
+| Baseline false negatives | 0 |
+
+Interpretation:
+
+- The approved 55-record package is the canonical CIB/165-facing checkpoint.
+- Item 0076 strengthens the hard-negative boundary: anti-scam warning or scam-method vocabulary is not enough to label an item `scam`.
+- False-positive pressure is a reviewer-workload issue, not a harmless metric.
+- Confirmed-pointer intake remains the highest-yield approved path for high-risk rule learning.
+- Broad crawler expansion is not the next default step.
+- The next decision should explicitly choose report-only delivery, targeted confirmed-pointer intake, or a calibration-only browser tranche.
 
 ## CIB/165 Stakeholder Context
 

@@ -91,6 +91,7 @@ The immediate deliverable is a CIB/165-facing initial research report:
 
 - [reports/threads-scam-content-research-v0.md](reports/threads-scam-content-research-v0.md)
 - [reports/threads-scam-content-research-v0-executive-brief.md](reports/threads-scam-content-research-v0-executive-brief.md)
+- [reports/post-0076-next-decision-memo.md](reports/post-0076-next-decision-memo.md)
 - [reports/report-v0-review-checklist.md](reports/report-v0-review-checklist.md)
 - Target date: `2026-04-30`
 - Status: research report v0, not a production detector or legal fraud determination

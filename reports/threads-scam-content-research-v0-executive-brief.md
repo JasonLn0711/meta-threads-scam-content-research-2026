@@ -7,24 +7,22 @@
 | Report package | Threads scam-content research v0 |
 | Target delivery date | 2026-04-30 |
 | Audience | CIB/165-facing review, anti-fraud research planning, investigators, professors, and engineers |
-| Status | Review brief for stakeholder decision. No production promise. No real-data result claim. |
+| Status | Review brief aligned to checkpoint 0055 plus 0076 hard-negative addendum. No production promise. No legal determination claim. |
 | Primary report | `reports/threads-scam-content-research-v0.md` |
 
 ## Bottom Line
 
-The next useful research step is a governed Threads-only pilot, not a production detector.
+The next useful research step is report-delivery hardening and a bounded stakeholder decision, not a production detector and not broad collection by habit.
 
-Approve a small, manually reviewed phase-1 pilot only after source authorization, redaction rules, access rules, retention rules, controlled launch details, and annotator calibration are recorded. The recommended path is:
+The current evidence-system state is:
 
-1. Complete controlled launch details outside git and initialize the local workspace.
-2. Rehearse 1-2 approved records and record a repo-safe rehearsal review.
-3. Run a 5-item annotation calibration if annotators changed or real annotation is about to begin.
-4. Collect only the first 10-15 real items for checkpoint review.
-5. Continue to the conditional 50-item pilot only if the checkpoint permits it.
-6. Use the pilot to revise the annotation guide, data schema, and baseline rules.
-7. Expand to 100-200 items only after the pilot shows that labels, evidence fields, and review workflow are stable enough.
+- checkpoint 0055 is the canonical approved package for CIB/165-facing review;
+- item 0076 is a narrow hard-negative addendum: `non_scam` / `low`;
+- local 76-record aggregate validation passed, but it does not replace the approved 55-record package;
+- browser-session search has value for calibration and candidate-quality testing, but it has not justified unbounded expansion;
+- confirmed-pointer intake remains the strongest path if stakeholders need more scam/high-risk rule-family learning.
 
-This keeps the project useful under budget while avoiding unsupported claims about legal fraud, automated enforcement, or platform-scale detection.
+This keeps the project useful under budget while avoiding unsupported claims about legal fraud, automated enforcement, platform-scale detection, or collection authority.
 
 ## Why Threads First
 
@@ -57,19 +55,15 @@ The package is intentionally documentation-first and tooling-light.
 
 ## Decision Requested
 
-Stakeholders should decide whether the project may proceed to the first real pilot batch and under what limits.
+Stakeholders should decide which bounded path is needed next.
 
-| Decision area | Needed answer |
-|---|---|
-| Source | Which first source is approved: stakeholder-provided cases, manually identified public examples, or another approved source? |
-| Fields | Which fields may be stored for annotation and audit? |
-| Screenshots | Can screenshots be retained, and must they be redacted before annotation? |
-| URLs and links | Can source URLs, visible links, domains, or redacted references be stored? |
-| Raw evidence | Where may raw evidence live outside git, who may access it, and when must it be deleted? |
-| Reporting | Can aggregate metrics and redacted examples appear in internal memos? |
-| Pilot decision | Is the first pilot `go`, `go_with_limits`, or `no_go`? |
+| Option | Meaning | When to choose |
+|---|---|---|
+| `report_only_delivery` | Share and refine the checkpoint report package without new collection. | Choose this if 0055 plus 0076 is enough for current review. |
+| `targeted_confirmed_pointer_tranche` | Add a small number of approved stakeholder/CIB pointers through controlled capture, redaction, second review, and strict validation. | Choose this if new scam/high-risk rule-family learning is needed. |
+| `calibration_only_browser_tranche` | Use approved browser-session work only for hard negatives, uncertainty, or false-positive calibration. | Choose this if reviewer burden and rule boundaries need stress testing. |
 
-Use `docs/36-stakeholder-authorization-packet.md`, `templates/stakeholder_authorization_decision_record.md`, `templates/data_authorization_request.md`, `docs/26-pilot-go-no-go-checklist.md`, `docs/35-real-pilot-readiness-review.md`, `docs/37-approved-pilot-launch-plan.md`, `docs/39-local-pilot-workspace.md`, and `docs/40-pilot-preflight-verification.md` before any real evidence is collected.
+Any future collection still requires a new decision record, capped scope, controlled preservation, redacted fields, second review, strict validation, and repo-safe reporting.
 
 ## What This Work Will Not Do
 
@@ -85,22 +79,18 @@ The v0 package does not authorize:
 - broad Meta cross-platform integration
 - heavy video or deepfake detection as phase-1 mainline work
 
-## First Pilot Design
+## Current Package Design
 
-The recommended 50-item pilot is diagnostic, not a prevalence estimate. It must not be completed in one uninterrupted pass: the first 10-15 items are a checkpoint gate for governance, redaction, evidence quality, annotation consistency, and source skew.
+The approved checkpoint package is diagnostic, not a prevalence estimate. It should be read as an evidence-system review package:
 
-Before that checkpoint starts, the first 1-2 rehearsal items should be converted into a repo-safe rehearsal review so early redaction burden, schema friction, or label-boundary confusion is recorded explicitly rather than carried forward informally.
+| Component | Purpose |
+|---|---|
+| Checkpoint 0055 | Canonical approved 55-record package. |
+| 0076 hard-negative addendum | Tests anti-scam warning and scam-method vocabulary false-positive pressure. |
+| Confirmed-pointer method | Highest-yield path for new final scam/high-risk rule-family learning. |
+| Browser-session candidate methods | Useful only when capped, dedupe-first, full-thread-ready, and explicitly approved. |
 
-| Bucket | Target count | Purpose |
-|---|---:|---|
-| likely `scam` or high-risk scam-like | 15 | Test positive signal coverage. |
-| likely `non_scam` comparator | 15 | Check false-positive risk. |
-| likely `uncertain` | 10 | Stress-test ambiguity rules. |
-| likely `insufficient_evidence` | 10 | Test evidence-quality and collection rules. |
-
-Continue past 10-15 items only after the checkpoint decision is `continue_to_50` or `continue_with_limits`.
-
-The first baseline-ready slice should use high-confidence or adjudicated items with nonempty `post_text` or `ocr_text`, clear `scam` or `non_scam` labels, and sufficient evidence. `uncertain` and `insufficient_evidence` items should be retained for ambiguity and evidence-quality analysis, but excluded from binary precision/recall.
+The first baseline-ready slice should use high-confidence or adjudicated items with nonempty evidence fields, clear `scam` or `non_scam` labels, and sufficient evidence. `uncertain` and `insufficient_evidence` items should be retained for ambiguity and evidence-quality analysis, but excluded from binary precision/recall.
 
 ## Key Risks To Watch
 
@@ -119,6 +109,6 @@ By 2026-04-30:
 1. Complete report-v0 review using `reports/report-v0-review-checklist.md`.
 2. Collect reviewer comments with `templates/report_review_feedback.md`.
 3. Resolve scope, legal/privacy, and evidence-language comments before delivery.
-4. Record that the stakeholder outcome is approved with bounded launch limits.
-5. Complete the controlled launch record with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details before real collection.
-6. Initialize the local workspace, pass item-1 preflight, rehearse 1-2 records, record the rehearsal review, run 5-item calibration if needed, and prepare the first 10-15 item checkpoint.
+4. Confirm whether the next path is report-only delivery, targeted confirmed-pointer intake, or calibration-only browser review.
+5. If new evidence is approved, complete the controlled decision and storage records before collection.
+6. Keep embedding/model training and broad crawler expansion deferred until a later explicit decision.

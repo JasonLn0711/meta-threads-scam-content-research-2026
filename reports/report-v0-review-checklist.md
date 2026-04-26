@@ -91,7 +91,8 @@ The goal is not to make the report longer. The goal is to make sure the report i
 
 | Check | Status | Owner | Notes |
 |---|---|---|---|
-| Report asks for a concrete pilot decision |  |  |  |
+| Report asks for a concrete pilot or post-checkpoint decision |  |  |  |
+| Report asks for a concrete post-0076 path: `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche` |  |  |  |
 | Source authorization questions are clear |  |  |  |
 | Field-retention questions are clear |  |  |  |
 | Screenshot and link-policy questions are clear |  |  |  |
@@ -106,6 +107,7 @@ The goal is not to make the report longer. The goal is to make sure the report i
 |---|---|---|
 | `reports/threads-scam-content-research-v0.md` |  |  |
 | `reports/threads-scam-content-research-v0-executive-brief.md` |  |  |
+| `reports/post-0076-next-decision-memo.md` |  |  |
 | `docs/25-stakeholder-pilot-kickoff.md` |  |  |
 | `docs/36-stakeholder-authorization-packet.md` |  |  |
 | `docs/26-pilot-go-no-go-checklist.md` |  |  |

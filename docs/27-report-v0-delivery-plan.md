@@ -14,6 +14,7 @@ Share these files as the v0 report package:
 |---|---|
 | `reports/threads-scam-content-research-v0-executive-brief.md` | Short stakeholder brief and decision request. |
 | `reports/threads-scam-content-research-v0.md` | Full research report. |
+| `reports/post-0076-next-decision-memo.md` | Bounded decision memo after checkpoint 0055 and 0076. |
 | `reports/report-v0-review-checklist.md` | Pre-delivery and reviewer sign-off checklist. |
 | `docs/25-stakeholder-pilot-kickoff.md` | Pilot approval memo. |
 | `docs/36-stakeholder-authorization-packet.md` | Packet for source, field, storage, access, retention, and redaction approval. |
@@ -87,13 +88,16 @@ Every accepted material change should preserve these constraints:
 5. Review controlled launch details, local workspace, preflight, rehearsal, rehearsal review, and 5-item calibration if needed.
 6. Review the first 10-15 item checkpoint as the gate before completing 50.
 7. Review governance and privacy decisions that must be made before real collection.
-8. Ask for a concrete pilot decision: `go`, `go_with_limits`, `no_go`, or `revise_first`.
-9. Assign owners for authorization, raw storage, redaction, annotation, checkpoint review, and adjudication.
+8. Ask for a concrete post-0076 path: `report_only_delivery`, `targeted_confirmed_pointer_tranche`, or `calibration_only_browser_tranche`.
+9. If new evidence is approved, assign owners for authorization, raw storage, redaction, annotation, checkpoint review, and adjudication.
 
 ## Decision Outcomes
 
 | Decision | Meaning | Next action |
 |---|---|---|
+| `report_only_delivery` | Stakeholders want the checkpoint package delivered or refined without new evidence. | Harden the report, executive brief, checklist, and handoff notes. Do not open a new collection run. |
+| `targeted_confirmed_pointer_tranche` | Stakeholders need new scam/high-risk rule-family learning from approved pointers. | Record a new decision with caps and source rules, then use controlled capture, redaction, second review, build, and strict validation. |
+| `calibration_only_browser_tranche` | Stakeholders need hard negatives, uncertainty, or false-positive calibration. | Record a new decision with caps and stop conditions; do not count the tranche as official scam expansion. |
 | `go` | Stakeholders approve the pilot as written. | Complete `templates/stakeholder_authorization_decision_record.md` and `templates/data_authorization_request.md`, run `docs/26-pilot-go-no-go-checklist.md`, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record before item 1. |
 | `go_with_limits` | Stakeholders approve only a constrained pilot. | Record limits in the decision record and authorization request, revise the collection/redaction SOP if needed, fill `templates/pilot_batch_work_order.md`, complete `templates/real_pilot_readiness_review.md`, then complete the outside-git controlled launch record with those limits before item 1. |
 | `no_go` | Stakeholders do not approve real data work. | Continue only synthetic calibration, docs, and tooling; do not collect real examples. |

@@ -38,6 +38,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `decision-log/0066-record-checkpoint-0055-reviewer-approval.md` | Decision recording all-reviewer approval. |
 | `reports/checkpoint-0076-hard-negative-addendum.md` | Post-0055 narrow hard-negative addendum. |
 | `experiments/evaluation-notes/0080-checkpoint-0076-hard-negative-inclusion-synthesis.md` | Detailed repo-safe 76-record local inclusion synthesis. |
+| `reports/post-0076-next-decision-memo.md` | Single decision point after the approved 0055 package and 0076 addendum. |
 
 ## Approved Findings
 
@@ -73,4 +74,4 @@ Likely future choices:
 | Later calibration-only browser tranche | Requires a separate later decision if run `0039` is not enough. |
 | Report-only maintenance | Only wording, link, checklist, or packaging updates are needed. |
 
-The approved next action is report/checkpoint maintenance or targeted confirmed-pointer intake, not unbounded collection.
+Use `reports/post-0076-next-decision-memo.md` before opening a new tranche. The approved next action is report/checkpoint maintenance or targeted confirmed-pointer intake, not unbounded collection.
