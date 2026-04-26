@@ -15,7 +15,8 @@ It does not add evidence, authorize collection, or change the selected path.
 | Local folder path | `/Users/iKev/Downloads/post-0076-report-v0-package` |
 | Selected path | `report_only_delivery` |
 | Delivery status | revised package ready for reviewer re-check; external approval still pending |
-| Current repo commit | `9ee1d89` |
+| Package-build repo commit | `9ee1d89` |
+| QA note commit | recorded after package rebuild |
 | Remote branch verified | `origin/main` |
 | Remote commit verified | `9ee1d899a911ae05b78a5bd6dcdba0a4d4617af4` |
 
