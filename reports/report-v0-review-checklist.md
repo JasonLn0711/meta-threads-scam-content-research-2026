@@ -107,6 +107,7 @@ The goal is not to make the report longer. The goal is to make sure the report i
 |---|---|---|
 | `reports/threads-scam-content-research-v0.md` | `pass` | Exists and aligned to 0055 + 0076 state. |
 | `reports/threads-scam-content-research-v0-executive-brief.md` | `pass` | Exists and asks for bounded post-0076 decision. |
+| `reports/post-0076-report-v0-delivery-handoff-note.md` | `pass` | Exists as the reviewer-facing handoff message. |
 | `reports/post-0076-next-decision-memo.md` | `pass` | Exists and is now part of the package. |
 | `docs/25-stakeholder-pilot-kickoff.md` | `pass` | Exists as historical/launch artifact. |
 | `docs/36-stakeholder-authorization-packet.md` | `pass` | Exists as authorization artifact. |

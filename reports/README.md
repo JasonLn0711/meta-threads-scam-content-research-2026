@@ -19,6 +19,8 @@ Reports should be more polished than working notes, but they should remain hones
 |---|---|
 | [threads-scam-content-research-v0-executive-brief.md](threads-scam-content-research-v0-executive-brief.md) | Short stakeholder brief and pilot decision request. |
 | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) | Full v0 research report. |
+| [post-0076-report-v0-delivery-handoff-note.md](post-0076-report-v0-delivery-handoff-note.md) | Suggested handoff note for report-v0 delivery after 0055 + 0076. |
+| [post-0076-next-decision-memo.md](post-0076-next-decision-memo.md) | Bounded next-decision memo after the approved 0055 package and 0076 addendum. |
 | [checkpoint-0055-approved-package-index.md](checkpoint-0055-approved-package-index.md) | Canonical index for the approved 55-record checkpoint package. |
 | [checkpoint-0055-executive-addendum.md](checkpoint-0055-executive-addendum.md) | Short CIB/165-facing entry point for the selected C2 checkpoint review. |
 | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
@@ -40,7 +42,14 @@ Reports should be more polished than working notes, but they should remain hones
 
 ## Current Launch Boundary
 
-The v0 report package should describe the governed Phase 1 path as:
+The v0 report package should now describe the governed post-0076 path as:
+
+1. deliver or refine the report package if no new evidence is needed
+2. use targeted confirmed pointers if new final scam/high-risk rule-family learning is needed
+3. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing
+4. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, and strict validation before any new collection
+
+The historical Phase 1 path remains:
 
 1. controlled launch details outside git
 2. local workspace initialization and item-1 preflight
