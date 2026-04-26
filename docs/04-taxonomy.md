@@ -59,6 +59,7 @@ Multiple types may apply, but over-selection is a taxonomy warning sign. Most it
 | `implicit_dm_contact_request` | Public post or reply asks users to private-message the poster, even when no LINE/link/site/contact handle is visible. |
 | `comment_code_lead_magnet` | Reply/comment asks users to follow, comment, or use a code/keyword to receive stock picks, methods, lists, or other benefits. |
 | `stock_pick_playbook_keyword_funnel` | Named short-term stock-pick lure offers a complete operation script/playbook through follow, message, or numeric-code action. |
+| `hidden_stock_code_past_performance_lure` | Prior stock-pick performance proof teases an unnamed next stock/code as a high-value urgent opportunity. |
 | `trapped_position_dm_playbook_reply` | Reply-level trapped-position or loss-anxiety cue is moved into DM/private playbook guidance. |
 | `dark_horse_stock_target_price_dm_funnel` | Hidden or dark-horse stock target-price lure uses catalyst, urgency, and follow/message/code/private-share gating. |
 | `coded_animal_stock_limit_up_group_funnel` | Animal-coded or obscured low-price stock lure promises near-term limit-up/exit timing and gates details through group/follow/message action. |
@@ -131,6 +132,7 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 - "Requests private messages as the conversion path while withholding public contact details."
 - "Uses a comment-code or keyword lead magnet to move readers from public hype into a follow-up funnel."
 - "Uses a named stock-pick, FOMO, and numeric-code/action gate to deliver a complete operation script."
+- "Uses prior buy/sell or stock-pick performance proof, then teases an unnamed next stock/code with catalyst or technical claims and urgent buying pressure."
 - "Uses an animal-coded or obscured low-price stock name with near-term limit-up/exit claims and group/private-message gating."
 - "Uses wealth or long-experience authority plus a trading-rule list, then gates follow-up stock help behind like/follow/`+1`/get-on-board action."
 - "Uses major-brand, patent, order-backlog, or catalyst authority plus extreme small-stake-to-large-return claims and contact/private-message gating."

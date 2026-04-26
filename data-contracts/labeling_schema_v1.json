@@ -70,6 +70,7 @@
     "implicit_dm_contact_request": "Asks users to private-message the poster or another account to receive details while public contact details are withheld.",
     "comment_code_lead_magnet": "Asks users to follow, comment, reply with a code, or use a keyword to receive stock picks, methods, lists, or other benefits.",
     "stock_pick_playbook_keyword_funnel": "Named short-term stock-pick lure that offers a complete operation script/playbook through follow, message, or numeric-code action.",
+    "hidden_stock_code_past_performance_lure": "Prior stock-pick or buy/sell performance proof is used to tease an unnamed next stock/code as a high-value urgent opportunity.",
     "trapped_position_dm_playbook_reply": "Reply-level trapped-position or loss-anxiety cue is moved into DM/private playbook guidance.",
     "dark_horse_stock_target_price_dm_funnel": "Hidden or dark-horse stock target-price lure that uses catalyst, urgency, and follow/message/code/private-share action gating.",
     "coded_animal_stock_limit_up_group_funnel": "Animal-coded or obscured low-price stock lure that promises near-term limit-up/exit timing and gates details through group, follow, message, or +1 action.",

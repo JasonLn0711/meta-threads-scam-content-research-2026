@@ -121,6 +121,7 @@ Select all observable `signal_tags`. Use `none` only when no signal applies.
 | `implicit_dm_contact_request` | The item asks users to private-message the poster or another account to receive details, even when no public LINE/link/site/contact handle is visible. |
 | `comment_code_lead_magnet` | The item asks users to follow, comment, reply with a code, or use a keyword to receive stock picks, methods, lists, or other benefits. |
 | `stock_pick_playbook_keyword_funnel` | The item names a short-term stock pick and offers a complete operation script/playbook through follow, message, or numeric-code action. |
+| `hidden_stock_code_past_performance_lure` | The item uses prior stock-pick performance proof to tease an unnamed next stock/code as a high-value urgent opportunity. |
 | `trapped_position_dm_playbook_reply` | A reply about being trapped, losing money, or needing stock help is moved into private message or detailed operation playbook guidance. |
 | `dark_horse_stock_target_price_dm_funnel` | The item teases a hidden or dark-horse stock with low-current/high-target-price framing, catalyst claims, urgency, and follow/message/code/private-share gating. |
 | `coded_animal_stock_limit_up_group_funnel` | The item uses an animal-coded or obscured low-price stock name with near-term limit-up/exit claims and gates details through group, follow, message, or +1 action. |
@@ -208,6 +209,8 @@ Escalate to `uncertain` or `scam` when this signal co-occurs with investment/pro
 Do not label every named stock discussion as `scam`. Legitimate analysts and ordinary users discuss specific stocks, entry timing, and technical setups.
 
 Use `stock_pick_playbook_keyword_funnel` when the item combines a named short-term stock pick with FOMO language, recent winner comparison, near-certain movement framing, or easy-entry wording, then asks readers to follow, message, or send a numeric code/keyword to receive a complete operation script, buy/sell playbook, or similar private follow-up.
+
+Use `hidden_stock_code_past_performance_lure` when the item uses a prior buy/sell result, past stock-pick performance, or recent winner as proof of trading authority, then teases an unnamed next stock, hidden code, or small set of numbers as a high-value opportunity with catalyst, technical, or urgency cues. Do not use this tag for ordinary performance recaps unless the next-stock/code teaser and action pressure are both visible.
 
 Use `dark_horse_stock_target_price_dm_funnel` when the item hides or teases a "dark horse" stock, compares a low current price to a much higher target or expected price, adds catalyst claims such as major technology or brand cooperation, then gates the promised stock details behind follow, like, private message, numeric code, or free-share action. Do not use this tag for ordinary target-price discussion unless the hidden-stock lure and private/action gate are both visible.
 
