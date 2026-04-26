@@ -127,6 +127,7 @@ Select all observable `signal_tags`. Use `none` only when no signal applies.
 | `mass_stock_command_list_group_funnel` | The item gives a mass list of stock buy/sell/limit-up commands, then offers daily accurate stock calls, free group sharing, entry quota, or similar funnel. |
 | `trading_rules_wealth_authority_follow_gate` | The item uses wealth or long-experience authority plus a trading-rule/discipline list, then gates follow-up stock help behind like, follow, `+1`, or get-on-board action. |
 | `brand_patent_extreme_roi_contact_funnel` | The item uses major-brand, patent, order-backlog, or catalyst authority with extreme small-stake-to-large-return claims and contact/private-message gating. |
+| `supply_chain_insider_stock_lure` | The item uses claimed insider, procurement, supplier, or confidential corporate-meeting access to justify a specific stock opportunity. |
 | `reply_impersonation_contact_hijack` | Replies appear to impersonate, certify, or ride on the poster's identity to redirect readers to LINE/contact/group paths. |
 | `visible_external_link` | A visible URL, link text, shortener, or landing-page reference appears. |
 | `suspicious_domain_or_shortener` | The visible URL looks mismatched, shortened, disguised, vague, or unrelated to the claimed source. |
@@ -217,6 +218,8 @@ Use `mass_stock_command_list_group_funnel` when the item publishes a large list 
 Use `trading_rules_wealth_authority_follow_gate` when the item presents the poster as wealthy, highly experienced, or unusually successful, gives a compact trading-rule or discipline list, and then asks readers to like, follow, comment `+1`, or get on board to receive stock help, picks, or buy-timing guidance. Do not use this tag for ordinary educational checklists unless the authority framing and action gate both appear.
 
 Use `brand_patent_extreme_roi_contact_funnel` when the item uses major-brand, patent, order-backlog, exclusive-technology, or catalyst authority to justify an extreme small-stake-to-large-return claim, then gates the stock detail, reference, entry timing, or follow-up through a contact handle, private message, like/follow action, or `+1`. Do not use this tag for ordinary company news or analyst target-price discussion unless the extreme ROI and contact/action gate are both visible.
+
+Use `supply_chain_insider_stock_lure` when the item frames a stock opportunity through claimed insider, family-connected, procurement, supplier, or confidential corporate-meeting access; adds major-brand or institutional authority; and converts the story into buying pressure with exclusive-supplier, technical-proof, exact-price, position-size, or all-in personal-buying cues. Do not use this tag for ordinary supply-chain news unless the insider-access story and investment-action lure are both visible.
 
 Escalate to `uncertain` or `scam` when this signal co-occurs with past-performance proof, limit-up or multi-day board claims, private-channel migration, stock-community/group language, contact handles, or urgency such as do-not-miss, enter on a specific day, close-eyes entry, or break-high certainty. This is a funnel pattern: the public post creates urgency and the reply/action gate moves readers toward a private playbook.
 

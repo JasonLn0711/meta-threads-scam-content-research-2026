@@ -9,11 +9,11 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | run `0045-build`; item `0076` accepted as local strict-valid hard-negative addendum |
-| Current collection gate | no new prospective tranche open |
+| Latest local work visible in tree | run `0046`; item `0077` opened as a single confirmed-pointer preliminary rule intake |
+| Current collection gate | item `0077` full-thread/reply capture pending; no other tranche open |
 | Next authorized prospective tranche | none |
-| Next stakeholder request | post-0076 reviewer path selection |
-| Next intake scaffold | none active; confirmed-pointer intake requires a new decision record |
+| Next stakeholder request | confirm whether item `0077` should proceed to controlled full-thread capture and manual record build after reply capture |
+| Next intake scaffold | item `0077` only; any additional confirmed-pointer intake requires a new decision record |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -62,6 +62,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0044` | browser-session | `threads_pilot_v1_2026-05_aggressive_dedupe_first_browser_candidate_quality_run_record_0044.md` | `0076-run-0044-aggressive-dedupe-first-browser-candidate-quality-result.md` | none | completed; no item built | Aggressive controlled-store-only candidate-quality test reviewed 200 candidates, found 190 dedupe-pass, selected 180 local traces, and completed 131 context-ready attempts; no manual entries or official promotion. |
 | `0045` | browser-session follow-up | `threads_pilot_v1_2026-05_source_linkage_follow_up_run_record_0045.md` | `0078-run-0045-source-linkage-follow-up-result.md` | `0076` prospective only | completed; no item built | Attempted 5 run `0043` candidates; 2 became source-linkage-ready and second-review-eligible; no manual entries or official promotion. |
 | `0045-build` | browser-session hard-negative build | `threads_pilot_v1_2026-05_source_linkage_follow_up_run_record_0045.md` | `0079-manual-entry-0076-hard-negative-build-result.md` | `0076` local redacted hard negative | strict-valid local item | Second review selected one source-linked candidate as `non_scam` / `low`; local `manual_entry_0076` and `manual_record_0076` built with 0 validation errors and warnings. |
+| `0046` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0077_confirmed_pointer_intake_run_record_0046.md` | `0081-confirmed-pointer-0077-preliminary-rule-result.md` | `0077` prospective only | preliminary top-level rule extracted; no manual entry built | Single stakeholder-confirmed pointer opened under decision `0097`; full reply/comment capture remains pending before promotion. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 

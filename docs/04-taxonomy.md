@@ -63,6 +63,7 @@ Multiple types may apply, but over-selection is a taxonomy warning sign. Most it
 | `dark_horse_stock_target_price_dm_funnel` | Hidden or dark-horse stock target-price lure uses catalyst, urgency, and follow/message/code/private-share gating. |
 | `coded_animal_stock_limit_up_group_funnel` | Animal-coded or obscured low-price stock lure promises near-term limit-up/exit timing and gates details through group/follow/message action. |
 | `mass_stock_command_list_group_funnel` | Mass stock buy/sell/limit-up command list converts readers into a daily stock-signal group, quota, or free-sharing funnel. |
+| `supply_chain_insider_stock_lure` | Claimed insider, procurement, supplier, or confidential corporate-meeting access justifies a specific stock opportunity. |
 | `reply_impersonation_contact_hijack` | Replies appear to impersonate, certify, or ride on the poster's identity to redirect readers to LINE/contact/group paths. |
 | `visible_external_link` | Visible URL, link text, shortener, landing-page reference. |
 | `suspicious_domain_or_shortener` | Mismatched URL, vague domain, shortened link, disguised link text. |
@@ -133,6 +134,7 @@ Each `scam` or `uncertain` label should include at least one evidence-based reas
 - "Uses an animal-coded or obscured low-price stock name with near-term limit-up/exit claims and group/private-message gating."
 - "Uses wealth or long-experience authority plus a trading-rule list, then gates follow-up stock help behind like/follow/`+1`/get-on-board action."
 - "Uses major-brand, patent, order-backlog, or catalyst authority plus extreme small-stake-to-large-return claims and contact/private-message gating."
+- "Uses claimed insider, procurement, supplier, or confidential corporate-meeting access plus major-brand authority, exclusive-supplier framing, exact price/position cues, or all-in buying behavior."
 - "Moves a trapped-position or loss-anxiety reply into private detailed operation guidance."
 - "Reply thread contains apparent impersonation or contact hijack that redirects readers to a group/contact path while claiming other contacts are scams."
 - "Uses a high-fee trading course or membership funnel around financial outcomes."
