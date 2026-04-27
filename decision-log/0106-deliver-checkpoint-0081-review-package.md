@@ -23,7 +23,7 @@ This decision is a delivery and reviewer-tracking decision only. It does not aut
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package file count | 33 files |
+| Package file count | current rebuilt package count is recorded in `reports/checkpoint-0081-package-qa.md` |
 | PDF report | `reports/checkpoint-0081-cib-technical-report.pdf` |
 | Source report | `reports/checkpoint-0081-cib-technical-report.tex` |
 | Delivery tracker | `reports/checkpoint-0081-reviewer-delivery-tracker.md` |

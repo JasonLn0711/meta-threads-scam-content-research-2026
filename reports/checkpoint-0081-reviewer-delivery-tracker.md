@@ -11,12 +11,12 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | `approve_with_minor_edits` recorded; repo-safe minor edits applied for reviewer re-check |
+| Package status | technical/governance re-check passed; ready for checkpoint use and handoff |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package file count | 33 files |
-| Current decision | `decision-log/0106-deliver-checkpoint-0081-review-package.md` |
+| Package file count | 35 files after re-check package rebuild |
+| Current decision | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` |
 
 ## Reviewer Reading Order
 
@@ -29,16 +29,20 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | 5 | `reports/checkpoint-0081-approved-package-index.md` | Canonical checkpoint index and non-claims. |
 | 6 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
 | 7 | `reports/checkpoint-0081-package-qa.md` | Package QA, validation, checksum, and leakage-scan summary. |
-| 8 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
-| 9 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
+| 8 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
+| 9 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
+| 10 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
+| 11 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Minor-edit response decision. |
+| 12 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
 
 ## Reviewer Response Table
 
 | Reviewer role | Reviewer | Status | Decision | Required edits or conditions | Date |
 |---|---|---|---|---|---|
-| legal/privacy |  | pending |  | Required only before broader external sharing. |  |
-| domain/CIB | CIB reviewer response recorded by project owner | minor edits applied | `approve_with_minor_edits` | Delivery tracker added; 0086/0087 intermediate snapshot notes added; baseline triage-support caveat added; run index 0080/0081 baseline outcome updated; package rebuilt with 33 files and external checksum. | 2026-04-27 |
-| technical |  | pending re-check |  | Re-check baseline triage-support caveat and rebuilt ZIP checksum. |  |
+| legal/privacy |  | pending |  | Required only before broader external sharing, depending on recipient and sharing context. |  |
+| domain/CIB | CIB reviewer response recorded by project owner | minor edits applied | `approve_with_minor_edits` | Delivery tracker added; 0086/0087 intermediate snapshot notes added; baseline triage-support caveat added; run index 0080/0081 baseline outcome updated; package rebuilt with external checksum. | 2026-04-27 |
+| technical | local technical re-check | passed | `approve_for_checkpoint_use` | Strict validation 78/0/0; manifest files present; ZIP has no `.DS_Store`; stale package wording removed; checksum handoff present. | 2026-04-27 |
+| governance | local governance re-check | passed | `approve_for_checkpoint_use` | Non-authorizations preserved: no item `0082`, no new collection, no production detector, no legal fraud determination, no raw evidence in git. | 2026-04-27 |
 | stakeholder/project owner | project owner | recorded | `approve_with_minor_edits` | No new evidence collection authorized; proceed only with package/report maintenance. | 2026-04-27 |
 
 Allowed decisions:
@@ -96,3 +100,4 @@ Create a new decision record first. That new record must specify:
 | Explain baseline triage support vs final risk distribution | Added caveat: baseline triage uses `final_risk_level` when present, while the aggregate table reports schema-level `risk_level`; one duplicate/insufficient-evidence trace accounts for the 10/32 vs 11/31 medium/low difference. |
 | Update run_index baseline outcome for 0080/0081 | Updated both item rows to `checkpoint 0081 baseline: scam-like/high`. |
 | Rebuild package/checksum | Rebuilt package after minor edits; checksum is recorded in the adjacent external `.zip.sha256` handoff file. |
+| Technical/governance re-check | Passed; package is ready for checkpoint use and handoff within the stated governance boundary. |

@@ -91,3 +91,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Approved the 78-record CIB research checkpoint synthesis | `0105-approve-cib-78-record-checkpoint-synthesis.md` |
 | 2026-04-27 | Delivered checkpoint 0081 reviewer package and opened response tracking | `0106-deliver-checkpoint-0081-review-package.md` |
 | 2026-04-27 | Recorded checkpoint 0081 `approve_with_minor_edits` response and required repo-safe fixes | `0107-record-checkpoint-0081-approve-with-minor-edits.md` |
+| 2026-04-27 | Recorded checkpoint 0081 technical/governance re-check pass | `0108-record-checkpoint-0081-technical-governance-recheck.md` |

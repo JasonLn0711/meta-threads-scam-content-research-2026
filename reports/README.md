@@ -29,6 +29,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-approved-package-index.md](checkpoint-0081-approved-package-index.md) | Canonical index for the CIB-approved 78-record research checkpoint. |
 | [checkpoint-0081-reviewer-delivery-tracker.md](checkpoint-0081-reviewer-delivery-tracker.md) | Delivery tracker and reviewer response table for checkpoint 0081. |
 | [checkpoint-0081-package-qa.md](checkpoint-0081-package-qa.md) | Package QA, checksum, validation, and leakage-scan summary for checkpoint 0081. |
+| [checkpoint-0081-technical-governance-recheck.md](checkpoint-0081-technical-governance-recheck.md) | Technical/governance re-check result after minor edits. |
 | [checkpoint-0081-executive-addendum.md](checkpoint-0081-executive-addendum.md) | Short CIB-facing entry point for checkpoint 0081. |
 | [checkpoint-0081-cib-technical-report.pdf](checkpoint-0081-cib-technical-report.pdf) | Compiled PDF technical report with tables and figures for rigorous CIB review. |
 | [checkpoint-0081-cib-technical-report.tex](checkpoint-0081-cib-technical-report.tex) | LaTeX technical report with tables and figures for rigorous CIB review. |

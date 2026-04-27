@@ -12,10 +12,10 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| Package version/date | 2026-04-27 minor-edit rebuild |
-| Package file count | 33 files |
+| Package version/date | 2026-04-27 technical/governance re-check rebuild |
+| Package file count | 35 files |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package status | `approve_with_minor_edits` response recorded; minor edits applied for reviewer re-check |
+| Package status | technical/governance re-check passed; ready for checkpoint use and handoff |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
 ## Included Entry Points
@@ -30,10 +30,12 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `reports/checkpoint-0081-approved-package-index.md` | Canonical approved package index. |
 | `reports/checkpoint-0081-package-qa.md` | Package QA, checksum, validation, and leakage-scan summary. |
 | `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Reviewer response tracker and minor-edit resolution log. |
+| `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval decision record. |
 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Reviewer response and minor-edit resolution decision. |
+| `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
 
 ## Validation
 
@@ -47,6 +49,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Baseline false positives | 7 |
 | Baseline false negatives | 2 |
 | Baseline triage support caveat | baseline uses `final_risk_level` when present; one duplicate/insufficient-evidence trace explains support `high 36`, `medium 10`, `low 32` versus aggregate risk `high 36`, `medium 11`, `low 31` |
+| Technical/governance re-check | pass |
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |
