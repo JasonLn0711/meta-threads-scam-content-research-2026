@@ -17,7 +17,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Dataset file | `data/interim/manual_records_checkpoint_0081.jsonl` |
 | Latest included item | `threads_pilot_v1_0081` |
 | Next authorized prospective tranche | none open |
-| Next recommended action | run Track B human review for batch `0001` or record a pause/zero-review note; no item `0082`, no overflow queue |
+| Next recommended action | run Track B second review for batch `0001`; pause further checkpoint-derived seed replay surfacing until second review is complete |
 
 ## Package Artifacts
 
@@ -100,6 +100,9 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md` | First repo-safe surfaced candidate batch; 6 checkpoint-derived seed replay candidates pending Track B review. |
 | `decision-log/0125-record-track-b-day-1-batch-0001-checkpoint-seed-replay.md` | Decision recording batch `0001` under the checkpoint-derived seed replay source arm. |
 | `experiments/evaluation-notes/0092-track-b-day-1-batch-0001-checkpoint-seed-replay.md` | Evaluation note for batch `0001`. |
+| `reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md` | Primary review of batch `0001`; 6 reviewed, 6 second-review required, 0 accepted records. |
+| `decision-log/0126-record-track-b-day-1-batch-0001-primary-review.md` | Decision recording batch `0001` primary review and stop-rule pause for more checkpoint replay surfacing. |
+| `experiments/evaluation-notes/0093-track-b-day-1-batch-0001-primary-review.md` | Evaluation note for batch `0001` primary review. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-readme.md` | Repo copy of the formal signoff reviewer package README. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-message.md` | Repo copy of the formal signoff reviewer message. |
 | `reports/checkpoint-0081-track-b-formal-signoff-package-manifest.md` | Repo copy of the formal signoff package manifest. |
@@ -144,6 +147,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | Decision `0123` records Track B Day 0 operational start | Day 0 gates confirmed; 0 candidates surfaced, 0 reviewed, 0 accepted records |
 | Decision `0124` records Track B Day 1 source-arm intake start | Source-arm counters opened; 0 candidates surfaced, 0 reviewed, 0 accepted records |
 | Decision `0125` records Track B Day 1 batch `0001` | 6 checkpoint-derived seed replay candidates surfaced; 0 reviewed, 0 accepted records |
+| Decision `0126` records Track B Day 1 batch `0001` primary review | 6 reviewed, 6 second-review required, 0 accepted records; further checkpoint replay surfacing paused |
 
 ## Explicit Non-Claims
 
@@ -176,7 +180,7 @@ Likely future choices:
 | Track B condition response request | Send or use the repo-safe request form before updating the condition tracker. |
 | Track B condition resolution | Completed for formal signoff: legal/privacy `no_veto`, CIB/internal `accepted_boundary`, checklist `fully_green`. |
 | Track B Day 0 start | Completed under decision `0123`; local-only workspace target prepared, no candidates surfaced yet. |
-| Track B capped live method test | Batch `0001` surfaced 6 checkpoint-derived seed replay candidates; next record should review the batch or record a pause/zero-review outcome. |
+| Track B capped live method test | Batch `0001` primary review complete; next record should second-review the batch before any more checkpoint replay surfacing. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |

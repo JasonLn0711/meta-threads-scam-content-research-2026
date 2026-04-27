@@ -175,3 +175,38 @@ This batch surfaces repo-safe checkpoint-derived candidate references only. It d
 Human-reviewed candidates remain `0` of `150`.
 
 Accepted strict-valid records remain `0` of `75`.
+
+## Day 1 Batch 0001 Primary Review
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Batch ID | `track_b_day_1_batch_0001_checkpoint_seed_replay` |
+| Related decision | `0126-record-track-b-day-1-batch-0001-primary-review` |
+| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md` |
+| Evaluation note | `experiments/evaluation-notes/0093-track-b-day-1-batch-0001-primary-review.md` |
+| Review pass | primary review |
+| Candidates primary-reviewed in batch | 6 |
+| Accepted strict-valid records in batch | 0 |
+| Final Track B labels recorded | no |
+| Second review required | yes: 6 of 6 |
+| Stop-rule triggered | yes: second-review rate above threshold |
+| Pause required | yes: pause further checkpoint seed replay surfacing until second review |
+
+Primary review used repo-safe checkpoint summaries only. It did not inspect or add raw evidence to git.
+
+### Counter Update After Primary Review
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Accepted strict-valid records | Remaining surfaced cap |
+|---|---:|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 6 | 6 | 0 | 24 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 30 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 110 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 60 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 20 |
+| Hard-negative probe arm | 50 | 0 | 0 | 0 | 50 |
+| Total | 300 | 6 | 6 | 0 | 294 |
+
+Human-reviewed candidates: `6` of `150`.
+
+Accepted strict-valid records: `0` of `75`.
