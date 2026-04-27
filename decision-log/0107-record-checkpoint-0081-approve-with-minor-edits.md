@@ -38,7 +38,7 @@ This decision does not authorize new evidence collection.
 - `experiments/evaluation-notes/0086-confirmed-pointer-0080-result.md` and `experiments/evaluation-notes/0087-confirmed-pointer-0081-result.md` now mark their aggregate counts as intermediate snapshots.
 - `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` and the technical report source explain the baseline triage-support caveat.
 - `governance/pilot-launch/run_index.md` now records checkpoint 0081 baseline outcomes for items `0080` and `0081`.
-- The selected package should be rebuilt after these edits and the new checksum recorded in `reports/checkpoint-0081-package-qa.md`.
+- The selected package should be rebuilt after these edits and the new checksum recorded in the adjacent external `.zip.sha256` handoff file.
 
 ## Non-Authorizations
 
@@ -55,4 +55,3 @@ This decision does not authorize:
 - production detection;
 - legal fraud determinations;
 - raw evidence in git.
-

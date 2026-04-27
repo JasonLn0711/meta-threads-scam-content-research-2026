@@ -15,7 +15,7 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package file count | 29 files |
+| Package file count | 33 files |
 | Current decision | `decision-log/0106-deliver-checkpoint-0081-review-package.md` |
 
 ## Reviewer Reading Order
@@ -37,7 +37,7 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Reviewer role | Reviewer | Status | Decision | Required edits or conditions | Date |
 |---|---|---|---|---|---|
 | legal/privacy |  | pending |  | Required only before broader external sharing. |  |
-| domain/CIB | CIB reviewer response recorded by project owner | minor edits applied | `approve_with_minor_edits` | Delivery tracker added; 0086/0087 intermediate snapshot notes added; baseline triage-support caveat added; run index 0080/0081 baseline outcome updated; package rebuilt with new checksum. | 2026-04-27 |
+| domain/CIB | CIB reviewer response recorded by project owner | minor edits applied | `approve_with_minor_edits` | Delivery tracker added; 0086/0087 intermediate snapshot notes added; baseline triage-support caveat added; run index 0080/0081 baseline outcome updated; package rebuilt with 33 files and external checksum. | 2026-04-27 |
 | technical |  | pending re-check |  | Re-check baseline triage-support caveat and rebuilt ZIP checksum. |  |
 | stakeholder/project owner | project owner | recorded | `approve_with_minor_edits` | No new evidence collection authorized; proceed only with package/report maintenance. | 2026-04-27 |
 
