@@ -63,6 +63,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` | Design-only charter draft for a future capped investment-scam candidate-discovery method test. |
 | `docs/57-investment-scam-discovery-signal-family-matrix.md` | Signal-family matrix for post, thread, account-context, and funnel candidates. |
 | `decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` | Decision opening the design-only method-test charter draft without authorizing execution. |
+| `reports/checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md` | Package-specific QA for the selected technical/governance review ZIP; post-package artifact, not a change to the earlier checkpoint 0081 approved package checksum. |
 
 ## Approved Findings
 
