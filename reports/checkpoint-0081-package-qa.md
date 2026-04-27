@@ -13,7 +13,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | Package file count | 29 files |
-| ZIP SHA-256 | `a2bc022b3b465f3c0b7cdd1c9da3a61c0f0e8197e9d8e6c51ce99b615cd741ad` |
+| ZIP SHA-256 | `58fa4882b1f6c35837138041e2e8fd96a1dcd320f205aaa8ba5be53c006283de` |
 | Package status | CIB-approved 78-record research checkpoint package |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
@@ -44,7 +44,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |
-| PDF compilation | pass with `tectonic`; warnings limited to table/long-path line breaking |
+| PDF compilation | pass with `tectonic`; table/path wrapping warnings resolved |
 
 ## Leakage Scan
 

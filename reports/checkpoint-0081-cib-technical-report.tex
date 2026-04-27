@@ -7,6 +7,7 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{xurl}
 \usepackage{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
@@ -20,7 +21,11 @@
 
 \newcommand{\checkpoint}{\texttt{threads\_pilot\_v1\_0081}}
 \newcommand{\dataset}{\texttt{manual\_records\_checkpoint\_0081.jsonl}}
-\newcommand{\repoartifact}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\repoartifact}[1]{\path{#1}}
+\newcommand{\code}[1]{\path{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\emergencystretch=3em
 
 \title{Threads Scam-Content Research Checkpoint 0081\\
 \large CIB-Approved Technical Report for Evidence-System Review}
@@ -67,7 +72,7 @@ Tracked reports contain only redacted, normalized, hashed, counted, or presence-
 \begin{table}[h]
 \centering
 \caption{Checkpoint identity and governance status.}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
+\begin{tabularx}{\textwidth}{@{}L{0.26\textwidth}Y@{}}
 \toprule
 Field & Value \\
 \midrule
@@ -135,7 +140,7 @@ The label and risk distributions are shown in Table~\ref{tab:label-risk}.
 \centering
 \caption{Label and risk distribution at checkpoint 0081.}
 \label{tab:label-risk}
-\begin{tabular}{@{}lrr@{}}
+\begin{tabularx}{0.82\textwidth}{@{}Yrr@{}}
 \toprule
 Category & Count & Share \\
 \midrule
@@ -148,7 +153,7 @@ Category & Count & Share \\
 \texttt{medium} risk & 11 & 14.1\% \\
 \texttt{low} risk & 31 & 39.7\% \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \subsection{Evidence Sufficiency, Source Mix, and Content Shape}
@@ -159,7 +164,7 @@ Partial and insufficient cases are retained because forcing a label would reduce
 \begin{table}[h]
 \centering
 \caption{Evidence sufficiency and source mix.}
-\begin{tabular}{@{}lrr@{}}
+\begin{tabularx}{0.82\textwidth}{@{}Yrr@{}}
 \toprule
 Measure & Count & Share \\
 \midrule
@@ -170,13 +175,13 @@ Measure & Count & Share \\
 \texttt{manual\_public} source & 60 & 76.9\% \\
 \texttt{stakeholder\_provided} source & 18 & 23.1\% \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \begin{table}[h]
 \centering
 \caption{Content shape distribution.}
-\begin{tabular}{@{}lr@{}}
+\begin{tabularx}{0.68\textwidth}{@{}Yr@{}}
 \toprule
 Content shape & Count \\
 \midrule
@@ -186,7 +191,7 @@ Content shape & Count \\
 \texttt{text\_image\_post} & 4 \\
 \texttt{screenshot\_ocr} & 1 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \section{Checkpoint Evolution}
@@ -218,7 +223,7 @@ Figure~\ref{fig:evolution} summarizes the evolution.
 \begin{table}[h]
 \centering
 \caption{Delta from checkpoint 0055 to checkpoint 0081.}
-\begin{tabular}{@{}lrrr@{}}
+\begin{tabularx}{0.92\textwidth}{@{}Yrrr@{}}
 \toprule
 Metric & Checkpoint 0055 & Checkpoint 0081 & Delta \\
 \midrule
@@ -231,7 +236,7 @@ Total records & 55 & 78 & +23 \\
 \texttt{medium} risk & 7 & 11 & +4 \\
 \texttt{low} risk & 31 & 31 & 0 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 \section{Annotation and Second Review}
@@ -242,7 +247,7 @@ No new evidence collection was authorized by that review.
 \begin{table}[h]
 \centering
 \caption{Second-review outcome categories.}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
+\begin{tabularx}{\textwidth}{@{}L{0.38\textwidth}Y@{}}
 \toprule
 Outcome & Item IDs \\
 \midrule
@@ -252,9 +257,9 @@ Kept \texttt{uncertain}/\texttt{medium} &
 \texttt{0027}, \texttt{0047}, \texttt{0057}, \texttt{0064}, \texttt{0065}, \texttt{0066}, \texttt{0069}, \texttt{0070}, \texttt{0072} \\
 Kept \texttt{uncertain}/\texttt{low} &
 \texttt{0059}, \texttt{0060}, \texttt{0061}, \texttt{0063} \\
-Kept or moved to \texttt{insufficient\_evidence}/\texttt{medium} &
+Kept or moved to \code{insufficient_evidence}/\code{medium} &
 \texttt{0073}, \texttt{0074} \\
-Kept \texttt{insufficient\_evidence}/\texttt{low} &
+Kept \code{insufficient_evidence}/\code{low} &
 \texttt{0048}, \texttt{0053}, \texttt{0054} \\
 \bottomrule
 \end{tabularx}
@@ -265,7 +270,7 @@ Kept \texttt{insufficient\_evidence}/\texttt{low} &
 The checkpoint supports rule-family learning from feature combinations, not isolated keywords.
 Table~\ref{tab:rules} summarizes the main rule families and protected boundaries.
 
-\begin{longtable}{@{}p{0.28\textwidth}p{0.38\textwidth}p{0.24\textwidth}@{}}
+\begin{longtable}{@{}L{0.27\textwidth}L{0.37\textwidth}L{0.26\textwidth}@{}}
 \caption{Rule-family findings and protected boundaries.}
 \label{tab:rules}\\
 \toprule
@@ -312,7 +317,7 @@ It is not a production model.
 \begin{table}[h]
 \centering
 \caption{Rule-baseline smoke metrics.}
-\begin{tabular}{@{}lr@{}}
+\begin{tabularx}{0.68\textwidth}{@{}Yr@{}}
 \toprule
 Metric & Value \\
 \midrule
@@ -327,7 +332,7 @@ False positives & 7 \\
 False negatives & 2 \\
 Triage exact agreement & 0.590 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
 The two false negatives are important.
@@ -353,12 +358,12 @@ Reviewers should decide whether the package is ready for checkpoint delivery, an
 \begin{table}[h]
 \centering
 \caption{Reviewer response table.}
-\begin{tabularx}{\textwidth}{@{}lX@{}}
+\begin{tabularx}{\textwidth}{@{}L{0.27\textwidth}Y@{}}
 \toprule
 Field & Response \\
 \midrule
 Checkpoint reviewed & \checkpoint{} \\
-Delivery status & \texttt{approve\_for\_checkpoint\_delivery} / \texttt{approve\_with\_minor\_edits} / \texttt{revise\_before\_delivery} / \texttt{block\_delivery} \\
+Delivery status & \code{approve_for_checkpoint_delivery} / \code{approve_with_minor_edits} / \code{revise_before_delivery} / \code{block_delivery} \\
 Required edits & \\
 Additional reviewer roles & legal/privacy / domain / technical / stakeholder \\
 New evidence collection authorized? & \texttt{no}, unless a separate capped decision is recorded \\
@@ -378,7 +383,7 @@ The next appropriate step is reviewer-facing package delivery and report refinem
 
 \section{Repo-Safe Artifact Map}
 
-\begin{longtable}{@{}p{0.38\textwidth}p{0.52\textwidth}@{}}
+\begin{longtable}{@{}L{0.68\textwidth}L{0.22\textwidth}@{}}
 \toprule
 Artifact & Purpose \\
 \midrule
