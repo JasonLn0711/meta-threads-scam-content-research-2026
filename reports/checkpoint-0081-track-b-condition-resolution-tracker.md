@@ -19,6 +19,7 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
+| Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
 | Track B status | `blocked_pending_condition_signoff` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
@@ -162,6 +163,12 @@ Collect repo-safe condition responses using:
 
 ```text
 reports/checkpoint-0081-track-b-condition-response-request.md
+```
+
+Record the two remaining formal responses in:
+
+```text
+reports/checkpoint-0081-track-b-formal-signoff-record.md
 ```
 
 After every blocking condition is resolved, update:

@@ -66,7 +66,18 @@ Legal/privacy and CIB/internal owner statuses in the same response are recommend
 |---|---|---:|
 | Legal/privacy no-veto or scoped non-blocking conditions | pending formal response | yes |
 | CIB/internal owner boundary acceptance | pending formal response | yes |
-| Strict validation output target | pending target record | yes |
+
+Strict validation output target is no longer a blocker. It is recorded in:
+
+```text
+reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md
+```
+
+Formal signoffs should be recorded in:
+
+```text
+reports/checkpoint-0081-track-b-formal-signoff-record.md
+```
 
 ## Explicit Non-Authorizations
 
