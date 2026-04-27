@@ -6,6 +6,16 @@ Record the Day 1 intake-control start for Track B after Day 0 gate confirmation.
 
 This report-facing note does not contain raw Threads content, full item URLs, raw handles, raw contact IDs, screenshots, raw post text, raw reply text, raw OCR text, credentials, browser/session artifacts, exact controlled-store paths, stakeholder case IDs, or private recipient details.
 
+## Current Update
+
+This start note records the Day 1 opening zero-count state. It is now followed by batch `0001`:
+
+```text
+reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md
+```
+
+Batch `0001` surfaced 6 checkpoint-derived seed replay candidates and left Track B review pending.
+
 ## Status
 
 | Field | Value |

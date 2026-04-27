@@ -108,3 +108,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Recorded Track B start authorization after legal/privacy no-veto and CIB/internal boundary acceptance | `0122-record-track-b-start-authorization-after-formal-signoff.md` |
 | 2026-04-27 | Recorded Track B Day 0 operational start under decision 0122 with no candidates surfaced yet | `0123-record-track-b-day-0-start.md` |
 | 2026-04-28 | Recorded Track B Day 1 source-arm intake start with zero candidates surfaced so far | `0124-record-track-b-day-1-source-arm-intake-start.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0001: six checkpoint-derived seed replay candidates surfaced, pending Track B review | `0125-record-track-b-day-1-batch-0001-checkpoint-seed-replay.md` |
