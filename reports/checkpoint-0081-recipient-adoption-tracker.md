@@ -11,12 +11,12 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | recipient adoption dispatch log opened; ready for allowed checkpoint use |
+| Package status | CIB/internal adoption recorded as `accepted_with_conditions`; ready for internal checkpoint use |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Current handoff decision | `decision-log/0109-record-checkpoint-0081-final-handoff.md` |
-| Current tracking decision | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
+| Current tracking decision | `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` |
 | Adoption request form | `reports/checkpoint-0081-recipient-adoption-request.md` |
 | Dispatch log | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` |
 
@@ -33,7 +33,7 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 
 | Recipient class | Recipient alias or role | Status | Accepted use | Conditions or limits | Date | Evidence location |
 |---|---|---|---|---|---|---|
-| CIB/internal reviewer |  | pending |  |  |  |  |
+| CIB/internal reviewer | CIB domain / governance reviewer | accepted_with_conditions | evidence-system review; annotation-rule calibration; governance review; report/package handoff; planning future research decisions | Internal research/planning use only; no item `0082`, new evidence collection, browser/crawler expansion, confirmed-pointer intake, model training, production detector claim, legal fraud determination, public release, or raw evidence in git; broader external sharing requires legal/privacy status. | 2026-04-27 | `reports/checkpoint-0081-cib-internal-adoption-response.md`; `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` |
 | technical/governance reviewer |  | pending |  |  |  |  |
 | broader external recipient |  | blocked_until_legal_privacy |  | Legal/privacy status must be recorded before sharing. |  |  |
 | public release |  | not_authorized |  | Public release is outside checkpoint 0081 handoff scope. |  |  |
@@ -80,7 +80,7 @@ Record only repo-safe change requests here. Do not add raw evidence, sensitive r
 
 ## Next Action
 
-When the first allowed recipient response arrives, update the `Adoption Record` table with a repo-safe role or alias, accepted use, conditions, date, and evidence location.
+The first CIB/internal reviewer response has been recorded as `accepted_with_conditions`.
 
 Do not start item `0082` or any new evidence collection from this tracker alone.
 

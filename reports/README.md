@@ -28,6 +28,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [post-0076-validation-provenance.md](post-0076-validation-provenance.md) | Repo-safe validation and baseline provenance for technical reviewers. |
 | [checkpoint-0081-approved-package-index.md](checkpoint-0081-approved-package-index.md) | Canonical index for the CIB-approved 78-record research checkpoint. |
 | [checkpoint-0081-final-handoff-note.md](checkpoint-0081-final-handoff-note.md) | Final handoff note and recipient-specific sharing gate for checkpoint 0081. |
+| [checkpoint-0081-cib-internal-adoption-response.md](checkpoint-0081-cib-internal-adoption-response.md) | Repo-safe CIB/internal `accepted_with_conditions` adoption response for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-tracker.md](checkpoint-0081-recipient-adoption-tracker.md) | Repo-safe recipient acceptance and conditions tracker for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-request.md](checkpoint-0081-recipient-adoption-request.md) | Repo-safe message/form for requesting recipient acceptance of checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-dispatch-log.md](checkpoint-0081-recipient-adoption-dispatch-log.md) | Repo-safe dispatch outbox and receipt tracker for checkpoint 0081 adoption requests. |

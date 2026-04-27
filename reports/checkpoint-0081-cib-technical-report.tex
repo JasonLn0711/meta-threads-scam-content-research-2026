@@ -355,22 +355,24 @@ Therefore the baseline triage support is \code{high 36}, \code{medium 10}, and \
   \item Confirmed pointers are high-yield for rule learning but cannot support prevalence estimates.
 \end{enumerate}
 
-\section{Reviewer Decision Points}
+\section{Reviewer Adoption Decision Points}
 
-Reviewers should decide whether the package is ready for checkpoint delivery, and whether any report edits are required before broader sharing.
+Reviewers should decide whether the package is accepted for checkpoint use, whether any repo-safe edits are required, and whether broader sharing requires legal/privacy review.
 
 \begin{table}[h]
 \centering
-\caption{Reviewer response table.}
+\caption{Reviewer adoption response table.}
 \begin{tabularx}{\textwidth}{@{}L{0.27\textwidth}Y@{}}
 \toprule
 Field & Response \\
 \midrule
 Checkpoint reviewed & \checkpoint{} \\
-Delivery status & \code{approve_for_checkpoint_delivery} / \code{approve_with_minor_edits} / \code{revise_before_delivery} / \code{block_delivery} \\
-Required edits & \\
-Additional reviewer roles & legal/privacy / domain / technical / stakeholder \\
+Status & \code{accepted_for_checkpoint_use} / \code{accepted_with_conditions} / \code{revision_requested} / \code{new_capped_evidence_decision_requested} / \code{blocked_until_legal_privacy} \\
+Accepted use & evidence-system review / annotation-rule calibration / governance review / report-package handoff / planning future research decisions \\
+Conditions or limits & \\
+Required repo-safe edits & \\
 New evidence collection authorized? & \texttt{no}, unless a separate capped decision is recorded \\
+Broader external sharing requested? & \texttt{no}, unless legal/privacy status is requested \\
 Notes & \\
 \bottomrule
 \end{tabularx}

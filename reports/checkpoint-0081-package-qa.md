@@ -12,10 +12,10 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| Package version/date | 2026-04-27 recipient adoption dispatch rebuild |
-| Package file count | 43 files |
+| Package version/date | 2026-04-27 CIB/internal adoption response rebuild |
+| Package file count | 45 files |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package status | recipient adoption dispatch log opened; ready for allowed checkpoint use |
+| Package status | CIB/internal adoption recorded as `accepted_with_conditions`; ready for internal checkpoint use |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
 ## Included Entry Points
@@ -29,6 +29,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source with tables and figures. |
 | `reports/checkpoint-0081-approved-package-index.md` | Canonical approved package index. |
 | `reports/checkpoint-0081-final-handoff-note.md` | Final handoff note and recipient-specific sharing gate. |
+| `reports/checkpoint-0081-cib-internal-adoption-response.md` | Repo-safe CIB/internal adoption response. |
 | `reports/checkpoint-0081-recipient-adoption-tracker.md` | Repo-safe recipient acceptance and conditions tracker. |
 | `reports/checkpoint-0081-recipient-adoption-request.md` | Repo-safe message/form for recipient acceptance. |
 | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` | Repo-safe dispatch outbox and receipt tracker. |
@@ -41,6 +42,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Reviewer response and minor-edit resolution decision. |
 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
+| `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` | CIB/internal adoption response decision. |
 
 ## Validation
 
@@ -59,6 +61,9 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Recipient adoption tracker | present |
 | Recipient adoption request | present |
 | Recipient adoption dispatch log | present |
+| CIB/internal adoption response | present |
+| Adoption status vocabulary alignment | pass: current adoption-facing materials use `accepted_for_checkpoint_use`, `accepted_with_conditions`, `revision_requested`, `new_capped_evidence_decision_requested`, and `blocked_until_legal_privacy` |
+| Historical 35-file re-check count contextualized | pass: technical/governance re-check note now marks the 35-file count as historical to decision `0108` and points to this QA note for the current package count |
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |

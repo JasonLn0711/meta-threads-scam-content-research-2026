@@ -1,8 +1,45 @@
-# Post-0076 Reviewer Package Manifest
+# Historical Post-0076 Reviewer Package Manifest
+
+## Superseded Notice
+
+This manifest is retained only as historical context for the old post-0076 reviewer package.
+It is not the current checkpoint 0081 adoption package and should not be used as the current reviewer package manifest.
+
+Current checkpoint:
+
+```text
+threads_pilot_v1_0081
+```
+
+Current CIB/internal adoption status:
+
+```text
+accepted_with_conditions
+```
+
+Current package entry points:
+
+- `reports/checkpoint-0081-recipient-adoption-request.md`
+- `reports/checkpoint-0081-cib-internal-adoption-response.md`
+- `reports/checkpoint-0081-approved-package-index.md`
+- `reports/checkpoint-0081-recipient-adoption-tracker.md`
+- `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md`
+
+Reviewed adoption-request package SHA-256:
+
+```text
+1e5d732c8c2039db905934d4cad76f2244b4dd4f787b9fcb86db3dbd974f9cf9
+```
+
+The rebuilt local handoff ZIP is recorded in:
+
+```text
+/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256
+```
 
 ## Package Identity
 
-This ZIP is a selected post-0076 reviewer package, not a full repo snapshot.
+Historical note: this ZIP was a selected post-0076 reviewer package, not a full repo snapshot.
 
 Package path after rebuild:
 
@@ -10,8 +47,8 @@ Package path after rebuild:
 /Users/iKev/Downloads/post-0076-report-v0-package.zip
 ```
 
-Current package status: `revise_before_delivery`.
-Selected path under revision: `report_only_delivery`.
+Historical package status: `revise_before_delivery`.
+Historical selected path under revision: `report_only_delivery`.
 
 Some included files contain historical references to pilot-launch materials that exist only in the full repo. Those historical references are context, not current authorization.
 

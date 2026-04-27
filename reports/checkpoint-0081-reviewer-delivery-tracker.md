@@ -11,12 +11,12 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | recipient adoption dispatch log opened; ready for allowed checkpoint use |
+| Package status | CIB/internal adoption recorded as `accepted_with_conditions`; ready for internal checkpoint use |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package file count | 43 files after recipient-adoption dispatch package rebuild |
-| Current decision | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
+| Package file count | 45 files after CIB/internal adoption package rebuild |
+| Current decision | `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` |
 
 ## Reviewer Reading Order
 
@@ -28,20 +28,22 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | 4 | `reports/checkpoint-0081-recipient-adoption-tracker.md` | Repo-safe recipient acceptance and conditions tracker. |
 | 5 | `reports/checkpoint-0081-recipient-adoption-request.md` | Repo-safe message/form for recipient acceptance. |
 | 6 | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` | Repo-safe dispatch outbox and receipt tracker. |
-| 7 | `reports/checkpoint-0081-executive-addendum.md` | Short checkpoint summary. |
-| 8 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled technical report with tables and figures. |
-| 9 | `reports/checkpoint-0081-approved-package-index.md` | Canonical checkpoint index and non-claims. |
-| 10 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
-| 11 | `reports/checkpoint-0081-package-qa.md` | Package QA, validation, checksum, and leakage-scan summary. |
-| 12 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
-| 13 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
-| 14 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
-| 15 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Minor-edit response decision. |
-| 16 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
-| 17 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
-| 18 | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` | Recipient adoption tracking decision. |
-| 19 | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` | Recipient adoption request decision. |
-| 20 | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` | Recipient adoption dispatch decision. |
+| 7 | `reports/checkpoint-0081-cib-internal-adoption-response.md` | Repo-safe CIB/internal adoption response. |
+| 8 | `reports/checkpoint-0081-executive-addendum.md` | Short checkpoint summary. |
+| 9 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled technical report with tables and figures. |
+| 10 | `reports/checkpoint-0081-approved-package-index.md` | Canonical checkpoint index and non-claims. |
+| 11 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
+| 12 | `reports/checkpoint-0081-package-qa.md` | Package QA, validation, checksum, and leakage-scan summary. |
+| 13 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
+| 14 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
+| 15 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
+| 16 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Minor-edit response decision. |
+| 17 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
+| 18 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
+| 19 | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` | Recipient adoption tracking decision. |
+| 20 | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` | Recipient adoption request decision. |
+| 21 | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` | Recipient adoption dispatch decision. |
+| 22 | `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` | CIB/internal adoption response decision. |
 
 ## Reviewer Response Table
 
@@ -56,14 +58,17 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | recipient adoption | repo-safe tracker | opened | `recipient_adoption_tracking_open` | First actual recipient response must be recorded in `reports/checkpoint-0081-recipient-adoption-tracker.md`; no new evidence is authorized. | 2026-04-27 |
 | recipient adoption request | repo-safe request form | prepared | `recipient_adoption_request_ready` | Use the request form to obtain repo-safe recipient adoption status; no new evidence is authorized. | 2026-04-27 |
 | recipient adoption dispatch | repo-safe dispatch log | opened | `ready_to_dispatch` | Send through approved channel outside git, then update dispatch status; no new evidence is authorized. | 2026-04-27 |
+| CIB/internal adoption | CIB domain / governance reviewer | recorded | `accepted_with_conditions` | Internal research/planning use accepted; no new evidence, item `0082`, expansion, model training, production, legal determination, public release, or raw evidence in git authorized; broader external sharing still requires legal/privacy status. | 2026-04-27 |
 
-Allowed decisions:
+Current adoption statuses:
 
-- `approve_for_checkpoint_use`
-- `approve_with_minor_edits`
-- `revise_before_delivery`
-- `request_new_capped_evidence_decision`
-- `block_delivery`
+- `accepted_for_checkpoint_use`
+- `accepted_with_conditions`
+- `revision_requested`
+- `new_capped_evidence_decision_requested`
+- `blocked_until_legal_privacy`
+
+Historical delivery and repair decisions in the table above are retained as prior package history. New recipient-facing responses should use the adoption status vocabulary.
 
 ## Delivery Boundary
 
@@ -117,3 +122,4 @@ Create a new decision record first. That new record must specify:
 | Recipient adoption tracking | Added repo-safe recipient adoption tracker and decision `0110`; package rebuilt with 39 files and external checksum. |
 | Recipient adoption request | Added repo-safe request note and decision `0111`; package rebuilt with 41 files and external checksum. |
 | Recipient adoption dispatch | Added repo-safe dispatch log and decision `0112`; package rebuilt with 43 files and external checksum. |
+| CIB/internal adoption response | Recorded `accepted_with_conditions`, aligned adoption status vocabulary, contextualized the historical 35-file re-check count, and rebuilt package with 45 files and external checksum. |

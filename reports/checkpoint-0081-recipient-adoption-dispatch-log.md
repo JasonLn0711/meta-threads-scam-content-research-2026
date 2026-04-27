@@ -17,7 +17,7 @@ This log contains no raw Threads URLs, handles, screenshots, raw post text, raw 
 | Checksum handoff file | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Adoption request | `reports/checkpoint-0081-recipient-adoption-request.md` |
 | Adoption tracker | `reports/checkpoint-0081-recipient-adoption-tracker.md` |
-| Current dispatch decision | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
+| Current dispatch decision | `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` |
 
 ## Allowed Dispatch Classes
 
@@ -45,7 +45,7 @@ Allowed dispatch statuses:
 
 | Recipient class | Recipient alias or role | Dispatch status | Sent date | Response status | Adoption tracker row updated? | Evidence location |
 |---|---|---|---|---|---|---|
-| CIB/internal reviewer |  | ready_to_dispatch |  | pending | no |  |
+| CIB/internal reviewer | CIB domain / governance reviewer | received | 2026-04-27 | accepted_with_conditions | yes | `reports/checkpoint-0081-cib-internal-adoption-response.md`; `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` |
 | technical/governance reviewer |  | ready_to_dispatch |  | pending | no |  |
 | broader external recipient |  | blocked_until_legal_privacy |  | blocked | no |  |
 | public release |  | not_authorized |  | blocked | no |  |

@@ -12,8 +12,8 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
 | Records | 78 strict-valid records |
-| Approval | CIB-approved research checkpoint |
-| Approved use | redacted evidence-system checkpoint review/use |
+| Approval | CIB-approved research checkpoint; CIB/internal adoption recorded as `accepted_with_conditions` |
+| Approved use | repo-safe internal evidence-system review, annotation-rule calibration, governance review, report/package handoff, and future research decision planning |
 | Dataset file | `data/interim/manual_records_checkpoint_0081.jsonl` |
 | Latest included item | `threads_pilot_v1_0081` |
 | Next authorized prospective tranche | none open |
@@ -25,6 +25,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 |---|---|
 | `reports/checkpoint-0081-executive-addendum.md` | Short entry point for reviewers. |
 | `reports/checkpoint-0081-final-handoff-note.md` | Final handoff note and recipient-specific sharing gate. |
+| `reports/checkpoint-0081-cib-internal-adoption-response.md` | Repo-safe CIB/internal adoption response. |
 | `reports/checkpoint-0081-recipient-adoption-tracker.md` | Repo-safe recipient acceptance and conditions tracker. |
 | `reports/checkpoint-0081-recipient-adoption-request.md` | Repo-safe message/form for recipient acceptance. |
 | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` | Repo-safe dispatch outbox and receipt tracker. |
@@ -45,6 +46,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` | Decision opening repo-safe recipient adoption tracking. |
 | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` | Decision preparing the repo-safe recipient adoption request. |
 | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` | Decision opening the repo-safe recipient adoption dispatch log. |
+| `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md` | Decision recording CIB/internal `accepted_with_conditions` adoption. |
 | `decision-log/0101-authorize-existing-ambiguous-medium-second-review.md` | Decision authorizing second review of existing ambiguous/medium records. |
 | `decision-log/0102-authorize-single-confirmed-pointer-0080-intake.md` | Decision authorizing the single item `0080` confirmed-pointer intake. |
 | `decision-log/0104-authorize-single-confirmed-pointer-0081-intake.md` | Decision authorizing the single item `0081` confirmed-pointer intake. |
@@ -66,6 +68,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Recipient adoption tracking is open | approved package-readiness fact |
 | Recipient adoption request is ready | approved package-readiness fact |
 | Recipient adoption dispatch log is open | approved package-readiness fact |
+| CIB/internal adoption is recorded as `accepted_with_conditions` | approved package-readiness fact |
 
 ## Explicit Non-Claims
 
@@ -77,6 +80,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 - This package does not authorize broad browser-session expansion.
 - This package does not authorize embedding/model training.
 - This package does not put raw evidence into git.
+- This package does not authorize broader external sharing until legal/privacy status is separately recorded.
 
 ## Future Decision Gates
 

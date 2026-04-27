@@ -23,7 +23,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Git worktree before re-check | clean on `main...origin/main` |
 | Strict validation | pass: 78 checked, 0 errors, 0 warnings |
-| Final package manifest file count | 35 listed after re-check rebuild; all present |
+| Final package manifest file count | Historical decision `0108` re-check count: 35 listed after that re-check rebuild; all present at that time. Current package file count is tracked in `reports/checkpoint-0081-package-qa.md`. |
 | Package stale-string check | no stale file-count wording, old checksums, old run-outcome wording, or old baseline run-name strings found |
 | `.DS_Store` in ZIP | none found |
 | ZIP checksum handling | external `.zip.sha256` handoff file |

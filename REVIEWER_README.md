@@ -1,11 +1,48 @@
-# Post-0076 Reviewer README
+# Historical Post-0076 Reviewer README
+
+## Superseded Notice
+
+This file is retained only as historical context for the old post-0076 reviewer package.
+It is not the current checkpoint 0081 adoption package and should not be used for current CIB/internal reviewer response.
+
+Current checkpoint:
+
+```text
+threads_pilot_v1_0081
+```
+
+Current CIB/internal adoption status:
+
+```text
+accepted_with_conditions
+```
+
+Current package entry points:
+
+- `reports/checkpoint-0081-recipient-adoption-request.md`
+- `reports/checkpoint-0081-cib-internal-adoption-response.md`
+- `reports/checkpoint-0081-approved-package-index.md`
+- `reports/checkpoint-0081-recipient-adoption-tracker.md`
+- `decision-log/0113-record-checkpoint-0081-cib-internal-adoption.md`
+
+Reviewed adoption-request package SHA-256:
+
+```text
+1e5d732c8c2039db905934d4cad76f2244b4dd4f787b9fcb86db3dbd974f9cf9
+```
+
+The rebuilt local handoff ZIP is recorded in:
+
+```text
+/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256
+```
 
 ## Start Here
 
-This is a selected post-0076 reviewer package, not a full repo snapshot.
+Historical note: this was a selected post-0076 reviewer package, not a full repo snapshot.
 
-Current status: `revise_before_delivery`.
-Recommended path under revision: `report_only_delivery`.
+Historical status at that time: `revise_before_delivery`.
+Historical recommended path under revision: `report_only_delivery`.
 
 Checkpoint 0055 remains the canonical approved CIB/165-facing checkpoint package. Item 0076 is a narrow local hard-negative addendum for false-positive calibration. It is not a scam/high-risk expansion and does not authorize item `0077`.
 
