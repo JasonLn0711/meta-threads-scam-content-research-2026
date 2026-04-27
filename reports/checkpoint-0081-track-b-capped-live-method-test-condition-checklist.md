@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Record the hard conditions required before Track B can begin under decision `0121`.
+Record the hard conditions required before Track B can begin under decision `0121`, and the final start authorization recorded in decision `0122`.
 
 Track B is a capped live candidate-discovery method test. It is not item `0082`, not checkpoint continuation by habit, not open-ended collection, and not production detection.
 
-Track B cannot begin until every required condition below is complete.
+Track B can now begin only under the locked caps, daily stop-rule checks, validation boundary, raw-evidence exclusion rule, and aggregate-only reporting boundary recorded below.
 
 ## Current Status
 
@@ -14,13 +14,17 @@ Track B cannot begin until every required condition below is complete.
 |---|---|
 | Authorization decision | `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
 | Track | `track_b_capped_live_method_test` |
-| Execution status | `conditionally_approved_blocked_until_all_conditions_pass` |
+| Execution status | `start_authorized_after_formal_signoff` |
+| Start authorization decision | `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` |
 | Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
 | Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
 | Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
+| Legal/privacy formal response | `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md` |
+| CIB/internal formal response | `reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md` |
+| Formal signoff summary | `reports/checkpoint-0081-track-b-formal-signoff-summary.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -36,15 +40,15 @@ Track B cannot begin until every required condition below is complete.
 
 | Condition | Required state before Track B | Current status | Notes |
 |---|---|---|---|
-| Legal/privacy reviewer status | no veto / approved with recorded conditions | pending | Track B cannot start while unresolved. |
-| CIB/internal owner status | accepts capped method-test boundary | pending | Must accept that this is not item `0082` or enforcement. |
+| Legal/privacy reviewer status | no veto / approved with recorded conditions | pass | `no_veto` recorded in `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md`. |
+| CIB/internal owner status | accepts capped method-test boundary | pass | `accepted_boundary` recorded in `reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md`; this is not item `0082` or enforcement. |
 | Technical/governance owner status | confirms execution controls | pass | `confirmed_controls` response recorded. |
-| Controlled-store custodian | assigned | pass | `track_b_controlled_store_custodian`; legal/privacy boundary still pending. |
+| Controlled-store custodian | assigned | pass | `track_b_controlled_store_custodian`; legal/privacy no-veto recorded. |
 | Primary reviewer role alias | assigned | pass | `track_b_primary_reviewer_role`. |
 | Second reviewer role alias | assigned | pass | `track_b_second_reviewer_role`. |
 | Stop-rule owner | assigned | pass | `track_b_stop_rule_owner`. |
 | Daily stop-check owner | assigned | pass | `track_b_daily_stop_check_owner`. |
-| Validation owner | assigned | pass | `track_b_validation_owner`; strict validation output target still pending. |
+| Validation owner | assigned | pass | `track_b_validation_owner`; strict validation target is ready. |
 | Reporting owner | assigned | pass | `track_b_reporting_owner`. |
 | Source-arm caps | locked | pass | Caps inherited from decision `0121`; no overflow queue. |
 | Surfaced candidate cap | locked at 300 | pass | No overflow queue. |
@@ -54,7 +58,7 @@ Track B cannot begin until every required condition below is complete.
 | Daily stop-rule checklist | ready | pass | `reports/checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md` |
 | Candidate record template | ready | pass | `reports/checkpoint-0081-final-capped-method-test-candidate-record-template.md` |
 | Aggregate-only report template | ready | pass | `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` |
-| Controlled-store boundary | documented | pass_pending_legal_privacy | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian alias is assigned, but legal/privacy boundary remains pending. |
+| Controlled-store boundary | documented | pass | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian alias is assigned and legal/privacy no-veto is recorded. |
 | Strict validation command | command shape and target ready | pass | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md`; local-only dataset target is `data/interim/track_b/manual_records_track_b.jsonl`. |
 | Raw evidence exclusion scan/check | required | pass_with_conditions | Must be run before any Track B report is committed; any raw evidence hit triggers immediate stop and cleanup review. |
 | Track A dry-run result | should be complete before Track B | pass_with_limitations | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`; limitations must be reviewed before Track B. |
@@ -132,7 +136,17 @@ Track B must not include:
 
 Track B may begin only when all `pending` or `pass_pending_*` fields in this checklist are resolved to `pass` or a recorded condition that does not block execution.
 
-If any hard condition remains unresolved, Track B remains blocked and only Track A may proceed.
+All hard conditions are now resolved.
+
+```text
+Track B condition checklist:
+fully_green
+
+Track B start eligibility:
+may_begin_under_locked_caps
+```
+
+If any later correction introduces a veto, blocking condition, raw-evidence leakage, cap breach, or stop-threshold breach, Track B must pause under the stop-rule procedure.
 
 ## Next Action
 
@@ -140,9 +154,9 @@ Do not open another abstract review package.
 
 Do:
 
-1. collect repo-safe condition responses using `reports/checkpoint-0081-track-b-condition-response-request.md`;
-2. send the formal signoff package through the approved channel listed in `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md`;
-3. record the remaining formal legal/privacy and CIB/internal responses in `reports/checkpoint-0081-track-b-formal-signoff-record.md`;
-4. record accepted responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
-5. resolve Track B pending conditions;
-6. start Track B only after this checklist is fully green.
+1. start Track B only under decision `0122`;
+2. keep the source-arm caps and total caps locked;
+3. run the daily stop-rule check;
+4. run the raw-evidence exclusion check before any Track B output is committed;
+5. keep all reporting aggregate-only and repo-safe;
+6. pause immediately if any stop condition is triggered.

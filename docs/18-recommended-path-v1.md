@@ -19,7 +19,8 @@ checkpoint 0081 research evidence
 → final execution authorization package with Track A and Track B separated
 → final gate response: Track A approved after start checklist, Track B conditional
 → Track A zero-new-evidence dry run
-→ Track B capped live method test only if all hard conditions pass
+→ formal signoff: legal/privacy no-veto and CIB/internal boundary acceptance
+→ decision 0122: Track B start authorization under locked caps
 → human review and second review
 → discovery-yield and reviewer-burden evaluation
 → decision on expansion, revision, or pause
@@ -41,11 +42,11 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 The repo is now in controlled execution planning for the investment-scam discovery method.
 
-Immediate next action: use decision `0121` to move out of abstract review and into gated execution planning. Track A start checklist is complete and the zero-new-evidence dry-run report is [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B remains blocked until [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green. Use [../reports/checkpoint-0081-track-b-condition-response-request.md](../reports/checkpoint-0081-track-b-condition-response-request.md) to collect repo-safe responses, then record accepted responses in [../reports/checkpoint-0081-track-b-condition-resolution-tracker.md](../reports/checkpoint-0081-track-b-condition-resolution-tracker.md), without opening another abstract review package.
+Immediate next action: use decision `0122` to start Track B under locked caps and stop rules. Track A start checklist is complete and the zero-new-evidence dry-run report is [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B formal signoff is complete: legal/privacy status is `no_veto`, CIB/internal owner status is `accepted_boundary`, and [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green. The formal signoff summary is [../reports/checkpoint-0081-track-b-formal-signoff-summary.md](../reports/checkpoint-0081-track-b-formal-signoff-summary.md).
 
-Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation. Decision `0121` records final gate response: Track A is approved after start-checklist completion, and Track B is approved only after hard conditions pass.
+Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation. Decision `0121` records final gate response: Track A is approved after start-checklist completion, and Track B is approved only after hard conditions pass. Decision `0122` records that those hard conditions are satisfied and that Track B may begin under locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting.
 
-Do not open item `0082`, broad crawler expansion, embedding/model experiment, production detection, legal fraud determination, or another abstract package. Do not execute Track B until the condition checklist is fully green. Historical post-0076 decision choices were:
+Do not open item `0082`, broad crawler expansion, embedding/model experiment, production detection, legal fraud determination, or another abstract package. Do not execute Track B outside decision `0122`, the locked caps, the approved source arms, or the stop-rule boundary. Historical post-0076 decision choices were:
 
 - `report_only_delivery`
 - `targeted_confirmed_pointer_tranche`
@@ -71,9 +72,9 @@ Historical pilot-launch materials remain available in [29-authorized-pilot-execu
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`.
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff.
 
-The next repo action is not to polish `0118` or `0120`. Use the Track B condition-response request and condition-resolution tracker to resolve legal/privacy, CIB/internal, technical/governance, role, controlled-store, validation, reporting, and leakage-check blockers. Track B remains blocked until its condition checklist is fully green.
+The next repo action is not to polish `0118`, `0120`, or another package. Start Track B only under decision `0122`: locked caps, no overflow queue, daily stop-rule checks, strict validation, raw-evidence exclusion before git-facing output, and aggregate-only reporting.
 
 Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
 

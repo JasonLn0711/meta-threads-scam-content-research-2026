@@ -18,6 +18,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 controlled execution planning | 2026-04-27 | Track A dry-run result and Track B hard-condition checklist after decision 0121 | [checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md) |
 | checkpoint 0081 Track B condition response | 2026-04-27 | Repo-safe request form for resolving Track B hard conditions before any live method test | [checkpoint-0081-track-b-condition-response-request.md](checkpoint-0081-track-b-condition-response-request.md) |
 | checkpoint 0081 Track B full reviewer package | 2026-04-27 | Full repo-safe package manifest, QA, and reviewer message for Track B condition response | [checkpoint-0081-track-b-condition-response-full-package-manifest.md](checkpoint-0081-track-b-condition-response-full-package-manifest.md) |
+| checkpoint 0081 Track B start authorization | 2026-04-27 | Formal signoff summary and start authorization for Track B under locked caps | [checkpoint-0081-track-b-formal-signoff-summary.md](checkpoint-0081-track-b-formal-signoff-summary.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -61,6 +62,10 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-condition-response-dispatch-log.md](checkpoint-0081-track-b-condition-response-dispatch-log.md) | Dispatch-ready log and first technical/governance response record for Track B condition signoff. |
 | [checkpoint-0081-track-b-formal-signoff-record.md](checkpoint-0081-track-b-formal-signoff-record.md) | Final repo-safe intake record for legal/privacy and CIB/internal formal signoffs before Track B. |
 | [checkpoint-0081-track-b-formal-signoff-dispatch-log.md](checkpoint-0081-track-b-formal-signoff-dispatch-log.md) | Dispatch log for the approved Track B formal signoff reviewer package. |
+| [checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md](checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md) | Legal/privacy `no_veto` formal signoff response for Track B under the locked capped method-test boundary. |
+| [checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md](checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md) | CIB/internal owner `accepted_boundary` formal signoff response for Track B as an internal research method test. |
+| [checkpoint-0081-track-b-formal-signoff-summary.md](checkpoint-0081-track-b-formal-signoff-summary.md) | Final formal signoff summary showing Track B condition checklist `fully_green`. |
+| [../decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md](../decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md) | Decision recording that Track B may begin under locked caps and stop rules after formal signoff. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -116,10 +121,11 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 9. use decision `0121` to record `approve_track_a_now_track_b_after_conditions`
 10. use the completed Track A dry-run report to identify workflow limitations
 11. use the Track B condition-response request and condition-resolution tracker to collect repo-safe legal/privacy, CIB/internal, role, controlled-store, validation, reporting, and leakage-check responses
-12. keep Track B blocked until legal/privacy, CIB/internal, role, controlled-store, cap, stop-rule, validation, and leakage-check conditions are fully green
-13. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-14. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-15. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+12. record Track B formal signoff: legal/privacy `no_veto`, CIB/internal owner `accepted_boundary`, and checklist `fully_green`
+13. use decision `0122` to start Track B only under locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting
+14. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+15. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+16. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 

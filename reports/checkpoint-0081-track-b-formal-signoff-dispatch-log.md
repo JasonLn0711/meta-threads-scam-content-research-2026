@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Record approval to dispatch the Track B formal signoff reviewer package and the exact response requested from the remaining formal signoff owners.
+Record approval to dispatch the Track B formal signoff reviewer package, the exact response requested from the remaining formal signoff owners, and the formal responses later received.
 
-This is not a new review package. It does not authorize Track B execution.
+This was not a new review package. Dispatch did not authorize Track B execution. The later start authorization is recorded separately in decision `0122`.
 
 ## Dispatch
 
@@ -18,12 +18,13 @@ This is not a new review package. It does not authorize Track B execution.
 | Regular files | 39 |
 | Reviewer decision | `approve_formal_signoff_package_for_dispatch` |
 | Package sufficiency | `accepted_as_sufficient` |
-| Dispatch status | `approved_for_dispatch_pending_approved_channel_send` |
+| Dispatch status | `approved_for_dispatch_responses_recorded` |
 | Recipient classes | legal/privacy reviewer; CIB/internal owner |
 | Optional copy classes | technical/governance owner; controlled-store custodian; stop-rule owner; validation owner; reporting owner |
 | Review purpose | final Track B formal signoff |
-| Track B current status | blocked pending formal signoff |
+| Track B current status | start-authorized after formal signoff |
 | Track B execution authorized by dispatch | no |
+| Track B start authorization after response | `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -75,15 +76,28 @@ Please provide only repo-safe formal signoff text using the statuses in REVIEWER
 
 ## After Response
 
-When formal responses arrive, update only:
+Formal responses arrived and are recorded in:
 
 ```text
-reports/checkpoint-0081-track-b-formal-signoff-record.md
-reports/checkpoint-0081-track-b-condition-resolution-tracker.md
-reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md
+reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md
+reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md
+reports/checkpoint-0081-track-b-formal-signoff-summary.md
 ```
 
-If both remaining signoffs pass and the checklist is fully green, the next record should be:
+The formal signoff record, condition tracker, and condition checklist were updated to reflect:
+
+```text
+Legal/privacy status:
+no_veto
+
+CIB/internal owner status:
+accepted_boundary
+
+Track B condition checklist:
+fully_green
+```
+
+The start authorization is:
 
 ```text
 decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md
@@ -93,7 +107,7 @@ decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md
 
 This dispatch log does not authorize:
 
-- Track B execution before the checklist is fully green;
+- Track B activity outside decision `0122`, locked caps, stop rules, validation, and aggregate-only reporting;
 - item `0082`;
 - open-ended collection;
 - broad crawler/browser expansion;

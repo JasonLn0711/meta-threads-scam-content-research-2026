@@ -6,7 +6,7 @@ Track the hard conditions that must be resolved before Track B capped live metho
 
 This is an operational gate tracker, not another review package and not an abstract readiness cycle.
 
-Track B remains blocked until every required condition is resolved in repo-safe form.
+Track B is start-authorized under decision `0122` because every required hard condition is now resolved in repo-safe form.
 
 ## Current Status
 
@@ -21,7 +21,11 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
 | Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
 | Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
-| Track B status | `blocked_pending_condition_signoff` |
+| Legal/privacy formal response | `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md` |
+| CIB/internal formal response | `reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md` |
+| Formal signoff summary | `reports/checkpoint-0081-track-b-formal-signoff-summary.md` |
+| Start authorization decision | `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` |
+| Track B status | `start_authorized_under_locked_caps` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -31,10 +35,10 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 
 | Condition group | Required repo-safe response | Current status | Blocks Track B? | Notes |
 |---|---|---|---:|---|
-| Legal/privacy no-veto | `no_veto` / `approved_with_conditions` / `veto` | pending | yes | Must cover approved browser-session candidates, reply/comment categorization, OCR-derived text handling, profile-context categories, external contact/link categories, retention, deletion, redaction, and aggregate sharing boundary. |
-| CIB/internal owner acceptance | `accepted_boundary` / `accepted_with_conditions` / `not_accepted` | pending | yes | Must confirm capped method-test boundary and no enforcement/legal-determination use. |
+| Legal/privacy no-veto | `no_veto` / `approved_with_conditions` / `veto` | `no_veto` | no | Covers approved browser-session candidates, reply/comment categorization, OCR-derived text handling, profile-context categories, external contact/link categories, retention, deletion, redaction, and aggregate sharing boundary under the locked Track B caps. |
+| CIB/internal owner acceptance | `accepted_boundary` / `accepted_with_conditions` / `not_accepted` | `accepted_boundary` | no | Confirms capped method-test boundary and no enforcement/legal-determination use. |
 | Technical/governance execution control | `confirmed_controls` / `confirmed_with_conditions` / `not_confirmed` | `confirmed_controls` | no | Aggressive technical/governance response accepts controls as sufficient for condition signoff. |
-| Controlled-store custodian | repo-safe custodian alias recorded | `track_b_controlled_store_custodian` | no | Alias recorded; formal legal/privacy boundary still pending. |
+| Controlled-store custodian | repo-safe custodian alias recorded | `track_b_controlled_store_custodian` | no | Alias recorded; formal legal/privacy no-veto recorded. |
 | Track B reviewer role aliases | repo-safe role aliases recorded | assigned | no | Primary, second, stop-rule, daily stop-check, validation, and reporting role aliases are recorded below. |
 | Raw-evidence exclusion check | pre-commit/check command or procedure recorded | `ready_with_conditions` | no | Must run before any Track B output is committed; any raw evidence hit triggers stop and cleanup review. |
 | Strict validation output target | target and procedure recorded | pass | no | Local-only target: `data/interim/track_b/manual_records_track_b.jsonl`; log target: `data/interim/track_b/validation_track_b_strict.txt`. |
@@ -61,19 +65,36 @@ These aliases are proposed placeholders. They do not identify private people, ac
 | Primary Track B reviewer | `track_b_primary_reviewer_role` | assigned |
 | Second Track B reviewer | `track_b_second_reviewer_role` | assigned |
 | Technical/governance owner | `track_b_technical_governance_owner` | confirmed controls; alias still available for execution ownership |
-| Legal/privacy owner | `track_b_legal_privacy_owner` | pending confirmation |
+| Legal/privacy owner | `track_b_legal_privacy_owner` | `no_veto` recorded |
 | Controlled-store custodian | `track_b_controlled_store_custodian` | assigned |
 | Stop-rule owner | `track_b_stop_rule_owner` | assigned |
 | Daily stop-check owner | `track_b_daily_stop_check_owner` | assigned |
 | Validation owner | `track_b_validation_owner` | assigned |
 | Reporting owner | `track_b_reporting_owner` | assigned |
-| CIB/internal owner | `track_b_cib_internal_owner` | pending confirmation |
+| CIB/internal owner | `track_b_cib_internal_owner` | `accepted_boundary` recorded |
 
 ## Recorded Response Notes
 
 The first repo-safe condition response accepts the package as sufficient for condition signoff and records technical/governance `confirmed_controls`.
 
-Legal/privacy and CIB/internal statements in that response are recommendations, not final no-veto or acceptance records. They remain blocking until formal repo-safe responses are recorded.
+Legal/privacy and CIB/internal formal responses are now recorded:
+
+```text
+Legal/privacy status:
+no_veto
+
+CIB/internal owner status:
+accepted_boundary
+```
+
+The final signoff summary records:
+
+```text
+Track B condition checklist:
+fully_green
+
+Track B may begin under locked caps.
+```
 
 Raw-evidence exclusion check is `ready_with_conditions`: run the exclusion check before any Track B output is committed. Any raw URL, handle, screenshot, raw post text, raw reply text, contact ID, credential, browser/session artifact, exact controlled-store path, stakeholder case ID, or private recipient detail found in git-facing output triggers immediate stop and cleanup review.
 
@@ -103,7 +124,7 @@ No overflow queue is allowed.
 
 ## Repo-Safe Response Form
 
-Use this response shape to resolve the pending conditions.
+Use this response shape only if a later correction, condition, or incident requires an additional repo-safe response.
 
 ```text
 Track B condition response
@@ -144,7 +165,7 @@ Do not include real names, private contact details, raw Threads URLs, handles, s
 
 This tracker does not authorize:
 
-- Track B execution before all conditions pass;
+- Track B activity outside decision `0122`, locked caps, stop rules, validation, and aggregate-only reporting;
 - item `0082`;
 - open-ended collection;
 - broad crawler/browser expansion;
@@ -160,22 +181,21 @@ This tracker does not authorize:
 
 ## Next Action
 
-Collect repo-safe condition responses using:
+Do not open another review package and do not change caps.
+
+Track B may begin under:
 
 ```text
-reports/checkpoint-0081-track-b-condition-response-request.md
+decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md
 ```
 
-Record the two remaining formal responses in:
-
-```text
-reports/checkpoint-0081-track-b-formal-signoff-record.md
-```
-
-After every blocking condition is resolved, update:
+Use:
 
 ```text
 reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md
+reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md
 ```
 
-Do not start Track B until that checklist is fully green.
+before and during any Track B output handling. Run the raw-evidence exclusion check before any Track B output is committed.
+
+Pause immediately if any stop condition is triggered.

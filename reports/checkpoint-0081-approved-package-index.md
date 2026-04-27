@@ -17,7 +17,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Dataset file | `data/interim/manual_records_checkpoint_0081.jsonl` |
 | Latest included item | `threads_pilot_v1_0081` |
 | Next authorized prospective tranche | none open |
-| Next recommended action | review the post-package shadow-pilot readiness gap analysis, align it to investment-scam candidate discovery, and close remaining recipient adoption gates |
+| Next recommended action | start Track B under decision `0122` locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting |
 
 ## Package Artifacts
 
@@ -86,6 +86,10 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` | Dispatch-ready package log and first technical/governance condition response record. |
 | `reports/checkpoint-0081-track-b-formal-signoff-record.md` | Final repo-safe intake record for legal/privacy and CIB/internal formal signoffs before Track B. |
 | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` | Dispatch log for the approved Track B formal signoff reviewer package. |
+| `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md` | Legal/privacy `no_veto` formal signoff response for Track B under the locked capped method-test boundary. |
+| `reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md` | CIB/internal owner `accepted_boundary` formal signoff response for Track B as an internal research method test. |
+| `reports/checkpoint-0081-track-b-formal-signoff-summary.md` | Formal signoff summary recording Track B condition checklist `fully_green`. |
+| `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` | Decision recording that Track B may begin under locked caps and stop rules after formal signoff. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-readme.md` | Repo copy of the formal signoff reviewer package README. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-message.md` | Repo copy of the formal signoff reviewer message. |
 | `reports/checkpoint-0081-track-b-formal-signoff-package-manifest.md` | Repo copy of the formal signoff package manifest. |
@@ -123,6 +127,10 @@ These files were added after checkpoint 0081 package delivery to document operat
 | Final execution authorization package is open with Track A and Track B separated | final-gate planning fact; not execution authorization |
 | Final gate response is recorded as `approve_track_a_now_track_b_after_conditions` | Track A may start after checklist completion; Track B remains blocked until hard conditions pass |
 | Track A zero-new-evidence dry run is completed with limitations | workflow/template result; not new evidence and not Track B authorization |
+| Legal/privacy formal signoff is recorded as `no_veto` | Track B legal/privacy blocker resolved under locked caps and repo-safe boundary |
+| CIB/internal owner formal signoff is recorded as `accepted_boundary` | Track B CIB/internal boundary blocker resolved for internal research method test only |
+| Track B condition checklist is `fully_green` | formal signoff summary fact; start is limited to locked caps and stop rules |
+| Decision `0122` records Track B start authorization after formal signoff | Track B may begin under locked caps; still no item `0082`, no open-ended collection, and no raw evidence in git |
 
 ## Explicit Non-Claims
 
@@ -153,8 +161,8 @@ Likely future choices:
 | Final execution authorization package | Ask reviewers whether to approve Track A dry run only, approve Track A plus Track B, approve with conditions, revise, or block execution. |
 | Track A zero-new-evidence dry run | Completed with limitations; use the report to fix workflow gaps before Track B. |
 | Track B condition response request | Send or use the repo-safe request form before updating the condition tracker. |
-| Track B condition resolution | Collect repo-safe legal/privacy, CIB/internal, technical/governance, role, controlled-store, validation, reporting, and leakage-check responses. |
-| Track B capped live method test | Start only after Track B hard conditions are fully green; no item `0082` or overflow queue. |
+| Track B condition resolution | Completed for formal signoff: legal/privacy `no_veto`, CIB/internal `accepted_boundary`, checklist `fully_green`. |
+| Track B capped live method test | May start under decision `0122`; no item `0082`, no overflow queue, and stop immediately on any stop-condition breach. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |
