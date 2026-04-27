@@ -84,6 +84,8 @@ The first CIB/internal reviewer response has been recorded as `accepted_with_con
 
 Do not start item `0082` or any new evidence collection from this tracker alone.
 
+Use `reports/checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` for design-only planning if reviewers want to understand what gates, SOPs, metrics, and stop rules are missing before any shadow-only pilot can be considered.
+
 Use `reports/checkpoint-0081-recipient-adoption-request.md` as the response request form so returned feedback can be copied into this tracker without exposing raw evidence or private recipient details.
 
 Use `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` to record repo-safe sent/received status before updating adoption outcomes.

@@ -97,3 +97,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Prepared checkpoint 0081 recipient adoption request without authorizing new collection | `0111-prepare-checkpoint-0081-recipient-adoption-request.md` |
 | 2026-04-27 | Opened checkpoint 0081 recipient adoption dispatch log without authorizing new collection | `0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
 | 2026-04-27 | Recorded CIB/internal `accepted_with_conditions` adoption for checkpoint 0081 without authorizing new collection | `0113-record-checkpoint-0081-cib-internal-adoption.md` |
+| 2026-04-27 | Opened a design-only checkpoint 0081 shadow-pilot readiness gap analysis without authorizing execution or new collection | `0114-open-checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` |

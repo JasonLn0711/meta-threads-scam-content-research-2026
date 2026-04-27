@@ -17,7 +17,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Dataset file | `data/interim/manual_records_checkpoint_0081.jsonl` |
 | Latest included item | `threads_pilot_v1_0081` |
 | Next authorized prospective tranche | none open |
-| Next recommended action | reviewer-facing package/report addendum |
+| Next recommended action | review the post-package shadow-pilot readiness gap analysis and close remaining recipient adoption gates |
 
 ## Package Artifacts
 
@@ -52,6 +52,15 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `decision-log/0104-authorize-single-confirmed-pointer-0081-intake.md` | Decision authorizing the single item `0081` confirmed-pointer intake. |
 | `governance/pilot-launch/run_index.md` | Run, item, checkpoint, and gate index. |
 
+## Post-Package Readiness Artifacts
+
+These files were added after checkpoint 0081 package delivery to document operational-readiness gaps. They do not change the approved checkpoint package contents or checksum unless a new package rebuild is separately recorded.
+
+| Artifact | Purpose |
+|---|---|
+| `reports/checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` | Design-only gap analysis for shadow-pilot gates, SOPs, metrics, risks, and stop rules. |
+| `decision-log/0114-open-checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` | Decision opening design-only operational-readiness gap analysis without authorizing execution or collection. |
+
 ## Approved Findings
 
 | Finding | Status |
@@ -69,6 +78,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Recipient adoption request is ready | approved package-readiness fact |
 | Recipient adoption dispatch log is open | approved package-readiness fact |
 | CIB/internal adoption is recorded as `accepted_with_conditions` | approved package-readiness fact |
+| Shadow-pilot readiness analysis is open as design-only planning | approved planning fact; not execution authorization |
 
 ## Explicit Non-Claims
 
@@ -91,6 +101,7 @@ Likely future choices:
 | Future path | When to consider |
 |---|---|
 | Report/package maintenance | Current checkpoint needs reviewer-facing delivery only. |
+| Shadow-pilot readiness planning | Stakeholders need to understand gates, SOPs, reviewer workflow, metrics, and stop rules before any shadow-only pilot decision. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |
