@@ -85,6 +85,10 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-track-b-condition-response-request.md` | Repo-safe response request for resolving Track B hard conditions before any live method test. |
 | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` | Dispatch-ready package log and first technical/governance condition response record. |
 | `reports/checkpoint-0081-track-b-formal-signoff-record.md` | Final repo-safe intake record for legal/privacy and CIB/internal formal signoffs before Track B. |
+| `reports/checkpoint-0081-track-b-formal-signoff-reviewer-readme.md` | Repo copy of the formal signoff reviewer package README. |
+| `reports/checkpoint-0081-track-b-formal-signoff-reviewer-message.md` | Repo copy of the formal signoff reviewer message. |
+| `reports/checkpoint-0081-track-b-formal-signoff-package-manifest.md` | Repo copy of the formal signoff package manifest. |
+| `reports/checkpoint-0081-track-b-formal-signoff-package-qa.md` | Repo-safe QA for the formal signoff package. |
 | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` | Operational tracker for resolving Track B hard conditions without opening a new review package. |
 | `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` | Hard-condition checklist for Track B capped live method test; post-package controlled execution planning artifact. |
 | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` | Local-only strict-validation target and raw-evidence exclusion procedure for Track B. |
