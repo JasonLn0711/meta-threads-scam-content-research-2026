@@ -60,6 +60,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-condition-response-request.md](checkpoint-0081-track-b-condition-response-request.md) | Repo-safe request form for legal/privacy, CIB/internal, technical/governance, role, controlled-store, validation, reporting, and leakage-check responses. |
 | [checkpoint-0081-track-b-condition-response-dispatch-log.md](checkpoint-0081-track-b-condition-response-dispatch-log.md) | Dispatch-ready log and first technical/governance response record for Track B condition signoff. |
 | [checkpoint-0081-track-b-formal-signoff-record.md](checkpoint-0081-track-b-formal-signoff-record.md) | Final repo-safe intake record for legal/privacy and CIB/internal formal signoffs before Track B. |
+| [checkpoint-0081-track-b-formal-signoff-dispatch-log.md](checkpoint-0081-track-b-formal-signoff-dispatch-log.md) | Dispatch log for the approved Track B formal signoff reviewer package. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |

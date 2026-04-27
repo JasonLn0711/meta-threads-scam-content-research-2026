@@ -20,6 +20,7 @@ Track B cannot begin until every required condition below is complete.
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
 | Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
+| Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -140,7 +141,8 @@ Do not open another abstract review package.
 Do:
 
 1. collect repo-safe condition responses using `reports/checkpoint-0081-track-b-condition-response-request.md`;
-2. record the remaining formal legal/privacy and CIB/internal responses in `reports/checkpoint-0081-track-b-formal-signoff-record.md`;
-3. record accepted responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
-4. resolve Track B pending conditions;
-5. start Track B only after this checklist is fully green.
+2. send the formal signoff package through the approved channel listed in `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md`;
+3. record the remaining formal legal/privacy and CIB/internal responses in `reports/checkpoint-0081-track-b-formal-signoff-record.md`;
+4. record accepted responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
+5. resolve Track B pending conditions;
+6. start Track B only after this checklist is fully green.

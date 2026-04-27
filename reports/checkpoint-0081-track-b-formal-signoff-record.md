@@ -21,6 +21,9 @@ Track B remains blocked until both remaining signoffs are recorded as pass or no
 | Controlled-store custodian alias | assigned |
 | Strict validation target | ready |
 | Raw-evidence exclusion procedure | ready with conditions |
+| Formal signoff package | `checkpoint-0081-track-b-formal-signoff-reviewer-package` |
+| Formal signoff package dispatch | `approved_for_dispatch_pending_approved_channel_send` |
+| Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
 | Track B execution status | blocked pending formal signoff |
 
 ## Remaining Required Signoffs
