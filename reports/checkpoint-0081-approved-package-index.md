@@ -69,6 +69,16 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `decision-log/0119-open-checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package.md` | Decision opening a review-only package for decision `0118`; technical/governance plus legal/privacy review only, not execution authorization. |
 | `reports/checkpoint-0081-capped-method-test-decision-review-request.md` | Repo-safe request for review of decision `0118` readiness. |
 | `reports/checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package-qa.md` | Package-specific QA for the decision `0118` review package. |
+| `decision-log/0120-open-final-capped-investment-scam-discovery-method-test-execution-authorization-package.md` | Decision opening final execution authorization package preparation; not execution authorization. |
+| `reports/checkpoint-0081-final-capped-method-test-authorization-request.md` | Final gate request separating Track A zero-new-evidence dry run from Track B capped live method test. |
+| `reports/checkpoint-0081-final-capped-method-test-execution-sop.md` | Day-by-day SOP for Track A and Track B if authorized. |
+| `reports/checkpoint-0081-final-capped-method-test-reviewer-assignment-table.md` | Required repo-safe role aliases before execution. |
+| `reports/checkpoint-0081-final-capped-method-test-legal-privacy-gate-memo.md` | Concrete legal/privacy questions for Track A and Track B. |
+| `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md` | Controlled-store-only and tracked-repo evidence boundary. |
+| `reports/checkpoint-0081-final-capped-method-test-candidate-record-template.md` | Repo-safe candidate record template. |
+| `reports/checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md` | Stop-rule incident template and daily stop-rule fields. |
+| `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` | Aggregate-only reporting template. |
+| `reports/checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md` | QA expectations for the final authorization package. |
 
 ## Approved Findings
 
@@ -92,6 +102,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | Technical/governance review accepted the method design for next-decision drafting | approved planning fact; not execution authorization |
 | Capped investment-scam discovery method-test decision drafting is open | draft-only planning fact; not execution authorization |
 | Decision `0118` review packaging is open | review-only planning fact; not execution authorization |
+| Final execution authorization package is open with Track A and Track B separated | final-gate planning fact; not execution authorization |
 
 ## Explicit Non-Claims
 
@@ -119,6 +130,7 @@ Likely future choices:
 | Method-test charter review | Review the design-only charter and signal-family matrix before any separate capped execution decision. |
 | Capped method-test decision draft | Review proposed caps, source arms, reviewer roles, legal/privacy gate, controlled-store handling, metrics thresholds, stop rules, and aggregate reporting before any execution approval. |
 | Decision `0118` review package | Ask technical/governance and legal/privacy reviewers whether the capped decision draft can proceed toward a future execution-gate review. |
+| Final execution authorization package | Ask reviewers whether to approve Track A dry run only, approve Track A plus Track B, approve with conditions, revise, or block execution. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |
