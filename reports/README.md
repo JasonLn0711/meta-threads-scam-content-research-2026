@@ -30,6 +30,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-final-handoff-note.md](checkpoint-0081-final-handoff-note.md) | Final handoff note and recipient-specific sharing gate for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-tracker.md](checkpoint-0081-recipient-adoption-tracker.md) | Repo-safe recipient acceptance and conditions tracker for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-request.md](checkpoint-0081-recipient-adoption-request.md) | Repo-safe message/form for requesting recipient acceptance of checkpoint 0081. |
+| [checkpoint-0081-recipient-adoption-dispatch-log.md](checkpoint-0081-recipient-adoption-dispatch-log.md) | Repo-safe dispatch outbox and receipt tracker for checkpoint 0081 adoption requests. |
 | [checkpoint-0081-reviewer-delivery-tracker.md](checkpoint-0081-reviewer-delivery-tracker.md) | Delivery tracker and reviewer response table for checkpoint 0081. |
 | [checkpoint-0081-package-qa.md](checkpoint-0081-package-qa.md) | Package QA, checksum, validation, and leakage-scan summary for checkpoint 0081. |
 | [checkpoint-0081-technical-governance-recheck.md](checkpoint-0081-technical-governance-recheck.md) | Technical/governance re-check result after minor edits. |

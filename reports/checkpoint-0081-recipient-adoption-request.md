@@ -15,7 +15,8 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Checksum handoff file | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Package QA | `reports/checkpoint-0081-package-qa.md` |
 | Recipient adoption tracker | `reports/checkpoint-0081-recipient-adoption-tracker.md` |
-| Current tracking decision | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` |
+| Dispatch log | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` |
+| Current tracking decision | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
 
 ## Suggested Message
 
@@ -82,3 +83,5 @@ This request does not authorize:
 After a response arrives, record the repo-safe result in `reports/checkpoint-0081-recipient-adoption-tracker.md`.
 
 If the response requests new evidence, external sharing, model training, production use, or legal conclusions, create a separate decision record before any work begins.
+
+After sending the request through an approved channel, update `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` with repo-safe dispatch status.

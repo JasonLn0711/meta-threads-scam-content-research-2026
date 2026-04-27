@@ -27,6 +27,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `reports/checkpoint-0081-final-handoff-note.md` | Final handoff note and recipient-specific sharing gate. |
 | `reports/checkpoint-0081-recipient-adoption-tracker.md` | Repo-safe recipient acceptance and conditions tracker. |
 | `reports/checkpoint-0081-recipient-adoption-request.md` | Repo-safe message/form for recipient acceptance. |
+| `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` | Repo-safe dispatch outbox and receipt tracker. |
 | `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Delivery tracker and reviewer response table. |
 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report for rigorous CIB reviewer reading. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source for auditability and later revision. |
@@ -43,6 +44,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Decision recording final package handoff and sharing gate. |
 | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` | Decision opening repo-safe recipient adoption tracking. |
 | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` | Decision preparing the repo-safe recipient adoption request. |
+| `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` | Decision opening the repo-safe recipient adoption dispatch log. |
 | `decision-log/0101-authorize-existing-ambiguous-medium-second-review.md` | Decision authorizing second review of existing ambiguous/medium records. |
 | `decision-log/0102-authorize-single-confirmed-pointer-0080-intake.md` | Decision authorizing the single item `0080` confirmed-pointer intake. |
 | `decision-log/0104-authorize-single-confirmed-pointer-0081-intake.md` | Decision authorizing the single item `0081` confirmed-pointer intake. |
@@ -63,6 +65,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Final handoff is ready for allowed recipient classes | approved package-readiness fact |
 | Recipient adoption tracking is open | approved package-readiness fact |
 | Recipient adoption request is ready | approved package-readiness fact |
+| Recipient adoption dispatch log is open | approved package-readiness fact |
 
 ## Explicit Non-Claims
 

@@ -95,3 +95,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Recorded checkpoint 0081 final handoff and recipient-specific sharing gate | `0109-record-checkpoint-0081-final-handoff.md` |
 | 2026-04-27 | Opened checkpoint 0081 recipient adoption tracking without authorizing new collection | `0110-open-checkpoint-0081-recipient-adoption-tracking.md` |
 | 2026-04-27 | Prepared checkpoint 0081 recipient adoption request without authorizing new collection | `0111-prepare-checkpoint-0081-recipient-adoption-request.md` |
+| 2026-04-27 | Opened checkpoint 0081 recipient adoption dispatch log without authorizing new collection | `0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |

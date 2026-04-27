@@ -11,13 +11,14 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | recipient adoption request prepared; ready for allowed checkpoint use |
+| Package status | recipient adoption dispatch log opened; ready for allowed checkpoint use |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Current handoff decision | `decision-log/0109-record-checkpoint-0081-final-handoff.md` |
-| Current tracking decision | `decision-log/0111-prepare-checkpoint-0081-recipient-adoption-request.md` |
+| Current tracking decision | `decision-log/0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
 | Adoption request form | `reports/checkpoint-0081-recipient-adoption-request.md` |
+| Dispatch log | `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` |
 
 ## Recipient Classes
 
@@ -84,3 +85,5 @@ When the first allowed recipient response arrives, update the `Adoption Record` 
 Do not start item `0082` or any new evidence collection from this tracker alone.
 
 Use `reports/checkpoint-0081-recipient-adoption-request.md` as the response request form so returned feedback can be copied into this tracker without exposing raw evidence or private recipient details.
+
+Use `reports/checkpoint-0081-recipient-adoption-dispatch-log.md` to record repo-safe sent/received status before updating adoption outcomes.
