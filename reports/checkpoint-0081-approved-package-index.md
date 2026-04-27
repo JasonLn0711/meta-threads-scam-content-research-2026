@@ -66,6 +66,9 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md` | Package-specific QA for the selected technical/governance review ZIP; post-package artifact, not a change to the earlier checkpoint 0081 approved package checksum. |
 | `decision-log/0117-record-checkpoint-0081-investment-scam-discovery-method-technical-governance-review-response.md` | Technical/governance `approve_design_for_next_decision` response for the method design package; next-decision planning only. |
 | `decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md` | Draft-only capped method-test decision with proposed caps, source arms, metrics thresholds, hard-negative protection, stop rules, and execution gates; not executable until approved. |
+| `decision-log/0119-open-checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package.md` | Decision opening a review-only package for decision `0118`; technical/governance plus legal/privacy review only, not execution authorization. |
+| `reports/checkpoint-0081-capped-method-test-decision-review-request.md` | Repo-safe request for review of decision `0118` readiness. |
+| `reports/checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package-qa.md` | Package-specific QA for the decision `0118` review package. |
 
 ## Approved Findings
 
@@ -88,6 +91,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | Scalable investment-scam candidate discovery is the current first-principle method goal | approved planning fact; not collection authorization |
 | Technical/governance review accepted the method design for next-decision drafting | approved planning fact; not execution authorization |
 | Capped investment-scam discovery method-test decision drafting is open | draft-only planning fact; not execution authorization |
+| Decision `0118` review packaging is open | review-only planning fact; not execution authorization |
 
 ## Explicit Non-Claims
 
@@ -114,6 +118,7 @@ Likely future choices:
 | Investment-scam discovery-method design | The repo needs to define a bounded method test that measures candidate quality, discovery yield, duplicate load, reviewer burden, and hard-negative protection before scaling. |
 | Method-test charter review | Review the design-only charter and signal-family matrix before any separate capped execution decision. |
 | Capped method-test decision draft | Review proposed caps, source arms, reviewer roles, legal/privacy gate, controlled-store handling, metrics thresholds, stop rules, and aggregate reporting before any execution approval. |
+| Decision `0118` review package | Ask technical/governance and legal/privacy reviewers whether the capped decision draft can proceed toward a future execution-gate review. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |
