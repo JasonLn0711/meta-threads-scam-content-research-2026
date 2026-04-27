@@ -93,3 +93,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Recorded checkpoint 0081 `approve_with_minor_edits` response and required repo-safe fixes | `0107-record-checkpoint-0081-approve-with-minor-edits.md` |
 | 2026-04-27 | Recorded checkpoint 0081 technical/governance re-check pass | `0108-record-checkpoint-0081-technical-governance-recheck.md` |
 | 2026-04-27 | Recorded checkpoint 0081 final handoff and recipient-specific sharing gate | `0109-record-checkpoint-0081-final-handoff.md` |
+| 2026-04-27 | Opened checkpoint 0081 recipient adoption tracking without authorizing new collection | `0110-open-checkpoint-0081-recipient-adoption-tracking.md` |

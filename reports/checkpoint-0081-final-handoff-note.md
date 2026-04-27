@@ -17,6 +17,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | Package QA | `reports/checkpoint-0081-package-qa.md` |
 | Delivery tracker | `reports/checkpoint-0081-reviewer-delivery-tracker.md` |
+| Recipient adoption tracker | `reports/checkpoint-0081-recipient-adoption-tracker.md` |
 | Final handoff decision | `decision-log/0109-record-checkpoint-0081-final-handoff.md` |
 
 ## Approved Use
@@ -46,9 +47,10 @@ CIB-approved 78-record research checkpoint
 7. `reports/checkpoint-0081-package-qa.md`
 8. `reports/checkpoint-0081-technical-governance-recheck.md`
 9. `reports/checkpoint-0081-reviewer-delivery-tracker.md`
-10. `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md`
-11. `governance/pilot-launch/run_index.md`
-12. `docs/06-annotation-guideline-v1.md`
+10. `reports/checkpoint-0081-recipient-adoption-tracker.md`
+11. `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md`
+12. `governance/pilot-launch/run_index.md`
+13. `docs/06-annotation-guideline-v1.md`
 
 ## Recipient-Specific Sharing Gate
 
@@ -86,3 +88,4 @@ The next decision should be one of:
 | `new_capped_evidence_decision_requested` | A reviewer requests new evidence, requiring a new capped decision record before collection. |
 | `checkpoint_0081_closed_no_new_work` | The checkpoint is archived as the current completed research handoff without new collection. |
 
+Recipient adoption tracking is opened in `reports/checkpoint-0081-recipient-adoption-tracker.md`. Record only repo-safe recipient roles, statuses, accepted uses, and conditions there.

@@ -11,12 +11,12 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | final handoff recorded; ready for allowed checkpoint use |
+| Package status | recipient adoption tracking opened; ready for allowed checkpoint use |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package file count | 37 files after final handoff package rebuild |
-| Current decision | `decision-log/0109-record-checkpoint-0081-final-handoff.md` |
+| Package file count | 39 files after recipient-adoption tracking package rebuild |
+| Current decision | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` |
 
 ## Reviewer Reading Order
 
@@ -25,17 +25,19 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | 1 | `REVIEWER_README.md` | Package entry point and reviewer response table. |
 | 2 | `PACKAGE_MANIFEST.md` | Exact package contents and exclusions. |
 | 3 | `reports/checkpoint-0081-final-handoff-note.md` | Final package handoff note and sharing gate. |
-| 4 | `reports/checkpoint-0081-executive-addendum.md` | Short checkpoint summary. |
-| 5 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled technical report with tables and figures. |
-| 6 | `reports/checkpoint-0081-approved-package-index.md` | Canonical checkpoint index and non-claims. |
-| 7 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
-| 8 | `reports/checkpoint-0081-package-qa.md` | Package QA, validation, checksum, and leakage-scan summary. |
-| 9 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
-| 10 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
-| 11 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
-| 12 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Minor-edit response decision. |
-| 13 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
-| 14 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
+| 4 | `reports/checkpoint-0081-recipient-adoption-tracker.md` | Repo-safe recipient acceptance and conditions tracker. |
+| 5 | `reports/checkpoint-0081-executive-addendum.md` | Short checkpoint summary. |
+| 6 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled technical report with tables and figures. |
+| 7 | `reports/checkpoint-0081-approved-package-index.md` | Canonical checkpoint index and non-claims. |
+| 8 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
+| 9 | `reports/checkpoint-0081-package-qa.md` | Package QA, validation, checksum, and leakage-scan summary. |
+| 10 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
+| 11 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval of the checkpoint synthesis. |
+| 12 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
+| 13 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Minor-edit response decision. |
+| 14 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
+| 15 | `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
+| 16 | `decision-log/0110-open-checkpoint-0081-recipient-adoption-tracking.md` | Recipient adoption tracking decision. |
 
 ## Reviewer Response Table
 
@@ -47,6 +49,7 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | governance | local governance re-check | passed | `approve_for_checkpoint_use` | Non-authorizations preserved: no item `0082`, no new collection, no production detector, no legal fraud determination, no raw evidence in git. | 2026-04-27 |
 | stakeholder/project owner | project owner | recorded | `approve_with_minor_edits` | No new evidence collection authorized; proceed only with package/report maintenance. | 2026-04-27 |
 | final handoff | project owner | recorded | `ready_for_allowed_checkpoint_use` | Package may be handed off to CIB/internal and technical/governance reviewers; broader external sharing still requires legal/privacy status. | 2026-04-27 |
+| recipient adoption | repo-safe tracker | opened | `recipient_adoption_tracking_open` | First actual recipient response must be recorded in `reports/checkpoint-0081-recipient-adoption-tracker.md`; no new evidence is authorized. | 2026-04-27 |
 
 Allowed decisions:
 
@@ -105,3 +108,4 @@ Create a new decision record first. That new record must specify:
 | Rebuild package/checksum | Rebuilt package after minor edits; checksum is recorded in the adjacent external `.zip.sha256` handoff file. |
 | Technical/governance re-check | Passed; package is ready for checkpoint use and handoff within the stated governance boundary. |
 | Final handoff note | Added final handoff note and recipient-specific sharing gate; package rebuilt with 37 files and external checksum. |
+| Recipient adoption tracking | Added repo-safe recipient adoption tracker and decision `0110`; package rebuilt with 39 files and external checksum. |
