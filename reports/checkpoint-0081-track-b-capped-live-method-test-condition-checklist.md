@@ -51,7 +51,7 @@ Track B cannot begin until every required condition below is complete.
 | Controlled-store boundary | documented | pass_pending_custodian | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian still pending. |
 | Strict validation command | command shape ready | pending_output_target | Use `python3 scripts/validate_thread_dataset.py <track_b_dataset>.json --strict` after an approved repo-safe output exists. |
 | Raw evidence exclusion scan/check | required | pending | Must be run before any Track B report is committed. |
-| Track A dry-run result | should be complete before Track B | pending | Track A should expose SOP/schema problems before live method test. |
+| Track A dry-run result | should be complete before Track B | pass_with_limitations | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`; limitations must be reviewed before Track B. |
 
 ## Source-Arm Caps
 
@@ -133,8 +133,6 @@ Do not open another abstract review package.
 
 Do:
 
-1. complete Track A start checklist;
-2. run Track A dry run;
-3. use Track A result to verify SOP/schema/reporting readiness;
-4. resolve Track B pending conditions;
-5. start Track B only after this checklist is fully green.
+1. review Track A dry-run limitations;
+2. resolve Track B pending conditions;
+3. start Track B only after this checklist is fully green.

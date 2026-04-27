@@ -14,7 +14,7 @@ This checklist does not authorize Track B and does not authorize new evidence co
 |---|---|
 | Authorization decision | `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
 | Track | `track_a_zero_new_evidence_dry_run` |
-| Execution status | `approved_pending_start_checklist_completion` |
+| Execution status | `start_checklist_complete_track_a_dry_run_report_created` |
 | New evidence collection authorized | no |
 | Browser/session use authorized | no |
 | Item `0082` authorized | no |
@@ -34,16 +34,16 @@ This checklist does not authorize Track B and does not authorize new evidence co
 | Aggregate report template ready | ready | pass | `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` |
 | Stop-rule incident template ready | ready | pass | `reports/checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md` |
 | Controlled-store boundary understood | confirmed for dry-run use | pass | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md` |
-| Reviewer role aliases assigned | required before start | pending | `reports/checkpoint-0081-final-capped-method-test-reviewer-assignment-table.md` currently records assignment fields. |
-| Stop-rule owner assigned | required before start | pending | Role alias must be recorded before starting. |
-| Daily stop-check owner assigned | required before start | pending | Role alias must be recorded before starting. |
-| Validation owner assigned | required before start | pending | Role alias must be recorded before starting. |
-| Strict validation command ready | command shape ready | pending_output_target | Use `python3 scripts/validate_thread_dataset.py <track_a_output>.json --strict` after a repo-safe Track A output file exists. |
-| Repo-safe output path selected | required before start | pending | Suggested output: `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`. |
+| Reviewer role aliases assigned | required before start | pass | `reports/checkpoint-0081-final-capped-method-test-reviewer-assignment-table.md` assigns Track A role aliases only. |
+| Stop-rule owner assigned | required before start | pass | `track_a_stop_rule_owner` assigned. |
+| Daily stop-check owner assigned | required before start | pass | `track_a_daily_stop_check_owner` assigned. |
+| Validation owner assigned | required before start | pass | `track_a_validation_owner` assigned. |
+| Strict validation command ready | command shape ready | pass_with_scope_note | `python3 scripts/validate_thread_dataset.py --help` confirms command shape; Track A report is Markdown, not a strict-valid dataset expansion. |
+| Repo-safe output path selected | required before start | pass | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`. |
 
 ## Minimum Start Condition
 
-Track A may start only after these pending fields are resolved:
+Track A start fields are resolved:
 
 - reviewer role aliases assigned;
 - stop-rule owner assigned;
@@ -97,6 +97,8 @@ Resolve the pending start fields, then run Track A and create:
 ```text
 reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md
 ```
+
+Track A dry-run report has been created at that path.
 
 Track B remains blocked by:
 
