@@ -23,6 +23,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 Track B Day 1 intake start | 2026-04-28 | Source-arm intake-control start with zero candidates surfaced so far | [checkpoint-0081-track-b-day-1-source-arm-intake-start.md](checkpoint-0081-track-b-day-1-source-arm-intake-start.md) |
 | checkpoint 0081 Track B Day 1 batch 0001 | 2026-04-28 | First repo-safe surfaced candidate batch from checkpoint-derived seed replay | [checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md](checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md) |
 | checkpoint 0081 Track B Day 1 batch 0001 primary review | 2026-04-28 | Primary review of six checkpoint-derived seed replay candidates, all requiring second review | [checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](checkpoint-0081-track-b-day-1-batch-0001-primary-review.md) |
+| checkpoint 0081 Track B Day 1 batch 0001 second review | 2026-04-28 | Second review of six checkpoint-derived seed replay candidates with final Track B review outcomes | [checkpoint-0081-track-b-day-1-batch-0001-second-review.md](checkpoint-0081-track-b-day-1-batch-0001-second-review.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -83,6 +84,9 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](checkpoint-0081-track-b-day-1-batch-0001-primary-review.md) | Primary review for batch `0001`; 6 reviewed, 6 second-review required, 0 accepted records. |
 | [../decision-log/0126-record-track-b-day-1-batch-0001-primary-review.md](../decision-log/0126-record-track-b-day-1-batch-0001-primary-review.md) | Decision recording batch `0001` primary review and stop-rule pause for more checkpoint replay surfacing. |
 | [../experiments/evaluation-notes/0093-track-b-day-1-batch-0001-primary-review.md](../experiments/evaluation-notes/0093-track-b-day-1-batch-0001-primary-review.md) | Evaluation note for batch `0001` primary review. |
+| [checkpoint-0081-track-b-day-1-batch-0001-second-review.md](checkpoint-0081-track-b-day-1-batch-0001-second-review.md) | Second review for batch `0001`; 6 final review outcomes recorded, 0 reviewer disagreements, 0 accepted strict-valid records. |
+| [../decision-log/0127-record-track-b-day-1-batch-0001-second-review.md](../decision-log/0127-record-track-b-day-1-batch-0001-second-review.md) | Decision recording batch `0001` second review and closure of the batch pause condition. |
+| [../experiments/evaluation-notes/0094-track-b-day-1-batch-0001-second-review.md](../experiments/evaluation-notes/0094-track-b-day-1-batch-0001-second-review.md) | Evaluation note for batch `0001` second review. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -144,9 +148,11 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 15. use decision `0124` as the Day 1 source-arm intake-control start
 16. use decision `0125` as the first surfaced candidate batch from checkpoint-derived seed replay
 17. use decision `0126` as the batch `0001` primary review and stop-rule pause for more checkpoint replay surfacing until second review
-18. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-19. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-20. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+18. use decision `0127` as the batch `0001` second review and final review outcome record
+19. select the next Track B source arm or batch deliberately; do not continue checkpoint replay by habit
+20. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+21. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+22. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 

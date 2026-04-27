@@ -14,7 +14,7 @@ This note contains no raw Threads content, full item URLs, raw handles, raw cont
 | Date bucket | `2026-04-28` |
 | Track | `track_b_capped_live_method_test` |
 | Source arm | `checkpoint-derived seed replay` |
-| Candidate status | `primary_review_complete_pending_second_review` |
+| Candidate status | `second_review_complete_final_outcomes_recorded` |
 | Candidates surfaced | 6 |
 | Candidates human-reviewed | 6 |
 | Accepted strict-valid records | 0 |
@@ -22,7 +22,7 @@ This note contains no raw Threads content, full item URLs, raw handles, raw cont
 | Run record | `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` |
 | Evaluation note | `experiments/evaluation-notes/0092-track-b-day-1-batch-0001-checkpoint-seed-replay.md` |
 | Raw evidence in git | no |
-| Stop-rule triggered | no |
+| Stop-rule triggered | closed: second-review pause resolved |
 
 ## Current Review Update
 
@@ -41,18 +41,36 @@ second review required: 6 of 6
 pause required: yes, for further checkpoint seed replay surfacing until second review
 ```
 
+Second review is now recorded in:
+
+```text
+reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md
+```
+
+Second review outcome:
+
+```text
+final Track B review outcomes: 6
+final scam/high: 4
+final non_scam/low hard negatives: 2
+reviewer disagreements: 0
+hard-negative false-positive pressure: 0
+accepted strict-valid records: 0
+pause required: no active pause from batch 0001
+```
+
 ## Candidate Ledger
 
 The prior checkpoint outcome is listed only to identify the replay source context. It is not a Track B review result.
 
 | Candidate ID | Checkpoint reference | Candidate unit | Primary signal family | Secondary signal families | Prior checkpoint outcome context | Track B review status |
 |---|---|---|---|---|---|---|
-| `track_b_seed_replay_0001` | `threads_pilot_v1_0081` | thread / funnel | reply/comment funnel cue | private-channel migration; testimonial/witness cue; reassurance/safety language; group invitation | prior checkpoint scam/high | primary review complete; second review required |
-| `track_b_seed_replay_0002` | `threads_pilot_v1_0080` | post / funnel | profit-proof | reassurance/no-fee language; teacher/advisor framing; private-channel migration | prior checkpoint scam/high | primary review complete; second review required |
-| `track_b_seed_replay_0003` | `threads_pilot_v1_0036` | thread / funnel | reply/comment funnel cue | external contact category; private-channel migration; contact-hijack pattern | prior checkpoint scam/high | primary review complete; second review required |
-| `track_b_seed_replay_0004` | `threads_pilot_v1_0031` | post / funnel | profit-proof | investment domain seed; testimonial/witness cue; conversion-context dependency | prior checkpoint scam/high | primary review complete; second review required |
-| `track_b_seed_replay_0005` | `threads_pilot_v1_0042` | post / hard negative | anti-scam warning hard negative | ordinary warning context; no author-controlled conversion path in repo-safe checkpoint summary | prior checkpoint non_scam/low | primary review complete; second review required |
-| `track_b_seed_replay_0006` | `threads_pilot_v1_0076` | post / hard negative | anti-scam warning hard negative | victim-prevention context; hard-negative calibration | prior checkpoint non_scam/low | primary review complete; second review required |
+| `track_b_seed_replay_0001` | `threads_pilot_v1_0081` | thread / funnel | reply/comment funnel cue | private-channel migration; testimonial/witness cue; reassurance/safety language; group invitation | prior checkpoint scam/high | second review complete; final Track B review outcome `scam` / `high` |
+| `track_b_seed_replay_0002` | `threads_pilot_v1_0080` | post / funnel | profit-proof | reassurance/no-fee language; teacher/advisor framing; private-channel migration | prior checkpoint scam/high | second review complete; final Track B review outcome `scam` / `high` |
+| `track_b_seed_replay_0003` | `threads_pilot_v1_0036` | thread / funnel | reply/comment funnel cue | external contact category; private-channel migration; contact-hijack pattern | prior checkpoint scam/high | second review complete; final Track B review outcome `scam` / `high` |
+| `track_b_seed_replay_0004` | `threads_pilot_v1_0031` | post / funnel | profit-proof | investment domain seed; testimonial/witness cue; conversion-context dependency | prior checkpoint scam/high | second review complete; final Track B review outcome `scam` / `high` |
+| `track_b_seed_replay_0005` | `threads_pilot_v1_0042` | post / hard negative | anti-scam warning hard negative | ordinary warning context; no author-controlled conversion path in repo-safe checkpoint summary | prior checkpoint non_scam/low | second review complete; hard-negative protected as `non_scam` / `low` |
+| `track_b_seed_replay_0006` | `threads_pilot_v1_0076` | post / hard negative | anti-scam warning hard negative | victim-prevention context; hard-negative calibration | prior checkpoint non_scam/low | second review complete; hard-negative protected as `non_scam` / `low` |
 
 ## Source-Arm Counter Update
 
@@ -73,6 +91,8 @@ Additional caps:
 | Human-reviewed candidates | 6 | 150 | 144 |
 | Accepted strict-valid records | 0 | 75 | 75 |
 
+Final Track B review outcomes recorded so far: `6`.
+
 ## Daily Stop-Rule Check
 
 | Field | Value |
@@ -87,8 +107,8 @@ Additional caps:
 | `second_review_rate_today` | 100% |
 | `reviewer_disagreement_today` | n/a |
 | `raw_evidence_leak` | no |
-| `stop_rule_triggered` | yes: second-review rate above threshold |
-| `pause_required` | yes: pause further checkpoint seed replay surfacing until second review |
+| `stop_rule_triggered` | closed: second-review pause condition resolved |
+| `pause_required` | no active pause from batch `0001`; continue only by next source-arm/batch control |
 | `owner_role_alias` | `track_b_daily_stop_check_owner` |
 
 ## Interpretation
@@ -97,7 +117,7 @@ Batch `0001` starts Track B with a low-risk replay path: existing checkpoint-der
 
 The batch is useful for checking whether the Track B candidate ledger can represent both high-risk funnel examples and hard-negative comparators before live source arms produce new candidates.
 
-Track B primary review is complete, but final Track B adjudication remains pending. Do not count these six candidates as Track B accepted or new strict-valid records until second review records final Track B outcomes.
+Track B second review is complete and final review outcomes are recorded for the batch. Do not count these six candidates as new strict-valid Track B records unless a later step creates and validates local-only Track B records under the approved validation target.
 
 ## Non-Authorizations
 

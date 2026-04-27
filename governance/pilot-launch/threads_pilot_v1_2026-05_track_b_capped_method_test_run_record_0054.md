@@ -210,3 +210,41 @@ Primary review used repo-safe checkpoint summaries only. It did not inspect or a
 Human-reviewed candidates: `6` of `150`.
 
 Accepted strict-valid records: `0` of `75`.
+
+## Day 1 Batch 0001 Second Review
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Batch ID | `track_b_day_1_batch_0001_checkpoint_seed_replay` |
+| Related decision | `0127-record-track-b-day-1-batch-0001-second-review` |
+| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md` |
+| Evaluation note | `experiments/evaluation-notes/0094-track-b-day-1-batch-0001-second-review.md` |
+| Review pass | second review |
+| Candidates second-reviewed in batch | 6 |
+| Final Track B review outcomes recorded | yes: 6 |
+| Final scam/high outcomes | 4 |
+| Final non_scam/low hard-negative outcomes | 2 |
+| Reviewer disagreements | 0 |
+| Hard-negative false-positive pressure | 0 |
+| Accepted strict-valid records in batch | 0 |
+| Stop-rule status | decision `0126` pause condition resolved for batch `0001` |
+| Pause required | no active pause from batch `0001`; continue only by next source-arm/batch control |
+
+Second review used repo-safe checkpoint summaries only. It did not inspect or add raw evidence to git and did not create new local Track B strict-validation records.
+
+### Counter Update After Second Review
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Final review outcomes | Accepted strict-valid records | Remaining surfaced cap |
+|---|---:|---:|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 6 | 6 | 6 | 0 | 24 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 0 | 30 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 0 | 110 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 0 | 60 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 0 | 20 |
+| Hard-negative probe arm | 50 | 0 | 0 | 0 | 0 | 50 |
+| Total | 300 | 6 | 6 | 6 | 0 | 294 |
+
+Human-reviewed candidates: `6` of `150`.
+
+Accepted strict-valid records: `0` of `75`.

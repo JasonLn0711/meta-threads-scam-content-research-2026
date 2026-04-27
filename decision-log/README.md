@@ -110,3 +110,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-28 | Recorded Track B Day 1 source-arm intake start with zero candidates surfaced so far | `0124-record-track-b-day-1-source-arm-intake-start.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0001: six checkpoint-derived seed replay candidates surfaced, pending Track B review | `0125-record-track-b-day-1-batch-0001-checkpoint-seed-replay.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0001 primary review and second-review pause condition | `0126-record-track-b-day-1-batch-0001-primary-review.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0001 second review and final review outcomes | `0127-record-track-b-day-1-batch-0001-second-review.md` |
