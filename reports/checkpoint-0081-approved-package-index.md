@@ -24,7 +24,8 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Artifact | Purpose |
 |---|---|
 | `reports/checkpoint-0081-executive-addendum.md` | Short entry point for reviewers. |
-| `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report for rigorous CIB reviewer reading. |
+| `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report for rigorous CIB reviewer reading. |
+| `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source for auditability and later revision. |
 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed checkpoint synthesis. |
 | `experiments/evaluation-notes/0088-existing-ambiguous-medium-second-review-synthesis.md` | Second-review synthesis and queue outcome. |
 | `experiments/evaluation-notes/0086-confirmed-pointer-0080-result.md` | Repo-safe result note for item `0080`. |

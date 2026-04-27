@@ -12,8 +12,8 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| Package file count | 28 files |
-| ZIP SHA-256 | `400d1c6ede942aca07fe63f60518b0a740eb8ef0e2dbf5818253ab1c1d2350c2` |
+| Package file count | 29 files |
+| ZIP SHA-256 | `a2bc022b3b465f3c0b7cdd1c9da3a61c0f0e8197e9d8e6c51ce99b615cd741ad` |
 | Package status | CIB-approved 78-record research checkpoint package |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
@@ -24,6 +24,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `REVIEWER_README.md` | Reviewer reading order and response table. |
 | `PACKAGE_MANIFEST.md` | Exact selected package contents and exclusions. |
 | `reports/checkpoint-0081-executive-addendum.md` | Short reviewer entry point. |
+| `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report with tables and figures. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source with tables and figures. |
 | `reports/checkpoint-0081-approved-package-index.md` | Canonical approved package index. |
 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
@@ -43,7 +44,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |
-| PDF compilation | not run; no `pdflatex`, `latexmk`, or `tectonic` executable was available in the local environment |
+| PDF compilation | pass with `tectonic`; warnings limited to table/long-path line breaking |
 
 ## Leakage Scan
 
