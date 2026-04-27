@@ -14,9 +14,10 @@ Before making changes, read:
 2. `docs/00-project-charter.md`
 3. `docs/18-recommended-path-v1.md`
 4. `docs/56-first-principle-investment-scam-discovery-method.md`
-5. `governance/data-governance.md`
-6. `AGENTS.md`
-7. `docs/21-repo-relationships.md`
+5. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+6. `governance/data-governance.md`
+7. `AGENTS.md`
+8. `docs/21-repo-relationships.md`
 
 ## Docs-First Updates
 

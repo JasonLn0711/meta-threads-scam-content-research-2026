@@ -60,6 +60,9 @@ These files were added after checkpoint 0081 package delivery to document operat
 |---|---|
 | `reports/checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` | Design-only gap analysis for shadow-pilot gates, SOPs, metrics, risks, and stop rules. |
 | `decision-log/0114-open-checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` | Decision opening design-only operational-readiness gap analysis without authorizing execution or collection. |
+| `reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` | Design-only charter draft for a future capped investment-scam candidate-discovery method test. |
+| `docs/57-investment-scam-discovery-signal-family-matrix.md` | Signal-family matrix for post, thread, account-context, and funnel candidates. |
+| `decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` | Decision opening the design-only method-test charter draft without authorizing execution. |
 
 ## Approved Findings
 
@@ -104,6 +107,7 @@ Likely future choices:
 | Report/package maintenance | Current checkpoint needs reviewer-facing delivery only. |
 | Shadow-pilot readiness planning | Stakeholders need to understand gates, SOPs, reviewer workflow, metrics, and stop rules before any shadow-only pilot decision. |
 | Investment-scam discovery-method design | The repo needs to define a bounded method test that measures candidate quality, discovery yield, duplicate load, reviewer burden, and hard-negative protection before scaling. |
+| Method-test charter review | Review the design-only charter and signal-family matrix before any separate capped execution decision. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |

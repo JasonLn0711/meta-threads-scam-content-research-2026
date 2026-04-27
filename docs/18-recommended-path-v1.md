@@ -12,6 +12,7 @@ The current path is:
 checkpoint 0081 research evidence
 → recipient adoption and readiness gates
 → investment-scam scalable candidate-discovery method design
+→ signal-family matrix and method-test charter draft
 → capped method test decision
 → human review and second review
 → discovery-yield and reviewer-burden evaluation
@@ -34,7 +35,7 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 The repo is now in checkpoint adoption, operational-readiness, and investment-scam discovery-method design mode.
 
-Immediate next action: keep checkpoint 0081 adoption boundaries intact while turning readiness work into a design-only candidate-discovery method plan for investment scams.
+Immediate next action: review and refine the design-only checkpoint 0081 investment-scam discovery method test charter draft and signal-family matrix, without executing collection.
 
 Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding/model experiment, or item `0077` until reviewers choose one of:
 
@@ -52,7 +53,7 @@ The current approved package should be used from:
 - [../reports/checkpoint-0076-hard-negative-addendum.md](../reports/checkpoint-0076-hard-negative-addendum.md)
 - [../reports/post-0076-next-decision-memo.md](../reports/post-0076-next-decision-memo.md)
 
-Do not continue collection by habit. Runs 0038 and 0039 show that approved browser-session search can produce strict-valid local candidate records, but it did not add final scam/high-risk items and can create duplicate/context-thin review load. Run 0045 and item 0076 show that browser-session work can still be useful for hard-negative calibration. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more scam/high-risk evidence. After run `0039`, do not promote additional browser-session candidates unless a new decision authorizes that work and the candidates pass the dedupe-first/full-thread-ready gate in [53-dedupe-first-full-thread-ready-gate.md](53-dedupe-first-full-thread-ready-gate.md). If a future browser run uses search queries, apply [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution. Any future candidate-discovery experiment should measure discovery yield, duplicate load, full-thread availability, reviewer burden, false-positive pressure, false-negative pressure, and hard-negative protection.
+Do not continue collection by habit. Runs 0038 and 0039 show that approved browser-session search can produce strict-valid local candidate records, but it did not add final scam/high-risk items and can create duplicate/context-thin review load. Run 0045 and item 0076 show that browser-session work can still be useful for hard-negative calibration. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more scam/high-risk evidence. After run `0039`, do not promote additional browser-session candidates unless a new decision authorizes that work and the candidates pass the dedupe-first/full-thread-ready gate in [53-dedupe-first-full-thread-ready-gate.md](53-dedupe-first-full-thread-ready-gate.md). If a future browser run uses search queries, apply [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution. Any future candidate-discovery experiment should measure discovery yield, duplicate load, full-thread availability, reviewer burden, false-positive pressure, false-negative pressure, and hard-negative protection. Use [57-investment-scam-discovery-signal-family-matrix.md](57-investment-scam-discovery-signal-family-matrix.md) to avoid collapsing the method back into repeated keyword search.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 

@@ -195,3 +195,9 @@ more package maintenance
 ```
 
 The current checkpoint 0081 readiness and shadow-pilot planning work should be interpreted as preparation for a controlled candidate-discovery method test, not as a replacement for the discovery-method goal.
+
+## Current Design Artifacts
+
+- [57-investment-scam-discovery-signal-family-matrix.md](57-investment-scam-discovery-signal-family-matrix.md) defines the signal-family matrix for post, thread, account-context, and funnel candidates.
+- [../reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](../reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) is the design-only charter draft for a future capped method test.
+- [../decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](../decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) opens these design artifacts without authorizing execution.

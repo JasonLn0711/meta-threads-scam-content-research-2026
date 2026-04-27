@@ -164,6 +164,8 @@ The immediate next step is checkpoint 0081 operational-readiness planning: CIB/i
 
 Decision 0115 realigns the repo around the first-principle discovery-method goal: future work should explain how it advances scalable, stable, and reviewable discovery of Threads investment-scam candidates. Package, governance, readiness, and shadow-pilot artifacts are support structures for that goal, not the final goal by themselves.
 
+Decision 0116 opens the design-only method-test charter draft at [reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) and the signal-family matrix at [docs/57-investment-scam-discovery-signal-family-matrix.md](docs/57-investment-scam-discovery-signal-family-matrix.md). These artifacts do not authorize execution, item `0082`, new evidence collection, crawler/browser expansion, model training, production detection, legal fraud determination, public release, or raw evidence in git.
+
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
 ## Recommended First Milestone
