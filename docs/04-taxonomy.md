@@ -45,7 +45,7 @@ Multiple types may apply, but over-selection is a taxonomy warning sign. Most it
 |---|---|
 | `unrealistic_profit_or_benefit` | Large money, health, job, prize, or status benefit. |
 | `guaranteed_or_risk_free_claim` | Guaranteed return, no-risk, daily income, fixed ROI. |
-| `past_performance_profit_proof` | Past stock picks, hit-rate, limit-up, profit table, or wealth-result claims used as proof. |
+| `past_performance_profit_proof` | Past stock picks, hit-rate, limit-up, profit table, luxury-result, or wealth-result claims used as proof. |
 | `high_fee_course_or_membership_funnel` | High-fee course, academy, membership, coaching, or trading-education funnel tied to financial outcomes. |
 | `stock_rescue_group_funnel` | Stock-rescue, trapped-position help, synchronized-trading, or free stock-community funnel. |
 | `individual_stock_advice_reply_funnel` | Reply/comment thread gives individualized buy, hold, add, wait, or sell guidance on specific stocks. |

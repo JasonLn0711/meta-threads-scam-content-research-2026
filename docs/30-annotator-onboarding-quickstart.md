@@ -125,6 +125,8 @@ High-value tags to watch:
 
 Signal tags are evidence features. They do not automatically determine the label.
 
+For confirmed investment-scam pointers, pay special attention to combinations: prior named stock wins, limit-up or percentage proof, screenshot-style profit tables, luxury-result claims, and "no fee / already financially free / just sharing or making friends" language together can be a high-risk trust funnel. The no-fee language may reduce suspicion rather than reduce risk.
+
 ## Required Note Style
 
 Write short, evidence-based notes.

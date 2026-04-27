@@ -242,6 +242,8 @@ Use `reply_impersonation_contact_hijack` when selected replies claim an official
 
 Escalate to `scam` or `uncertain` when this signal co-occurs with investment/profit framing, follower trust in the poster, anti-scam camouflage, daily list/holding-viewpoint offers, or repeated contact handles. Preserve attribution uncertainty in `annotation_notes`: the evidence may show thread-level scam risk or hijack risk even if the top-level post itself presents as benign, humble, or anti-scam.
 
+When a top-level investment post uses humble/non-analyst/no-benefit language, follower-profit or loss-recovery framing, and inability-to-reply pressure, inspect replies especially carefully. Adjacent accounts may publish the actual LINE/private-group/contact route while claiming to protect readers from scams. Anti-scam wording in those replies does not neutralize risk when the same reply gives a "safe" contact path, daily watchlist, holdings viewpoint, or group-entry cue.
+
 ### Past-Performance Profit Proof
 
 Do not label an item `scam` only because it discusses historical stock movement or shows ordinary investment records. Legitimate finance discussion may review past performance.
@@ -249,6 +251,8 @@ Do not label an item `scam` only because it discusses historical stock movement 
 Use `past_performance_profit_proof` when the poster uses past stock recommendations, hit-rate language, limit-up percentages, profit tables, "people who followed me got rich" claims, or wealth-result proof to establish trust in the poster's future picks or method.
 
 Escalate to `uncertain` or `scam` when this signal co-occurs with free-sharing or altruistic guru framing, "I am already financially free" credibility claims, named stock picks, unusually strong gain claims, reply/contact/code funnels, private-channel migration, or payment/course signals. Keep second review required because past performance proof can be fabricated, selectively sampled, or legitimate marketing depending on the whole evidence unit.
+
+When a CIB/stakeholder-confirmed pointer combines multiple prior named stock wins, limit-up or percentage-gain proof, a screenshot-style profit table, "followers got rich" or luxury-result claims, and "I do not charge because I am already financially free / just sharing or making friends" language, treat the combination as a high-risk trust funnel. The no-fee claim does not neutralize the lure; it can be part of the credibility strategy that makes later stock picks, private contact, or group conversion feel safer.
 
 ### Stock-Rescue Group Funnel
 
@@ -325,6 +329,8 @@ Use `high_fee_course_or_membership_funnel` when the collected evidence shows a c
 ### Finance Discussion Without A Conversion Step
 
 A post about routines, spreadsheets, gains/losses, or risk level is usually `non_scam` when it does not ask the reader to join, DM, pay, trust special access, or follow a secret method. Do not treat mild curiosity or investment vocabulary alone as `investment_lure`. Move to `uncertain` only when a visible funnel or a strong implied benefit is actually present.
+
+Investment-experience or trading-psychology posts can be trust-building starters when they establish the poster as experienced, disciplined, or psychologically skilled, especially when a redacted external-link category is present. Keep these as `uncertain` and raise risk only when evidence is partial; promote to `scam` only if fuller post/reply context shows private-message conversion, community migration, stock-tip guidance, reassurance, guarantees, contact cues, or other funnel mechanics.
 
 ### Satire Or Parody
 
