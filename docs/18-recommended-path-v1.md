@@ -1,5 +1,25 @@
 # Recommended Path v1
 
+## Current First-Principle Path
+
+The repo's first-principle goal is to find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+
+Use [56-first-principle-investment-scam-discovery-method.md](56-first-principle-investment-scam-discovery-method.md) as the current north-star method note.
+
+The current path is:
+
+```text
+checkpoint 0081 research evidence
+→ recipient adoption and readiness gates
+→ investment-scam scalable candidate-discovery method design
+→ capped method test decision
+→ human review and second review
+→ discovery-yield and reviewer-burden evaluation
+→ decision on expansion, revision, or pause
+```
+
+Do not treat package maintenance, generic governance, record-count growth, or model training as progress unless it improves this discovery-method path.
+
 ## Immediate Report Milestone
 
 By `2026-04-30`, produce [../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md) for CIB/165-facing review.
@@ -12,9 +32,9 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 ## Current Post-0076 Path
 
-The repo is now in report-delivery and stakeholder-decision mode.
+The repo is now in checkpoint adoption, operational-readiness, and investment-scam discovery-method design mode.
 
-Immediate next action: revise and deliver the selected post-0076 reviewer package under `report_only_delivery`. Use the approved 55-record checkpoint package plus the narrow 0076 hard-negative addendum as the current CIB/165-facing evidence-system state.
+Immediate next action: keep checkpoint 0081 adoption boundaries intact while turning readiness work into a design-only candidate-discovery method plan for investment scams.
 
 Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding/model experiment, or item `0077` until reviewers choose one of:
 
@@ -32,7 +52,7 @@ The current approved package should be used from:
 - [../reports/checkpoint-0076-hard-negative-addendum.md](../reports/checkpoint-0076-hard-negative-addendum.md)
 - [../reports/post-0076-next-decision-memo.md](../reports/post-0076-next-decision-memo.md)
 
-Do not continue collection by habit. Runs 0038 and 0039 show that approved browser-session search can produce strict-valid local candidate records, but it did not add final scam/high-risk items and can create duplicate/context-thin review load. Run 0045 and item 0076 show that browser-session work can still be useful for hard-negative calibration. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more scam/high-risk evidence. After run `0039`, do not promote additional browser-session candidates unless a new decision authorizes that work and the candidates pass the dedupe-first/full-thread-ready gate in [53-dedupe-first-full-thread-ready-gate.md](53-dedupe-first-full-thread-ready-gate.md). If a future browser run uses search queries, apply [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution.
+Do not continue collection by habit. Runs 0038 and 0039 show that approved browser-session search can produce strict-valid local candidate records, but it did not add final scam/high-risk items and can create duplicate/context-thin review load. Run 0045 and item 0076 show that browser-session work can still be useful for hard-negative calibration. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more scam/high-risk evidence. After run `0039`, do not promote additional browser-session candidates unless a new decision authorizes that work and the candidates pass the dedupe-first/full-thread-ready gate in [53-dedupe-first-full-thread-ready-gate.md](53-dedupe-first-full-thread-ready-gate.md). If a future browser run uses search queries, apply [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution. Any future candidate-discovery experiment should measure discovery yield, duplicate load, full-thread availability, reviewer burden, false-positive pressure, false-negative pressure, and hard-negative protection.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 

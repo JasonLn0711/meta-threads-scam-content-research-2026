@@ -2,16 +2,19 @@
 
 ## Objective
 
-Build a documentation-first research program for Threads-related scam or scam-like content. The project should identify practical signals, create defensible annotation and data contracts, compare early baselines, and narrow toward a phase-1 research MVP that fits an approximate NTD 1.8 million budget.
+Build a documentation-first research program for Threads-related scam or scam-like content. The project should find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+
+Documentation, governance, annotation, validation, and baseline work exist to support that discovery-method goal. They are not the final goal by themselves.
 
 The central question is:
 
-> What is the most realistic, evidence-driven, budget-fit way to study and prototype scam-content triage on Threads, starting from text, images, comments, OCR, and visible redirection signals?
+> What bounded, reviewable candidate-discovery method produces the highest useful yield for Threads investment-scam candidates while preserving hard-negative boundaries and acceptable reviewer burden?
 
 ## Scope
 
 Phase 1 focuses on Threads-related content:
 
+- Investment-scam candidate discovery as the first focused scam family
 - Text posts
 - Text plus image posts
 - Replies and comments
@@ -39,6 +42,8 @@ Phase 1 does not attempt to:
 - Threads reports contain enough text, comment, link, and image-text signals to justify a first study.
 - A small but well-labeled sample is more valuable than a larger weakly governed dataset.
 - Human review remains central; automated outputs should support triage, not replace judgment.
+- The first scalable method should work for investment scams before the repo expands to other scam families.
+- Candidate discovery is not guilt determination; labels remain evidence-bound and review-centered.
 
 ## Constraints
 
@@ -73,6 +78,7 @@ The budget likely cannot support:
 Phase 1 succeeds if it produces:
 
 - A stable definition of Threads scam-like content for research purposes.
+- A scalable investment-scam candidate-discovery method that can be evaluated by yield and reviewer burden.
 - A usable taxonomy and annotation guide.
 - A dataset schema that preserves evidence and uncertainty.
 - A 50-item pilot and a 100-200 item first usable batch after pilot review.

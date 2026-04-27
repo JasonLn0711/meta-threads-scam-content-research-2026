@@ -2,13 +2,15 @@
 
 ## Problem Statement
 
-This repository supports a Threads-first research program for studying scam or scam-like content on Meta Threads. The goal is to define the problem carefully, structure evidence, annotate examples, build defensible early baselines, and progressively narrow toward a budget-fit research MVP.
+This repository supports a Threads-first research program for studying scam or scam-like content on Meta Threads. The first-principle goal is to find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
 
 The project asks:
 
-> What is the most realistic, evidence-driven, budget-fit way to study and prototype scam-content triage on Threads, starting from text, images, replies, OCR text, and visible redirection signals?
+> What bounded, reviewable candidate-discovery method produces the highest useful yield for Threads investment-scam candidates while preserving hard-negative boundaries and acceptable reviewer burden?
 
-This is not a production detector and does not make legal determinations. It is a research scaffold for risk triage, evidence design, and early experimental comparison.
+This is not a production detector and does not make legal determinations. It is a research scaffold for scalable candidate discovery, risk triage, evidence design, and early experimental comparison.
+
+The current first-principle method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
 
 ## Why Threads First
 
@@ -29,7 +31,7 @@ These surfaces are narrow enough for a budget-constrained research phase, but ri
 
 The practical budget target is about NTD 1.8 million. That budget does not support a full-scale, platform-wide detection system, broad automated collection, heavy video pipelines, deepfake detection, or production deployment.
 
-The first useful output should be a defensible research package:
+The first useful output should be a defensible research package that helps answer the scalable-discovery question:
 
 - A stable dataset schema
 - A scam-risk taxonomy
@@ -37,12 +39,15 @@ The first useful output should be a defensible research package:
 - A small reviewed sample
 - Simple baselines
 - A comparison of text, OCR, comment, and link signals
+- Discovery-yield and reviewer-burden metrics
+- Hard-negative protection for ordinary investment discussion and anti-scam warnings
 - A decision memo on what to continue, cut, or defer
 
 ## Scope Summary
 
 Included in phase 1:
 
+- Threads investment-scam candidate discovery as the first focused domain
 - Threads text posts
 - Threads text plus image posts
 - Replies and comments
@@ -156,6 +161,8 @@ As of `2026-04-27`, the repo has moved from scaffold-only to a controlled, check
 The next blocker is no longer basic access-path readiness, A/B checkpoint selection, run 0038 execution, checkpoint 0055 report drafting, C1/C2/C3 selection, reviewer approval, local item `0076` inclusion, or checkpoint 0081 synthesis approval. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to item `0082`, broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
 
 The immediate next step is checkpoint 0081 operational-readiness planning: CIB/internal adoption is recorded as `accepted_with_conditions`, and a design-only shadow-pilot readiness gap analysis is open to identify missing gates, SOPs, reviewer workflow, metrics, legal/privacy boundaries, and stop rules. Technical/governance recipient adoption and any legal/privacy status needed for broader external sharing still remain. No new evidence, item `0082`, browser/crawler expansion, confirmed-pointer intake, embedding/model training, production use, legal fraud determination, public release, or raw evidence in git is authorized by this adoption response or readiness analysis. Confirmed pointers remain the preferred future source for final scam/high-risk rule learning only if a later capped decision requests more evidence.
+
+Decision 0115 realigns the repo around the first-principle discovery-method goal: future work should explain how it advances scalable, stable, and reviewable discovery of Threads investment-scam candidates. Package, governance, readiness, and shadow-pilot artifacts are support structures for that goal, not the final goal by themselves.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 

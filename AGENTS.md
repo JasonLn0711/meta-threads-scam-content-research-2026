@@ -4,9 +4,27 @@ This repository is a documentation-first research operating system for Threads-r
 
 ## Mission
 
-Support a serious, budget-aware research program for studying scam-like content on Meta Threads. The repo should help researchers, investigators, reviewers, professors, and engineers define the problem, structure evidence, annotate examples, run narrow experiments, and decide what is worth building next.
+Support a serious, budget-aware research program for studying scam-like content on Meta Threads. The repo's first-principle goal is to find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+
+The repo should help researchers, investigators, reviewers, professors, and engineers define the problem, structure evidence, annotate examples, run narrow experiments, measure discovery yield and reviewer burden, and decide what is worth building next.
 
 The project is a research scaffold, not a production detector.
+
+## First-Principle Direction
+
+Every substantial change should support at least one of:
+
+- investment-scam candidate discovery;
+- signal-family learning;
+- full-thread/reply-aware evidence capture;
+- hard-negative protection;
+- dedupe and source-linkage quality;
+- reviewer workflow and second-review clarity;
+- discovery-yield and reviewer-burden measurement;
+- capped discovery experiment design;
+- future expansion from investment scams to other scam families.
+
+Package, governance, readiness, and shadow-pilot artifacts are support structures for this goal. They are not the final goal by themselves.
 
 ## Repo Series Naming
 
@@ -50,10 +68,11 @@ Start with:
 1. `README.md`
 2. `docs/00-project-charter.md`
 3. `docs/18-recommended-path-v1.md`
-4. `governance/data-governance.md`
-5. `docs/19-codex-workflow.md`
-6. `docs/20-repo-series-naming.md`
-7. `docs/21-repo-relationships.md`
+4. `docs/56-first-principle-investment-scam-discovery-method.md`
+5. `governance/data-governance.md`
+6. `docs/19-codex-workflow.md`
+7. `docs/20-repo-series-naming.md`
+8. `docs/21-repo-relationships.md`
 
 Before changing scope, update:
 

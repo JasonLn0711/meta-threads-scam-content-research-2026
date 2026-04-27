@@ -63,13 +63,15 @@ Reports should be more polished than working notes, but they should remain hones
 
 The v0 report package should now describe the governed checkpoint-0081 path as:
 
-1. use checkpoint `0081` as the current CIB-approved research checkpoint
-2. close remaining recipient adoption and legal/privacy sharing gates
-3. use the checkpoint 0081 shadow-pilot readiness gap analysis to define what is missing before any shadow-only pilot can be considered
-4. deliver or refine the reviewer-facing package if no new evidence is needed
-5. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed and a new capped decision is recorded
-6. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing and a new capped decision is recorded
-7. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, and strict validation before any new collection
+1. use scalable, stable, and reviewable discovery of Threads investment-scam candidates as the first-principle research goal
+2. use checkpoint `0081` as the current CIB-approved research checkpoint
+3. close remaining recipient adoption and legal/privacy sharing gates
+4. use the checkpoint 0081 shadow-pilot readiness gap analysis to define what is missing before any shadow-only pilot can be considered
+5. frame any future shadow-pilot charter as a capped investment-scam candidate-discovery method test, not deployment
+6. deliver or refine the reviewer-facing package if no new evidence is needed
+7. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed and a new capped decision is recorded
+8. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing and a new capped decision is recorded
+9. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, and reviewer-burden metrics before any new collection
 
 The historical Phase 1 path remains:
 

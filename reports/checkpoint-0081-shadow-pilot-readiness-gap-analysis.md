@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Assess what is still required before checkpoint `threads_pilot_v1_0081` can be considered for a shadow-only operational pilot design.
+Assess what is still required before checkpoint `threads_pilot_v1_0081` can be considered for a shadow-only operational pilot design that tests the investment-scam candidate-discovery method.
 
 This document does not authorize:
 
@@ -20,7 +20,7 @@ This document does not authorize:
 - public release;
 - raw evidence in git.
 
-The purpose is to identify gates, SOPs, metrics, reviewer workflow requirements, legal/privacy boundaries, and stop rules required before any shadow-only pilot can be considered.
+The purpose is to identify gates, SOPs, metrics, reviewer workflow requirements, legal/privacy boundaries, and stop rules required before any shadow-only pilot can be considered. The underlying first-principle goal remains scalable, stable, and reviewable discovery of Threads investment-scam candidates.
 
 ## Current Status
 
@@ -53,6 +53,7 @@ Checkpoint 0081 is ready for internal research use. It is not ready for producti
 - Package QA, checksum, and leakage-scan workflow.
 - Redaction boundary for tracked repo artifacts.
 - Recipient adoption tracker and dispatch workflow.
+- First-principle investment-scam discovery-method guidance in `docs/56-first-principle-investment-scam-discovery-method.md`.
 
 ## What Is Not Yet Ready
 
@@ -66,6 +67,7 @@ Checkpoint 0081 is ready for internal research use. It is not ready for producti
 - No retention and audit workflow exists for shadow-pilot outputs.
 - No role responsibility matrix exists for CIB reviewer, technical reviewer, governance owner, and legal/privacy reviewer.
 - No separate decision authorizes a shadow pilot.
+- No capped candidate-discovery method-test decision exists yet.
 
 ## Readiness Gates
 
@@ -131,6 +133,7 @@ Shadow pilot metrics should not be limited to precision and recall.
 | rule-family coverage | Shows whether rule families cover actual reviewer reasoning |
 | evidence-surface coverage | Shows whether post, reply, OCR, link, profile-context, and controlled notes are being used correctly |
 | escalation clarity | Tests whether reviewers know when to escalate or stop |
+| discovery-yield quality | Shows whether the method finds enough review-worthy investment-scam candidates to justify scaling |
 
 Recommended repo-safe review fields:
 
@@ -206,6 +209,7 @@ The readiness work may prepare for these possible use cases:
 - handoff workflow rehearsal;
 - governance boundary testing;
 - hard-negative protection review.
+- investment-scam candidate-discovery method stress testing.
 
 It must not prepare an unapproved operational detector, enforcement queue, account list, public warning list, model-training dataset, or legal fraud determination process.
 
@@ -244,7 +248,7 @@ Not authorized by this analysis:
 
 ## Recommended Next Decision
 
-Open a design-only shadow pilot planning decision only after this gap analysis is reviewed.
+Open a design-only shadow pilot charter draft only after this gap analysis is reviewed. The draft should frame any future pilot as a capped investment-scam candidate-discovery method test, not as deployment.
 
 No pilot execution should begin until a separate capped decision records:
 
@@ -262,9 +266,10 @@ No pilot execution should begin until a separate capped decision records:
 - stop rules;
 - reporting format;
 - explicit non-authorizations.
+- discovery-yield and reviewer-burden success criteria.
 
 ## Bottom Line
 
 Checkpoint 0081 is strong enough for internal research adoption and readiness planning.
 
-It is not yet strong enough for real-world deployment. The next real progress is not more data by default. The next real progress is proving that the review workflow, evidence boundary, reviewer burden, legal/privacy gate, metrics, and stop rules can survive a shadow-only operational design review.
+It is not yet strong enough for real-world deployment. The next real progress is not more data by default. The next real progress is proving that the investment-scam candidate-discovery method, review workflow, evidence boundary, reviewer burden, legal/privacy gate, metrics, and stop rules can survive a shadow-only operational design review.

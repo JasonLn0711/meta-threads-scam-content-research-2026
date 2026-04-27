@@ -2,7 +2,9 @@
 
 ## Operating Rule
 
-Codex should treat this repo as a research operating system, not an app project. The correct default is to improve research clarity, data contracts, experiment design, and decision records before adding code.
+Codex should treat this repo as a research operating system, not an app project. The correct default is to improve the first-principle discovery method: scalable, stable, and reviewable discovery of Threads investment-scam candidates.
+
+Before making a substantial change, state how it advances candidate discovery, signal-family learning, evidence completeness, hard-negative protection, reviewer workflow, discovery-yield measurement, or a capped method-test decision.
 
 ## Start Here
 
@@ -11,15 +13,17 @@ Before making changes, read:
 1. `README.md`
 2. `docs/00-project-charter.md`
 3. `docs/18-recommended-path-v1.md`
-4. `governance/data-governance.md`
-5. `AGENTS.md`
-6. `docs/21-repo-relationships.md`
+4. `docs/56-first-principle-investment-scam-discovery-method.md`
+5. `governance/data-governance.md`
+6. `AGENTS.md`
+7. `docs/21-repo-relationships.md`
 
 ## Docs-First Updates
 
 Before adding or changing code:
 
 - Define the research question.
+- Define how the change advances the investment-scam discovery-method goal.
 - Define the dataset fields.
 - Define the annotation label impact.
 - Define the experiment log.
@@ -38,6 +42,7 @@ Create a decision record when changing:
 - Budget assumption
 - Production boundary
 - Relationship to the umbrella repo or planning repo
+- The first-principle discovery-method goal
 
 ## Branch Naming
 

@@ -2,7 +2,9 @@
 
 ## Phase-1 Recommendation
 
-Start with text, images, comments, OCR, visible redirection signals, and CIB-authorized API/automation support for the first governed pilot. Defer video-heavy, deepfake-heavy, and production-enforcement work until the first dataset and baseline comparison show that these signals are insufficient.
+Start with a focused investment-scam candidate-discovery method on Threads. Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve scalable, stable, and reviewable discovery of investment-scam candidates.
+
+Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforcement work until the investment-scam discovery method shows useful yield, acceptable reviewer burden, and hard-negative protection.
 
 ## Scope Matrix
 
@@ -20,6 +22,16 @@ Start with text, images, comments, OCR, visible redirection signals, and CIB-aut
 | Deepfake-related signals | Future risk value | Low | Very high | High | Very high | Defer to future risk note | No |
 
 ## Detailed Research Judgment
+
+### 0. Investment Scam Candidate Discovery
+
+Prioritize now.
+
+- Technical cost: manageable if the method stays bounded and review-centered.
+- Operational cost: medium. Full-thread/reply review and hard-negative protection require reviewer time.
+- Evidence value: high. Investment-scam patterns expose repeated signal families such as teacher/advisor framing, profit proof, group conversion, private-channel migration, comment-layer reassurance, and external-link/contact cues.
+- Budget fit: strong if the repo measures discovery yield and reviewer burden before expanding.
+- Expansion logic: later scam families should be added only after the investment-scam method is useful enough to adapt.
 
 ### 1. Text Posts
 

@@ -10,7 +10,7 @@ accepted
 
 ## Decision
 
-Open a design-only operational-readiness gap analysis for checkpoint `threads_pilot_v1_0081`.
+Open a design-only operational-readiness gap analysis for checkpoint `threads_pilot_v1_0081`, framed around the investment-scam candidate-discovery method goal.
 
 This decision does not authorize a shadow pilot.
 
@@ -18,7 +18,7 @@ This decision does not authorize new evidence collection.
 
 ## Context
 
-Checkpoint `threads_pilot_v1_0081` is accepted for internal research checkpoint use with conditions. The next useful question is no longer whether the repo can collect another item. The next useful question is whether the evidence system, annotation rules, reviewer workflow, governance boundary, metrics, and stop rules are ready to support a future shadow-only operational pilot design.
+Checkpoint `threads_pilot_v1_0081` is accepted for internal research checkpoint use with conditions. The next useful question is no longer whether the repo can collect another item. The next useful question is whether the evidence system, annotation rules, reviewer workflow, governance boundary, metrics, and stop rules are ready to support a future shadow-only operational pilot design for testing investment-scam candidate discovery.
 
 The gap analysis is recorded in:
 
@@ -37,6 +37,7 @@ The gap analysis may identify:
 - reviewer workflow fields;
 - reviewer burden metrics;
 - false-positive and false-negative pressure metrics;
+- discovery-yield and reviewer-burden metrics;
 - hard-negative protection requirements;
 - evidence intake boundaries;
 - stop/no-go rules;
@@ -63,7 +64,7 @@ This decision does not authorize:
 
 ## Rationale
 
-Checkpoint 0081 has enough research value to support internal adoption and workflow planning. It does not yet have enough operational evidence, legal/privacy clearance, reviewer-burden measurement, or stop-rule maturity to support deployment or broad expansion.
+Checkpoint 0081 has enough research value to support internal adoption and workflow planning. It does not yet have enough operational evidence, legal/privacy clearance, discovery-yield measurement, reviewer-burden measurement, or stop-rule maturity to support deployment or broad expansion.
 
 Opening a design-only readiness gap analysis moves the repo forward without confusing readiness planning with execution authorization.
 
@@ -73,9 +74,10 @@ Opening a design-only readiness gap analysis moves the repo forward without conf
 - Future collection remains blocked until a separate capped decision is recorded.
 - Future shadow-pilot execution remains blocked until a separate capped decision records source boundary, candidate cap, reviewer roles, legal/privacy status, evidence boundary, retention, redaction, metrics, stop rules, and reporting format.
 - Baseline metrics remain smoke-test calibration evidence only, not production performance claims.
+- Future method tests should measure candidate quality, discovery yield, duplicate load, full-thread availability, reviewer burden, false-positive pressure, false-negative pressure, and hard-negative protection.
 
 ## Next Step
 
-Use the gap analysis to prepare a draft shadow-pilot charter.
+Use the gap analysis to prepare a draft shadow-pilot charter for an investment-scam candidate-discovery method test.
 
 The draft charter must remain design-only unless a later decision explicitly authorizes a capped shadow-only pilot.
