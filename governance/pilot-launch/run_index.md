@@ -9,11 +9,11 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 78 records, ending at `threads_pilot_v1_0081`; CIB-approved research checkpoint |
-| Latest local work visible in tree | run `0052`; item `0081` accepted as local strict-valid CIB/project-owner confirmed scam pointer |
-| Current collection gate | checkpoint `0081` synthesis approved by CIB; items `0077-0079` full-thread/reply capture still pending; no broad expansion open |
-| Next authorized prospective tranche | none |
-| Next stakeholder request | prepare reviewer-facing checkpoint `0081` package or report addendum |
-| Next intake scaffold | no item `0082`; any additional confirmed-pointer intake requires a new decision record |
+| Latest local work visible in tree | run `0054`; Track B Day 0 start recorded after formal signoff; no candidates surfaced yet |
+| Current collection gate | Track B may begin under decision `0122` locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting |
+| Next authorized prospective tranche | Track B capped live method test only; no overflow queue and no item `0082` |
+| Next stakeholder request | none; next output is daily Track B stop-check / aggregate-only reporting after activity exists |
+| Next intake scaffold | run `0054` Track B source-arm intake; no item `0082`; no broad expansion |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -27,6 +27,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `confirmed-pointer` | Stakeholder/CIB/project-owner supplied confirmed pointer captured one item at a time. |
 | `account-source` | Approved account-level source sample used for candidate discovery or style context. |
 | `hard-negative` | Confirmed non-scam warning or comparator used to protect against false positives. |
+| `capped-method-test` | Authorized candidate-discovery method test with fixed caps, human review, stop rules, and aggregate-only reporting. |
 
 ## Operational Run Index
 
@@ -70,6 +71,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0051` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0080_full_thread_capture_run_record_0051.md` | `0086-confirmed-pointer-0080-result.md` | `0080` | strict-valid local item; 77-record local aggregate strict-valid | Decision `0102` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0081` or broader tranche. |
 | `0052` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0081_full_thread_capture_run_record_0052.md` | `0087-confirmed-pointer-0081-result.md` | `0081` | strict-valid local item; 78-record local aggregate strict-valid | Decision `0104` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0082` or broader tranche. |
 | `0053` | checkpoint synthesis | `run_index.md` | `0088-existing-ambiguous-medium-second-review-synthesis.md`; `0089-checkpoint-0081-cib-approved-synthesis.md` | `0001-0081` local aggregate | CIB-approved 78-record research checkpoint; strict-valid | Decision `0105` approves checkpoint `0081` synthesis; next step is reviewer-facing package/report addendum, not new collection. |
+| `0054` | capped-method-test | `threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` | `0090-track-b-day-0-start-record.md` | none yet | Day 0 gate confirmed; `data/interim/track_b/` local-only workspace prepared; 0 surfaced, 0 reviewed, 0 accepted records | Decision `0123` records Day 0 start under decision `0122`; next action is Day 1 source-arm intake under locked caps, not item `0082`. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 

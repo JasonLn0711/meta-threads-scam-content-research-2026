@@ -11,10 +11,11 @@ This procedure resolves the local validation-output-target blocker. It does not 
 | Field | Value |
 |---|---|
 | Track | `track_b_capped_live_method_test` |
-| Procedure status | `ready_pending_track_b_start` |
-| Track B execution authorized by this procedure | no |
-| Legal/privacy signoff resolved by this procedure | no |
-| CIB/internal owner signoff resolved by this procedure | no |
+| Procedure status | `ready_for_track_b_day_1_after_day_0_start` |
+| Track B execution authorized by this procedure | no; execution is authorized only by decision `0122` and bounded by decision `0123` Day 0 start |
+| Legal/privacy signoff resolved by this procedure | no; formal signoff is recorded separately as `no_veto` |
+| CIB/internal owner signoff resolved by this procedure | no; formal signoff is recorded separately as `accepted_boundary` |
+| Local-only Track B workspace | `data/interim/track_b/` prepared and ignored |
 | Item `0082` authorized | no |
 | Raw evidence in git authorized | no |
 
@@ -95,7 +96,7 @@ legal/privacy and CIB/internal signoff were already recorded
 
 This procedure does not authorize:
 
-- Track B execution before all remaining hard conditions pass;
+- Track B activity outside decision `0122`, decision `0123`, locked caps, stop rules, validation, and aggregate-only reporting;
 - item `0082`;
 - open-ended collection;
 - broad crawler/browser expansion;

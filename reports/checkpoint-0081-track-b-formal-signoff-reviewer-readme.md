@@ -1,5 +1,11 @@
 # Checkpoint 0081 Track B Formal Signoff Reviewer Package README
 
+## Superseded Status Note
+
+This is the historical formal signoff reviewer package copy. It has been superseded by legal/privacy `no_veto`, CIB/internal `accepted_boundary`, decision `0122`, and Track B Day 0 start decision `0123`.
+
+Use `reports/checkpoint-0081-track-b-day-0-start-record.md` and `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` for the current Track B state.
+
 ## Purpose
 
 This package is for the final formal signoff gate before Track B can begin.

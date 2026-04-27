@@ -106,3 +106,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Opened a final capped investment-scam discovery method-test execution authorization package without authorizing execution | `0120-open-final-capped-investment-scam-discovery-method-test-execution-authorization-package.md` |
 | 2026-04-27 | Recorded final gate response: Track A approved after start checklist; Track B conditionally approved after hard conditions | `0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
 | 2026-04-27 | Recorded Track B start authorization after legal/privacy no-veto and CIB/internal boundary acceptance | `0122-record-track-b-start-authorization-after-formal-signoff.md` |
+| 2026-04-27 | Recorded Track B Day 0 operational start under decision 0122 with no candidates surfaced yet | `0123-record-track-b-day-0-start.md` |

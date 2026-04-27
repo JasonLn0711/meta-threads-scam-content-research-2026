@@ -17,7 +17,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Dataset file | `data/interim/manual_records_checkpoint_0081.jsonl` |
 | Latest included item | `threads_pilot_v1_0081` |
 | Next authorized prospective tranche | none open |
-| Next recommended action | start Track B under decision `0122` locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting |
+| Next recommended action | proceed to Track B Day 1 source-arm intake under run `0054`, decision `0122`, decision `0123`, locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting |
 
 ## Package Artifacts
 
@@ -90,6 +90,10 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-track-b-cib-internal-owner-formal-signoff-response.md` | CIB/internal owner `accepted_boundary` formal signoff response for Track B as an internal research method test. |
 | `reports/checkpoint-0081-track-b-formal-signoff-summary.md` | Formal signoff summary recording Track B condition checklist `fully_green`. |
 | `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` | Decision recording that Track B may begin under locked caps and stop rules after formal signoff. |
+| `reports/checkpoint-0081-track-b-day-0-start-record.md` | Report-facing Track B Day 0 start record; no candidates surfaced or reviewed during Day 0. |
+| `decision-log/0123-record-track-b-day-0-start.md` | Decision recording Track B Day 0 operational start under decision `0122`. |
+| `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` | Repo-safe Track B run record `0054`. |
+| `experiments/evaluation-notes/0090-track-b-day-0-start-record.md` | Evaluation note for Track B Day 0 start and local-only workspace readiness. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-readme.md` | Repo copy of the formal signoff reviewer package README. |
 | `reports/checkpoint-0081-track-b-formal-signoff-reviewer-message.md` | Repo copy of the formal signoff reviewer message. |
 | `reports/checkpoint-0081-track-b-formal-signoff-package-manifest.md` | Repo copy of the formal signoff package manifest. |
@@ -131,6 +135,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | CIB/internal owner formal signoff is recorded as `accepted_boundary` | Track B CIB/internal boundary blocker resolved for internal research method test only |
 | Track B condition checklist is `fully_green` | formal signoff summary fact; start is limited to locked caps and stop rules |
 | Decision `0122` records Track B start authorization after formal signoff | Track B may begin under locked caps; still no item `0082`, no open-ended collection, and no raw evidence in git |
+| Decision `0123` records Track B Day 0 operational start | Day 0 gates confirmed; 0 candidates surfaced, 0 reviewed, 0 accepted records |
 
 ## Explicit Non-Claims
 
@@ -162,7 +167,8 @@ Likely future choices:
 | Track A zero-new-evidence dry run | Completed with limitations; use the report to fix workflow gaps before Track B. |
 | Track B condition response request | Send or use the repo-safe request form before updating the condition tracker. |
 | Track B condition resolution | Completed for formal signoff: legal/privacy `no_veto`, CIB/internal `accepted_boundary`, checklist `fully_green`. |
-| Track B capped live method test | May start under decision `0122`; no item `0082`, no overflow queue, and stop immediately on any stop-condition breach. |
+| Track B Day 0 start | Completed under decision `0123`; local-only workspace target prepared, no candidates surfaced yet. |
+| Track B capped live method test | Proceed to Day 1 source-arm intake under run `0054`; no item `0082`, no overflow queue, and stop immediately on any stop-condition breach. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |

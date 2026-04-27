@@ -1,5 +1,11 @@
 # Checkpoint 0081 Track B Condition Response Full Reviewer Package README
 
+## Superseded Status Note
+
+This is the historical condition-response reviewer package copy. It has been superseded by formal signoff, decision `0122`, and Track B Day 0 start decision `0123`.
+
+Use `reports/checkpoint-0081-track-b-day-0-start-record.md` and `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` for the current Track B state.
+
 ## Purpose
 
 This package gives reviewers a complete repo-safe view of the current Track B gate.

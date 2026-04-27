@@ -16,6 +16,9 @@ Track B can now begin only under the locked caps, daily stop-rule checks, valida
 | Track | `track_b_capped_live_method_test` |
 | Execution status | `start_authorized_after_formal_signoff` |
 | Start authorization decision | `decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md` |
+| Day 0 start decision | `decision-log/0123-record-track-b-day-0-start.md` |
+| Day 0 start record | `reports/checkpoint-0081-track-b-day-0-start-record.md` |
+| Run record | `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` |
 | Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
@@ -154,7 +157,7 @@ Do not open another abstract review package.
 
 Do:
 
-1. start Track B only under decision `0122`;
+1. proceed to Track B Day 1 source-arm intake only under decisions `0122` and `0123`;
 2. keep the source-arm caps and total caps locked;
 3. run the daily stop-rule check;
 4. run the raw-evidence exclusion check before any Track B output is committed;
