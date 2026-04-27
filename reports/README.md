@@ -55,6 +55,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md](checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md) | QA expectations for the final execution authorization package. |
 | [checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md](checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md) | Start checklist for Track A zero-new-evidence dry run. |
 | [checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md) | Completed Track A dry-run report using existing repo-safe checkpoint materials only. |
+| [checkpoint-0081-track-b-condition-resolution-tracker.md](checkpoint-0081-track-b-condition-resolution-tracker.md) | Operational tracker for resolving Track B legal/privacy, owner, role, controlled-store, and leakage-check conditions. |
 | [checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) | Hard-condition checklist for Track B capped live method test. |
 | [checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md](checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md) | Package-specific QA for the selected technical/governance review ZIP for the investment-scam discovery method design. |
 | [checkpoint-0081-recipient-adoption-tracker.md](checkpoint-0081-recipient-adoption-tracker.md) | Repo-safe recipient acceptance and conditions tracker for checkpoint 0081. |
@@ -99,10 +100,11 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 8. use decision `0120` to prepare a final execution authorization package with Track A and Track B separated
 9. use decision `0121` to record `approve_track_a_now_track_b_after_conditions`
 10. use the completed Track A dry-run report to identify workflow limitations
-11. keep Track B blocked until legal/privacy, CIB/internal, role, controlled-store, cap, stop-rule, validation, and leakage-check conditions are fully green
-12. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-13. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-14. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+11. use the Track B condition-resolution tracker to collect repo-safe legal/privacy, CIB/internal, role, controlled-store, validation, reporting, and leakage-check responses
+12. keep Track B blocked until legal/privacy, CIB/internal, role, controlled-store, cap, stop-rule, validation, and leakage-check conditions are fully green
+13. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+14. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+15. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 

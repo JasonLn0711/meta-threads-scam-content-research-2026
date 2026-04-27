@@ -82,6 +82,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` | Final gate response: Track A approved after start checklist; Track B conditionally approved after hard conditions. |
 | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md` | Start checklist for Track A zero-new-evidence dry run; post-package controlled execution planning artifact. |
 | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md` | Completed Track A zero-new-evidence dry-run report; no new evidence collected. |
+| `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` | Operational tracker for resolving Track B hard conditions without opening a new review package. |
 | `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` | Hard-condition checklist for Track B capped live method test; post-package controlled execution planning artifact. |
 
 ## Approved Findings
@@ -138,6 +139,7 @@ Likely future choices:
 | Decision `0118` review package | Ask technical/governance and legal/privacy reviewers whether the capped decision draft can proceed toward a future execution-gate review. |
 | Final execution authorization package | Ask reviewers whether to approve Track A dry run only, approve Track A plus Track B, approve with conditions, revise, or block execution. |
 | Track A zero-new-evidence dry run | Completed with limitations; use the report to fix workflow gaps before Track B. |
+| Track B condition resolution | Collect repo-safe legal/privacy, CIB/internal, technical/governance, role, controlled-store, validation, reporting, and leakage-check responses. |
 | Track B capped live method test | Start only after Track B hard conditions are fully green; no item `0082` or overflow queue. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |

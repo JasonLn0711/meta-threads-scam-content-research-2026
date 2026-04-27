@@ -15,6 +15,7 @@ Track B cannot begin until every required condition below is complete.
 | Authorization decision | `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
 | Track | `track_b_capped_live_method_test` |
 | Execution status | `conditionally_approved_blocked_until_all_conditions_pass` |
+| Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -52,6 +53,7 @@ Track B cannot begin until every required condition below is complete.
 | Strict validation command | command shape ready | pending_output_target | Use `python3 scripts/validate_thread_dataset.py <track_b_dataset>.json --strict` after an approved repo-safe output exists. |
 | Raw evidence exclusion scan/check | required | pending | Must be run before any Track B report is committed. |
 | Track A dry-run result | should be complete before Track B | pass_with_limitations | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`; limitations must be reviewed before Track B. |
+| Track A limitation mapping | limitations mapped to Track B controls | pass | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` maps each limitation to a Track B control. |
 
 ## Source-Arm Caps
 
@@ -133,6 +135,6 @@ Do not open another abstract review package.
 
 Do:
 
-1. review Track A dry-run limitations;
+1. collect repo-safe condition responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
 2. resolve Track B pending conditions;
 3. start Track B only after this checklist is fully green.
