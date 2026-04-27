@@ -89,3 +89,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-26 | Promoted one run 0045 source-linked hard negative into local manual_entry_0076 | `0092-promote-run-0045-hard-negative-as-manual-entry-0076.md` |
 | 2026-04-26 | Accepted local hard-negative item 0076 for next checkpoint inclusion | `0093-include-local-hard-negative-0076-in-next-checkpoint.md` |
 | 2026-04-27 | Approved the 78-record CIB research checkpoint synthesis | `0105-approve-cib-78-record-checkpoint-synthesis.md` |
+| 2026-04-27 | Delivered checkpoint 0081 reviewer package and opened response tracking | `0106-deliver-checkpoint-0081-review-package.md` |

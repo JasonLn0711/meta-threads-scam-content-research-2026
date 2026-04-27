@@ -24,6 +24,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Artifact | Purpose |
 |---|---|
 | `reports/checkpoint-0081-executive-addendum.md` | Short entry point for reviewers. |
+| `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Delivery tracker and reviewer response table. |
 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report for rigorous CIB reviewer reading. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source for auditability and later revision. |
 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed checkpoint synthesis. |
@@ -31,6 +32,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `experiments/evaluation-notes/0086-confirmed-pointer-0080-result.md` | Repo-safe result note for item `0080`. |
 | `experiments/evaluation-notes/0087-confirmed-pointer-0081-result.md` | Repo-safe result note for item `0081`. |
 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | Decision recording CIB approval of the checkpoint synthesis. |
+| `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Decision recording checkpoint 0081 package delivery and non-authorizations. |
 | `decision-log/0101-authorize-existing-ambiguous-medium-second-review.md` | Decision authorizing second review of existing ambiguous/medium records. |
 | `decision-log/0102-authorize-single-confirmed-pointer-0080-intake.md` | Decision authorizing the single item `0080` confirmed-pointer intake. |
 | `decision-log/0104-authorize-single-confirmed-pointer-0081-intake.md` | Decision authorizing the single item `0081` confirmed-pointer intake. |
