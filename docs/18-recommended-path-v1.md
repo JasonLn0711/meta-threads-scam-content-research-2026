@@ -13,7 +13,9 @@ checkpoint 0081 research evidence
 → recipient adoption and readiness gates
 → investment-scam scalable candidate-discovery method design
 → signal-family matrix and method-test charter draft
-→ capped method test decision
+→ technical/governance approval for next-decision planning
+→ capped method-test decision draft
+→ final capped execution decision only if all gates pass
 → human review and second review
 → discovery-yield and reviewer-burden evaluation
 → decision on expansion, revision, or pause
@@ -33,11 +35,13 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 ## Current Post-0076 Path
 
-The repo is now in checkpoint adoption, operational-readiness, and investment-scam discovery-method design mode.
+The repo is now in checkpoint adoption, operational-readiness, and investment-scam discovery-method decision-drafting mode.
 
-Immediate next action: review and refine the design-only checkpoint 0081 investment-scam discovery method test charter draft and signal-family matrix, without executing collection.
+Immediate next action: review decision `0118`, the draft-only capped investment-scam discovery method-test decision. Decision `0118` proposes caps, source arms, method-test schema fields, signal-combination rules, reviewer workflow, hard-negative protections, metrics thresholds, stop rules, legal/privacy gates, controlled-store handling, and aggregate reporting requirements.
 
-Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding/model experiment, or item `0077` until reviewers choose one of:
+Decision `0118` is not execution authorization. It is the concrete draft that reviewers can approve, approve with conditions, revise, or block before any method test begins.
+
+Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding/model experiment, item `0077`, or item `0082` until a final capped decision records all required gates as satisfied. Historical post-0076 decision choices were:
 
 - `report_only_delivery`
 - `targeted_confirmed_pointer_tranche`
@@ -45,7 +49,7 @@ Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawle
 
 Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocked item `0056` until a new decision was recorded. Decision 0062 selects C2: keep collection paused and review/refine the 55-record checkpoint report package. Decision 0066 records that all reviewer roles approved the checkpoint 0055 package. Decision 0067 adds the canonical approved-package index at [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md). Decision 0072 closed run 0039 after aggressive browser-session search added no final scam/high-risk items. Decision 0073 adopts a dedupe-first/full-thread-ready gate before any future browser candidate promotion. Decision 0085 adopts query diversification as an acquisition rule for future search-based browser runs. Decision 0093 accepts local item `0076` for next-checkpoint inclusion as `non_scam` / `low` hard-negative calibration. Decision 0094 hardens report v0 around the post-0076 state and adds a bounded next-decision memo.
 
-The current approved package should be used from:
+The historical checkpoint 0055 approved package can still be used from:
 
 - [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md)
 - [../reports/checkpoint-0055-executive-addendum.md](../reports/checkpoint-0055-executive-addendum.md)
@@ -62,6 +66,8 @@ The same-day research status and first-principles rationale are summarized in [.
 Historical pilot-launch materials remain available in [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`. They are governance history and design references, not the current post-0076 authorization state.
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
+
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft, but it remains `draft_only` and `not_executable_until_approved`.
 
 Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
 

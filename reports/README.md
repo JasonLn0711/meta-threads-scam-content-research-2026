@@ -12,6 +12,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 | 2026-04-27 | CIB-approved research checkpoint review | [checkpoint-0081-executive-addendum.md](checkpoint-0081-executive-addendum.md) |
 | checkpoint 0081 readiness | 2026-04-27 | Internal shadow-pilot readiness planning | [checkpoint-0081-shadow-pilot-readiness-gap-analysis.md](checkpoint-0081-shadow-pilot-readiness-gap-analysis.md) |
 | checkpoint 0081 method charter | 2026-04-27 | Design-only investment-scam discovery method test planning | [checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) |
+| checkpoint 0081 method decision draft | 2026-04-27 | Draft-only capped investment-scam discovery method-test decision | [../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md](../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -33,6 +34,8 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-cib-internal-adoption-response.md](checkpoint-0081-cib-internal-adoption-response.md) | Repo-safe CIB/internal `accepted_with_conditions` adoption response for checkpoint 0081. |
 | [checkpoint-0081-shadow-pilot-readiness-gap-analysis.md](checkpoint-0081-shadow-pilot-readiness-gap-analysis.md) | Design-only gap analysis for the gates, SOPs, metrics, and stop rules required before any shadow-only pilot can be considered. |
 | [checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) | Design-only charter draft for a future capped investment-scam candidate-discovery method test. |
+| [../decision-log/0117-record-checkpoint-0081-investment-scam-discovery-method-technical-governance-review-response.md](../decision-log/0117-record-checkpoint-0081-investment-scam-discovery-method-technical-governance-review-response.md) | Technical/governance `approve_design_for_next_decision` response for the method design package. |
+| [../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md](../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md) | Draft-only capped method-test decision with proposed caps, source arms, metrics, stop rules, and execution gates. |
 | [checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md](checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md) | Package-specific QA for the selected technical/governance review ZIP for the investment-scam discovery method design. |
 | [checkpoint-0081-recipient-adoption-tracker.md](checkpoint-0081-recipient-adoption-tracker.md) | Repo-safe recipient acceptance and conditions tracker for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-request.md](checkpoint-0081-recipient-adoption-request.md) | Repo-safe message/form for requesting recipient acceptance of checkpoint 0081. |
@@ -70,11 +73,12 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 2. use checkpoint `0081` as the current CIB-approved research checkpoint
 3. close remaining recipient adoption and legal/privacy sharing gates
 4. use the checkpoint 0081 shadow-pilot readiness gap analysis to define what is missing before any shadow-only pilot can be considered
-5. review the checkpoint 0081 investment-scam discovery method test charter draft before any capped execution decision
-6. deliver or refine the reviewer-facing package if no new evidence is needed
-7. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed and a new capped decision is recorded
-8. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing and a new capped decision is recorded
-9. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, and reviewer-burden metrics before any new collection
+5. use the technical/governance `approve_design_for_next_decision` response to move from charter review into decision drafting
+6. review decision `0118`, the draft-only capped investment-scam discovery method-test decision, before any capped execution decision
+7. deliver or refine the reviewer-facing package if no new evidence is needed
+8. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed and a new capped decision is recorded
+9. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing and a new capped decision is recorded
+10. require a final approved decision record, caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any new collection
 
 The historical Phase 1 path remains:
 

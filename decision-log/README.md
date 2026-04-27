@@ -100,3 +100,5 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-27 | Opened a design-only checkpoint 0081 shadow-pilot readiness gap analysis without authorizing execution or new collection | `0114-open-checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` |
 | 2026-04-27 | Realigned repo guidance around scalable investment-scam candidate discovery as the first-principle goal | `0115-realign-repo-to-scalable-investment-scam-discovery-method.md` |
 | 2026-04-27 | Opened a design-only checkpoint 0081 investment-scam discovery method test charter draft without authorizing execution | `0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` |
+| 2026-04-27 | Recorded technical/governance `approve_design_for_next_decision` response for the checkpoint 0081 investment-scam discovery method design package | `0117-record-checkpoint-0081-investment-scam-discovery-method-technical-governance-review-response.md` |
+| 2026-04-27 | Opened a draft-only capped investment-scam discovery method-test decision without authorizing execution | `0118-open-capped-investment-scam-discovery-method-test-decision-draft.md` |
