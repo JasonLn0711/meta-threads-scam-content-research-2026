@@ -113,3 +113,31 @@ This run record does not authorize:
 Run `0054` is open for Track B under decision `0122`.
 
 Day 0 gate confirmation is complete. The local-only `data/interim/track_b/` workspace directory exists and remains ignored by git. No candidates were surfaced, reviewed, accepted, or validated during this Day 0 start record.
+
+## Day 1 Source-Arm Intake Start
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Related decision | `0124-record-track-b-day-1-source-arm-intake-start` |
+| Report-facing note | `reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md` |
+| Evaluation note | `experiments/evaluation-notes/0091-track-b-day-1-source-arm-intake-start.md` |
+| Day 1 status | `source_arm_intake_control_started_zero_count` |
+| Candidates surfaced | 0 |
+| Candidates reviewed | 0 |
+| Accepted strict-valid records | 0 |
+| Stop-rule triggered | no |
+
+Day 1 intake control is open. No candidate has been surfaced, reviewed, accepted, or validated yet.
+
+### Day 1 Source-Arm Ledger
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Accepted strict-valid records |
+|---|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 0 | 0 | 0 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 |
+| Hard-negative probe arm | 50 | 0 | 0 | 0 |
+| Total | 300 | 0 | 0 | 0 |

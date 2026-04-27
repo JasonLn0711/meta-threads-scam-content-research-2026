@@ -20,6 +20,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 Track B full reviewer package | 2026-04-27 | Full repo-safe package manifest, QA, and reviewer message for Track B condition response | [checkpoint-0081-track-b-condition-response-full-package-manifest.md](checkpoint-0081-track-b-condition-response-full-package-manifest.md) |
 | checkpoint 0081 Track B start authorization | 2026-04-27 | Formal signoff summary and start authorization for Track B under locked caps | [checkpoint-0081-track-b-formal-signoff-summary.md](checkpoint-0081-track-b-formal-signoff-summary.md) |
 | checkpoint 0081 Track B Day 0 start | 2026-04-27 | Gate-confirmed operational start record for Track B before any candidate is surfaced | [checkpoint-0081-track-b-day-0-start-record.md](checkpoint-0081-track-b-day-0-start-record.md) |
+| checkpoint 0081 Track B Day 1 intake start | 2026-04-28 | Source-arm intake-control start with zero candidates surfaced so far | [checkpoint-0081-track-b-day-1-source-arm-intake-start.md](checkpoint-0081-track-b-day-1-source-arm-intake-start.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -71,6 +72,9 @@ Reports should be more polished than working notes, but they should remain hones
 | [../decision-log/0123-record-track-b-day-0-start.md](../decision-log/0123-record-track-b-day-0-start.md) | Decision recording Track B Day 0 operational start under decision `0122`. |
 | [../governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md](../governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md) | Repo-safe Track B run record `0054`. |
 | [../experiments/evaluation-notes/0090-track-b-day-0-start-record.md](../experiments/evaluation-notes/0090-track-b-day-0-start-record.md) | Evaluation note for Track B Day 0 start. |
+| [checkpoint-0081-track-b-day-1-source-arm-intake-start.md](checkpoint-0081-track-b-day-1-source-arm-intake-start.md) | Report-facing Day 1 source-arm intake-control start and zero-count ledger. |
+| [../decision-log/0124-record-track-b-day-1-source-arm-intake-start.md](../decision-log/0124-record-track-b-day-1-source-arm-intake-start.md) | Decision recording Track B Day 1 source-arm intake start. |
+| [../experiments/evaluation-notes/0091-track-b-day-1-source-arm-intake-start.md](../experiments/evaluation-notes/0091-track-b-day-1-source-arm-intake-start.md) | Evaluation note for Track B Day 1 intake start. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -129,9 +133,10 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 12. record Track B formal signoff: legal/privacy `no_veto`, CIB/internal owner `accepted_boundary`, and checklist `fully_green`
 13. use decision `0122` to start Track B only under locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting
 14. use decision `0123` and run `0054` as the Day 0 operational start record before Day 1 source-arm intake
-15. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-16. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-17. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+15. use decision `0124` as the Day 1 source-arm intake-control start with zero candidates surfaced so far
+16. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+17. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+18. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 
