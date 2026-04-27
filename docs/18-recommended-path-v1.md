@@ -17,7 +17,9 @@ checkpoint 0081 research evidence
 → capped method-test decision draft
 → technical/governance plus legal/privacy review of the capped decision draft
 → final execution authorization package with Track A and Track B separated
-→ final capped execution decision only if all gates pass
+→ final gate response: Track A approved after start checklist, Track B conditional
+→ Track A zero-new-evidence dry run
+→ Track B capped live method test only if all hard conditions pass
 → human review and second review
 → discovery-yield and reviewer-burden evaluation
 → decision on expansion, revision, or pause
@@ -37,13 +39,13 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 ## Current Post-0076 Path
 
-The repo is now in checkpoint adoption, operational-readiness, and investment-scam discovery-method decision-drafting mode.
+The repo is now in controlled execution planning for the investment-scam discovery method.
 
-Immediate next action: use decision `0120` to prepare the final capped investment-scam discovery method-test execution authorization package. This package separates Track A, a zero-new-evidence dry run, from Track B, a capped live candidate-discovery method test.
+Immediate next action: use decision `0121` to move out of abstract review and into gated execution planning. Track A may start only after [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md) is complete. Track B remains blocked until [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green.
 
-Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation, but it also does not authorize execution.
+Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation. Decision `0121` records final gate response: Track A is approved after start-checklist completion, and Track B is approved only after hard conditions pass.
 
-Do not execute another pilot, browser tranche, confirmed-pointer tranche, crawler expansion, embedding/model experiment, item `0077`, or item `0082` until a final capped decision records all required gates as satisfied. Historical post-0076 decision choices were:
+Do not open item `0082`, broad crawler expansion, embedding/model experiment, production detection, legal fraud determination, or another abstract package. Do not execute Track B until the condition checklist is fully green. Historical post-0076 decision choices were:
 
 - `report_only_delivery`
 - `targeted_confirmed_pointer_tranche`
@@ -69,7 +71,9 @@ Historical pilot-launch materials remain available in [29-authorized-pilot-execu
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft, but it remains `draft_only` and `not_executable_until_approved`. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated.
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`.
+
+The next repo action is not to polish `0118` or `0120`. Complete the Track A start checklist, run the zero-new-evidence dry run, and keep Track B blocked until its hard-condition checklist is fully green.
 
 Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
 

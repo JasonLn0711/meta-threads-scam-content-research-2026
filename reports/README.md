@@ -15,6 +15,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 method decision draft | 2026-04-27 | Draft-only capped investment-scam discovery method-test decision | [../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md](../decision-log/0118-open-capped-investment-scam-discovery-method-test-decision-draft.md) |
 | checkpoint 0081 method decision review | 2026-04-27 | Technical/governance plus legal/privacy review package for decision 0118 | [checkpoint-0081-capped-method-test-decision-review-request.md](checkpoint-0081-capped-method-test-decision-review-request.md) |
 | checkpoint 0081 final execution authorization | 2026-04-27 | Final gate review package for Track A dry run and Track B capped method test | [checkpoint-0081-final-capped-method-test-authorization-request.md](checkpoint-0081-final-capped-method-test-authorization-request.md) |
+| checkpoint 0081 controlled execution planning | 2026-04-27 | Track A start checklist and Track B hard-condition checklist after decision 0121 | [checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md](checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -42,6 +43,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-capped-method-test-decision-review-request.md](checkpoint-0081-capped-method-test-decision-review-request.md) | Repo-safe request for technical/governance and legal/privacy review of decision `0118`. |
 | [checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package-qa.md](checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package-qa.md) | Package-specific QA for the decision `0118` review package. |
 | [../decision-log/0120-open-final-capped-investment-scam-discovery-method-test-execution-authorization-package.md](../decision-log/0120-open-final-capped-investment-scam-discovery-method-test-execution-authorization-package.md) | Decision opening final execution authorization package preparation; does not authorize execution. |
+| [../decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md](../decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md) | Final gate response: Track A approved after start checklist; Track B conditionally approved after hard conditions. |
 | [checkpoint-0081-final-capped-method-test-authorization-request.md](checkpoint-0081-final-capped-method-test-authorization-request.md) | Final gate request for Track A dry run and Track B capped live method test. |
 | [checkpoint-0081-final-capped-method-test-execution-sop.md](checkpoint-0081-final-capped-method-test-execution-sop.md) | Day-by-day SOP for authorized Track A and Track B execution. |
 | [checkpoint-0081-final-capped-method-test-reviewer-assignment-table.md](checkpoint-0081-final-capped-method-test-reviewer-assignment-table.md) | Repo-safe role-alias assignment table required before execution. |
@@ -51,6 +53,8 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md](checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md) | Stop-rule incident template and daily stop-rule fields. |
 | [checkpoint-0081-final-capped-method-test-aggregate-report-template.md](checkpoint-0081-final-capped-method-test-aggregate-report-template.md) | Aggregate-only reporting template. |
 | [checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md](checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md) | QA expectations for the final execution authorization package. |
+| [checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md](checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md) | Start checklist for Track A zero-new-evidence dry run. |
+| [checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) | Hard-condition checklist for Track B capped live method test. |
 | [checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md](checkpoint-0081-investment-scam-discovery-method-technical-governance-review-package-qa.md) | Package-specific QA for the selected technical/governance review ZIP for the investment-scam discovery method design. |
 | [checkpoint-0081-recipient-adoption-tracker.md](checkpoint-0081-recipient-adoption-tracker.md) | Repo-safe recipient acceptance and conditions tracker for checkpoint 0081. |
 | [checkpoint-0081-recipient-adoption-request.md](checkpoint-0081-recipient-adoption-request.md) | Repo-safe message/form for requesting recipient acceptance of checkpoint 0081. |
@@ -92,10 +96,12 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 6. review decision `0118`, the draft-only capped investment-scam discovery method-test decision, before any capped execution decision
 7. use decision `0119` to package decision `0118` for technical/governance and legal/privacy review
 8. use decision `0120` to prepare a final execution authorization package with Track A and Track B separated
-9. ask reviewers to choose `approve_track_a_dry_run_only`, `approve_track_a_and_track_b_execution`, `approve_with_conditions`, `revise_before_execution`, or `block_execution`
-10. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed and a new capped decision is recorded
-11. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing and a new capped decision is recorded
-12. require a final approved decision record, caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any new collection
+9. use decision `0121` to record `approve_track_a_now_track_b_after_conditions`
+10. complete the Track A start checklist, then run only the zero-new-evidence dry run
+11. keep Track B blocked until legal/privacy, CIB/internal, role, controlled-store, cap, stop-rule, validation, and leakage-check conditions are fully green
+12. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+13. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+14. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 

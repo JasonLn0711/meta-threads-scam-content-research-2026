@@ -79,6 +79,9 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md` | Stop-rule incident template and daily stop-rule fields. |
 | `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` | Aggregate-only reporting template. |
 | `reports/checkpoint-0081-final-capped-method-test-execution-authorization-package-qa.md` | QA expectations for the final authorization package. |
+| `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` | Final gate response: Track A approved after start checklist; Track B conditionally approved after hard conditions. |
+| `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-start-checklist.md` | Start checklist for Track A zero-new-evidence dry run; post-package controlled execution planning artifact. |
+| `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` | Hard-condition checklist for Track B capped live method test; post-package controlled execution planning artifact. |
 
 ## Approved Findings
 
@@ -103,6 +106,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | Capped investment-scam discovery method-test decision drafting is open | draft-only planning fact; not execution authorization |
 | Decision `0118` review packaging is open | review-only planning fact; not execution authorization |
 | Final execution authorization package is open with Track A and Track B separated | final-gate planning fact; not execution authorization |
+| Final gate response is recorded as `approve_track_a_now_track_b_after_conditions` | Track A may start after checklist completion; Track B remains blocked until hard conditions pass |
 
 ## Explicit Non-Claims
 
@@ -131,6 +135,8 @@ Likely future choices:
 | Capped method-test decision draft | Review proposed caps, source arms, reviewer roles, legal/privacy gate, controlled-store handling, metrics thresholds, stop rules, and aggregate reporting before any execution approval. |
 | Decision `0118` review package | Ask technical/governance and legal/privacy reviewers whether the capped decision draft can proceed toward a future execution-gate review. |
 | Final execution authorization package | Ask reviewers whether to approve Track A dry run only, approve Track A plus Track B, approve with conditions, revise, or block execution. |
+| Track A zero-new-evidence dry run | Start after the Track A start checklist is complete; use existing repo-safe checkpoint materials only. |
+| Track B capped live method test | Start only after Track B hard conditions are fully green; no item `0082` or overflow queue. |
 | Targeted confirmed-pointer intake | CIB supplies another explicit pointer and a new single-item decision is recorded. |
 | Calibration-only browser tranche | Reviewers need hard negatives, uncertainty, or false-positive pressure under explicit caps. |
 | Model or embedding study | Only after a later decision states the research question, dataset scope, safeguards, and evaluation plan. |
