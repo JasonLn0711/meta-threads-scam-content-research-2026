@@ -17,6 +17,7 @@ Track B cannot begin until every required condition below is complete.
 | Execution status | `conditionally_approved_blocked_until_all_conditions_pass` |
 | Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
+| Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -34,14 +35,14 @@ Track B cannot begin until every required condition below is complete.
 |---|---|---|---|
 | Legal/privacy reviewer status | no veto / approved with recorded conditions | pending | Track B cannot start while unresolved. |
 | CIB/internal owner status | accepts capped method-test boundary | pending | Must accept that this is not item `0082` or enforcement. |
-| Technical/governance owner status | confirms execution controls | pending | Must confirm caps, metrics, and stop-rule use. |
-| Controlled-store custodian | assigned | pending | Required for any live evidence boundary. |
-| Primary reviewer role alias | assigned | pending | Repo-safe alias only. |
-| Second reviewer role alias | assigned | pending | Repo-safe alias only. |
-| Stop-rule owner | assigned | pending | Required before any candidate intake. |
-| Daily stop-check owner | assigned | pending | Required before any candidate intake. |
-| Validation owner | assigned | pending | Must own strict validation output. |
-| Reporting owner | assigned | pending | Must own aggregate-only reporting. |
+| Technical/governance owner status | confirms execution controls | pass | `confirmed_controls` response recorded. |
+| Controlled-store custodian | assigned | pass | `track_b_controlled_store_custodian`; legal/privacy boundary still pending. |
+| Primary reviewer role alias | assigned | pass | `track_b_primary_reviewer_role`. |
+| Second reviewer role alias | assigned | pass | `track_b_second_reviewer_role`. |
+| Stop-rule owner | assigned | pass | `track_b_stop_rule_owner`. |
+| Daily stop-check owner | assigned | pass | `track_b_daily_stop_check_owner`. |
+| Validation owner | assigned | pass | `track_b_validation_owner`; strict validation output target still pending. |
+| Reporting owner | assigned | pass | `track_b_reporting_owner`. |
 | Source-arm caps | locked | pass | Caps inherited from decision `0121`; no overflow queue. |
 | Surfaced candidate cap | locked at 300 | pass | No overflow queue. |
 | Human-reviewed candidate cap | locked at 150 | pass | No overflow queue. |
@@ -52,7 +53,7 @@ Track B cannot begin until every required condition below is complete.
 | Aggregate-only report template | ready | pass | `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` |
 | Controlled-store boundary | documented | pass_pending_custodian | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian still pending. |
 | Strict validation command | command shape ready | pending_output_target | Use `python3 scripts/validate_thread_dataset.py <track_b_dataset>.json --strict` after an approved repo-safe output exists. |
-| Raw evidence exclusion scan/check | required | pending | Must be run before any Track B report is committed. |
+| Raw evidence exclusion scan/check | required | pass_with_conditions | Must be run before any Track B report is committed; any raw evidence hit triggers immediate stop and cleanup review. |
 | Track A dry-run result | should be complete before Track B | pass_with_limitations | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`; limitations must be reviewed before Track B. |
 | Track A limitation mapping | limitations mapped to Track B controls | pass | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` maps each limitation to a Track B control. |
 
