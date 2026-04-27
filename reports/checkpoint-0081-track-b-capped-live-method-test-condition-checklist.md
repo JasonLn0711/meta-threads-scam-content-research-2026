@@ -16,6 +16,7 @@ Track B cannot begin until every required condition below is complete.
 | Track | `track_b_capped_live_method_test` |
 | Execution status | `conditionally_approved_blocked_until_all_conditions_pass` |
 | Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
+| Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -135,6 +136,7 @@ Do not open another abstract review package.
 
 Do:
 
-1. collect repo-safe condition responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
-2. resolve Track B pending conditions;
-3. start Track B only after this checklist is fully green.
+1. collect repo-safe condition responses using `reports/checkpoint-0081-track-b-condition-response-request.md`;
+2. record accepted responses in `reports/checkpoint-0081-track-b-condition-resolution-tracker.md`;
+3. resolve Track B pending conditions;
+4. start Track B only after this checklist is fully green.

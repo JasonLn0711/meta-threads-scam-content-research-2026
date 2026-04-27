@@ -16,6 +16,7 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 | Related decision | `decision-log/0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
 | Track A result | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md` |
 | Track B checklist | `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` |
+| Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Track B status | `blocked_pending_condition_signoff` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
@@ -144,7 +145,11 @@ This tracker does not authorize:
 
 ## Next Action
 
-Collect repo-safe condition responses using the response form above.
+Collect repo-safe condition responses using:
+
+```text
+reports/checkpoint-0081-track-b-condition-response-request.md
+```
 
 After every blocking condition is resolved, update:
 
