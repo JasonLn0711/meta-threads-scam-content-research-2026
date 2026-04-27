@@ -47,6 +47,8 @@ Keep filled copies local-only or in the controlled store if they contain raw sou
 | Broad reply/comment capture allowed? | yes / no |
 | Screenshot capture allowed? | yes / no |
 | OCR allowed? | yes / no |
+| Full visible top-level post text capture required? | yes / no |
+| Full visible reply/comment text capture required? | yes / no |
 
 ## Field Allowlist
 
@@ -54,6 +56,8 @@ Keep filled copies local-only or in the controlled store if they contain raw sou
 |---|---|---|
 | post text | yes / no | redacted visible text or excerpt |
 | selected replies/comments | yes / no | selected redacted replies only |
+| full visible post text in controlled store | yes / no | controlled store only; repo uses redacted summary |
+| full visible reply/comment text in controlled store | yes / no / unavailable | controlled store only; repo uses redacted summary/status |
 | image/screenshot reference | yes / no | redacted local reference only |
 | OCR text | yes / no | risk-relevant privacy-reviewed excerpt |
 | visible external links | yes / no | domain-only or redacted reference |
@@ -85,6 +89,8 @@ Stop immediately if:
 | Selected items |  |
 | Stop condition triggered? | yes / no |
 | Raw output path recorded outside git? | yes / no |
+| Full-text controlled artifact created? | yes / no |
+| Reply/comment capture status | `complete_visible` / `partial_visible` / `unavailable_or_none_visible` / `not_attempted` |
 | Redacted item entered into `manual_entry_0001.json`? | yes / no |
 | `manual_record_0001.json` built? | yes / no |
 | Strict validation result |  |

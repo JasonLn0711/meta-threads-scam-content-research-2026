@@ -44,6 +44,9 @@ For each item, record repo-safe outcomes only:
 - capture succeeded / failed / unavailable;
 - top-level post captured in controlled store: yes/no;
 - replies/comments captured in controlled store: yes/no/unavailable;
+- controlled-store full-text review artifact created: yes/no;
+- reply/comment capture status: `complete_visible` / `partial_visible` / `unavailable_or_none_visible` / `not_attempted`;
+- visible reply/comment count and limitation note;
 - controlled artifact hashes if available;
 - redacted rule-family summary;
 - second-review result;
@@ -55,10 +58,11 @@ For each item, record repo-safe outcomes only:
 Do not build `manual_entry_0077.json`, `manual_entry_0078.json`, or `manual_entry_0079.json` until:
 
 1. controlled capture is complete or unavailability is documented;
-2. reply/comment context is summarized in redacted form;
-3. second review confirms label, risk, and evidence sufficiency;
-4. raw evidence remains outside git;
-5. repo-safe fields can pass strict validation.
+2. full visible top-level post text and full visible reply/comment text are preserved in controlled store, or reply/comment unavailability is explicitly documented;
+3. reply/comment context is summarized in redacted form;
+4. second review confirms label, risk, and evidence sufficiency;
+5. raw evidence remains outside git;
+6. repo-safe fields can pass strict validation.
 
 ## Current Status
 
