@@ -18,6 +18,7 @@ Track B cannot begin until every required condition below is complete.
 | Condition resolution tracker | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` |
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
+| Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
 | Broad crawler/browser expansion authorized | no |
@@ -51,8 +52,8 @@ Track B cannot begin until every required condition below is complete.
 | Daily stop-rule checklist | ready | pass | `reports/checkpoint-0081-final-capped-method-test-stop-rule-incident-template.md` |
 | Candidate record template | ready | pass | `reports/checkpoint-0081-final-capped-method-test-candidate-record-template.md` |
 | Aggregate-only report template | ready | pass | `reports/checkpoint-0081-final-capped-method-test-aggregate-report-template.md` |
-| Controlled-store boundary | documented | pass_pending_custodian | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian still pending. |
-| Strict validation command | command shape ready | pending_output_target | Use `python3 scripts/validate_thread_dataset.py <track_b_dataset>.json --strict` after an approved repo-safe output exists. |
+| Controlled-store boundary | documented | pass_pending_legal_privacy | `reports/checkpoint-0081-final-capped-method-test-controlled-store-boundary.md`; custodian alias is assigned, but legal/privacy boundary remains pending. |
+| Strict validation command | command shape and target ready | pass | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md`; local-only dataset target is `data/interim/track_b/manual_records_track_b.jsonl`. |
 | Raw evidence exclusion scan/check | required | pass_with_conditions | Must be run before any Track B report is committed; any raw evidence hit triggers immediate stop and cleanup review. |
 | Track A dry-run result | should be complete before Track B | pass_with_limitations | `reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md`; limitations must be reviewed before Track B. |
 | Track A limitation mapping | limitations mapped to Track B controls | pass | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` maps each limitation to a Track B control. |

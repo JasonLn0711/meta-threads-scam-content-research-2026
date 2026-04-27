@@ -61,6 +61,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-condition-response-dispatch-log.md](checkpoint-0081-track-b-condition-response-dispatch-log.md) | Dispatch-ready log and first technical/governance response record for Track B condition signoff. |
 | [checkpoint-0081-track-b-condition-resolution-tracker.md](checkpoint-0081-track-b-condition-resolution-tracker.md) | Operational tracker for resolving Track B legal/privacy, owner, role, controlled-store, and leakage-check conditions. |
 | [checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) | Hard-condition checklist for Track B capped live method test. |
+| [checkpoint-0081-track-b-validation-and-leakage-procedure.md](checkpoint-0081-track-b-validation-and-leakage-procedure.md) | Local-only strict-validation target and raw-evidence exclusion procedure for Track B. |
 | [checkpoint-0081-track-b-condition-response-full-reviewer-readme.md](checkpoint-0081-track-b-condition-response-full-reviewer-readme.md) | Repo copy of the full reviewer package README. |
 | [checkpoint-0081-track-b-condition-response-full-reviewer-message.md](checkpoint-0081-track-b-condition-response-full-reviewer-message.md) | Repo copy of the full reviewer message. |
 | [checkpoint-0081-track-b-condition-response-full-package-manifest.md](checkpoint-0081-track-b-condition-response-full-package-manifest.md) | Repo copy of the full package manifest. |

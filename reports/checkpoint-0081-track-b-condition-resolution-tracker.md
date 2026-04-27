@@ -18,6 +18,7 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 | Track B checklist | `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` |
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
+| Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
 | Track B status | `blocked_pending_condition_signoff` |
 | Item `0082` authorized | no |
 | Open-ended collection authorized | no |
@@ -34,6 +35,7 @@ Track B remains blocked until every required condition is resolved in repo-safe 
 | Controlled-store custodian | repo-safe custodian alias recorded | `track_b_controlled_store_custodian` | no | Alias recorded; formal legal/privacy boundary still pending. |
 | Track B reviewer role aliases | repo-safe role aliases recorded | assigned | no | Primary, second, stop-rule, daily stop-check, validation, and reporting role aliases are recorded below. |
 | Raw-evidence exclusion check | pre-commit/check command or procedure recorded | `ready_with_conditions` | no | Must run before any Track B output is committed; any raw evidence hit triggers stop and cleanup review. |
+| Strict validation output target | target and procedure recorded | pass | no | Local-only target: `data/interim/track_b/manual_records_track_b.jsonl`; log target: `data/interim/track_b/validation_track_b_strict.txt`. |
 | Track A limitations reviewed | limitations mapped to Track B controls | pass | no | See section below. |
 
 ## Track A Limitation Mapping
@@ -72,6 +74,8 @@ The first repo-safe condition response accepts the package as sufficient for con
 Legal/privacy and CIB/internal statements in that response are recommendations, not final no-veto or acceptance records. They remain blocking until formal repo-safe responses are recorded.
 
 Raw-evidence exclusion check is `ready_with_conditions`: run the exclusion check before any Track B output is committed. Any raw URL, handle, screenshot, raw post text, raw reply text, contact ID, credential, browser/session artifact, exact controlled-store path, stakeholder case ID, or private recipient detail found in git-facing output triggers immediate stop and cleanup review.
+
+Strict validation output target is now recorded in `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md`. The validation dataset and validation log remain local-only under ignored `data/interim/track_b/`.
 
 ## Required Source And Cap Locks
 

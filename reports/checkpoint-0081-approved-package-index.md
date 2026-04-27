@@ -86,6 +86,7 @@ These files were added after checkpoint 0081 package delivery to document operat
 | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` | Dispatch-ready package log and first technical/governance condition response record. |
 | `reports/checkpoint-0081-track-b-condition-resolution-tracker.md` | Operational tracker for resolving Track B hard conditions without opening a new review package. |
 | `reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md` | Hard-condition checklist for Track B capped live method test; post-package controlled execution planning artifact. |
+| `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` | Local-only strict-validation target and raw-evidence exclusion procedure for Track B. |
 | `reports/checkpoint-0081-track-b-condition-response-full-reviewer-readme.md` | Repo copy of the full reviewer package README. |
 | `reports/checkpoint-0081-track-b-condition-response-full-reviewer-message.md` | Repo copy of the full reviewer message. |
 | `reports/checkpoint-0081-track-b-condition-response-full-package-manifest.md` | Repo copy of the full package manifest. |
