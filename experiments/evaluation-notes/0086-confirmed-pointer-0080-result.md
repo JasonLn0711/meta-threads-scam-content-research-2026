@@ -76,3 +76,5 @@ Results:
 - aggregate labels: 34 `scam`, 24 `non_scam`, 16 `uncertain`, 3 `insufficient_evidence`
 - aggregate risk: 34 `high`, 9 `medium`, 34 `low`
 - manual entry build: 0 governance errors, 0 governance warnings, 0 schema errors, 0 schema warnings
+
+These aggregate counts are an intermediate local snapshot before the final checkpoint 0081 second-review synthesis. The canonical checkpoint 0081 counts are recorded in `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` and `reports/checkpoint-0081-approved-package-index.md`.

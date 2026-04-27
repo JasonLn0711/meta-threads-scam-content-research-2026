@@ -12,9 +12,10 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| Package file count | 29 files |
-| ZIP SHA-256 | `58fa4882b1f6c35837138041e2e8fd96a1dcd320f205aaa8ba5be53c006283de` |
-| Package status | CIB-approved 78-record research checkpoint package |
+| Package version/date | 2026-04-27 minor-edit rebuild |
+| Package file count | 33 files |
+| ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
+| Package status | `approve_with_minor_edits` response recorded; minor edits applied for reviewer re-check |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
 ## Included Entry Points
@@ -27,8 +28,12 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report with tables and figures. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source with tables and figures. |
 | `reports/checkpoint-0081-approved-package-index.md` | Canonical approved package index. |
+| `reports/checkpoint-0081-package-qa.md` | Package QA, checksum, validation, and leakage-scan summary. |
+| `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Reviewer response tracker and minor-edit resolution log. |
 | `experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md` | Detailed 78-record synthesis. |
 | `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md` | CIB approval decision record. |
+| `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
+| `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Reviewer response and minor-edit resolution decision. |
 
 ## Validation
 
@@ -41,10 +46,11 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Baseline F1 | 0.883 |
 | Baseline false positives | 7 |
 | Baseline false negatives | 2 |
+| Baseline triage support caveat | baseline uses `final_risk_level` when present; one duplicate/insufficient-evidence trace explains support `high 36`, `medium 10`, `low 32` versus aggregate risk `high 36`, `medium 11`, `low 31` |
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |
-| PDF compilation | pass with `tectonic`; table/path wrapping warnings resolved |
+| PDF compilation | pass with `tectonic`; only minor line-breaking warning remains |
 
 ## Leakage Scan
 
@@ -56,7 +62,7 @@ The scan did not find actual raw Threads URLs, raw handles, credential values, b
 
 This package is a selected reviewer package, not a full repo snapshot. Older checkpoint 0055 and post-0076 files remain in the repo as historical context, but the package entry point is checkpoint 0081.
 
-The package does not authorize item `0082`, broad browser/crawler expansion, embedding/model training, production detection, legal fraud determinations, or raw evidence in git.
+The package does not authorize item `0082`, broad browser/crawler expansion, confirmed-pointer intake, embedding/model training, production detection, legal fraud determinations, or raw evidence in git.
 
 ## Superseded Package Handling
 

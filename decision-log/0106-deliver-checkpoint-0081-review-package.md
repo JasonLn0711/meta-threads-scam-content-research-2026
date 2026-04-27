@@ -22,7 +22,7 @@ This decision is a delivery and reviewer-tracking decision only. It does not aut
 | Records | 78 strict-valid records |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| ZIP SHA-256 | `a2bc022b3b465f3c0b7cdd1c9da3a61c0f0e8197e9d8e6c51ce99b615cd741ad` |
+| ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Package file count | 29 files |
 | PDF report | `reports/checkpoint-0081-cib-technical-report.pdf` |
 | Source report | `reports/checkpoint-0081-cib-technical-report.tex` |
@@ -39,6 +39,7 @@ This decision is a delivery and reviewer-tracking decision only. It does not aut
 7. `reports/checkpoint-0081-package-qa.md`
 8. `decision-log/0105-approve-cib-78-record-checkpoint-synthesis.md`
 9. `decision-log/0106-deliver-checkpoint-0081-review-package.md`
+10. `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md`
 
 ## Requested Reviewer Response
 
@@ -73,4 +74,3 @@ This decision does not authorize:
 Delivery may proceed only with the checkpoint 0081 package listed above.
 
 If reviewers request new evidence, the project must create a new decision record with caps, source rules, access path, controlled-store handling, redaction requirements, second-review requirements, strict-validation requirements, and stop conditions before any new collection starts.
-

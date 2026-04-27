@@ -43,7 +43,7 @@ Commands run:
 ```text
 python3 scripts/validate_thread_dataset.py data/interim/manual_records_checkpoint_0081.jsonl --strict
 python3 scripts/audit_thread_dataset.py data/interim/manual_records_checkpoint_0081.jsonl
-.venv/bin/python scripts/run_rule_baseline.py data/interim/manual_records_checkpoint_0081.jsonl --variant all --run-name checkpoint-0081-candidate-smoke-v1 --output-dir experiments/baselines/outputs
+.venv/bin/python scripts/run_rule_baseline.py data/interim/manual_records_checkpoint_0081.jsonl --variant all --run-name checkpoint-0081-cib-approved-smoke-v1 --output-dir experiments/baselines/outputs
 ```
 
 Validation result:
@@ -120,7 +120,7 @@ Interpretation:
 Rule baseline run:
 
 ```text
-checkpoint-0081-candidate-smoke-v1
+checkpoint-0081-cib-approved-smoke-v1
 ```
 
 | Metric | Value |
@@ -136,6 +136,8 @@ checkpoint-0081-candidate-smoke-v1
 These are smoke-test baseline metrics on the current binary-evaluable slice. They are not production performance estimates.
 
 The two false negatives show that the current rule baseline still misses some scam/high cases after human adjudication. This supports keeping human review and rule revision in the loop.
+
+Baseline triage support uses the evaluator's preferred gold risk field: `final_risk_level` when present, otherwise `risk_level`. The final aggregate table above reports the schema-level `risk_level` distribution. One duplicate/insufficient-evidence trace has `risk_level = medium` and `final_risk_level = low`, so the baseline triage support is `high 36`, `medium 10`, `low 32`, while the checkpoint aggregate distribution remains `high 36`, `medium 11`, `low 31`.
 
 ## Key Rule Lessons
 

@@ -11,10 +11,10 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 | Field | Value |
 |---|---|
 | Checkpoint | `threads_pilot_v1_0081` |
-| Package status | ready for reviewer delivery |
+| Package status | `approve_with_minor_edits` recorded; repo-safe minor edits applied for reviewer re-check |
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| ZIP SHA-256 | `a2bc022b3b465f3c0b7cdd1c9da3a61c0f0e8197e9d8e6c51ce99b615cd741ad` |
+| ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
 | Package file count | 29 files |
 | Current decision | `decision-log/0106-deliver-checkpoint-0081-review-package.md` |
 
@@ -36,10 +36,10 @@ This tracker is repo-safe. It contains no raw Threads URLs, handles, screenshots
 
 | Reviewer role | Reviewer | Status | Decision | Required edits or conditions | Date |
 |---|---|---|---|---|---|
-| legal/privacy |  | pending |  |  |  |
-| domain/CIB |  | pending |  |  |  |
-| technical |  | pending |  |  |  |
-| stakeholder/project owner |  | pending |  |  |  |
+| legal/privacy |  | pending |  | Required only before broader external sharing. |  |
+| domain/CIB | CIB reviewer response recorded by project owner | minor edits applied | `approve_with_minor_edits` | Delivery tracker added; 0086/0087 intermediate snapshot notes added; baseline triage-support caveat added; run index 0080/0081 baseline outcome updated; package rebuilt with new checksum. | 2026-04-27 |
+| technical |  | pending re-check |  | Re-check baseline triage-support caveat and rebuilt ZIP checksum. |  |
+| stakeholder/project owner | project owner | recorded | `approve_with_minor_edits` | No new evidence collection authorized; proceed only with package/report maintenance. | 2026-04-27 |
 
 Allowed decisions:
 
@@ -87,3 +87,12 @@ Create a new decision record first. That new record must specify:
 - strict-validation requirement;
 - stop conditions.
 
+## Minor-Edit Resolution Log
+
+| Reviewer request | Resolution |
+|---|---|
+| Add reviewer delivery tracker to the package | Added this tracker and included it in the rebuilt package. |
+| Clarify 0086/0087 aggregate counts | Added intermediate-snapshot notes pointing reviewers to canonical checkpoint 0081 counts. |
+| Explain baseline triage support vs final risk distribution | Added caveat: baseline triage uses `final_risk_level` when present, while the aggregate table reports schema-level `risk_level`; one duplicate/insufficient-evidence trace accounts for the 10/32 vs 11/31 medium/low difference. |
+| Update run_index baseline outcome for 0080/0081 | Updated both item rows to `checkpoint 0081 baseline: scam-like/high`. |
+| Rebuild package/checksum | Rebuilt package after minor edits; checksum is recorded in the adjacent external `.zip.sha256` handoff file. |

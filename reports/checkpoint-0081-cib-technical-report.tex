@@ -339,6 +339,10 @@ The two false negatives are important.
 They show that the current rule baseline can still miss scam/high cases after human adjudication.
 Therefore, this checkpoint supports continued human review and rule refinement rather than automation-only deployment.
 
+The baseline triage support differs slightly from the aggregate risk table because the evaluator uses \code{final\_risk\_level} when present, otherwise \code{risk\_level}.
+One duplicate/insufficient-evidence trace keeps \code{risk\_level = medium} for schema history but has \code{final\_risk\_level = low} after adjudication.
+Therefore the baseline triage support is \code{high 36}, \code{medium 10}, and \code{low 32}, while the checkpoint aggregate risk distribution remains \code{high 36}, \code{medium 11}, and \code{low 31}.
+
 \section{Limitations}
 
 \begin{enumerate}[leftmargin=*]
