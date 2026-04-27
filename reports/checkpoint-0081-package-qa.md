@@ -12,10 +12,10 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 |---|---|
 | Package directory | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package` |
 | ZIP path | `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip` |
-| Package version/date | 2026-04-27 technical/governance re-check rebuild |
-| Package file count | 35 files |
+| Package version/date | 2026-04-27 final handoff rebuild |
+| Package file count | 37 files |
 | ZIP SHA-256 | external handoff checksum generated after ZIP rebuild in `/Users/iKev/Downloads/checkpoint-0081-cib-approved-package.zip.sha256` |
-| Package status | technical/governance re-check passed; ready for checkpoint use and handoff |
+| Package status | final handoff recorded; ready for allowed checkpoint use |
 | Superseded package handling | old post-0076 package moved out of Downloads top level into `_superseded-review-packages/2026-04-27-post-0076-superseded-by-checkpoint-0081/` |
 
 ## Included Entry Points
@@ -28,6 +28,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report with tables and figures. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source with tables and figures. |
 | `reports/checkpoint-0081-approved-package-index.md` | Canonical approved package index. |
+| `reports/checkpoint-0081-final-handoff-note.md` | Final handoff note and recipient-specific sharing gate. |
 | `reports/checkpoint-0081-package-qa.md` | Package QA, checksum, validation, and leakage-scan summary. |
 | `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Reviewer response tracker and minor-edit resolution log. |
 | `reports/checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check result. |
@@ -36,6 +37,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Delivery decision and non-authorizations. |
 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Reviewer response and minor-edit resolution decision. |
 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Technical/governance re-check decision. |
+| `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Final handoff decision and sharing gate. |
 
 ## Validation
 
@@ -50,6 +52,7 @@ This note contains no raw Threads URLs, handles, screenshots, raw post text, raw
 | Baseline false negatives | 2 |
 | Baseline triage support caveat | baseline uses `final_risk_level` when present; one duplicate/insufficient-evidence trace explains support `high 36`, `medium 10`, `low 32` versus aggregate risk `high 36`, `medium 11`, `low 31` |
 | Technical/governance re-check | pass |
+| Final handoff note | present |
 | `.DS_Store` in package directory | none found |
 | ZIP created | yes |
 | LaTeX static structure check | pass: document, table, figure, tabular, tabularx, longtable, and tikzpicture environments balanced |

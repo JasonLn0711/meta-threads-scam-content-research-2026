@@ -27,6 +27,7 @@ Reports should be more polished than working notes, but they should remain hones
 | [post-0076-revised-package-qa.md](post-0076-revised-package-qa.md) | Repo-safe QA record for the rebuilt selected reviewer package. |
 | [post-0076-validation-provenance.md](post-0076-validation-provenance.md) | Repo-safe validation and baseline provenance for technical reviewers. |
 | [checkpoint-0081-approved-package-index.md](checkpoint-0081-approved-package-index.md) | Canonical index for the CIB-approved 78-record research checkpoint. |
+| [checkpoint-0081-final-handoff-note.md](checkpoint-0081-final-handoff-note.md) | Final handoff note and recipient-specific sharing gate for checkpoint 0081. |
 | [checkpoint-0081-reviewer-delivery-tracker.md](checkpoint-0081-reviewer-delivery-tracker.md) | Delivery tracker and reviewer response table for checkpoint 0081. |
 | [checkpoint-0081-package-qa.md](checkpoint-0081-package-qa.md) | Package QA, checksum, validation, and leakage-scan summary for checkpoint 0081. |
 | [checkpoint-0081-technical-governance-recheck.md](checkpoint-0081-technical-governance-recheck.md) | Technical/governance re-check result after minor edits. |

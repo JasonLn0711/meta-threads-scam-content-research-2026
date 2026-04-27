@@ -24,6 +24,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Artifact | Purpose |
 |---|---|
 | `reports/checkpoint-0081-executive-addendum.md` | Short entry point for reviewers. |
+| `reports/checkpoint-0081-final-handoff-note.md` | Final handoff note and recipient-specific sharing gate. |
 | `reports/checkpoint-0081-reviewer-delivery-tracker.md` | Delivery tracker and reviewer response table. |
 | `reports/checkpoint-0081-cib-technical-report.pdf` | Compiled PDF technical report for rigorous CIB reviewer reading. |
 | `reports/checkpoint-0081-cib-technical-report.tex` | LaTeX technical report source for auditability and later revision. |
@@ -37,6 +38,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | `decision-log/0106-deliver-checkpoint-0081-review-package.md` | Decision recording checkpoint 0081 package delivery and non-authorizations. |
 | `decision-log/0107-record-checkpoint-0081-approve-with-minor-edits.md` | Decision recording the `approve_with_minor_edits` response and repo-safe fixes. |
 | `decision-log/0108-record-checkpoint-0081-technical-governance-recheck.md` | Decision recording technical/governance re-check pass. |
+| `decision-log/0109-record-checkpoint-0081-final-handoff.md` | Decision recording final package handoff and sharing gate. |
 | `decision-log/0101-authorize-existing-ambiguous-medium-second-review.md` | Decision authorizing second review of existing ambiguous/medium records. |
 | `decision-log/0102-authorize-single-confirmed-pointer-0080-intake.md` | Decision authorizing the single item `0080` confirmed-pointer intake. |
 | `decision-log/0104-authorize-single-confirmed-pointer-0081-intake.md` | Decision authorizing the single item `0081` confirmed-pointer intake. |
@@ -54,6 +56,7 @@ It summarizes what is approved, which artifacts belong to the package, and what 
 | Anti-scam warning content remains an important hard-negative boundary | approved checkpoint interpretation |
 | Baseline smoke result still requires human review because false positives and false negatives remain | approved checkpoint interpretation |
 | Technical/governance re-check passed after minor edits | approved package-readiness fact |
+| Final handoff is ready for allowed recipient classes | approved package-readiness fact |
 
 ## Explicit Non-Claims
 
