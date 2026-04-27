@@ -9,6 +9,7 @@ Reports should be more polished than working notes, but they should remain hones
 | Version | Target date | Audience | File |
 |---|---:|---|---|
 | v0 | 2026-04-30 | CIB/165-facing review and internal research alignment | [threads-scam-content-research-v0.md](threads-scam-content-research-v0.md) |
+| checkpoint 0081 | 2026-04-27 | CIB-approved research checkpoint review | [checkpoint-0081-executive-addendum.md](checkpoint-0081-executive-addendum.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -25,6 +26,9 @@ Reports should be more polished than working notes, but they should remain hones
 | [post-0076-next-decision-memo.md](post-0076-next-decision-memo.md) | Bounded next-decision memo after the approved 0055 package and 0076 addendum. |
 | [post-0076-revised-package-qa.md](post-0076-revised-package-qa.md) | Repo-safe QA record for the rebuilt selected reviewer package. |
 | [post-0076-validation-provenance.md](post-0076-validation-provenance.md) | Repo-safe validation and baseline provenance for technical reviewers. |
+| [checkpoint-0081-approved-package-index.md](checkpoint-0081-approved-package-index.md) | Canonical index for the CIB-approved 78-record research checkpoint. |
+| [checkpoint-0081-executive-addendum.md](checkpoint-0081-executive-addendum.md) | Short CIB-facing entry point for checkpoint 0081. |
+| [checkpoint-0081-cib-technical-report.tex](checkpoint-0081-cib-technical-report.tex) | LaTeX technical report with tables and figures for rigorous CIB review. |
 | [checkpoint-0055-approved-package-index.md](checkpoint-0055-approved-package-index.md) | Canonical index for the approved 55-record checkpoint package. |
 | [checkpoint-0055-executive-addendum.md](checkpoint-0055-executive-addendum.md) | Short CIB/165-facing entry point for the selected C2 checkpoint review. |
 | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) | 55-record checkpoint report after post-0042 confirmed pointers and Option A browser-session tranche. |
@@ -46,12 +50,13 @@ Reports should be more polished than working notes, but they should remain hones
 
 ## Current Launch Boundary
 
-The v0 report package should now describe the governed post-0076 path as:
+The v0 report package should now describe the governed checkpoint-0081 path as:
 
-1. deliver or refine the report package if no new evidence is needed
-2. use targeted confirmed pointers if new final scam/high-risk rule-family learning is needed
-3. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing
-4. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, and strict validation before any new collection
+1. use checkpoint `0081` as the current CIB-approved research checkpoint
+2. deliver or refine the reviewer-facing package if no new evidence is needed
+3. use targeted confirmed pointers only if new final scam/high-risk rule-family learning is explicitly needed
+4. use calibration-only browser work only if hard negatives, uncertainty, or false-positive pressure need stress testing
+5. require a new decision record, caps, source rules, controlled-store handling, redaction, second review, and strict validation before any new collection
 
 The historical Phase 1 path remains:
 

@@ -8,12 +8,12 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 |---|---|
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
-| Latest checkpoint synthesis | 55 records, ending at `threads_pilot_v1_0055` |
-| Latest local work visible in tree | work order `0050`; existing checkpoint 0076 ambiguous/medium-risk second-review queue opened |
-| Current collection gate | review existing redacted records first; items `0077-0079` full-thread/reply capture still pending |
+| Latest checkpoint synthesis | 78 records, ending at `threads_pilot_v1_0081`; CIB-approved research checkpoint |
+| Latest local work visible in tree | run `0052`; item `0081` accepted as local strict-valid CIB/project-owner confirmed scam pointer |
+| Current collection gate | checkpoint `0081` synthesis approved by CIB; items `0077-0079` full-thread/reply capture still pending; no broad expansion open |
 | Next authorized prospective tranche | none |
-| Next stakeholder request | item-by-item second review of 35 existing `uncertain` / `insufficient_evidence` / `medium` records |
-| Next intake scaffold | no item `0080`; any additional confirmed-pointer intake requires a new decision record |
+| Next stakeholder request | prepare reviewer-facing checkpoint `0081` package or report addendum |
+| Next intake scaffold | no item `0082`; any additional confirmed-pointer intake requires a new decision record |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -66,7 +66,10 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0047` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0078_confirmed_pointer_intake_run_record_0047.md` | `0082-confirmed-pointer-0078-preliminary-rule-result.md` | `0078` prospective only | preliminary top-level rule extracted; no manual entry built | Single stakeholder-confirmed pointer opened under decision `0098`; full reply/comment capture remains pending before promotion. |
 | `0048` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0079_confirmed_pointer_intake_run_record_0048.md` | `0083-confirmed-pointer-0079-preliminary-rule-result.md` | `0079` prospective only | preliminary top-level rule extracted; no manual entry built | Single stakeholder-confirmed pointer opened under decision `0099`; full reply/comment capture remains pending before promotion. |
 | `0049` | confirmed-pointer work order | `threads_pilot_v1_2026-05_items_0077_0079_full_thread_capture_work_order_0049.md` | `0084-confirmed-pointer-0077-0079-mini-tranche-synthesis.md` | `0077-0079` prospective only | work order opened; no manual entries built | Decision `0100` authorizes controlled full-thread/reply capture attempts for existing items `0077-0079` only; no item `0080` or broader tranche. |
-| `0050` | second-review work order | `threads_pilot_v1_2026-05_existing_ambiguous_medium_second_review_work_order_0050.md` | `0085-existing-ambiguous-medium-review-queue.md` | existing items only | review queue opened; no labels changed | Decision `0101` authorizes second review of 35 existing checkpoint 0076 `uncertain`, `insufficient_evidence`, or `medium` risk records using existing redacted records only. |
+| `0050` | second-review work order | `threads_pilot_v1_2026-05_existing_ambiguous_medium_second_review_work_order_0050.md` | `0085-existing-ambiguous-medium-review-queue.md`; `0088-existing-ambiguous-medium-second-review-synthesis.md` | existing items only | completed; local 78-record aggregate strict-valid after adjudication | Decision `0101` authorized second review of 35 existing checkpoint 0076 `uncertain`, `insufficient_evidence`, or `medium` risk records using existing redacted records only; next decision is checkpoint packaging, not new collection. |
+| `0051` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0080_full_thread_capture_run_record_0051.md` | `0086-confirmed-pointer-0080-result.md` | `0080` | strict-valid local item; 77-record local aggregate strict-valid | Decision `0102` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0081` or broader tranche. |
+| `0052` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0081_full_thread_capture_run_record_0052.md` | `0087-confirmed-pointer-0081-result.md` | `0081` | strict-valid local item; 78-record local aggregate strict-valid | Decision `0104` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0082` or broader tranche. |
+| `0053` | checkpoint synthesis | `run_index.md` | `0088-existing-ambiguous-medium-second-review-synthesis.md`; `0089-checkpoint-0081-cib-approved-synthesis.md` | `0001-0081` local aggregate | CIB-approved 78-record research checkpoint; strict-valid | Decision `0105` approves checkpoint `0081` synthesis; next step is reviewer-facing package/report addendum, not new collection. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
@@ -88,6 +91,8 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0041` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0041_full_thread_capture_run_record_0033.md` | `0062-confirmed-pointer-0041-result.md` | `0053-record-mass-stock-command-list-group-funnel-rule.md` | `scam` | `high` | `mass_stock_command_list_group_funnel` | pass, 41 records | scam-like/high |
 | `0042` | hard-negative | `threads_pilot_v1_2026-05_item_0042_full_thread_capture_run_record_0034.md` | `0063-confirmed-non-scam-warning-0042-result.md` | `0054-record-anti-scam-warning-hard-negative-boundary.md` | `non_scam` | `low` | anti-scam warning hard negative | pass, 42 records | not-scam-like/low |
 | `0076` | hard-negative | `threads_pilot_v1_2026-05_source_linkage_follow_up_run_record_0045.md` | `0079-manual-entry-0076-hard-negative-build-result.md` | `0092-promote-run-0045-hard-negative-as-manual-entry-0076.md` | `non_scam` | `low` | anti-scam warning / victim-prevention hard negative | pass, one local record | not-scam-like/low |
+| `0080` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0080_full_thread_capture_run_record_0051.md` | `0086-confirmed-pointer-0080-result.md` | `0102-authorize-single-confirmed-pointer-0080-intake.md` | `scam` | `high` | past-performance profit proof plus no-fee wealth-authority trust funnel | pass, 77 local records | not yet run |
+| `0081` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0081_full_thread_capture_run_record_0052.md` | `0087-confirmed-pointer-0081-result.md` | `0104-authorize-single-confirmed-pointer-0081-intake.md` | `scam` | `high` | top-level trust-building plus reply-level contact-hijack/private-group funnel | pass, 78 local records | not yet run |
 
 ## Checkpoint 0042 Aggregate
 
