@@ -318,3 +318,40 @@ Batch `0002` surfaces ten repo-safe hard-negative probe candidate aliases. It do
 Human-reviewed candidates remain `6` of `150`.
 
 Accepted strict-valid records remain `0` of `75`.
+
+## Day 1 Batch 0002 Primary Review
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Batch ID | `track_b_day_1_batch_0002_hard_negative_probe` |
+| Related decision | `0130-record-track-b-day-1-batch-0002-primary-review` |
+| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md` |
+| Evaluation note | `experiments/evaluation-notes/0097-track-b-day-1-batch-0002-primary-review.md` |
+| Review pass | primary review |
+| Candidates primary-reviewed in batch | 10 |
+| Initial non_scam/low hard-negative outcomes | 10 |
+| Hard-negative false-positive pressure | 0 |
+| Accepted strict-valid records in batch | 0 |
+| Final Track B labels recorded | no |
+| Second review required | yes: 10 of 10 |
+| Stop-rule triggered | yes: second-review rate above threshold |
+| Pause required | yes: pause further hard-negative probe surfacing until second review |
+
+Primary review used repo-safe hard-negative candidate aliases only. It did not inspect or add raw evidence to git.
+
+### Counter Update After Batch 0002 Primary Review
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Final review outcomes | Accepted strict-valid records | Remaining surfaced cap |
+|---|---:|---:|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 6 | 6 | 6 | 0 | 24 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 0 | 30 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 0 | 110 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 0 | 60 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 0 | 20 |
+| Hard-negative probe arm | 50 | 10 | 10 | 0 | 0 | 40 |
+| Total | 300 | 16 | 16 | 6 | 0 | 284 |
+
+Human-reviewed candidates: `16` of `150`.
+
+Accepted strict-valid records: `0` of `75`.

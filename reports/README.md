@@ -26,6 +26,7 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 Track B Day 1 batch 0001 second review | 2026-04-28 | Second review of six checkpoint-derived seed replay candidates with final Track B review outcomes | [checkpoint-0081-track-b-day-1-batch-0001-second-review.md](checkpoint-0081-track-b-day-1-batch-0001-second-review.md) |
 | checkpoint 0081 Track B Day 1 batch 0002 source-arm selection | 2026-04-28 | Selection of hard-negative probe arm for the next controlled Track B batch | [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md) |
 | checkpoint 0081 Track B Day 1 batch 0002 candidates | 2026-04-28 | Ten repo-safe hard-negative probe candidates surfaced for primary review | [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) |
+| checkpoint 0081 Track B Day 1 batch 0002 primary review | 2026-04-28 | Primary review of ten hard-negative probe candidates, all requiring second review | [checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](checkpoint-0081-track-b-day-1-batch-0002-primary-review.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -92,9 +93,12 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md) | Source-arm selection for batch `0002`; hard-negative probe arm selected, 0 candidates surfaced by this selection. |
 | [../decision-log/0128-select-track-b-day-1-batch-0002-hard-negative-probe.md](../decision-log/0128-select-track-b-day-1-batch-0002-hard-negative-probe.md) | Decision selecting the hard-negative probe arm before broader live discovery arms. |
 | [../experiments/evaluation-notes/0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md](../experiments/evaluation-notes/0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md) | Evaluation note for batch `0002` source-arm selection. |
-| [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) | Candidate-surfacing ledger for batch `0002`; 10 hard-negative probe candidates, primary review pending. |
+| [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) | Candidate-surfacing ledger for batch `0002`; 10 hard-negative probe candidates, primary review complete and second review pending. |
 | [../decision-log/0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](../decision-log/0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) | Decision recording batch `0002` candidate surfacing without review or accepted records. |
 | [../experiments/evaluation-notes/0096-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](../experiments/evaluation-notes/0096-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) | Evaluation note for batch `0002` candidate surfacing. |
+| [checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](checkpoint-0081-track-b-day-1-batch-0002-primary-review.md) | Primary review for batch `0002`; 10 reviewed, 10 second-review required, 0 hard-negative false positives, 0 accepted records. |
+| [../decision-log/0130-record-track-b-day-1-batch-0002-primary-review.md](../decision-log/0130-record-track-b-day-1-batch-0002-primary-review.md) | Decision recording batch `0002` primary review and stop-rule pause for more hard-negative probe surfacing. |
+| [../experiments/evaluation-notes/0097-track-b-day-1-batch-0002-primary-review.md](../experiments/evaluation-notes/0097-track-b-day-1-batch-0002-primary-review.md) | Evaluation note for batch `0002` primary review. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -159,10 +163,11 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 18. use decision `0127` as the batch `0001` second review and final review outcome record
 19. use decision `0128` to select the hard-negative probe arm as batch `0002`
 20. use decision `0129` to surface batch `0002` hard-negative probe candidates only inside the locked Track B boundary
-21. run batch `0002` primary review before more hard-negative probe surfacing
-22. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-23. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-24. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+21. use decision `0130` as the batch `0002` primary review and stop-rule pause for more hard-negative probe surfacing until second review
+22. run batch `0002` second review before more hard-negative probe surfacing
+23. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+24. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+25. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 
 The historical Phase 1 path remains:
 
