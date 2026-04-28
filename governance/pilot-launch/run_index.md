@@ -9,11 +9,11 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | Dataset | `threads_pilot_v1_2026-05` |
 | Checkpoint synthesized here | 42 records, ending at `threads_pilot_v1_0042` |
 | Latest checkpoint synthesis | 78 records, ending at `threads_pilot_v1_0081`; CIB-approved research checkpoint |
-| Latest local work visible in tree | run `0054`; Track B Day 1 batch `0001` second-reviewed 6 checkpoint-derived seed replay candidates; final outcomes recorded; 0 accepted strict-valid records so far |
+| Latest local work visible in tree | run `0054`; Track B Day 1 batch `0002` selected the hard-negative probe arm; no new candidates surfaced by the selection; 0 accepted strict-valid records so far |
 | Current collection gate | Track B may begin under decision `0122` locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting |
 | Next authorized prospective tranche | Track B capped live method test only; no overflow queue and no item `0082` |
-| Next stakeholder request | none; next output is next Track B source-arm/batch selection under locked caps |
-| Next intake scaffold | select next Track B source arm deliberately; do not continue checkpoint replay by habit; no item `0082`; no broad expansion |
+| Next stakeholder request | none; next output is batch `0002` hard-negative probe candidate surfacing under locked caps |
+| Next intake scaffold | batch `0002` hard-negative probe arm selected; surface up to 10 repo-safe hard-negative probe candidates; no item `0082`; no broad expansion |
 | Raw evidence location | controlled store only |
 | Review posture | high-recall research triage, not legal determination or production enforcement |
 
@@ -71,7 +71,7 @@ This index is repo-safe. It does not contain raw Threads text, raw URLs, handles
 | `0051` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0080_full_thread_capture_run_record_0051.md` | `0086-confirmed-pointer-0080-result.md` | `0080` | strict-valid local item; 77-record local aggregate strict-valid | Decision `0102` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0081` or broader tranche. |
 | `0052` | confirmed-pointer | `threads_pilot_v1_2026-05_item_0081_full_thread_capture_run_record_0052.md` | `0087-confirmed-pointer-0081-result.md` | `0081` | strict-valid local item; 78-record local aggregate strict-valid | Decision `0104` authorizes one supplied CIB/project-owner confirmed pointer only; no item `0082` or broader tranche. |
 | `0053` | checkpoint synthesis | `run_index.md` | `0088-existing-ambiguous-medium-second-review-synthesis.md`; `0089-checkpoint-0081-cib-approved-synthesis.md` | `0001-0081` local aggregate | CIB-approved 78-record research checkpoint; strict-valid | Decision `0105` approves checkpoint `0081` synthesis; next step is reviewer-facing package/report addendum, not new collection. |
-| `0054` | capped-method-test | `threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` | `0090-track-b-day-0-start-record.md`; `0091-track-b-day-1-source-arm-intake-start.md`; `0092-track-b-day-1-batch-0001-checkpoint-seed-replay.md`; `0093-track-b-day-1-batch-0001-primary-review.md`; `0094-track-b-day-1-batch-0001-second-review.md` | `track_b_day_1_batch_0001_checkpoint_seed_replay` | Day 0 gate confirmed; Day 1 batch `0001` surfaced 6 checkpoint-derived seed replay candidates; primary and second review completed for all 6; final outcomes: 4 scam/high and 2 non_scam/low hard negatives; 0 accepted strict-valid records | Decision `0127` records second review, closes the batch `0001` pause condition, and requires deliberate next source-arm/batch selection. |
+| `0054` | capped-method-test | `threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` | `0090-track-b-day-0-start-record.md`; `0091-track-b-day-1-source-arm-intake-start.md`; `0092-track-b-day-1-batch-0001-checkpoint-seed-replay.md`; `0093-track-b-day-1-batch-0001-primary-review.md`; `0094-track-b-day-1-batch-0001-second-review.md`; `0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md` | `track_b_day_1_batch_0001_checkpoint_seed_replay`; `track_b_day_1_batch_0002_hard_negative_probe` | Day 0 gate confirmed; Day 1 batch `0001` surfaced 6 checkpoint-derived seed replay candidates and completed primary/second review; batch `0002` selected hard-negative probe arm with 0 candidates surfaced by the selection | Decision `0128` selects hard-negative probe arm for batch `0002` so false-positive pressure is tested before broader live discovery arms. |
 
 ## Confirmed Pointer And Hard-Negative Item Index
 
