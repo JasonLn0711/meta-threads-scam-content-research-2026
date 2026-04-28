@@ -211,41 +211,6 @@ Human-reviewed candidates: `6` of `150`.
 
 Accepted strict-valid records: `0` of `75`.
 
-## Day 1 Batch 0002 Source-Arm Selection
-
-| Field | Value |
-|---|---|
-| Date bucket | `2026-04-28` |
-| Batch ID | `track_b_day_1_batch_0002_hard_negative_probe` |
-| Related decision | `0128-select-track-b-day-1-batch-0002-hard-negative-probe` |
-| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md` |
-| Evaluation note | `experiments/evaluation-notes/0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md` |
-| Source arm | `hard-negative probe arm` |
-| Selection status | `selected_pending_candidate_surfacing` |
-| Planned surfaced candidates | up to 10 |
-| Candidates surfaced by this selection | 0 |
-| Candidates reviewed by this selection | 0 |
-| Accepted strict-valid records by this selection | 0 |
-| Stop-rule triggered | no new stop signal from source-arm selection |
-
-Batch `0002` is selected to measure hard-negative false-positive pressure before broader live discovery source arms. This selection does not surface candidates, inspect raw evidence, create item `0082`, or create local Track B strict-validation records.
-
-### Counter Update After Batch 0002 Selection
-
-| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Final review outcomes | Accepted strict-valid records | Remaining surfaced cap |
-|---|---:|---:|---:|---:|---:|---:|
-| Checkpoint-derived seed replay | 30 | 6 | 6 | 6 | 0 | 24 |
-| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 0 | 30 |
-| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 0 | 110 |
-| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 0 | 60 |
-| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 0 | 20 |
-| Hard-negative probe arm | 50 | 0 | 0 | 0 | 0 | 50 |
-| Total | 300 | 6 | 6 | 6 | 0 | 294 |
-
-Human-reviewed candidates remain `6` of `150`.
-
-Accepted strict-valid records remain `0` of `75`.
-
 ## Day 1 Batch 0001 Second Review
 
 | Field | Value |
@@ -283,3 +248,73 @@ Second review used repo-safe checkpoint summaries only. It did not inspect or ad
 Human-reviewed candidates: `6` of `150`.
 
 Accepted strict-valid records: `0` of `75`.
+
+## Day 1 Batch 0002 Source-Arm Selection
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Batch ID | `track_b_day_1_batch_0002_hard_negative_probe` |
+| Related decision | `0128-select-track-b-day-1-batch-0002-hard-negative-probe` |
+| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md` |
+| Evaluation note | `experiments/evaluation-notes/0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md` |
+| Source arm | `hard-negative probe arm` |
+| Selection status | `selected_pending_candidate_surfacing` |
+| Planned surfaced candidates | up to 10 |
+| Candidates surfaced by this selection | 0 |
+| Candidates reviewed by this selection | 0 |
+| Accepted strict-valid records by this selection | 0 |
+| Stop-rule triggered | no new stop signal from source-arm selection |
+
+Batch `0002` is selected to measure hard-negative false-positive pressure before broader live discovery source arms. This selection does not surface candidates, inspect raw evidence, create item `0082`, or create local Track B strict-validation records.
+
+### Counter Update After Batch 0002 Selection
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Final review outcomes | Accepted strict-valid records | Remaining surfaced cap |
+|---|---:|---:|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 6 | 6 | 6 | 0 | 24 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 0 | 30 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 0 | 110 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 0 | 60 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 0 | 20 |
+| Hard-negative probe arm | 50 | 0 | 0 | 0 | 0 | 50 |
+| Total | 300 | 6 | 6 | 6 | 0 | 294 |
+
+Human-reviewed candidates remain `6` of `150`.
+
+Accepted strict-valid records remain `0` of `75`.
+
+## Day 1 Batch 0002 Candidate Surfacing
+
+| Field | Value |
+|---|---|
+| Date bucket | `2026-04-28` |
+| Batch ID | `track_b_day_1_batch_0002_hard_negative_probe` |
+| Related decision | `0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates` |
+| Report note | `reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md` |
+| Evaluation note | `experiments/evaluation-notes/0096-track-b-day-1-batch-0002-hard-negative-probe-candidates.md` |
+| Source arm | `hard-negative probe arm` |
+| Candidate status | `surfaced_pending_primary_review` |
+| Candidates surfaced in batch | 10 |
+| Candidates reviewed in batch | 0 |
+| Final Track B review outcomes in batch | 0 |
+| Accepted strict-valid records in batch | 0 |
+| Stop-rule triggered | no |
+
+Batch `0002` surfaces ten repo-safe hard-negative probe candidate aliases. It does not add raw evidence, create item `0082`, review candidates, record final labels, or create local Track B strict-validation records.
+
+### Counter Update After Batch 0002 Candidate Surfacing
+
+| Source arm | Surfaced cap | Surfaced so far | Reviewed so far | Final review outcomes | Accepted strict-valid records | Remaining surfaced cap |
+|---|---:|---:|---:|---:|---:|---:|
+| Checkpoint-derived seed replay | 30 | 6 | 6 | 6 | 0 | 24 |
+| Reviewer-supplied candidates | 30 | 0 | 0 | 0 | 0 | 30 |
+| Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 0 | 110 |
+| Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 0 | 60 |
+| OCR/image-cue candidates | 20 | 0 | 0 | 0 | 0 | 20 |
+| Hard-negative probe arm | 50 | 10 | 0 | 0 | 0 | 40 |
+| Total | 300 | 16 | 6 | 6 | 0 | 284 |
+
+Human-reviewed candidates remain `6` of `150`.
+
+Accepted strict-valid records remain `0` of `75`.

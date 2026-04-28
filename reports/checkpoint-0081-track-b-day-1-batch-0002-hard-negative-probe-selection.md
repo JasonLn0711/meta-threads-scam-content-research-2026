@@ -14,15 +14,32 @@ This note contains no raw Threads content, full item URLs, raw handles, raw cont
 | Date bucket | `2026-04-28` |
 | Track | `track_b_capped_live_method_test` |
 | Source arm | `hard-negative probe arm` |
-| Selection status | `selected_pending_candidate_surfacing` |
+| Selection status | `candidate_surfacing_recorded` |
 | Planned surfaced candidates | up to 10 |
-| Candidates surfaced | 0 |
+| Candidates surfaced | 10 |
 | Candidates reviewed | 0 |
 | Accepted strict-valid records | 0 |
 | Related decision | `decision-log/0128-select-track-b-day-1-batch-0002-hard-negative-probe.md` |
 | Run record | `governance/pilot-launch/threads_pilot_v1_2026-05_track_b_capped_method_test_run_record_0054.md` |
 | Evaluation note | `experiments/evaluation-notes/0095-track-b-day-1-batch-0002-hard-negative-probe-selection.md` |
 | Raw evidence in git | no |
+
+## Current Surfacing Update
+
+Candidate surfacing is now recorded in:
+
+```text
+reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md
+```
+
+Candidate surfacing outcome:
+
+```text
+surfaced: 10
+reviewed: 0
+accepted strict-valid records: 0
+primary review status: pending
+```
 
 ## Why This Source Arm Is Next
 
@@ -56,10 +73,10 @@ Batch `0002` should prefer hard-negative contrast types that are likely to be ov
 | Approved browser-session risk-probe matrix | 110 | 0 | 0 | 0 | 110 |
 | Reply/comment funnel cue candidates | 60 | 0 | 0 | 0 | 60 |
 | OCR/image-cue candidates | 20 | 0 | 0 | 0 | 20 |
-| Hard-negative probe arm | 50 | 0 | up to 10 | 0 | 50 |
-| Total | 300 | 6 | up to 10 planned | 6 | 294 |
+| Hard-negative probe arm | 50 | 0 | up to 10 | 10 | 40 |
+| Total | 300 | 6 | up to 10 planned | 16 | 284 |
 
-This selection does not consume source-arm cap because no candidate is surfaced yet.
+The later candidate-surfacing record consumes 10 surfaced slots from the hard-negative probe arm cap.
 
 ## Candidate Surfacing Rules For Batch 0002
 
