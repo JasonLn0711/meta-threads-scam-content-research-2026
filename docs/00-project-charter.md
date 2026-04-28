@@ -2,13 +2,15 @@
 
 ## Objective
 
-Build a documentation-first research program for Threads-related scam or scam-like content. The project should find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+Build a documentation-first research program for Threads-related scam or scam-like content. From this point forward, the project should build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
 
 Documentation, governance, annotation, validation, and baseline work exist to support that discovery-method goal. They are not the final goal by themselves.
 
 The central question is:
 
-> What bounded, reviewable candidate-discovery method produces the highest useful yield for Threads investment-scam candidates while preserving hard-negative boundaries and acceptable reviewer burden?
+> What bounded, reviewable candidate-discovery method produces enough review-worthy Threads investment-scam candidates while minimizing reviewer burden, preserving hard-negative boundaries, controlling false-positive pressure, and keeping evidence handling governance-safe?
+
+Labor reduction is not a secondary convenience. It is an operational feasibility constraint and a core research success condition.
 
 ## Scope
 
@@ -22,6 +24,7 @@ Phase 1 focuses on Threads-related content:
 - Visible redirection signals in posts or comments
 - External links when present
 - Human-review-oriented risk scoring and explanation
+- Labor-efficient reviewer-assist support for reading, summarization, signal extraction, schema prefill, priority ranking, hard-negative checking, and repo-safe notes
 
 ## Non-Goals
 
@@ -44,6 +47,7 @@ Phase 1 does not attempt to:
 - Human review remains central; automated outputs should support triage, not replace judgment.
 - The first scalable method should work for investment scams before the repo expands to other scam families.
 - Candidate discovery is not guilt determination; labels remain evidence-bound and review-centered.
+- Discovery yield and reviewer burden must be evaluated together; neither can be optimized alone.
 
 ## Constraints
 
@@ -79,6 +83,8 @@ Phase 1 succeeds if it produces:
 
 - A stable definition of Threads scam-like content for research purposes.
 - A scalable investment-scam candidate-discovery method that can be evaluated by yield and reviewer burden.
+- Evidence that the method can find enough review-worthy candidates with acceptable average, median, and p95 review time.
+- Metrics for candidates reviewed per hour, field auto-fill and correction rates, summary usefulness, full-thread-reading rate, second-review rate, disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour.
 - A usable taxonomy and annotation guide.
 - A dataset schema that preserves evidence and uncertainty.
 - A 50-item pilot and a 100-200 item first usable batch after pilot review.

@@ -72,18 +72,27 @@ For each candidate, reviewers should ask:
 
 ## Metrics Link
 
-The signal matrix should feed these metrics in a future capped method test:
+The signal matrix should feed the labor-efficient north-star metrics in [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md). A future capped method test should measure:
 
 - candidate yield;
 - high-risk yield;
 - scam-label yield;
 - duplicate rate;
-- reviewer time per candidate;
+- average review time per candidate;
+- median review time;
+- p95 review time;
+- candidates reviewed per hour;
+- percentage of fields auto-filled;
+- percentage of fields manually corrected;
+- summary usefulness rating;
+- percentage of candidates requiring full original-thread reading;
 - second-review rate;
 - disagreement rate;
 - hard-negative false-positive pressure;
 - false-negative pressure;
 - insufficient-evidence rate;
+- review-worthy yield per source arm;
+- high-risk yield per reviewer hour;
 - thread-context dependency;
 - OCR dependency;
 - private-channel migration rate;

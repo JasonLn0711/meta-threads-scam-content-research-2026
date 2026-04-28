@@ -2,9 +2,20 @@
 
 ## Phase-1 Recommendation
 
-Start with a focused investment-scam candidate-discovery method on Threads. Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve scalable, stable, and reviewable discovery of investment-scam candidates.
+Start with a focused investment-scam candidate-discovery method on Threads. From this point forward, the method must be scalable, stable, reviewable, and labor-efficient: it should discover enough review-worthy investment-scam candidates with as little human review burden as possible.
 
-Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforcement work until the investment-scam discovery method shows useful yield, acceptable reviewer burden, and hard-negative protection.
+Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve the joint outcome: review-worthy yield, acceptable reviewer burden, controlled false-positive pressure, hard-negative protection, and governance-safe evidence handling.
+
+Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforcement work until the investment-scam discovery method shows useful yield, acceptable reviewer burden, hard-negative protection, and measured labor efficiency.
+
+## Labor-Efficient Discovery Boundary
+
+Do not frame the scope as "detect investment scams first, reduce labor second." Discovery yield and reviewer burden are coupled success conditions.
+
+- A method that finds many candidates but requires excessive manual reading, sorting, summarization, copying, schema filling, and second review is not operationally scalable.
+- A method that saves reviewer time but fails to surface enough review-worthy candidates is not useful.
+- AI/system support may assist with long-thread reading, OCR/post/reply summarization, signal-family extraction, schema prefill, priority ranking, hard-negative risk identification, and repo-safe reviewer notes.
+- AI/system support must not make final labels, legal fraud determinations, enforcement recommendations, public warnings, automated takedowns, production detector claims, or scope-expansion decisions.
 
 ## Scope Matrix
 
@@ -21,6 +32,25 @@ Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforc
 | Long video | Low to medium | Low | Very high | High | High | Defer | No |
 | Deepfake-related signals | Future risk value | Low | Very high | High | Very high | Defer to future risk note | No |
 
+## Required Forward-Looking Metrics
+
+Future scope, experiment, and continuation decisions should include:
+
+- average review time per candidate;
+- median review time;
+- p95 review time;
+- candidates reviewed per hour;
+- percentage of fields auto-filled;
+- percentage of fields manually corrected;
+- summary usefulness rating;
+- percentage of candidates requiring full original-thread reading;
+- second-review rate;
+- reviewer disagreement rate;
+- hard-negative false-positive pressure;
+- insufficient-evidence rate;
+- review-worthy yield per source arm;
+- high-risk yield per reviewer hour.
+
 ## Detailed Research Judgment
 
 ### 0. Investment Scam Candidate Discovery
@@ -30,7 +60,7 @@ Prioritize now.
 - Technical cost: manageable if the method stays bounded and review-centered.
 - Operational cost: medium. Full-thread/reply review and hard-negative protection require reviewer time.
 - Evidence value: high. Investment-scam patterns expose repeated signal families such as teacher/advisor framing, profit proof, group conversion, private-channel migration, comment-layer reassurance, and external-link/contact cues.
-- Budget fit: strong if the repo measures discovery yield and reviewer burden before expanding.
+- Budget fit: strong if the repo measures discovery yield and reviewer burden together before expanding.
 - Expansion logic: later scam families should be added only after the investment-scam method is useful enough to adapt.
 
 ### 1. Text Posts
