@@ -87,6 +87,12 @@ The primary review pass confirms that the hard-negative probe ledger can represe
 
 The batch has no primary-review hard-negative false-positive pressure: all ten hard-negative probe candidates remain initial `non_scam` / `low`. Because every candidate carries a hard-negative flag, all ten require second review before final Track B outcomes are recorded.
 
+Second review is now recorded in:
+
+```text
+reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md
+```
+
 ## Non-Authorizations
 
 This primary review note does not authorize:

@@ -114,3 +114,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-28 | Selected Track B Day 1 batch 0002 hard-negative probe arm before broader live discovery arms | `0128-select-track-b-day-1-batch-0002-hard-negative-probe.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe candidate surfacing | `0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe primary review and second-review pause condition | `0130-record-track-b-day-1-batch-0002-primary-review.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe second review and final review outcomes | `0131-record-track-b-day-1-batch-0002-second-review.md` |
