@@ -4,6 +4,12 @@ This directory contains externally readable research reports produced from the T
 
 Reports should be more polished than working notes, but they should remain honest about evidence limits, data access status, and phase boundaries.
 
+From this point forward, reports should evaluate the repo's north-star goal: building a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible. Discovery yield and reviewer burden are joint success conditions.
+
+The current north-star reference is [../docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](../docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md).
+
+The current reviewer-assist design reference is [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md).
+
 ## Current Reports
 
 | Version | Target date | Audience | File |
@@ -28,6 +34,8 @@ Reports should be more polished than working notes, but they should remain hones
 | checkpoint 0081 Track B Day 1 batch 0002 candidates | 2026-04-28 | Ten repo-safe hard-negative probe candidates surfaced and second-reviewed | [checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md) |
 | checkpoint 0081 Track B Day 1 batch 0002 primary review | 2026-04-28 | Primary review of ten hard-negative probe candidates, all requiring second review | [checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](checkpoint-0081-track-b-day-1-batch-0002-primary-review.md) |
 | checkpoint 0081 Track B Day 1 batch 0002 second review | 2026-04-28 | Second review of ten hard-negative probe candidates with final Track B review outcomes | [checkpoint-0081-track-b-day-1-batch-0002-second-review.md](checkpoint-0081-track-b-day-1-batch-0002-second-review.md) |
+| checkpoint 0081 Track B dual-success evaluation | 2026-04-28 | Evaluation plan for measuring discovery effectiveness and reviewer-labor efficiency without changing caps | [checkpoint-0081-track-b-dual-success-evaluation-plan.md](checkpoint-0081-track-b-dual-success-evaluation-plan.md) |
+| reviewer assist layer design | 2026-04-28 | Forward-looking design for labor-efficient reviewer assistance after Track B | [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -103,6 +111,10 @@ Reports should be more polished than working notes, but they should remain hones
 | [checkpoint-0081-track-b-day-1-batch-0002-second-review.md](checkpoint-0081-track-b-day-1-batch-0002-second-review.md) | Second review for batch `0002`; 10 final non_scam/low hard-negative outcomes, 0 reviewer disagreements, 0 accepted strict-valid records. |
 | [../decision-log/0131-record-track-b-day-1-batch-0002-second-review.md](../decision-log/0131-record-track-b-day-1-batch-0002-second-review.md) | Decision recording batch `0002` second review and closure of the batch pause condition. |
 | [../experiments/evaluation-notes/0098-track-b-day-1-batch-0002-second-review.md](../experiments/evaluation-notes/0098-track-b-day-1-batch-0002-second-review.md) | Evaluation note for batch `0002` second review. |
+| [checkpoint-0081-track-b-dual-success-evaluation-plan.md](checkpoint-0081-track-b-dual-success-evaluation-plan.md) | Evaluation plan for Track B discovery effectiveness, reviewer-labor efficiency, and joint yield-per-reviewer-hour metrics. |
+| [../decision-log/0131-update-track-b-dual-success-evaluation-framing.md](../decision-log/0131-update-track-b-dual-success-evaluation-framing.md) | Decision recording that Track B success now requires both discovery effectiveness and reviewer-labor efficiency measurement, without changing caps. |
+| [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) | Design artifact for reducing reviewer reading, summarization, signal extraction, schema filling, triage, and reporting burden while preserving human final judgment. |
+| [../decision-log/0130-open-reviewer-assist-layer-design.md](../decision-log/0130-open-reviewer-assist-layer-design.md) | Decision opening the Reviewer Assist Layer design without authorizing model training or production deployment. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -147,7 +159,7 @@ Reports should be more polished than working notes, but they should remain hones
 
 The v0 report package should now describe the governed checkpoint-0081 path as:
 
-1. use scalable, stable, and reviewable discovery of Threads investment-scam candidates as the first-principle research goal
+1. use scalable, stable, reviewable, and labor-efficient discovery of review-worthy Threads investment-scam candidates as the first-principle research goal
 2. use checkpoint `0081` as the current CIB-approved research checkpoint
 3. close remaining recipient adoption and legal/privacy sharing gates
 4. use the checkpoint 0081 shadow-pilot readiness gap analysis to define what is missing before any shadow-only pilot can be considered
@@ -169,10 +181,15 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 20. use decision `0129` to surface batch `0002` hard-negative probe candidates only inside the locked Track B boundary
 21. use decision `0130` as the batch `0002` primary review and stop-rule pause for more hard-negative probe surfacing until second review
 22. use decision `0131` as the batch `0002` second review and final hard-negative protection outcome record
-23. select the next Track B source arm or controlled batch deliberately, not by habit
-24. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
-25. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
-26. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+23. interpret Track B as testing candidate discovery yield, reviewer burden, hard-negative false-positive pressure, and feasibility of AI/system-assisted reviewer workflow
+24. select the next Track B source arm or controlled batch deliberately, not by habit
+25. use targeted confirmed pointers only inside the approved Track B source-arm design or a later capped decision
+26. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
+27. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
+28. use [checkpoint-0081-track-b-dual-success-evaluation-plan.md](checkpoint-0081-track-b-dual-success-evaluation-plan.md) to evaluate Track B as both a discovery-effectiveness and reviewer-labor-efficiency test
+29. after Track B, use [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) to evaluate reviewer assist layer design, schema prefill, summary-assisted review, priority ranking, labor-savings measurement, and decision-support UI/API demonstration
+
+Forward-looking reports should include average review time per candidate, median review time, p95 review time, candidates reviewed per hour, percentage of fields auto-filled, percentage of fields manually corrected, summary usefulness rating, percentage of candidates requiring full original-thread reading, second-review rate, reviewer disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour.
 
 The historical Phase 1 path remains:
 
@@ -195,3 +212,5 @@ Do not describe the next step as immediate full 50-item collection.
 - Keep the 10-15 item checkpoint visible as the gate before completing any 50-item pilot.
 - Do not include raw personal data, unnecessary screenshots, credentials, tokens, or investigative material.
 - Keep the report tied to repo artifacts: taxonomy, schema, annotation rules, baseline plan, and decision logs.
+- Do not let AI/system support make final scam determinations, legal fraud determinations, enforcement recommendations, public warnings, automated takedowns, production detector claims, or public-release claims.
+- Treat UI/API/schema demos as demonstration surfaces; the research output is the validated labor-efficient discovery method and workflow.

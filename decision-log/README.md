@@ -115,3 +115,6 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe candidate surfacing | `0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe primary review and second-review pause condition | `0130-record-track-b-day-1-batch-0002-primary-review.md` |
 | 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe second review and final review outcomes | `0131-record-track-b-day-1-batch-0002-second-review.md` |
+| 2026-04-28 | Realigned forward-looking repo direction to labor-efficient investment-scam candidate discovery with discovery yield and reviewer burden as joint success conditions | `0129-realign-repo-to-labor-efficient-candidate-discovery.md` |
+| 2026-04-28 | Opened the Reviewer Assist Layer design for reducing reviewer reading, summarization, signal extraction, schema filling, triage, and reporting burden while preserving human final judgment | `0130-open-reviewer-assist-layer-design.md` |
+| 2026-04-28 | Updated Track B framing so success requires both candidate-discovery effectiveness and reviewer-labor efficiency measurement without changing locked caps | `0131-update-track-b-dual-success-evaluation-framing.md` |

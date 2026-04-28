@@ -23,6 +23,8 @@ Track B can now begin only under the locked caps, daily stop-rule checks, valida
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
+| Dual-success evaluation plan | `reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md` |
+| Reviewer-burden template | `templates/track_b_candidate_review_template.md` |
 | Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
 | Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
 | Legal/privacy formal response | `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md` |
@@ -162,4 +164,5 @@ Do:
 3. run the daily stop-rule check;
 4. run the raw-evidence exclusion check before any Track B output is committed;
 5. keep all reporting aggregate-only and repo-safe;
-6. pause immediately if any stop condition is triggered.
+6. record repo-safe reviewer-burden fields needed by `reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md`;
+7. pause immediately if any stop condition is triggered.

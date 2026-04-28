@@ -2,13 +2,15 @@
 
 ## Purpose
 
-Record the repo's current north-star goal so future work does not drift into package maintenance, generic governance, or model enthusiasm by habit.
+Record the repo's supporting discovery-method goal so future work does not drift into package maintenance, generic governance, or model enthusiasm by habit.
 
-The first-principle goal is:
+From this point forward, the first-principle goal is:
 
 ```text
-Find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
 ```
+
+Use [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md) as the current north-star document.
 
 This is a candidate-discovery research goal. It is not a production detector, platform enforcement system, legal fraud determination process, public warning list, or authorization for broad data collection.
 
@@ -24,13 +26,14 @@ Investment scam content is the first priority because:
 
 ## Objective Hierarchy
 
-1. Discover review-worthy Threads investment-scam candidates at useful volume.
+1. Discover enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
 2. Preserve enough post, reply/comment, OCR, link/contact, and profile-context evidence for human review.
-3. Measure candidate quality, discovery yield, duplicate load, reviewer burden, false-positive pressure, and false-negative pressure.
+3. Measure candidate quality, discovery yield, duplicate load, reviewer burden, false-positive pressure, and false-negative pressure as coupled success conditions.
 4. Protect hard negatives such as ordinary investment discussion, financial education, and anti-scam warnings.
 5. Keep labels human-review-centered: `scam`, `non_scam`, `uncertain`, and `insufficient_evidence`.
-6. Use governance, validation, and package work as support for scalable discovery, not as the final goal.
-7. Expand to other scam families only after the investment-scam discovery method is demonstrably useful.
+6. Use AI/system support to reduce reading, summarization, signal extraction, schema prefill, triage, hard-negative checking, and repo-safe reporting burden without making final scam determinations.
+7. Use governance, validation, and package work as support for scalable discovery, not as the final goal.
+8. Expand to other scam families only after the investment-scam discovery method is demonstrably useful.
 
 ## What Counts As Progress
 
@@ -45,6 +48,7 @@ Work counts as progress when it improves at least one of these:
 - hard-negative protection;
 - reviewer workflow and second-review clarity;
 - metrics for discovery yield and reviewer burden;
+- reviewer-assist design, schema prefill, summary-assisted review, priority ranking, and labor-savings measurement;
 - strict validation and repo-safe reporting;
 - decision gates for capped discovery experiments.
 
@@ -57,6 +61,7 @@ Work is not enough by itself when it only:
 - treats smoke-test baseline metrics as operational readiness;
 - treats investment keywords alone as scam evidence;
 - ignores replies/comments, where many funnel cues appear.
+- treats labor reduction as a secondary convenience instead of an operational feasibility constraint.
 
 ## Scalable Discovery Method Tracks
 
@@ -111,7 +116,7 @@ The discovery method must deliberately preserve hard negatives:
 
 False positives are not just a metric problem. They are a governance and trust problem.
 
-### Track 5: Discovery Metrics
+### Track 5: Discovery And Labor Metrics
 
 Future capped discovery experiments should measure:
 
@@ -123,12 +128,21 @@ Future capped discovery experiments should measure:
 | hard-negative yield | Share useful for false-positive calibration |
 | duplicate rate | Candidate waste from repeated/near-duplicate items |
 | full-thread availability | Whether replies/comments were available enough for review |
-| reviewer time per candidate | Human burden and operational feasibility |
+| average review time per candidate | Mean human burden |
+| median review time | Typical human burden |
+| p95 review time | Worst-tail human burden and scaling risk |
+| candidates reviewed per hour | Reviewer throughput |
+| percentage of fields auto-filled | Schema-prefill assistance level |
+| percentage of fields manually corrected | Automation correction burden |
+| summary usefulness rating | Whether summaries reduce review effort |
+| percentage of candidates requiring full original-thread reading | Residual manual-reading burden |
 | second-review rate | Rule instability and review complexity |
 | disagreement rate | Reviewer alignment pressure |
 | uncertain/insufficient rate | Evidence incompleteness pressure |
 | false-positive pressure | Risk of overflagging lawful or warning content |
 | false-negative pressure | Risk of missing high-risk funnel behavior |
+| review-worthy yield per source arm | Source-arm usefulness |
+| high-risk yield per reviewer hour | Joint discovery and labor-efficiency outcome |
 
 Precision, recall, and F1 remain useful, but they are not enough to judge discovery method usefulness.
 
@@ -137,7 +151,7 @@ Precision, recall, and F1 remain useful, but they are not enough to judge discov
 The next research question should be:
 
 ```text
-What bounded, reviewable candidate-discovery method produces the highest useful yield for Threads investment-scam candidates while preserving hard-negative boundaries and acceptable reviewer burden?
+What bounded, reviewable candidate-discovery method produces enough review-worthy Threads investment-scam candidates while minimizing reviewer burden, preserving hard-negative boundaries, controlling false-positive pressure, and keeping evidence handling governance-safe?
 ```
 
 Any future capped experiment should answer this question directly.
@@ -180,7 +194,8 @@ Future work should default to:
 investment-scam scalable candidate-discovery method
 → capped method test design
 → human review and second review
-→ discovery-yield and burden evaluation
+→ discovery-yield and reviewer-burden evaluation
+→ reviewer-assist and labor-savings evaluation
 → decision on expansion, revision, or pause
 ```
 
@@ -199,5 +214,6 @@ The current checkpoint 0081 readiness and shadow-pilot planning work should be i
 ## Current Design Artifacts
 
 - [57-investment-scam-discovery-signal-family-matrix.md](57-investment-scam-discovery-signal-family-matrix.md) defines the signal-family matrix for post, thread, account-context, and funnel candidates.
+- [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md) defines the next research layer for reducing reviewer reading, summarization, signal extraction, schema filling, triage, and reporting burden while preserving human final judgment.
 - [../reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](../reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) is the design-only charter draft for a future capped method test.
 - [../decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](../decision-log/0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) opens these design artifacts without authorizing execution.

@@ -35,6 +35,7 @@ stakeholder_authorization_decision_record.md
 stakeholder_pilot_request_email.md
 thread_item_sample.json
 thread_item_sample_batch.json
+track_b_candidate_review_template.md
 ```
 
 Use the annotation, onboarding, QA, adjudication, disagreement, and guideline-revision templates for annotation workflow. Use the authorization, collection, redaction, work-order, result-summary, and manifest templates before or during the authorized pilot workflow. Use `report_review_feedback.md` for report-v0 stakeholder and reviewer comments.
@@ -48,6 +49,8 @@ Use `pilot_checkpoint_review.md` with `docs/38-first-pilot-checkpoint-protocol.m
 Use `pilot_decision_memo.md`, `pilot_result_summary.md`, and `baseline_error_review_table.csv` only after the checkpoint-approved 50-item pilot to decide whether to expand to 100-200, revise, narrow, or pause.
 
 Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
+
+Use `track_b_candidate_review_template.md` for repo-safe Track B candidate-review outcome and reviewer-burden measurement fields. It is for dual-success evaluation only: discovery effectiveness plus reviewer-labor efficiency. It must not include raw evidence and does not change Track B caps, authorize new source arms, or authorize model training.
 
 Use `browser_candidate_promotion_review.md` with `docs/53-dedupe-first-full-thread-ready-gate.md` before any future browser-session candidate is promoted into an official selected item after run `0039`.
 

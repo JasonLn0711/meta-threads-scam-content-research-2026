@@ -19,6 +19,8 @@ Track B is start-authorized under decision `0122` because every required hard co
 | Condition response request | `reports/checkpoint-0081-track-b-condition-response-request.md` |
 | Condition response dispatch log | `reports/checkpoint-0081-track-b-condition-response-dispatch-log.md` |
 | Validation and leakage procedure | `reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md` |
+| Dual-success evaluation plan | `reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md` |
+| Reviewer-burden template | `templates/track_b_candidate_review_template.md` |
 | Formal signoff record | `reports/checkpoint-0081-track-b-formal-signoff-record.md` |
 | Formal signoff dispatch log | `reports/checkpoint-0081-track-b-formal-signoff-dispatch-log.md` |
 | Legal/privacy formal response | `reports/checkpoint-0081-track-b-legal-privacy-formal-signoff-response.md` |
@@ -194,6 +196,8 @@ Use:
 ```text
 reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md
 reports/checkpoint-0081-track-b-validation-and-leakage-procedure.md
+reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md
+templates/track_b_candidate_review_template.md
 ```
 
 before and during any Track B output handling. Run the raw-evidence exclusion check before any Track B output is committed.

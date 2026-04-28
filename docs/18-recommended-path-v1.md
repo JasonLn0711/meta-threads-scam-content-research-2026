@@ -2,9 +2,13 @@
 
 ## Current First-Principle Path
 
-The repo's first-principle goal is to find a scalable, stable, and reviewable method for discovering Threads scam-post candidates at volume, starting with investment-scam content.
+From this point forward, the repo's first-principle goal is:
 
-Use [56-first-principle-investment-scam-discovery-method.md](56-first-principle-investment-scam-discovery-method.md) as the current north-star method note.
+```text
+Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+```
+
+Use [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md) as the current north-star note. Use [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md) for the next reviewer-assistance research layer. Use [56-first-principle-investment-scam-discovery-method.md](56-first-principle-investment-scam-discovery-method.md) as the supporting discovery-method note.
 
 The current path is:
 
@@ -30,12 +34,15 @@ checkpoint 0081 research evidence
 → decision 0129: Track B batch 0002 hard-negative probe candidate surfacing
 → decision 0130: Track B batch 0002 hard-negative probe primary review
 → decision 0131: Track B batch 0002 hard-negative probe second review
+→ labor-efficient candidate-discovery interpretation
 → next Track B source-arm/batch selection
-→ discovery-yield and reviewer-burden evaluation
+→ joint discovery-yield and reviewer-burden evaluation
+→ Reviewer Assist Layer design and evaluation
+→ schema-prefill, summary-assisted review, priority-ranking, and labor-savings evaluation
 → decision on expansion, revision, or pause
 ```
 
-Do not treat package maintenance, generic governance, record-count growth, or model training as progress unless it improves this discovery-method path.
+Do not treat package maintenance, generic governance, record-count growth, UI/API/schema demos, or model training as progress unless it improves this labor-efficient discovery-method path.
 
 ## Immediate Report Milestone
 
@@ -52,6 +59,34 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 The repo is now in controlled execution planning for the investment-scam discovery method.
 
 Immediate next action: select the next Track B source arm or controlled batch under run `0054`, locked caps, and stop rules. Do not continue checkpoint-derived seed replay or hard-negative probe surfacing by habit. Track A start checklist is complete and the zero-new-evidence dry-run report is [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B formal signoff is complete: legal/privacy status is `no_veto`, CIB/internal owner status is `accepted_boundary`, and [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green. The formal signoff summary is [../reports/checkpoint-0081-track-b-formal-signoff-summary.md](../reports/checkpoint-0081-track-b-formal-signoff-summary.md). Day 0 start is recorded in [../reports/checkpoint-0081-track-b-day-0-start-record.md](../reports/checkpoint-0081-track-b-day-0-start-record.md). Day 1 intake start is recorded in [../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md](../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md). Batch `0001` is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md), second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md), batch `0002` source-arm selection is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md), batch `0002` candidate surfacing is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md), and second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md).
+
+## Updated Track B Interpretation
+
+The forward-looking realignment record [../decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md](../decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md) sets the labor-efficient candidate-discovery lens without rewriting the historical Track B `0129` candidate-surfacing record.
+
+Current Track B work should be interpreted as testing:
+
+1. candidate discovery yield;
+2. reviewer burden;
+3. hard-negative false-positive pressure;
+4. feasibility of AI/system-assisted reviewer workflow.
+
+The next research layer after Track B should be:
+
+- reviewer assist layer design;
+- schema prefill evaluation;
+- summary-assisted review evaluation;
+- priority-ranking evaluation;
+- labor-savings measurement;
+- decision-support UI/API demonstration.
+
+The design entry point for that layer is [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md). Track B should produce the evidence needed to evaluate it: which reviewer tasks consumed the most time, which fields could be prefilled, which signal families were easiest to summarize, which hard-negative cases caused hesitation, and which source arms produced the best yield per reviewer hour.
+
+Use [../reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md](../reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md) to evaluate Track B as a dual-success test: discovery effectiveness plus reviewer-labor efficiency. This plan does not change source-arm caps, human-reviewed caps, accepted strict-valid caps, or the intake window.
+
+Decision-support UI/API demonstrations are demonstration surfaces only. The research output is the validated method and workflow: which source arms produce review-worthy candidates, how much human labor is required, how much automation can safely reduce that labor, and where final human review remains mandatory.
+
+Forward-looking Track B and post-Track-B reports should include average review time per candidate, median review time, p95 review time, candidates reviewed per hour, percentage of fields auto-filled, percentage of fields manually corrected, summary usefulness rating, percentage of candidates requiring full original-thread reading, second-review rate, reviewer disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour.
 
 Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation. Decision `0121` records final gate response: Track A is approved after start-checklist completion, and Track B is approved only after hard conditions pass. Decision `0122` records that those hard conditions are satisfied and that Track B may begin under locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting. Decision `0123` records Day 0 start and confirms no candidates were surfaced or reviewed during Day 0. Decision `0124` records Day 1 source-arm intake start. Decision `0125` records 6 checkpoint-derived seed replay candidates surfaced. Decision `0126` records primary review, 6 second-review requirements, and a pause on further checkpoint replay surfacing until second review. Decision `0127` records second review, 6 final review outcomes, 0 disagreements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records. Decision `0128` selects the hard-negative probe arm for batch `0002`. Decision `0129` surfaces 10 hard-negative probe candidates. Decision `0130` records primary review, 10 second-review requirements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records. Decision `0131` records second review, 10 final `non_scam` / `low` hard-negative outcomes, 0 disagreements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records.
 
