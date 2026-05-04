@@ -2,7 +2,7 @@ schema_version: signal_scores_v1
 decision_layer: sparse_primary
 formula: SVS = (yield_rate * information_density) / (review_time * cognitive_load)
 positive_yield_definition: human research label scam, not legal fraud
-candidate_count: 14
+candidate_count: 36
 candidate_ids:
 - batch-0004-low-coverage-high-svs_0001
 - batch-0004-low-coverage-high-svs_0002
@@ -14,75 +14,97 @@ candidate_ids:
 - batch-0004-low-coverage-high-svs_0008
 - batch-0004-low-coverage-high-svs_0009
 - batch-0004-low-coverage-high-svs_0010
+- batch-0005-guarantee-vs-result-display-contrast_0001
+- batch-0005-guarantee-vs-result-display-contrast_0002
+- batch-0005-guarantee-vs-result-display-contrast_0003
+- batch-0005-guarantee-vs-result-display-contrast_0004
+- batch-0005-guarantee-vs-result-display-contrast_0005
+- batch-0005-guarantee-vs-result-display-contrast_0006
+- batch-0005-guarantee-vs-result-display-contrast_0007
+- batch-0005-guarantee-vs-result-display-contrast_0008
+- batch-0005-guarantee-vs-result-display-contrast_0009
+- batch-0005-guarantee-vs-result-display-contrast_0010
+- batch-0006-contrast-aware-routing-validation_0001
+- batch-0006-contrast-aware-routing-validation_0002
+- batch-0006-contrast-aware-routing-validation_0003
+- batch-0006-contrast-aware-routing-validation_0004
+- batch-0006-contrast-aware-routing-validation_0005
+- batch-0006-contrast-aware-routing-validation_0006
+- batch-0006-contrast-aware-routing-validation_0007
+- batch-0006-contrast-aware-routing-validation_0008
+- batch-0006-contrast-aware-routing-validation_0009
+- batch-0006-contrast-aware-routing-validation_0010
+- batch-0006-contrast-aware-routing-validation_0011
+- batch-0006-contrast-aware-routing-validation_0012
 - synthetic-candidate-0001
 - synthetic-candidate-0002
 - synthetic-candidate-0003
 - synthetic-candidate-0004
 ranked_signals:
 - signal_id: 保證收益
-  reviewed_count: 6
-  scam_count: 6
-  yield_rate: 1.0
-  information_density: 0.861111
-  review_time: 42.333333
-  cognitive_load: 1.325
-  svs: 0.015351855
-- signal_id: 情緒操控
-  reviewed_count: 8
-  scam_count: 5
-  yield_rate: 0.625
-  information_density: 0.809783
-  review_time: 42.125
-  cognitive_load: 1.7625
-  svs: 0.006816782
+  reviewed_count: 17
+  scam_count: 15
+  yield_rate: 0.882353
+  information_density: 0.7289
+  review_time: 39.647059
+  cognitive_load: 1.432353
+  svs: 0.011325292
 - signal_id: review_stable_funnel_anchor
-  reviewed_count: 10
-  scam_count: 7
-  yield_rate: 0.7
-  information_density: 0.853623
-  review_time: 51.7
-  cognitive_load: 1.78
-  svs: 0.006493124
+  reviewed_count: 18
+  scam_count: 15
+  yield_rate: 0.833333
+  information_density: 0.827697
+  review_time: 43.722222
+  cognitive_load: 1.516667
+  svs: 0.010401546
+- signal_id: 情緒操控
+  reviewed_count: 21
+  scam_count: 14
+  yield_rate: 0.666667
+  information_density: 0.68461
+  review_time: 40.714286
+  cognitive_load: 1.680952
+  svs: 0.006668832
 - signal_id: reply_funnel
-  reviewed_count: 10
-  scam_count: 6
-  yield_rate: 0.6
-  information_density: 0.823188
-  review_time: 60.7
-  cognitive_load: 1.905
-  svs: 0.004271366
-- signal_id: 社群導流
-  reviewed_count: 10
-  scam_count: 6
-  yield_rate: 0.6
-  information_density: 0.823188
-  review_time: 60.7
-  cognitive_load: 1.905
-  svs: 0.004271366
+  reviewed_count: 23
+  scam_count: 15
+  yield_rate: 0.652174
+  information_density: 0.715501
+  review_time: 48.434783
+  cognitive_load: 1.756522
+  svs: 0.005484825
 - signal_id: 誘導聯絡
-  reviewed_count: 11
-  scam_count: 6
-  yield_rate: 0.545455
-  information_density: 0.768775
-  review_time: 59.0
-  cognitive_load: 1.936364
-  svs: 0.003670445
+  reviewed_count: 21
+  scam_count: 12
+  yield_rate: 0.571429
+  information_density: 0.683575
+  review_time: 50.190476
+  cognitive_load: 1.866667
+  svs: 0.004169269
+- signal_id: 社群導流
+  reviewed_count: 17
+  scam_count: 9
+  yield_rate: 0.529412
+  information_density: 0.697783
+  review_time: 53.117647
+  cognitive_load: 1.879412
+  svs: 0.003700441
 - signal_id: 成果展示
-  reviewed_count: 9
-  scam_count: 4
-  yield_rate: 0.444444
-  information_density: 0.714171
-  review_time: 46.111111
-  cognitive_load: 1.922222
-  svs: 0.00358105
+  reviewed_count: 22
+  scam_count: 6
+  yield_rate: 0.272727
+  information_density: 0.483531
+  review_time: 44.454545
+  cognitive_load: 1.856818
+  svs: 0.001597597
 - signal_id: needs_thread
-  reviewed_count: 8
-  scam_count: 1
-  yield_rate: 0.125
-  information_density: 0.521739
-  review_time: 75.0
-  cognitive_load: 2.23125
-  svs: 0.000389721
+  reviewed_count: 19
+  scam_count: 2
+  yield_rate: 0.105263
+  information_density: 0.384058
+  review_time: 59.578947
+  cognitive_load: 2.247368
+  svs: 0.00030193
 batch_scores:
 - batch_id: batch-0003-dual-track-dry-run
   reviewed_count: 4
@@ -100,6 +122,22 @@ batch_scores:
   review_time: 38.9
   cognitive_load: 1.89
   svs: 0.005125224
+- batch_id: batch-0005-guarantee-vs-result-display-contrast
+  reviewed_count: 10
+  scam_count: 4
+  yield_rate: 0.4
+  information_density: 0.462319
+  review_time: 41.4
+  cognitive_load: 1.68
+  svs: 0.002658839
+- batch_id: batch-0006-contrast-aware-routing-validation
+  reviewed_count: 12
+  scam_count: 5
+  yield_rate: 0.416667
+  information_density: 0.425121
+  review_time: 41.75
+  cognitive_load: 1.7125
+  svs: 0.002477502
 guardrails:
   raw_threads_content_included: false
   embedding_used_for_decision: false

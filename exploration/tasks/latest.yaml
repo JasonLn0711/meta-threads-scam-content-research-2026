@@ -12,12 +12,54 @@ policy:
   collection_mode: safe_manual_assisted_only
   max_stubs_per_task: 5
 summary:
-  task_count: 2
-  high_discrepancy_task_count: 0
+  task_count: 4
+  high_discrepancy_task_count: 2
   low_coverage_task_count: 0
   embedding_outlier_task_count: 2
 tasks:
 - task_id: EXP_0001
+  gap_type: high_discrepancy
+  hypothesis: over_generalization case suggests current sparse representation is missing
+    or over-broad for a reusable behavior pattern.
+  source_hint: discrepancy follow-up
+  search_cues:
+  - case-linked metadata pattern
+  - shared behavior unit
+  - manual-assisted comparison
+  priority: medium
+  reason:
+  - discrepancy case disc-0001
+  - 'case type: over_generalization'
+  - 'candidate count: 2'
+  expected_impact:
+    clustering: reduce active discrepancy if a stable behavior feature is confirmed
+    reviewer_effort: focus review on pattern confirmation rather than broad search
+  rank:
+    gap_score: 2.0
+    coverage_score: 2
+    impact_score: 3.0
+- task_id: EXP_0002
+  gap_type: high_discrepancy
+  hypothesis: over_generalization case suggests current sparse representation is missing
+    or over-broad for a reusable behavior pattern.
+  source_hint: discrepancy follow-up
+  search_cues:
+  - case-linked metadata pattern
+  - shared behavior unit
+  - manual-assisted comparison
+  priority: medium
+  reason:
+  - discrepancy case disc-0002
+  - 'case type: over_generalization'
+  - 'candidate count: 2'
+  expected_impact:
+    clustering: reduce active discrepancy if a stable behavior feature is confirmed
+    reviewer_effort: focus review on pattern confirmation rather than broad search
+  rank:
+    gap_score: 2.0
+    coverage_score: 2
+    impact_score: 3.0
+- task_id: EXP_0003
   gap_type: embedding_outlier
   hypothesis: A singleton discovery-only embedding cluster may indicate an underrepresented
     behavior family or a hard-negative boundary that sparse features should learn
@@ -42,7 +84,7 @@ tasks:
     gap_score: 2.0
     coverage_score: 1
     impact_score: 1.5
-- task_id: EXP_0002
+- task_id: EXP_0004
   gap_type: embedding_outlier
   hypothesis: Candidates missing vectors may represent evidence-shape gaps; a small
     manual-assisted check can decide whether vector absence is harmless metadata sparsity
@@ -54,7 +96,7 @@ tasks:
   - safe manual-assisted completeness check
   priority: low
   reason:
-  - missing_embedding_count=11
+  - missing_embedding_count=33
   - embedding absence is not a decision signal
   signal_hint: missing_embedding_metadata_gap
   expected_behavior: metadata_completeness_gap
@@ -63,7 +105,7 @@ tasks:
     reviewer_effort: prevent wasting review time on incomplete metadata paths
   rank:
     gap_score: 1.0
-    coverage_score: 11
+    coverage_score: 33
     impact_score: 1.0
 guardrails:
   external_systems_accessed: false

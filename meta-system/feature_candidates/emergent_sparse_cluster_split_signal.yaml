@@ -5,7 +5,8 @@ definition: Sparse-similar candidate pairs are far apart in discovery-only embed
 activation_rule: Pending human review; use only to decide whether an existing sparse
   feature needs narrowing or a split feature.
 supporting_cases:
+- disc-0001
 - disc-0002
-confidence: 0.45
+confidence: 0.55
 status: proposed
 promotion_allowed_without_human_review: false

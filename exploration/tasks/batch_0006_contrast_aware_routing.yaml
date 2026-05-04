@@ -1,0 +1,111 @@
+schema_version: exploration_tasks_v1
+purpose: define a capped validation test for contrast-aware reviewer routing
+source_inputs:
+- metrics/contrast_scores/latest.yaml
+- experiments/evaluation-notes/0101-v2-contrast-aware-routing-result.md
+- outputs/research_candidates/RC_0003.md
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 4
+summary:
+  task_count: 4
+  contrast_routing_task_count: 4
+  total_stub_cap: 12
+tasks:
+- task_id: EXP_0006_A
+  gap_type: contrast_aware_routing_lane
+  routing_lane: strong_source_priority
+  hypothesis: '`保證收益` with executable transition structure will preserve high
+    value per reviewer effort under fast-priority review.'
+  source_hint: guarantee plus executable transition
+  search_cues:
+  - guarantee-or-certainty cue
+  - contact or group transition cue
+  - no thread-context burden cue
+  priority: high
+  reason:
+  - lane_svs=0.016682973
+  - lane_yield_rate=1.0
+  - lane_needs_thread_rate=0.0
+  - lane_second_review_rate=0.0
+  signal_hint: 保證收益
+  expected_behavior: guarantee_executable_transition_fast_lane
+  routing_action: fast_priority_review
+  expected_impact:
+    reviewer_effort: test whether fast-priority review preserves low review time
+    discovery_value: test whether high-value candidate discovery remains high
+- task_id: EXP_0006_B
+  gap_type: contrast_aware_routing_lane
+  routing_lane: result_display_context_review
+  hypothesis: Broad `成果展示` with context cues but no explicit `保證收益` should
+    remain a slow context-review lane rather than a fast-priority source arm.
+  source_hint: result display plus context burden without guarantee
+  search_cues:
+  - result-display cue
+  - no explicit guarantee cue
+  - context or reply/thread burden cue
+  priority: high
+  reason:
+  - lane_svs=0.0
+  - lane_needs_thread_rate=1.0
+  - lane_second_review_rate=0.777778
+  - lane_uncertainty_rate=0.777778
+  signal_hint: 成果展示
+  expected_behavior: result_display_context_cost_lane
+  routing_action: slow_context_review
+  expected_impact:
+    reviewer_effort: test whether slow routing is justified by burden and uncertainty
+    discovery_value: protect fast lane from low-yield priority inflation
+- task_id: EXP_0006_C
+  gap_type: contrast_aware_routing_lane
+  routing_lane: result_display_contrast_holdout
+  hypothesis: Standalone `成果展示` without guarantee or context cues should serve
+    as hard-negative or boundary calibration, not fast-priority review.
+  source_hint: standalone result display
+  search_cues:
+  - result-display cue
+  - no guarantee cue
+  - no contact/group/reply/context cue
+  priority: medium
+  reason:
+  - lane_reviewed_count=1
+  - lane_non_scam_count=1
+  - lane_needs_thread_rate=0.0
+  - useful hard-negative contrast pool
+  signal_hint: 成果展示
+  expected_behavior: standalone_result_display_holdout
+  routing_action: contrast_or_hard_negative_pool
+  expected_impact:
+    reviewer_effort: preserve low-burden contrast material
+    discovery_value: reduce false priority from broad result-display cues
+- task_id: EXP_0006_D
+  gap_type: contrast_aware_routing_lane
+  routing_lane: guarantee_context_review
+  hypothesis: Guarantee language without a stable executable transition should be
+    kept in priority context review rather than the fast lane.
+  source_hint: guarantee edge case with context burden
+  search_cues:
+  - guarantee-or-certainty cue
+  - weak or missing transition cue
+  - thread/context burden cue
+  priority: medium
+  reason:
+  - lane_reviewed_count=1
+  - lane_uncertainty_rate=1.0
+  - lane_needs_thread_rate=1.0
+  - lane_second_review_rate=1.0
+  signal_hint: 保證收益
+  expected_behavior: guarantee_context_edge_case
+  routing_action: priority_context_review
+  expected_impact:
+    reviewer_effort: test whether guarantee edge cases require slower priority review
+    discovery_value: prevent weak guarantee cues from diluting fast-lane precision
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true

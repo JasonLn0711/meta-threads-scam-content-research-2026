@@ -1,0 +1,43 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0006-contrast-aware-routing-validation_0002
+batch_id: batch-0006-contrast-aware-routing-validation
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: scam
+  confidence: 0.93
+  review_time_seconds: 35.0
+  second_review_required: false
+source_stub:
+  candidate_stub_id: STUB_0006_A_02
+  task_id: EXP_0006_A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_transition_fast_lane
+structured_hints:
+  common_behaviors:
+  - 群組導流
+  - 穩賺宣稱
+  structural_patterns:
+  - 轉私域
+  reviewer_signals:
+  - 可直接判斷
+  hard_negative_contrast: 公開透明分析
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

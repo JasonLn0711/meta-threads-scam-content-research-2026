@@ -8,12 +8,24 @@ filters:
   minimum_group_size: 3
   raw_threads_evidence_allowed: false
 summary:
-  input_case_count: 0
+  input_case_count: 2
   valid_group_count: 0
-  skipped_case_count: 0
+  skipped_case_count: 2
   feature_count: 0
 features: []
-skipped_cases: []
+skipped_cases:
+- case_id: disc-0001
+  candidate_ids:
+  - synthetic-candidate-0001
+  - synthetic-candidate-0003
+  group_size: 2
+  reason: not_missed_pattern
+- case_id: disc-0002
+  candidate_ids:
+  - synthetic-candidate-0002
+  - synthetic-candidate-0003
+  group_size: 2
+  reason: not_missed_pattern
 guardrails:
   sparse_schema_modified: false
   features_auto_promoted: false

@@ -1,0 +1,503 @@
+schema_version: candidate_intake_batch_v1
+batch_id: batch-0006-contrast-aware-routing-validation
+purpose: manual-assisted metadata fill worksheet for Batch 0006 contrast-aware routing
+  validation
+source_batch_plan: exploration/batches/batch_0006.yaml
+source_stub_batch: data/candidate_stubs/batch_0006.yaml
+source_experiment_plan: experiments/batch_variants/0006-contrast-aware-routing-validation.md
+source_routing_scores: metrics/contrast_scores/latest.yaml
+status: human_review_completed_ready_for_conversion
+candidate_count: 12
+selected_task_ids:
+- EXP_0006_A
+- EXP_0006_B
+- EXP_0006_C
+- EXP_0006_D
+routing_lanes:
+  A: strong_source_priority
+  B: result_display_context_review
+  C: result_display_contrast_holdout
+  D: guarantee_context_review
+before_metrics:
+  source: metrics/contrast_scores/latest.yaml
+  candidate_count: 24
+  lanes:
+    strong_source_priority:
+      reviewed_count: 10
+      yield_rate: 1.0
+      review_time: 39.4
+      cognitive_load: 1.27
+      svs: 0.016682973
+      needs_thread_rate: 0.0
+      second_review_rate: 0.0
+    result_display_context_review:
+      reviewed_count: 9
+      yield_rate: 0.0
+      review_time: 45.333333
+      cognitive_load: 2.305556
+      svs: 0.0
+      needs_thread_rate: 1.0
+      second_review_rate: 0.777778
+      uncertainty_rate: 0.777778
+intake_entries:
+- intake_id: INTAKE_0006_A_01
+  candidate_stub_id: STUB_0006_A_01
+  task_id: EXP_0006_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_executable_transition_fast_lane
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 收益承諾
+    - 立即行動
+    structural_patterns:
+    - 保證→CTA
+    reviewer_signals:
+    - 低不確定性
+    hard_negative_contrast: 無收益承諾
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.95
+    review_time_seconds: 32
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0001.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_A_02
+  candidate_stub_id: STUB_0006_A_02
+  task_id: EXP_0006_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_transition_fast_lane
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 群組導流
+    - 穩賺宣稱
+    structural_patterns:
+    - 轉私域
+    reviewer_signals:
+    - 可直接判斷
+    hard_negative_contrast: 公開透明分析
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.93
+    review_time_seconds: 35
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0002.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_A_03
+  candidate_stub_id: STUB_0006_A_03
+  task_id: EXP_0006_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_transition_fast_lane
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 收益承諾
+    - 成果背書
+    structural_patterns:
+    - 證據+承諾→CTA
+    reviewer_signals:
+    - 高度確定性
+    hard_negative_contrast: 無收益宣稱的成果展示
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.96
+    review_time_seconds: 30
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0003.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_A_04
+  candidate_stub_id: STUB_0006_A_04
+  task_id: EXP_0006_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_reply_transition_fast_lane
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 群組轉換
+    - 保證收益
+    structural_patterns:
+    - 社群導流→轉換
+    reviewer_signals:
+    - 可快速決策
+    hard_negative_contrast: 無轉換鏈內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.91
+    review_time_seconds: 33
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0004.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_B_01
+  candidate_stub_id: STUB_0006_B_01
+  task_id: EXP_0006_B
+  routing_lane: result_display_context_review
+  signal_hint: 成果展示
+  expected_behavior: result_display_contact_context_cost
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 成果+聯絡
+    structural_patterns:
+    - 展示→轉換
+    reviewer_signals:
+    - 需上下文
+    hard_negative_contrast: 明確承諾
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.55
+    review_time_seconds: 48
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0005.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_B_02
+  candidate_stub_id: STUB_0006_B_02
+  task_id: EXP_0006_B
+  routing_lane: result_display_context_review
+  signal_hint: 成果展示
+  expected_behavior: result_display_group_context_cost
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 群組暗示
+    structural_patterns:
+    - 弱導流
+    reviewer_signals:
+    - 模糊
+    hard_negative_contrast: 強 funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.52
+    review_time_seconds: 50
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0006.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_B_03
+  candidate_stub_id: STUB_0006_B_03
+  task_id: EXP_0006_B
+  routing_lane: result_display_context_review
+  signal_hint: 成果展示
+  expected_behavior: result_display_reply_context_cost
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 成果展示
+    - 社群暗示
+    structural_patterns:
+    - 展示→潛在轉換
+    reviewer_signals:
+    - 需跨貼文理解
+    hard_negative_contrast: 明確收益承諾
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.57
+    review_time_seconds: 49
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0007.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_B_04
+  candidate_stub_id: STUB_0006_B_04
+  task_id: EXP_0006_B
+  routing_lane: result_display_context_review
+  signal_hint: 成果展示
+  expected_behavior: result_display_emotional_context_cost
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 情緒驅動展示
+    structural_patterns:
+    - 吸引注意但無轉換
+    reviewer_signals:
+    - 訊號不足
+    hard_negative_contrast: 明確 funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.53
+    review_time_seconds: 52
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0008.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_C_01
+  candidate_stub_id: STUB_0006_C_01
+  task_id: EXP_0006_C
+  routing_lane: result_display_contrast_holdout
+  signal_hint: 成果展示
+  expected_behavior: standalone_result_display_holdout
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 純成果紀錄
+    structural_patterns:
+    - 無轉換
+    reviewer_signals:
+    - 低風險
+    hard_negative_contrast: funnel 結構
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.88
+    review_time_seconds: 38
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0009.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_C_02
+  candidate_stub_id: STUB_0006_C_02
+  task_id: EXP_0006_C
+  routing_lane: result_display_contrast_holdout
+  signal_hint: 成果展示
+  expected_behavior: pure_result_record_holdout
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 記錄型內容
+    structural_patterns:
+    - 無商業意圖
+    reviewer_signals:
+    - 穩定樣本
+    hard_negative_contrast: 投資誘導
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.9
+    review_time_seconds: 36
+    second_review_required: false
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0010.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_D_01
+  candidate_stub_id: STUB_0006_D_01
+  task_id: EXP_0006_D
+  routing_lane: guarantee_context_review
+  signal_hint: 保證收益
+  expected_behavior: guarantee_without_stable_transition_edge
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 模糊收益語句
+    structural_patterns:
+    - 不完整
+    reviewer_signals:
+    - 需補上下文
+    hard_negative_contrast: 明確 funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.6
+    review_time_seconds: 51
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0011.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+- intake_id: INTAKE_0006_D_02
+  candidate_stub_id: STUB_0006_D_02
+  task_id: EXP_0006_D
+  routing_lane: guarantee_context_review
+  signal_hint: 保證收益
+  expected_behavior: emotional_guarantee_context_edge
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 不完整 funnel
+    structural_patterns:
+    - 斷裂轉換
+    reviewer_signals:
+    - 需確認
+    hard_negative_contrast: 完整 funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.78
+    review_time_seconds: 47
+    second_review_required: true
+  candidate_record_output_target: data/candidates/batch_0006/batch-0006-contrast-aware-routing-validation_0012.yaml
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+completion_rules:
+- Fill only structured metadata observations.
+- Do not paste raw Threads content into this repo.
+- Do not include PII, raw URLs, handles, screenshots, browser artifacts, credentials,
+  or controlled-store locators.
+- Do not infer final labels before human review.
+- Convert to candidate_record_v2 only after completion gates are satisfied.
+after_fill_commands:
+- ./.venv/bin/python scripts/validate_candidate_intake_v2.py data/candidate_intake/batch_0006_intake.yaml
+  --expected-count 12
+- ./.venv/bin/python scripts/convert_candidate_intake_v2.py data/candidate_intake/batch_0006_intake.yaml
+  --report-output data/candidate_intake/batch_0006_conversion_report.yaml
+- ./.venv/bin/python scripts/convert_candidate_intake_v2.py data/candidate_intake/batch_0006_intake.yaml
+  --report-output data/candidate_intake/batch_0006_conversion_report.yaml --write-candidates
+- ./.venv/bin/python scripts/validate_candidate_v2.py data/candidates
+- ./.venv/bin/python scripts/run_v2_ros.py
+- ./.venv/bin/python scripts/generate_feature_candidates_v1.py
+- ./.venv/bin/python scripts/generate_exploration_tasks.py
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  candidate_records_fabricated: false
+  this_file_authorizes_collection: false

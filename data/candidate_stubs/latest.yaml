@@ -2,74 +2,144 @@ schema_version: candidate_stubs_v1
 purpose: metadata-only candidate stubs for safe manual-assisted exploration
 source_tasks: exploration/tasks/latest.yaml
 summary:
-  stub_count: 10
-  task_count: 2
+  stub_count: 20
+  task_count: 4
 candidate_stubs:
 - candidate_stub_id: STUB_0001
   task_id: EXP_0001
-  signal_hint: embedding_singleton_outlier
-  expected_behavior: underrepresented_or_boundary_behavior
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0002
   task_id: EXP_0001
-  signal_hint: embedding_singleton_outlier
-  expected_behavior: underrepresented_or_boundary_behavior
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0003
   task_id: EXP_0001
-  signal_hint: embedding_singleton_outlier
-  expected_behavior: underrepresented_or_boundary_behavior
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0004
   task_id: EXP_0001
-  signal_hint: embedding_singleton_outlier
-  expected_behavior: underrepresented_or_boundary_behavior
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0005
   task_id: EXP_0001
-  signal_hint: embedding_singleton_outlier
-  expected_behavior: underrepresented_or_boundary_behavior
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0006
   task_id: EXP_0002
-  signal_hint: missing_embedding_metadata_gap
-  expected_behavior: metadata_completeness_gap
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0007
   task_id: EXP_0002
-  signal_hint: missing_embedding_metadata_gap
-  expected_behavior: metadata_completeness_gap
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0008
   task_id: EXP_0002
-  signal_hint: missing_embedding_metadata_gap
-  expected_behavior: metadata_completeness_gap
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0009
   task_id: EXP_0002
-  signal_hint: missing_embedding_metadata_gap
-  expected_behavior: metadata_completeness_gap
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
   collection_method: safe / manual-assisted
   raw_threads_evidence_allowed: false
   pii_allowed: false
 - candidate_stub_id: STUB_0010
   task_id: EXP_0002
+  signal_hint: high_discrepancy
+  expected_behavior: behavior_pattern_to_verify
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0011
+  task_id: EXP_0003
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0012
+  task_id: EXP_0003
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0013
+  task_id: EXP_0003
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0014
+  task_id: EXP_0003
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0015
+  task_id: EXP_0003
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0016
+  task_id: EXP_0004
+  signal_hint: missing_embedding_metadata_gap
+  expected_behavior: metadata_completeness_gap
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0017
+  task_id: EXP_0004
+  signal_hint: missing_embedding_metadata_gap
+  expected_behavior: metadata_completeness_gap
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0018
+  task_id: EXP_0004
+  signal_hint: missing_embedding_metadata_gap
+  expected_behavior: metadata_completeness_gap
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0019
+  task_id: EXP_0004
+  signal_hint: missing_embedding_metadata_gap
+  expected_behavior: metadata_completeness_gap
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0020
+  task_id: EXP_0004
   signal_hint: missing_embedding_metadata_gap
   expected_behavior: metadata_completeness_gap
   collection_method: safe / manual-assisted

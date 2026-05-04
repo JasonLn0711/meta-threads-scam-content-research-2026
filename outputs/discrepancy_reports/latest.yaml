@@ -3,10 +3,28 @@ discovery_only: true
 embedding_close_threshold: 0.85
 embedding_far_threshold: 0.25
 summary:
-  case_count: 0
+  case_count: 2
   missed_pattern: 0
-  over_generalization: 0
-cases: []
+  over_generalization: 2
+cases:
+- case_id: disc-0001
+  type: over_generalization
+  candidate_ids:
+  - synthetic-candidate-0001
+  - synthetic-candidate-0003
+  embedding_similarity: 0.0
+  sparse_same_cluster: true
+  description: Candidates share a sparse cluster but are far in discovery-only embedding
+    space; review whether the sparse feature is too broad.
+- case_id: disc-0002
+  type: over_generalization
+  candidate_ids:
+  - synthetic-candidate-0002
+  - synthetic-candidate-0003
+  embedding_similarity: 0.0101
+  sparse_same_cluster: true
+  description: Candidates share a sparse cluster but are far in discovery-only embedding
+    space; review whether the sparse feature is too broad.
 guardrails:
   raw_threads_content_included: false
   embedding_used_for_decision: false
