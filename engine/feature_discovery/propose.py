@@ -43,19 +43,52 @@ def generate_feature_candidates(discrepancy_report: dict[str, Any]) -> list[dict
     return candidates
 
 
-def build_review_queue(feature_candidates: list[dict[str, Any]]) -> dict[str, Any]:
+def build_review_queue(
+    feature_candidates: list[dict[str, Any]],
+    existing_queue: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    existing_items = {}
+    if isinstance(existing_queue, dict):
+        for item in existing_queue.get("items", []):
+            if isinstance(item, dict) and item.get("feature_id"):
+                existing_items[str(item["feature_id"])] = item
+
+    items = []
+    seen_feature_ids = set()
+    for candidate in feature_candidates:
+        feature_id = str(candidate["feature_id"])
+        existing_item = existing_items.get(feature_id, {})
+        items.append(
+            {
+                "feature_id": feature_id,
+                "decision": existing_item.get("decision", "pending"),
+                "review_note": existing_item.get(
+                    "review_note",
+                    "Human reviewer must accept or reject before sparse schema promotion.",
+                ),
+            }
+        )
+        seen_feature_ids.add(feature_id)
+
+    for feature_id, existing_item in existing_items.items():
+        if feature_id in seen_feature_ids:
+            continue
+        items.append(
+            {
+                "feature_id": feature_id,
+                "decision": existing_item.get("decision", "pending"),
+                "review_note": existing_item.get(
+                    "review_note",
+                    "Preserved from existing human review queue.",
+                ),
+            }
+        )
+
     return {
         "schema_version": "feature_review_queue_v1",
         "human_review_required": True,
         "allowed_decisions": ["pending", "accepted", "rejected"],
-        "items": [
-            {
-                "feature_id": candidate["feature_id"],
-                "decision": "pending",
-                "review_note": "Human reviewer must accept or reject before sparse schema promotion.",
-            }
-            for candidate in feature_candidates
-        ],
+        "items": items,
     }
 
 

@@ -140,19 +140,40 @@ class V2ResearchOperatingSystemTests(unittest.TestCase):
                 60,
                 True,
             ),
+            candidate(
+                "cand-low-context",
+                {"成果展示": 1, "reply_funnel": 1, "誘導聯絡": 1},
+                [],
+                "uncertain",
+                40,
+                False,
+            ),
+            candidate(
+                "cand-emotional-thread",
+                {"成果展示": 1, "needs_thread": 1, "情緒操控": 1},
+                [],
+                "uncertain",
+                70,
+                True,
+            ),
             candidate("cand-holdout", {"成果展示": 1}, [], "non_scam", 30, False),
         ]
 
         self.assertEqual(assign_contrast_lane(candidates[0]), "strong_source_priority")
-        self.assertEqual(assign_contrast_lane(candidates[1]), "result_display_context_review")
-        self.assertEqual(assign_contrast_lane(candidates[2]), "result_display_contrast_holdout")
+        self.assertEqual(assign_contrast_lane(candidates[1]), "result_display_thread_required")
+        self.assertEqual(assign_contrast_lane(candidates[2]), "result_display_low_context_transition")
+        self.assertEqual(assign_contrast_lane(candidates[3]), "result_display_emotional_thread_required")
+        self.assertEqual(assign_contrast_lane(candidates[4]), "result_display_contrast_holdout")
 
         scores = build_contrast_aware_scores(candidates, SPARSE_SCHEMA)
         lanes = {row["lane"]: row for row in scores["lane_scores"]}
         self.assertEqual(scores["decision_layer"], "sparse_primary_reviewer_routing")
         self.assertTrue(scores["not_a_classifier"])
-        self.assertGreater(lanes["strong_source_priority"]["svs"], lanes["result_display_context_review"]["svs"])
-        self.assertEqual(lanes["result_display_context_review"]["uncertainty_rate"], 1.0)
+        self.assertGreater(lanes["strong_source_priority"]["svs"], lanes["result_display_low_context_transition"]["svs"])
+        self.assertEqual(lanes["result_display_thread_required"]["needs_thread_rate"], 1.0)
+        self.assertEqual(lanes["result_display_low_context_transition"]["needs_thread_rate"], 0.0)
+        self.assertEqual(lanes["result_display_emotional_thread_required"]["second_review_rate"], 1.0)
+        self.assertEqual(scores["candidate_routes"][1]["context_gate"], "thread_required")
         self.assertFalse(scores["guardrails"]["embedding_used_for_decision"])
 
     def test_embedding_clusters_skip_missing_vectors(self) -> None:
@@ -189,6 +210,23 @@ class V2ResearchOperatingSystemTests(unittest.TestCase):
         queue = build_review_queue(feature_candidates)
         pending_schema = promote_accepted_features(SPARSE_SCHEMA, feature_candidates, queue)
         self.assertEqual(set(pending_schema["features"]), set(SPARSE_SCHEMA["features"]))
+
+        preserved_queue = build_review_queue(
+            feature_candidates[:1],
+            {
+                "items": [
+                    {
+                        "feature_id": "context_required_result_display",
+                        "decision": "pending",
+                        "review_note": "Preserve manual candidate.",
+                    }
+                ]
+            },
+        )
+        self.assertIn(
+            "context_required_result_display",
+            {item["feature_id"] for item in preserved_queue["items"]},
+        )
 
         queue["items"][0]["decision"] = "accepted"
         queue["items"][1]["decision"] = "rejected"

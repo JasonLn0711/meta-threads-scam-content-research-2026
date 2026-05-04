@@ -11,6 +11,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 
 from engine.common import load_candidates, load_sparse_schema, write_yaml
+from engine.common import load_yaml
 from engine.discrepancy.detect import detect_discrepancies
 from engine.embedding.clustering import cluster_embedding_candidates
 from engine.feature_discovery.propose import build_review_queue, generate_feature_candidates
@@ -68,7 +69,12 @@ def main() -> int:
     ranking = rank_signals(candidates, sparse_schema)
     contrast_scores = build_contrast_aware_scores(candidates, sparse_schema)
     feature_candidates = generate_feature_candidates(discrepancy_report)
-    review_queue = build_review_queue(feature_candidates)
+    existing_review_queue = None
+    if args.feature_review_queue_output.exists():
+        loaded_queue = load_yaml(args.feature_review_queue_output)
+        if isinstance(loaded_queue, dict):
+            existing_review_queue = loaded_queue
+    review_queue = build_review_queue(feature_candidates, existing_review_queue)
 
     write_yaml(args.sparse_output, sparse_clusters)
     write_yaml(args.embedding_output, embedding_clusters)

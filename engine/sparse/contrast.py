@@ -19,6 +19,9 @@ from engine.sparse.svs import score_candidate_group
 LANE_ORDER = [
     "strong_source_priority",
     "guarantee_context_review",
+    "result_display_low_context_transition",
+    "result_display_thread_required",
+    "result_display_emotional_thread_required",
     "result_display_context_review",
     "result_display_contrast_holdout",
     "other_metadata_review",
@@ -28,26 +31,49 @@ LANE_DEFINITIONS = {
     "strong_source_priority": {
         "pre_review_activation_rule": "保證收益 AND (誘導聯絡 OR 社群導流 OR reply_funnel OR review_stable_funnel_anchor) AND NOT needs_thread",
         "routing_action": "fast_priority_review",
+        "context_gate": "single_item_review",
         "interpretation": "High-value source arm when a guarantee/certainty anchor has executable transition structure and low thread burden.",
     },
     "guarantee_context_review": {
         "pre_review_activation_rule": "保證收益 AND NOT strong_source_priority",
         "routing_action": "priority_context_review",
+        "context_gate": "thread_or_second_review_as_needed",
         "interpretation": "Guarantee/certainty anchor remains important, but needs slower review when transition structure is weak or context burden is high.",
     },
+    "result_display_low_context_transition": {
+        "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND NOT needs_thread AND (誘導聯絡 OR 社群導流 OR reply_funnel OR review_stable_funnel_anchor)",
+        "routing_action": "low_context_transition_review",
+        "context_gate": "single_item_review",
+        "interpretation": "Result display with visible transition structure can be reviewed without full-thread context, but remains uncertain without explicit guarantee.",
+    },
+    "result_display_thread_required": {
+        "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND needs_thread AND NOT 情緒操控",
+        "routing_action": "thread_context_review",
+        "context_gate": "thread_required",
+        "interpretation": "Result display that requires thread context should be routed to slower review before a decision is attempted.",
+    },
+    "result_display_emotional_thread_required": {
+        "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND needs_thread AND 情緒操控",
+        "routing_action": "thread_context_second_review",
+        "context_gate": "thread_required_plus_second_review",
+        "interpretation": "Result display with emotional pressure and thread dependency is a high cognitive-load review path, not a fast positive-yield signal.",
+    },
     "result_display_context_review": {
-        "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND (誘導聯絡 OR 社群導流 OR reply_funnel OR needs_thread OR 情緒操控)",
+        "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND context cues that do not match the explicit Batch 0007 sub-lanes",
         "routing_action": "slow_context_review",
-        "interpretation": "Result display without explicit guarantee is a context-cost signal, not a high-priority source arm by itself.",
+        "context_gate": "manual_context_triage",
+        "interpretation": "Fallback for result-display context cases that do not yet fit a stable sub-lane.",
     },
     "result_display_contrast_holdout": {
         "pre_review_activation_rule": "成果展示 AND NOT 保證收益 AND NOT (誘導聯絡 OR 社群導流 OR reply_funnel OR needs_thread OR 情緒操控)",
         "routing_action": "contrast_or_hard_negative_pool",
+        "context_gate": "holdout_calibration",
         "interpretation": "Standalone result display is useful for hard-negative contrast and boundary calibration.",
     },
     "other_metadata_review": {
         "pre_review_activation_rule": "candidate does not match the defined contrast lanes",
         "routing_action": "standard_review",
+        "context_gate": "standard_review",
         "interpretation": "Keep in standard metadata review until a useful contrast pattern is observed.",
     },
 }
@@ -76,9 +102,15 @@ def assign_contrast_lane(candidate: dict[str, Any]) -> str:
         return "strong_source_priority"
     if guarantee:
         return "guarantee_context_review"
-    if result_display and context_cue:
-        return "result_display_context_review"
     if result_display:
+        if not needs_thread and executable_transition:
+            return "result_display_low_context_transition"
+        if needs_thread and sparse_feature_value(candidate, "情緒操控"):
+            return "result_display_emotional_thread_required"
+        if needs_thread:
+            return "result_display_thread_required"
+        if context_cue:
+            return "result_display_context_review"
         return "result_display_contrast_holdout"
     return "other_metadata_review"
 
@@ -99,6 +131,7 @@ def build_contrast_aware_scores(
                 "batch_id": batch_id(candidate),
                 "lane": lane,
                 "routing_action": LANE_DEFINITIONS[lane]["routing_action"],
+                "context_gate": LANE_DEFINITIONS[lane]["context_gate"],
                 "active_sparse_features": active_sparse_features(candidate),
                 "review_decision": review_decision(candidate),
                 "second_review_required": second_review_required(candidate),
@@ -171,19 +204,29 @@ def _rate(count: int, total: int) -> float:
 def _recommendations(lane_scores: list[dict[str, Any]]) -> list[str]:
     by_lane = {row["lane"]: row for row in lane_scores}
     strong = by_lane.get("strong_source_priority", {})
-    result_context = by_lane.get("result_display_context_review", {})
+    result_low_context = by_lane.get("result_display_low_context_transition", {})
+    result_thread = by_lane.get("result_display_thread_required", {})
+    result_emotional_thread = by_lane.get("result_display_emotional_thread_required", {})
     holdout = by_lane.get("result_display_contrast_holdout", {})
     recommendations = []
 
-    if float(strong.get("svs") or 0.0) > float(result_context.get("svs") or 0.0):
+    if float(strong.get("svs") or 0.0) > float(result_low_context.get("svs") or 0.0):
         recommendations.append(
             "Prioritize strong_source_priority candidates when reviewer capacity is constrained."
         )
-    if float(result_context.get("needs_thread_rate") or 0.0) >= 0.5 or float(
-        result_context.get("uncertainty_rate") or 0.0
-    ) >= 0.5:
+    if int(result_low_context.get("reviewed_count") or 0) and float(
+        result_low_context.get("needs_thread_rate") or 0.0
+    ) == 0.0:
         recommendations.append(
-            "Route result_display_context_review candidates to slower context review instead of fast priority review."
+            "Route result_display_low_context_transition to single-item review; do not require full thread by default."
+        )
+    if float(result_thread.get("needs_thread_rate") or 0.0) >= 0.5:
+        recommendations.append(
+            "Route result_display_thread_required to full-thread context review before decision."
+        )
+    if float(result_emotional_thread.get("second_review_rate") or 0.0) >= 0.5:
+        recommendations.append(
+            "Route result_display_emotional_thread_required to full-thread plus second-review queue when capacity allows."
         )
     if int(holdout.get("reviewed_count") or 0):
         recommendations.append(
