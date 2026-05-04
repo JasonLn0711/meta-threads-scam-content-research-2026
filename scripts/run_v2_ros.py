@@ -15,6 +15,7 @@ from engine.discrepancy.detect import detect_discrepancies
 from engine.embedding.clustering import cluster_embedding_candidates
 from engine.feature_discovery.propose import build_review_queue, generate_feature_candidates
 from engine.sparse.clustering import cluster_sparse_candidates
+from engine.sparse.contrast import build_contrast_aware_scores
 from engine.sparse.ranking import rank_signals
 
 
@@ -35,6 +36,7 @@ def main() -> int:
     parser.add_argument("--embedding-output", type=Path, default=Path("outputs/embedding_clusters/latest.yaml"))
     parser.add_argument("--discrepancy-output", type=Path, default=Path("outputs/discrepancy_reports/latest.yaml"))
     parser.add_argument("--ranking-output", type=Path, default=Path("metrics/signal_scores/latest_ranking.yaml"))
+    parser.add_argument("--contrast-output", type=Path, default=Path("metrics/contrast_scores/latest.yaml"))
     parser.add_argument("--feature-output-dir", type=Path, default=Path("meta-system/feature_candidates"))
     parser.add_argument(
         "--feature-review-queue-output",
@@ -64,6 +66,7 @@ def main() -> int:
         embedding_far_threshold=args.embedding_far_threshold,
     )
     ranking = rank_signals(candidates, sparse_schema)
+    contrast_scores = build_contrast_aware_scores(candidates, sparse_schema)
     feature_candidates = generate_feature_candidates(discrepancy_report)
     review_queue = build_review_queue(feature_candidates)
 
@@ -71,6 +74,7 @@ def main() -> int:
     write_yaml(args.embedding_output, embedding_clusters)
     write_yaml(args.discrepancy_output, discrepancy_report)
     write_yaml(args.ranking_output, ranking)
+    write_yaml(args.contrast_output, contrast_scores)
     args.feature_output_dir.mkdir(parents=True, exist_ok=True)
     for feature_candidate in feature_candidates:
         write_yaml(args.feature_output_dir / f"{feature_candidate['feature_id']}.yaml", feature_candidate)
@@ -82,6 +86,7 @@ def main() -> int:
     print(f"embedding_clusters_written: {args.embedding_output}")
     print(f"discrepancy_report_written: {args.discrepancy_output}")
     print(f"signal_ranking_written: {args.ranking_output}")
+    print(f"contrast_scores_written: {args.contrast_output}")
     print(f"feature_candidates_written: {len(feature_candidates)}")
     if feature_candidates:
         print(f"feature_review_queue_written: {args.feature_review_queue_output}")

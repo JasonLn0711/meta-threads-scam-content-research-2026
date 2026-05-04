@@ -33,6 +33,7 @@ check_pilot_preflight.py      Check repo and local workspace readiness before it
 prepare_controlled_access_path.py Prepare approved browser/API access paths without exposing secrets
 validate_candidate_v2.py      Validate metadata-only v2 candidate YAML records
 run_v2_ros.py                 Run sparse, embedding, discrepancy, and feature-queue v2 reports
+run_contrast_aware_scoring.py Run contrast-aware sparse reviewer-routing scores
 promote_sparse_features_v2.py Promote only human-accepted v2 feature candidates into a schema copy
 generate_feature_candidates_v1.py Generate ranked feature hypotheses from valid missed-pattern discrepancy groups
 generate_exploration_tasks.py Generate safe exploration tasks and metadata-only candidate stubs
@@ -164,7 +165,20 @@ python scripts/validate_candidate_v2.py data/candidates
 python scripts/run_v2_ros.py
 ```
 
-The v2 runner reads only structured candidate metadata. It does not collect Threads data, inspect profiles, crawl, train embeddings, make final scam decisions, or promote new sparse features without human review.
+The v2 runner reads only structured candidate metadata and writes sparse ranking,
+contrast-aware routing, sparse clusters, embedding-discovery clusters,
+discrepancy reports, and feature-review proposals. It does not collect Threads
+data, inspect profiles, crawl, train embeddings, make final scam decisions, or
+promote new sparse features without human review.
+
+Run contrast-aware reviewer routing by itself:
+
+```bash
+python scripts/run_contrast_aware_scoring.py
+```
+
+This writes `metrics/contrast_scores/latest.yaml` and treats contrast lanes as
+reviewer-effort routing hypotheses, not labels.
 
 After a human edits `meta-system/feature_review_queue/latest.yaml` and marks selected items `accepted`, write the active v2 schema:
 

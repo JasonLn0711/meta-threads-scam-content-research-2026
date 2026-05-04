@@ -22,6 +22,7 @@ from engine.exploration.convert_intake import (
 )
 from engine.exploration.intake import build_candidate_intake, validate_candidate_intake
 from engine.sparse.clustering import cluster_sparse_candidates
+from engine.sparse.contrast import assign_contrast_lane, build_contrast_aware_scores
 from engine.sparse.svs import build_latest_ranking
 
 
@@ -120,6 +121,39 @@ class V2ResearchOperatingSystemTests(unittest.TestCase):
         ranking = build_latest_ranking(candidates, SPARSE_SCHEMA)
         self.assertEqual(ranking["decision_layer"], "sparse_primary")
         self.assertTrue(ranking["ranked_signals"])
+
+    def test_contrast_aware_scoring_routes_by_sparse_context(self) -> None:
+        candidates = [
+            candidate(
+                "cand-strong",
+                {"保證收益": 1, "誘導聯絡": 1, "reply_funnel": 1},
+                [],
+                "scam",
+                35,
+                False,
+            ),
+            candidate(
+                "cand-context",
+                {"成果展示": 1, "needs_thread": 1, "誘導聯絡": 1},
+                [],
+                "uncertain",
+                60,
+                True,
+            ),
+            candidate("cand-holdout", {"成果展示": 1}, [], "non_scam", 30, False),
+        ]
+
+        self.assertEqual(assign_contrast_lane(candidates[0]), "strong_source_priority")
+        self.assertEqual(assign_contrast_lane(candidates[1]), "result_display_context_review")
+        self.assertEqual(assign_contrast_lane(candidates[2]), "result_display_contrast_holdout")
+
+        scores = build_contrast_aware_scores(candidates, SPARSE_SCHEMA)
+        lanes = {row["lane"]: row for row in scores["lane_scores"]}
+        self.assertEqual(scores["decision_layer"], "sparse_primary_reviewer_routing")
+        self.assertTrue(scores["not_a_classifier"])
+        self.assertGreater(lanes["strong_source_priority"]["svs"], lanes["result_display_context_review"]["svs"])
+        self.assertEqual(lanes["result_display_context_review"]["uncertainty_rate"], 1.0)
+        self.assertFalse(scores["guardrails"]["embedding_used_for_decision"])
 
     def test_embedding_clusters_skip_missing_vectors(self) -> None:
         candidates = [
