@@ -1,0 +1,76 @@
+schema_version: candidate_record_v2_schema
+title: Candidate Record v2
+description: Metadata-only candidate record for the v2 dual-track research operating system.
+governance:
+  raw_threads_content_allowed: false
+  pii_allowed: false
+  browser_or_session_artifacts_allowed: false
+  embedding_decision_use_allowed: false
+  sparse_is_primary_decision_layer: true
+required_top_level:
+  - schema_version
+  - candidate_id
+  - batch_id
+  - sparse_vector
+  - embedding
+  - review
+properties:
+  schema_version:
+    const: candidate_record_v2
+  candidate_id:
+    type: string
+    min_length: 1
+  batch_id:
+    type: string
+    min_length: 1
+  sparse_vector:
+    required:
+      - schema_version
+      - features
+  embedding:
+    required:
+      - model
+      - dim
+      - vector
+    note: Vector may be empty only when dim is 0. Embedding is discovery-only.
+  review:
+    required:
+      - decision
+      - confidence
+      - review_time_seconds
+      - second_review_required
+    allowed_decisions:
+      - scam
+      - non_scam
+      - uncertain
+forbidden_keys:
+  - post_text
+  - reply_texts
+  - ocr_text
+  - raw_text
+  - raw_content
+  - raw_threads_content
+  - screenshot
+  - screenshot_path
+  - image_path
+  - image_paths
+  - external_links
+  - visible_contact_handles
+  - url
+  - urls
+  - profile_url
+  - username
+  - user_id
+  - handle
+  - browser_export
+  - browser_profile
+  - session
+  - cookies
+  - token
+  - credential
+  - controlled_store_path
+forbidden_string_patterns:
+  - "https?://"
+  - "www\\."
+  - "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+  - "@[A-Za-z0-9_]{2,}"

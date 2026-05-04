@@ -1,0 +1,10 @@
+schema_version: feature_review_queue_v1
+human_review_required: true
+allowed_decisions:
+  - pending
+  - accepted
+  - rejected
+items:
+  - feature_id: review_stable_funnel_anchor
+    decision: accepted
+    review_note: First real learning-loop test. Accept as metadata-only v2 feature to check whether discrepancy closure changes sparse clusters and SVS ranking.

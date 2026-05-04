@@ -42,6 +42,20 @@ outputs/
 reports/generated/
 *.log
 
+# v2 Research Operating System metadata outputs.
+# Keep raw/generated evidence blocked, but allow the current structured
+# aggregate metadata reports requested by the v2 pipeline.
+!outputs/
+outputs/*
+!outputs/sparse_clusters/
+!outputs/sparse_clusters/latest.yaml
+!outputs/embedding_clusters/
+!outputs/embedding_clusters/latest.yaml
+!outputs/discrepancy_reports/
+!outputs/discrepancy_reports/latest.yaml
+!outputs/research_candidates/
+!outputs/research_candidates/*.md
+
 # Keep the baseline-output guard file trackable while generated runs stay ignored.
 !experiments/baselines/outputs/
 !experiments/baselines/outputs/.gitignore

@@ -1,0 +1,26 @@
+schema_version: candidate_record_v2
+candidate_id: synthetic-candidate-0002
+batch_id: batch-0003-dual-track-dry-run
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: synthetic-vector-v1
+  dim: 3
+  vector:
+    - 0.99
+    - 0.01
+    - 0.0
+review:
+  decision: scam
+  confidence: 0.8
+  review_time_seconds: 90
+  second_review_required: false

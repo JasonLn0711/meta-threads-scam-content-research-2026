@@ -1,0 +1,10 @@
+feature_id: emergent_embedding_close_sparse_gap
+type: emergent
+definition: Embedding-close candidate pairs are not explained by current sparse features.
+activation_rule: Pending human definition; do not activate until accepted and rewritten
+  as an explainable binary sparse rule.
+supporting_cases:
+- disc-0001
+confidence: 0.45
+status: proposed
+promotion_allowed_without_human_review: false

@@ -84,6 +84,13 @@ notes/            Early thinking and meeting notes
 governance/       Data handling, legal, platform, and privacy constraints
 experiments/      Logs for baseline, modality, and evaluation experiments
 data/             Placeholder only; no raw sensitive data should be committed
+data/candidates/  v2 metadata-only candidate records; no raw Threads evidence
+data/candidate_intake/ metadata-only manual-assisted fill worksheets
+meta-system/      v2 sparse schemas and human-reviewed feature evolution metadata
+metrics/          v2 aggregate signal scores and reviewer-effort metrics
+engine/           v2 metadata-only sparse, embedding, discrepancy, and feature engines
+outputs/          whitelisted v2 structured metadata reports only
+exploration/      metadata-only exploration tasks; no external access or raw content
 scripts/          Minimal utilities only after experiments justify code
 src/              Reserved for small research prototype code
 decision-log/     Durable decisions and scope changes

@@ -1,0 +1,11 @@
+feature_id: emergent_sparse_cluster_split_signal
+type: emergent
+definition: Sparse-similar candidate pairs are far apart in discovery-only embedding
+  space.
+activation_rule: Pending human review; use only to decide whether an existing sparse
+  feature needs narrowing or a split feature.
+supporting_cases:
+- disc-0002
+confidence: 0.45
+status: proposed
+promotion_allowed_without_human_review: false

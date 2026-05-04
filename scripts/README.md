@@ -31,6 +31,15 @@ prepare_calibration_files.py  Create blind calibration sheets and answer keys
 init_pilot_workspace.py       Create empty local-only pilot files under ignored data/interim/
 check_pilot_preflight.py      Check repo and local workspace readiness before item 1
 prepare_controlled_access_path.py Prepare approved browser/API access paths without exposing secrets
+validate_candidate_v2.py      Validate metadata-only v2 candidate YAML records
+run_v2_ros.py                 Run sparse, embedding, discrepancy, and feature-queue v2 reports
+promote_sparse_features_v2.py Promote only human-accepted v2 feature candidates into a schema copy
+generate_feature_candidates_v1.py Generate ranked feature hypotheses from valid missed-pattern discrepancy groups
+generate_exploration_tasks.py Generate safe exploration tasks and metadata-only candidate stubs
+build_exploration_batch.py Build a small metadata-only exploration batch from selected tasks
+build_candidate_intake_v2.py Build Batch 0004 metadata-only manual-assisted intake worksheet
+validate_candidate_intake_v2.py Validate a metadata-only candidate intake worksheet
+convert_candidate_intake_v2.py Report on or convert completed intake entries into candidate_record_v2 files
 ```
 
 ## Local Python Setup
@@ -147,6 +156,69 @@ python scripts/prepare_calibration_files.py data/samples/thread_item_sample_batc
   --annotator-copy ann_01:data/interim/calibration_ann_01.csv \
   --annotator-copy ann_02:data/interim/calibration_ann_02.csv
 ```
+
+Run the v2 metadata-only dual-track research operating system:
+
+```bash
+python scripts/validate_candidate_v2.py data/candidates
+python scripts/run_v2_ros.py
+```
+
+The v2 runner reads only structured candidate metadata. It does not collect Threads data, inspect profiles, crawl, train embeddings, make final scam decisions, or promote new sparse features without human review.
+
+After a human edits `meta-system/feature_review_queue/latest.yaml` and marks selected items `accepted`, write the active v2 schema:
+
+```bash
+python scripts/promote_sparse_features_v2.py
+```
+
+Pending and rejected feature candidates are ignored.
+
+Generate feature hypotheses from the current discrepancy report without promotion:
+
+```bash
+python scripts/generate_feature_candidates_v1.py
+```
+
+This writes `meta-system/feature_candidates/auto_generated_v1.yaml` and filters to `missed_pattern` groups with at least three candidates.
+
+Generate safe exploration tasks and metadata-only candidate stubs:
+
+```bash
+python scripts/generate_exploration_tasks.py
+```
+
+This writes `exploration/tasks/latest.yaml` and `data/candidate_stubs/latest.yaml`. It does not access external systems, store raw content, or authorize collection.
+
+Build Batch 0004 from the top two low-coverage high-SVS exploration tasks:
+
+```bash
+python scripts/build_exploration_batch.py
+```
+
+This writes `exploration/batches/batch_0004.yaml` and `data/candidate_stubs/batch_0004.yaml`.
+
+Build the Batch 0004 candidate intake worksheet:
+
+```bash
+python scripts/build_candidate_intake_v2.py
+```
+
+This writes `data/candidate_intake/batch_0004_intake.yaml`. It does not fabricate candidate records or labels.
+
+Validate the Batch 0004 candidate intake worksheet:
+
+```bash
+python scripts/validate_candidate_intake_v2.py data/candidate_intake/batch_0004_intake.yaml --expected-count 10
+```
+
+Build the Batch 0004 conversion gate report:
+
+```bash
+python scripts/convert_candidate_intake_v2.py
+```
+
+This writes `data/candidate_intake/batch_0004_conversion_report.yaml`. It only writes candidate records when entries pass every completion gate and `--write-candidates` is explicitly provided.
 
 Preview local pilot workspace creation:
 
