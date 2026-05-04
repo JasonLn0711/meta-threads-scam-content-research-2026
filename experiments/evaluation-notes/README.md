@@ -52,5 +52,7 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0044-checkpoint-0027-interpretation.md` | Repo-safe 27-record checkpoint interpretation closing run 0016 for collection and requiring a method decision before item 0028. |
 | `0045-item-0028-method-decision.md` | Repo-safe method decision blocking item 0028 until API/session-aware readiness or targeted redacted exemplars are available. |
 | `0046-targeted-exemplar-intake-start.md` | Repo-safe start note for targeted redacted exemplar intake after the API dry-run remained blocked. |
+| `0099-pre-sync-redacted-field-readiness-check.md` | Historical local pre-sync readiness note naming redacted intake fields needed before the first rehearsal build; retained for audit after origin/main had advanced. |
+| `0100-pre-sync-first-rehearsal-prebuild-handoff.md` | Historical local pre-sync handoff step between collector/operator-filled local intake and the first generated rehearsal record; retained for audit after origin/main had advanced. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

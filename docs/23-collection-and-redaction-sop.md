@@ -192,6 +192,8 @@ Use rehearsal records to catch operational mistakes, not to make pilot findings.
 - fills `screenshot_snapshot_status`, `link_snapshot_status`, `privacy_redaction_notes`, and `missing_evidence` where relevant
 - records collection burden and exclusion reasons in the local collection log
 
+Before building a real rehearsal record, complete a local copy of `templates/manual_collection_prebuild_handoff.md` to confirm the intake has no placeholders, raw identifiers, unapproved context, full URLs, raw handles, or unsupported evidence fields.
+
 Run:
 
 ```bash

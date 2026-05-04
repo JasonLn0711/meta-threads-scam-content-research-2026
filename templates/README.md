@@ -16,10 +16,13 @@ annotator_onboarding_checklist.md
 adjudication_template.md
 collection_log_template.csv
 controlled_launch_details_template.md
+controlled_crawler_run_record.md
+controlled_rehearsal_review.md
 data_authorization_request.md
 dataset_manifest_template.md
 experiment_log_template.md
 guideline_revision_log_template.md
+manual_collection_prebuild_handoff.md
 manual_collection_rehearsal_checklist.md
 pilot_batch_work_order.md
 pilot_checkpoint_review.md
@@ -40,7 +43,7 @@ track_b_candidate_review_template.md
 
 Use the annotation, onboarding, QA, adjudication, disagreement, and guideline-revision templates for annotation workflow. Use the authorization, collection, redaction, work-order, result-summary, and manifest templates before or during the authorized pilot workflow. Use `report_review_feedback.md` for report-v0 stakeholder and reviewer comments.
 
-Use `annotator_calibration_packet_template.md` for blind calibration setup and `manual_collection_rehearsal_checklist.md` for the 1-2 item manual collection rehearsal before item 1.
+Use `annotator_calibration_packet_template.md` for blind calibration setup. Use `controlled_crawler_run_record.md` before any approved crawler rehearsal, `manual_collection_prebuild_handoff.md` before building each 1-2 item controlled rehearsal record, `manual_collection_rehearsal_checklist.md` after the generated record exists, and `controlled_rehearsal_review.md` for the aggregate pass, pause, or stop decision.
 
 Use `500_item_expansion_work_order.md` only after the staged expansion gates in `docs/32-500-item-expansion-plan.md` are satisfied.
 

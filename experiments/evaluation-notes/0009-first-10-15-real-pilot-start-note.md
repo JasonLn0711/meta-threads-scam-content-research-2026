@@ -162,7 +162,7 @@ Do not continue to 50 unless the decision is `continue_to_50` or `continue_with_
 
 ## Current Decision
 
-Current decision: `approved_placeholder_gate_verified_waiting_for_redacted_fields`
+Current decision: `pause_for_collection_fix_waiting_for_selected_rehearsal_item`
 
 Reason:
 
@@ -173,11 +173,15 @@ Reason:
 - local-only manual rehearsal intake files have been prepared under ignored `data/interim/`
 - pending manual rehearsal intake was blocked by governance checks before any record was generated
 - approved manual rehearsal intake with unresolved placeholders was also blocked before any record was generated
+- controlled crawler rehearsal run 0001 did not produce an extractable selected item
+- redacted-field readiness check identifies the exact local-only fields still needed before the first rehearsal build
+- prebuild handoff template is ready for collector and governance-reviewer review before the builder runs
 - no real Threads evidence has been collected or committed as part of this start note
 
 Next action:
 
-- replace all `FILL_*` values in `data/interim/manual_entry_0001.json` with approved, redacted manual fields
+- produce one selected item through an approved controlled path and replace all placeholder values in `data/interim/manual_entry_0001.json` with approved, redacted fields
+- complete a local copy of `templates/manual_collection_prebuild_handoff.md`
 - build 1-2 manual rehearsal records under the approved controlled limits
 - validate the rehearsal records locally
 - record the rehearsal outcome in `templates/controlled_rehearsal_review.md`
