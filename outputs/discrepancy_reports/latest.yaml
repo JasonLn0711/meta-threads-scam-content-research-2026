@@ -1,0 +1,14 @@
+schema_version: discrepancy_report_v1
+discovery_only: true
+embedding_close_threshold: 0.85
+embedding_far_threshold: 0.25
+summary:
+  case_count: 0
+  missed_pattern: 0
+  over_generalization: 0
+cases: []
+guardrails:
+  raw_threads_content_included: false
+  embedding_used_for_decision: false
+  sparse_schema_updated: false
+  human_review_required_for_changes: true

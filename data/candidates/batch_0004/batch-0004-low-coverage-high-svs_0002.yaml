@@ -1,0 +1,43 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0004-low-coverage-high-svs_0002
+batch_id: batch-0004-low-coverage-high-svs
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: uncertain
+  confidence: 0.7
+  review_time_seconds: 50.0
+  second_review_required: true
+source_stub:
+  candidate_stub_id: STUB_0002
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+structured_hints:
+  common_behaviors:
+  - 炫耀績效
+  - FOMO刺激
+  structural_patterns:
+  - 成果+情緒推動
+  reviewer_signals:
+  - 高吸引力收益暗示
+  hard_negative_contrast: 無商業誘導分享
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

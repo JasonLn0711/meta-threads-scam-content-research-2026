@@ -1,0 +1,818 @@
+schema_version: sparse_clusters_v1
+decision_layer: sparse_primary
+similarity: weighted_jaccard_over_binary_sparse_features
+threshold: 0.45
+candidate_count: 14
+clusters:
+- cluster_id: sparse-cluster-0001
+  candidate_ids:
+  - batch-0004-low-coverage-high-svs_0001
+  - batch-0004-low-coverage-high-svs_0002
+  - batch-0004-low-coverage-high-svs_0004
+  - batch-0004-low-coverage-high-svs_0006
+  - batch-0004-low-coverage-high-svs_0007
+  - batch-0004-low-coverage-high-svs_0008
+  - batch-0004-low-coverage-high-svs_0009
+  - batch-0004-low-coverage-high-svs_0010
+  - synthetic-candidate-0001
+  - synthetic-candidate-0002
+  active_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  core_features:
+  - review_stable_funnel_anchor
+- cluster_id: sparse-cluster-0002
+  candidate_ids:
+  - batch-0004-low-coverage-high-svs_0003
+  - batch-0004-low-coverage-high-svs_0005
+  active_features:
+  - needs_thread
+  - 成果展示
+  - 誘導聯絡
+  core_features:
+  - needs_thread
+  - 成果展示
+- cluster_id: sparse-cluster-0003
+  candidate_ids:
+  - synthetic-candidate-0003
+  active_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  core_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+- cluster_id: sparse-cluster-0004
+  candidate_ids:
+  - synthetic-candidate-0004
+  active_features:
+  - needs_thread
+  - 情緒操控
+  core_features:
+  - needs_thread
+  - 情緒操控
+pairwise_similarity:
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0002
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.919355
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0003
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0004
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.919355
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0005
+  shared_features:
+  - needs_thread
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.27193
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.768116
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.688406
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.768116
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.688406
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.768116
+- left: batch-0004-low-coverage-high-svs_0001
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.903509
+- left: batch-0004-low-coverage-high-svs_0001
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.554687
+- left: batch-0004-low-coverage-high-svs_0001
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.377193
+- left: batch-0004-low-coverage-high-svs_0001
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.064516
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0003
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.153226
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0004
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 7
+  weighted_overlap: 1.0
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0005
+  shared_features:
+  - needs_thread
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.25
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.76087
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.76087
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0002
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.830645
+- left: batch-0004-low-coverage-high-svs_0002
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.514493
+- left: batch-0004-low-coverage-high-svs_0002
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.346774
+- left: batch-0004-low-coverage-high-svs_0002
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  - 情緒操控
+  shared_features_count: 2
+  weighted_overlap: 0.145161
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0004
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.153226
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0005
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.612903
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0004-low-coverage-high-svs_0003
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.070175
+- left: batch-0004-low-coverage-high-svs_0003
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.11828
+- left: batch-0004-low-coverage-high-svs_0003
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.148148
+- left: batch-0004-low-coverage-high-svs_0003
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.275862
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0005
+  shared_features:
+  - needs_thread
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.25
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.76087
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.76087
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.84058
+- left: batch-0004-low-coverage-high-svs_0004
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.830645
+- left: batch-0004-low-coverage-high-svs_0004
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.514493
+- left: batch-0004-low-coverage-high-svs_0004
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.346774
+- left: batch-0004-low-coverage-high-svs_0004
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  - 情緒操控
+  shared_features_count: 2
+  weighted_overlap: 0.145161
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0004-low-coverage-high-svs_0006
+  shared_features:
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.086957
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.086957
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0005
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.175439
+- left: batch-0004-low-coverage-high-svs_0005
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.104762
+- left: batch-0004-low-coverage-high-svs_0005
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.37037
+- left: batch-0004-low-coverage-high-svs_0005
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.195122
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0004-low-coverage-high-svs_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 7
+  weighted_overlap: 1.0
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 7
+  weighted_overlap: 1.0
+- left: batch-0004-low-coverage-high-svs_0006
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.688406
+- left: batch-0004-low-coverage-high-svs_0006
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0004-low-coverage-high-svs_0006
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.253623
+- left: batch-0004-low-coverage-high-svs_0006
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.072464
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0004-low-coverage-high-svs_0008
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 1.0
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0007
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.748031
+- left: batch-0004-low-coverage-high-svs_0007
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.569231
+- left: batch-0004-low-coverage-high-svs_0007
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.275591
+- left: batch-0004-low-coverage-high-svs_0007
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.07874
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0004-low-coverage-high-svs_0009
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 7
+  weighted_overlap: 1.0
+- left: batch-0004-low-coverage-high-svs_0008
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.688406
+- left: batch-0004-low-coverage-high-svs_0008
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0004-low-coverage-high-svs_0008
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.253623
+- left: batch-0004-low-coverage-high-svs_0008
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.072464
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0004-low-coverage-high-svs_0010
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 6
+  weighted_overlap: 0.915385
+- left: batch-0004-low-coverage-high-svs_0009
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.748031
+- left: batch-0004-low-coverage-high-svs_0009
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.569231
+- left: batch-0004-low-coverage-high-svs_0009
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.275591
+- left: batch-0004-low-coverage-high-svs_0009
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.07874
+- left: batch-0004-low-coverage-high-svs_0010
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.688406
+- left: batch-0004-low-coverage-high-svs_0010
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0004-low-coverage-high-svs_0010
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.253623
+- left: batch-0004-low-coverage-high-svs_0010
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.072464
+- left: synthetic-candidate-0001
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.46875
+- left: synthetic-candidate-0001
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 社群導流
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.417476
+- left: synthetic-candidate-0001
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.070796
+- left: synthetic-candidate-0002
+  right: synthetic-candidate-0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: synthetic-candidate-0002
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: synthetic-candidate-0003
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.150943
+guardrails:
+  raw_threads_content_included: false
+  embedding_used_for_decision: false

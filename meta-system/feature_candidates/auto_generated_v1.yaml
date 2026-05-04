@@ -1,0 +1,23 @@
+schema_version: auto_generated_feature_candidates_v1
+purpose: rank testable sparse-representation hypotheses from valid missed-pattern
+  discrepancy groups
+source_discrepancy_report: outputs/discrepancy_reports/latest.yaml
+source_candidates: data/candidates/*.yaml
+filters:
+  case_type: missed_pattern
+  minimum_group_size: 3
+  raw_threads_evidence_allowed: false
+summary:
+  input_case_count: 0
+  valid_group_count: 0
+  skipped_case_count: 0
+  feature_count: 0
+features: []
+skipped_cases: []
+guardrails:
+  sparse_schema_modified: false
+  features_auto_promoted: false
+  embedding_used_for_decision: false
+  raw_threads_content_included: false
+  pii_included: false
+sparse_schema_version: sparse_features_v2

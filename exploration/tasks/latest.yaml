@@ -1,0 +1,73 @@
+schema_version: exploration_tasks_v1
+purpose: propose where to look next to maximize high-value candidate discovery per
+  unit reviewer effort
+source_inputs:
+- metrics/signal_scores/latest_ranking.yaml
+- outputs/discrepancy_reports/latest.yaml
+- outputs/embedding_clusters/latest.yaml
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 5
+summary:
+  task_count: 2
+  high_discrepancy_task_count: 0
+  low_coverage_task_count: 0
+  embedding_outlier_task_count: 2
+tasks:
+- task_id: EXP_0001
+  gap_type: embedding_outlier
+  hypothesis: A singleton discovery-only embedding cluster may indicate an underrepresented
+    behavior family or a hard-negative boundary that sparse features should learn
+    to describe.
+  source_hint: embedding singleton follow-up
+  search_cues:
+  - outlier-like metadata shape
+  - hard-negative contrast
+  - manual-assisted sparse annotation
+  priority: medium
+  reason:
+  - singleton embedding cluster candidate=synthetic-candidate-0003
+  - max_neighbor_similarity=0.0101
+  - embedding outlier used only as exploration cue
+  signal_hint: embedding_singleton_outlier
+  expected_behavior: underrepresented_or_boundary_behavior
+  expected_impact:
+    clustering: test whether the singleton is a new sparse family or a safe negative
+      boundary
+    reviewer_effort: avoid broad search by collecting only a tiny contrast set
+  rank:
+    gap_score: 2.0
+    coverage_score: 1
+    impact_score: 1.5
+- task_id: EXP_0002
+  gap_type: embedding_outlier
+  hypothesis: Candidates missing vectors may represent evidence-shape gaps; a small
+    manual-assisted check can decide whether vector absence is harmless metadata sparsity
+    or an exploration blind spot.
+  source_hint: missing embedding coverage check
+  search_cues:
+  - missing vector metadata
+  - non-embedded candidate shape
+  - safe manual-assisted completeness check
+  priority: low
+  reason:
+  - missing_embedding_count=11
+  - embedding absence is not a decision signal
+  signal_hint: missing_embedding_metadata_gap
+  expected_behavior: metadata_completeness_gap
+  expected_impact:
+    clustering: improve future outlier detection coverage if vector absence is systematic
+    reviewer_effort: prevent wasting review time on incomplete metadata paths
+  rank:
+    gap_score: 1.0
+    coverage_score: 11
+    impact_score: 1.0
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true
