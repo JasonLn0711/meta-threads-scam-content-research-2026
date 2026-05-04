@@ -1,0 +1,92 @@
+schema_version: batch_run_log_v1
+batch_id: batch-0004-low-coverage-high-svs
+experiment_id: 0004-low-coverage-high-svs-signal-exploration
+status: completed
+record_type: actual_run_log
+no_fake_results: true
+principle: maximize high-value candidate discovery per unit reviewer effort
+goal_not: scam detection or legal fraud determination
+created_at: "2026-05-04"
+updated_at: "2026-05-04"
+inputs:
+  experiment_plan: experiments/batch_variants/0004-low-coverage-high-svs-signal-exploration.md
+  conversion_gate_note: experiments/batch_variants/0004-intake-conversion-gate.md
+  result_note: experiments/batch_variants/0004-post-review-learning-loop-result.md
+  intake_worksheet: data/candidate_intake/batch_0004_intake.yaml
+  conversion_report: data/candidate_intake/batch_0004_conversion_report.yaml
+  candidate_records: data/candidates/batch_0004/*.yaml
+  signal_ranking_after_run: metrics/signal_scores/latest_ranking.yaml
+planned:
+  candidate_count: 10
+  arms:
+  - 成果展示 low-coverage high-SVS expansion
+  - 保證收益 low-coverage high-SVS expansion
+  hypothesis: Low-coverage high-SVS signals should be tested with a small reviewed
+    expansion before scaling.
+  expected_measurements:
+  - target signal SVS before and after review
+  - batch-level SVS
+  - review time
+  - cognitive load
+  - sparse cluster change
+  - discrepancy change
+conversion:
+  intake_count: 10
+  converted_count: 10
+  blocked_count: 0
+  written_count: 10
+  status: ready
+observed:
+  candidate_count_after_run: 14
+  reviewed_count: 10
+  scam_count: 5
+  non_scam_count: null
+  uncertain_count: null
+  yield_rate: 0.5
+  information_density: 0.753623
+  review_time: 38.9
+  cognitive_load: 1.89
+  svs: 0.005125224
+comparison:
+  baseline_batch_id: batch-0003-dual-track-dry-run
+  baseline_svs: 0.00112473
+  observed_change: 4.56x higher batch SVS than the synthetic dry run
+signal_results:
+- signal_id: 保證收益
+  before_reviewed_count: 1
+  after_reviewed_count: 6
+  before_svs: 0.0068438
+  after_svs: 0.015351855
+  observed_change: 2.24x higher SVS
+  after_yield_rate: 1.0
+- signal_id: 成果展示
+  before_reviewed_count: 1
+  after_reviewed_count: 9
+  before_svs: 0.0068438
+  after_svs: 0.00358105
+  observed_change: 0.52x of previous SVS
+  after_yield_rate: 0.444444
+cluster_results:
+  sparse_summary: sparse-cluster-0001 grouped stronger funnel/value-anchor candidates;
+    sparse-cluster-0002 isolated weaker result-display candidates with needs_thread.
+  embedding_summary: Batch 0004 candidate records had no embedding vectors, so
+    embedding clustering skipped those records.
+  discrepancy_summary: no discrepancy cases were produced; this must not be read
+    as proof that no missed pattern exists because embeddings were absent.
+failure_modes:
+- embedding coverage was missing for Batch 0004 records
+- result-display alone became weaker and more burden-sensitive after review
+decision_implication: Keep 保證收益 as a high-priority sparse signal, treat broad
+  成果展示 as mixed unless paired with stronger funnel/contact/certainty structure,
+  and run a capped contrast batch next.
+next_action: Run Batch 0005 as 保證收益 + funnel/contact versus 成果展示 without explicit
+  保證收益.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  candidate_records_fabricated: false
+  embedding_used_for_decision: false
+  sparse_schema_auto_promoted: false
+  human_review_required: true

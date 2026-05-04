@@ -1,0 +1,141 @@
+schema_version: candidate_stub_batch_v1
+batch_id: batch-0005-guarantee-vs-result-display-contrast
+source_tasks: exploration/tasks/batch_0005_contrast.yaml
+source_experiment_plan: experiments/batch_variants/0005-guarantee-vs-result-display-contrast.md
+selected_task_ids:
+- EXP_0005_A
+- EXP_0005_B
+summary:
+  stub_count: 10
+  target_signal_hints:
+  - 保證收益
+  - 成果展示
+  contrast_arms:
+    A: 保證收益 + funnel/contact structure
+    B: 成果展示 without explicit 保證收益
+candidate_stubs:
+- candidate_stub_id: STUB_0005_A_01
+  task_id: EXP_0005_A
+  contrast_arm: A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_funnel_anchor
+  expected_sparse_focus:
+  - 保證收益
+  - 誘導聯絡
+  - reply_funnel
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_A_02
+  task_id: EXP_0005_A
+  contrast_arm: A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_funnel_anchor
+  expected_sparse_focus:
+  - 保證收益
+  - 社群導流
+  - review_stable_funnel_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_A_03
+  task_id: EXP_0005_A
+  contrast_arm: A
+  signal_hint: 保證收益
+  expected_behavior: certainty_claim_with_contact_transition
+  expected_sparse_focus:
+  - 保證收益
+  - 誘導聯絡
+  - review_stable_funnel_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_A_04
+  task_id: EXP_0005_A
+  contrast_arm: A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_with_result_proof
+  expected_sparse_focus:
+  - 保證收益
+  - 成果展示
+  - reply_funnel
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_A_05
+  task_id: EXP_0005_A
+  contrast_arm: A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_anchor_hard_negative_check
+  expected_sparse_focus:
+  - 保證收益
+  - 情緒操控
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_B_01
+  task_id: EXP_0005_B
+  contrast_arm: B
+  signal_hint: 成果展示
+  expected_behavior: result_display_without_guarantee_contact
+  expected_sparse_focus:
+  - 成果展示
+  - 誘導聯絡
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_B_02
+  task_id: EXP_0005_B
+  contrast_arm: B
+  signal_hint: 成果展示
+  expected_behavior: result_display_without_guarantee_group_cue
+  expected_sparse_focus:
+  - 成果展示
+  - 社群導流
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_B_03
+  task_id: EXP_0005_B
+  contrast_arm: B
+  signal_hint: 成果展示
+  expected_behavior: result_display_standalone_hard_negative
+  expected_sparse_focus:
+  - 成果展示
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_B_04
+  task_id: EXP_0005_B
+  contrast_arm: B
+  signal_hint: 成果展示
+  expected_behavior: result_display_emotional_pressure_without_guarantee
+  expected_sparse_focus:
+  - 成果展示
+  - 情緒操控
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005_B_05
+  task_id: EXP_0005_B
+  contrast_arm: B
+  signal_hint: 成果展示
+  expected_behavior: result_display_uncertain_funnel_boundary
+  expected_sparse_focus:
+  - 成果展示
+  - reply_funnel
+  - needs_thread
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
+  this_file_authorizes_collection: false

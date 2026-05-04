@@ -1,0 +1,79 @@
+schema_version: exploration_tasks_v1
+purpose: define a capped contrast test for the next v2 ROS learning loop
+source_inputs:
+- metrics/signal_scores/latest_ranking.yaml
+- outputs/research_candidates/RC_0002.md
+- experiments/batch_variants/0004-post-review-learning-loop-result.md
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 5
+summary:
+  task_count: 2
+  high_discrepancy_task_count: 0
+  low_coverage_task_count: 0
+  contrast_task_count: 2
+  total_stub_cap: 10
+tasks:
+- task_id: EXP_0005_A
+  gap_type: contrast_arm
+  hypothesis: '`保證收益` paired with funnel or contact structure will preserve high
+    SVS with lower reviewer burden than broad result-display evidence.'
+  source_hint: guarantee plus funnel/contact candidate surface
+  search_cues:
+  - guarantee-or-certainty cue
+  - contact transition cue
+  - group or reply funnel cue
+  priority: high
+  reason:
+  - current_svs=0.015351855
+  - current_yield_rate=1.0
+  - current_review_time=42.333333
+  - Batch 0004 suggests low-burden high-yield behavior
+  signal_hint: 保證收益
+  expected_behavior: guarantee_funnel_anchor
+  contrast_arm: A
+  expected_impact:
+    clustering: test whether guarantee plus funnel/contact structure remains a stable
+      sparse cluster
+    reviewer_effort: test whether the signal keeps low review time and low second-review
+      pressure
+  rank:
+    gap_score: 3.0
+    coverage_score: 2
+    impact_score: 3.0
+- task_id: EXP_0005_B
+  gap_type: contrast_arm
+  hypothesis: Broad `成果展示` without explicit `保證收益` will remain mixed or burden-heavy
+    unless a narrower subcondition explains its value.
+  source_hint: result-display without explicit guarantee candidate surface
+  search_cues:
+  - result display cue
+  - no explicit guarantee cue
+  - hard-negative or ambiguous result-sharing contrast
+  priority: high
+  reason:
+  - current_svs=0.00358105
+  - current_yield_rate=0.444444
+  - current_cognitive_load=1.922222
+  - Batch 0004 suggests ambiguous burden-sensitive behavior
+  signal_hint: 成果展示
+  expected_behavior: result_display_without_guarantee
+  contrast_arm: B
+  expected_impact:
+    clustering: test whether broad result display separates into useful and weak
+      sparse subgroups
+    reviewer_effort: measure whether `needs_thread`, second review, or uncertain
+      decisions explain the weak SVS
+  rank:
+    gap_score: 2.5
+    coverage_score: 2
+    impact_score: 3.0
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true

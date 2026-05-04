@@ -1,0 +1,43 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0005-guarantee-vs-result-display-contrast_0002
+batch_id: batch-0005-guarantee-vs-result-display-contrast
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: scam
+  confidence: 0.9
+  review_time_seconds: 34.0
+  second_review_required: false
+source_stub:
+  candidate_stub_id: STUB_0005_A_02
+  task_id: EXP_0005_A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_funnel_anchor
+structured_hints:
+  common_behaviors:
+  - 保證收益
+  - 社群導流
+  structural_patterns:
+  - 群組導流
+  reviewer_signals:
+  - 轉向私域流量
+  hard_negative_contrast: 純公開資訊分享
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

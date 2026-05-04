@@ -1,0 +1,78 @@
+schema_version: candidate_intake_conversion_report_v1
+batch_id: batch-0005-guarantee-vs-result-display-contrast
+source_intake_schema_version: candidate_intake_batch_v1
+conversion_mode: write_candidates
+status: ready
+summary:
+  intake_count: 10
+  converted_count: 10
+  blocked_count: 0
+  written_count: 10
+  candidate_records_written: true
+converted_records:
+- intake_id: INTAKE_0005_A_01
+  candidate_stub_id: STUB_0005_A_01
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0001
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0001.yaml
+  written: true
+- intake_id: INTAKE_0005_A_02
+  candidate_stub_id: STUB_0005_A_02
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0002
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0002.yaml
+  written: true
+- intake_id: INTAKE_0005_A_03
+  candidate_stub_id: STUB_0005_A_03
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0003
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0003.yaml
+  written: true
+- intake_id: INTAKE_0005_A_04
+  candidate_stub_id: STUB_0005_A_04
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0004
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0004.yaml
+  written: true
+- intake_id: INTAKE_0005_A_05
+  candidate_stub_id: STUB_0005_A_05
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0005
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0005.yaml
+  written: true
+- intake_id: INTAKE_0005_B_01
+  candidate_stub_id: STUB_0005_B_01
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0006
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0006.yaml
+  written: true
+- intake_id: INTAKE_0005_B_02
+  candidate_stub_id: STUB_0005_B_02
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0007
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0007.yaml
+  written: true
+- intake_id: INTAKE_0005_B_03
+  candidate_stub_id: STUB_0005_B_03
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0008
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0008.yaml
+  written: true
+- intake_id: INTAKE_0005_B_04
+  candidate_stub_id: STUB_0005_B_04
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0009
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0009.yaml
+  written: true
+- intake_id: INTAKE_0005_B_05
+  candidate_stub_id: STUB_0005_B_05
+  candidate_id: batch-0005-guarantee-vs-result-display-contrast_0010
+  candidate_record_output_target: data/candidates/batch_0005/batch-0005-guarantee-vs-result-display-contrast_0010.yaml
+  written: true
+blocked_entries: []
+required_completion_gates:
+- raw_threads_content_excluded
+- pii_excluded
+- only_structured_metadata
+- human_review_completed
+next_actions:
+- Run candidate validation on data/candidates.
+- Run the v2 ROS pipeline and compare SVS, sparse clusters, and discrepancy reports.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  candidate_records_fabricated: false
+  requires_human_review_before_conversion: true
+  candidate_records_written: true
