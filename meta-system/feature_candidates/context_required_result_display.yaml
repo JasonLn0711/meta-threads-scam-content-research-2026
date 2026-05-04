@@ -1,0 +1,26 @@
+feature_id: context_required_result_display
+type: emergent
+definition: Result-display candidate requires thread context and does not include
+  an explicit guarantee or certainty anchor.
+activation_rule: 成果展示 AND needs_thread AND NOT 保證收益
+supporting_cases:
+- batch-0006-contrast-aware-routing-validation_0005
+- batch-0006-contrast-aware-routing-validation_0006
+- batch-0006-contrast-aware-routing-validation_0007
+- batch-0006-contrast-aware-routing-validation_0008
+confidence: medium
+status: proposed
+source_artifacts:
+- experiments/batch_variants/0006-post-review-routing-result.md
+- metrics/batch_logs/batch_0006_run_log.yaml
+- metrics/contrast_scores/latest.yaml
+expected_effect: should split broad result-display context review into a more
+  explicit reviewer-burden feature, reduce sparse over-generalization, and make
+  slow-lane review planning more predictable.
+promotion_allowed_without_human_review: false
+guardrails:
+  sparse_schema_modified: false
+  features_auto_promoted: false
+  embedding_used_for_decision: false
+  raw_threads_content_included: false
+  pii_included: false

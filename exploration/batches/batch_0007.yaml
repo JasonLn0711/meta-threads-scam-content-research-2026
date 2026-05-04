@@ -1,0 +1,23 @@
+schema_version: exploration_batch_v1
+batch_id: batch-0007-result-display-context-split
+source_tasks: exploration/tasks/batch_0007_result_display_context_split.yaml
+source_experiment_plan: experiments/batch_variants/0007-result-display-context-split.md
+purpose: capped validation batch for splitting result-display context review burden
+candidate_stub_count: 12
+selected_task_ids:
+- EXP_0007_A
+- EXP_0007_B
+- EXP_0007_C
+- EXP_0007_D
+routing_lanes:
+  A: result_display_low_context_transition
+  B: result_display_thread_required
+  C: result_display_emotional_thread_required
+  D: result_display_clean_holdout
+status: planned_pending_manual_assisted_fill
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
+  this_file_authorizes_collection: false

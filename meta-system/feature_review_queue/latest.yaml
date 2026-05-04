@@ -1,10 +1,14 @@
 schema_version: feature_review_queue_v1
 human_review_required: true
 allowed_decisions:
-  - pending
-  - accepted
-  - rejected
+- pending
+- accepted
+- rejected
 items:
-  - feature_id: review_stable_funnel_anchor
-    decision: accepted
-    review_note: First real learning-loop test. Accept as metadata-only v2 feature to check whether discrepancy closure changes sparse clusters and SVS ranking.
+- feature_id: emergent_sparse_cluster_split_signal
+  decision: pending
+  review_note: Human reviewer must accept or reject before sparse schema promotion.
+- feature_id: context_required_result_display
+  decision: pending
+  review_note: Proposed from Batch 0006 routing burden; keep pending until Batch
+    0007 review confirms the split.
