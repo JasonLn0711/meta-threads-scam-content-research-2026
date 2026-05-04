@@ -208,6 +208,32 @@ After Batch 0008:
 - thread-required result-display is too expensive for routine review;
 - clean result-display holdouts are useful hard negatives.
 
+## Prospective Check
+
+Batch 0009 is the first prospective check of this policy.
+
+Instead of using another balanced four-arm design, Batch 0009 allocates reviewer
+capacity according to the policy:
+
+```text
+strong_source_priority: 8
+result_display_clean_holdout: 2
+result_display_low_context_transition: 1
+result_display_thread_required: 1
+```
+
+This tests whether the policy improves high-value candidates per reviewer hour
+when it controls the next batch. The batch remains metadata-only and blocked
+until human-reviewed structured metadata passes every completion gate.
+
+Evidence:
+
+- `experiments/batch_variants/0009-context-gating-policy-check.md`
+- `exploration/tasks/batch_0009_context_gating_policy_check.yaml`
+- `data/candidate_stubs/batch_0009.yaml`
+- `data/candidate_intake/batch_0009_intake.yaml`
+- `metrics/batch_logs/batch_0009_run_log.yaml`
+
 ## Evidence
 
 - `experiments/batch_variants/0008-context-gate-reviewer-hour-value.md`

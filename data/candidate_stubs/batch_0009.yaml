@@ -1,0 +1,147 @@
+schema_version: candidate_stub_batch_v1
+batch_id: batch-0009-context-gating-policy-check
+source_tasks: exploration/tasks/batch_0009_context_gating_policy_check.yaml
+source_experiment_plan: experiments/batch_variants/0009-context-gating-policy-check.md
+source_policy: docs/63-context-gating-policy.md
+selected_task_ids:
+- EXP_0009_A
+- EXP_0009_B
+- EXP_0009_C
+- EXP_0009_D
+summary:
+  stub_count: 12
+  allocation_strategy: policy_weighted_not_balanced
+  routing_lanes:
+    A: strong_source_priority
+    B: result_display_clean_holdout
+    C: result_display_low_context_transition
+    D: result_display_thread_required
+  target_signal_hints:
+  - 保證收益
+  - 成果展示
+candidate_stubs:
+- candidate_stub_id: STUB_0009_A_01
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_fast_lane
+  expected_sparse_focus: [保證收益, 誘導聯絡, reply_funnel, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_02
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_fast_lane
+  expected_sparse_focus: [保證收益, 社群導流, reply_funnel, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_03
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_reply_funnel_fast_lane
+  expected_sparse_focus: [保證收益, 誘導聯絡, reply_funnel, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_04
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_stable_anchor_fast_lane
+  expected_sparse_focus: [保證收益, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_05
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_no_thread
+  expected_sparse_focus: [保證收益, 誘導聯絡, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_06
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_no_thread
+  expected_sparse_focus: [保證收益, 社群導流, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_07
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_transition_anchor
+  expected_sparse_focus: [保證收益, 誘導聯絡, reply_funnel, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_A_08
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_reply_anchor
+  expected_sparse_focus: [保證收益, reply_funnel, review_stable_funnel_anchor]
+  expected_absent: [needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_B_01
+  task_id: EXP_0009_B
+  routing_lane: result_display_clean_holdout
+  signal_hint: 成果展示
+  expected_behavior: clean_result_display_holdout
+  expected_sparse_focus: [成果展示]
+  expected_absent: [保證收益, 誘導聯絡, 社群導流, reply_funnel, needs_thread, 情緒操控]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_B_02
+  task_id: EXP_0009_B
+  routing_lane: result_display_clean_holdout
+  signal_hint: 成果展示
+  expected_behavior: clean_result_display_holdout
+  expected_sparse_focus: [成果展示]
+  expected_absent: [保證收益, 誘導聯絡, 社群導流, reply_funnel, needs_thread, 情緒操控]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_C_01
+  task_id: EXP_0009_C
+  routing_lane: result_display_low_context_transition
+  signal_hint: 成果展示
+  expected_behavior: result_display_boundary_triage
+  expected_sparse_focus: [成果展示, 誘導聯絡, reply_funnel]
+  expected_absent: [保證收益, needs_thread]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009_D_01
+  task_id: EXP_0009_D
+  routing_lane: result_display_thread_required
+  signal_hint: 成果展示
+  expected_behavior: result_display_thread_required_diagnostic
+  expected_sparse_focus: [成果展示, needs_thread]
+  expected_absent: [保證收益, 情緒操控]
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true

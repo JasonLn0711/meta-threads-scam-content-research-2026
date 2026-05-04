@@ -1,0 +1,93 @@
+schema_version: exploration_tasks_v1
+purpose: propose a capped manual-assisted batch to test whether the Batch 0008
+  context-gating policy improves reviewer-hour allocation
+source_inputs:
+- docs/63-context-gating-policy.md
+- metrics/contrast_scores/latest.yaml
+- metrics/batch_logs/batch_0008_run_log.yaml
+- experiments/evaluation-notes/0104-v2-batch-0008-reviewer-hour-value-result.md
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 8
+  allocation_strategy: policy_weighted_not_balanced
+summary:
+  task_count: 4
+  target_stub_count: 12
+  bottleneck: test whether the active context-gating policy improves reviewer-hour
+    value when it controls batch allocation
+tasks:
+- task_id: EXP_0009_A
+  gap_type: policy_fast_lane_exploitation
+  hypothesis: Strong guarantee/certainty candidates with executable transition
+    structure should receive most reviewer capacity when reviewer-hour value is
+    the objective.
+  source_hint: context-gating policy fast lane
+  search_cues:
+  - guarantee or certainty anchor
+  - executable transition structure
+  - no full-thread dependency
+  priority: high
+  allocation_count: 8
+  reason:
+  - Batch 0008 fast lane had yield_rate 1.0
+  - Batch 0008 fast lane had no full-thread or second-review burden
+  - this arm tests prospective policy allocation rather than balanced comparison
+  signal_hint: 保證收益
+  expected_behavior: guarantee_executable_transition_fast_lane
+- task_id: EXP_0009_B
+  gap_type: hard_negative_calibration_holdout
+  hypothesis: A small clean result-display holdout should preserve the hard-negative
+    boundary without consuming priority review capacity.
+  source_hint: context-gating policy hard-negative calibration lane
+  search_cues:
+  - result display cue
+  - no transition structure
+  - no thread dependency
+  priority: medium
+  allocation_count: 2
+  reason:
+  - Batch 0008 clean holdout remained stable non_scam
+  - holdout prevents over-generalizing result display
+  signal_hint: 成果展示
+  expected_behavior: clean_result_display_holdout
+- task_id: EXP_0009_C
+  gap_type: cheap_boundary_triage_probe
+  hypothesis: Low-context result-display transition should remain a tiny boundary
+    probe unless it starts producing reviewer-hour value.
+  source_hint: context-gating policy boundary lane
+  search_cues:
+  - result display cue
+  - visible transition structure
+  - no full-thread dependency
+  priority: low
+  allocation_count: 1
+  reason:
+  - Batch 0008 low-context result display had zero positive yield
+  - keep a small probe alive without spending priority capacity
+  signal_hint: 成果展示
+  expected_behavior: result_display_boundary_triage
+- task_id: EXP_0009_D
+  gap_type: slow_context_diagnostic_probe
+  hypothesis: Thread-required result-display should remain a single diagnostic
+    check unless a future result shows meaningful reviewer-hour value.
+  source_hint: context-gating policy slow context lane
+  search_cues:
+  - result display cue
+  - thread context required
+  - no explicit guarantee cue
+  priority: low
+  allocation_count: 1
+  reason:
+  - Batch 0008 thread-required result display was costly and zero-yield
+  - this lane must not dominate reviewer capacity
+  signal_hint: 成果展示
+  expected_behavior: result_display_thread_required_diagnostic
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true

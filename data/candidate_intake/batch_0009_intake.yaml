@@ -1,0 +1,341 @@
+schema_version: candidate_intake_batch_v1
+batch_id: batch-0009-context-gating-policy-check
+purpose: manual-assisted metadata fill worksheet for Batch 0009 context-gating
+  policy check
+source_batch_plan: exploration/batches/batch_0009.yaml
+source_stub_batch: data/candidate_stubs/batch_0009.yaml
+source_experiment_plan: experiments/batch_variants/0009-context-gating-policy-check.md
+source_policy: docs/63-context-gating-policy.md
+source_routing_scores: metrics/contrast_scores/latest.yaml
+status: pending_manual_assisted_fill
+candidate_count: 12
+selected_task_ids:
+- EXP_0009_A
+- EXP_0009_B
+- EXP_0009_C
+- EXP_0009_D
+routing_lanes:
+  A: strong_source_priority
+  B: result_display_clean_holdout
+  C: result_display_low_context_transition
+  D: result_display_thread_required
+allocation:
+  strong_source_priority: 8
+  result_display_clean_holdout: 2
+  result_display_low_context_transition: 1
+  result_display_thread_required: 1
+before_metrics:
+  source: metrics/contrast_scores/latest.yaml
+  candidate_count: 64
+  policy_reference: docs/63-context-gating-policy.md
+  lanes:
+    strong_source_priority:
+      reviewed_count: 18
+      yield_rate: 1.0
+      review_time: 36.5
+      cognitive_load: 1.191667
+      svs: 0.018103794
+      needs_thread_rate: 0.0
+      second_review_rate: 0.0
+    result_display_clean_holdout:
+      reviewed_count: 10
+      yield_rate: 0.0
+      review_time: 36.2
+      cognitive_load: 1.0
+      svs: 0.0
+      needs_thread_rate: 0.0
+      second_review_rate: 0.0
+      uncertainty_rate: 0.0
+    result_display_low_context_transition:
+      reviewed_count: 7
+      yield_rate: 0.0
+      review_time: 42.0
+      cognitive_load: 1.164286
+      svs: 0.0
+      needs_thread_rate: 0.0
+      second_review_rate: 0.285714
+      uncertainty_rate: 1.0
+    result_display_thread_required:
+      reviewed_count: 16
+      yield_rate: 0.0
+      review_time: 49.1875
+      cognitive_load: 2.225
+      svs: 0.0
+      needs_thread_rate: 1.0
+      second_review_rate: 0.875
+      uncertainty_rate: 0.875
+intake_entries:
+- intake_id: INTAKE_0009_A_01
+  candidate_stub_id: STUB_0009_A_01
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_fast_lane
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_from_stub
+    保證收益: expected_from_stub
+    社群導流: expected_absent
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: &structured_pending
+    common_behaviors: []
+    structural_patterns: []
+    reviewer_signals: []
+    hard_negative_contrast: pending
+    metadata_only_note: Do not paste raw Threads text, URLs, handles, screenshots,
+      identifiers, or controlled-store locators.
+  review_metadata_to_fill: &review_pending
+    decision: pending
+    confidence: pending
+    review_time_seconds: pending
+    second_review_required: pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0001.yaml
+  completion_gate: &completion_pending
+    raw_threads_content_excluded: pending
+    pii_excluded: pending
+    only_structured_metadata: pending
+    human_review_completed: pending
+- intake_id: INTAKE_0009_A_02
+  candidate_stub_id: STUB_0009_A_02
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_fast_lane
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: pending
+    保證收益: expected_from_stub
+    社群導流: expected_from_stub
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0002.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_03
+  candidate_stub_id: STUB_0009_A_03
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_reply_funnel_fast_lane
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_from_stub
+    保證收益: expected_from_stub
+    社群導流: expected_absent
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0003.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_04
+  candidate_stub_id: STUB_0009_A_04
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_stable_anchor_fast_lane
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: pending
+    保證收益: expected_from_stub
+    社群導流: pending
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: pending
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0004.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_05
+  candidate_stub_id: STUB_0009_A_05
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_no_thread
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_from_stub
+    保證收益: expected_from_stub
+    社群導流: expected_absent
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: pending
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0005.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_06
+  candidate_stub_id: STUB_0009_A_06
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_no_thread
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: pending
+    保證收益: expected_from_stub
+    社群導流: expected_from_stub
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: pending
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0006.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_07
+  candidate_stub_id: STUB_0009_A_07
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_transition_anchor
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_from_stub
+    保證收益: expected_from_stub
+    社群導流: pending
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0007.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_A_08
+  candidate_stub_id: STUB_0009_A_08
+  task_id: EXP_0009_A
+  routing_lane: strong_source_priority
+  signal_hint: 保證收益
+  expected_behavior: guarantee_reply_anchor
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: pending
+    保證收益: expected_from_stub
+    社群導流: pending
+    情緒操控: pending
+    成果展示: pending
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: expected_from_stub
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0008.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_B_01
+  candidate_stub_id: STUB_0009_B_01
+  task_id: EXP_0009_B
+  routing_lane: result_display_clean_holdout
+  signal_hint: 成果展示
+  expected_behavior: clean_result_display_holdout
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_absent
+    保證收益: expected_absent
+    社群導流: expected_absent
+    情緒操控: expected_absent
+    成果展示: expected_from_stub
+    reply_funnel: expected_absent
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: pending
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0009.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_B_02
+  candidate_stub_id: STUB_0009_B_02
+  task_id: EXP_0009_B
+  routing_lane: result_display_clean_holdout
+  signal_hint: 成果展示
+  expected_behavior: clean_result_display_holdout
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_absent
+    保證收益: expected_absent
+    社群導流: expected_absent
+    情緒操控: expected_absent
+    成果展示: expected_from_stub
+    reply_funnel: expected_absent
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: pending
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0010.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_C_01
+  candidate_stub_id: STUB_0009_C_01
+  task_id: EXP_0009_C
+  routing_lane: result_display_low_context_transition
+  signal_hint: 成果展示
+  expected_behavior: result_display_boundary_triage
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: expected_from_stub
+    保證收益: expected_absent
+    社群導流: pending
+    情緒操控: expected_absent
+    成果展示: expected_from_stub
+    reply_funnel: expected_from_stub
+    needs_thread: expected_absent
+    review_stable_funnel_anchor: pending
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0011.yaml
+  completion_gate: *completion_pending
+- intake_id: INTAKE_0009_D_01
+  candidate_stub_id: STUB_0009_D_01
+  task_id: EXP_0009_D
+  routing_lane: result_display_thread_required
+  signal_hint: 成果展示
+  expected_behavior: result_display_thread_required_diagnostic
+  fill_status: pending_manual_review
+  sparse_feature_observations:
+    誘導聯絡: pending
+    保證收益: expected_absent
+    社群導流: pending
+    情緒操控: expected_absent
+    成果展示: expected_from_stub
+    reply_funnel: pending
+    needs_thread: expected_from_stub
+    review_stable_funnel_anchor: pending
+  structured_hints_to_fill: *structured_pending
+  review_metadata_to_fill: *review_pending
+  candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0012.yaml
+  completion_gate: *completion_pending
+completion_rules:
+- Fill only structured metadata observations.
+- Do not paste raw Threads content into this repo.
+- Do not include PII, raw URLs, handles, screenshots, browser artifacts, credentials, or controlled-store locators.
+- Do not infer final labels before human review.
+- Convert to candidate_record_v2 only after completion gates are satisfied.
+after_fill_commands:
+- ./.venv/bin/python scripts/validate_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml --expected-count 12
+- ./.venv/bin/python scripts/convert_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml --report-output data/candidate_intake/batch_0009_conversion_report.yaml --write-candidates
+- ./.venv/bin/python scripts/validate_candidate_v2.py data/candidates
+- ./.venv/bin/python scripts/run_v2_ros.py
+- ./.venv/bin/python scripts/run_contrast_aware_scoring.py
+- ./.venv/bin/python scripts/generate_feature_candidates_v1.py
+- ./.venv/bin/python scripts/generate_exploration_tasks.py
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  candidate_records_fabricated: false
+  this_file_authorizes_collection: false
