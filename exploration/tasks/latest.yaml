@@ -96,7 +96,7 @@ tasks:
   - safe manual-assisted completeness check
   priority: low
   reason:
-  - missing_embedding_count=45
+  - missing_embedding_count=61
   - embedding absence is not a decision signal
   signal_hint: missing_embedding_metadata_gap
   expected_behavior: metadata_completeness_gap
@@ -105,7 +105,7 @@ tasks:
     reviewer_effort: prevent wasting review time on incomplete metadata paths
   rank:
     gap_score: 1.0
-    coverage_score: 45
+    coverage_score: 61
     impact_score: 1.0
 guardrails:
   external_systems_accessed: false

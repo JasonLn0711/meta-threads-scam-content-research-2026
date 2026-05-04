@@ -232,6 +232,79 @@ Compare:
 - `outputs/discrepancy_reports/latest.yaml`
 - `metrics/batch_logs/batch_0008_run_log.yaml`
 
+## Actual Result
+
+Run date: 2026-05-04
+
+The 16 human-reviewed structured metadata entries were converted into
+`candidate_record_v2` records with all completion gates passing.
+
+Batch-level result:
+
+```text
+reviewed_count: 16
+scam_count: 4
+non_scam_count: 4
+uncertain_count: 8
+yield_rate: 0.25
+average_review_time_seconds: 41.875
+needs_thread_rate: 0.25
+second_review_rate: 0.375
+uncertainty_rate: 0.5
+candidates_per_reviewer_hour: 85.970149
+high_value_candidates_per_hour: 21.492537
+batch_svs: 0.001386349
+```
+
+Arm result:
+
+```text
+A strong_source_priority:
+  reviewed_count: 4
+  yield_rate: 1.0
+  average_review_time_seconds: 33.25
+  high_value_candidates_per_hour: 108.270677
+  needs_thread_rate: 0.0
+  second_review_rate: 0.0
+  uncertainty_rate: 0.0
+
+B result_display_low_context_transition:
+  reviewed_count: 4
+  yield_rate: 0.0
+  average_review_time_seconds: 42.5
+  second_review_rate: 0.5
+  uncertainty_rate: 1.0
+
+C result_display_thread_required:
+  reviewed_count: 4
+  yield_rate: 0.0
+  average_review_time_seconds: 57.25
+  needs_thread_rate: 1.0
+  second_review_rate: 1.0
+  uncertainty_rate: 1.0
+
+D result_display_clean_holdout:
+  reviewed_count: 4
+  non_scam_count: 4
+  average_review_time_seconds: 34.5
+  needs_thread_rate: 0.0
+  second_review_rate: 0.0
+  uncertainty_rate: 0.0
+```
+
+The result supports the reviewer-hour routing decision:
+
+- prioritize `strong_source_priority` when reviewer capacity is constrained;
+- keep low-context result-display cases as cheap boundary triage, not a priority
+  positive-yield lane;
+- restrict thread-required result-display cases to slow context review or tiny
+  diagnostic samples;
+- preserve clean result-display holdouts as hard-negative calibration.
+
+No sparse feature was promoted from this batch. The latest discrepancy report has
+no valid `missed_pattern` group with size >= 3, and feature discovery produced no
+auto-generated feature candidates.
+
 ## Guardrails
 
 - no raw Threads content

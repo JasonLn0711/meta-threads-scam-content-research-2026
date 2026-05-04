@@ -1,0 +1,44 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
+batch_id: batch-0008-context-gate-reviewer-hour-value
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: uncertain
+  confidence: 0.52
+  review_time_seconds: 42.0
+  second_review_required: true
+source_stub:
+  candidate_stub_id: STUB_0008_B_04
+  task_id: EXP_0008_B
+  signal_hint: 成果展示
+  expected_behavior: result_display_stable_anchor_low_context
+structured_hints:
+  common_behaviors:
+  - 成果展示
+  - 穩定判讀錨點
+  structural_patterns:
+  - 成果展示加低上下文錨點
+  reviewer_signals:
+  - 無收益承諾
+  - 邊界仍不確定
+  hard_negative_contrast: 純成果 holdout 或明確收益承諾
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

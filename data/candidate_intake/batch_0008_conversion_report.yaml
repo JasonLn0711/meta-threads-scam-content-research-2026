@@ -1,365 +1,108 @@
 schema_version: candidate_intake_conversion_report_v1
 batch_id: batch-0008-context-gate-reviewer-hour-value
 source_intake_schema_version: candidate_intake_batch_v1
-conversion_mode: report_only
-status: blocked
+conversion_mode: write_candidates
+status: ready
 summary:
   intake_count: 16
-  converted_count: 0
-  blocked_count: 16
-  written_count: 0
-  candidate_records_written: false
-converted_records: []
-blocked_entries:
+  converted_count: 16
+  blocked_count: 0
+  written_count: 16
+  candidate_records_written: true
+converted_records:
 - intake_id: INTAKE_0008_A_01
   candidate_stub_id: STUB_0008_A_01
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0001.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_A_02
   candidate_stub_id: STUB_0008_A_02
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0002.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_A_03
   candidate_stub_id: STUB_0008_A_03
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0003.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_A_04
   candidate_stub_id: STUB_0008_A_04
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0004.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_B_01
   candidate_stub_id: STUB_0008_B_01
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0005
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0005.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_B_02
   candidate_stub_id: STUB_0008_B_02
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0006
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0006.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_B_03
   candidate_stub_id: STUB_0008_B_03
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0007
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0007.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_B_04
   candidate_stub_id: STUB_0008_B_04
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0008.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_C_01
   candidate_stub_id: STUB_0008_C_01
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0009
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0009.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_C_02
   candidate_stub_id: STUB_0008_C_02
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0010
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0010.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_C_03
   candidate_stub_id: STUB_0008_C_03
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0011
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0011.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_C_04
   candidate_stub_id: STUB_0008_C_04
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0012
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0012.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_D_01
   candidate_stub_id: STUB_0008_D_01
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0013
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0013.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_D_02
   candidate_stub_id: STUB_0008_D_02
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0014
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0014.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_D_03
   candidate_stub_id: STUB_0008_D_03
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0015
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0015.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
 - intake_id: INTAKE_0008_D_04
   candidate_stub_id: STUB_0008_D_04
+  candidate_id: batch-0008-context-gate-reviewer-hour-value_0016
   candidate_record_output_target: data/candidates/batch_0008/batch-0008-context-gate-reviewer-hour-value_0016.yaml
-  blockers:
-  - fill_status must be completed
-  - sparse feature '誘導聯絡' must be completed as 0 or 1
-  - sparse feature '保證收益' must be completed as 0 or 1
-  - sparse feature '社群導流' must be completed as 0 or 1
-  - sparse feature '情緒操控' must be completed as 0 or 1
-  - sparse feature '成果展示' must be completed as 0 or 1
-  - sparse feature 'reply_funnel' must be completed as 0 or 1
-  - sparse feature 'needs_thread' must be completed as 0 or 1
-  - sparse feature 'review_stable_funnel_anchor' must be completed as 0 or 1
-  - review.decision must be scam, non_scam, or uncertain
-  - review.confidence must be a number between 0 and 1
-  - review.review_time_seconds must be a non-negative number
-  - review.second_review_required must be boolean
-  - completion_gate.raw_threads_content_excluded must be true
-  - completion_gate.pii_excluded must be true
-  - completion_gate.only_structured_metadata must be true
-  - completion_gate.human_review_completed must be true
+  written: true
+blocked_entries: []
 required_completion_gates:
 - raw_threads_content_excluded
 - pii_excluded
 - only_structured_metadata
 - human_review_completed
 next_actions:
-- Complete human review metadata in the intake worksheet.
-- Set all completion gates to true only after raw content and PII are excluded.
-- Re-run this conversion report before writing candidate records.
+- Run candidate validation on data/candidates.
+- Run the v2 ROS pipeline and compare SVS, sparse clusters, and discrepancy reports.
 guardrails:
   external_systems_accessed: false
   raw_threads_content_included: false
   pii_included: false
   candidate_records_fabricated: false
   requires_human_review_before_conversion: true
-  candidate_records_written: false
+  candidate_records_written: true
