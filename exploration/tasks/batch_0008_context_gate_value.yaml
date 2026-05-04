@@ -1,0 +1,86 @@
+schema_version: exploration_tasks_v1
+purpose: propose a capped manual-assisted batch to test reviewer-hour value after
+  Batch 0007 context gating
+source_inputs:
+- metrics/contrast_scores/latest.yaml
+- metrics/batch_logs/batch_0007_run_log.yaml
+- experiments/evaluation-notes/0103-v2-batch-0007-context-gating-result.md
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 4
+summary:
+  task_count: 4
+  target_stub_count: 16
+  bottleneck: determine which reviewer-routing lanes maximize value per reviewer
+    hour after result-display context gates were added
+tasks:
+- task_id: EXP_0008_A
+  gap_type: reviewer_hour_control
+  hypothesis: Strong guarantee/certainty candidates with executable transition
+    structure remain the highest-value lane per reviewer hour.
+  source_hint: strong source priority control
+  search_cues:
+  - guarantee or certainty anchor
+  - executable transition structure
+  - no full-thread dependency
+  priority: high
+  reason:
+  - strong_source_priority remains the highest SVS lane after Batch 0007
+  - this arm provides the positive reviewer-hour control
+  signal_hint: 保證收益
+  expected_behavior: guarantee_executable_transition_fast_lane
+- task_id: EXP_0008_B
+  gap_type: low_context_result_display_check
+  hypothesis: Result-display low-context transitions can be reviewed cheaply, but
+    should not consume priority capacity unless they show better yield than Batch
+    0007.
+  source_hint: result-display visible transition surface
+  search_cues:
+  - result display cue
+  - visible transition structure
+  - no full-thread dependency
+  priority: medium
+  reason:
+  - Batch 0007 showed this lane avoids thread and second review burden
+  - this arm tests whether cheap review still produces useful discovery value
+  signal_hint: 成果展示
+  expected_behavior: result_display_low_context_transition
+- task_id: EXP_0008_C
+  gap_type: thread_required_cost_check
+  hypothesis: Result-display thread-required cases remain too costly for priority
+    routing unless they produce higher yield than Batch 0007.
+  source_hint: result-display thread-context surface
+  search_cues:
+  - result display cue
+  - thread context required
+  - no explicit guarantee cue
+  priority: medium
+  reason:
+  - Batch 0007 showed thread-required cases are high burden
+  - this arm tests whether the cost is justified in a capped follow-up
+  signal_hint: 成果展示
+  expected_behavior: result_display_thread_required
+- task_id: EXP_0008_D
+  gap_type: hard_negative_holdout_check
+  hypothesis: Clean result-display holdouts should remain low-cost hard-negative
+    calibration and protect against over-generalizing result display.
+  source_hint: clean result-display holdout
+  search_cues:
+  - result display cue
+  - no transition structure
+  - no thread dependency
+  priority: medium
+  reason:
+  - Batch 0007 clean holdout stayed low burden and non-scam
+  - this arm protects the sparse system from treating result display as positive
+  signal_hint: 成果展示
+  expected_behavior: result_display_clean_holdout
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true

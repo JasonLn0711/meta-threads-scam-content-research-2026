@@ -1,0 +1,24 @@
+schema_version: exploration_batch_v1
+batch_id: batch-0008-context-gate-reviewer-hour-value
+source_tasks: exploration/tasks/batch_0008_context_gate_value.yaml
+source_experiment_plan: experiments/batch_variants/0008-context-gate-reviewer-hour-value.md
+purpose: capped validation batch for reviewer-hour value after Batch 0007 context
+  gates
+candidate_stub_count: 16
+selected_task_ids:
+- EXP_0008_A
+- EXP_0008_B
+- EXP_0008_C
+- EXP_0008_D
+routing_lanes:
+  A: strong_source_priority
+  B: result_display_low_context_transition
+  C: result_display_thread_required
+  D: result_display_clean_holdout
+status: planned_pending_manual_assisted_fill
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
+  this_file_authorizes_collection: false

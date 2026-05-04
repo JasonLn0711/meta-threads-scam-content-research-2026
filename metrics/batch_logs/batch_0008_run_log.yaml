@@ -1,0 +1,96 @@
+schema_version: batch_run_log_v1
+batch_id: batch-0008-context-gate-reviewer-hour-value
+experiment_id: 0008-context-gate-reviewer-hour-value
+status: planned_pending_manual_review
+record_type: actual_run_log
+no_fake_results: true
+principle: maximize high-value candidate discovery per unit reviewer effort
+goal_not: scam detection or legal fraud determination
+created_at: '2026-05-04'
+updated_at: '2026-05-04'
+inputs:
+  experiment_plan: experiments/batch_variants/0008-context-gate-reviewer-hour-value.md
+  exploration_tasks: exploration/tasks/batch_0008_context_gate_value.yaml
+  exploration_batch: exploration/batches/batch_0008.yaml
+  candidate_stubs: data/candidate_stubs/batch_0008.yaml
+  intake_worksheet: data/candidate_intake/batch_0008_intake.yaml
+  reviewer_packet: data/candidate_intake/batch_0008_reviewer_packet.md
+  conversion_report: data/candidate_intake/batch_0008_conversion_report.yaml
+  candidate_records: data/candidates/batch_0008/*.yaml
+  routing_scores_before_run: metrics/contrast_scores/latest.yaml
+planned:
+  candidate_count: 16
+  arms:
+  - 'A: strong_source_priority'
+  - 'B: result_display_low_context_transition'
+  - 'C: result_display_thread_required'
+  - 'D: result_display_clean_holdout'
+  hypothesis: Context gates should improve reviewer-hour allocation by separating
+    high-value control candidates from low-yield result-display review paths.
+  expected_measurements:
+  - candidates per reviewer hour by arm
+  - high-value candidates per reviewer hour by arm
+  - full-thread-reading rate by arm
+  - second-review rate by arm
+  - uncertainty rate by arm
+  - hard-negative stability by arm
+  - lane SVS after conversion
+  - signal SVS after conversion
+observed:
+  candidate_count_after_run: null
+  reviewed_count: null
+  scam_count: null
+  non_scam_count: null
+  uncertain_count: null
+  yield_rate: null
+  information_density: null
+  review_time: null
+  cognitive_load: null
+  svs: null
+conversion:
+  intake_count: 16
+  converted_count: 0
+  blocked_count: 16
+  written_count: 0
+  status: blocked_pending_manual_review
+reviewer_burden:
+  average_review_time_seconds: null
+  candidates_per_reviewer_hour: null
+  high_value_candidates_per_hour: null
+  burden_adjusted_value: null
+  needs_thread_rate: null
+  second_review_rate: null
+  uncertainty_rate: null
+signal_results: []
+lane_results:
+  status: pending_manual_review
+  results: []
+cluster_results:
+  sparse_summary: pending_manual_review
+  embedding_summary: pending_manual_review
+  discrepancy_summary: pending_manual_review
+failure_modes:
+- Batch 0008 has not been human reviewed.
+- No candidate records should be written until all completion gates pass.
+- Result-display lanes must not be treated as positive-yield signals without
+  reviewed evidence.
+- Strong-source control must not be interpreted as legal fraud determination.
+decision_implication: Batch 0008 decides reviewer-hour allocation, not sparse
+  schema promotion or production classification.
+next_action: Fill Batch 0008 intake entries with structured metadata only, then
+  run the conversion gate and compare reviewer-hour value by lane.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  candidate_records_fabricated: false
+  embedding_used_for_decision: false
+  sparse_schema_auto_promoted: false
+  human_review_required: true
+pending_review:
+  completed_intake_count: 0
+  blocked_intake_count: 16
+  candidate_records_written: false
+  reason_not_final: Batch 0008 is designed for 16 entries and currently contains
+    only pending manual-review placeholders.
