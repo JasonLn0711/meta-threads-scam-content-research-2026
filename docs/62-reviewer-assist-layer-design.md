@@ -318,6 +318,18 @@ Which source arms produced the best yield per reviewer hour?
 
 Track B outputs should therefore include labor observations, correction counts, summary-usefulness notes, full-thread-read flags, hard-negative hesitation notes, and source-arm yield-per-reviewer-hour metrics. Without these observations, the Reviewer Assist Layer would become guesswork rather than a validated research workflow.
 
+Batch 0008 produced the first explicit context-gating policy for reviewer-hour
+allocation:
+
+- fast lane: `strong_source_priority`;
+- boundary lane: `result_display_low_context_transition`;
+- slow context lane: `result_display_thread_required`;
+- calibration lane: `result_display_clean_holdout`.
+
+The policy is recorded in [docs/63-context-gating-policy.md](63-context-gating-policy.md).
+Reviewer Assist should treat this as a routing rule before asking reviewers to
+spend full-thread or second-review effort.
+
 ## 15. Recommended Next Artifacts
 
 Create these artifacts only after Track B supplies enough evidence to ground them:
@@ -334,4 +346,3 @@ Create these artifacts only after Track B supplies enough evidence to ground the
 - governance review checklist for any assisted-review prototype.
 
 Do not implement a UI, API, model training flow, or production-like service until a later decision explicitly authorizes the scope.
-
