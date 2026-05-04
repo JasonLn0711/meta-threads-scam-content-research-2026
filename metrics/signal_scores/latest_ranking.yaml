@@ -2,7 +2,7 @@ schema_version: signal_scores_v1
 decision_layer: sparse_primary
 formula: SVS = (yield_rate * information_density) / (review_time * cognitive_load)
 positive_yield_definition: human research label scam, not legal fraud
-candidate_count: 36
+candidate_count: 48
 candidate_ids:
 - batch-0004-low-coverage-high-svs_0001
 - batch-0004-low-coverage-high-svs_0002
@@ -36,6 +36,18 @@ candidate_ids:
 - batch-0006-contrast-aware-routing-validation_0010
 - batch-0006-contrast-aware-routing-validation_0011
 - batch-0006-contrast-aware-routing-validation_0012
+- batch-0007-result-display-context-split_0001
+- batch-0007-result-display-context-split_0002
+- batch-0007-result-display-context-split_0003
+- batch-0007-result-display-context-split_0004
+- batch-0007-result-display-context-split_0005
+- batch-0007-result-display-context-split_0006
+- batch-0007-result-display-context-split_0007
+- batch-0007-result-display-context-split_0008
+- batch-0007-result-display-context-split_0009
+- batch-0007-result-display-context-split_0010
+- batch-0007-result-display-context-split_0011
+- batch-0007-result-display-context-split_0012
 - synthetic-candidate-0001
 - synthetic-candidate-0002
 - synthetic-candidate-0003
@@ -50,61 +62,61 @@ ranked_signals:
   cognitive_load: 1.432353
   svs: 0.011325292
 - signal_id: review_stable_funnel_anchor
-  reviewed_count: 18
+  reviewed_count: 21
   scam_count: 15
-  yield_rate: 0.833333
-  information_density: 0.827697
-  review_time: 43.722222
-  cognitive_load: 1.516667
-  svs: 0.010401546
+  yield_rate: 0.714286
+  information_density: 0.810904
+  review_time: 43.380952
+  cognitive_load: 1.45
+  svs: 0.009208192
 - signal_id: 情緒操控
-  reviewed_count: 21
+  reviewed_count: 24
   scam_count: 14
-  yield_rate: 0.666667
-  information_density: 0.68461
-  review_time: 40.714286
-  cognitive_load: 1.680952
-  svs: 0.006668832
+  yield_rate: 0.583333
+  information_density: 0.63587
+  review_time: 42.0
+  cognitive_load: 1.758333
+  svs: 0.005022666
 - signal_id: reply_funnel
-  reviewed_count: 23
+  reviewed_count: 29
   scam_count: 15
-  yield_rate: 0.652174
-  information_density: 0.715501
-  review_time: 48.434783
-  cognitive_load: 1.756522
-  svs: 0.005484825
+  yield_rate: 0.517241
+  information_density: 0.677911
+  review_time: 47.758621
+  cognitive_load: 1.744828
+  svs: 0.004207864
 - signal_id: 誘導聯絡
-  reviewed_count: 21
+  reviewed_count: 27
   scam_count: 12
-  yield_rate: 0.571429
-  information_density: 0.683575
-  review_time: 50.190476
-  cognitive_load: 1.866667
-  svs: 0.004169269
+  yield_rate: 0.444444
+  information_density: 0.650295
+  review_time: 49.074074
+  cognitive_load: 1.82963
+  svs: 0.003218939
 - signal_id: 社群導流
-  reviewed_count: 17
+  reviewed_count: 21
   scam_count: 9
-  yield_rate: 0.529412
-  information_density: 0.697783
-  review_time: 53.117647
-  cognitive_load: 1.879412
-  svs: 0.003700441
+  yield_rate: 0.428571
+  information_density: 0.644928
+  review_time: 52.0
+  cognitive_load: 1.904762
+  svs: 0.002790552
 - signal_id: 成果展示
-  reviewed_count: 22
+  reviewed_count: 34
   scam_count: 6
-  yield_rate: 0.272727
-  information_density: 0.483531
-  review_time: 44.454545
-  cognitive_load: 1.856818
-  svs: 0.001597597
+  yield_rate: 0.176471
+  information_density: 0.435635
+  review_time: 44.5
+  cognitive_load: 1.788235
+  svs: 0.000966074
 - signal_id: needs_thread
-  reviewed_count: 19
+  reviewed_count: 25
   scam_count: 2
-  yield_rate: 0.105263
-  information_density: 0.384058
-  review_time: 59.578947
-  cognitive_load: 2.247368
-  svs: 0.00030193
+  yield_rate: 0.08
+  information_density: 0.364058
+  review_time: 57.28
+  cognitive_load: 2.26
+  svs: 0.000224983
 batch_scores:
 - batch_id: batch-0003-dual-track-dry-run
   reviewed_count: 4
@@ -138,6 +150,14 @@ batch_scores:
   review_time: 41.75
   cognitive_load: 1.7125
   svs: 0.002477502
+- batch_id: batch-0007-result-display-context-split
+  reviewed_count: 12
+  scam_count: 0
+  yield_rate: 0.0
+  information_density: 0.347826
+  review_time: 44.583333
+  cognitive_load: 1.6625
+  svs: 0.0
 guardrails:
   raw_threads_content_included: false
   embedding_used_for_decision: false

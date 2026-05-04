@@ -10,5 +10,5 @@ items:
   review_note: Human reviewer must accept or reject before sparse schema promotion.
 - feature_id: context_required_result_display
   decision: pending
-  review_note: Proposed from Batch 0006 routing burden; keep pending until Batch
-    0007 review confirms the split.
+  review_note: Batch 0007 supports this as a reviewer-burden/context-gating hypothesis,
+    but it remains out of sparse schema until human acceptance.

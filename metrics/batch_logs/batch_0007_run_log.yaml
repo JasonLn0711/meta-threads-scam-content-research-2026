@@ -1,7 +1,7 @@
 schema_version: batch_run_log_v1
 batch_id: batch-0007-result-display-context-split
 experiment_id: 0007-result-display-context-split
-status: planned_pending_manual_review
+status: completed
 record_type: actual_run_log
 no_fake_results: true
 principle: maximize high-value candidate discovery per unit reviewer effort
@@ -16,7 +16,7 @@ inputs:
   reviewer_packet: data/candidate_intake/batch_0007_reviewer_packet.md
   conversion_report: data/candidate_intake/batch_0007_conversion_report.yaml
   candidate_records: data/candidates/batch_0007/*.yaml
-  routing_scores_before_run: metrics/contrast_scores/latest.yaml
+  routing_scores_after_run: metrics/contrast_scores/latest.yaml
 planned:
   candidate_count: 12
   arms:
@@ -35,44 +35,119 @@ planned:
   - result-display signal SVS after conversion
   - sparse over-generalization after conversion
 observed:
-  candidate_count_after_run: null
-  reviewed_count: null
-  scam_count: null
-  non_scam_count: null
-  uncertain_count: null
-  yield_rate: null
-  information_density: null
-  review_time: null
-  cognitive_load: null
-  svs: null
+  candidate_count_after_run: 48
+  reviewed_count: 12
+  scam_count: 0
+  non_scam_count: 3
+  uncertain_count: 9
+  yield_rate: 0.0
+  information_density: 0.347826
+  review_time: 44.583333
+  cognitive_load: 1.6625
+  svs: 0.0
 conversion:
   intake_count: 12
-  converted_count: 0
-  blocked_count: 12
-  written_count: 0
-  status: blocked_pending_manual_review
+  converted_count: 12
+  blocked_count: 0
+  written_count: 12
+  status: ready
 reviewer_burden:
-  average_review_time_seconds: null
-  needs_thread_rate: null
-  second_review_rate: null
-  uncertainty_rate: null
-signal_results: []
+  average_review_time_seconds: 44.583333
+  needs_thread_rate: 0.5
+  second_review_rate: 0.5
+  uncertainty_rate: 0.75
+signal_results:
+- signal_id: 成果展示
+  reviewed_count_after_run: 34
+  scam_count_after_run: 6
+  yield_rate_after_run: 0.176471
+  review_time_after_run: 44.5
+  cognitive_load_after_run: 1.788235
+  svs_after_run: 0.000966074
+- signal_id: needs_thread
+  reviewed_count_after_run: 25
+  scam_count_after_run: 2
+  yield_rate_after_run: 0.08
+  review_time_after_run: 57.28
+  cognitive_load_after_run: 2.26
+  svs_after_run: 0.000224983
 lane_results:
-  status: pending_manual_review
-  results: []
+  status: completed
+  results:
+  - lane: result_display_low_context_transition
+    reviewed_count: 3
+    scam_count: 0
+    non_scam_count: 0
+    uncertain_count: 3
+    review_time: 41.333333
+    cognitive_load: 1.05
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    uncertainty_rate: 1.0
+    average_confidence: 0.6
+    svs: 0.0
+    interpretation: Low-context transition reduces full-thread and second-review
+      burden, but does not create positive yield without guarantee evidence.
+  - lane: result_display_thread_required
+    reviewed_count: 3
+    scam_count: 0
+    non_scam_count: 0
+    uncertain_count: 3
+    review_time: 49.0
+    cognitive_load: 2.3
+    needs_thread_rate: 1.0
+    second_review_rate: 1.0
+    uncertainty_rate: 1.0
+    average_confidence: 0.543333
+    svs: 0.0
+    interpretation: Thread requirement is a reviewer-burden gate, not a fast
+      positive-yield signal.
+  - lane: result_display_emotional_thread_required
+    reviewed_count: 3
+    scam_count: 0
+    non_scam_count: 0
+    uncertain_count: 3
+    review_time: 51.0
+    cognitive_load: 2.3
+    needs_thread_rate: 1.0
+    second_review_rate: 1.0
+    uncertainty_rate: 1.0
+    average_confidence: 0.546667
+    svs: 0.0
+    interpretation: Emotional pressure plus thread dependency should route to
+      thread context and second-review queue when capacity allows.
+  - lane: result_display_contrast_holdout
+    reviewed_count: 3
+    scam_count: 0
+    non_scam_count: 3
+    uncertain_count: 0
+    review_time: 37.0
+    cognitive_load: 1.0
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    uncertainty_rate: 0.0
+    average_confidence: 0.896667
+    svs: 0.0
+    interpretation: Clean result-display holdout remains a useful hard-negative
+      calibration pool.
 cluster_results:
-  sparse_summary: pending_manual_review
-  embedding_summary: pending_manual_review
-  discrepancy_summary: pending_manual_review
+  sparse_summary: Batch 0007 did not create a positive-yield sparse cluster; it
+    sharpened reviewer-routing lanes inside result-display metadata.
+  embedding_summary: discovery-only embedding remains unavailable for most Batch
+    0007 records because vectors are intentionally not required for decision.
+  discrepancy_summary: latest discrepancy report contains 2 over_generalization
+    cases and 0 missed_pattern cases; no sparse schema update was made.
 failure_modes:
-- Batch 0007 has not been human reviewed.
-- No candidate records should be written until all completion gates pass.
-- The feature hypothesis must remain pending until human review accepts it.
-decision_implication: This batch tests whether the current slow lane can become
-  more precise. It should not scale collection or modify sparse schema before
-  human-reviewed metadata exists.
-next_action: Fill Batch 0007 intake entries with structured metadata only, then
-  run the conversion gate and compare sub-lane review burden.
+- Batch 0007 did not increase scam-labeled yield.
+- Result-display transition cases remain uncertain even when low context.
+- Thread-required and emotional-thread lanes are high cost and should not be sent
+  to fast priority review.
+decision_implication: Adopt context gating in the sparse reviewer-routing layer,
+  but do not promote any new sparse feature until a human feature-review queue
+  decision accepts it.
+next_action: Use context gates to route result-display cases by reviewer burden;
+  keep high-value discovery focused on strong_source_priority while preserving
+  result-display holdouts for calibration.
 guardrails:
   external_systems_accessed: false
   raw_threads_content_included: false
@@ -83,8 +158,8 @@ guardrails:
   sparse_schema_auto_promoted: false
   human_review_required: true
 pending_review:
-  completed_intake_count: 0
-  blocked_intake_count: 12
-  candidate_records_written: false
-  reason_not_final: Batch 0007 is designed for 12 entries and currently contains
-    only pending manual-review placeholders.
+  completed_intake_count: 12
+  blocked_intake_count: 0
+  candidate_records_written: true
+  reason_not_final: Feature promotion remains pending; routing policy changed only
+    the reviewer-effort decision layer.

@@ -4,7 +4,7 @@ decision_layer_used: false
 labels_or_decisions_included: false
 similarity: cosine_similarity_over_precomputed_vectors
 threshold: 0.85
-candidate_count: 36
+candidate_count: 48
 embedded_candidate_count: 3
 skipped_missing_embedding:
 - batch-0004-low-coverage-high-svs_0001
@@ -39,6 +39,18 @@ skipped_missing_embedding:
 - batch-0006-contrast-aware-routing-validation_0010
 - batch-0006-contrast-aware-routing-validation_0011
 - batch-0006-contrast-aware-routing-validation_0012
+- batch-0007-result-display-context-split_0001
+- batch-0007-result-display-context-split_0002
+- batch-0007-result-display-context-split_0003
+- batch-0007-result-display-context-split_0004
+- batch-0007-result-display-context-split_0005
+- batch-0007-result-display-context-split_0006
+- batch-0007-result-display-context-split_0007
+- batch-0007-result-display-context-split_0008
+- batch-0007-result-display-context-split_0009
+- batch-0007-result-display-context-split_0010
+- batch-0007-result-display-context-split_0011
+- batch-0007-result-display-context-split_0012
 - synthetic-candidate-0004
 clusters:
 - cluster_id: embedding-cluster-0001

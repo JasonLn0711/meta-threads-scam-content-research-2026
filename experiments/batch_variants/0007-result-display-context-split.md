@@ -245,3 +245,33 @@ Compare:
 - no embedding-based decisions
 - no automatic feature promotion
 - no legal fraud, enforcement, takedown, or public warning claim
+
+## Post-Review Result
+
+Batch 0007 was completed on 2026-05-04.
+
+Result artifact:
+
+- `experiments/evaluation-notes/0103-v2-batch-0007-context-gating-result.md`
+- `metrics/batch_logs/batch_0007_run_log.yaml`
+- `outputs/research_candidates/RC_0006.md`
+
+Core result:
+
+```text
+reviewed_count: 12
+scam_count: 0
+non_scam_count: 3
+uncertain_count: 9
+review_time: 44.583333
+svs: 0.0
+```
+
+Decision:
+
+```text
+Adopt result-display context gates in reviewer routing.
+Do not promote a new sparse feature yet.
+```
+
+The useful learning is reviewer-burden separation, not positive-yield gain.

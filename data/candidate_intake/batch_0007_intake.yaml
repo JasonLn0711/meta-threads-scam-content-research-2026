@@ -6,7 +6,7 @@ source_batch_plan: exploration/batches/batch_0007.yaml
 source_stub_batch: data/candidate_stubs/batch_0007.yaml
 source_experiment_plan: experiments/batch_variants/0007-result-display-context-split.md
 source_routing_scores: metrics/contrast_scores/latest.yaml
-status: pending_manual_assisted_fill
+status: completed_manual_assisted_fill
 candidate_count: 12
 selected_task_ids:
 - EXP_0007_A
@@ -51,254 +51,396 @@ intake_entries:
   routing_lane: result_display_low_context_transition
   signal_hint: 成果展示
   expected_behavior: result_display_contact_low_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: pending
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: &structured_pending
-    common_behaviors: []
-    structural_patterns: []
-    reviewer_signals: []
-    hard_negative_contrast: pending
-    metadata_only_note: Do not paste raw Threads text, URLs, handles, screenshots,
-      identifiers, or controlled-store locators.
-  review_metadata_to_fill: &review_pending
-    decision: pending
-    confidence: pending
-    review_time_seconds: pending
-    second_review_required: pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors: [成果展示, 私訊引導]
+    structural_patterns: [展示→CTA]
+    reviewer_signals: [單貼文可判讀]
+    hard_negative_contrast: 無轉換純分享
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.62
+    review_time_seconds: 41
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0001.yaml
-  completion_gate: &completion_pending
-    raw_threads_content_excluded: pending
-    pii_excluded: pending
-    only_structured_metadata: pending
-    human_review_completed: pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_A_02
   candidate_stub_id: STUB_0007_A_02
   task_id: EXP_0007_A
   routing_lane: result_display_low_context_transition
   signal_hint: 成果展示
   expected_behavior: result_display_reply_low_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: pending
-    成果展示: expected_from_stub
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors: [回覆導流]
+    structural_patterns: [留言→轉換]
+    reviewer_signals: [局部 funnel]
+    hard_negative_contrast: 無 CTA
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.6
+    review_time_seconds: 43
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0002.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_A_03
   candidate_stub_id: STUB_0007_A_03
   task_id: EXP_0007_A
   routing_lane: result_display_low_context_transition
   signal_hint: 成果展示
   expected_behavior: result_display_group_low_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: expected_from_stub
-    情緒操控: pending
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors: [社群+成果]
+    structural_patterns: [展示→外部導流]
+    reviewer_signals: [可直接理解]
+    hard_negative_contrast: 無外部導流
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.58
+    review_time_seconds: 40
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0003.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_B_01
   candidate_stub_id: STUB_0007_B_01
   task_id: EXP_0007_B
   routing_lane: result_display_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_thread_context_required
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [片段導流]
+    structural_patterns: [需串聯]
+    reviewer_signals: [上下文依賴]
+    hard_negative_contrast: 單貼文可判斷
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.55
+    review_time_seconds: 49
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0004.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_B_02
   candidate_stub_id: STUB_0007_B_02
   task_id: EXP_0007_B
   routing_lane: result_display_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_reply_context_required
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_from_stub
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [弱社群暗示]
+    structural_patterns: [非完整鏈]
+    reviewer_signals: [不完整訊號]
+    hard_negative_contrast: 完整 funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.52
+    review_time_seconds: 50
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0005.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_B_03
   candidate_stub_id: STUB_0007_B_03
   task_id: EXP_0007_B
   routing_lane: result_display_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_group_context_required
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: expected_from_stub
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [多貼文導流]
+    structural_patterns: [分段轉換]
+    reviewer_signals: [必須串聯]
+    hard_negative_contrast: 單點轉換
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.56
+    review_time_seconds: 48
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0006.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_C_01
   candidate_stub_id: STUB_0007_C_01
   task_id: EXP_0007_C
   routing_lane: result_display_emotional_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_emotional_thread_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_from_stub
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [情緒引導]
+    structural_patterns: [情緒→注意力]
+    reviewer_signals: [決策不明確]
+    hard_negative_contrast: 無情緒刺激
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.54
+    review_time_seconds: 52
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0007.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_C_02
   candidate_stub_id: STUB_0007_C_02
   task_id: EXP_0007_C
   routing_lane: result_display_emotional_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_emotional_reply_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_from_stub
-    成果展示: expected_from_stub
-    reply_funnel: expected_from_stub
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [情緒+轉換]
+    structural_patterns: [情緒→CTA]
+    reviewer_signals: [不穩定判斷]
+    hard_negative_contrast: 理性說明
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.57
+    review_time_seconds: 50
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0008.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_C_03
   candidate_stub_id: STUB_0007_C_03
   task_id: EXP_0007_C
   routing_lane: result_display_emotional_thread_required
   signal_hint: 成果展示
   expected_behavior: result_display_emotional_group_context
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: expected_from_stub
-    情緒操控: expected_from_stub
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [情緒+社群]
+    structural_patterns: [吸引→潛在導流]
+    reviewer_signals: [模糊]
+    hard_negative_contrast: 無情緒
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.53
+    review_time_seconds: 51
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0009.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_D_01
   candidate_stub_id: STUB_0007_D_01
   task_id: EXP_0007_D
   routing_lane: result_display_clean_holdout
   signal_hint: 成果展示
   expected_behavior: standalone_result_display_holdout
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_absent
-    保證收益: expected_absent
-    社群導流: expected_absent
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_absent
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [純成果]
+    structural_patterns: [無轉換]
+    reviewer_signals: [低風險]
+    hard_negative_contrast: 商業內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.9
+    review_time_seconds: 38
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0010.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_D_02
   candidate_stub_id: STUB_0007_D_02
   task_id: EXP_0007_D
   routing_lane: result_display_clean_holdout
   signal_hint: 成果展示
   expected_behavior: pure_result_record_holdout
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_absent
-    保證收益: expected_absent
-    社群導流: expected_absent
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_absent
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [紀錄型]
+    structural_patterns: [非商業]
+    reviewer_signals: [穩定樣本]
+    hard_negative_contrast: 導流內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.88
+    review_time_seconds: 37
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0011.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0007_D_03
   candidate_stub_id: STUB_0007_D_03
   task_id: EXP_0007_D
   routing_lane: result_display_clean_holdout
   signal_hint: 成果展示
   expected_behavior: clean_result_display_boundary
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_absent
-    保證收益: expected_absent
-    社群導流: expected_absent
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_absent
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: test_if_supported
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors: [靜態展示]
+    structural_patterns: [無轉換]
+    reviewer_signals: [清晰]
+    hard_negative_contrast: funnel
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.91
+    review_time_seconds: 36
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0007/batch-0007-result-display-context-split_0012.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 completion_rules:
 - Fill only structured metadata observations.
 - Do not paste raw Threads content into this repo.

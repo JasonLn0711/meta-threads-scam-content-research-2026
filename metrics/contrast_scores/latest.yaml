@@ -5,34 +5,58 @@ not_a_classifier: true
 formula: lane SVS uses (yield_rate * information_density) / (review_time * cognitive_load);
   lane routing is a testable reviewer-effort hypothesis
 positive_yield_definition: human research label scam, not legal fraud
-candidate_count: 36
+candidate_count: 48
 lane_definitions:
   strong_source_priority:
     pre_review_activation_rule: 保證收益 AND (誘導聯絡 OR 社群導流 OR reply_funnel OR review_stable_funnel_anchor)
       AND NOT needs_thread
     routing_action: fast_priority_review
+    context_gate: single_item_review
     interpretation: High-value source arm when a guarantee/certainty anchor has executable
       transition structure and low thread burden.
   guarantee_context_review:
     pre_review_activation_rule: 保證收益 AND NOT strong_source_priority
     routing_action: priority_context_review
+    context_gate: thread_or_second_review_as_needed
     interpretation: Guarantee/certainty anchor remains important, but needs slower
       review when transition structure is weak or context burden is high.
+  result_display_low_context_transition:
+    pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND NOT needs_thread AND (誘導聯絡 OR
+      社群導流 OR reply_funnel OR review_stable_funnel_anchor)
+    routing_action: low_context_transition_review
+    context_gate: single_item_review
+    interpretation: Result display with visible transition structure can be reviewed
+      without full-thread context, but remains uncertain without explicit guarantee.
+  result_display_thread_required:
+    pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND needs_thread AND NOT 情緒操控
+    routing_action: thread_context_review
+    context_gate: thread_required
+    interpretation: Result display that requires thread context should be routed to
+      slower review before a decision is attempted.
+  result_display_emotional_thread_required:
+    pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND needs_thread AND 情緒操控
+    routing_action: thread_context_second_review
+    context_gate: thread_required_plus_second_review
+    interpretation: Result display with emotional pressure and thread dependency is
+      a high cognitive-load review path, not a fast positive-yield signal.
   result_display_context_review:
-    pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND (誘導聯絡 OR 社群導流 OR reply_funnel
-      OR needs_thread OR 情緒操控)
+    pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND context cues that do not match
+      the explicit Batch 0007 sub-lanes
     routing_action: slow_context_review
-    interpretation: Result display without explicit guarantee is a context-cost signal,
-      not a high-priority source arm by itself.
+    context_gate: manual_context_triage
+    interpretation: Fallback for result-display context cases that do not yet fit
+      a stable sub-lane.
   result_display_contrast_holdout:
     pre_review_activation_rule: 成果展示 AND NOT 保證收益 AND NOT (誘導聯絡 OR 社群導流 OR reply_funnel
       OR needs_thread OR 情緒操控)
     routing_action: contrast_or_hard_negative_pool
+    context_gate: holdout_calibration
     interpretation: Standalone result display is useful for hard-negative contrast
       and boundary calibration.
   other_metadata_review:
     pre_review_activation_rule: candidate does not match the defined contrast lanes
     routing_action: standard_review
+    context_gate: standard_review
     interpretation: Keep in standard metadata review until a useful contrast pattern
       is observed.
 lane_scores:
@@ -89,56 +113,122 @@ lane_scores:
   average_confidence: 0.676667
   interpretation: Guarantee/certainty anchor remains important, but needs slower review
     when transition structure is weak or context burden is high.
-- lane: result_display_context_review
-  routing_action: slow_context_review
+- lane: result_display_low_context_transition
+  routing_action: low_context_transition_review
+  candidate_ids:
+  - batch-0007-result-display-context-split_0001
+  - batch-0007-result-display-context-split_0002
+  - batch-0007-result-display-context-split_0003
+  reviewed_count: 3
+  scam_count: 0
+  yield_rate: 0.0
+  information_density: 0.710145
+  review_time: 41.333333
+  cognitive_load: 1.05
+  svs: 0.0
+  non_scam_count: 0
+  uncertain_count: 3
+  needs_thread_rate: 0.0
+  second_review_rate: 0.0
+  uncertainty_rate: 1.0
+  average_confidence: 0.6
+  interpretation: Result display with visible transition structure can be reviewed
+    without full-thread context, but remains uncertain without explicit guarantee.
+- lane: result_display_thread_required
+  routing_action: thread_context_review
   candidate_ids:
   - batch-0004-low-coverage-high-svs_0001
-  - batch-0004-low-coverage-high-svs_0002
   - batch-0004-low-coverage-high-svs_0003
-  - batch-0004-low-coverage-high-svs_0004
   - batch-0004-low-coverage-high-svs_0005
   - batch-0005-guarantee-vs-result-display-contrast_0006
   - batch-0005-guarantee-vs-result-display-contrast_0007
   - batch-0005-guarantee-vs-result-display-contrast_0008
-  - batch-0005-guarantee-vs-result-display-contrast_0009
   - batch-0006-contrast-aware-routing-validation_0005
   - batch-0006-contrast-aware-routing-validation_0006
   - batch-0006-contrast-aware-routing-validation_0007
-  - batch-0006-contrast-aware-routing-validation_0008
-  reviewed_count: 13
+  - batch-0007-result-display-context-split_0004
+  - batch-0007-result-display-context-split_0005
+  - batch-0007-result-display-context-split_0006
+  reviewed_count: 12
   scam_count: 0
   yield_rate: 0.0
-  information_density: 0.403567
-  review_time: 46.692308
-  cognitive_load: 2.3
+  information_density: 0.307971
+  review_time: 46.5
+  cognitive_load: 2.216667
   svs: 0.0
   non_scam_count: 2
-  uncertain_count: 11
+  uncertain_count: 10
   needs_thread_rate: 1.0
-  second_review_rate: 0.846154
-  uncertainty_rate: 0.846154
-  average_confidence: 0.619231
-  interpretation: Result display without explicit guarantee is a context-cost signal,
-    not a high-priority source arm by itself.
+  second_review_rate: 0.833333
+  uncertainty_rate: 0.833333
+  average_confidence: 0.6
+  interpretation: Result display that requires thread context should be routed to
+    slower review before a decision is attempted.
+- lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  candidate_ids:
+  - batch-0004-low-coverage-high-svs_0002
+  - batch-0004-low-coverage-high-svs_0004
+  - batch-0005-guarantee-vs-result-display-contrast_0009
+  - batch-0006-contrast-aware-routing-validation_0008
+  - batch-0007-result-display-context-split_0007
+  - batch-0007-result-display-context-split_0008
+  - batch-0007-result-display-context-split_0009
+  reviewed_count: 7
+  scam_count: 0
+  yield_rate: 0.0
+  information_density: 0.479296
+  review_time: 49.857143
+  cognitive_load: 2.442857
+  svs: 0.0
+  non_scam_count: 0
+  uncertain_count: 7
+  needs_thread_rate: 1.0
+  second_review_rate: 1.0
+  uncertainty_rate: 1.0
+  average_confidence: 0.588571
+  interpretation: Result display with emotional pressure and thread dependency is
+    a high cognitive-load review path, not a fast positive-yield signal.
+- lane: result_display_context_review
+  routing_action: slow_context_review
+  candidate_ids: []
+  reviewed_count: 0
+  scam_count: 0
+  yield_rate: 0.0
+  information_density: 0.0
+  review_time: 0.0
+  cognitive_load: 0.0
+  svs: 0.0
+  non_scam_count: 0
+  uncertain_count: 0
+  needs_thread_rate: 0.0
+  second_review_rate: 0.0
+  uncertainty_rate: 0.0
+  average_confidence: 0.0
+  interpretation: Fallback for result-display context cases that do not yet fit a
+    stable sub-lane.
 - lane: result_display_contrast_holdout
   routing_action: contrast_or_hard_negative_pool
   candidate_ids:
   - batch-0005-guarantee-vs-result-display-contrast_0010
   - batch-0006-contrast-aware-routing-validation_0009
   - batch-0006-contrast-aware-routing-validation_0010
-  reviewed_count: 3
+  - batch-0007-result-display-context-split_0010
+  - batch-0007-result-display-context-split_0011
+  - batch-0007-result-display-context-split_0012
+  reviewed_count: 6
   scam_count: 0
   yield_rate: 0.0
   information_density: 0.07971
-  review_time: 37.666667
+  review_time: 37.333333
   cognitive_load: 1.0
   svs: 0.0
-  non_scam_count: 3
+  non_scam_count: 6
   uncertain_count: 0
   needs_thread_rate: 0.0
   second_review_rate: 0.0
   uncertainty_rate: 0.0
-  average_confidence: 0.886667
+  average_confidence: 0.891667
   interpretation: Standalone result display is useful for hard-negative contrast and
     boundary calibration.
 - lane: other_metadata_review
@@ -165,8 +255,9 @@ lane_scores:
 candidate_routes:
 - candidate_id: batch-0004-low-coverage-high-svs_0001
   batch_id: batch-0004-low-coverage-high-svs
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -179,8 +270,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0004-low-coverage-high-svs_0002
   batch_id: batch-0004-low-coverage-high-svs
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -194,8 +286,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0004-low-coverage-high-svs_0003
   batch_id: batch-0004-low-coverage-high-svs
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - 成果展示
@@ -204,8 +297,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0004-low-coverage-high-svs_0004
   batch_id: batch-0004-low-coverage-high-svs
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -219,8 +313,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0004-low-coverage-high-svs_0005
   batch_id: batch-0004-low-coverage-high-svs
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - 成果展示
@@ -232,6 +327,7 @@ candidate_routes:
   batch_id: batch-0004-low-coverage-high-svs
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -247,6 +343,7 @@ candidate_routes:
   batch_id: batch-0004-low-coverage-high-svs
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -261,6 +358,7 @@ candidate_routes:
   batch_id: batch-0004-low-coverage-high-svs
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -276,6 +374,7 @@ candidate_routes:
   batch_id: batch-0004-low-coverage-high-svs
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -290,6 +389,7 @@ candidate_routes:
   batch_id: batch-0004-low-coverage-high-svs
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -305,6 +405,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -318,6 +419,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -331,6 +433,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -344,6 +447,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -358,6 +462,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: guarantee_context_review
   routing_action: priority_context_review
+  context_gate: thread_or_second_review_as_needed
   active_sparse_features:
   - needs_thread
   - 保證收益
@@ -367,8 +472,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0005-guarantee-vs-result-display-contrast_0006
   batch_id: batch-0005-guarantee-vs-result-display-contrast
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -379,8 +485,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0005-guarantee-vs-result-display-contrast_0007
   batch_id: batch-0005-guarantee-vs-result-display-contrast
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - 成果展示
@@ -390,8 +497,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0005-guarantee-vs-result-display-contrast_0008
   batch_id: batch-0005-guarantee-vs-result-display-contrast
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - 成果展示
@@ -400,8 +508,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0005-guarantee-vs-result-display-contrast_0009
   batch_id: batch-0005-guarantee-vs-result-display-contrast
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -416,6 +525,7 @@ candidate_routes:
   batch_id: batch-0005-guarantee-vs-result-display-contrast
   lane: result_display_contrast_holdout
   routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
   active_sparse_features:
   - 成果展示
   review_decision: non_scam
@@ -425,6 +535,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -438,6 +549,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -451,6 +563,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -465,6 +578,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - reply_funnel
   - review_stable_funnel_anchor
@@ -476,8 +590,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0006-contrast-aware-routing-validation_0005
   batch_id: batch-0006-contrast-aware-routing-validation
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -488,8 +603,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0006-contrast-aware-routing-validation_0006
   batch_id: batch-0006-contrast-aware-routing-validation
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - 成果展示
@@ -499,8 +615,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0006-contrast-aware-routing-validation_0007
   batch_id: batch-0006-contrast-aware-routing-validation
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -512,8 +629,9 @@ candidate_routes:
   guardrail: structured_metadata_only
 - candidate_id: batch-0006-contrast-aware-routing-validation_0008
   batch_id: batch-0006-contrast-aware-routing-validation
-  lane: result_display_context_review
-  routing_action: slow_context_review
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
   active_sparse_features:
   - needs_thread
   - 情緒操控
@@ -525,6 +643,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: result_display_contrast_holdout
   routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
   active_sparse_features:
   - 成果展示
   review_decision: non_scam
@@ -534,6 +653,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: result_display_contrast_holdout
   routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
   active_sparse_features:
   - 成果展示
   review_decision: non_scam
@@ -543,6 +663,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: guarantee_context_review
   routing_action: priority_context_review
+  context_gate: thread_or_second_review_as_needed
   active_sparse_features:
   - needs_thread
   - 保證收益
@@ -554,6 +675,7 @@ candidate_routes:
   batch_id: batch-0006-contrast-aware-routing-validation
   lane: guarantee_context_review
   routing_action: priority_context_review
+  context_gate: thread_or_second_review_as_needed
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -563,10 +685,159 @@ candidate_routes:
   review_decision: scam
   second_review_required: true
   guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0001
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_low_context_transition
+  routing_action: low_context_transition_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0002
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_low_context_transition
+  routing_action: low_context_transition_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0003
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_low_context_transition
+  routing_action: low_context_transition_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0004
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
+  active_sparse_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0005
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
+  active_sparse_features:
+  - needs_thread
+  - 成果展示
+  - 社群導流
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0006
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
+  active_sparse_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 社群導流
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0007
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
+  active_sparse_features:
+  - needs_thread
+  - 情緒操控
+  - 成果展示
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0008
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
+  active_sparse_features:
+  - needs_thread
+  - reply_funnel
+  - 情緒操控
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0009
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_emotional_thread_required
+  routing_action: thread_context_second_review
+  context_gate: thread_required_plus_second_review
+  active_sparse_features:
+  - needs_thread
+  - 情緒操控
+  - 成果展示
+  - 社群導流
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0010
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_contrast_holdout
+  routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
+  active_sparse_features:
+  - 成果展示
+  review_decision: non_scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0011
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_contrast_holdout
+  routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
+  active_sparse_features:
+  - 成果展示
+  review_decision: non_scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0007-result-display-context-split_0012
+  batch_id: batch-0007-result-display-context-split
+  lane: result_display_contrast_holdout
+  routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
+  active_sparse_features:
+  - 成果展示
+  review_decision: non_scam
+  second_review_required: false
+  guardrail: structured_metadata_only
 - candidate_id: synthetic-candidate-0001
   batch_id: batch-0003-dual-track-dry-run
   lane: other_metadata_review
   routing_action: standard_review
+  context_gate: standard_review
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -580,6 +851,7 @@ candidate_routes:
   batch_id: batch-0003-dual-track-dry-run
   lane: strong_source_priority
   routing_action: fast_priority_review
+  context_gate: single_item_review
   active_sparse_features:
   - review_stable_funnel_anchor
   - 保證收益
@@ -591,6 +863,7 @@ candidate_routes:
   batch_id: batch-0003-dual-track-dry-run
   lane: other_metadata_review
   routing_action: standard_review
+  context_gate: standard_review
   active_sparse_features:
   - needs_thread
   - reply_funnel
@@ -603,6 +876,7 @@ candidate_routes:
   batch_id: batch-0003-dual-track-dry-run
   lane: other_metadata_review
   routing_action: standard_review
+  context_gate: standard_review
   active_sparse_features:
   - needs_thread
   - 情緒操控
@@ -611,8 +885,11 @@ candidate_routes:
   guardrail: structured_metadata_only
 recommendations:
 - Prioritize strong_source_priority candidates when reviewer capacity is constrained.
-- Route result_display_context_review candidates to slower context review instead
-  of fast priority review.
+- Route result_display_low_context_transition to single-item review; do not require
+  full thread by default.
+- Route result_display_thread_required to full-thread context review before decision.
+- Route result_display_emotional_thread_required to full-thread plus second-review
+  queue when capacity allows.
 - Keep result_display_contrast_holdout candidates as hard-negative or boundary calibration
   material.
 guardrails:
