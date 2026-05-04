@@ -1,0 +1,88 @@
+schema_version: candidate_stub_batch_v1
+batch_id: batch-0004-low-coverage-high-svs
+source_tasks: exploration/tasks/latest.yaml
+source_stubs: data/candidate_stubs/latest.yaml
+selected_task_ids:
+- EXP_0001
+- EXP_0002
+summary:
+  stub_count: 10
+  target_signal_hints:
+  - 保證收益
+  - 成果展示
+candidate_stubs:
+- candidate_stub_id: STUB_0001
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0002
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0003
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0004
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0005
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0006
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0007
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0008
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0009
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+- candidate_stub_id: STUB_0010
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  collection_method: safe / manual-assisted
+  raw_threads_evidence_allowed: false
+  pii_allowed: false
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
