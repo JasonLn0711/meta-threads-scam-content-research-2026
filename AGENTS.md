@@ -77,13 +77,14 @@ Start with:
 2. `docs/00-project-charter.md`
 3. `docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md`
 4. `docs/62-reviewer-assist-layer-design.md`
-5. `docs/18-recommended-path-v1.md`
-6. `docs/56-first-principle-investment-scam-discovery-method.md`
-7. `docs/57-investment-scam-discovery-signal-family-matrix.md`
-8. `governance/data-governance.md`
-9. `docs/19-codex-workflow.md`
-10. `docs/20-repo-series-naming.md`
-11. `docs/21-repo-relationships.md`
+5. `docs/63-context-gating-policy.md`
+6. `docs/18-recommended-path-v1.md`
+7. `docs/56-first-principle-investment-scam-discovery-method.md`
+8. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+9. `governance/data-governance.md`
+10. `docs/19-codex-workflow.md`
+11. `docs/20-repo-series-naming.md`
+12. `docs/21-repo-relationships.md`
 
 Before changing scope, update:
 

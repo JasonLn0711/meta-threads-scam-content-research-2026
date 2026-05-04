@@ -20,7 +20,7 @@ The project asks:
 
 This is not a production detector and does not make legal determinations. It is a research scaffold for scalable candidate discovery, risk triage, evidence design, and early experimental comparison.
 
-The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The Batch 0008 context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
+The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
 
 ## Why Threads First
 
