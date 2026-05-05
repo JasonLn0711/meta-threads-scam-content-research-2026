@@ -29,7 +29,9 @@ data/browser-exports/
 data/browser-profiles/
 data/evidence_store/*
 data/audit_logs/*
+data/learning_state/*
 data/candidate_intake/candidate_stub_*.json
+data/candidate_intake/closed_loop_round_*.jsonl
 evidence/raw/
 evidence/private/
 
@@ -39,6 +41,7 @@ evidence/private/
 !data/processed/README.md
 !data/evidence_store/README.md
 !data/audit_logs/README.md
+!data/learning_state/README.md
 !data/samples/
 !data/samples/README.md
 

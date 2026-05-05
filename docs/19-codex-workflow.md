@@ -12,12 +12,17 @@ Before making changes, read:
 
 1. `README.md`
 2. `docs/00-project-charter.md`
-3. `docs/18-recommended-path-v1.md`
-4. `docs/56-first-principle-investment-scam-discovery-method.md`
-5. `docs/57-investment-scam-discovery-signal-family-matrix.md`
-6. `governance/data-governance.md`
-7. `AGENTS.md`
-8. `docs/21-repo-relationships.md`
+3. `docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md`
+4. `docs/62-reviewer-assist-layer-design.md`
+5. `docs/63-context-gating-policy.md`
+6. `docs/65-evidence-layer-v1.md`
+7. `docs/66-closed-loop-discovery-v1.md`
+8. `docs/18-recommended-path-v1.md`
+9. `docs/56-first-principle-investment-scam-discovery-method.md`
+10. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+11. `governance/data-governance.md`
+12. `AGENTS.md`
+13. `docs/21-repo-relationships.md`
 
 ## Docs-First Updates
 
@@ -94,6 +99,8 @@ Allowed early code:
 - Simple rule baseline
 - Metric calculation
 - OCR normalization for approved local files
+- Evidence integrity hashing, audit-chain checks, and metadata-only candidate stubs
+- Synthetic closed-loop simulations for query-arm value and reviewer-hour metrics
 
 Avoid:
 
@@ -103,6 +110,7 @@ Avoid:
 - Web dashboards
 - Production services
 - Large dependency stacks
+- Raw locators, handles, screenshots, URLs, or sensitive evidence in git-facing candidate records
 
 ## Safety Language
 

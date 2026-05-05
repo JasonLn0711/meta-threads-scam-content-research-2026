@@ -121,3 +121,5 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-05-04 | Adopted Batch 0008 as the active v2 context-gating policy for reviewer-hour routing | `0132-record-v2-batch-0008-context-gating-policy.md` |
 | 2026-05-05 | Opened Batch 0009 as a capped prospective check of the active context-gating policy | `0133-open-v2-batch-0009-context-gating-policy-check.md` |
 | 2026-05-05 | Recorded Batch 0009 as supporting the active context-gating policy and moved the next action to Reviewer Assist labor-savings evaluation | `0134-record-v2-batch-0009-context-gating-policy-check.md` |
+| 2026-05-05 | Added Evidence Layer v1 as metadata-safe custody support tooling without authorizing new collection or raw evidence in git | `0135-add-evidence-layer-v1.md` |
+| 2026-05-05 | Added synthetic Closed-Loop Discovery v1 support tooling for query-arm and reviewer-hour learning without external APIs or final scam decisions | `0136-add-synthetic-closed-loop-discovery-runner.md` |

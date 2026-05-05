@@ -20,7 +20,7 @@ The project asks:
 
 This is not a production detector and does not make legal determinations. It is a research scaffold for scalable candidate discovery, risk triage, evidence design, and early experimental comparison.
 
-The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
+The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The metadata-safe Evidence Layer v1 design is [docs/65-evidence-layer-v1.md](docs/65-evidence-layer-v1.md). The synthetic closed-loop discovery runner is [docs/66-closed-loop-discovery-v1.md](docs/66-closed-loop-discovery-v1.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
 
 ## Why Threads First
 
@@ -86,15 +86,19 @@ experiments/      Logs for baseline, modality, and evaluation experiments
 data/             Placeholder only; no raw sensitive data should be committed
 data/candidates/  v2 metadata-only candidate records; no raw Threads evidence
 data/candidate_intake/ metadata-only manual-assisted fill worksheets
+data/evidence_store/ ignored local simulated controlled store; no raw evidence in git
+data/learning_state/ ignored local synthetic bandit state and metrics
 meta-system/      v2 sparse schemas and human-reviewed feature evolution metadata
 metrics/          v2 aggregate signal scores and reviewer-effort metrics
 engine/           v2 metadata-only sparse, embedding, discrepancy, and feature engines
 outputs/          whitelisted v2 structured metadata reports only
 exploration/      metadata-only exploration tasks; no external access or raw content
 scripts/          Minimal utilities only after experiments justify code
-src/              Reserved for small research prototype code
+src/              Small support prototypes for evidence custody, v2 metadata, and synthetic discovery loops
 decision-log/     Durable decisions and scope changes
 ```
+
+Current code is support tooling only: decision `0135` adds a metadata-safe Evidence Layer v1, and decision `0136` adds a synthetic closed-loop discovery runner for query-arm and reviewer-hour learning. Neither decision authorizes external collection, raw evidence in git, final scam determinations, or production detection.
 
 ## Related Repos
 
