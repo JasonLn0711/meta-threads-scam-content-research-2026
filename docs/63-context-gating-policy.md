@@ -269,6 +269,34 @@ Evidence:
 - `metrics/batch_logs/batch_0009_run_log.yaml`
 - `experiments/evaluation-notes/0105-v2-batch-0009-context-gating-policy-check-result.md`
 
+## Reviewer Assist Revision
+
+Decision `0149` confirms that Reviewer Assist can reduce review burden on a
+balanced metadata-only slice, but it also confirms that
+`result_display_thread_required` remains expensive and uncertain when the
+missing thread context is the bottleneck.
+
+Decision `0150` therefore opens Batch `0012` as a context-gate revision. The
+goal is not to promote the slow lane. The goal is to route thread-dependent
+candidates to the correct context-first action faster:
+
+```text
+needs_thread_before_label
+```
+
+The revision must also avoid over-requesting thread context for:
+
+- `result_display_low_context_transition` boundary controls;
+- `result_display_clean_holdout` hard-negative controls;
+- `strong_source_priority` fast-lane controls.
+
+Evidence:
+
+- `decision-log/0150-open-reviewer-assist-thread-required-lane-revision.md`
+- `experiments/batch_variants/0012-reviewer-assist-thread-required-lane-revision.md`
+- `data/reviewer_assist_eval/batch_0012_work_order.yaml`
+- `experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md`
+
 ## Evidence
 
 - `experiments/batch_variants/0008-context-gate-reviewer-hour-value.md`
