@@ -1,0 +1,142 @@
+schema_version: reviewer_assist_aggregate_result_v1
+evaluation_id: reviewer-assist-expansion-0011
+decision_id: "0149"
+source_work_order: data/reviewer_assist_eval/batch_0011_work_order.yaml
+source_assisted_review_result: data/reviewer_assist_eval/batch_0011_assisted_review_result.yaml
+status: empirical_completed
+result_boundary:
+  empirical_assisted_review_result: true
+  formal_only: false
+  manual_baseline_hidden_from_reviewer: true
+  raw_threads_content_used: false
+  raw_reply_text_used: false
+  raw_ocr_text_used: false
+  urls_handles_screenshots_browser_artifacts_used: false
+  controlled_store_locators_used: false
+  legal_fraud_or_enforcement_claim: false
+  platform_wide_claim: false
+
+manual_baseline:
+  source_batch: batch-0008-context-gate-reviewer-hour-value
+  reviewed_count: 16
+  total_review_time_seconds: 670.0
+  average_review_time_seconds: 41.875
+  median_review_time_seconds: 38.5
+  p95_review_time_seconds: 60.0
+  candidates_per_reviewer_hour: 85.970149
+  scam_count: 4
+  non_scam_count: 4
+  uncertain_count: 8
+  not_reviewable_count: 0
+  yield_rate: 0.25
+  high_value_candidates_per_hour: 21.492537
+  second_review_required_count: 6
+  second_review_rate: 0.375
+  uncertainty_rate: 0.5
+
+assisted_review:
+  reviewed_count: 16
+  total_review_time_seconds: 530.0
+  average_review_time_seconds: 33.125
+  median_review_time_seconds: 29.5
+  p95_review_time_seconds: 54.0
+  candidates_per_reviewer_hour: 108.679245
+  scam_count: 4
+  non_scam_count: 4
+  uncertain_count: 8
+  not_reviewable_count: 0
+  yield_rate: 0.25
+  high_value_candidates_per_hour: 27.169811
+  second_review_required_count: 8
+  second_review_rate: 0.5
+  uncertainty_rate: 0.5
+  insufficient_evidence_count: 8
+  insufficient_evidence_rate: 0.5
+  raw_evidence_excluded_from_git_rate: 1.0
+
+comparison:
+  review_time_total_difference_seconds: -140.0
+  review_time_average_difference_seconds: -8.75
+  review_time_average_lower_percent: 20.895522
+  review_time_median_difference_seconds: -9.0
+  review_time_p95_difference_seconds: -6.0
+  candidates_per_hour_difference: 22.709096
+  candidates_per_hour_relative_increase_percent: 26.415094
+  high_value_candidates_per_hour_difference: 5.677274
+  high_value_candidates_per_hour_relative_increase_percent: 26.415096
+  yield_rate_difference: 0.0
+  uncertainty_rate_difference: 0.0
+  second_review_rate_difference: 0.125
+  manual_assisted_final_label_mismatch_count: 0
+  raw_evidence_leakage_incidents: 0
+
+assist_quality:
+  summary_usefulness_mean: 3.9375
+  summary_usefulness_4_or_5_rate: 0.75
+  summary_omission_risk:
+    low_count: 8
+    medium_count: 4
+    high_count: 4
+  schema_prefill:
+    accepted_count: 8
+    accepted_with_minor_correction_count: 8
+    acceptance_rate: 0.5
+    minor_correction_rate: 0.5
+    needs_major_correction_count: 0
+    unusable_count: 0
+  signal_suggestions:
+    accepted_count: 8
+    accepted_with_minor_correction_count: 8
+    acceptance_rate: 0.5
+    minor_correction_rate: 0.5
+    rejected_count: 0
+  hard_negative_warning:
+    accepted_count: 12
+    not_applicable_count: 4
+    accepted_or_not_applicable_rate: 1.0
+    missed_warning_count: 0
+    over_warned_count: 0
+  priority_explanation:
+    accepted_count: 16
+    acceptance_rate: 1.0
+    rejected_count: 0
+
+lane_summary:
+  strong_source_priority:
+    count: 4
+    assisted_average_review_time_seconds: 23.0
+    scam_count: 4
+    second_review_required_count: 0
+    insufficient_evidence_count: 0
+    interpretation: strong_fast_lane_orientation
+  result_display_low_context_transition:
+    count: 4
+    assisted_average_review_time_seconds: 33.75
+    uncertain_count: 4
+    second_review_required_count: 4
+    insufficient_evidence_count: 4
+    interpretation: boundary_orientation_helpful_but_not_decisive
+  result_display_thread_required:
+    count: 4
+    assisted_average_review_time_seconds: 51.75
+    uncertain_count: 4
+    second_review_required_count: 4
+    insufficient_evidence_count: 4
+    interpretation: context_dependency_remains_main_bottleneck
+  result_display_clean_holdout:
+    count: 4
+    assisted_average_review_time_seconds: 24.0
+    non_scam_count: 4
+    second_review_required_count: 0
+    insufficient_evidence_count: 0
+    interpretation: fast_hard_negative_calibration_supported
+
+decision:
+  selected_option: expand_assist_evaluation
+  next_expansion_condition: revise_thread_required_lane_before_broader_scaling
+  authorizes_new_collection: false
+  authorizes_real_llm_or_api_calls: false
+  authorizes_model_training: false
+  authorizes_production_detector: false
+  authorizes_final_automated_scam_decisions: false
+  summary: Batch 0011 is an empirical metadata-only assisted-review result. It supports further governed Reviewer Assist evaluation because review time fell while yield, uncertainty handling, hard-negative protection, and raw-evidence exclusion remained stable. The thread-required lane still needs design revision because context dependency remains the main bottleneck.

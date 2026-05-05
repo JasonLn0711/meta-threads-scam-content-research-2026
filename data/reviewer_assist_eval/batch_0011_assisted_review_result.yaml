@@ -1,0 +1,797 @@
+schema_version: reviewer_assist_assisted_review_result_v1
+evaluation_id: reviewer-assist-expansion-0011
+decision_id: "0148"
+result_decision_id: "0149"
+source_rules: data/reviewer_assist_eval/batch_0011_reviewer_rules.md
+source_fill_template: data/reviewer_assist_eval/batch_0011_reviewer_fill_sheet_template.yaml
+source_fill_template_normalized_from: data/reviewer_assist_eval/batch_0011_reviewer_fill_sheet.yaml
+status: empirical_completed
+result_boundary:
+  formal_only: false
+  empirical_assisted_review_result: true
+  manual_baseline_hidden_from_reviewer: true
+  raw_threads_content_used: false
+  raw_reply_text_used: false
+  raw_ocr_text_used: false
+  urls_handles_screenshots_browser_artifacts_used: false
+  controlled_store_locators_used: false
+  legal_fraud_or_enforcement_claim: false
+  note: EMPIRICAL ASSISTED-REVIEW RESULT - metadata-only, raw-evidence-excluded, not platform-wide
+
+rating_scale:
+  summary_usefulness_rating: "1 to 5, where 5 means highly useful for faster reviewer orientation"
+  summary_omission_risk: "low | medium | high"
+  schema_prefill_status: "accepted | accepted_with_minor_correction | needs_major_correction | unusable"
+  signal_suggestion_status: "accepted | accepted_with_minor_correction | rejected"
+  hard_negative_warning_status: "accepted | not_applicable | over_warned | missed_warning"
+  priority_explanation_status: "accepted | accepted_with_minor_correction | rejected"
+
+candidate_entries:
+  - workbench_id: RA_0011_0001
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
+      source_stub_id: STUB_0008_A_01
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_executable_transition_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary: guarantee_executable_transition
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - reply_funnel
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 21.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0002
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+      source_stub_id: STUB_0008_A_02
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_group_transition_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary: guarantee_group_transition_fast_lane
+      signal_family_suggestions:
+        - 保證收益
+        - 社群導流
+        - reply_funnel
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 1
+        社群導流: 1
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_private_channel_transition
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 23.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0003
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
+      source_stub_id: STUB_0008_A_03
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_reply_funnel_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary: guarantee_reply_funnel_fast_lane
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - reply_funnel
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_reply_funnel_transition
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 22.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0004
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
+      source_stub_id: STUB_0008_A_04
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_stable_anchor_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary: guarantee_stable_anchor_fast_lane
+      signal_family_suggestions:
+        - 保證收益
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_stable_anchor_candidate
+      missing_evidence_note: visible_contact_or_group_path_absent_in_metadata
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 26.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0005
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0005
+      source_stub_id: STUB_0008_B_01
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_contact_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary: visible_transition_low_context
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: possible_overgeneralization_from_result_display
+      priority_explanation: boundary_probe_not_fast_priority
+      missing_evidence_note: no_explicit_guarantee_observed_in_metadata
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 33.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: result_display_boundary
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: avoid_result_display_overreach
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0006
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0006
+      source_stub_id: STUB_0008_B_02
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_reply_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary: visible_transition_low_context
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: possible_overgeneralization_from_result_display
+      priority_explanation: low_context_boundary_probe
+      missing_evidence_note: visible_transition_without_guarantee
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 34.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: transition_without_guarantee
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: keep_as_boundary_signal
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0007
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0007
+      source_stub_id: STUB_0008_B_03
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_group_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary: visible_transition_low_context
+      signal_family_suggestions:
+        - 成果展示
+        - 社群導流
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 1
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: possible_clean_holdout_confusion
+      priority_explanation: boundary_probe_not_priority_lane
+      missing_evidence_note: group_cue_without_explicit_guarantee
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 35.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: group_cue_boundary
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: weak_transition_signal
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0008
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
+      source_stub_id: STUB_0008_B_04
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_stable_anchor_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary: visible_transition_low_context
+      signal_family_suggestions:
+        - 成果展示
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: possible_overgeneralization_from_stable_anchor
+      priority_explanation: boundary_probe_with_stable_anchor
+      missing_evidence_note: no_guarantee_or_contact_metadata
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 33.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: stable_anchor_boundary
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: result_display_boundary
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0009
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0009
+      source_stub_id: STUB_0008_C_01
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_contact
+    assist_outputs_to_fill_before_review:
+      candidate_summary: thread_context_required
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+        - needs_thread
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 1
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: insufficient_metadata_without_thread
+      priority_explanation: slow_context_probe
+      missing_evidence_note: thread_dependency_blocks_confident_single_item_decision
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 50.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 3
+      summary_omission_risk: high
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: thread_dependency
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: needs_thread_boundary
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0010
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0010
+      source_stub_id: STUB_0008_C_02
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_group
+    assist_outputs_to_fill_before_review:
+      candidate_summary: thread_context_required
+      signal_family_suggestions:
+        - 成果展示
+        - 社群導流
+        - needs_thread
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 1
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 1
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: insufficient_metadata_without_thread
+      priority_explanation: slow_context_probe_with_group_dependency
+      missing_evidence_note: group_context_requires_thread_level_review
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 52.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 3
+      summary_omission_risk: high
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: thread_group_dependency
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: group_context_boundary
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0011
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0011
+      source_stub_id: STUB_0008_C_03
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_reply
+    assist_outputs_to_fill_before_review:
+      candidate_summary: thread_context_required
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+        - needs_thread
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 1
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: insufficient_metadata_without_thread
+      priority_explanation: slow_context_reply_probe
+      missing_evidence_note: reply_path_requires_thread_context
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 51.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 3
+      summary_omission_risk: high
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: reply_thread_dependency
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: needs_thread_boundary
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0012
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0012
+      source_stub_id: STUB_0008_C_04
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_ambiguous_transition
+    assist_outputs_to_fill_before_review:
+      candidate_summary: thread_context_required
+      signal_family_suggestions:
+        - 成果展示
+        - needs_thread
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 1
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: insufficient_metadata_without_thread
+      priority_explanation: slow_context_ambiguous_probe
+      missing_evidence_note: transition_cannot_be_resolved_from_structured_metadata_only
+      second_review_suggestion: true
+    reviewer_fields:
+      assisted_review_time_seconds: 54.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 3
+      summary_omission_risk: high
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: ambiguous_thread_dependency
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: insufficient_transition_metadata
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0013
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0013
+      source_stub_id: STUB_0008_D_01
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 24.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0014
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0014
+      source_stub_id: STUB_0008_D_02
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 25.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0015
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0015
+      source_stub_id: STUB_0008_D_03
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 23.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0011_0016
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0016
+      source_stub_id: STUB_0008_D_04
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    reviewer_fields:
+      assisted_review_time_seconds: 24.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+aggregate_summary:
+  reviewed_count: 16
+  assisted_total_review_time_seconds: 530.0
+  assisted_average_review_time_seconds: 33.125
+  assisted_candidates_per_reviewer_hour: 108.679245
+  label_counts:
+    scam: 4
+    non_scam: 4
+    uncertain: 8
+    not_reviewable: 0
+  uncertainty_rate: 0.5
+  second_review_required_count: 8
+  second_review_rate: 0.5
+  insufficient_evidence_count: 8
+  insufficient_evidence_rate: 0.5
+  raw_evidence_excluded_from_git_rate: 1.0
+  high_omission_risk_count: 4
+  medium_omission_risk_count: 4
+  low_omission_risk_count: 8
+  summary_usefulness_mean: 3.9375
+  summary_usefulness_4_or_5_rate: 0.75
+  schema_prefill_acceptance_rate: 0.5
+  schema_prefill_minor_correction_rate: 0.5
+  signal_suggestion_acceptance_rate: 0.5
+  signal_suggestion_minor_correction_rate: 0.5
+  hard_negative_warning_acceptance_or_not_applicable_rate: 1.0
+  priority_explanation_acceptance_rate: 1.0
+
+empirical_comparison_to_manual_baseline:
+  comparison_is_empirical_assisted_review_result: true
+  manual_baseline_total_review_time_seconds: 670.0
+  assisted_total_review_time_seconds: 530.0
+  assisted_total_time_difference_seconds: -140.0
+  manual_baseline_average_review_time_seconds: 41.875
+  assisted_average_review_time_seconds: 33.125
+  assisted_average_time_difference_seconds: -8.75
+  assisted_average_time_lower_percent: 20.895522
+  manual_baseline_median_review_time_seconds: 38.5
+  assisted_median_review_time_seconds: 29.5
+  assisted_median_time_difference_seconds: -9.0
+  manual_baseline_p95_review_time_seconds: 60.0
+  assisted_p95_review_time_seconds: 54.0
+  assisted_p95_time_difference_seconds: -6.0
+  manual_baseline_candidates_per_reviewer_hour: 85.970149
+  assisted_candidates_per_reviewer_hour: 108.679245
+  assisted_candidates_per_hour_difference: 22.709096
+  assisted_candidates_per_hour_relative_increase_percent: 26.415094
+  manual_baseline_high_value_candidates_per_hour: 21.492537
+  assisted_high_value_candidates_per_hour: 27.169811
+  assisted_high_value_candidates_per_hour_difference: 5.677274
+  assisted_high_value_candidates_per_hour_relative_increase_percent: 26.415096
+  manual_baseline_yield_rate: 0.25
+  assisted_yield_rate: 0.25
+  assisted_yield_rate_difference: 0.0
+  manual_baseline_uncertainty_rate: 0.5
+  assisted_uncertainty_rate: 0.5
+  assisted_uncertainty_rate_difference: 0.0
+  manual_baseline_second_review_rate: 0.375
+  assisted_second_review_rate: 0.5
+  assisted_second_review_rate_difference: 0.125
+  interpretation: empirical_batch_0011_assisted_review_improves_review_speed_while_preserving_human_uncertainty_boundary
+
+lane_summary:
+  strong_source_priority:
+    count: 4
+    assisted_total_review_time_seconds: 92.0
+    assisted_average_review_time_seconds: 23.0
+    scam_count: 4
+    non_scam_count: 0
+    uncertain_count: 0
+    second_review_required_count: 0
+    insufficient_evidence_count: 0
+    interpretation: assist_effect_strong_on_fast_lane_orientation
+  result_display_low_context_transition:
+    count: 4
+    assisted_total_review_time_seconds: 135.0
+    assisted_average_review_time_seconds: 33.75
+    scam_count: 0
+    non_scam_count: 0
+    uncertain_count: 4
+    second_review_required_count: 4
+    insufficient_evidence_count: 4
+    interpretation: assist_helps_schema_orientation_but_does_not_resolve_boundary_uncertainty
+  result_display_thread_required:
+    count: 4
+    assisted_total_review_time_seconds: 207.0
+    assisted_average_review_time_seconds: 51.75
+    scam_count: 0
+    non_scam_count: 0
+    uncertain_count: 4
+    second_review_required_count: 4
+    insufficient_evidence_count: 4
+    interpretation: assist_has_limited_effect_when_context_dependency_is_the_main_bottleneck
+  result_display_clean_holdout:
+    count: 4
+    assisted_total_review_time_seconds: 96.0
+    assisted_average_review_time_seconds: 24.0
+    scam_count: 0
+    non_scam_count: 4
+    uncertain_count: 0
+    second_review_required_count: 0
+    insufficient_evidence_count: 0
+    interpretation: assist_supports_fast_hard_negative_calibration

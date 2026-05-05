@@ -1,0 +1,77 @@
+schema_version: reviewer_assist_aggregate_result_v1
+evaluation_id: reviewer-assist-labor-savings-0010
+decision_id: '0147'
+status: completed_aggregate_only_result
+created_at: '2026-05-05'
+source_work_order: data/reviewer_assist_eval/batch_0010_work_order.yaml
+source_assisted_review_result: data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml
+source_manual_baseline: metrics/batch_logs/batch_0009_run_log.yaml
+result_note: experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md
+decision: expand_assist_evaluation
+scope:
+  comparison_type: metadata_only_same_slice_shadow_evaluation
+  representative_of_all_threads_investment_scams: false
+  authorizes_new_collection: false
+  authorizes_model_training: false
+  authorizes_production_detection: false
+  authorizes_final_automated_scam_decisions: false
+counts:
+  candidate_entries: 12
+  completed_assisted_review_entries: 12
+  manual_scam_count: 8
+  manual_non_scam_count: 2
+  manual_uncertain_count: 2
+  assisted_scam_count: 8
+  assisted_non_scam_count: 2
+  assisted_uncertain_count: 2
+labor_metrics:
+  manual_total_review_seconds: 448.0
+  assisted_total_review_seconds: 345.0
+  manual_average_review_seconds: 37.333333
+  assisted_average_review_seconds: 28.75
+  average_review_seconds_difference: -8.583333
+  average_review_time_drop_rate: 0.229911
+  manual_median_review_seconds: 35.5
+  assisted_median_review_seconds: 25.5
+  manual_p95_nearest_rank_seconds: 58.0
+  assisted_p95_nearest_rank_seconds: 53.0
+  manual_candidates_per_reviewer_hour: 96.428571
+  assisted_candidates_per_reviewer_hour: 125.217391
+discovery_metrics:
+  manual_review_worthy_yield: 0.666667
+  assisted_review_worthy_yield: 0.666667
+  manual_high_value_candidates_per_reviewer_hour: 64.285714
+  assisted_high_value_candidates_per_reviewer_hour: 83.478261
+  manual_assisted_final_label_mismatch_rate: 0.0
+  manual_second_review_rate: 0.25
+  assisted_second_review_rate: 0.25
+  assisted_needs_thread_proxy_rate: 0.083333
+  assisted_insufficient_evidence_rate: 0.166667
+assist_quality:
+  summary_usefulness_mean: 4.416667
+  summary_rating_4_to_5_rate: 0.916667
+  summary_omission_risk_counts:
+    low: 9
+    medium: 2
+    high: 1
+  schema_prefill_clean_accepted_rate: 0.75
+  schema_prefill_accepted_or_minor_rate: 1.0
+  schema_prefill_correction_rate: 0.25
+  signal_suggestion_clean_accepted_rate: 0.833333
+  signal_suggestion_accepted_or_minor_rate: 1.0
+  signal_suggestion_correction_rate: 0.166667
+  priority_explanation_clean_accepted_rate: 0.916667
+  priority_explanation_accepted_or_minor_rate: 1.0
+  priority_explanation_correction_rate: 0.083333
+  hard_negative_warning_applicable_count: 5
+  hard_negative_warning_acceptance_rate_among_applicable_entries: 1.0
+  hard_negative_over_or_missed_warning_count: 0
+guardrails:
+  raw_evidence_leakage_incidents: 0
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  controlled_store_locators_included: false
+  legal_or_enforcement_claims_made: false
+next_action: open_another_bounded_metadata_only_or_separately_governed_reviewer_assist_evaluation_slice
