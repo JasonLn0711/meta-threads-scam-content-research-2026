@@ -1,0 +1,61 @@
+schema_version: evidence_store_schema_v1
+title: Evidence Store Record v1
+description: Controlled-store record for raw evidence bytes plus deterministic hash metadata.
+governance:
+  repo_visible_raw_allowed: false
+  default_store: data/evidence_store
+  default_store_git_status: ignored
+  production_store_requirement: outside_git_controlled_store
+required_top_level:
+  - schema_version
+  - evidence_id
+  - created_at
+  - actor
+  - source_info
+  - storage_boundary
+  - content_type
+  - content_encoding
+  - content
+  - byte_length
+  - hash_algorithm
+  - sha256
+properties:
+  schema_version:
+    const: evidence_store_v1
+  evidence_id:
+    type: string
+    format: canonical_uuid
+  created_at:
+    type: string
+    format: utc_timestamp
+  actor:
+    type: string
+  source_info:
+    type: object
+    note: Keep source metadata non-sensitive when mirrored into repo-visible outputs.
+  storage_boundary:
+    const: local_controlled_store
+  content_type:
+    allowed_values:
+      - text
+      - binary
+      - json
+  content_encoding:
+    allowed_values:
+      - utf-8
+      - base64
+  content:
+    type: string
+    note: Raw text or base64 bytes. This field must stay in the controlled store.
+  byte_length:
+    type: integer
+    minimum: 0
+  hash_algorithm:
+    const: sha256
+  sha256:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+integrity_rules:
+  - Recompute sha256 over decoded content bytes before returning content.
+  - Stored evidence files are written with create-exclusive semantics to prevent overwrite.
+  - Audit log entries record the ingest action and original sha256.

@@ -27,6 +27,9 @@ data/sensitive/
 data/screenshots/
 data/browser-exports/
 data/browser-profiles/
+data/evidence_store/*
+data/audit_logs/*
+data/candidate_intake/candidate_stub_*.json
 evidence/raw/
 evidence/private/
 
@@ -34,6 +37,8 @@ evidence/private/
 !data/raw/README.md
 !data/interim/README.md
 !data/processed/README.md
+!data/evidence_store/README.md
+!data/audit_logs/README.md
 !data/samples/
 !data/samples/README.md
 

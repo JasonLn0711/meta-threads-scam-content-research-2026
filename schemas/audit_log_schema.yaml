@@ -1,0 +1,57 @@
+schema_version: audit_log_schema_v1
+title: Audit Log Entry v1
+description: Append-only JSONL entry with hash-chain custody metadata.
+storage:
+  default_path: data/audit_logs/evidence_audit.jsonl
+  default_path_git_status: ignored
+  format: jsonl
+  append_only: true
+  local_append_lock: exclusive_file_lock
+required_top_level:
+  - schema_version
+  - log_id
+  - timestamp
+  - entity_id
+  - action
+  - actor
+  - previous_hash
+  - details
+  - entry_hash
+properties:
+  schema_version:
+    const: audit_log_v1
+  log_id:
+    type: string
+    format: canonical_uuid
+  timestamp:
+    type: string
+    format: utc_timestamp
+  entity_id:
+    type: string
+    note: Usually evidence_id.
+  action:
+    allowed_values:
+      - ingest
+      - candidate_stub_create
+      - retrieve
+      - verify
+      - export_metadata
+  actor:
+    type: string
+  previous_hash:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+  details:
+    type: object
+    note: Non-sensitive metadata only.
+  entry_hash:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+hash_rule:
+  algorithm: sha256
+  material: Canonical JSON entry excluding entry_hash, sorted keys, compact separators.
+verification_rules:
+  - First previous_hash must be 64 zero characters.
+  - Each next previous_hash must equal the prior entry_hash.
+  - Each entry_hash must equal the recomputed hash of the entry material.
+  - Local chain verification detects entry edits, insertions, and reordering. External anchoring is required to detect all tail truncation cases.
