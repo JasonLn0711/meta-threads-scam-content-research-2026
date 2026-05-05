@@ -2,7 +2,15 @@
 
 Date: 2026-05-05
 
-Status: ready for human context-gate review; not an empirical result yet
+Status: handoff completed; empirical context-gate result recorded in Decision
+`0152`
+
+Result files:
+
+```text
+data/reviewer_assist_eval/batch_0012_context_gate_result.yaml
+data/reviewer_assist_eval/batch_0012_aggregate_result.yaml
+```
 
 ## Purpose
 

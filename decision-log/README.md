@@ -138,3 +138,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-05-05 | Recorded Batch 0011 as an empirical metadata-only Reviewer Assist expansion result and selected bounded `expand_assist_evaluation` | `0149-record-reviewer-assist-expansion-batch-0011-result.md` |
 | 2026-05-05 | Opened Batch 0012 as a bounded metadata-only Reviewer Assist context-gate revision for the thread-required lane | `0150-open-reviewer-assist-thread-required-lane-revision.md` |
 | 2026-05-05 | Prepared the Batch 0012 reviewer-facing context-gate packet and handoff without claiming empirical results | `0151-prepare-reviewer-assist-batch-0012-context-gate-handoff.md` |
+| 2026-05-05 | Recorded Batch 0012 as an empirical context-gate result and adopted the thread-required context-gate revision with a source-packet alignment warning | `0152-record-reviewer-assist-batch-0012-context-gate-result.md` |

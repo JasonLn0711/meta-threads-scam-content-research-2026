@@ -54,6 +54,8 @@ Do not store:
 | `batch_0012_reviewer_rules.md` | Reviewer-facing rule sheet for the Batch `0012` context-gate revision | safe for reviewer |
 | `batch_0012_reviewer_fill_sheet_template.yaml` | Reviewer-facing fill template with prior-assisted outcomes removed | safe for reviewer |
 | `batch_0012_reviewer_context_gate_packet.yaml` | Reviewer-facing Batch `0012` context-gate packet with revised assist outputs filled and human reviewer fields blank | ready for human context-gate review |
+| `batch_0012_context_gate_result.yaml` | Completed empirical metadata-only context-gate fill for Batch `0012` | completed empirical result |
+| `batch_0012_aggregate_result.yaml` | Machine-readable aggregate result for Decision `0152` | completed aggregate result |
 
 ## Use
 
@@ -69,11 +71,12 @@ experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md
 experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md
 ```
 
-Batch `0012` has a separate reviewer-facing packet:
+Batch `0012` has a separate reviewer-facing packet and result:
 
 ```text
 data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml
+data/reviewer_assist_eval/batch_0012_context_gate_result.yaml
 ```
 
-It is a packet only, not a completed empirical result. Reviewer fields must stay
-blank until a human fills them under `batch_0012_reviewer_rules.md`.
+The packet remains a packet artifact. The completed empirical result belongs in
+the result file and must preserve raw-evidence exclusion.

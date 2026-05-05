@@ -2,8 +2,7 @@
 
 Date: 2026-05-05
 
-Status: reviewer-facing context-gate packet prepared; open for human fill;
-aggregate result not available yet
+Status: empirical context-gate result completed with packet alignment warnings
 
 ## Purpose
 
@@ -30,6 +29,9 @@ the correct next action, and avoid over-requesting thread context for controls?
 - Reviewer fill template: `data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml`
 - Reviewer context-gate packet: `data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml`
 - Human-fill handoff: `reports/reviewer-assist-batch-0012-context-gate-handoff.md`
+- Completed context-gate result: `data/reviewer_assist_eval/batch_0012_context_gate_result.yaml`
+- Aggregate result: `data/reviewer_assist_eval/batch_0012_aggregate_result.yaml`
+- Result decision: `decision-log/0152-record-reviewer-assist-batch-0012-context-gate-result.md`
 - Prior result decision: `decision-log/0149-record-reviewer-assist-expansion-batch-0011-result.md`
 - Prior aggregate result: `data/reviewer_assist_eval/batch_0011_aggregate_result.yaml`
 
@@ -81,41 +83,78 @@ The packet fills only revised assist outputs:
 It leaves all `reviewer_fields` blank and does not expose prior Batch `0011`
 labels, timings, second-review decisions, or insufficient-evidence decisions.
 
-The packet is ready for human context-gate review, not aggregate synthesis.
+The packet was later completed by human review. The completed result is now
+recorded in `data/reviewer_assist_eval/batch_0012_context_gate_result.yaml`.
 
-## Fields To Fill
-
-For each entry in `data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml`, fill:
-
-| Field group | Required fill |
-|---|---|
-| Context gate | accepted/corrected/rejected status, usefulness, omission risk |
-| Next action | metadata label, thread-before-label, second review, hard-negative, or not-reviewable |
-| Minimal context request | accepted/corrected/over-requested/under-requested/not applicable |
-| Risk controls | over-request risk, under-request risk |
-| Human review | context-gate review time, metadata-only label if appropriate |
-| Safety | second-review flag, insufficient-evidence flag, raw-evidence exclusion confirmation |
-
-## Pending Aggregate Result
+## Completed Aggregate Result
 
 | Metric | Batch 0011 baseline | Batch 0012 revised gate | Difference |
 |---|---:|---:|---:|
-| Target lane reviewed candidates | 4 | pending | pending |
-| Target lane average seconds | 51.75 | pending | pending |
-| Target lane median seconds | pending | pending | pending |
-| Target lane p95 seconds | pending | pending | pending |
-| Correct thread-before-label routing rate | pending | pending | pending |
-| Metadata-only overreach count | pending | pending | pending |
-| Control over-request count | pending | pending | pending |
-| Hard-negative over-request count | pending | pending | pending |
-| Fast-lane slowdown count | pending | pending | pending |
-| Second-review rate | 1.0 for target lane | pending | pending |
-| Insufficient-evidence rate | 1.0 for target lane | pending | pending |
-| Raw-evidence leakage incidents | 0 required | pending | pending |
+| Target lane reviewed candidates | 4 | 4 | 0 |
+| Target lane average seconds | 51.75 | 29.5 | -22.25 |
+| Target lane median seconds | pending | 29.5 | n/a |
+| Target lane p95 seconds | pending | 30.85 | n/a |
+| Correct thread-before-label routing rate | pending | 1.0 | n/a |
+| Metadata-only overreach count | pending | 0 | n/a |
+| Boundary-control over-request count | pending | 0 | n/a |
+| Hard-negative over-request count | pending | 0 | n/a |
+| Fast-lane slowdown count | pending | 0 | n/a |
+| Second-review rate | 1.0 for target lane | 1.0 for target lane | 0 |
+| Insufficient-evidence rate | 1.0 for target lane | 1.0 for target lane | 0 |
+| Raw-evidence leakage incidents | 0 required | 0 | 0 |
+
+Across all 12 entries:
+
+| Metric | Value |
+|---|---:|
+| Total context-gate review seconds | 300.0 |
+| Average context-gate review seconds | 25.0 |
+| Median context-gate review seconds | 27.5 |
+| P95 context-gate review seconds | 30.45 |
+
+## Lane Interpretation
+
+| Lane role | Count | Result |
+|---|---:|---|
+| `target_thread_required` | 4 | 4/4 routed to `needs_thread_before_label`; 0 metadata-only overreach |
+| `boundary_control` | 4 | 4/4 routed to second review before label; 0 thread over-request |
+| `hard_negative_control` | 2 | 2/2 hard negatives preserved; 0 thread over-request |
+| `fast_lane_control` | 2 | 2/2 metadata sufficient; 0 fast-lane slowdown |
+
+## Validation
+
+Validation command:
+
+```bash
+.venv/bin/python scripts/validate_reviewer_assist_context_gate_result.py
+```
+
+Validation result:
+
+| Check | Count |
+|---|---:|
+| Required-field / aggregate errors | 0 |
+| Source-packet alignment warnings | 12 |
+| Raw-evidence leakage incidents | 0 |
+
+The source-packet alignment warnings are non-fatal traceability warnings. They
+come from expected-behavior alias differences and from the completed result
+using fast-lane controls `STUB_0008_A_01` / `STUB_0008_A_02`, while the
+generated source packet used `STUB_0008_A_03` / `STUB_0008_A_04`.
+
+The aggregate metrics are internally valid by workbench entry and slice role,
+but future reuse of the packet generator should reconcile fast-lane control
+selection before reviewer delivery.
 
 ## Decision Slot
 
-Select exactly one after the reviewer fields are filled:
+Selected option:
+
+```text
+adopt_context_gate_revision
+```
+
+Available options were:
 
 - `adopt_context_gate_revision`;
 - `revise_context_gate_again`;
@@ -123,7 +162,7 @@ Select exactly one after the reviewer fields are filled:
 - `pause_thread_required_lane`;
 - `request_governed_thread_context_capture_design`.
 
-Current decision: `pending_context_gate_fill`
+Current decision: `adopt_context_gate_revision`
 
 ## Stop Conditions
 

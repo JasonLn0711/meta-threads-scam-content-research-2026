@@ -42,6 +42,7 @@ build_candidate_intake_v2.py Build Batch 0004 metadata-only manual-assisted inta
 validate_candidate_intake_v2.py Validate a metadata-only candidate intake worksheet
 convert_candidate_intake_v2.py Report on or convert completed intake entries into candidate_record_v2 files
 build_reviewer_assist_context_gate_packet.py Build the Batch 0012 reviewer-facing context-gate packet without prior outcome leakage
+validate_reviewer_assist_context_gate_result.py Validate and recompute the Batch 0012 context-gate result
 ```
 
 ## Local Python Setup
@@ -229,6 +230,15 @@ Build the Batch 0012 Reviewer Assist context-gate packet:
 
 This writes `data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml`.
 It fills revised assist outputs but leaves all human reviewer fields blank.
+
+Validate the Batch 0012 Reviewer Assist context-gate result:
+
+```bash
+.venv/bin/python scripts/validate_reviewer_assist_context_gate_result.py
+```
+
+This recomputes the aggregate metrics, checks required reviewer fields, confirms
+raw-evidence exclusion, and reports source-packet alignment warnings.
 
 Validate the Batch 0004 candidate intake worksheet:
 
