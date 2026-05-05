@@ -26,3 +26,5 @@ Current v2 learning-loop logs:
 - `batch_0005_run_log.yaml`
 - `batch_0006_run_log.yaml`
 - `batch_0007_run_log.yaml`
+- `batch_0008_run_log.yaml`
+- `batch_0009_run_log.yaml`

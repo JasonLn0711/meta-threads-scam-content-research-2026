@@ -22,20 +22,28 @@ data_authorization_request.md
 dataset_manifest_template.md
 experiment_log_template.md
 guideline_revision_log_template.md
+hard_negative_hesitation_log_template.csv
+labor_savings_aggregate_report_template.md
 manual_collection_prebuild_handoff.md
 manual_collection_rehearsal_checklist.md
 pilot_batch_work_order.md
 pilot_checkpoint_review.md
 pilot_decision_memo.md
 pilot_result_summary.md
+priority_ranking_evaluation_table.csv
 real_pilot_readiness_review.md
 redaction_checklist.md
 report_review_feedback.md
+reviewer_assist_governance_checklist.md
+reviewer_assist_labor_savings_worksheet.md
 reviewer_triage_packet.md
+schema_prefill_correction_log_template.csv
+signal_family_extraction_qa_table.csv
 source_candidate_intake.md
 source_sampling_frame_template.csv
 stakeholder_authorization_decision_record.md
 stakeholder_pilot_request_email.md
+summary_usefulness_rubric.md
 thread_item_sample.json
 thread_item_sample_batch.json
 track_b_candidate_review_template.md
@@ -54,6 +62,19 @@ Use `pilot_decision_memo.md`, `pilot_result_summary.md`, and `baseline_error_rev
 Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
 
 Use `track_b_candidate_review_template.md` for repo-safe Track B candidate-review outcome and reviewer-burden measurement fields. It is for dual-success evaluation only: discovery effectiveness plus reviewer-labor efficiency. It must not include raw evidence and does not change Track B caps, authorize new source arms, or authorize model training.
+
+Use the Reviewer Assist evaluation templates opened by Decision `0145` only for metadata-only labor-savings evaluation in service of the governed automatic or assisted discovery method:
+
+- `reviewer_assist_labor_savings_worksheet.md`
+- `schema_prefill_correction_log_template.csv`
+- `summary_usefulness_rubric.md`
+- `signal_family_extraction_qa_table.csv`
+- `hard_negative_hesitation_log_template.csv`
+- `priority_ranking_evaluation_table.csv`
+- `labor_savings_aggregate_report_template.md`
+- `reviewer_assist_governance_checklist.md`
+
+These templates measure whether assisted review improves discovery yield per reviewer hour without increasing correction burden, disagreement, hard-negative false-positive pressure, or governance risk. They do not authorize new collection, real LLM/API calls, model training, production detection, legal determinations, enforcement, or raw evidence in git.
 
 Use `browser_candidate_promotion_review.md` with `docs/53-dedupe-first-full-thread-ready-gate.md` before any future browser-session candidate is promoted into an official selected item after run `0039`.
 

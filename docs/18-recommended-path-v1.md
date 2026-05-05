@@ -5,8 +5,10 @@
 From this point forward, the repo's first-principle goal is:
 
 ```text
-Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+Design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
 ```
+
+Everything else is subordinate to this goal. Reviewer burden reduction, governance, evidence handling, hard-negative protection, schema work, synthetic policy loops, and reports are support requirements for the discovery method, not separate competing objectives.
 
 Use [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md) as the current north-star note. Use [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md) for the next reviewer-assistance research layer. Use [56-first-principle-investment-scam-discovery-method.md](56-first-principle-investment-scam-discovery-method.md) as the supporting discovery-method note.
 
@@ -46,18 +48,28 @@ checkpoint 0081 research evidence
 → decision 0140: Predictive Simulation Layer v1 added
 → decision 0141: Defensive Self-Play Layer v1 added
 → decision 0142: Adaptive Policy Deployment Loop v1 added
-→ Reviewer Assist Layer labor-savings evaluation
+→ decision 0143: sample incompleteness and discovery-design purpose recorded
+→ decision 0144: automatic discovery method recorded as the single top priority
+→ decision 0145: Reviewer Assist labor-savings evaluation opened for automatic discovery
 → schema-prefill, summary-assisted review, priority-ranking, and labor-savings evaluation
 → decision on expansion, revision, or pause
 ```
 
 Do not treat package maintenance, generic governance, record-count growth, UI/API/schema demos, or model training as progress unless it improves this labor-efficient discovery-method path.
 
-## Immediate Report Milestone
+Do not treat the current collected cases as a representative sample of all Threads investment scams. They are partial fragments that can seed hypotheses and evaluate workflow behavior, but they cannot by themselves establish full-platform rules or a complete scam taxonomy. The path must therefore emphasize governed automatic or assisted candidate-discovery design, followed by bounded tests on new slices, rather than retrospective induction from the known case set.
 
-By `2026-04-30`, produce [../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md) for CIB/165-facing review.
+## Historical Report Milestone
 
-This report is the immediate research deliverable. It should turn the current scaffold into a readable v0 research checkpoint with problem definition, Threads-only scope, historical dataset design, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and a post-0076 path decision.
+The earlier `2026-04-30` report milestone is preserved here for lineage. It is
+not the current next action after the Decision `0143` through `0145`
+realignment.
+
+The historical milestone was to produce
+[../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md)
+for CIB/165-facing review.
+
+That report package should turn the scaffold into a readable v0 research checkpoint with problem definition, Threads-only scope, historical dataset design, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and a post-0076 path decision.
 
 Use [27-report-v0-delivery-plan.md](27-report-v0-delivery-plan.md), [../reports/threads-scam-content-research-v0-executive-brief.md](../reports/threads-scam-content-research-v0-executive-brief.md), [../reports/post-0076-next-decision-memo.md](../reports/post-0076-next-decision-memo.md), and [../reports/report-v0-review-checklist.md](../reports/report-v0-review-checklist.md) to make the report package reviewable before delivery.
 
@@ -66,17 +78,25 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 ## Current Post-0076 Path
 
 The repo has moved from controlled execution planning into v2 metadata-only
-reviewer-routing evaluation.
+reviewer-routing and Reviewer Assist evaluation.
 
-Immediate next action: use the supported context-gating policy as the routing
-base for a Reviewer Assist Layer labor-savings evaluation. Do not open another
-generic source arm or controlled batch by habit. Decision `0132` adopts the
+Immediate next action: fill the Decision `0150` / Batch `0012` Reviewer Assist
+context-gate revision slice, with special attention to the
+`result_display_thread_required` lane. Do not open another generic source arm
+or controlled batch by habit. Decision `0132` adopts the
 Batch `0008` context-gating policy, decision `0133` opens Batch `0009`, and
 decision `0134` records that Batch `0009` supports the policy with
 `high_value_candidates_per_hour: 64.285714` versus Batch `0008` at `21.492537`.
-The next work should test schema prefill, summary-assisted review, priority
-explanations, correction-rate tracking, and reviewer-time reduction under human
-final judgment.
+Decision `0145` opens the evaluation package, Decision `0146` opens the
+fillable metadata-only workbench, and Decision `0147` records the aggregate-only
+result selecting `expand_assist_evaluation`. Decision `0148` opens
+`data/reviewer_assist_eval/batch_0011_work_order.yaml` as the next bounded
+metadata-only slice, and Decision `0149` records the completed empirical
+assisted-review result. Batch `0011` lowered average review time from `41.875`
+to `33.125` seconds while preserving the same final label mix and zero
+raw-evidence leakage. Decision `0150` opens Batch `0012` to test whether the
+assistant can route thread-dependent items to `needs_thread_before_label`
+faster without over-requesting thread context for controls.
 
 Support tooling now exists for that next work: Evidence Layer v1 provides
 metadata-safe custody, SHA-256 integrity checks, and audit-chain verification;
@@ -150,12 +170,19 @@ Historical pilot-launch materials remain available in [29-authorized-pilot-execu
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1.
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1. Decision `0143` records that current cases are partial fragments. Decision `0144` records automatic or assisted discovery as the single highest priority. Decision `0145` opens the Reviewer Assist labor-savings evaluation package for that discovery method. Decision `0146` opens the metadata-only execution workbench. Decision `0147` records the aggregate-only result and selects `expand_assist_evaluation`. Decision `0148` opens the next bounded expansion slice on Batch `0008`. Decision `0149` records Batch `0011` as an empirical metadata-only assisted-review result and selects bounded `expand_assist_evaluation`. Decision `0150` opens Batch `0012` as a thread-required context-gate revision.
 
 The next repo action is not to polish `0118`, `0120`, another package, or another
-generic source arm. Use the supported context-gating policy as the routing base
-for Reviewer Assist labor-savings evaluation while keeping raw-evidence
-exclusion, human final judgment, and aggregate-only reporting intact.
+generic source arm. Use Decision `0150`,
+[../data/reviewer_assist_eval/batch_0012_work_order.yaml](../data/reviewer_assist_eval/batch_0012_work_order.yaml),
+[../data/reviewer_assist_eval/batch_0012_reviewer_rules.md](../data/reviewer_assist_eval/batch_0012_reviewer_rules.md),
+[../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml](../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml),
+and [../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md)
+to fill the next bounded Reviewer Assist context-gate revision while keeping
+raw-evidence exclusion, human final judgment, and aggregate-only reporting
+intact.
+
+The next repo action also must avoid overfitting to current case fragments. Reviewer Assist and policy-routing work should help discover, triage, and evaluate new review-worthy candidates under governed source boundaries. Existing reviewed cases should remain seeds, hard-negative controls, and evaluation references, not the assumed universe of Threads investment-scam behavior.
 
 Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
 

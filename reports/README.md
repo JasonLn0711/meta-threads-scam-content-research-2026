@@ -4,11 +4,13 @@ This directory contains externally readable research reports produced from the T
 
 Reports should be more polished than working notes, but they should remain honest about evidence limits, data access status, and phase boundaries.
 
-From this point forward, reports should evaluate the repo's north-star goal: building a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible. Discovery yield and reviewer burden are joint success conditions.
+From this point forward, reports should evaluate the repo's single highest priority: designing a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates. Discovery yield and reviewer burden are joint success conditions for that method.
 
 The current north-star reference is [../docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](../docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md).
 
 The current reviewer-assist design reference is [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md).
+
+The current reviewer-assist evaluation plan is [reviewer-assist-labor-savings-evaluation-plan.md](reviewer-assist-labor-savings-evaluation-plan.md).
 
 ## Current Reports
 
@@ -36,6 +38,7 @@ The current reviewer-assist design reference is [../docs/62-reviewer-assist-laye
 | checkpoint 0081 Track B Day 1 batch 0002 second review | 2026-04-28 | Second review of ten hard-negative probe candidates with final Track B review outcomes | [checkpoint-0081-track-b-day-1-batch-0002-second-review.md](checkpoint-0081-track-b-day-1-batch-0002-second-review.md) |
 | checkpoint 0081 Track B dual-success evaluation | 2026-04-28 | Evaluation plan for measuring discovery effectiveness and reviewer-labor efficiency without changing caps | [checkpoint-0081-track-b-dual-success-evaluation-plan.md](checkpoint-0081-track-b-dual-success-evaluation-plan.md) |
 | reviewer assist layer design | 2026-04-28 | Forward-looking design for labor-efficient reviewer assistance after Track B | [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) |
+| reviewer assist labor-savings evaluation | 2026-05-05 | Metadata-only plan for testing whether Reviewer Assist improves automatic or assisted discovery without new collection | [reviewer-assist-labor-savings-evaluation-plan.md](reviewer-assist-labor-savings-evaluation-plan.md) |
 | checkpoint 0055 v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0055-v0.1.md](threads-scam-content-checkpoint-0055-v0.1.md) |
 | checkpoint v0.1 | 2026-04-25 | CIB/165-facing checkpoint review | [threads-scam-content-checkpoint-0042-v0.1.md](threads-scam-content-checkpoint-0042-v0.1.md) |
 | checkpoint synthesis | 2026-04-25 | Internal checkpoint review | [../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](../experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md) |
@@ -115,6 +118,27 @@ The current reviewer-assist design reference is [../docs/62-reviewer-assist-laye
 | [../decision-log/0131-update-track-b-dual-success-evaluation-framing.md](../decision-log/0131-update-track-b-dual-success-evaluation-framing.md) | Decision recording that Track B success now requires both discovery effectiveness and reviewer-labor efficiency measurement, without changing caps. |
 | [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) | Design artifact for reducing reviewer reading, summarization, signal extraction, schema filling, triage, and reporting burden while preserving human final judgment. |
 | [../decision-log/0130-open-reviewer-assist-layer-design.md](../decision-log/0130-open-reviewer-assist-layer-design.md) | Decision opening the Reviewer Assist Layer design without authorizing model training or production deployment. |
+| [reviewer-assist-labor-savings-evaluation-plan.md](reviewer-assist-labor-savings-evaluation-plan.md) | Decision 0145 evaluation plan for comparing manual baseline and assisted review on metadata-only slices. |
+| [../decision-log/0145-open-reviewer-assist-labor-savings-evaluation-for-automatic-discovery.md](../decision-log/0145-open-reviewer-assist-labor-savings-evaluation-for-automatic-discovery.md) | Decision opening the Reviewer Assist labor-savings evaluation package without authorizing new collection. |
+| [../decision-log/0146-open-reviewer-assist-evaluation-execution-workbench.md](../decision-log/0146-open-reviewer-assist-evaluation-execution-workbench.md) | Decision opening the metadata-only execution workbench without claiming assisted-review results yet. |
+| [../data/reviewer_assist_eval/batch_0010_work_order.yaml](../data/reviewer_assist_eval/batch_0010_work_order.yaml) | Controller-side work order for filling the assisted-review condition from structured metadata only. |
+| [../data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml](../data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml) | Completed metadata-only assisted-review fill for the Decision `0146` workbench. |
+| [../data/reviewer_assist_eval/batch_0010_aggregate_result.yaml](../data/reviewer_assist_eval/batch_0010_aggregate_result.yaml) | Machine-readable aggregate-only result for Decision `0147`. |
+| [../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md](../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md) | Aggregate-only result selecting `expand_assist_evaluation`. |
+| [../decision-log/0147-record-reviewer-assist-labor-savings-evaluation-result.md](../decision-log/0147-record-reviewer-assist-labor-savings-evaluation-result.md) | Decision recording the aggregate-only Reviewer Assist labor-savings result without authorizing new collection. |
+| [../decision-log/0148-open-reviewer-assist-expansion-slice-batch-0008.md](../decision-log/0148-open-reviewer-assist-expansion-slice-batch-0008.md) | Decision opening the next metadata-only Reviewer Assist expansion slice on Batch 0008. |
+| [../experiments/batch_variants/0011-reviewer-assist-expansion-batch-0008.md](../experiments/batch_variants/0011-reviewer-assist-expansion-batch-0008.md) | Experiment plan for the Batch 0008 Reviewer Assist expansion slice. |
+| [../data/reviewer_assist_eval/batch_0011_work_order.yaml](../data/reviewer_assist_eval/batch_0011_work_order.yaml) | Completed work order for the Batch 0008 Reviewer Assist expansion slice. |
+| [../data/reviewer_assist_eval/batch_0011_assisted_review_result.yaml](../data/reviewer_assist_eval/batch_0011_assisted_review_result.yaml) | Completed empirical metadata-only assisted-review fill for Batch 0011. |
+| [../data/reviewer_assist_eval/batch_0011_aggregate_result.yaml](../data/reviewer_assist_eval/batch_0011_aggregate_result.yaml) | Aggregate result for Decision 0149. |
+| [../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md](../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md) | Empirical result note for the Batch 0008 Reviewer Assist expansion slice. |
+| [../decision-log/0149-record-reviewer-assist-expansion-batch-0011-result.md](../decision-log/0149-record-reviewer-assist-expansion-batch-0011-result.md) | Decision recording Batch 0011 result and bounded `expand_assist_evaluation`. |
+| [../decision-log/0150-open-reviewer-assist-thread-required-lane-revision.md](../decision-log/0150-open-reviewer-assist-thread-required-lane-revision.md) | Decision opening Batch 0012 as a thread-required context-gate revision. |
+| [../experiments/batch_variants/0012-reviewer-assist-thread-required-lane-revision.md](../experiments/batch_variants/0012-reviewer-assist-thread-required-lane-revision.md) | Experiment plan for the Batch 0012 context-gate revision. |
+| [../data/reviewer_assist_eval/batch_0012_work_order.yaml](../data/reviewer_assist_eval/batch_0012_work_order.yaml) | Controller-side work order for the Batch 0012 context-gate revision. |
+| [../data/reviewer_assist_eval/batch_0012_reviewer_rules.md](../data/reviewer_assist_eval/batch_0012_reviewer_rules.md) | Reviewer-facing rules for Batch 0012. |
+| [../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml](../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml) | Reviewer-facing fill template for Batch 0012. |
+| [../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md) | Open result workbench for the Batch 0012 context-gate revision. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-readme.md](checkpoint-0081-track-b-formal-signoff-reviewer-readme.md) | Repo copy of the formal signoff reviewer package README. |
 | [checkpoint-0081-track-b-formal-signoff-reviewer-message.md](checkpoint-0081-track-b-formal-signoff-reviewer-message.md) | Repo copy of the formal signoff reviewer message. |
 | [checkpoint-0081-track-b-formal-signoff-package-manifest.md](checkpoint-0081-track-b-formal-signoff-package-manifest.md) | Repo copy of the formal signoff package manifest. |
@@ -187,7 +211,8 @@ The v0 report package should now describe the governed checkpoint-0081 path as:
 26. use calibration-only browser work only inside the approved Track B source-arm design or a later capped decision
 27. require caps, source rules, controlled-store handling, redaction, second review, strict validation, discovery-yield metrics, reviewer-burden metrics, legal/privacy status, and stop-rule owners before any live candidate-discovery collection
 28. use [checkpoint-0081-track-b-dual-success-evaluation-plan.md](checkpoint-0081-track-b-dual-success-evaluation-plan.md) to evaluate Track B as both a discovery-effectiveness and reviewer-labor-efficiency test
-29. after Track B, use [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) to evaluate reviewer assist layer design, schema prefill, summary-assisted review, priority ranking, labor-savings measurement, and decision-support UI/API demonstration
+29. after Track B, use [../docs/62-reviewer-assist-layer-design.md](../docs/62-reviewer-assist-layer-design.md) to evaluate reviewer assist layer design, schema prefill, summary-assisted review, priority ranking, and labor-savings measurement
+30. use decisions `0145` through `0150`, [reviewer-assist-labor-savings-evaluation-plan.md](reviewer-assist-labor-savings-evaluation-plan.md), [../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md](../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md), [../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md](../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md), and [../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md) to continue bounded Reviewer Assist evaluation, with the thread-required context gate filled before broader expansion
 
 Forward-looking reports should include average review time per candidate, median review time, p95 review time, candidates reviewed per hour, percentage of fields auto-filled, percentage of fields manually corrected, summary usefulness rating, percentage of candidates requiring full original-thread reading, second-review rate, reviewer disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour.
 

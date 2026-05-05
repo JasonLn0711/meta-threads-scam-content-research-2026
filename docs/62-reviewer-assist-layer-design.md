@@ -2,9 +2,9 @@
 
 ## 1. Purpose
 
-Design a Reviewer Assist Layer for labor-efficient Threads investment-scam candidate discovery.
+Design a Reviewer Assist Layer that supports the repo's single highest priority: a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
 
-The layer should help reviewers understand candidates faster, avoid reading full raw threads whenever possible, see signal-family summaries, see hard-negative warnings, get schema fields pre-filled, prioritize candidates, record decisions faster, and generate aggregate metrics.
+The layer should help reviewers understand candidates faster, avoid reading full raw threads whenever possible, see signal-family summaries, see hard-negative warnings, get schema fields pre-filled, prioritize candidates, record decisions faster, and generate aggregate metrics. It is useful only if it improves the discovery method; it is not a separate product goal.
 
 The reviewer assist layer does not replace the reviewer. It changes the reviewer's job from reading and structuring everything manually to verifying, correcting, and deciding.
 
@@ -330,19 +330,50 @@ The policy is recorded in [docs/63-context-gating-policy.md](63-context-gating-p
 Reviewer Assist should treat this as a routing rule before asking reviewers to
 spend full-thread or second-review effort.
 
-## 15. Recommended Next Artifacts
+## 15. Evaluation Package
 
-Create these artifacts only after Track B supplies enough evidence to ground them:
+Decision `0145` opens the first Reviewer Assist labor-savings evaluation package for the automatic or assisted discovery method. Use:
 
-- reviewer-assist evaluation plan;
-- assisted-review worksheet template;
-- schema-prefill correction log template;
-- summary-usefulness rubric;
-- signal-family extraction QA table;
-- hard-negative hesitation log;
-- priority-ranking evaluation table;
-- labor-savings aggregate report template;
-- decision-support UI/API demonstration plan;
-- governance review checklist for any assisted-review prototype.
+- [../reports/reviewer-assist-labor-savings-evaluation-plan.md](../reports/reviewer-assist-labor-savings-evaluation-plan.md);
+- [../experiments/batch_variants/0010-reviewer-assist-labor-savings-evaluation.md](../experiments/batch_variants/0010-reviewer-assist-labor-savings-evaluation.md);
+- [../experiments/evaluation-notes/0106-reviewer-assist-labor-savings-evaluation-start.md](../experiments/evaluation-notes/0106-reviewer-assist-labor-savings-evaluation-start.md);
+- [../decision-log/0146-open-reviewer-assist-evaluation-execution-workbench.md](../decision-log/0146-open-reviewer-assist-evaluation-execution-workbench.md);
+- [../data/reviewer_assist_eval/batch_0010_work_order.yaml](../data/reviewer_assist_eval/batch_0010_work_order.yaml);
+- [../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md](../experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md);
+- [../templates/reviewer_assist_labor_savings_worksheet.md](../templates/reviewer_assist_labor_savings_worksheet.md);
+- [../templates/schema_prefill_correction_log_template.csv](../templates/schema_prefill_correction_log_template.csv);
+- [../templates/summary_usefulness_rubric.md](../templates/summary_usefulness_rubric.md);
+- [../templates/signal_family_extraction_qa_table.csv](../templates/signal_family_extraction_qa_table.csv);
+- [../templates/hard_negative_hesitation_log_template.csv](../templates/hard_negative_hesitation_log_template.csv);
+- [../templates/priority_ranking_evaluation_table.csv](../templates/priority_ranking_evaluation_table.csv);
+- [../templates/labor_savings_aggregate_report_template.md](../templates/labor_savings_aggregate_report_template.md);
+- [../templates/reviewer_assist_governance_checklist.md](../templates/reviewer_assist_governance_checklist.md).
+
+Decision `0147` records the first aggregate-only result and selects
+`expand_assist_evaluation`. Treat that as support for another bounded
+metadata-only or separately governed slice, not as production readiness or
+platform-wide coverage.
+
+Decision `0148` opens that next bounded metadata-only slice on Batch `0008`.
+Use [../data/reviewer_assist_eval/batch_0011_work_order.yaml](../data/reviewer_assist_eval/batch_0011_work_order.yaml)
+and [../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md](../experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md)
+for the completed empirical expansion result.
+
+Decision `0149` records Batch `0011` as an empirical metadata-only
+assisted-review result and selects bounded `expand_assist_evaluation`.
+The result supports continuing Reviewer Assist evaluation because review time
+fell while label mix, uncertainty handling, hard-negative protection, and
+raw-evidence exclusion remained stable. The next design revision should focus
+on the `result_display_thread_required` lane because missing thread context
+remains the main bottleneck.
+
+Decision `0150` opens that revision as Batch `0012`. Use
+[../data/reviewer_assist_eval/batch_0012_work_order.yaml](../data/reviewer_assist_eval/batch_0012_work_order.yaml),
+[../data/reviewer_assist_eval/batch_0012_reviewer_rules.md](../data/reviewer_assist_eval/batch_0012_reviewer_rules.md),
+[../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml](../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml),
+and [../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md)
+to test whether the assistant can route thread-dependent items to
+`needs_thread_before_label` faster while avoiding over-requested thread review
+on boundary, hard-negative, and fast-lane controls.
 
 Do not implement a UI, API, model training flow, or production-like service until a later decision explicitly authorizes the scope.

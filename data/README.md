@@ -11,6 +11,7 @@ data/
   raw/          local-only approved source evidence
   interim/      local-only normalized working files
   processed/    local-only analysis-ready exports unless explicitly cleared
+  reviewer_assist_eval/ metadata-only Reviewer Assist evaluation work orders and aggregate results
   samples/      safe synthetic or redacted examples only
   predictions/  ignored synthetic predictive simulation logs
   selfplay/     ignored defensive self-play simulation logs
@@ -26,6 +27,7 @@ data/
 - Raw screenshots, copied posts, browser exports, or stakeholder case files are not safe to commit.
 - Any real dataset slice must have authorization recorded in `governance/data-governance.md`.
 - Any dataset used in an experiment should record schema version, annotation guideline version, source type, collection method, sample size, privacy handling, known bias, and allowed uses.
+- Reviewer Assist evaluation files may store structured metadata, routing lanes, human-fill fields, and aggregate results, but not raw evidence or reviewer-facing copies with hidden baseline labels exposed.
 
 ## First Dataset Version
 

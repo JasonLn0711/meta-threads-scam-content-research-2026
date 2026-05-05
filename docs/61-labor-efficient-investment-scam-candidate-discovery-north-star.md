@@ -2,15 +2,42 @@
 
 ## 1. Updated North-Star Statement
 
-From this point forward, the repo's core goal is:
+From this point forward, the repo has one highest priority:
 
 ```text
-Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+Design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
 ```
 
-The operational goal is not merely to find scam posts. The operational goal is to use a small amount of human labor to find enough candidates worth reviewing.
+Scalability, stability, reviewability, labor efficiency, governance-safe evidence handling, hard-negative protection, and reviewer assistance are support requirements for that method. They are not competing goals.
+
+The operational goal is not merely to find scam posts. The operational goal is to design a method that can automatically or semi-automatically surface enough candidates worth human review while keeping reviewer burden and false-positive pressure under control.
 
 This repo remains a documentation-first research scaffold. It does not become a production detector, legal fraud determination system, enforcement system, public warning channel, broad crawler, or raw-evidence store.
+
+## 1A. Sample Boundary And Discovery-Design Purpose
+
+The currently collected cases are partial fragments. They are not the full set of Threads investment scams, not a representative sample of the platform, and not enough to infer the complete distribution of scam strategies on Threads.
+
+Existing cases should be used for:
+
+- seed hypotheses;
+- signal-family candidate ideas;
+- hard-negative calibration;
+- reviewer-workflow design;
+- schema and evidence-field testing;
+- bounded evaluation slices.
+
+Existing cases should not be used to claim:
+
+- a complete Threads investment-scam taxonomy;
+- platform-wide prevalence;
+- recall against all Threads investment scams;
+- that unobserved patterns are unimportant;
+- that the discovery problem is solved once current cases are summarized.
+
+The project purpose is to design a governed automatic or assisted candidate-discovery method that can find review-worthy Threads investment-scam candidates beyond the current fragments. Case-derived regularities are hypotheses to test, not conclusions to freeze.
+
+All other repo goals are subordinate to this discovery-design purpose and must not contradict it.
 
 ## 2. Why "Finding Scams" Is Not Enough
 
@@ -136,6 +163,8 @@ Precision, recall, and F1 can remain useful for controlled slices, but they are 
 
 Important failure modes include:
 
+- treating the current collected cases as representative of all Threads investment scams;
+- overfitting source arms, signals, or summaries to the finite reviewed fragments;
 - high candidate volume but too much manual reading per candidate;
 - fast review flow but too few review-worthy candidates;
 - schema prefill that creates hidden correction burden;
@@ -176,9 +205,36 @@ UI, API, schema, and package demos are demonstration surfaces. The research outp
 
 Do not open item `0082`, open-ended collection, broad crawler/browser expansion, private-message access, account/profile graph capture, landing-page or redirect-chain capture, model training, production detector claims, legal fraud determinations, automated enforcement, public release, or raw evidence in git unless a separate decision explicitly authorizes that scope.
 
+Future automatic-discovery design should separate:
+
+- discovering candidates from a governed source boundary;
+- learning hypotheses from existing examples;
+- testing whether those hypotheses generalize to new bounded slices;
+- measuring reviewer burden and hard-negative pressure;
+- deciding whether the method should expand, revise, or pause.
+
+## 10A. Current Reviewer Assist Evidence
+
+Decisions `0147` and `0149` now provide two metadata-only Reviewer Assist
+evaluation results. The Batch `0011` empirical expansion result reduced average
+review time from `41.875` to `33.125` seconds, increased candidates reviewed per
+hour from `85.970149` to `108.679245`, preserved the final label mix, and kept
+raw-evidence leakage at `0`.
+
+This supports continued bounded Reviewer Assist evaluation. It does not prove
+platform-wide Threads investment-scam coverage, production readiness, legal
+fraud determination capability, or authorization for new collection. The main
+known design weakness is the `result_display_thread_required` lane, where
+missing thread context remains the bottleneck.
+
+Decision `0150` opens Batch `0012` to test that weakness directly. The success
+condition is not confident metadata-only labeling. It is faster, safer routing
+to `needs_thread_before_label` when thread context is necessary, while avoiding
+unnecessary thread-context requests for boundary, hard-negative, and fast-lane
+controls.
+
 ## 11. What Historical Materials Remain Unchanged
 
 Historical checkpoint records, prior reports, Track A/Track B history, decision logs, experiment notes, package QA records, and reviewer-delivery artifacts remain unchanged unless a later task explicitly asks to update a forward-looking routing note.
 
 This document does not rewrite prior history. It sets the forward-looking interpretation of repo work from this point onward.
-

@@ -54,5 +54,9 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0046-targeted-exemplar-intake-start.md` | Repo-safe start note for targeted redacted exemplar intake after the API dry-run remained blocked. |
 | `0099-pre-sync-redacted-field-readiness-check.md` | Historical local pre-sync readiness note naming redacted intake fields needed before the first rehearsal build; retained for audit after origin/main had advanced. |
 | `0100-pre-sync-first-rehearsal-prebuild-handoff.md` | Historical local pre-sync handoff step between collector/operator-filled local intake and the first generated rehearsal record; retained for audit after origin/main had advanced. |
+| `0106-reviewer-assist-labor-savings-evaluation-start.md` | Start note for the Decision 0145 metadata-only Reviewer Assist labor-savings evaluation package. |
+| `0107-reviewer-assist-labor-savings-evaluation-result.md` | Aggregate-only result for Decision 0146/0147 Reviewer Assist labor-savings evaluation; selects `expand_assist_evaluation`. |
+| `0108-reviewer-assist-expansion-batch-0008-result.md` | Empirical metadata-only result for Decision 0148/0149 Reviewer Assist expansion on the Batch 0008 balanced context-gating baseline. |
+| `0109-reviewer-assist-thread-required-lane-revision-result.md` | Open result workbench for Decision 0150 Reviewer Assist context-gate revision on the thread-required lane. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.
