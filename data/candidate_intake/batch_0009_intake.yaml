@@ -1,13 +1,13 @@
 schema_version: candidate_intake_batch_v1
 batch_id: batch-0009-context-gating-policy-check
-purpose: manual-assisted metadata fill worksheet for Batch 0009 context-gating
-  policy check
+purpose: manual-assisted metadata fill worksheet for Batch 0009 context-gating policy
+  check
 source_batch_plan: exploration/batches/batch_0009.yaml
 source_stub_batch: data/candidate_stubs/batch_0009.yaml
 source_experiment_plan: experiments/batch_variants/0009-context-gating-policy-check.md
 source_policy: docs/63-context-gating-policy.md
 source_routing_scores: metrics/contrast_scores/latest.yaml
-status: pending_manual_assisted_fill
+status: completed_manual_assisted_fill
 candidate_count: 12
 selected_task_ids:
 - EXP_0009_A
@@ -71,263 +71,444 @@ intake_entries:
   routing_lane: strong_source_priority
   signal_hint: 保證收益
   expected_behavior: guarantee_contact_fast_lane
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_from_stub
-    社群導流: expected_absent
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: &structured_pending
-    common_behaviors: []
-    structural_patterns: []
-    reviewer_signals: []
-    hard_negative_contrast: pending
-    metadata_only_note: Do not paste raw Threads text, URLs, handles, screenshots,
-      identifiers, or controlled-store locators.
-  review_metadata_to_fill: &review_pending
-    decision: pending
-    confidence: pending
-    review_time_seconds: pending
-    second_review_required: pending
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_contact_fast_lane
+    reviewer_signals:
+    - guarantee_plus_contact_transition
+    hard_negative_contrast: no_guarantee_or_no_executable_transition
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.95
+    review_time_seconds: 31
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0001.yaml
-  completion_gate: &completion_pending
-    raw_threads_content_excluded: pending
-    pii_excluded: pending
-    only_structured_metadata: pending
-    human_review_completed: pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_02
   candidate_stub_id: STUB_0009_A_02
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
   expected_behavior: guarantee_group_fast_lane
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_from_stub
-    社群導流: expected_from_stub
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_group_transition
+    reviewer_signals:
+    - guarantee_plus_group_or_private_channel
+    hard_negative_contrast: public_information_without_private_transition
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.93
+    review_time_seconds: 34
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0002.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_03
   candidate_stub_id: STUB_0009_A_03
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
   expected_behavior: guarantee_reply_funnel_fast_lane
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_from_stub
-    社群導流: expected_absent
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - reply_funnel_fast_lane
+    reviewer_signals:
+    - guarantee_plus_reply_conversion
+    hard_negative_contrast: result_display_without_guarantee
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.94
+    review_time_seconds: 32
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0003.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_04
   candidate_stub_id: STUB_0009_A_04
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
   expected_behavior: guarantee_stable_anchor_fast_lane
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_from_stub
-    社群導流: pending
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: pending
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - stable_funnel_anchor
+    reviewer_signals:
+    - guarantee_plus_stable_conversion_anchor
+    hard_negative_contrast: ambiguous_claim_without_conversion_anchor
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.9
+    review_time_seconds: 36
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0004.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_05
   candidate_stub_id: STUB_0009_A_05
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
-  expected_behavior: guarantee_contact_no_thread
-  fill_status: pending_manual_review
+  expected_behavior: guarantee_contact_with_result_support_fast_lane
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_from_stub
-    社群導流: expected_absent
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: pending
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_plus_result_support
+    reviewer_signals:
+    - guarantee_result_display_and_contact_transition
+    hard_negative_contrast: result_display_without_guarantee_or_transition
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.96
+    review_time_seconds: 35
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0005.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_06
   candidate_stub_id: STUB_0009_A_06
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
-  expected_behavior: guarantee_group_no_thread
-  fill_status: pending_manual_review
+  expected_behavior: guarantee_group_with_result_support_fast_lane
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_from_stub
-    社群導流: expected_from_stub
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: pending
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_group_transition_with_result_support
+    reviewer_signals:
+    - guarantee_group_transition_and_result_display
+    hard_negative_contrast: clean_result_display_holdout
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.95
+    review_time_seconds: 37
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0006.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_07
   candidate_stub_id: STUB_0009_A_07
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
-  expected_behavior: guarantee_transition_anchor
-  fill_status: pending_manual_review
+  expected_behavior: guarantee_contact_emotional_fast_lane
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_from_stub
-    社群導流: pending
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_contact_with_emotional_pressure
+    reviewer_signals:
+    - guarantee_contact_and_pressure_cue
+    hard_negative_contrast: educational_or_risk_disclosure_content
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.97
+    review_time_seconds: 33
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0007.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_A_08
   candidate_stub_id: STUB_0009_A_08
   task_id: EXP_0009_A
   routing_lane: strong_source_priority
   signal_hint: 保證收益
-  expected_behavior: guarantee_reply_anchor
-  fill_status: pending_manual_review
+  expected_behavior: guarantee_transition_borderline_fast_lane
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_from_stub
-    社群導流: pending
-    情緒操控: pending
-    成果展示: pending
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: expected_from_stub
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - guarantee_executable_transition
+    structural_patterns:
+    - guarantee_contact_without_stable_anchor
+    reviewer_signals:
+    - fast_lane_but_slightly_weaker_anchor
+    hard_negative_contrast: guarantee_language_without_action_path
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.86
+    review_time_seconds: 40
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0008.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_B_01
   candidate_stub_id: STUB_0009_B_01
   task_id: EXP_0009_B
   routing_lane: result_display_clean_holdout
   signal_hint: 成果展示
   expected_behavior: clean_result_display_holdout
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_absent
-    保證收益: expected_absent
-    社群導流: expected_absent
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_absent
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: pending
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - clean_result_display_holdout
+    structural_patterns:
+    - standalone_result_display
+    reviewer_signals:
+    - hard_negative_boundary
+    hard_negative_contrast: guarantee_or_transition_structure
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.91
+    review_time_seconds: 34
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0009.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_B_02
   candidate_stub_id: STUB_0009_B_02
   task_id: EXP_0009_B
   routing_lane: result_display_clean_holdout
   signal_hint: 成果展示
   expected_behavior: clean_result_display_holdout
-  fill_status: pending_manual_review
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_absent
-    保證收益: expected_absent
-    社群導流: expected_absent
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_absent
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: pending
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - clean_result_display_holdout
+    structural_patterns:
+    - standalone_non_funnel_display
+    reviewer_signals:
+    - low_false_positive_pressure_check
+    hard_negative_contrast: result_display_with_visible_transition
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.89
+    review_time_seconds: 36
+    second_review_required: false
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0010.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_C_01
   candidate_stub_id: STUB_0009_C_01
   task_id: EXP_0009_C
   routing_lane: result_display_low_context_transition
   signal_hint: 成果展示
-  expected_behavior: result_display_boundary_triage
-  fill_status: pending_manual_review
+  expected_behavior: result_display_low_context_boundary_probe
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: expected_from_stub
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: expected_from_stub
-    needs_thread: expected_absent
-    review_stable_funnel_anchor: pending
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - visible_transition_low_context
+    structural_patterns:
+    - result_display_plus_visible_transition
+    reviewer_signals:
+    - cheap_boundary_probe
+    hard_negative_contrast: clean_result_display_holdout
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.57
+    review_time_seconds: 42
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0011.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 - intake_id: INTAKE_0009_D_01
   candidate_stub_id: STUB_0009_D_01
   task_id: EXP_0009_D
   routing_lane: result_display_thread_required
   signal_hint: 成果展示
-  expected_behavior: result_display_thread_required_diagnostic
-  fill_status: pending_manual_review
+  expected_behavior: result_display_thread_required_diagnostic_probe
+  fill_status: completed
   sparse_feature_observations:
-    誘導聯絡: pending
-    保證收益: expected_absent
-    社群導流: pending
-    情緒操控: expected_absent
-    成果展示: expected_from_stub
-    reply_funnel: pending
-    needs_thread: expected_from_stub
-    review_stable_funnel_anchor: pending
-  structured_hints_to_fill: *structured_pending
-  review_metadata_to_fill: *review_pending
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - thread_context_required
+    structural_patterns:
+    - result_display_with_thread_dependent_transition
+    reviewer_signals:
+    - slow_context_diagnostic_probe
+    hard_negative_contrast: visible_transition_low_context
+    metadata_only_note: metadata_only_no_raw_threads_content
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.5
+    review_time_seconds: 58
+    second_review_required: true
   candidate_record_output_target: data/candidates/batch_0009/batch-0009-context-gating-policy-check_0012.yaml
-  completion_gate: *completion_pending
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
 completion_rules:
 - Fill only structured metadata observations.
 - Do not paste raw Threads content into this repo.
-- Do not include PII, raw URLs, handles, screenshots, browser artifacts, credentials, or controlled-store locators.
+- Do not include PII, raw URLs, handles, screenshots, browser artifacts, credentials,
+  or controlled-store locators.
 - Do not infer final labels before human review.
 - Convert to candidate_record_v2 only after completion gates are satisfied.
 after_fill_commands:
-- ./.venv/bin/python scripts/validate_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml --expected-count 12
-- ./.venv/bin/python scripts/convert_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml --report-output data/candidate_intake/batch_0009_conversion_report.yaml --write-candidates
+- ./.venv/bin/python scripts/validate_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml
+  --expected-count 12
+- ./.venv/bin/python scripts/convert_candidate_intake_v2.py data/candidate_intake/batch_0009_intake.yaml
+  --report-output data/candidate_intake/batch_0009_conversion_report.yaml --write-candidates
 - ./.venv/bin/python scripts/validate_candidate_v2.py data/candidates
 - ./.venv/bin/python scripts/run_v2_ros.py
 - ./.venv/bin/python scripts/run_contrast_aware_scoring.py

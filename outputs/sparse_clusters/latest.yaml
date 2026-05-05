@@ -2,7 +2,7 @@ schema_version: sparse_clusters_v1
 decision_layer: sparse_primary
 similarity: weighted_jaccard_over_binary_sparse_features
 threshold: 0.45
-candidate_count: 64
+candidate_count: 76
 clusters:
 - cluster_id: sparse-cluster-0001
   candidate_ids:
@@ -66,6 +66,18 @@ clusters:
   - batch-0008-context-gate-reviewer-hour-value_0014
   - batch-0008-context-gate-reviewer-hour-value_0015
   - batch-0008-context-gate-reviewer-hour-value_0016
+  - batch-0009-context-gating-policy-check_0001
+  - batch-0009-context-gating-policy-check_0002
+  - batch-0009-context-gating-policy-check_0003
+  - batch-0009-context-gating-policy-check_0004
+  - batch-0009-context-gating-policy-check_0005
+  - batch-0009-context-gating-policy-check_0006
+  - batch-0009-context-gating-policy-check_0007
+  - batch-0009-context-gating-policy-check_0008
+  - batch-0009-context-gating-policy-check_0009
+  - batch-0009-context-gating-policy-check_0010
+  - batch-0009-context-gating-policy-check_0011
+  - batch-0009-context-gating-policy-check_0012
   - synthetic-candidate-0001
   - synthetic-candidate-0002
   - synthetic-candidate-0003
@@ -552,6 +564,98 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.096491
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.648438
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.648438
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.648438
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.46875
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.734375
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.734375
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.096491
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.096491
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.298246
+- left: batch-0004-low-coverage-high-svs_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.368421
 - left: batch-0004-low-coverage-high-svs_0001
   right: synthetic-candidate-0001
   shared_features:
@@ -1067,6 +1171,99 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.08871
 - left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.434783
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.681159
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.681159
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.673913
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.08871
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.08871
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.274194
+- left: batch-0004-low-coverage-high-svs_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.33871
+- left: batch-0004-low-coverage-high-svs_0002
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -1449,6 +1646,73 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.578947
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0004-low-coverage-high-svs_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.452381
 - left: batch-0004-low-coverage-high-svs_0003
   right: synthetic-candidate-0001
   shared_features:
@@ -1937,6 +2201,99 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.08871
 - left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.601449
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.434783
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.681159
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.681159
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.673913
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.08871
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.08871
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.274194
+- left: batch-0004-low-coverage-high-svs_0004
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.33871
+- left: batch-0004-low-coverage-high-svs_0004
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -2333,6 +2690,80 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.354839
 - left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.095238
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - 誘導聯絡
+  shared_features_count: 1
+  weighted_overlap: 0.214286
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.547619
+- left: batch-0004-low-coverage-high-svs_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.738095
+- left: batch-0004-low-coverage-high-svs_0005
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -2801,6 +3232,106 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.084615
 - left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.569231
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 社群導流
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.823077
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.284615
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.261538
+- left: batch-0004-low-coverage-high-svs_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.246377
+- left: batch-0004-low-coverage-high-svs_0006
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -3223,6 +3754,100 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.621849
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.89916
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.310924
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.176923
+- left: batch-0004-low-coverage-high-svs_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
 - left: batch-0004-low-coverage-high-svs_0007
   right: synthetic-candidate-0001
   shared_features:
@@ -3673,6 +4298,106 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.084615
 - left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.569231
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 社群導流
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.823077
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.284615
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.261538
+- left: batch-0004-low-coverage-high-svs_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.246377
+- left: batch-0004-low-coverage-high-svs_0008
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -4073,6 +4798,100 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.815126
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.621849
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.89916
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.310924
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.176923
+- left: batch-0004-low-coverage-high-svs_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
 - left: batch-0004-low-coverage-high-svs_0009
   right: synthetic-candidate-0001
   shared_features:
@@ -4500,6 +5319,106 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.084615
 - left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.746154
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.569231
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 社群導流
+  shared_features_count: 5
+  weighted_overlap: 0.830769
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.823077
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.284615
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.261538
+- left: batch-0004-low-coverage-high-svs_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.246377
+- left: batch-0004-low-coverage-high-svs_0010
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -4866,6 +5785,98 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.345794
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0005-guarantee-vs-result-display-contrast_0001
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -5212,6 +6223,93 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  shared_features_count: 4
+  weighted_overlap: 0.798319
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.210084
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0005-guarantee-vs-result-display-contrast_0002
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -5555,6 +6653,98 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.345794
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0005-guarantee-vs-result-display-contrast_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
 - left: batch-0005-guarantee-vs-result-display-contrast_0003
   right: synthetic-candidate-0001
   shared_features:
@@ -5926,6 +7116,104 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.09322
 - left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.627119
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.915254
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 4
+  weighted_overlap: 0.738462
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.90678
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.313559
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.09322
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.09322
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.288136
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.269841
+- left: batch-0005-guarantee-vs-result-display-contrast_0004
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -6220,6 +7508,76 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.152174
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.111111
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.111111
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 保證收益
+  - 情緒操控
+  shared_features_count: 2
+  weighted_overlap: 0.208696
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.254545
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.121212
 - left: batch-0005-guarantee-vs-result-display-contrast_0005
   right: synthetic-candidate-0001
   shared_features:
@@ -6559,6 +7917,89 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.261905
 - left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0006
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -6866,6 +8307,75 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.354839
 - left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.351852
+- left: batch-0005-guarantee-vs-result-display-contrast_0007
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -7151,6 +8661,73 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.578947
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0005-guarantee-vs-result-display-contrast_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.452381
 - left: batch-0005-guarantee-vs-result-display-contrast_0008
   right: synthetic-candidate-0001
   shared_features:
@@ -7487,6 +9064,92 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.171875
 - left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.246377
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.246377
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.23913
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.294872
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.171875
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.171875
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.53125
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.65625
+- left: batch-0005-guarantee-vs-result-display-contrast_0009
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -7748,6 +9411,72 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0005-guarantee-vs-result-display-contrast_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
 - left: batch-0005-guarantee-vs-result-display-contrast_0010
   right: synthetic-candidate-0001
   shared_features: []
@@ -8029,6 +9758,98 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.345794
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0006-contrast-aware-routing-validation_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0006-contrast-aware-routing-validation_0001
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -8300,6 +10121,93 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  shared_features_count: 4
+  weighted_overlap: 0.798319
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.210084
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0006-contrast-aware-routing-validation_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.07971
 - left: batch-0006-contrast-aware-routing-validation_0002
   right: synthetic-candidate-0001
   shared_features:
@@ -8599,6 +10507,104 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.09322
 - left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.627119
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.915254
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 4
+  weighted_overlap: 0.738462
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 5
+  weighted_overlap: 0.90678
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.313559
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.09322
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.09322
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.288136
+- left: batch-0006-contrast-aware-routing-validation_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.269841
+- left: batch-0006-contrast-aware-routing-validation_0003
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -8852,6 +10858,93 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  shared_features_count: 4
+  weighted_overlap: 0.798319
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.210084
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.084615
+- left: batch-0006-contrast-aware-routing-validation_0004
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.07971
 - left: batch-0006-contrast-aware-routing-validation_0004
   right: synthetic-candidate-0001
   shared_features:
@@ -9129,6 +11222,89 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.261905
 - left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0006-contrast-aware-routing-validation_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0005
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -9376,6 +11552,75 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.354839
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0006-contrast-aware-routing-validation_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.351852
 - left: batch-0006-contrast-aware-routing-validation_0006
   right: synthetic-candidate-0001
   shared_features:
@@ -9642,6 +11887,91 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.203704
 - left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.265625
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.265625
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.338235
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.62963
+- left: batch-0006-contrast-aware-routing-validation_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.777778
+- left: batch-0006-contrast-aware-routing-validation_0007
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -9875,6 +12205,74 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.37931
 - left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.087302
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.087302
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.079365
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.37931
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.37931
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.211538
+- left: batch-0006-contrast-aware-routing-validation_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.365385
+- left: batch-0006-contrast-aware-routing-validation_0008
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -10080,6 +12478,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0006-contrast-aware-routing-validation_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0006-contrast-aware-routing-validation_0009
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -10275,6 +12739,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0006-contrast-aware-routing-validation_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0006-contrast-aware-routing-validation_0010
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -10460,6 +12990,76 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.152174
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.111111
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.111111
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 保證收益
+  - 情緒操控
+  shared_features_count: 2
+  weighted_overlap: 0.208696
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.254545
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0011
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.121212
 - left: batch-0006-contrast-aware-routing-validation_0011
   right: synthetic-candidate-0001
   shared_features:
@@ -10667,6 +13267,92 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.321739
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.19685
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.321739
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.121739
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293651
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.181159
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.408696
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.672727
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.348485
+- left: batch-0006-contrast-aware-routing-validation_0012
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.469697
 - left: batch-0006-contrast-aware-routing-validation_0012
   right: synthetic-candidate-0001
   shared_features:
@@ -10885,6 +13571,95 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.117021
 - left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.768519
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  shared_features_count: 2
+  weighted_overlap: 0.591667
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.768519
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.555556
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.87037
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.683333
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.70339
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.117021
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.117021
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.361702
+- left: batch-0007-result-display-context-split_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.333333
+- left: batch-0007-result-display-context-split_0001
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -11091,6 +13866,95 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.117021
 - left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.768519
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  shared_features_count: 2
+  weighted_overlap: 0.591667
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.768519
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.555556
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.87037
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.683333
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.70339
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.117021
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.117021
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.361702
+- left: batch-0007-result-display-context-split_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.333333
+- left: batch-0007-result-display-context-split_0002
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -11294,6 +14158,97 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.103774
 - left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.691667
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.691667
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.691667
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.5
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.783333
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 成果展示
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.783333
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.638462
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.191667
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.103774
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.103774
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.320755
+- left: batch-0007-result-display-context-split_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.298246
+- left: batch-0007-result-display-context-split_0003
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -11489,6 +14444,89 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.261905
 - left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0007-result-display-context-split_0004
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0004
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -11663,6 +14701,75 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.354839
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0007-result-display-context-split_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.351852
 - left: batch-0007-result-display-context-split_0005
   right: synthetic-candidate-0001
   shared_features:
@@ -11844,6 +14951,91 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.203704
 - left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.265625
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.265625
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.166667
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.338235
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.62963
+- left: batch-0007-result-display-context-split_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.777778
+- left: batch-0007-result-display-context-split_0006
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -12003,6 +15195,74 @@ pairwise_similarity:
   - 成果展示
   shared_features_count: 1
   weighted_overlap: 0.37931
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.087302
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.087302
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.079365
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.37931
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.37931
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.211538
+- left: batch-0007-result-display-context-split_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.365385
 - left: batch-0007-result-display-context-split_0007
   right: synthetic-candidate-0001
   shared_features:
@@ -12164,6 +15424,90 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.211538
 - left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.269841
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.15942
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 情緒操控
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.348485
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.211538
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.211538
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0007-result-display-context-split_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.807692
+- left: batch-0007-result-display-context-split_0008
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -12310,6 +15654,76 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.268293
 - left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.095238
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.07971
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.072464
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.268293
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.268293
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.171875
+- left: batch-0007-result-display-context-split_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.296875
+- left: batch-0007-result-display-context-split_0009
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -12441,6 +15855,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0007-result-display-context-split_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0010
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -12560,6 +16040,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0007-result-display-context-split_0011
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0011
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -12673,6 +16219,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0007-result-display-context-split_0012
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0007-result-display-context-split_0012
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -12787,6 +16399,97 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.381443
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0001
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -12896,6 +16599,92 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.229358
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.091667
+- left: batch-0008-context-gate-reviewer-hour-value_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0008-context-gate-reviewer-hour-value_0002
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -12999,6 +16788,97 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.381443
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0003
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -13083,6 +16963,81 @@ pairwise_similarity:
   weighted_overlap: 0.0
 - left: batch-0008-context-gate-reviewer-hour-value_0004
   right: batch-0008-context-gate-reviewer-hour-value_0016
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.14433
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0004
+  right: batch-0009-context-gating-policy-check_0012
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
@@ -13182,6 +17137,88 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.323529
 - left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.091667
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.314815
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.183333
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.479167
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0008-context-gate-reviewer-hour-value_0005
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -13271,6 +17308,88 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.323529
 - left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.091667
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.314815
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.183333
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.479167
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0008-context-gate-reviewer-hour-value_0006
   right: synthetic-candidate-0001
   shared_features:
   - reply_funnel
@@ -13351,6 +17470,74 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.478261
 - left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.111111
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.091667
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.478261
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.478261
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.23913
+- left: batch-0008-context-gate-reviewer-hour-value_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0008-context-gate-reviewer-hour-value_0007
   right: synthetic-candidate-0001
   shared_features:
   - 社群導流
@@ -13422,6 +17609,79 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.15493
 - left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.555556
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.555556
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.555556
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.705882
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.657407
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - review_stable_funnel_anchor
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.657407
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.508475
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.15493
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.15493
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.117021
+- left: batch-0008-context-gate-reviewer-hour-value_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.107843
+- left: batch-0008-context-gate-reviewer-hour-value_0008
   right: synthetic-candidate-0001
   shared_features:
   - review_stable_funnel_anchor
@@ -13492,6 +17752,89 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.261905
 - left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0008-context-gate-reviewer-hour-value_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0009
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -13558,6 +17901,75 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.354839
 - left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - 社群導流
+  shared_features_count: 1
+  weighted_overlap: 0.103448
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.354839
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.203704
+- left: batch-0008-context-gate-reviewer-hour-value_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.351852
+- left: batch-0008-context-gate-reviewer-hour-value_0010
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -13615,6 +18027,89 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.261905
 - left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0008-context-gate-reviewer-hour-value_0011
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0011
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -13667,6 +18162,73 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 0.578947
 - left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.578947
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0012
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - needs_thread
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.452381
+- left: batch-0008-context-gate-reviewer-hour-value_0012
   right: synthetic-candidate-0001
   shared_features:
   - needs_thread
@@ -13709,6 +18271,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0013
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0013
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -13742,6 +18370,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0014
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0014
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -13769,6 +18463,72 @@ pairwise_similarity:
   shared_features_count: 1
   weighted_overlap: 1.0
 - left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0015
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0015
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -13790,6 +18550,72 @@ pairwise_similarity:
   shared_features_count: 0
   weighted_overlap: 0.0
 - left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0008-context-gate-reviewer-hour-value_0016
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0008-context-gate-reviewer-hour-value_0016
   right: synthetic-candidate-0001
   shared_features: []
   shared_features_count: 0
@@ -13810,6 +18636,766 @@ pairwise_similarity:
   shared_features: []
   shared_features_count: 0
   weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0002
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 1.0
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.381443
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0009-context-gating-policy-check_0001
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0009-context-gating-policy-check_0001
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.709402
+- left: batch-0009-context-gating-policy-check_0001
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0009-context-gating-policy-check_0001
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.196581
+- left: batch-0009-context-gating-policy-check_0001
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0003
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.779817
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.714286
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.229358
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.091667
+- left: batch-0009-context-gating-policy-check_0002
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  shared_features_count: 1
+  weighted_overlap: 0.085938
+- left: batch-0009-context-gating-policy-check_0002
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.709402
+- left: batch-0009-context-gating-policy-check_0002
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0009-context-gating-policy-check_0002
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.196581
+- left: batch-0009-context-gating-policy-check_0002
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0004
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.762887
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.898148
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.708333
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.906542
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.381443
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.212963
+- left: batch-0009-context-gating-policy-check_0003
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.198276
+- left: batch-0009-context-gating-policy-check_0003
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.709402
+- left: batch-0009-context-gating-policy-check_0003
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0009-context-gating-policy-check_0003
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.196581
+- left: batch-0009-context-gating-policy-check_0003
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0005
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.685185
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.691589
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.14433
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: synthetic-candidate-0001
+  shared_features:
+  - review_stable_funnel_anchor
+  shared_features_count: 1
+  weighted_overlap: 0.512821
+- left: batch-0009-context-gating-policy-check_0004
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.870588
+- left: batch-0009-context-gating-policy-check_0004
+  right: synthetic-candidate-0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0004
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0006
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 4
+  weighted_overlap: 0.8
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 4
+  weighted_overlap: 0.822034
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.342593
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.314815
+- left: batch-0009-context-gating-policy-check_0005
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.293103
+- left: batch-0009-context-gating-policy-check_0005
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.648438
+- left: batch-0009-context-gating-policy-check_0005
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.787037
+- left: batch-0009-context-gating-policy-check_0005
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0009-context-gating-policy-check_0005
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0007
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 3
+  weighted_overlap: 0.653846
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.208333
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.183333
+- left: batch-0009-context-gating-policy-check_0006
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  shared_features_count: 2
+  weighted_overlap: 0.171875
+- left: batch-0009-context-gating-policy-check_0006
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 社群導流
+  shared_features_count: 3
+  weighted_overlap: 0.648438
+- left: batch-0009-context-gating-policy-check_0006
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  shared_features_count: 3
+  weighted_overlap: 0.787037
+- left: batch-0009-context-gating-policy-check_0006
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 社群導流
+  shared_features_count: 2
+  weighted_overlap: 0.179687
+- left: batch-0009-context-gating-policy-check_0006
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0007
+  right: batch-0009-context-gating-policy-check_0008
+  shared_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.345794
+- left: batch-0009-context-gating-policy-check_0007
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0007
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0007
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.194915
+- left: batch-0009-context-gating-policy-check_0007
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.18254
+- left: batch-0009-context-gating-policy-check_0007
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.653543
+- left: batch-0009-context-gating-policy-check_0007
+  right: synthetic-candidate-0002
+  shared_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  shared_features_count: 2
+  weighted_overlap: 0.627119
+- left: batch-0009-context-gating-policy-check_0007
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.181102
+- left: batch-0009-context-gating-policy-check_0007
+  right: synthetic-candidate-0004
+  shared_features:
+  - 情緒操控
+  shared_features_count: 1
+  weighted_overlap: 0.086957
+- left: batch-0009-context-gating-policy-check_0008
+  right: batch-0009-context-gating-policy-check_0009
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0008
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0008
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.479167
+- left: batch-0009-context-gating-policy-check_0008
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.410714
+- left: batch-0009-context-gating-policy-check_0008
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.196581
+- left: batch-0009-context-gating-policy-check_0008
+  right: synthetic-candidate-0002
+  shared_features:
+  - 保證收益
+  shared_features_count: 1
+  weighted_overlap: 0.12963
+- left: batch-0009-context-gating-policy-check_0008
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.403509
+- left: batch-0009-context-gating-policy-check_0008
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0009
+  right: batch-0009-context-gating-policy-check_0010
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 1.0
+- left: batch-0009-context-gating-policy-check_0009
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0009-context-gating-policy-check_0009
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0009-context-gating-policy-check_0009
+  right: synthetic-candidate-0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0009
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.129412
+- left: batch-0009-context-gating-policy-check_0009
+  right: synthetic-candidate-0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0009
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0010
+  right: batch-0009-context-gating-policy-check_0011
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.323529
+- left: batch-0009-context-gating-policy-check_0010
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.261905
+- left: batch-0009-context-gating-policy-check_0010
+  right: synthetic-candidate-0001
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0010
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.129412
+- left: batch-0009-context-gating-policy-check_0010
+  right: synthetic-candidate-0003
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0010
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0011
+  right: batch-0009-context-gating-policy-check_0012
+  shared_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.809524
+- left: batch-0009-context-gating-policy-check_0011
+  right: synthetic-candidate-0001
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.201754
+- left: batch-0009-context-gating-policy-check_0011
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.101852
+- left: batch-0009-context-gating-policy-check_0011
+  right: synthetic-candidate-0003
+  shared_features:
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 2
+  weighted_overlap: 0.425926
+- left: batch-0009-context-gating-policy-check_0011
+  right: synthetic-candidate-0004
+  shared_features: []
+  shared_features_count: 0
+  weighted_overlap: 0.0
+- left: batch-0009-context-gating-policy-check_0012
+  right: synthetic-candidate-0001
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.27193
+- left: batch-0009-context-gating-policy-check_0012
+  right: synthetic-candidate-0002
+  shared_features:
+  - 成果展示
+  shared_features_count: 1
+  weighted_overlap: 0.094828
+- left: batch-0009-context-gating-policy-check_0012
+  right: synthetic-candidate-0003
+  shared_features:
+  - needs_thread
+  - reply_funnel
+  - 誘導聯絡
+  shared_features_count: 3
+  weighted_overlap: 0.574074
+- left: batch-0009-context-gating-policy-check_0012
+  right: synthetic-candidate-0004
+  shared_features:
+  - needs_thread
+  shared_features_count: 1
+  weighted_overlap: 0.153846
 - left: synthetic-candidate-0001
   right: synthetic-candidate-0002
   shared_features:

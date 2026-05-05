@@ -2,7 +2,7 @@ schema_version: signal_scores_v1
 decision_layer: sparse_primary
 formula: SVS = (yield_rate * information_density) / (review_time * cognitive_load)
 positive_yield_definition: human research label scam, not legal fraud
-candidate_count: 64
+candidate_count: 76
 candidate_ids:
 - batch-0004-low-coverage-high-svs_0001
 - batch-0004-low-coverage-high-svs_0002
@@ -64,75 +64,87 @@ candidate_ids:
 - batch-0008-context-gate-reviewer-hour-value_0014
 - batch-0008-context-gate-reviewer-hour-value_0015
 - batch-0008-context-gate-reviewer-hour-value_0016
+- batch-0009-context-gating-policy-check_0001
+- batch-0009-context-gating-policy-check_0002
+- batch-0009-context-gating-policy-check_0003
+- batch-0009-context-gating-policy-check_0004
+- batch-0009-context-gating-policy-check_0005
+- batch-0009-context-gating-policy-check_0006
+- batch-0009-context-gating-policy-check_0007
+- batch-0009-context-gating-policy-check_0008
+- batch-0009-context-gating-policy-check_0009
+- batch-0009-context-gating-policy-check_0010
+- batch-0009-context-gating-policy-check_0011
+- batch-0009-context-gating-policy-check_0012
 - synthetic-candidate-0001
 - synthetic-candidate-0002
 - synthetic-candidate-0003
 - synthetic-candidate-0004
 ranked_signals:
 - signal_id: 保證收益
-  reviewed_count: 21
-  scam_count: 19
-  yield_rate: 0.904762
-  information_density: 0.716011
-  review_time: 38.428571
-  cognitive_load: 1.35
-  svs: 0.012487227
-- signal_id: review_stable_funnel_anchor
-  reviewed_count: 26
-  scam_count: 19
-  yield_rate: 0.730769
-  information_density: 0.776477
-  review_time: 41.769231
-  cognitive_load: 1.382692
-  svs: 0.009824872
-- signal_id: 情緒操控
-  reviewed_count: 24
-  scam_count: 14
-  yield_rate: 0.583333
-  information_density: 0.63587
-  review_time: 42.0
-  cognitive_load: 1.758333
-  svs: 0.005022666
-- signal_id: reply_funnel
-  reviewed_count: 36
-  scam_count: 18
-  yield_rate: 0.5
-  information_density: 0.635266
-  review_time: 46.583333
-  cognitive_load: 1.669444
-  svs: 0.004084349
-- signal_id: 誘導聯絡
-  reviewed_count: 33
-  scam_count: 14
-  yield_rate: 0.424242
-  information_density: 0.608037
-  review_time: 47.969697
-  cognitive_load: 1.754545
-  svs: 0.003064873
-- signal_id: 社群導流
-  reviewed_count: 24
-  scam_count: 10
-  yield_rate: 0.416667
-  information_density: 0.609903
-  review_time: 51.166667
-  cognitive_load: 1.864583
-  svs: 0.002663673
-- signal_id: 成果展示
-  reviewed_count: 46
-  scam_count: 6
-  yield_rate: 0.130435
-  information_density: 0.375551
-  review_time: 44.565217
-  cognitive_load: 1.713043
-  svs: 0.00064165
-- signal_id: needs_thread
   reviewed_count: 29
+  scam_count: 27
+  yield_rate: 0.931034
+  information_density: 0.69965
+  review_time: 37.413793
+  cognitive_load: 1.286207
+  svs: 0.01353643
+- signal_id: review_stable_funnel_anchor
+  reviewed_count: 33
+  scam_count: 26
+  yield_rate: 0.787879
+  information_density: 0.762846
+  review_time: 40.121212
+  cognitive_load: 1.315152
+  svs: 0.011390594
+- signal_id: 情緒操控
+  reviewed_count: 25
+  scam_count: 15
+  yield_rate: 0.6
+  information_density: 0.641449
+  review_time: 41.64
+  cognitive_load: 1.734
+  svs: 0.005330326
+- signal_id: reply_funnel
+  reviewed_count: 45
+  scam_count: 25
+  yield_rate: 0.555556
+  information_density: 0.625282
+  review_time: 44.866667
+  cognitive_load: 1.595556
+  svs: 0.004852522
+- signal_id: 誘導聯絡
+  reviewed_count: 40
+  scam_count: 19
+  yield_rate: 0.475
+  information_density: 0.596196
+  review_time: 46.35
+  cognitive_load: 1.68625
+  svs: 0.003623354
+- signal_id: 社群導流
+  reviewed_count: 26
+  scam_count: 12
+  yield_rate: 0.461538
+  information_density: 0.620123
+  review_time: 49.961538
+  cognitive_load: 1.803846
+  svs: 0.003175778
+- signal_id: 成果展示
+  reviewed_count: 52
+  scam_count: 8
+  yield_rate: 0.153846
+  information_density: 0.375975
+  review_time: 44.076923
+  cognitive_load: 1.670192
+  svs: 0.000785721
+- signal_id: needs_thread
+  reviewed_count: 30
   scam_count: 2
-  yield_rate: 0.068966
-  information_density: 0.347326
-  review_time: 57.275862
-  cognitive_load: 2.258621
-  svs: 0.000185163
+  yield_rate: 0.066667
+  information_density: 0.345894
+  review_time: 57.3
+  cognitive_load: 2.258333
+  svs: 0.0001782
 batch_scores:
 - batch_id: batch-0003-dual-track-dry-run
   reviewed_count: 4
@@ -182,6 +194,14 @@ batch_scores:
   review_time: 41.875
   cognitive_load: 1.375
   svs: 0.001386349
+- batch_id: batch-0009-context-gating-policy-check
+  reviewed_count: 12
+  scam_count: 8
+  yield_rate: 0.666667
+  information_density: 0.496981
+  review_time: 37.333333
+  cognitive_load: 1.225
+  svs: 0.007244616
 guardrails:
   raw_threads_content_included: false
   embedding_used_for_decision: false

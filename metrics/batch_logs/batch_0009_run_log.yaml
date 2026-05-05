@@ -1,8 +1,8 @@
 schema_version: batch_run_log_v1
 batch_id: batch-0009-context-gating-policy-check
 experiment_id: 0009-context-gating-policy-check
-status: planned_pending_manual_review
-record_type: planned_run_log
+status: completed
+record_type: actual_run_log
 no_fake_results: true
 principle: maximize high-value candidate discovery per unit reviewer effort
 goal_not: scam detection or legal fraud determination
@@ -19,6 +19,8 @@ inputs:
   conversion_report: data/candidate_intake/batch_0009_conversion_report.yaml
   candidate_records: data/candidates/batch_0009/*.yaml
   routing_scores_before_run: metrics/contrast_scores/latest.yaml
+  routing_scores_after_run: metrics/contrast_scores/latest.yaml
+  signal_scores_after_run: metrics/signal_scores/latest_ranking.yaml
 planned:
   candidate_count: 12
   allocation_strategy: policy_weighted_not_balanced
@@ -27,9 +29,9 @@ planned:
   - 'B: result_display_clean_holdout, 2 entries'
   - 'C: result_display_low_context_transition, 1 entry'
   - 'D: result_display_thread_required, 1 entry'
-  hypothesis: A policy-weighted allocation should improve batch-level high-value
-    candidates per reviewer hour compared with the balanced Batch 0008 design,
-    while keeping result-display diagnostics capped.
+  hypothesis: A policy-weighted allocation should improve batch-level high-value candidates
+    per reviewer hour compared with the balanced Batch 0008 design, while keeping
+    result-display diagnostics capped.
   expected_measurements:
   - batch-level high-value candidates per reviewer hour
   - fast-lane yield and review time
@@ -40,54 +42,146 @@ planned:
   - lane SVS after conversion
   - signal SVS after conversion
 observed:
-  candidate_count_after_run: null
-  reviewed_count: null
-  scam_count: null
-  non_scam_count: null
-  uncertain_count: null
-  yield_rate: null
-  information_density: null
-  review_time: null
-  cognitive_load: null
-  svs: null
+  candidate_count_after_run: 76
+  reviewed_count: 12
+  scam_count: 8
+  non_scam_count: 2
+  uncertain_count: 2
+  yield_rate: 0.666667
+  information_density: 0.496981
+  review_time: 37.333333
+  cognitive_load: 1.225
+  svs: 0.007244616
 conversion:
   intake_count: 12
-  converted_count: 0
-  blocked_count: 12
-  written_count: 0
-  status: blocked_pending_manual_review
+  converted_count: 12
+  blocked_count: 0
+  written_count: 12
+  status: ready
 reviewer_burden:
-  average_review_time_seconds: null
-  candidates_per_reviewer_hour: null
-  high_value_candidates_per_hour: null
-  burden_adjusted_value: null
-  needs_thread_rate: null
-  second_review_rate: null
-  uncertainty_rate: null
-signal_results: []
+  average_review_time_seconds: 37.333333
+  candidates_per_reviewer_hour: 96.428571
+  high_value_candidates_per_hour: 64.285714
+  burden_adjusted_value: 52.478134
+  needs_thread_rate: 0.083333
+  second_review_rate: 0.25
+  uncertainty_rate: 0.166667
+signal_results:
+- signal_id: 保證收益
+  after_reviewed_count: 29
+  after_yield_rate: 0.931034
+  after_review_time: 37.413793
+  after_cognitive_load: 1.286207
+  after_svs: 0.01353643
+  interpretation: Strengthened as the highest-value positive sparse signal after Batch
+    0009.
+- signal_id: review_stable_funnel_anchor
+  after_reviewed_count: 33
+  after_yield_rate: 0.787879
+  after_review_time: 40.121212
+  after_cognitive_load: 1.315152
+  after_svs: 0.011390594
+  interpretation: Remains a strong support signal for fast-lane routing.
+- signal_id: 成果展示
+  after_reviewed_count: 52
+  after_yield_rate: 0.153846
+  after_review_time: 44.076923
+  after_cognitive_load: 1.670192
+  after_svs: 0.000785721
+  interpretation: Still behaves as a routing/context signal, not a priority positive-yield
+    signal by itself.
 lane_results:
-  status: pending_manual_review
-  results: []
+- lane: strong_source_priority
+  batch_reviewed_count: 8
+  scam_count: 8
+  non_scam_count: 0
+  uncertain_count: 0
+  yield_rate: 1.0
+  average_review_time_seconds: 34.75
+  candidates_per_reviewer_hour: 103.597122
+  high_value_candidates_per_hour: 103.597122
+  needs_thread_rate: 0.0
+  second_review_rate: 0.125
+  uncertainty_rate: 0.0
+  average_confidence: 0.9325
+  after_global_lane_svs: 0.017770755
+  decision: keep_as_fast_priority_review_lane_when_reviewer_capacity_is_constrained
+- lane: result_display_contrast_holdout
+  batch_reviewed_count: 2
+  scam_count: 0
+  non_scam_count: 2
+  uncertain_count: 0
+  yield_rate: 0.0
+  average_review_time_seconds: 35.0
+  candidates_per_reviewer_hour: 102.857143
+  high_value_candidates_per_hour: 0.0
+  needs_thread_rate: 0.0
+  second_review_rate: 0.0
+  uncertainty_rate: 0.0
+  average_confidence: 0.9
+  after_global_lane_svs: 0.0
+  decision: preserve_as_hard_negative_calibration_pool
+- lane: result_display_low_context_transition
+  batch_reviewed_count: 1
+  scam_count: 0
+  non_scam_count: 0
+  uncertain_count: 1
+  yield_rate: 0.0
+  average_review_time_seconds: 42.0
+  candidates_per_reviewer_hour: 85.714286
+  high_value_candidates_per_hour: 0.0
+  needs_thread_rate: 0.0
+  second_review_rate: 1.0
+  uncertainty_rate: 1.0
+  average_confidence: 0.57
+  after_global_lane_svs: 0.0
+  decision: keep_as_capped_boundary_triage_not_priority_yield_lane
+- lane: result_display_thread_required
+  batch_reviewed_count: 1
+  scam_count: 0
+  non_scam_count: 0
+  uncertain_count: 1
+  yield_rate: 0.0
+  average_review_time_seconds: 58.0
+  candidates_per_reviewer_hour: 62.068966
+  high_value_candidates_per_hour: 0.0
+  needs_thread_rate: 1.0
+  second_review_rate: 1.0
+  uncertainty_rate: 1.0
+  average_confidence: 0.5
+  after_global_lane_svs: 0.0
+  decision: restrict_to_tiny_slow_context_diagnostics_only
 policy_check:
   baseline_batch: batch-0008-context-gate-reviewer-hour-value
   baseline_high_value_candidates_per_hour: 21.492537
+  observed_high_value_candidates_per_hour: 64.285714
   baseline_batch_svs: 0.001386349
-  expected_direction: improve_batch_level_reviewer_hour_value_without_expanding_slow_context_review
+  observed_batch_svs: 0.007244616
+  policy_supported: true
+  interpretation: Policy-weighted allocation improved reviewer-hour value while preserving
+    hard-negative calibration and keeping slow-context diagnostics capped.
 cluster_results:
-  sparse_summary: pending_manual_review
-  embedding_summary: pending_manual_review
-  discrepancy_summary: pending_manual_review
+  sparse_summary: Sparse clustering still places all 76 candidates in one broad cluster
+    at the current threshold; use contrast lanes rather than sparse clusters for routing.
+  embedding_summary: Embedding remains discovery-only; only 3 candidates have precomputed
+    vectors and 73 are skipped for missing vectors.
+  discrepancy_summary: No missed_pattern groups remain; the latest report contains
+    two synthetic over_generalization cases only.
 failure_modes:
-- Batch 0009 has not been human reviewed.
-- No candidate records should be written until all completion gates pass.
-- Policy-weighted allocation may fail if the fast lane yield degrades.
-- Result-display diagnostics must remain capped unless reviewed evidence changes.
-- Strong-source priority must not be interpreted as legal fraud determination.
-decision_implication: Batch 0009 decides whether the Batch 0008 context-gating
-  policy is useful prospectively, not whether any candidate is legally fraudulent
-  or whether sparse schema should be promoted.
-next_action: Fill Batch 0009 intake entries with structured metadata only, then
-  run the conversion gate and compare reviewer-hour value against Batch 0008.
+- One fast-lane candidate required second review because the stable funnel anchor
+  was absent.
+- The low-context and thread-required result-display probes remained uncertain, supporting
+  continued caps.
+- Sparse clustering remains too broad to be treated as a reliable separation layer
+  without further schema or threshold work.
+- Embedding coverage is too sparse for discovery beyond synthetic diagnostics.
+decision_implication: 'Batch 0009 supports the active context-gating policy: prioritize
+  strong_source_priority under constrained reviewer capacity, preserve clean result-display
+  holdouts for hard-negative calibration, and keep result-display transition/context
+  probes capped.'
+next_action: Use the supported context-gating policy as the routing base for a reviewer-assist/schema-prefill
+  labor-savings evaluation; do not promote new sparse features or expand collection
+  from Batch 0009 alone.
 guardrails:
   external_systems_accessed: false
   raw_threads_content_included: false
@@ -98,8 +192,11 @@ guardrails:
   sparse_schema_auto_promoted: false
   human_review_required: true
 pending_review:
-  completed_intake_count: 0
-  blocked_intake_count: 12
-  candidate_records_written: false
-  reason_not_final: Batch 0009 is designed for 12 entries and currently contains
-    only pending manual-review placeholders.
+  completed_intake_count: 12
+  blocked_intake_count: 0
+  candidate_records_written: true
+  reason_not_final: none
+feature_discovery:
+  auto_generated_feature_candidates: 0
+  reason: Latest discrepancy report has no missed_pattern group with size >= 3.
+  sparse_schema_modified: false

@@ -226,6 +226,40 @@ This tests whether the policy improves high-value candidates per reviewer hour
 when it controls the next batch. The batch remains metadata-only and blocked
 until human-reviewed structured metadata passes every completion gate.
 
+## Batch 0009 Result
+
+Status: completed on 2026-05-05.
+
+Batch 0009 supports the policy:
+
+```text
+reviewed_count: 12
+scam_count: 8
+non_scam_count: 2
+uncertain_count: 2
+yield_rate: 0.666667
+average_review_time_seconds: 37.333333
+high_value_candidates_per_hour: 64.285714
+batch_svs: 0.007244616
+```
+
+Compared with Batch 0008:
+
+```text
+Batch 0008 high_value_candidates_per_hour: 21.492537
+Batch 0009 high_value_candidates_per_hour: 64.285714
+Batch 0008 batch_svs: 0.001386349
+Batch 0009 batch_svs: 0.007244616
+```
+
+Policy implication:
+
+- `strong_source_priority` remains the first reviewer-capacity lane;
+- `result_display_clean_holdout` remains hard-negative calibration;
+- `result_display_low_context_transition` remains capped boundary triage;
+- `result_display_thread_required` remains capped slow-context diagnostics;
+- no sparse feature is promoted from Batch 0009 alone.
+
 Evidence:
 
 - `experiments/batch_variants/0009-context-gating-policy-check.md`
@@ -233,6 +267,7 @@ Evidence:
 - `data/candidate_stubs/batch_0009.yaml`
 - `data/candidate_intake/batch_0009_intake.yaml`
 - `metrics/batch_logs/batch_0009_run_log.yaml`
+- `experiments/evaluation-notes/0105-v2-batch-0009-context-gating-policy-check-result.md`
 
 ## Evidence
 

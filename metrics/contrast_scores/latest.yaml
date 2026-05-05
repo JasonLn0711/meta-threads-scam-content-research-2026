@@ -5,7 +5,7 @@ not_a_classifier: true
 formula: lane SVS uses (yield_rate * information_density) / (review_time * cognitive_load);
   lane routing is a testable reviewer-effort hypothesis
 positive_yield_definition: human research label scam, not legal fraud
-candidate_count: 64
+candidate_count: 76
 lane_definitions:
   strong_source_priority:
     pre_review_activation_rule: 保證收益 AND (誘導聯絡 OR 社群導流 OR reply_funnel OR review_stable_funnel_anchor)
@@ -80,20 +80,28 @@ lane_scores:
   - batch-0008-context-gate-reviewer-hour-value_0002
   - batch-0008-context-gate-reviewer-hour-value_0003
   - batch-0008-context-gate-reviewer-hour-value_0004
+  - batch-0009-context-gating-policy-check_0001
+  - batch-0009-context-gating-policy-check_0002
+  - batch-0009-context-gating-policy-check_0003
+  - batch-0009-context-gating-policy-check_0004
+  - batch-0009-context-gating-policy-check_0005
+  - batch-0009-context-gating-policy-check_0006
+  - batch-0009-context-gating-policy-check_0007
+  - batch-0009-context-gating-policy-check_0008
   - synthetic-candidate-0002
-  reviewed_count: 18
-  scam_count: 18
+  reviewed_count: 26
+  scam_count: 26
   yield_rate: 1.0
-  information_density: 0.78744
-  review_time: 36.5
-  cognitive_load: 1.191667
-  svs: 0.018103794
+  information_density: 0.747213
+  review_time: 35.961538
+  cognitive_load: 1.169231
+  svs: 0.017770755
   non_scam_count: 0
   uncertain_count: 0
   needs_thread_rate: 0.0
-  second_review_rate: 0.0
+  second_review_rate: 0.038462
   uncertainty_rate: 0.0
-  average_confidence: 0.911667
+  average_confidence: 0.918077
   interpretation: High-value source arm when a guarantee/certainty anchor has executable
     transition structure and low thread burden.
 - lane: guarantee_context_review
@@ -127,19 +135,20 @@ lane_scores:
   - batch-0008-context-gate-reviewer-hour-value_0006
   - batch-0008-context-gate-reviewer-hour-value_0007
   - batch-0008-context-gate-reviewer-hour-value_0008
-  reviewed_count: 7
+  - batch-0009-context-gating-policy-check_0011
+  reviewed_count: 8
   scam_count: 0
   yield_rate: 0.0
-  information_density: 0.47205
+  information_density: 0.443841
   review_time: 42.0
-  cognitive_load: 1.164286
+  cognitive_load: 1.20625
   svs: 0.0
   non_scam_count: 0
-  uncertain_count: 7
+  uncertain_count: 8
   needs_thread_rate: 0.0
-  second_review_rate: 0.285714
+  second_review_rate: 0.375
   uncertainty_rate: 1.0
-  average_confidence: 0.571429
+  average_confidence: 0.57125
   interpretation: Result display with visible transition structure can be reviewed
     without full-thread context, but remains uncertain without explicit guarantee.
 - lane: result_display_thread_required
@@ -161,19 +170,20 @@ lane_scores:
   - batch-0008-context-gate-reviewer-hour-value_0010
   - batch-0008-context-gate-reviewer-hour-value_0011
   - batch-0008-context-gate-reviewer-hour-value_0012
-  reviewed_count: 16
+  - batch-0009-context-gating-policy-check_0012
+  reviewed_count: 17
   scam_count: 0
   yield_rate: 0.0
-  information_density: 0.291667
-  review_time: 49.1875
-  cognitive_load: 2.225
+  information_density: 0.292413
+  review_time: 49.705882
+  cognitive_load: 2.226471
   svs: 0.0
   non_scam_count: 2
-  uncertain_count: 14
+  uncertain_count: 15
   needs_thread_rate: 1.0
-  second_review_rate: 0.875
-  uncertainty_rate: 0.875
-  average_confidence: 0.575625
+  second_review_rate: 0.882353
+  uncertainty_rate: 0.882353
+  average_confidence: 0.571176
   interpretation: Result display that requires thread context should be routed to
     slower review before a decision is attempted.
 - lane: result_display_emotional_thread_required
@@ -232,19 +242,21 @@ lane_scores:
   - batch-0008-context-gate-reviewer-hour-value_0014
   - batch-0008-context-gate-reviewer-hour-value_0015
   - batch-0008-context-gate-reviewer-hour-value_0016
-  reviewed_count: 10
+  - batch-0009-context-gating-policy-check_0009
+  - batch-0009-context-gating-policy-check_0010
+  reviewed_count: 12
   scam_count: 0
   yield_rate: 0.0
   information_density: 0.07971
-  review_time: 36.2
+  review_time: 36.0
   cognitive_load: 1.0
   svs: 0.0
-  non_scam_count: 10
+  non_scam_count: 12
   uncertain_count: 0
   needs_thread_rate: 0.0
   second_review_rate: 0.0
   uncertainty_rate: 0.0
-  average_confidence: 0.897
+  average_confidence: 0.8975
   interpretation: Standalone result display is useful for hard-negative contrast and
     boundary calibration.
 - lane: other_metadata_review
@@ -1033,6 +1045,155 @@ candidate_routes:
   - 成果展示
   review_decision: non_scam
   second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0001
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0002
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 社群導流
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0003
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 誘導聯絡
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0004
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - review_stable_funnel_anchor
+  - 保證收益
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0005
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 誘導聯絡
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0006
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 成果展示
+  - 社群導流
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0007
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - review_stable_funnel_anchor
+  - 保證收益
+  - 情緒操控
+  - 誘導聯絡
+  review_decision: scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0008
+  batch_id: batch-0009-context-gating-policy-check
+  lane: strong_source_priority
+  routing_action: fast_priority_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - 保證收益
+  - 誘導聯絡
+  review_decision: scam
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0009
+  batch_id: batch-0009-context-gating-policy-check
+  lane: result_display_contrast_holdout
+  routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
+  active_sparse_features:
+  - 成果展示
+  review_decision: non_scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0010
+  batch_id: batch-0009-context-gating-policy-check
+  lane: result_display_contrast_holdout
+  routing_action: contrast_or_hard_negative_pool
+  context_gate: holdout_calibration
+  active_sparse_features:
+  - 成果展示
+  review_decision: non_scam
+  second_review_required: false
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0011
+  batch_id: batch-0009-context-gating-policy-check
+  lane: result_display_low_context_transition
+  routing_action: low_context_transition_review
+  context_gate: single_item_review
+  active_sparse_features:
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: true
+  guardrail: structured_metadata_only
+- candidate_id: batch-0009-context-gating-policy-check_0012
+  batch_id: batch-0009-context-gating-policy-check
+  lane: result_display_thread_required
+  routing_action: thread_context_review
+  context_gate: thread_required
+  active_sparse_features:
+  - needs_thread
+  - reply_funnel
+  - 成果展示
+  - 誘導聯絡
+  review_decision: uncertain
+  second_review_required: true
   guardrail: structured_metadata_only
 - candidate_id: synthetic-candidate-0001
   batch_id: batch-0003-dual-track-dry-run

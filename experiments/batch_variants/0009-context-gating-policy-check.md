@@ -264,3 +264,41 @@ Compare:
 - no sparse schema auto-promotion
 - no embedding-based decision
 - no legal, enforcement, public-warning, or production-detector claim
+
+## Actual Result
+
+Run date: 2026-05-05
+
+The 12 human-reviewed structured metadata entries were converted into
+`candidate_record_v2` records with all completion gates passing.
+
+Batch-level result:
+
+```text
+reviewed_count: 12
+scam_count: 8
+non_scam_count: 2
+uncertain_count: 2
+yield_rate: 0.666667
+average_review_time_seconds: 37.333333
+high_value_candidates_per_hour: 64.285714
+batch_svs: 0.007244616
+```
+
+Comparison:
+
+```text
+Batch 0008 high_value_candidates_per_hour: 21.492537
+Batch 0009 high_value_candidates_per_hour: 64.285714
+Batch 0008 batch_svs: 0.001386349
+Batch 0009 batch_svs: 0.007244616
+```
+
+Interpretation:
+
+Batch 0009 supports the context-gating policy. Keep
+`strong_source_priority` as the first reviewer-capacity lane, preserve
+`result_display_clean_holdout` for hard-negative calibration, and keep
+result-display boundary/context probes capped.
+
+No sparse feature promotion is justified by Batch 0009.
