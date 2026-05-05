@@ -1,0 +1,2 @@
+candidate_alias,condition,source_lane,priority_suggestion,human_priority,accepted,corrected,rejected,over_prioritized_hard_negative,under_prioritized_review_worthy,repo_safe_note
+EXAMPLE_assisted_001,assisted_review,strong_source_priority,high,high,yes,no,no,no,no,category only no raw evidence

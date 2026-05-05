@@ -1,0 +1,2 @@
+candidate_alias,condition,signal_family,suggested,accepted,corrected,rejected,correction_category,hard_negative_concern,repo_safe_note
+EXAMPLE_assisted_001,assisted_review,private_channel_migration,yes,yes,no,no,none,no,category only no raw evidence
