@@ -53,10 +53,20 @@ MOCK_POSTS_BY_STRATEGY: dict[str, list[str]] = {
     ],
 }
 
+STRATEGY_BY_SIGNAL = {
+    "guaranteed_return": "guaranteed_return_cluster",
+    "authority_impersonation": "authority_impersonation_cluster",
+    "off_platform_contact": "off_platform_contact_cluster",
+    "urgency": "urgency_teaser_cluster",
+    "hard_negative_warning": "hard_negative_calibration",
+}
+
 
 def fetch_candidates(query: dict[str, Any]) -> list[dict[str, str]]:
     """Return 5-10 synthetic raw text items for one query object."""
     strategy = str(query.get("strategy") or "")
+    if strategy not in MOCK_POSTS_BY_STRATEGY:
+        strategy = STRATEGY_BY_SIGNAL.get(str(query.get("expected_signal") or ""), "hard_negative_calibration")
     posts = list(MOCK_POSTS_BY_STRATEGY.get(strategy, MOCK_POSTS_BY_STRATEGY["hard_negative_calibration"]))
     budget = max(5, min(10, int(query.get("budget", 5) or 5)))
     rng = random.Random(f"{query.get('query_id')}:{query.get('budget')}:{query.get('weight')}")
