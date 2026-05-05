@@ -57,6 +57,7 @@ Use this directory for metric summaries, reviewer burden analysis, error reviews
 | `0106-reviewer-assist-labor-savings-evaluation-start.md` | Start note for the Decision 0145 metadata-only Reviewer Assist labor-savings evaluation package. |
 | `0107-reviewer-assist-labor-savings-evaluation-result.md` | Aggregate-only result for Decision 0146/0147 Reviewer Assist labor-savings evaluation; selects `expand_assist_evaluation`. |
 | `0108-reviewer-assist-expansion-batch-0008-result.md` | Empirical metadata-only result for Decision 0148/0149 Reviewer Assist expansion on the Batch 0008 balanced context-gating baseline. |
-| `0109-reviewer-assist-thread-required-lane-revision-result.md` | Open result workbench for Decision 0150 Reviewer Assist context-gate revision on the thread-required lane. |
+| `0109-reviewer-assist-thread-required-lane-revision-result.md` | Empirical context-gate result for Decision 0150/0152 Reviewer Assist thread-required lane revision. |
+| `0110-reviewer-assist-context-gate-bounded-reuse-result.md` | Pending human-fill result workbench for Decision 0154 bounded reuse of the reconciled context gate. |
 
 Generated local synthesis and packet outputs belong under `experiments/evaluation-notes/outputs/`, which is ignored by git.

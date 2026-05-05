@@ -140,3 +140,4 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-05-05 | Prepared the Batch 0012 reviewer-facing context-gate packet and handoff without claiming empirical results | `0151-prepare-reviewer-assist-batch-0012-context-gate-handoff.md` |
 | 2026-05-05 | Recorded Batch 0012 as an empirical context-gate result and adopted the thread-required context-gate revision with a source-packet alignment warning | `0152-record-reviewer-assist-batch-0012-context-gate-result.md` |
 | 2026-05-05 | Reconciled Batch 0012 packet/source alignment so the context-gate packet generator validates with zero alignment warnings before bounded reuse | `0153-reconcile-reviewer-assist-batch-0012-packet-source-alignment.md` |
+| 2026-05-05 | Opened Batch 0013 as a bounded metadata-only context-gate reuse packet on existing Batch 0009 aliases without claiming empirical results | `0154-open-reviewer-assist-batch-0013-bounded-context-gate-reuse.md` |

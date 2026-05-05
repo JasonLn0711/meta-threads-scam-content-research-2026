@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Build a reviewer-facing Batch 0012 context-gate packet.
+"""Build a reviewer-facing Reviewer Assist context-gate packet.
 
 The script intentionally reads the reviewer fill template, not the controller
-work order, so prior Batch 0011 labels and timings cannot leak into the packet.
-It fills only revised assist outputs. Human reviewer fields remain blank.
+work order, so prior labels and timings cannot leak into the packet. It fills
+only revised assist outputs. Human reviewer fields remain blank.
 """
 
 from __future__ import annotations
@@ -147,6 +147,16 @@ def fast_lane_profile(expected_behavior: str) -> dict[str, str]:
             "reason": "guarantee_group_transition",
             "guardrail": "do_not_slow_fast_lane_without_specific_missing_context",
         }
+    if "reply" in expected_behavior:
+        return {
+            "reason": "guarantee_reply_funnel_transition",
+            "guardrail": "do_not_slow_fast_lane_without_specific_missing_context",
+        }
+    if "stable_anchor" in expected_behavior:
+        return {
+            "reason": "guarantee_stable_anchor_transition",
+            "guardrail": "do_not_slow_fast_lane_without_specific_missing_context",
+        }
     return {
         "reason": "guarantee_executable_transition",
         "guardrail": "no_thread_request_needed_when_guarantee_and_transition_are_metadata_sufficient",
@@ -237,7 +247,7 @@ def blank_reviewer_fields(template_fields: dict[str, Any]) -> dict[str, Any]:
     return fields
 
 
-def build_packet(template: dict[str, Any]) -> dict[str, Any]:
+def build_packet(template: dict[str, Any], template_path: Path) -> dict[str, Any]:
     entries = []
     role_counts: Counter[str] = Counter()
     lane_counts: Counter[str] = Counter()
@@ -264,7 +274,7 @@ def build_packet(template: dict[str, Any]) -> dict[str, Any]:
         "evaluation_id": template.get("evaluation_id"),
         "decision_id": template.get("decision_id"),
         "source_rules": template.get("source_rules"),
-        "source_reviewer_fill_template": str(DEFAULT_TEMPLATE.relative_to(REPO_ROOT)),
+        "source_reviewer_fill_template": str(template_path.relative_to(REPO_ROOT)),
         "status": "ready_for_human_context_gate_review",
         "result_boundary": {
             "reviewer_facing_packet": True,
@@ -300,8 +310,10 @@ def build_packet(template: dict[str, Any]) -> dict[str, Any]:
 def validate_packet(packet: dict[str, Any]) -> None:
     errors: list[str] = []
     entries = packet.get("candidate_entries")
-    if not isinstance(entries, list) or len(entries) != 12:
-        errors.append(f"candidate_entries must contain 12 entries, got {len(entries) if isinstance(entries, list) else 'non-list'}")
+    if not isinstance(entries, list) or not entries:
+        errors.append(
+            f"candidate_entries must contain at least 1 entry, got {len(entries) if isinstance(entries, list) else 'non-list'}"
+        )
 
     for key_path, key, value in iter_keys(packet):
         if key in FORBIDDEN_EXPOSED_KEYS:
@@ -337,21 +349,23 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT, help="Reviewer-facing packet output YAML")
     parser.add_argument("--check-only", action="store_true", help="Validate packet generation without writing output")
     args = parser.parse_args()
+    template_path = args.template if args.template.is_absolute() else REPO_ROOT / args.template
+    output_path = args.output if args.output.is_absolute() else REPO_ROOT / args.output
 
-    template = load_yaml(args.template)
+    template = load_yaml(template_path)
     if not isinstance(template, dict):
-        print(f"error: {args.template} must contain a YAML object", file=sys.stderr)
+        print(f"error: {template_path} must contain a YAML object", file=sys.stderr)
         return 1
 
     try:
-        packet = build_packet(template)
+        packet = build_packet(template, template_path)
     except ValueError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1
 
     if not args.check_only:
-        write_yaml(args.output, packet)
-        print(f"wrote: {args.output.relative_to(REPO_ROOT)}")
+        write_yaml(output_path, packet)
+        print(f"wrote: {output_path.relative_to(REPO_ROOT)}")
     print(f"candidate_count: {len(packet['candidate_entries'])}")
     print(f"slice_role_counts: {packet['packet_quality_checks']['slice_role_counts']}")
     print("reviewer_fields_blank: true")

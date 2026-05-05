@@ -231,6 +231,17 @@ Build the Batch 0012 Reviewer Assist context-gate packet:
 This writes `data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml`.
 It fills revised assist outputs but leaves all human reviewer fields blank.
 
+Build a later Reviewer Assist context-gate packet from an explicit template:
+
+```bash
+.venv/bin/python scripts/build_reviewer_assist_context_gate_packet.py \
+  --template data/reviewer_assist_eval/batch_0013_reviewer_fill_sheet_template.yaml \
+  --output data/reviewer_assist_eval/batch_0013_reviewer_context_gate_packet.yaml
+```
+
+This keeps the packet builder reusable for bounded slices while preserving the
+same reviewer-field blanking and forbidden-key checks.
+
 Validate the Batch 0012 Reviewer Assist context-gate result:
 
 ```bash

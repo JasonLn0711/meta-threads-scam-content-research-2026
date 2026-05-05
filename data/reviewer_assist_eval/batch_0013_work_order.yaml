@@ -1,0 +1,207 @@
+schema_version: reviewer_assist_context_gate_reuse_work_order_v1
+evaluation_id: reviewer-assist-context-gate-bounded-reuse-0013
+decision_id: "0154"
+opened_at: "2026-05-05"
+status: reviewer_packet_ready_for_human_fill
+no_fake_results: true
+purpose: bounded metadata-only reuse check for the reconciled Batch 0012 context gate
+single_highest_priority: governed automatic or assisted discovery of review-worthy Threads investment-scam candidates
+comparison_type: bounded_context_gate_reuse_on_existing_batch_0009_metadata
+
+reuse_source:
+  source_reconciliation_decision: "0153"
+  source_gate_result_decision: "0152"
+  source_gate_result: data/reviewer_assist_eval/batch_0012_context_gate_result.yaml
+  source_gate_packet_generator: scripts/build_reviewer_assist_context_gate_packet.py
+  current_packet_alignment_warnings: 0
+
+baseline_selected_slice:
+  source_batch: batch-0009-context-gating-policy-check
+  selected_count: 8
+  baseline_total_review_time_seconds: 303.0
+  baseline_average_review_time_seconds: 37.875
+  baseline_label_counts:
+    scam: 4
+    non_scam: 2
+    uncertain: 2
+  baseline_second_review_required_count: 2
+  controller_only_prior_outcomes_hidden_from_reviewer: true
+
+reuse_hypothesis:
+  hypothesis: reconciled_context_gate_routes_small_policy_weighted_slice_faster_without_hard_negative_or_fast_lane_regression
+  target_average_context_gate_seconds_upper_bound: 30.0
+  packet_alignment_warning_target: 0
+  raw_evidence_leakage_target: 0
+  target_thread_required_expected_decision: needs_thread_before_label
+  boundary_control_expected_decision: needs_second_review_before_label
+  hard_negative_expected_decision: hard_negative_metadata_sufficient
+  fast_lane_expected_decision: metadata_sufficient_for_label
+
+revised_assist_condition:
+  status: reviewer_packet_ready
+  input_boundary: structured_metadata_only
+  reviewer_must_record_new_time: true
+  human_next_action_required: true
+  human_final_label_required_only_if_metadata_sufficient: true
+  prepared_reviewer_packet: data/reviewer_assist_eval/batch_0013_reviewer_context_gate_packet.yaml
+  reviewer_rules: data/reviewer_assist_eval/batch_0013_reviewer_rules.md
+  reviewer_fill_template: data/reviewer_assist_eval/batch_0013_reviewer_fill_sheet_template.yaml
+  required_reviewer_fields:
+    - context_gate_review_time_seconds
+    - human_context_gate_decision
+    - metadata_only_label_or_not_reviewable
+    - context_gate_usefulness_rating
+    - context_gate_omission_risk
+    - context_gate_status
+    - minimal_context_request_status
+    - over_request_risk
+    - under_request_risk
+    - second_review_required
+    - insufficient_evidence
+    - raw_evidence_excluded_from_git
+
+allowed_human_context_gate_decisions:
+  - metadata_sufficient_for_label
+  - needs_thread_before_label
+  - needs_second_review_before_label
+  - hard_negative_metadata_sufficient
+  - not_reviewable_metadata_only
+
+guardrails:
+  external_systems_access_authorized: false
+  new_collection_authorized: false
+  raw_threads_content_allowed: false
+  raw_reply_text_allowed: false
+  raw_ocr_text_allowed: false
+  urls_handles_screenshots_browser_artifacts_allowed: false
+  controlled_store_locators_allowed: false
+  real_llm_or_api_calls_authorized: false
+  model_training_authorized: false
+  final_automated_scam_decisions_allowed: false
+  legal_fraud_or_enforcement_claims_allowed: false
+
+candidate_entries:
+  - workbench_id: RA_0013_0001
+    source_candidate_id: batch-0009-context-gating-policy-check_0012
+    source_stub_id: STUB_0009_D_01
+    task_id: EXP_0009_D
+    routing_lane: result_display_thread_required
+    slice_role: target_thread_required
+    signal_hint: 成果展示
+    expected_behavior: thread_required_early_gate_diagnostic
+    prior_baseline_outcome_hidden:
+      label: uncertain
+      review_time_seconds: 58.0
+      second_review_required: true
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0002
+    source_candidate_id: batch-0009-context-gating-policy-check_0011
+    source_stub_id: STUB_0009_C_01
+    task_id: EXP_0009_C
+    routing_lane: result_display_low_context_transition
+    slice_role: boundary_control
+    signal_hint: 成果展示
+    expected_behavior: boundary_control_contact_low_context
+    prior_baseline_outcome_hidden:
+      label: uncertain
+      review_time_seconds: 42.0
+      second_review_required: true
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0003
+    source_candidate_id: batch-0009-context-gating-policy-check_0009
+    source_stub_id: STUB_0009_B_01
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    slice_role: hard_negative_control
+    signal_hint: 成果展示
+    expected_behavior: hard_negative_clean_holdout_primary
+    prior_baseline_outcome_hidden:
+      label: non_scam
+      review_time_seconds: 34.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0004
+    source_candidate_id: batch-0009-context-gating-policy-check_0010
+    source_stub_id: STUB_0009_B_02
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    slice_role: hard_negative_control
+    signal_hint: 成果展示
+    expected_behavior: hard_negative_clean_holdout_secondary
+    prior_baseline_outcome_hidden:
+      label: non_scam
+      review_time_seconds: 36.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0005
+    source_candidate_id: batch-0009-context-gating-policy-check_0001
+    source_stub_id: STUB_0009_A_01
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_control_contact
+    prior_baseline_outcome_hidden:
+      label: scam
+      review_time_seconds: 31.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0006
+    source_candidate_id: batch-0009-context-gating-policy-check_0002
+    source_stub_id: STUB_0009_A_02
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_control_group
+    prior_baseline_outcome_hidden:
+      label: scam
+      review_time_seconds: 34.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0007
+    source_candidate_id: batch-0009-context-gating-policy-check_0003
+    source_stub_id: STUB_0009_A_03
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_control_reply
+    prior_baseline_outcome_hidden:
+      label: scam
+      review_time_seconds: 32.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+  - workbench_id: RA_0013_0008
+    source_candidate_id: batch-0009-context-gating-policy-check_0004
+    source_stub_id: STUB_0009_A_04
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_control_stable_anchor
+    prior_baseline_outcome_hidden:
+      label: scam
+      review_time_seconds: 36.0
+      second_review_required: false
+    revised_context_gate_status: pending_human_fill
+
+close_conditions:
+  reviewer_context_gate_packet_written: true
+  reviewer_fields_blank_in_packet: true
+  all_revised_assist_outputs_filled_in_packet: true
+  prior_baseline_outcomes_hidden_from_reviewer: true
+  raw_evidence_exclusion_confirmed_for_packet: true
+  packet_quality_errors: 0
+  human_review_completed: false
+
+result_note: experiments/evaluation-notes/0110-reviewer-assist-context-gate-bounded-reuse-result.md
+expected_result_file: data/reviewer_assist_eval/batch_0013_context_gate_result.yaml
+handoff_report: reports/reviewer-assist-batch-0013-context-gate-bounded-reuse-handoff.md

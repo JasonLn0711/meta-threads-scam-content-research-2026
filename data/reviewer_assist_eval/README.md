@@ -56,6 +56,10 @@ Do not store:
 | `batch_0012_reviewer_context_gate_packet.yaml` | Reviewer-facing Batch `0012` context-gate packet with revised assist outputs filled and human reviewer fields blank | reconciled packet artifact |
 | `batch_0012_context_gate_result.yaml` | Completed empirical metadata-only context-gate fill for Batch `0012` | completed empirical result |
 | `batch_0012_aggregate_result.yaml` | Machine-readable aggregate result for Decision `0152` and reconciliation status for Decision `0153` | completed aggregate result; packet/source warnings resolved |
+| `batch_0013_work_order.yaml` | Decision `0154` bounded context-gate reuse workbench on existing Batch `0009` metadata aliases | reviewer packet ready |
+| `batch_0013_reviewer_rules.md` | Reviewer-facing rule sheet for Batch `0013` bounded reuse | safe for reviewer |
+| `batch_0013_reviewer_fill_sheet_template.yaml` | Reviewer-facing fill template with prior baseline outcomes removed | safe for reviewer |
+| `batch_0013_reviewer_context_gate_packet.yaml` | Reviewer-facing Batch `0013` context-gate packet with revised assist outputs filled and human reviewer fields blank | ready for human context-gate review |
 
 ## Use
 
@@ -69,6 +73,7 @@ The current result syntheses belong in:
 experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md
 experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md
 experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md
+experiments/evaluation-notes/0110-reviewer-assist-context-gate-bounded-reuse-result.md
 ```
 
 Batch `0012` has a separate reviewer-facing packet and result:
@@ -76,9 +81,12 @@ Batch `0012` has a separate reviewer-facing packet and result:
 ```text
 data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml
 data/reviewer_assist_eval/batch_0012_context_gate_result.yaml
+data/reviewer_assist_eval/batch_0013_reviewer_context_gate_packet.yaml
 ```
 
 The packet remains a packet artifact. The completed empirical result belongs in
 the result file and must preserve raw-evidence exclusion. Decision `0153`
 reconciled the Batch `0012` packet/source alignment, so the current packet
-generator and result validator report `0` packet-alignment warnings.
+generator and result validator report `0` packet-alignment warnings. Batch
+`0013` is packet-ready only; it must not be treated as an empirical result until
+human reviewer fields are filled.
