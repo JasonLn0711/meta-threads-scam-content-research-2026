@@ -4,7 +4,11 @@ This repository is a documentation-first research operating system for Threads-r
 
 ## Mission
 
-Support a serious, budget-aware research program for studying scam-like content on Meta Threads. From this point forward, the repo's first-principle goal is to build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+Support a serious, budget-aware research program for studying scam-like content on Meta Threads. From this point forward, the repo has one non-negotiable top priority: design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates. Scalability, stability, reviewability, labor efficiency, governance, evidence handling, hard-negative protection, and reviewer assistance are support requirements for that discovery-method goal.
+
+The current collected cases are partial fragments, not a representative sample of all Threads investment scams. Agents must not treat existing cases as the full population, infer a complete taxonomy from them, or claim platform-wide coverage from them. Use existing cases as hypotheses, seeds, hard-negative controls, workflow examples, and evaluation slices.
+
+The project purpose is governed automatic or assisted discovery design: finding review-worthy Threads investment-scam candidates beyond the current fragments, then testing whether source arms, signals, summaries, and priority rules generalize under bounded review. Other goals are subordinate to this purpose and must not contradict it.
 
 The repo should help researchers, investigators, reviewers, professors, and engineers define the problem, structure evidence, annotate examples, run narrow experiments, measure discovery yield and reviewer burden together, reduce avoidable review labor, and decide what is worth building next.
 
@@ -12,7 +16,7 @@ The project is a research scaffold, not a production detector.
 
 ## First-Principle Direction
 
-Every substantial change should support at least one of:
+Every substantial change must serve the automatic or assisted investment-scam discovery method. It should support at least one of:
 
 - investment-scam candidate discovery;
 - labor-efficient review-worthy candidate discovery;

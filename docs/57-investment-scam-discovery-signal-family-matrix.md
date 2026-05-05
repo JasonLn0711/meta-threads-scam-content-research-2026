@@ -8,6 +8,12 @@ This matrix supports candidate discovery. It does not determine legal fraud, gui
 
 This matrix does not authorize new evidence collection, item `0082`, browser/crawler expansion, confirmed-pointer intake, model training, public release, or raw evidence in git.
 
+## Sampling Boundary
+
+This matrix is not a complete map of all Threads investment-scam patterns. It is built from partial, governed case fragments and prior reviewed slices. Treat each signal family as a discovery hypothesis for finding candidates, not as proof that the current cases represent the whole Threads investment-scam population.
+
+Future automatic or assisted discovery should use the matrix to generate, route, and evaluate candidate-finding methods on new bounded slices. It should not use the matrix to freeze a final taxonomy from the current case set.
+
 ## Unit Of Discovery
 
 The method should discover candidates across four units:

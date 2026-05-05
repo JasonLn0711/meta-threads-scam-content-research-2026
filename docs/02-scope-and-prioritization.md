@@ -2,15 +2,15 @@
 
 ## Phase-1 Recommendation
 
-Start with a focused investment-scam candidate-discovery method on Threads. From this point forward, the method must be scalable, stable, reviewable, and labor-efficient: it should discover enough review-worthy investment-scam candidates with as little human review burden as possible.
+Start with a focused method for governed automatic or assisted investment-scam candidate discovery on Threads. This is the single highest project priority. All scope, tooling, governance, annotation, Reviewer Assist, and reporting choices must support this method and must not contradict it.
 
-Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve the joint outcome: review-worthy yield, acceptable reviewer burden, controlled false-positive pressure, hard-negative protection, and governance-safe evidence handling.
+Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve automatic or assisted candidate discovery and its required joint outcome: review-worthy yield, acceptable reviewer burden, controlled false-positive pressure, hard-negative protection, and governance-safe evidence handling.
 
 Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforcement work until the investment-scam discovery method shows useful yield, acceptable reviewer burden, hard-negative protection, and measured labor efficiency.
 
 ## Labor-Efficient Discovery Boundary
 
-Do not frame the scope as "detect investment scams first, reduce labor second." Discovery yield and reviewer burden are coupled success conditions.
+Do not frame the scope as "detect investment scams first, reduce labor second." The scope is "design the governed automatic or assisted discovery method first." Discovery yield and reviewer burden are coupled success conditions for that method.
 
 - A method that finds many candidates but requires excessive manual reading, sorting, summarization, copying, schema filling, and second review is not operationally scalable.
 - A method that saves reviewer time but fails to surface enough review-worthy candidates is not useful.

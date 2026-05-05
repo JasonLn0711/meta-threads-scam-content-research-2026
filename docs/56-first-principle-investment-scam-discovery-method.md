@@ -7,12 +7,16 @@ Record the repo's supporting discovery-method goal so future work does not drift
 From this point forward, the first-principle goal is:
 
 ```text
-Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+Design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
 ```
+
+All other goals are support constraints for this method: scalability, stability, reviewability, labor efficiency, evidence governance, hard-negative protection, reviewer assistance, metrics, reports, and budget fit must serve the automatic discovery-method design and must not contradict it.
 
 Use [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md) as the current north-star document.
 
-This is a candidate-discovery research goal. It is not a production detector, platform enforcement system, legal fraud determination process, public warning list, or authorization for broad data collection.
+This is an automatic or assisted candidate-discovery research goal. It is not a production detector, platform enforcement system, legal fraud determination process, public warning list, or authorization for broad data collection.
+
+The current collected cases are not the population of Threads investment scams. They are partial, governed fragments. Future work must not infer platform-wide scam structure from them as if they were representative. The central method problem is to design governed automatic or assisted discovery that can search for review-worthy candidates beyond the known fragments and then test whether any learned hypotheses hold on new bounded slices.
 
 ## Why Investment Scam First
 
@@ -26,7 +30,7 @@ Investment scam content is the first priority because:
 
 ## Objective Hierarchy
 
-1. Discover enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+1. Design a governed automatic or assisted method that discovers review-worthy Threads investment-scam candidates.
 2. Preserve enough post, reply/comment, OCR, link/contact, and profile-context evidence for human review.
 3. Measure candidate quality, discovery yield, duplicate load, reviewer burden, false-positive pressure, and false-negative pressure as coupled success conditions.
 4. Protect hard negatives such as ordinary investment discussion, financial education, and anti-scam warnings.
@@ -39,7 +43,8 @@ Investment scam content is the first priority because:
 
 Work counts as progress when it improves at least one of these:
 
-- candidate-discovery method design;
+- automatic or assisted candidate-discovery method design;
+- sample-bias controls that prevent overfitting to current fragments;
 - investment-scam signal-family coverage;
 - full-thread/reply readiness;
 - visible funnel and private-channel migration cue detection;
@@ -55,7 +60,10 @@ Work counts as progress when it improves at least one of these:
 Work is not enough by itself when it only:
 
 - creates another package without improving discovery learning;
+- improves a secondary artifact while weakening or distracting from automatic discovery-method design;
 - increases record count without measuring candidate quality;
+- summarizes existing cases as if they represent the full Threads investment-scam space;
+- treats case-derived regularities as final rules before testing them on new bounded slices;
 - broadens collection before the source boundary and stop rules are clear;
 - trains a model before the discovery question, labels, and evidence fields are stable;
 - treats smoke-test baseline metrics as operational readiness;
@@ -67,7 +75,7 @@ Work is not enough by itself when it only:
 
 ### Track 1: Signal-Family Learning
 
-Use confirmed and reviewed examples to refine signal families such as:
+Use confirmed and reviewed examples to propose and refine signal-family hypotheses such as:
 
 - investment teacher, assistant, advisor, or expert framing;
 - profit-proof, earnings-sheet, testimonial, or witness-style reassurance;
@@ -77,6 +85,8 @@ Use confirmed and reviewed examples to refine signal families such as:
 - comment-layer contact hijack, safe-contact claims, or supporting-account coordination;
 - external-link, domain-category, or redirect-presence signals;
 - account-level repetition, posting frequency, and multi-style profile behavior when authorized and repo-safe.
+
+These examples do not prove platform-wide coverage. Each signal family remains a discovery hypothesis until a capped method test shows whether it finds new review-worthy candidates without unacceptable reviewer burden or hard-negative pressure.
 
 ### Track 2: Candidate Discovery Source Design
 
@@ -90,6 +100,8 @@ Future candidate discovery should compare bounded source families, not rely on o
 - account-source context only when a decision record authorizes it.
 
 Open-ended crawler expansion, broad keyword search, graph capture, private-message access, landing-page capture, and redirect-chain capture remain blocked unless a later decision explicitly authorizes them.
+
+Automatic discovery design should therefore focus on controlled query generation, source-arm allocation, dedupe, context gating, reviewer-assist preparation, and evaluation against new bounded slices. It should not only mine the existing case set for patterns.
 
 ### Track 3: Evidence Completeness
 
@@ -205,6 +217,7 @@ It should not default to:
 more package maintenance
 → more broad collection
 → more records without yield metrics
+→ retrospective pattern summaries treated as complete
 → model training
 → production claims
 ```

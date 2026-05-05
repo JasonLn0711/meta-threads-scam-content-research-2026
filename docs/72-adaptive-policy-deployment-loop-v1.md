@@ -22,6 +22,8 @@ scam-worthy candidates per reviewer hour
 
 Policy learning is allowed only as stable, logged, human-governed support for discovery and review routing. It does not authorize automated Threads collection, final scam decisions, legal fraud determinations, enforcement actions, or public warnings.
 
+Historical case logs and reviewed slices are partial feedback, not a representative map of all Threads investment scams. The policy must treat learned weights as bounded routing hypotheses. It should be evaluated on new governed slices before any claim that a routing rule generalizes beyond the current fragments.
+
 ## Loop
 
 ```text

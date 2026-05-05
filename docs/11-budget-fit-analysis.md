@@ -2,7 +2,9 @@
 
 ## Budget Frame
 
-The practical budget is approximately NTD 1.8 million. This supports a focused research MVP, not a production-grade detection platform.
+The practical budget is approximately NTD 1.8 million. This supports a focused research MVP for designing a governed automatic or assisted Threads investment-scam candidate-discovery method, not a production-grade detection platform.
+
+All budget choices should be judged by whether they improve that discovery method. Work that does not support automatic or assisted discovery should be deferred even if it looks useful in isolation.
 
 ## Realistic Under NTD 1.8M
 
@@ -28,13 +30,12 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 
 ## What To Do First
 
-1. Lock taxonomy and annotation rules.
-2. Build the dataset schema.
-3. Collect a small, balanced, legally safe sample.
-4. Annotate the first batch.
-5. Run text-only rules.
-6. Add OCR, comments, and link-signal ablations.
-7. Write a decision memo.
+1. Define the governed automatic or assisted discovery method and source-arm boundaries.
+2. Lock the minimum taxonomy, annotation rules, and schema needed to evaluate that method.
+3. Use small, legally safe slices to test whether the method surfaces review-worthy candidates beyond known fragments.
+4. Measure reviewer burden, hard-negative pressure, duplicate load, and evidence sufficiency.
+5. Add OCR, comments/replies, visible-link, and reviewer-assist support only when they improve discovery yield or reduce review burden.
+6. Write a decision memo on whether to expand, revise, or pause the discovery method.
 
 ## Explicitly Postpone
 
@@ -66,4 +67,4 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 
 ## Budget Guardrail
 
-If an activity does not improve evidence quality, annotation reliability, signal comparison, or narrowing decisions, it should not be funded in phase 1.
+If an activity does not improve governed automatic or assisted candidate discovery, evidence quality for that discovery method, annotation reliability, signal comparison, reviewer burden, or narrowing decisions, it should not be funded in phase 1.

@@ -2,13 +2,13 @@
 
 ## Objective
 
-Build a documentation-first research program for Threads-related scam or scam-like content. From this point forward, the project should build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+Build a documentation-first research program for Threads-related scam or scam-like content. From this point forward, the project has one highest priority: design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
 
-Documentation, governance, annotation, validation, and baseline work exist to support that discovery-method goal. They are not the final goal by themselves.
+Documentation, governance, annotation, validation, baseline work, Reviewer Assist, metrics, and reporting exist to support that discovery-method goal. They are not the final goal by themselves and must not contradict the automatic discovery-method design.
 
 The central question is:
 
-> What bounded, reviewable candidate-discovery method produces enough review-worthy Threads investment-scam candidates while minimizing reviewer burden, preserving hard-negative boundaries, controlling false-positive pressure, and keeping evidence handling governance-safe?
+> What governed automatic or assisted candidate-discovery method can find enough review-worthy Threads investment-scam candidates while minimizing reviewer burden, preserving hard-negative boundaries, controlling false-positive pressure, and keeping evidence handling governance-safe?
 
 Labor reduction is not a secondary convenience. It is an operational feasibility constraint and a core research success condition.
 
@@ -16,7 +16,7 @@ Labor reduction is not a secondary convenience. It is an operational feasibility
 
 Phase 1 focuses on Threads-related content:
 
-- Investment-scam candidate discovery as the first focused scam family
+- Governed automatic or assisted investment-scam candidate discovery as the first focused method objective
 - Text posts
 - Text plus image posts
 - Replies and comments
