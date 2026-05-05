@@ -126,6 +126,18 @@ Include now under the CIB controlled launch record.
 - Evidence value: high. API and automation can make source capture more complete, reproducible, and auditable.
 - Budget fit: good if limited to governed collection, OCR, parsing, validation, audit, and baseline automation; poor if it expands into production monitoring or enforcement.
 
+2026-05-05 access correction:
+
+- Official Threads API access is the preferred Discovery Method v1 source arm
+  when app access, permissions, endpoint coverage, token handling, field limits,
+  and rate or usage rules are documented.
+- Controlled browser runs may be reused only as run-scoped fallback source arms
+  with explicit caps, conservative pacing, raw-output exclusion from git, and
+  stop rules.
+- A personal Threads account login does not authorize standing browser
+  crawling, and one-second automated fetching is not an acceptable default
+  control.
+
 ### 8. Short Video
 
 Defer unless stakeholders show that short videos dominate the report queue.

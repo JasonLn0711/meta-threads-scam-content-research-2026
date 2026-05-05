@@ -22,6 +22,17 @@ On `2026-04-23`, a scope-change request proposed accepting low-speed automated T
 
 Also on `2026-04-23`, the project owner reported a CIB Criminal Investigation Bureau authorization amendment requiring explicit authorization for API access and all automation needed for this research case. That authorization is adopted only through the controlled launch record and Decision 0018. The difference is scope: unscope automation remains rejected, while CIB-authorized API and automation runs are allowed only when run records, field limits, credential controls, raw-storage controls, access limits, retention rules, redaction rules, and audit logs are in place.
 
+On `2026-05-05`, a new request proposed changing this repo's governance red lines
+to allow browser crawling through a personal Threads account, including a
+default "one second per group/item" collection pace. That request is not adopted.
+A personal account login is not, by itself, platform authorization for automated
+collection, and rate limiting alone is not a governance basis. The project may
+check official Threads API access first. If official API access is unavailable
+or insufficient, a controlled browser run may be proposed only as a new
+run-scoped source arm under Decision `0155`, with source, method, account/session
+boundary, fields, caps, pacing, storage, retention, redaction, and stop rules
+recorded before execution.
+
 ## Prohibited Repository Contents
 
 Do not commit:
@@ -106,9 +117,12 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | Stakeholder-provided examples | Approved with limits for the 50-item pilot | Exact source, storage, access, retention, and redaction limits required before first item. |
 | Manual public examples | Approved with limits for the 50-item pilot | Privacy-minimized and governed by the controlled launch record. |
 | API-authorized collection | Approved with limits for this CIB-authorized pilot | Use only approved API access paths, credential controls, run records, field limits, and controlled raw storage. |
+| Official Threads API keyword/media/reply retrieval for Discovery Method v1 | Pending access check | Preferred source-arm path if Meta app access, permissions, token handling, endpoint coverage, field limits, rate or usage rules, and run records are documented. |
 | Low-speed automated Threads/Meta collection without scope | Rejected or paused | Rate limiting alone is not authorization; Decision 0016 still applies to unscope automation. |
+| Personal-account browser crawling as standing permission | Rejected or paused | A user login does not create platform authorization for automated collection. Do not normalize this as a default research method. |
+| One-second automated browser fetching | Rejected or paused | A one-second pace is not a sufficient control and is not the default for this repo. Use official API limits or a conservative run-scoped browser record. |
 | CIB-authorized automation-assisted collection | Approved with limits for this research case | Allowed only under Decision 0018 and the controlled launch record. |
-| Browser automation, scraping-like collection, crawling, bulk export | Approved only if run-scoped under the CIB controlled launch record | Raw outputs, credentials, browser/session artifacts, and logs stay outside git. Decision 0022 narrows the next crawler step to a one-item controlled low-speed rehearsal. |
+| Browser automation, scraping-like collection, crawling, bulk export | Approved only if run-scoped under the CIB controlled launch record | Raw outputs, credentials, browser/session artifacts, and logs stay outside git. Decision 0022 narrows the historical crawler step to a one-item controlled low-speed rehearsal; Decision 0155 allows considering a new controlled browser source arm only after a new work order and run-scoped decision. |
 | Landing-page crawling or redirect-chain capture | Approved only if run-scoped under the CIB controlled launch record | Repo-visible outputs must be redacted or aggregate. |
 | Unlimited 500-item collection | Rejected or paused | Use `docs/32-500-item-expansion-plan.md`; no collection without staged authorization. |
 

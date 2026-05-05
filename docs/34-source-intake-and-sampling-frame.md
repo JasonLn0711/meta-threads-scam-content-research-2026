@@ -41,9 +41,11 @@ The evaluation must answer:
 | `manual_public_comparator` | Non-scam and hard-negative comparator examples. | Overcollection of ordinary users. |
 | `stakeholder_summary_only` | Pattern discovery without raw evidence. | May be too vague for annotation. |
 | `api_authorized_sample` | Structured access if explicit API approval exists. | Scope and terms must be precise. |
+| `official_threads_api_keyword_search` | Preferred Discovery Method v1 source arm if official access and permissions exist. | Endpoint coverage, app permissions, tokens, rate/usage rules, and field limits must be documented. |
+| `controlled_browser_run_scoped` | Fallback source arm when official API access is unavailable or insufficient. | Requires a new run-scoped decision; not standing personal-account crawling permission. |
 | `researcher_synthetic` | Templates, calibration, tooling dry runs. | Not real evidence; cannot support real-world claims. |
 
-Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it.
+Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it. A personal login and a slow pace do not replace that decision.
 
 ## Intake Sequence
 

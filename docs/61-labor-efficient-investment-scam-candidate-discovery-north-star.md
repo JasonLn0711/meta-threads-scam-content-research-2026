@@ -39,6 +39,27 @@ The project purpose is to design a governed automatic or assisted candidate-disc
 
 All other repo goals are subordinate to this discovery-design purpose and must not contradict it.
 
+## 1B. 2026-05-05 Source-Arm Correction
+
+The repo must not confuse reviewer workflow evaluation with candidate discovery.
+Reviewer Assist and context-gating work are useful only after a candidate is
+already surfaced.
+
+The next source of progress is Discovery Method v1:
+
+```text
+official API access check
+-> authorized source-arm work order
+-> capped source-arm run
+-> metadata-only candidate stubs
+-> human review
+-> source-arm yield plus reviewer-hour metrics
+```
+
+If official Threads API access is not available, a controlled browser run may be
+proposed only as a run-scoped fallback. A personal account login and a
+one-second pace are not sufficient authorization.
+
 ## 2. Why "Finding Scams" Is Not Enough
 
 "Find scam posts" is too weak as a research objective because it hides the actual bottleneck: reviewer labor.
@@ -117,6 +138,8 @@ AI and system support must not:
 - capture account/profile graphs without separate authorization;
 - perform landing-page or redirect-chain capture unless separately authorized;
 - conduct broad crawler/browser expansion unless separately authorized;
+- treat personal-account browser crawling as a standing source method;
+- treat one-second automated fetching as an acceptable default control;
 - train models unless separately authorized;
 - commit raw evidence, credentials, browser exports, screenshots with unnecessary personal data, or sensitive investigative material to git.
 

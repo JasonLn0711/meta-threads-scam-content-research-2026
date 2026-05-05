@@ -1,0 +1,163 @@
+schema_version: discovery_candidate_v1_schema
+title: Discovery Candidate v1
+description: Repo-safe metadata contract for candidates surfaced by Discovery Method v1.
+governance:
+  raw_threads_content_allowed: false
+  raw_reply_text_allowed: false
+  raw_ocr_text_allowed: false
+  raw_urls_allowed: false
+  raw_handles_allowed: false
+  browser_or_session_artifacts_allowed: false
+  exact_controlled_store_locators_allowed: false
+  final_automated_label_allowed: false
+required_top_level:
+  - schema_version
+  - discovery_candidate_id
+  - discovery_round_id
+  - source_arm_id
+  - source_access_mode
+  - query_strategy_id
+  - query_signal_family_hints
+  - surface_type_hints
+  - context_needed
+  - evidence_availability_flags
+  - dedupe
+  - priority
+  - review
+properties:
+  schema_version:
+    const: discovery_candidate_v1
+  discovery_candidate_id:
+    type: string
+    min_length: 1
+  discovery_round_id:
+    type: string
+    min_length: 1
+  source_arm_id:
+    type: string
+    allowed_values:
+      - official_threads_api_keyword_search
+      - official_threads_api_reply_context
+      - controlled_browser_run_scoped
+      - stakeholder_or_reviewer_pointer
+      - manual_public_seed
+      - hard_negative_comparator
+      - synthetic_query_probe
+  source_access_mode:
+    type: string
+    allowed_values:
+      - synthetic_only
+      - manual
+      - official_api_authorized
+      - controlled_browser_run_scoped
+      - stakeholder_provided
+      - pending
+  query_strategy_id:
+    type: string
+    min_length: 1
+  query_signal_family_hints:
+    type: array
+    items:
+      type: string
+      allowed_values:
+        - investment_domain_seed
+        - guarantee_or_profit_cue
+        - authority_or_teacher_cue
+        - private_channel_cue
+        - result_display_cue
+        - reply_funnel_cue
+        - external_link_or_contact_cue
+        - hard_negative_cue
+        - unknown
+  surface_type_hints:
+    type: array
+    items:
+      type: string
+      allowed_values:
+        - top_level_post
+        - thread_or_reply
+        - image_or_ocr
+        - external_link_or_contact
+        - account_context
+        - unknown
+  context_needed:
+    type: string
+    allowed_values:
+      - metadata_only_candidate_triage
+      - thread_or_reply_context_needed
+      - ocr_context_needed
+      - account_context_needed
+      - not_enough_context
+      - unknown
+  evidence_availability_flags:
+    required:
+      - has_post_metadata
+      - has_reply_metadata
+      - has_image_metadata
+      - has_ocr_metadata
+      - has_link_or_contact_metadata
+      - raw_evidence_excluded_from_git
+  dedupe:
+    required:
+      - dedupe_key_ref
+      - near_duplicate_status
+    allowed_near_duplicate_status:
+      - new_candidate
+      - possible_duplicate
+      - confirmed_duplicate
+      - unknown
+  priority:
+    required:
+      - priority_score
+      - priority_reason_codes
+      - hard_negative_reason_codes
+  review:
+    required:
+      - review_status
+      - human_final_label_or_not_reviewable
+      - review_time_seconds
+      - second_review_required
+    allowed_review_status:
+      - not_reviewed
+      - reviewed
+      - needs_second_review
+      - excluded
+    allowed_labels:
+      - scam
+      - non_scam
+      - uncertain
+      - insufficient_evidence
+      - not_reviewable
+      - pending
+forbidden_keys:
+  - post_text
+  - reply_texts
+  - ocr_text
+  - raw_text
+  - raw_content
+  - raw_threads_content
+  - screenshot
+  - screenshot_path
+  - image_path
+  - image_paths
+  - external_links
+  - visible_contact_handles
+  - url
+  - urls
+  - profile_url
+  - username
+  - user_id
+  - handle
+  - browser_export
+  - browser_profile
+  - session
+  - cookies
+  - token
+  - credential
+  - raw_api_response
+  - controlled_store_path
+forbidden_string_patterns:
+  - "https?://"
+  - "www\\."
+  - "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+  - "@[A-Za-z0-9_]{2,}"

@@ -18,6 +18,32 @@ This is an automatic or assisted candidate-discovery research goal. It is not a 
 
 The current collected cases are not the population of Threads investment scams. They are partial, governed fragments. Future work must not infer platform-wide scam structure from them as if they were representative. The central method problem is to design governed automatic or assisted discovery that can search for review-worthy candidates beyond the known fragments and then test whether any learned hypotheses hold on new bounded slices.
 
+## 2026-05-05 Course Correction
+
+Reviewer Assist batches are downstream support. They answer:
+
+```text
+After a candidate exists, can reviewers triage it faster and more safely?
+```
+
+They do not answer:
+
+```text
+How do we keep finding new review-worthy Threads investment-scam candidates?
+```
+
+From Decision `0155` forward, do not default to another reviewer-only batch.
+The next method step is source-arm readiness for Discovery Method v1:
+
+1. Check official Threads API access and permissions first.
+2. If API access is unavailable or insufficient, consider a controlled browser
+   run only as a new run-scoped fallback.
+3. Write repo-safe discovery candidate metadata, not raw Threads evidence.
+4. Measure review-worthy yield and reviewer burden by source arm.
+
+Personal-account browser crawling and one-second automated fetching are not
+accepted governance shortcuts.
+
 ## Why Investment Scam First
 
 Investment scam content is the first priority because:
@@ -94,12 +120,16 @@ Future candidate discovery should compare bounded source families, not rely on o
 
 - CIB/stakeholder confirmed pointers;
 - reviewer-supplied candidates;
+- official Threads API keyword/media/reply retrieval if permissions and fields are documented;
 - approved browser-session candidates under explicit caps;
 - diversified risk-probe seed matrices;
 - existing checkpoint records and hard negatives;
 - account-source context only when a decision record authorizes it.
 
-Open-ended crawler expansion, broad keyword search, graph capture, private-message access, landing-page capture, and redirect-chain capture remain blocked unless a later decision explicitly authorizes them.
+Open-ended crawler expansion, broad keyword search, personal-account standing
+browser automation, graph capture, private-message access, landing-page capture,
+and redirect-chain capture remain blocked unless a later decision explicitly
+authorizes them.
 
 Automatic discovery design should therefore focus on controlled query generation, source-arm allocation, dedupe, context gating, reviewer-assist preparation, and evaluation against new bounded slices. It should not only mine the existing case set for patterns.
 
@@ -204,7 +234,8 @@ Future work should default to:
 
 ```text
 investment-scam scalable candidate-discovery method
-→ capped method test design
+→ authorized source-arm readiness
+→ capped source-arm method test design
 → human review and second review
 → discovery-yield and reviewer-burden evaluation
 → reviewer-assist and labor-savings evaluation

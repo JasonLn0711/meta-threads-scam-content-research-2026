@@ -31,11 +31,13 @@ All budget choices should be judged by whether they improve that discovery metho
 ## What To Do First
 
 1. Define the governed automatic or assisted discovery method and source-arm boundaries.
-2. Lock the minimum taxonomy, annotation rules, and schema needed to evaluate that method.
-3. Use small, legally safe slices to test whether the method surfaces review-worthy candidates beyond known fragments.
-4. Measure reviewer burden, hard-negative pressure, duplicate load, and evidence sufficiency.
-5. Add OCR, comments/replies, visible-link, and reviewer-assist support only when they improve discovery yield or reduce review burden.
-6. Write a decision memo on whether to expand, revise, or pause the discovery method.
+2. Check official Threads API access, permissions, endpoint coverage, token handling, field limits, and rate or usage rules.
+3. If official API access is unavailable or insufficient, prepare only a run-scoped controlled browser fallback; do not normalize personal-account crawling.
+4. Lock the minimum taxonomy, annotation rules, and schema needed to evaluate that method.
+5. Use small, legally safe slices to test whether the method surfaces review-worthy candidates beyond known fragments.
+6. Measure reviewer burden, hard-negative pressure, duplicate load, and evidence sufficiency.
+7. Add OCR, comments/replies, visible-link, and reviewer-assist support only when they improve discovery yield or reduce review burden.
+8. Write a decision memo on whether to expand, revise, or pause the discovery method.
 
 ## Explicitly Postpone
 
@@ -43,6 +45,8 @@ All budget choices should be judged by whether they improve that discovery metho
 - Long video until there is a separate budget and annotation plan.
 - Deepfake indicators until there is a concrete stakeholder sample and expert review path.
 - Unscoped automated collection outside the CIB controlled launch record.
+- Personal-account browser crawling as a standing method.
+- One-second browser fetching as a default control.
 - Classifier training until labels are stable.
 - LLM-assisted review until Phase 1 produces governed real evidence and a later decision record authorizes that scope.
 - Dashboard or web app until reviewer workflow is proven.

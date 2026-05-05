@@ -16,7 +16,7 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 
 | Field | Value |
 |---|---|
-| Source type | `stakeholder_provided_case` / `manual_public_example` / `manual_public_comparator` / `stakeholder_summary_only` / `api_authorized_sample` / `researcher_synthetic` / other |
+| Source type | `stakeholder_provided_case` / `manual_public_example` / `manual_public_comparator` / `stakeholder_summary_only` / `api_authorized_sample` / `official_threads_api_keyword_search` / `controlled_browser_run_scoped` / `researcher_synthetic` / other |
 | Platform | Threads |
 | Proposed collection method |  |
 | Expected item count |  |
@@ -31,6 +31,9 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 | Is source sharing approved? |  |
 | Is manual collection approved? |  |
 | Is API access approved? |  |
+| If using official Threads API, are permissions and endpoint coverage documented? |  |
+| If using controlled browser run, is a run-scoped decision recorded? |  |
+| Is this free of standing personal-account crawler scope? |  |
 | Are screenshots approved? |  |
 | Are source URLs approved? |  |
 | Are visible links approved? |  |
@@ -102,4 +105,3 @@ Rationale:
 | Follow-up | Owner | Due date |
 |---|---|---|
 |  |  |  |
-

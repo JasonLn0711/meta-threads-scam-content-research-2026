@@ -6,6 +6,26 @@ Define the next acquisition path now that CIB and other units cannot provide red
 
 This plan permits only a controlled low-speed crawler rehearsal under the existing CIB-authorized API and automation scope. It does not authorize open-ended scraping, evasion, bulk monitoring, production detection, or legal fraud determinations.
 
+## 2026-05-05 Reuse Boundary
+
+This document may be used as a procedural reference for a future controlled
+browser source arm under Discovery Method v1. It is not standing permission for
+personal-account browser crawling.
+
+If official Threads API access is unavailable or insufficient, a new controlled
+browser run can be proposed only through:
+
+1. a new decision record;
+2. `templates/discovery_source_arm_work_order.md`;
+3. the existing controlled-run record pattern;
+4. repo-safe metadata output under
+   `data-contracts/discovery_candidate_v1.schema.yaml`.
+
+Do not lower this plan into a broad or routine crawler. In particular, do not
+use "one second per group/item" as the default control. Conservative pacing,
+one worker, small candidate caps, raw-output exclusion from git, and explicit
+stop rules remain required unless a later approval makes the run stricter.
+
 ## Current Status
 
 | Area | Status |

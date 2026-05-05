@@ -51,8 +51,12 @@ checkpoint 0081 research evidence
 → decision 0143: sample incompleteness and discovery-design purpose recorded
 → decision 0144: automatic discovery method recorded as the single top priority
 → decision 0145: Reviewer Assist labor-savings evaluation opened for automatic discovery
-→ schema-prefill, summary-assisted review, priority-ranking, and labor-savings evaluation
-→ decision on expansion, revision, or pause
+→ decisions 0146-0154: Reviewer Assist and context-gate evidence recorded as support layers
+→ decision 0155: Discovery Method v1 source-arm readiness opened
+→ official API viability check or controlled browser fallback work order
+→ capped source-arm method test
+→ discovery-yield and reviewer-burden evaluation
+→ decision on source-arm expansion, revision, or pause
 ```
 
 Do not treat package maintenance, generic governance, record-count growth, UI/API/schema demos, or model training as progress unless it improves this labor-efficient discovery-method path.
@@ -77,26 +81,22 @@ The report supersedes a concept-only stakeholder scoping memo as the next artifa
 
 ## Current Post-0076 Path
 
-The repo has moved from controlled execution planning into v2 metadata-only
-reviewer-routing and Reviewer Assist evaluation.
+The repo moved through v2 metadata-only reviewer-routing and Reviewer Assist
+evaluation, then corrected course back to upstream candidate discovery.
 
-Immediate next action: fill the Decision `0150` / Batch `0012` Reviewer Assist
-context-gate revision slice, with special attention to the
-`result_display_thread_required` lane. Do not open another generic source arm
-or controlled batch by habit. Decision `0132` adopts the
-Batch `0008` context-gating policy, decision `0133` opens Batch `0009`, and
-decision `0134` records that Batch `0009` supports the policy with
-`high_value_candidates_per_hour: 64.285714` versus Batch `0008` at `21.492537`.
-Decision `0145` opens the evaluation package, Decision `0146` opens the
-fillable metadata-only workbench, and Decision `0147` records the aggregate-only
-result selecting `expand_assist_evaluation`. Decision `0148` opens
-`data/reviewer_assist_eval/batch_0011_work_order.yaml` as the next bounded
-metadata-only slice, and Decision `0149` records the completed empirical
-assisted-review result. Batch `0011` lowered average review time from `41.875`
-to `33.125` seconds while preserving the same final label mix and zero
-raw-evidence leakage. Decision `0150` opens Batch `0012` to test whether the
-assistant can route thread-dependent items to `needs_thread_before_label`
-faster without over-requesting thread context for controls.
+Immediate next action: execute Decision `0155` at the planning/readiness level.
+Do not open Batch `0014` by habit. First check whether official Threads API
+keyword/media/reply retrieval is actually available under documented app
+permissions, endpoint coverage, token controls, field limits, and rate or usage
+rules. If official API access is unavailable or insufficient, draft a tightly
+capped controlled browser source-arm work order using the historical
+controlled-run procedure as a reference. Do not normalize personal-account
+browser crawling, one-second automated fetching, broad collection, model
+training, production detection, legal fraud claims, or raw evidence in git.
+
+Decisions `0132` through `0154` remain useful evidence for reviewer routing and
+Reviewer Assist. They do not solve the upstream problem of repeatedly finding
+new review-worthy Threads investment-scam candidates.
 
 Support tooling now exists for that next work: Evidence Layer v1 provides
 metadata-safe custody, SHA-256 integrity checks, and audit-chain verification;
@@ -170,17 +170,15 @@ Historical pilot-launch materials remain available in [29-authorized-pilot-execu
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1. Decision `0143` records that current cases are partial fragments. Decision `0144` records automatic or assisted discovery as the single highest priority. Decision `0145` opens the Reviewer Assist labor-savings evaluation package for that discovery method. Decision `0146` opens the metadata-only execution workbench. Decision `0147` records the aggregate-only result and selects `expand_assist_evaluation`. Decision `0148` opens the next bounded expansion slice on Batch `0008`. Decision `0149` records Batch `0011` as an empirical metadata-only assisted-review result and selects bounded `expand_assist_evaluation`. Decision `0150` opens Batch `0012` as a thread-required context-gate revision.
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1. Decision `0143` records that current cases are partial fragments. Decision `0144` records automatic or assisted discovery as the single highest priority. Decision `0145` opens the Reviewer Assist labor-savings evaluation package for that discovery method. Decision `0146` opens the metadata-only execution workbench. Decision `0147` records the aggregate-only result and selects `expand_assist_evaluation`. Decision `0148` opens the next bounded expansion slice on Batch `0008`. Decision `0149` records Batch `0011` as an empirical metadata-only assisted-review result and selects bounded `expand_assist_evaluation`. Decision `0150` opens Batch `0012` as a thread-required context-gate revision. Decision `0155` opens Discovery Method v1 source-arm readiness and records the API-first / controlled-browser-fallback access boundary.
 
-The next repo action is not to polish `0118`, `0120`, another package, or another
-generic source arm. Use Decision `0150`,
-[../data/reviewer_assist_eval/batch_0012_work_order.yaml](../data/reviewer_assist_eval/batch_0012_work_order.yaml),
-[../data/reviewer_assist_eval/batch_0012_reviewer_rules.md](../data/reviewer_assist_eval/batch_0012_reviewer_rules.md),
-[../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml](../data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml),
-and [../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](../experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md)
-to fill the next bounded Reviewer Assist context-gate revision while keeping
-raw-evidence exclusion, human final judgment, and aggregate-only reporting
-intact.
+The next repo action is not to polish `0118`, `0120`, another package, another
+Reviewer Assist batch, or another generic source arm. Use Decision `0155`,
+[73-authorized-threads-discovery-method-v1.md](73-authorized-threads-discovery-method-v1.md),
+[../templates/discovery_source_arm_work_order.md](../templates/discovery_source_arm_work_order.md),
+[../data-contracts/discovery_candidate_v1.schema.yaml](../data-contracts/discovery_candidate_v1.schema.yaml),
+and [../experiments/modality-studies/0014-discovery-source-arm-viability-v1.md](../experiments/modality-studies/0014-discovery-source-arm-viability-v1.md)
+to test source-arm readiness before any new live evidence work.
 
 The next repo action also must avoid overfitting to current case fragments. Reviewer Assist and policy-routing work should help discover, triage, and evaluate new review-worthy candidates under governed source boundaries. Existing reviewed cases should remain seeds, hard-negative controls, and evaluation references, not the assumed universe of Threads investment-scam behavior.
 
@@ -220,7 +218,7 @@ This path creates learning quickly:
 Defer:
 
 - Full Meta cross-platform integration.
-- Automated collection.
+- Unscoped automated collection.
 - Long video.
 - Heavy short-video analysis.
 - Deepfake detection as a mainline workstream.

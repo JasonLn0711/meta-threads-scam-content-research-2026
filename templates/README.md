@@ -20,6 +20,7 @@ controlled_crawler_run_record.md
 controlled_rehearsal_review.md
 data_authorization_request.md
 dataset_manifest_template.md
+discovery_source_arm_work_order.md
 experiment_log_template.md
 guideline_revision_log_template.md
 hard_negative_hesitation_log_template.csv
@@ -85,5 +86,12 @@ Use `stakeholder_authorization_decision_record.md` with `docs/36-stakeholder-aut
 Use `real_pilot_readiness_review.md` as the final owner-facing readiness record before any real 50-item pilot begins.
 
 Use `controlled_launch_details_template.md` only in a controlled location outside git after filling it with exact source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, permitted-field, forbidden-field, uncertainty, and signoff details.
+
+Use `discovery_source_arm_work_order.md` before any Discovery Method v1 source
+arm is executed. It is the current template for official Threads API viability
+checks and any future controlled browser fallback proposal. It does not
+authorize personal-account crawling, one-second browser fetching, raw evidence
+in git, final automated labels, production detection, enforcement, or public
+warnings.
 
 Do not put real Threads evidence, raw screenshots, credentials, browser exports, or stakeholder case material in templates.

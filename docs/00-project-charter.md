@@ -53,6 +53,8 @@ Phase 1 does not attempt to:
 
 - Approximate practical budget: NTD 1.8 million.
 - No automated Meta data collection without documented authorization.
+- Prefer official Threads API access for live source-arm checks when app permissions, endpoint coverage, field limits, token handling, and rate or usage rules are documented.
+- Treat controlled browser runs as run-scoped fallback methods, not standing personal-account crawler permission.
 - Evidence must preserve uncertainty and avoid unnecessary personal data.
 - Research outputs must be explainable to public-sector stakeholders.
 - Early baselines should be cheap, inspectable, and auditable.
