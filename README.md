@@ -20,7 +20,7 @@ The project asks:
 
 This is not a production detector and does not make legal determinations. It is a research scaffold for scalable candidate discovery, risk triage, evidence design, and early experimental comparison.
 
-The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The metadata-safe Evidence Layer v1 design is [docs/65-evidence-layer-v1.md](docs/65-evidence-layer-v1.md). The synthetic closed-loop discovery runner is [docs/66-closed-loop-discovery-v1.md](docs/66-closed-loop-discovery-v1.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
+The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The metadata-safe Evidence Layer v1 design is [docs/65-evidence-layer-v1.md](docs/65-evidence-layer-v1.md). The synthetic closed-loop discovery runner is [docs/66-closed-loop-discovery-v1.md](docs/66-closed-loop-discovery-v1.md). The advanced synthetic discovery layer is [docs/67-advanced-discovery-v2.md](docs/67-advanced-discovery-v2.md). The synthetic concept reasoning layer is [docs/68-concept-reasoning-layer-v1.md](docs/68-concept-reasoning-layer-v1.md). The synthetic dynamic intelligence layer is [docs/69-dynamic-intelligence-layer-v1.md](docs/69-dynamic-intelligence-layer-v1.md). The synthetic predictive simulation layer is [docs/70-predictive-simulation-layer-v1.md](docs/70-predictive-simulation-layer-v1.md). The defensive self-play layer is [docs/71-defensive-self-play-layer-v1.md](docs/71-defensive-self-play-layer-v1.md). The adaptive policy deployment loop is [docs/72-adaptive-policy-deployment-loop-v1.md](docs/72-adaptive-policy-deployment-loop-v1.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
 
 ## Why Threads First
 
@@ -88,6 +88,13 @@ data/candidates/  v2 metadata-only candidate records; no raw Threads evidence
 data/candidate_intake/ metadata-only manual-assisted fill worksheets
 data/evidence_store/ ignored local simulated controlled store; no raw evidence in git
 data/learning_state/ ignored local synthetic bandit state and metrics
+data/concepts/ ignored local synthetic concept and reasoning logs
+data/predictions/ ignored local synthetic predictive simulation logs
+data/selfplay/ ignored local defensive self-play simulation logs
+data/policy/ ignored local adaptive policy decision, feedback, evaluation, and state logs
+data/concept_graph.yaml ignored local synthetic concept graph
+data/concept_time_series.yaml ignored local synthetic concept time series
+data/adversarial_patterns.yaml ignored local synthetic adversarial findings
 meta-system/      v2 sparse schemas and human-reviewed feature evolution metadata
 metrics/          v2 aggregate signal scores and reviewer-effort metrics
 engine/           v2 metadata-only sparse, embedding, discrepancy, and feature engines
@@ -98,7 +105,7 @@ src/              Small support prototypes for evidence custody, v2 metadata, an
 decision-log/     Durable decisions and scope changes
 ```
 
-Current code is support tooling only: decision `0135` adds a metadata-safe Evidence Layer v1, and decision `0136` adds a synthetic closed-loop discovery runner for query-arm and reviewer-hour learning. Neither decision authorizes external collection, raw evidence in git, final scam determinations, or production detection.
+Current code is support tooling only: decision `0135` adds a metadata-safe Evidence Layer v1, decision `0136` adds a synthetic closed-loop discovery runner for query-arm and reviewer-hour learning, decision `0137` adds an advanced synthetic layer with prompt-shaped query generation, deterministic embeddings, clustering, and contextual bandit learning, decision `0138` adds a synthetic concept reasoning layer for cluster-to-concept mapping and conservative novelty routing, decision `0139` adds a dynamic intelligence layer for concept graphs, temporal tracking, evolution edges, and adversarial heuristics, decision `0140` adds a predictive simulation layer for subtle concept mutation, simulated posts, risk scoring, and validation hooks, decision `0141` adds a defensive self-play layer for abstract adversary/detector robustness testing, and decision `0142` adds an adaptive policy deployment loop for shadow/assist/partial metadata routing and safe offline policy updates. These decisions do not authorize external collection, real LLM/API calls, raw evidence in git, final scam determinations, actionable scam content generation, enforcement, or production detection.
 
 ## Related Repos
 

@@ -17,12 +17,18 @@ Before making changes, read:
 5. `docs/63-context-gating-policy.md`
 6. `docs/65-evidence-layer-v1.md`
 7. `docs/66-closed-loop-discovery-v1.md`
-8. `docs/18-recommended-path-v1.md`
-9. `docs/56-first-principle-investment-scam-discovery-method.md`
-10. `docs/57-investment-scam-discovery-signal-family-matrix.md`
-11. `governance/data-governance.md`
-12. `AGENTS.md`
-13. `docs/21-repo-relationships.md`
+8. `docs/67-advanced-discovery-v2.md`
+9. `docs/68-concept-reasoning-layer-v1.md`
+10. `docs/69-dynamic-intelligence-layer-v1.md`
+11. `docs/70-predictive-simulation-layer-v1.md`
+12. `docs/71-defensive-self-play-layer-v1.md`
+13. `docs/72-adaptive-policy-deployment-loop-v1.md`
+14. `docs/18-recommended-path-v1.md`
+15. `docs/56-first-principle-investment-scam-discovery-method.md`
+16. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+17. `governance/data-governance.md`
+18. `AGENTS.md`
+19. `docs/21-repo-relationships.md`
 
 ## Docs-First Updates
 
@@ -101,11 +107,16 @@ Allowed early code:
 - OCR normalization for approved local files
 - Evidence integrity hashing, audit-chain checks, and metadata-only candidate stubs
 - Synthetic closed-loop simulations for query-arm value and reviewer-hour metrics
+- Synthetic prompt-shaped query generation, local embeddings, local clustering, and contextual bandit simulations
+- Synthetic cluster-to-concept reasoning and conservative novelty routing
+- Synthetic concept graph, temporal tracking, evolution, and adversarial-adaptation heuristics
+- Synthetic predictive simulation, subtle concept mutation, risk scoring, and validation hooks
 
 Avoid:
 
 - Scrapers
 - Automated Threads collection
+- Real LLM/API calls without a new decision and governance boundary
 - Heavy ML training
 - Web dashboards
 - Production services

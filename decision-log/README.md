@@ -123,3 +123,9 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-05-05 | Recorded Batch 0009 as supporting the active context-gating policy and moved the next action to Reviewer Assist labor-savings evaluation | `0134-record-v2-batch-0009-context-gating-policy-check.md` |
 | 2026-05-05 | Added Evidence Layer v1 as metadata-safe custody support tooling without authorizing new collection or raw evidence in git | `0135-add-evidence-layer-v1.md` |
 | 2026-05-05 | Added synthetic Closed-Loop Discovery v1 support tooling for query-arm and reviewer-hour learning without external APIs or final scam decisions | `0136-add-synthetic-closed-loop-discovery-runner.md` |
+| 2026-05-05 | Added Advanced Discovery v2 support tooling with prompt-shaped query generation, deterministic embeddings, clustering, and contextual bandit learning | `0137-add-advanced-discovery-v2.md` |
+| 2026-05-05 | Added Concept Reasoning Layer v1 support tooling for cluster-to-concept mapping, conservative matching, and novelty routing | `0138-add-concept-reasoning-layer-v1.md` |
+| 2026-05-05 | Added Dynamic Intelligence Layer v1 support tooling for concept graphs, temporal tracking, evolution edges, and adversarial heuristics | `0139-add-dynamic-intelligence-layer-v1.md` |
+| 2026-05-05 | Added Predictive Simulation Layer v1 support tooling for subtle concept mutation, simulated posts, risk scoring, and validation hooks | `0140-add-predictive-simulation-layer-v1.md` |
+| 2026-05-05 | Added Defensive Self-Play Layer v1 support tooling for abstract adversary/detector robustness testing and self-play exploration priorities | `0141-add-defensive-self-play-layer-v1.md` |
+| 2026-05-05 | Added Adaptive Policy Deployment Loop v1 support tooling for shadow/assist/partial metadata routing, feedback logging, offline learning, and safe updates | `0142-add-adaptive-policy-deployment-loop-v1.md` |

@@ -12,6 +12,12 @@ data/
   interim/      local-only normalized working files
   processed/    local-only analysis-ready exports unless explicitly cleared
   samples/      safe synthetic or redacted examples only
+  predictions/  ignored synthetic predictive simulation logs
+  selfplay/     ignored defensive self-play simulation logs
+  policy/       ignored adaptive policy decision, feedback, evaluation, and state logs
+  concept_graph.yaml        ignored synthetic concept graph
+  concept_time_series.yaml  ignored synthetic concept time series
+  adversarial_patterns.yaml ignored synthetic adversarial findings
 ```
 
 ## Commit Rules

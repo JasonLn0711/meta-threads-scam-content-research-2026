@@ -78,13 +78,21 @@ Start with:
 3. `docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md`
 4. `docs/62-reviewer-assist-layer-design.md`
 5. `docs/63-context-gating-policy.md`
-6. `docs/18-recommended-path-v1.md`
-7. `docs/56-first-principle-investment-scam-discovery-method.md`
-8. `docs/57-investment-scam-discovery-signal-family-matrix.md`
-9. `governance/data-governance.md`
-10. `docs/19-codex-workflow.md`
-11. `docs/20-repo-series-naming.md`
-12. `docs/21-repo-relationships.md`
+6. `docs/65-evidence-layer-v1.md`
+7. `docs/66-closed-loop-discovery-v1.md`
+8. `docs/67-advanced-discovery-v2.md`
+9. `docs/68-concept-reasoning-layer-v1.md`
+10. `docs/69-dynamic-intelligence-layer-v1.md`
+11. `docs/70-predictive-simulation-layer-v1.md`
+12. `docs/71-defensive-self-play-layer-v1.md`
+13. `docs/72-adaptive-policy-deployment-loop-v1.md`
+14. `docs/18-recommended-path-v1.md`
+15. `docs/56-first-principle-investment-scam-discovery-method.md`
+16. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+17. `governance/data-governance.md`
+18. `docs/19-codex-workflow.md`
+19. `docs/20-repo-series-naming.md`
+20. `docs/21-repo-relationships.md`
 
 Before changing scope, update:
 

@@ -40,6 +40,12 @@ checkpoint 0081 research evidence
 → decision 0134: Batch 0009 supports the context-gating policy
 → decision 0135: Evidence Layer v1 support tooling added
 → decision 0136: Synthetic closed-loop discovery runner added
+→ decision 0137: Advanced synthetic discovery v2 added
+→ decision 0138: Concept Reasoning Layer v1 added
+→ decision 0139: Dynamic Intelligence Layer v1 added
+→ decision 0140: Predictive Simulation Layer v1 added
+→ decision 0141: Defensive Self-Play Layer v1 added
+→ decision 0142: Adaptive Policy Deployment Loop v1 added
 → Reviewer Assist Layer labor-savings evaluation
 → schema-prefill, summary-assisted review, priority-ranking, and labor-savings evaluation
 → decision on expansion, revision, or pause
@@ -75,9 +81,16 @@ final judgment.
 Support tooling now exists for that next work: Evidence Layer v1 provides
 metadata-safe custody, SHA-256 integrity checks, and audit-chain verification;
 Closed-Loop Discovery v1 provides a synthetic query-to-reviewer-hour feedback
-loop. These are scaffolds for Reviewer Assist evaluation, not authorization for
-external collection, crawler expansion, raw evidence in git, final scam labels,
-or production detection.
+loop; Advanced Discovery v2 adds prompt-shaped query generation, local
+embeddings, clustering, and contextual bandit learning; Concept Reasoning Layer
+v1 turns clusters into metadata-only behavioral concepts and routes weak matches
+to a novelty pool; Dynamic Intelligence Layer v1 adds concept graph, temporal,
+evolution, and adversarial-adaptation heuristics for exploration priorities;
+Predictive Simulation Layer v1 adds subtle concept mutation, simulated posts,
+risk scoring, and validation hooks. These are scaffolds for Reviewer Assist
+evaluation, not authorization for external collection, real LLM API calls,
+crawler expansion, raw evidence in git, final scam labels, or production
+detection.
 
 Track A start checklist is complete and the zero-new-evidence dry-run report is [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B formal signoff is complete: legal/privacy status is `no_veto`, CIB/internal owner status is `accepted_boundary`, and [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green. The formal signoff summary is [../reports/checkpoint-0081-track-b-formal-signoff-summary.md](../reports/checkpoint-0081-track-b-formal-signoff-summary.md). Day 0 start is recorded in [../reports/checkpoint-0081-track-b-day-0-start-record.md](../reports/checkpoint-0081-track-b-day-0-start-record.md). Day 1 intake start is recorded in [../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md](../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md). Batch `0001` is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md), second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md), batch `0002` source-arm selection is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md), batch `0002` candidate surfacing is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md), and second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md).
 
@@ -137,7 +150,7 @@ Historical pilot-launch materials remain available in [29-authorized-pilot-execu
 
 Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner.
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1.
 
 The next repo action is not to polish `0118`, `0120`, another package, or another
 generic source arm. Use the supported context-gating policy as the routing base

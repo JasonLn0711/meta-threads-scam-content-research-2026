@@ -30,6 +30,17 @@ data/browser-profiles/
 data/evidence_store/*
 data/audit_logs/*
 data/learning_state/*
+data/concept_graph.yaml
+data/concept_time_series.yaml
+data/adversarial_patterns.yaml
+data/concepts/*.json
+data/concepts/*.jsonl
+data/predictions/*.jsonl
+data/predictions/*.json
+data/selfplay/*.jsonl
+data/selfplay/*.json
+data/policy/*.jsonl
+data/policy/*.json
 data/candidate_intake/candidate_stub_*.json
 data/candidate_intake/closed_loop_round_*.jsonl
 evidence/raw/
@@ -42,6 +53,10 @@ evidence/private/
 !data/evidence_store/README.md
 !data/audit_logs/README.md
 !data/learning_state/README.md
+!data/concepts/README.md
+!data/predictions/README.md
+!data/selfplay/README.md
+!data/policy/README.md
 !data/samples/
 !data/samples/README.md
 
