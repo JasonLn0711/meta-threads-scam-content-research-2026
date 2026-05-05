@@ -77,12 +77,80 @@ def behavior_reason(expected_behavior: str) -> str:
     if "group" in expected_behavior:
         return "group_transition_context_dependency"
     if "reply" in expected_behavior:
-        return "reply_path_context_dependency"
+        return "reply_funnel_context_dependency"
     if "stable_anchor" in expected_behavior:
         return "stable_anchor_boundary_check"
     if "ambiguous" in expected_behavior:
         return "ambiguous_transition_context_dependency"
     return "metadata_context_boundary_check"
+
+
+def target_missing_note(expected_behavior: str) -> str:
+    if "reply" in expected_behavior:
+        return "reply_path_requires_thread_context"
+    if "ambiguous" in expected_behavior:
+        return "ambiguous_transition_cannot_be_resolved_from_structured_metadata_only"
+    return "thread_dependency_blocks_confident_metadata_only_label"
+
+
+def boundary_profile(expected_behavior: str) -> dict[str, str]:
+    if "reply" in expected_behavior:
+        return {
+            "reason": "reply_funnel_without_guarantee",
+            "risk_code": "hard_negative_boundary_protection",
+            "guardrail": "do_not_escalate_result_display_to_scam_label",
+            "priority": "boundary_control_for_over_request_check",
+            "missing": "visible_transition_without_explicit_guarantee",
+        }
+    if "group" in expected_behavior:
+        return {
+            "reason": "group_cue_without_guarantee",
+            "risk_code": "over_request_control",
+            "guardrail": "protect_against_group_cue_overreach",
+            "priority": "boundary_control_for_context_gate_specificity",
+            "missing": "group_transition_hint_without_explicit_guarantee",
+        }
+    if "stable_anchor" in expected_behavior:
+        return {
+            "reason": "stable_anchor_without_guarantee",
+            "risk_code": "over_request_control",
+            "guardrail": "stable_anchor_is_not_enough_for_positive_label",
+            "priority": "boundary_control_for_context_gate_specificity",
+            "missing": "stable_anchor_without_contact_or_guarantee",
+        }
+    return {
+        "reason": "contact_transition_without_guarantee",
+        "risk_code": "hard_negative_boundary_protection",
+        "guardrail": "do_not_request_thread_context_by_habit",
+        "priority": "boundary_control_for_over_request_check",
+        "missing": "no_explicit_guarantee_observed_in_metadata",
+    }
+
+
+def hard_negative_profile(expected_behavior: str) -> dict[str, str]:
+    if "secondary" in expected_behavior:
+        return {
+            "reason": "false_positive_pressure_check",
+            "guardrail": "result_display_alone_is_not_positive_signal",
+            "priority": "hard_negative_control_for_context_gate_specificity",
+        }
+    return {
+        "reason": "no_contact_group_reply_thread_or_emotional_pressure",
+        "guardrail": "do_not_request_thread_context_by_habit",
+        "priority": "hard_negative_control_for_over_request_check",
+    }
+
+
+def fast_lane_profile(expected_behavior: str) -> dict[str, str]:
+    if "group" in expected_behavior:
+        return {
+            "reason": "guarantee_group_transition",
+            "guardrail": "do_not_slow_fast_lane_without_specific_missing_context",
+        }
+    return {
+        "reason": "guarantee_executable_transition",
+        "guardrail": "no_thread_request_needed_when_guarantee_and_transition_are_metadata_sufficient",
+    }
 
 
 def build_assist_outputs(metadata: dict[str, Any]) -> dict[str, Any]:
@@ -99,84 +167,62 @@ def build_assist_outputs(metadata: dict[str, Any]) -> dict[str, Any]:
                 reason,
                 "metadata_only_label_overreach_risk",
             ],
-            "minimal_context_needed": (
-                "thread_or_reply_context_required_outside_git_before_confident_label; "
-                "record only repo-safe metadata and aggregate outcome"
-            ),
+            "minimal_context_needed": "thread_or_reply_context_required_outside_git_before_confident_label",
             "safe_next_action": "route_to_thread_context_review_before_label",
-            "metadata_label_guardrail": (
-                "do_not_label_scam_or_non_scam_from_metadata_only; use uncertain or "
-                "not_reviewable until required context is available"
-            ),
+            "metadata_label_guardrail": "do_not_label_scam_or_non_scam_from_metadata_only",
             "priority_explanation": "target_lane_for_context_dependency_bottleneck",
-            "missing_evidence_note": "thread_dependency_blocks_confident_metadata_only_label",
+            "missing_evidence_note": target_missing_note(expected_behavior),
             "second_review_suggestion": True,
         }
 
     if role == "boundary_control":
+        profile = boundary_profile(expected_behavior)
         return {
-            "context_dependency_gate": "boundary_check_not_thread_required_by_default",
+            "context_dependency_gate": "needs_second_review_before_label",
             "context_reason_codes": [
                 "result_display_low_context_transition",
-                reason,
-                "avoid_result_display_positive_overgeneralization",
+                profile["reason"],
+                profile["risk_code"],
             ],
-            "minimal_context_needed": (
-                "request only the narrow missing transition context if reviewer cannot "
-                "resolve metadata boundary; do not request full thread by habit"
-            ),
-            "safe_next_action": "metadata_boundary_review_then_second_review_if_contested",
-            "metadata_label_guardrail": (
-                "do_not_infer_scam_from_result_display_alone; keep uncertainty if "
-                "transition evidence remains weak"
-            ),
-            "priority_explanation": "boundary_control_for_over_request_and_under_request_balance",
-            "missing_evidence_note": "explicit_guarantee_or_stable_transition_not_observed_in_metadata",
+            "minimal_context_needed": "no_thread_by_default; second_reviewer_may_check_metadata_boundary",
+            "safe_next_action": "route_to_second_review_before_label",
+            "metadata_label_guardrail": profile["guardrail"],
+            "priority_explanation": profile["priority"],
+            "missing_evidence_note": profile["missing"],
             "second_review_suggestion": True,
         }
 
     if role == "hard_negative_control":
+        profile = hard_negative_profile(expected_behavior)
         return {
-            "context_dependency_gate": "hard_negative_metadata_sufficient_check",
+            "context_dependency_gate": "hard_negative_metadata_sufficient",
             "context_reason_codes": [
                 "clean_result_display_holdout",
-                "hard_negative_over_request_control",
-                "avoid_thread_request_by_habit",
+                profile["reason"],
+                "hard_negative_boundary",
             ],
-            "minimal_context_needed": "not_applicable_if_metadata_preserves_clean_holdout_boundary",
-            "safe_next_action": "preserve_hard_negative_if_metadata_sufficient",
-            "metadata_label_guardrail": (
-                "do_not_request_thread_context_or_escalate_risk_without_specific_missing "
-                "conversion_evidence"
-            ),
-            "priority_explanation": "hard_negative_control_for_context_gate_over_request_risk",
-            "missing_evidence_note": "no_thread_context_request_expected_without_specific_missing_evidence",
+            "minimal_context_needed": "not_applicable",
+            "safe_next_action": "preserve_hard_negative_metadata_decision",
+            "metadata_label_guardrail": profile["guardrail"],
+            "priority_explanation": profile["priority"],
+            "missing_evidence_note": "no_missing_context_needed_for_clean_holdout_metadata",
             "second_review_suggestion": False,
         }
 
     if role == "fast_lane_control":
-        fast_lane_reason = (
-            "reply_funnel_fast_lane_anchor"
-            if "reply_funnel" in expected_behavior
-            else "stable_anchor_fast_lane_anchor"
-            if "stable_anchor" in expected_behavior
-            else "fast_lane_metadata_anchor"
-        )
+        profile = fast_lane_profile(expected_behavior)
         return {
-            "context_dependency_gate": "metadata_sufficient_fast_lane_regression_check",
+            "context_dependency_gate": "metadata_sufficient_for_label",
             "context_reason_codes": [
                 "strong_source_priority",
-                fast_lane_reason,
-                "avoid_fast_lane_slowdown_by_context_gate",
+                profile["reason"],
+                "no_thread_dependency",
             ],
-            "minimal_context_needed": "not_applicable_unless_reviewer_identifies_a_specific_contradiction",
-            "safe_next_action": "keep_fast_lane_metadata_triage_without_thread_request_by_default",
-            "metadata_label_guardrail": (
-                "do_not_slow_or_downgrade_fast_lane_only_because_context_gate_exists; "
-                "human reviewer may override if metadata is contested"
-            ),
-            "priority_explanation": "fast_lane_regression_control_for_reviewer_hour_protection",
-            "missing_evidence_note": "no_thread_dependency_expected_from_fast_lane_metadata",
+            "minimal_context_needed": "not_applicable",
+            "safe_next_action": "metadata_sufficient_fast_lane_label",
+            "metadata_label_guardrail": profile["guardrail"],
+            "priority_explanation": "fast_lane_control_for_slowdown_check",
+            "missing_evidence_note": "no_missing_context_for_metadata_level_triage",
             "second_review_suggestion": False,
         }
 

@@ -2,7 +2,7 @@
 
 Date: 2026-05-05
 
-Status: empirical context-gate result completed with packet alignment warnings
+Status: empirical context-gate result completed; packet/source alignment reconciled
 
 ## Purpose
 
@@ -134,17 +134,20 @@ Validation result:
 | Check | Count |
 |---|---:|
 | Required-field / aggregate errors | 0 |
-| Source-packet alignment warnings | 12 |
+| Source-packet alignment warnings | 0 |
+| Initial source-packet warnings before reconciliation | 12 |
 | Raw-evidence leakage incidents | 0 |
 
-The source-packet alignment warnings are non-fatal traceability warnings. They
-come from expected-behavior alias differences and from the completed result
-using fast-lane controls `STUB_0008_A_01` / `STUB_0008_A_02`, while the
-generated source packet used `STUB_0008_A_03` / `STUB_0008_A_04`.
+The initial source-packet alignment warnings were non-fatal traceability
+warnings. They came from expected-behavior alias differences and from the
+completed result using fast-lane controls `STUB_0008_A_01` / `STUB_0008_A_02`,
+while the generated source packet used `STUB_0008_A_03` / `STUB_0008_A_04`.
 
-The aggregate metrics are internally valid by workbench entry and slice role,
-but future reuse of the packet generator should reconcile fast-lane control
-selection before reviewer delivery.
+Decision `0153` reconciled the controller work order, reviewer fill template,
+packet generator, and regenerated reviewer-facing packet. The validator now
+checks both reviewer-visible metadata and revised assist outputs against the
+packet, and the current result validates with `0` source-packet alignment
+warnings.
 
 ## Decision Slot
 

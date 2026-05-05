@@ -4,7 +4,7 @@ decision_id: "0152"
 source_work_order: data/reviewer_assist_eval/batch_0012_work_order.yaml
 source_packet: data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml
 source_context_gate_result: data/reviewer_assist_eval/batch_0012_context_gate_result.yaml
-status: empirical_context_gate_completed_with_packet_alignment_warnings
+status: empirical_context_gate_completed_packet_reconciled
 result_boundary:
   empirical_context_gate_result: true
   formal_only: false
@@ -107,17 +107,20 @@ risk_summary:
 validation_summary:
   validation_command: .venv/bin/python scripts/validate_reviewer_assist_context_gate_result.py
   validation_errors: 0
-  packet_alignment_warnings: 12
-  packet_alignment_warning_interpretation: non_fatal_traceability_warning
-  packet_alignment_note: result metadata differs from the generated source packet on expected_behavior aliases and fast-lane control aliases; aggregate metrics are internally valid by workbench_id and slice_role, but future reuse should reconcile packet generation before reviewer delivery
+  packet_alignment_warnings: 0
+  initial_packet_alignment_warnings_before_reconciliation: 12
+  packet_alignment_warning_interpretation: reconciled_traceability_warning
+  packet_alignment_note: initial result metadata differed from the generated source packet on expected_behavior aliases and fast-lane control aliases; Decision 0153 reconciled the controller work order, reviewer fill template, packet generator, and regenerated packet so current validation reports zero packet-alignment warnings
 
 decision:
   selected_option: adopt_context_gate_revision
-  next_action: use_context_gate_revision_for_thread_required_lane_before_broader_reviewer_assist_scaling
-  requires_packet_reconciliation_before_reuse: true
+  next_action: use_context_gate_revision_only_in_a_bounded_reviewer_assist_slice
+  requires_packet_reconciliation_before_reuse: false
+  reconciliation_decision: decision-log/0153-reconcile-reviewer-assist-batch-0012-packet-source-alignment.md
+  requires_bounded_reuse_only: true
   authorizes_new_collection: false
   authorizes_real_llm_or_api_calls: false
   authorizes_model_training: false
   authorizes_production_detector: false
   authorizes_final_automated_scam_decisions: false
-  summary: Batch 0012 supports adopting the context-gate revision for the thread-required lane because it reduced target-lane time-to-correct-next-action, routed all target cases to thread-before-label, preserved hard negatives, avoided fast-lane slowdown, and had zero raw-evidence leakage. The source-packet alignment warning must be reconciled before reusing the packet generator.
+  summary: Batch 0012 supports adopting the context-gate revision for the thread-required lane because it reduced target-lane time-to-correct-next-action, routed all target cases to thread-before-label, preserved hard negatives, avoided fast-lane slowdown, and had zero raw-evidence leakage. The packet/source alignment warning has been reconciled for bounded future reuse.

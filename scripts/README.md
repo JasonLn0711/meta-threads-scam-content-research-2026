@@ -238,7 +238,9 @@ Validate the Batch 0012 Reviewer Assist context-gate result:
 ```
 
 This recomputes the aggregate metrics, checks required reviewer fields, confirms
-raw-evidence exclusion, and reports source-packet alignment warnings.
+raw-evidence exclusion, and reports source-packet alignment warnings across both
+reviewer-visible metadata and revised assist outputs. After Decision `0153`, the
+Batch `0012` result validates with `0` packet-alignment warnings.
 
 Validate the Batch 0004 candidate intake worksheet:
 

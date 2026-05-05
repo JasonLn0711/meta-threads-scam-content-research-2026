@@ -59,7 +59,7 @@ The result supports adopting the context-gate revision because:
 
 ## QA Note
 
-Validation found `0` aggregate or required-field errors and `12`
+Validation initially found `0` aggregate or required-field errors and `12`
 source-packet alignment warnings.
 
 The warnings are traceability warnings, not aggregate calculation failures. They
@@ -67,9 +67,14 @@ come from expected-behavior alias differences and from the completed result
 using fast-lane controls `STUB_0008_A_01` / `STUB_0008_A_02`, while the
 generated source packet used `STUB_0008_A_03` / `STUB_0008_A_04`.
 
-The result is therefore accepted as an empirical context-gate result, but future
-reuse of the packet generator must reconcile the fast-lane control selection
-before reviewer delivery.
+The result was therefore accepted as an empirical context-gate result, with
+packet/source reconciliation required before reuse.
+
+Post-decision update: Decision `0153` reconciled the controller work order,
+reviewer fill template, packet generator, and regenerated reviewer-facing
+packet. The current validator now checks reviewer-visible metadata and revised
+assist outputs against the source packet and reports `0` packet-alignment
+warnings. The empirical metrics recorded here are unchanged.
 
 ## Consequences
 
@@ -78,8 +83,8 @@ evaluation, with two constraints:
 
 - use the gate to route thread-required candidates to context-before-label
   review, not to make final scam decisions;
-- reconcile packet/source alias alignment before generating another
-  reviewer-facing packet.
+- after Decision `0153`, use the reconciled generator only for bounded
+  Reviewer Assist slices.
 
 The next bounded step may be a governed result synthesis or a new bounded slice
 that uses the adopted context gate. It must not become broad collection,

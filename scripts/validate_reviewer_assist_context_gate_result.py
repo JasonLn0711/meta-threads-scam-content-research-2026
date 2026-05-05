@@ -298,6 +298,23 @@ def packet_alignment_warnings(result: dict[str, Any], packet: dict[str, Any]) ->
         for key in ("source_candidate_id", "source_stub_id", "task_id", "routing_lane", "slice_role", "signal_hint", "expected_behavior"):
             if result_metadata.get(key) != packet_metadata.get(key):
                 warnings.append(f"{wid}: metadata mismatch for {key}: result={result_metadata.get(key)!r} packet={packet_metadata.get(key)!r}")
+        result_outputs = entry.get("revised_assist_outputs", {})
+        packet_outputs = packet_entry.get("revised_assist_outputs", {})
+        for key in (
+            "context_dependency_gate",
+            "context_reason_codes",
+            "minimal_context_needed",
+            "safe_next_action",
+            "metadata_label_guardrail",
+            "priority_explanation",
+            "missing_evidence_note",
+            "second_review_suggestion",
+        ):
+            if result_outputs.get(key) != packet_outputs.get(key):
+                warnings.append(
+                    f"{wid}: revised_assist_outputs mismatch for {key}: "
+                    f"result={result_outputs.get(key)!r} packet={packet_outputs.get(key)!r}"
+                )
     return warnings
 
 

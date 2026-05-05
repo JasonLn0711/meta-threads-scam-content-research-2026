@@ -153,7 +153,7 @@ candidate_entries:
       routing_lane: result_display_low_context_transition
       slice_role: boundary_control
       signal_hint: 成果展示
-      expected_behavior: low_context_boundary_not_thread_required_contact
+      expected_behavior: boundary_control_contact_low_context
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -185,7 +185,7 @@ candidate_entries:
       routing_lane: result_display_low_context_transition
       slice_role: boundary_control
       signal_hint: 成果展示
-      expected_behavior: low_context_boundary_not_thread_required_reply
+      expected_behavior: boundary_control_reply_low_context
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -217,7 +217,7 @@ candidate_entries:
       routing_lane: result_display_low_context_transition
       slice_role: boundary_control
       signal_hint: 成果展示
-      expected_behavior: low_context_boundary_not_thread_required_group
+      expected_behavior: boundary_control_group_low_context
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -249,7 +249,7 @@ candidate_entries:
       routing_lane: result_display_low_context_transition
       slice_role: boundary_control
       signal_hint: 成果展示
-      expected_behavior: low_context_boundary_not_thread_required_stable_anchor
+      expected_behavior: boundary_control_stable_anchor_low_context
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -281,7 +281,7 @@ candidate_entries:
       routing_lane: result_display_clean_holdout
       slice_role: hard_negative_control
       signal_hint: 成果展示
-      expected_behavior: clean_holdout_no_thread_overrequest_control
+      expected_behavior: hard_negative_clean_holdout_primary
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -313,7 +313,7 @@ candidate_entries:
       routing_lane: result_display_clean_holdout
       slice_role: hard_negative_control
       signal_hint: 成果展示
-      expected_behavior: clean_holdout_no_thread_overrequest_control
+      expected_behavior: hard_negative_clean_holdout_secondary
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -339,13 +339,13 @@ candidate_entries:
 
   - workbench_id: RA_0012_0011
     reviewer_visible_metadata:
-      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
-      source_stub_id: STUB_0008_A_03
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
+      source_stub_id: STUB_0008_A_01
       task_id: EXP_0008_A
       routing_lane: strong_source_priority
       slice_role: fast_lane_control
       signal_hint: 保證收益
-      expected_behavior: fast_lane_no_thread_regression_reply_funnel
+      expected_behavior: fast_lane_control_contact
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []
@@ -371,13 +371,13 @@ candidate_entries:
 
   - workbench_id: RA_0012_0012
     reviewer_visible_metadata:
-      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
-      source_stub_id: STUB_0008_A_04
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+      source_stub_id: STUB_0008_A_02
       task_id: EXP_0008_A
       routing_lane: strong_source_priority
       slice_role: fast_lane_control
       signal_hint: 保證收益
-      expected_behavior: fast_lane_no_thread_regression_stable_anchor
+      expected_behavior: fast_lane_control_group
     revised_assist_outputs_to_fill_before_review:
       context_dependency_gate:
       context_reason_codes: []

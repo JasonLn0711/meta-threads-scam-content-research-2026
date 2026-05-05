@@ -48,11 +48,9 @@ candidate_entries:
     - result_display_thread_required_lane
     - contact_path_context_dependency
     - metadata_only_label_overreach_risk
-    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
-      record only repo-safe metadata and aggregate outcome
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label
     safe_next_action: route_to_thread_context_review_before_label
-    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
-      uncertain or not_reviewable until required context is available
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only
     priority_explanation: target_lane_for_context_dependency_bottleneck
     missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
     second_review_suggestion: true
@@ -84,11 +82,9 @@ candidate_entries:
     - result_display_thread_required_lane
     - group_transition_context_dependency
     - metadata_only_label_overreach_risk
-    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
-      record only repo-safe metadata and aggregate outcome
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label
     safe_next_action: route_to_thread_context_review_before_label
-    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
-      uncertain or not_reviewable until required context is available
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only
     priority_explanation: target_lane_for_context_dependency_bottleneck
     missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
     second_review_suggestion: true
@@ -118,15 +114,13 @@ candidate_entries:
     context_dependency_gate: needs_thread_before_label
     context_reason_codes:
     - result_display_thread_required_lane
-    - reply_path_context_dependency
+    - reply_funnel_context_dependency
     - metadata_only_label_overreach_risk
-    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
-      record only repo-safe metadata and aggregate outcome
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label
     safe_next_action: route_to_thread_context_review_before_label
-    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
-      uncertain or not_reviewable until required context is available
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only
     priority_explanation: target_lane_for_context_dependency_bottleneck
-    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    missing_evidence_note: reply_path_requires_thread_context
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -156,13 +150,11 @@ candidate_entries:
     - result_display_thread_required_lane
     - ambiguous_transition_context_dependency
     - metadata_only_label_overreach_risk
-    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
-      record only repo-safe metadata and aggregate outcome
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label
     safe_next_action: route_to_thread_context_review_before_label
-    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
-      uncertain or not_reviewable until required context is available
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only
     priority_explanation: target_lane_for_context_dependency_bottleneck
-    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    missing_evidence_note: ambiguous_transition_cannot_be_resolved_from_structured_metadata_only
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -185,20 +177,18 @@ candidate_entries:
     routing_lane: result_display_low_context_transition
     slice_role: boundary_control
     signal_hint: 成果展示
-    expected_behavior: low_context_boundary_not_thread_required_contact
+    expected_behavior: boundary_control_contact_low_context
   revised_assist_outputs:
-    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_dependency_gate: needs_second_review_before_label
     context_reason_codes:
     - result_display_low_context_transition
-    - contact_path_context_dependency
-    - avoid_result_display_positive_overgeneralization
-    minimal_context_needed: request only the narrow missing transition context if
-      reviewer cannot resolve metadata boundary; do not request full thread by habit
-    safe_next_action: metadata_boundary_review_then_second_review_if_contested
-    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
-      if transition evidence remains weak
-    priority_explanation: boundary_control_for_over_request_and_under_request_balance
-    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    - contact_transition_without_guarantee
+    - hard_negative_boundary_protection
+    minimal_context_needed: no_thread_by_default; second_reviewer_may_check_metadata_boundary
+    safe_next_action: route_to_second_review_before_label
+    metadata_label_guardrail: do_not_request_thread_context_by_habit
+    priority_explanation: boundary_control_for_over_request_check
+    missing_evidence_note: no_explicit_guarantee_observed_in_metadata
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -221,20 +211,18 @@ candidate_entries:
     routing_lane: result_display_low_context_transition
     slice_role: boundary_control
     signal_hint: 成果展示
-    expected_behavior: low_context_boundary_not_thread_required_reply
+    expected_behavior: boundary_control_reply_low_context
   revised_assist_outputs:
-    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_dependency_gate: needs_second_review_before_label
     context_reason_codes:
     - result_display_low_context_transition
-    - reply_path_context_dependency
-    - avoid_result_display_positive_overgeneralization
-    minimal_context_needed: request only the narrow missing transition context if
-      reviewer cannot resolve metadata boundary; do not request full thread by habit
-    safe_next_action: metadata_boundary_review_then_second_review_if_contested
-    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
-      if transition evidence remains weak
-    priority_explanation: boundary_control_for_over_request_and_under_request_balance
-    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    - reply_funnel_without_guarantee
+    - hard_negative_boundary_protection
+    minimal_context_needed: no_thread_by_default; second_reviewer_may_check_metadata_boundary
+    safe_next_action: route_to_second_review_before_label
+    metadata_label_guardrail: do_not_escalate_result_display_to_scam_label
+    priority_explanation: boundary_control_for_over_request_check
+    missing_evidence_note: visible_transition_without_explicit_guarantee
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -257,20 +245,18 @@ candidate_entries:
     routing_lane: result_display_low_context_transition
     slice_role: boundary_control
     signal_hint: 成果展示
-    expected_behavior: low_context_boundary_not_thread_required_group
+    expected_behavior: boundary_control_group_low_context
   revised_assist_outputs:
-    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_dependency_gate: needs_second_review_before_label
     context_reason_codes:
     - result_display_low_context_transition
-    - group_transition_context_dependency
-    - avoid_result_display_positive_overgeneralization
-    minimal_context_needed: request only the narrow missing transition context if
-      reviewer cannot resolve metadata boundary; do not request full thread by habit
-    safe_next_action: metadata_boundary_review_then_second_review_if_contested
-    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
-      if transition evidence remains weak
-    priority_explanation: boundary_control_for_over_request_and_under_request_balance
-    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    - group_cue_without_guarantee
+    - over_request_control
+    minimal_context_needed: no_thread_by_default; second_reviewer_may_check_metadata_boundary
+    safe_next_action: route_to_second_review_before_label
+    metadata_label_guardrail: protect_against_group_cue_overreach
+    priority_explanation: boundary_control_for_context_gate_specificity
+    missing_evidence_note: group_transition_hint_without_explicit_guarantee
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -293,20 +279,18 @@ candidate_entries:
     routing_lane: result_display_low_context_transition
     slice_role: boundary_control
     signal_hint: 成果展示
-    expected_behavior: low_context_boundary_not_thread_required_stable_anchor
+    expected_behavior: boundary_control_stable_anchor_low_context
   revised_assist_outputs:
-    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_dependency_gate: needs_second_review_before_label
     context_reason_codes:
     - result_display_low_context_transition
-    - stable_anchor_boundary_check
-    - avoid_result_display_positive_overgeneralization
-    minimal_context_needed: request only the narrow missing transition context if
-      reviewer cannot resolve metadata boundary; do not request full thread by habit
-    safe_next_action: metadata_boundary_review_then_second_review_if_contested
-    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
-      if transition evidence remains weak
-    priority_explanation: boundary_control_for_over_request_and_under_request_balance
-    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    - stable_anchor_without_guarantee
+    - over_request_control
+    minimal_context_needed: no_thread_by_default; second_reviewer_may_check_metadata_boundary
+    safe_next_action: route_to_second_review_before_label
+    metadata_label_guardrail: stable_anchor_is_not_enough_for_positive_label
+    priority_explanation: boundary_control_for_context_gate_specificity
+    missing_evidence_note: stable_anchor_without_contact_or_guarantee
     second_review_suggestion: true
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -329,19 +313,18 @@ candidate_entries:
     routing_lane: result_display_clean_holdout
     slice_role: hard_negative_control
     signal_hint: 成果展示
-    expected_behavior: clean_holdout_no_thread_overrequest_control
+    expected_behavior: hard_negative_clean_holdout_primary
   revised_assist_outputs:
-    context_dependency_gate: hard_negative_metadata_sufficient_check
+    context_dependency_gate: hard_negative_metadata_sufficient
     context_reason_codes:
     - clean_result_display_holdout
-    - hard_negative_over_request_control
-    - avoid_thread_request_by_habit
-    minimal_context_needed: not_applicable_if_metadata_preserves_clean_holdout_boundary
-    safe_next_action: preserve_hard_negative_if_metadata_sufficient
-    metadata_label_guardrail: do_not_request_thread_context_or_escalate_risk_without_specific_missing
-      conversion_evidence
-    priority_explanation: hard_negative_control_for_context_gate_over_request_risk
-    missing_evidence_note: no_thread_context_request_expected_without_specific_missing_evidence
+    - no_contact_group_reply_thread_or_emotional_pressure
+    - hard_negative_boundary
+    minimal_context_needed: not_applicable
+    safe_next_action: preserve_hard_negative_metadata_decision
+    metadata_label_guardrail: do_not_request_thread_context_by_habit
+    priority_explanation: hard_negative_control_for_over_request_check
+    missing_evidence_note: no_missing_context_needed_for_clean_holdout_metadata
     second_review_suggestion: false
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -364,19 +347,18 @@ candidate_entries:
     routing_lane: result_display_clean_holdout
     slice_role: hard_negative_control
     signal_hint: 成果展示
-    expected_behavior: clean_holdout_no_thread_overrequest_control
+    expected_behavior: hard_negative_clean_holdout_secondary
   revised_assist_outputs:
-    context_dependency_gate: hard_negative_metadata_sufficient_check
+    context_dependency_gate: hard_negative_metadata_sufficient
     context_reason_codes:
     - clean_result_display_holdout
-    - hard_negative_over_request_control
-    - avoid_thread_request_by_habit
-    minimal_context_needed: not_applicable_if_metadata_preserves_clean_holdout_boundary
-    safe_next_action: preserve_hard_negative_if_metadata_sufficient
-    metadata_label_guardrail: do_not_request_thread_context_or_escalate_risk_without_specific_missing
-      conversion_evidence
-    priority_explanation: hard_negative_control_for_context_gate_over_request_risk
-    missing_evidence_note: no_thread_context_request_expected_without_specific_missing_evidence
+    - false_positive_pressure_check
+    - hard_negative_boundary
+    minimal_context_needed: not_applicable
+    safe_next_action: preserve_hard_negative_metadata_decision
+    metadata_label_guardrail: result_display_alone_is_not_positive_signal
+    priority_explanation: hard_negative_control_for_context_gate_specificity
+    missing_evidence_note: no_missing_context_needed_for_clean_holdout_metadata
     second_review_suggestion: false
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -393,25 +375,24 @@ candidate_entries:
     raw_evidence_excluded_from_git: null
 - workbench_id: RA_0012_0011
   reviewer_visible_metadata:
-    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
-    source_stub_id: STUB_0008_A_03
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
+    source_stub_id: STUB_0008_A_01
     task_id: EXP_0008_A
     routing_lane: strong_source_priority
     slice_role: fast_lane_control
     signal_hint: 保證收益
-    expected_behavior: fast_lane_no_thread_regression_reply_funnel
+    expected_behavior: fast_lane_control_contact
   revised_assist_outputs:
-    context_dependency_gate: metadata_sufficient_fast_lane_regression_check
+    context_dependency_gate: metadata_sufficient_for_label
     context_reason_codes:
     - strong_source_priority
-    - reply_funnel_fast_lane_anchor
-    - avoid_fast_lane_slowdown_by_context_gate
-    minimal_context_needed: not_applicable_unless_reviewer_identifies_a_specific_contradiction
-    safe_next_action: keep_fast_lane_metadata_triage_without_thread_request_by_default
-    metadata_label_guardrail: do_not_slow_or_downgrade_fast_lane_only_because_context_gate_exists;
-      human reviewer may override if metadata is contested
-    priority_explanation: fast_lane_regression_control_for_reviewer_hour_protection
-    missing_evidence_note: no_thread_dependency_expected_from_fast_lane_metadata
+    - guarantee_executable_transition
+    - no_thread_dependency
+    minimal_context_needed: not_applicable
+    safe_next_action: metadata_sufficient_fast_lane_label
+    metadata_label_guardrail: no_thread_request_needed_when_guarantee_and_transition_are_metadata_sufficient
+    priority_explanation: fast_lane_control_for_slowdown_check
+    missing_evidence_note: no_missing_context_for_metadata_level_triage
     second_review_suggestion: false
   reviewer_fields:
     context_gate_review_time_seconds: null
@@ -428,25 +409,24 @@ candidate_entries:
     raw_evidence_excluded_from_git: null
 - workbench_id: RA_0012_0012
   reviewer_visible_metadata:
-    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
-    source_stub_id: STUB_0008_A_04
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+    source_stub_id: STUB_0008_A_02
     task_id: EXP_0008_A
     routing_lane: strong_source_priority
     slice_role: fast_lane_control
     signal_hint: 保證收益
-    expected_behavior: fast_lane_no_thread_regression_stable_anchor
+    expected_behavior: fast_lane_control_group
   revised_assist_outputs:
-    context_dependency_gate: metadata_sufficient_fast_lane_regression_check
+    context_dependency_gate: metadata_sufficient_for_label
     context_reason_codes:
     - strong_source_priority
-    - stable_anchor_fast_lane_anchor
-    - avoid_fast_lane_slowdown_by_context_gate
-    minimal_context_needed: not_applicable_unless_reviewer_identifies_a_specific_contradiction
-    safe_next_action: keep_fast_lane_metadata_triage_without_thread_request_by_default
-    metadata_label_guardrail: do_not_slow_or_downgrade_fast_lane_only_because_context_gate_exists;
-      human reviewer may override if metadata is contested
-    priority_explanation: fast_lane_regression_control_for_reviewer_hour_protection
-    missing_evidence_note: no_thread_dependency_expected_from_fast_lane_metadata
+    - guarantee_group_transition
+    - no_thread_dependency
+    minimal_context_needed: not_applicable
+    safe_next_action: metadata_sufficient_fast_lane_label
+    metadata_label_guardrail: do_not_slow_fast_lane_without_specific_missing_context
+    priority_explanation: fast_lane_control_for_slowdown_check
+    missing_evidence_note: no_missing_context_for_metadata_level_triage
     second_review_suggestion: false
   reviewer_fields:
     context_gate_review_time_seconds: null
