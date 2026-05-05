@@ -2,7 +2,7 @@ schema_version: reviewer_assist_context_gate_revision_work_order_v1
 evaluation_id: reviewer-assist-thread-required-revision-0012
 decision_id: '0150'
 opened_at: '2026-05-05'
-status: open_for_human_fill
+status: packet_ready_for_human_fill
 no_fake_results: true
 purpose: metadata-only Reviewer Assist context-gate revision for thread-required lane
 single_highest_priority: governed automatic or assisted discovery of review-worthy Threads investment-scam candidates
@@ -36,7 +36,7 @@ controller_warning:
   reason: avoid letting the revised context-gate condition copy prior labels or timing
 
 revised_assist_condition:
-  status: pending_human_review
+  status: reviewer_packet_prepared_human_review_pending
   input_boundary: structured_metadata_only
   reviewer_must_record_new_time: true
   human_next_action_required: true
@@ -50,6 +50,7 @@ revised_assist_condition:
     - priority_explanation
     - missing_evidence_note
     - second_review_suggestion
+  prepared_reviewer_packet: data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml
   required_reviewer_fields:
     - context_gate_review_time_seconds
     - human_context_gate_decision
@@ -278,6 +279,7 @@ candidate_entries:
     revised_context_gate_status: pending_human_fill
 
 close_conditions:
+  reviewer_context_gate_packet_written: true
   all_entries_have_context_gate_review_time_or_unavailable_reason: false
   all_entries_have_human_context_gate_decision: false
   all_revised_assist_outputs_accepted_corrected_rejected_or_not_applicable: false

@@ -2,7 +2,8 @@
 
 Date: 2026-05-05
 
-Status: open for human fill; aggregate result not available yet
+Status: reviewer-facing context-gate packet prepared; open for human fill;
+aggregate result not available yet
 
 ## Purpose
 
@@ -27,6 +28,8 @@ the correct next action, and avoid over-requesting thread context for controls?
 - Work order: `data/reviewer_assist_eval/batch_0012_work_order.yaml`
 - Reviewer rules: `data/reviewer_assist_eval/batch_0012_reviewer_rules.md`
 - Reviewer fill template: `data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml`
+- Reviewer context-gate packet: `data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml`
+- Human-fill handoff: `reports/reviewer-assist-batch-0012-context-gate-handoff.md`
 - Prior result decision: `decision-log/0149-record-reviewer-assist-expansion-batch-0011-result.md`
 - Prior aggregate result: `data/reviewer_assist_eval/batch_0011_aggregate_result.yaml`
 
@@ -59,6 +62,26 @@ Control baselines from Batch `0011`:
 | Boundary control | `result_display_low_context_transition` | 4 |
 | Hard-negative control | `result_display_clean_holdout` | 2 |
 | Fast-lane control | `strong_source_priority` | 2 |
+
+## Prepared Context-Gate Packet
+
+Decision `0151` prepared the reviewer-facing context-gate packet.
+
+The packet fills only revised assist outputs:
+
+- context dependency gate;
+- context reason codes;
+- minimal context needed;
+- safe next action;
+- metadata label guardrail;
+- priority explanation;
+- missing-evidence note;
+- second-review suggestion.
+
+It leaves all `reviewer_fields` blank and does not expose prior Batch `0011`
+labels, timings, second-review decisions, or insufficient-evidence decisions.
+
+The packet is ready for human context-gate review, not aggregate synthesis.
 
 ## Fields To Fill
 

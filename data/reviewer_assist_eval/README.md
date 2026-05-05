@@ -53,6 +53,7 @@ Do not store:
 | `batch_0012_work_order.yaml` | Decision `0150` context-gate revision workbench for the Batch `0011` thread-required bottleneck | open for human fill |
 | `batch_0012_reviewer_rules.md` | Reviewer-facing rule sheet for the Batch `0012` context-gate revision | safe for reviewer |
 | `batch_0012_reviewer_fill_sheet_template.yaml` | Reviewer-facing fill template with prior-assisted outcomes removed | safe for reviewer |
+| `batch_0012_reviewer_context_gate_packet.yaml` | Reviewer-facing Batch `0012` context-gate packet with revised assist outputs filled and human reviewer fields blank | ready for human context-gate review |
 
 ## Use
 
@@ -67,3 +68,12 @@ experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-resul
 experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md
 experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md
 ```
+
+Batch `0012` has a separate reviewer-facing packet:
+
+```text
+data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml
+```
+
+It is a packet only, not a completed empirical result. Reviewer fields must stay
+blank until a human fills them under `batch_0012_reviewer_rules.md`.

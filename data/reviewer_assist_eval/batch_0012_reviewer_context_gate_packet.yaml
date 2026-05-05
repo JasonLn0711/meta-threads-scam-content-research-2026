@@ -1,0 +1,479 @@
+schema_version: reviewer_assist_context_gate_packet_v1
+evaluation_id: reviewer-assist-thread-required-revision-0012
+decision_id: '0150'
+source_rules: data/reviewer_assist_eval/batch_0012_reviewer_rules.md
+source_reviewer_fill_template: data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml
+status: ready_for_human_context_gate_review
+result_boundary:
+  reviewer_facing_packet: true
+  empirical_assisted_review_result: false
+  reviewer_fields_prefilled: false
+  prior_assisted_outcomes_exposed: false
+  manual_baseline_exposed: false
+  raw_threads_content_used: false
+  raw_reply_text_used: false
+  raw_ocr_text_used: false
+  urls_handles_screenshots_browser_artifacts_used: false
+  controlled_store_locators_used: false
+  legal_fraud_or_enforcement_claim: false
+  note: PACKET ONLY - HUMAN REVIEWER FIELDS MUST BE FILLED SEPARATELY
+reviewer_visibility:
+  prior_assisted_outcomes_hidden: true
+  raw_evidence_forbidden_in_git: true
+  human_next_action_required: true
+  human_final_label_required_only_if_metadata_sufficient: true
+rating_scale:
+  context_gate_usefulness_rating: 1 to 5, where 5 means highly useful for faster context
+    routing
+  context_gate_omission_risk: low | medium | high
+  context_gate_status: accepted | accepted_with_minor_correction | needs_major_correction
+    | unusable
+  minimal_context_request_status: accepted | accepted_with_minor_correction | over_requested
+    | under_requested | not_applicable
+  over_request_risk: low | medium | high
+  under_request_risk: low | medium | high
+candidate_entries:
+- workbench_id: RA_0012_0001
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0009
+    source_stub_id: STUB_0008_C_01
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    slice_role: target_thread_required
+    signal_hint: 成果展示
+    expected_behavior: thread_required_early_gate_contact
+  revised_assist_outputs:
+    context_dependency_gate: needs_thread_before_label
+    context_reason_codes:
+    - result_display_thread_required_lane
+    - contact_path_context_dependency
+    - metadata_only_label_overreach_risk
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
+      record only repo-safe metadata and aggregate outcome
+    safe_next_action: route_to_thread_context_review_before_label
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
+      uncertain or not_reviewable until required context is available
+    priority_explanation: target_lane_for_context_dependency_bottleneck
+    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0002
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0010
+    source_stub_id: STUB_0008_C_02
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    slice_role: target_thread_required
+    signal_hint: 成果展示
+    expected_behavior: thread_required_early_gate_group
+  revised_assist_outputs:
+    context_dependency_gate: needs_thread_before_label
+    context_reason_codes:
+    - result_display_thread_required_lane
+    - group_transition_context_dependency
+    - metadata_only_label_overreach_risk
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
+      record only repo-safe metadata and aggregate outcome
+    safe_next_action: route_to_thread_context_review_before_label
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
+      uncertain or not_reviewable until required context is available
+    priority_explanation: target_lane_for_context_dependency_bottleneck
+    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0003
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0011
+    source_stub_id: STUB_0008_C_03
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    slice_role: target_thread_required
+    signal_hint: 成果展示
+    expected_behavior: thread_required_early_gate_reply
+  revised_assist_outputs:
+    context_dependency_gate: needs_thread_before_label
+    context_reason_codes:
+    - result_display_thread_required_lane
+    - reply_path_context_dependency
+    - metadata_only_label_overreach_risk
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
+      record only repo-safe metadata and aggregate outcome
+    safe_next_action: route_to_thread_context_review_before_label
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
+      uncertain or not_reviewable until required context is available
+    priority_explanation: target_lane_for_context_dependency_bottleneck
+    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0004
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0012
+    source_stub_id: STUB_0008_C_04
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    slice_role: target_thread_required
+    signal_hint: 成果展示
+    expected_behavior: thread_required_early_gate_ambiguous_transition
+  revised_assist_outputs:
+    context_dependency_gate: needs_thread_before_label
+    context_reason_codes:
+    - result_display_thread_required_lane
+    - ambiguous_transition_context_dependency
+    - metadata_only_label_overreach_risk
+    minimal_context_needed: thread_or_reply_context_required_outside_git_before_confident_label;
+      record only repo-safe metadata and aggregate outcome
+    safe_next_action: route_to_thread_context_review_before_label
+    metadata_label_guardrail: do_not_label_scam_or_non_scam_from_metadata_only; use
+      uncertain or not_reviewable until required context is available
+    priority_explanation: target_lane_for_context_dependency_bottleneck
+    missing_evidence_note: thread_dependency_blocks_confident_metadata_only_label
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0005
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0005
+    source_stub_id: STUB_0008_B_01
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    slice_role: boundary_control
+    signal_hint: 成果展示
+    expected_behavior: low_context_boundary_not_thread_required_contact
+  revised_assist_outputs:
+    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_reason_codes:
+    - result_display_low_context_transition
+    - contact_path_context_dependency
+    - avoid_result_display_positive_overgeneralization
+    minimal_context_needed: request only the narrow missing transition context if
+      reviewer cannot resolve metadata boundary; do not request full thread by habit
+    safe_next_action: metadata_boundary_review_then_second_review_if_contested
+    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
+      if transition evidence remains weak
+    priority_explanation: boundary_control_for_over_request_and_under_request_balance
+    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0006
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0006
+    source_stub_id: STUB_0008_B_02
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    slice_role: boundary_control
+    signal_hint: 成果展示
+    expected_behavior: low_context_boundary_not_thread_required_reply
+  revised_assist_outputs:
+    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_reason_codes:
+    - result_display_low_context_transition
+    - reply_path_context_dependency
+    - avoid_result_display_positive_overgeneralization
+    minimal_context_needed: request only the narrow missing transition context if
+      reviewer cannot resolve metadata boundary; do not request full thread by habit
+    safe_next_action: metadata_boundary_review_then_second_review_if_contested
+    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
+      if transition evidence remains weak
+    priority_explanation: boundary_control_for_over_request_and_under_request_balance
+    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0007
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0007
+    source_stub_id: STUB_0008_B_03
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    slice_role: boundary_control
+    signal_hint: 成果展示
+    expected_behavior: low_context_boundary_not_thread_required_group
+  revised_assist_outputs:
+    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_reason_codes:
+    - result_display_low_context_transition
+    - group_transition_context_dependency
+    - avoid_result_display_positive_overgeneralization
+    minimal_context_needed: request only the narrow missing transition context if
+      reviewer cannot resolve metadata boundary; do not request full thread by habit
+    safe_next_action: metadata_boundary_review_then_second_review_if_contested
+    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
+      if transition evidence remains weak
+    priority_explanation: boundary_control_for_over_request_and_under_request_balance
+    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0008
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
+    source_stub_id: STUB_0008_B_04
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    slice_role: boundary_control
+    signal_hint: 成果展示
+    expected_behavior: low_context_boundary_not_thread_required_stable_anchor
+  revised_assist_outputs:
+    context_dependency_gate: boundary_check_not_thread_required_by_default
+    context_reason_codes:
+    - result_display_low_context_transition
+    - stable_anchor_boundary_check
+    - avoid_result_display_positive_overgeneralization
+    minimal_context_needed: request only the narrow missing transition context if
+      reviewer cannot resolve metadata boundary; do not request full thread by habit
+    safe_next_action: metadata_boundary_review_then_second_review_if_contested
+    metadata_label_guardrail: do_not_infer_scam_from_result_display_alone; keep uncertainty
+      if transition evidence remains weak
+    priority_explanation: boundary_control_for_over_request_and_under_request_balance
+    missing_evidence_note: explicit_guarantee_or_stable_transition_not_observed_in_metadata
+    second_review_suggestion: true
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0009
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0013
+    source_stub_id: STUB_0008_D_01
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    slice_role: hard_negative_control
+    signal_hint: 成果展示
+    expected_behavior: clean_holdout_no_thread_overrequest_control
+  revised_assist_outputs:
+    context_dependency_gate: hard_negative_metadata_sufficient_check
+    context_reason_codes:
+    - clean_result_display_holdout
+    - hard_negative_over_request_control
+    - avoid_thread_request_by_habit
+    minimal_context_needed: not_applicable_if_metadata_preserves_clean_holdout_boundary
+    safe_next_action: preserve_hard_negative_if_metadata_sufficient
+    metadata_label_guardrail: do_not_request_thread_context_or_escalate_risk_without_specific_missing
+      conversion_evidence
+    priority_explanation: hard_negative_control_for_context_gate_over_request_risk
+    missing_evidence_note: no_thread_context_request_expected_without_specific_missing_evidence
+    second_review_suggestion: false
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0010
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0014
+    source_stub_id: STUB_0008_D_02
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    slice_role: hard_negative_control
+    signal_hint: 成果展示
+    expected_behavior: clean_holdout_no_thread_overrequest_control
+  revised_assist_outputs:
+    context_dependency_gate: hard_negative_metadata_sufficient_check
+    context_reason_codes:
+    - clean_result_display_holdout
+    - hard_negative_over_request_control
+    - avoid_thread_request_by_habit
+    minimal_context_needed: not_applicable_if_metadata_preserves_clean_holdout_boundary
+    safe_next_action: preserve_hard_negative_if_metadata_sufficient
+    metadata_label_guardrail: do_not_request_thread_context_or_escalate_risk_without_specific_missing
+      conversion_evidence
+    priority_explanation: hard_negative_control_for_context_gate_over_request_risk
+    missing_evidence_note: no_thread_context_request_expected_without_specific_missing_evidence
+    second_review_suggestion: false
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0011
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
+    source_stub_id: STUB_0008_A_03
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_no_thread_regression_reply_funnel
+  revised_assist_outputs:
+    context_dependency_gate: metadata_sufficient_fast_lane_regression_check
+    context_reason_codes:
+    - strong_source_priority
+    - reply_funnel_fast_lane_anchor
+    - avoid_fast_lane_slowdown_by_context_gate
+    minimal_context_needed: not_applicable_unless_reviewer_identifies_a_specific_contradiction
+    safe_next_action: keep_fast_lane_metadata_triage_without_thread_request_by_default
+    metadata_label_guardrail: do_not_slow_or_downgrade_fast_lane_only_because_context_gate_exists;
+      human reviewer may override if metadata is contested
+    priority_explanation: fast_lane_regression_control_for_reviewer_hour_protection
+    missing_evidence_note: no_thread_dependency_expected_from_fast_lane_metadata
+    second_review_suggestion: false
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+- workbench_id: RA_0012_0012
+  reviewer_visible_metadata:
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
+    source_stub_id: STUB_0008_A_04
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    slice_role: fast_lane_control
+    signal_hint: 保證收益
+    expected_behavior: fast_lane_no_thread_regression_stable_anchor
+  revised_assist_outputs:
+    context_dependency_gate: metadata_sufficient_fast_lane_regression_check
+    context_reason_codes:
+    - strong_source_priority
+    - stable_anchor_fast_lane_anchor
+    - avoid_fast_lane_slowdown_by_context_gate
+    minimal_context_needed: not_applicable_unless_reviewer_identifies_a_specific_contradiction
+    safe_next_action: keep_fast_lane_metadata_triage_without_thread_request_by_default
+    metadata_label_guardrail: do_not_slow_or_downgrade_fast_lane_only_because_context_gate_exists;
+      human reviewer may override if metadata is contested
+    priority_explanation: fast_lane_regression_control_for_reviewer_hour_protection
+    missing_evidence_note: no_thread_dependency_expected_from_fast_lane_metadata
+    second_review_suggestion: false
+  reviewer_fields:
+    context_gate_review_time_seconds: null
+    human_context_gate_decision: null
+    metadata_only_label_or_not_reviewable: null
+    context_gate_usefulness_rating: null
+    context_gate_omission_risk: null
+    context_gate_status: null
+    minimal_context_request_status: null
+    over_request_risk: null
+    under_request_risk: null
+    second_review_required: null
+    insufficient_evidence: null
+    raw_evidence_excluded_from_git: null
+packet_quality_checks:
+  candidate_count: 12
+  slice_role_counts:
+    boundary_control: 4
+    fast_lane_control: 2
+    hard_negative_control: 2
+    target_thread_required: 4
+  routing_lane_counts:
+    result_display_clean_holdout: 2
+    result_display_low_context_transition: 4
+    result_display_thread_required: 4
+    strong_source_priority: 2
+  all_revised_assist_outputs_filled: true
+  reviewer_fields_blank: true
+  prior_assisted_outcomes_hidden: true
+  raw_evidence_excluded_from_packet: true

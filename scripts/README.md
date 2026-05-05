@@ -41,6 +41,7 @@ build_exploration_batch.py Build a small metadata-only exploration batch from se
 build_candidate_intake_v2.py Build Batch 0004 metadata-only manual-assisted intake worksheet
 validate_candidate_intake_v2.py Validate a metadata-only candidate intake worksheet
 convert_candidate_intake_v2.py Report on or convert completed intake entries into candidate_record_v2 files
+build_reviewer_assist_context_gate_packet.py Build the Batch 0012 reviewer-facing context-gate packet without prior outcome leakage
 ```
 
 ## Local Python Setup
@@ -219,6 +220,15 @@ python scripts/build_candidate_intake_v2.py
 ```
 
 This writes `data/candidate_intake/batch_0004_intake.yaml`. It does not fabricate candidate records or labels.
+
+Build the Batch 0012 Reviewer Assist context-gate packet:
+
+```bash
+.venv/bin/python scripts/build_reviewer_assist_context_gate_packet.py
+```
+
+This writes `data/reviewer_assist_eval/batch_0012_reviewer_context_gate_packet.yaml`.
+It fills revised assist outputs but leaves all human reviewer fields blank.
 
 Validate the Batch 0004 candidate intake worksheet:
 
