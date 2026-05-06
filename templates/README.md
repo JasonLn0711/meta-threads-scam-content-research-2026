@@ -21,6 +21,7 @@ controlled_rehearsal_review.md
 data_authorization_request.md
 dataset_manifest_template.md
 discovery_source_arm_work_order.md
+public_surface_patrol_work_order.md
 experiment_log_template.md
 guideline_revision_log_template.md
 hard_negative_hesitation_log_template.csv
@@ -63,6 +64,12 @@ Use `pilot_decision_memo.md`, `pilot_result_summary.md`, and `baseline_error_rev
 Use `reviewer_triage_packet.md` only as a controlled worksheet pattern for item-level baseline review. Generated real packets should stay local-only unless fully sanitized and approved.
 
 Use `track_b_candidate_review_template.md` for repo-safe Track B candidate-review outcome and reviewer-burden measurement fields. It is for dual-success evaluation only: discovery effectiveness plus reviewer-labor efficiency. It must not include raw evidence and does not change Track B caps, authorize new source arms, or authorize model training.
+
+Use `public_surface_patrol_work_order.md` only after Decision `0156` and
+`docs/74-public-surface-human-reproducible-patrol-v0.md` are in scope. It is a
+planning and run-gate template for a public no-login, low-frequency,
+human-reproducible browser fallback proposal; it does not authorize live
+collection or Playwright execution by itself.
 
 Use the Reviewer Assist evaluation templates opened by Decision `0145` only for metadata-only labor-savings evaluation in service of the governed automatic or assisted discovery method:
 

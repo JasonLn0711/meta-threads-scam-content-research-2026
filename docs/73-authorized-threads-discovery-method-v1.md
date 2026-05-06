@@ -57,6 +57,11 @@ If official API access is unavailable or insufficient for the research
 question, a controlled browser run can be considered only as a fallback source
 arm under a new run-scoped authorization record.
 
+Decision `0156` adds a design-only public-surface patrol sub-mode for that
+fallback. It is intended to keep any future browser-assisted viability test
+public, low-frequency, and human-reproducible. It does not authorize execution
+or loosen the browser-run boundary below.
+
 ## Browser Run Boundary
 
 A personal Threads login does not, by itself, authorize automated collection.
@@ -84,6 +89,28 @@ these are true:
 
 The existing controlled crawler plan remains a historical and procedural
 reference. It is not a standing permission for broad logged-in browser crawling.
+
+## Public-Surface Patrol Sub-Mode
+
+`docs/74-public-surface-human-reproducible-patrol-v0.md` defines a narrower
+sub-mode of `controlled_browser_run_scoped`.
+
+It can be proposed only after API access is unavailable or insufficient and
+only through `templates/public_surface_patrol_work_order.md`.
+
+The sub-mode requires:
+
+- public surfaces visible without login or special permission;
+- no personal-account session as the data-collection basis;
+- no hidden API, stealth, CAPTCHA bypass, proxy rotation, or rate-limit bypass;
+- one worker, tiny caps, bounded scroll, and conservative dwell time;
+- a human-reproducibility trace with query or query reference, entry point,
+  capture time, scroll-depth bucket, public-surface check, and signal codes;
+- raw screenshots, text, URLs, handles, browser artifacts, and exact
+  controlled-store locators outside git.
+
+The sub-mode is not allowed to describe pacing as a way to avoid bot detection.
+Pacing is a research-scope, load, and reviewer-burden control.
 
 ## Source Arms
 
@@ -218,7 +245,9 @@ Open a source-arm readiness packet for Discovery Method v1:
    available to the project account and permissions.
 2. If API access is available, draft a capped API source-arm work order.
 3. If API access is unavailable, draft a controlled browser source-arm work
-   order using the historical controlled-run procedure as a reference.
+   order using the historical controlled-run procedure as a reference. For a
+   public-page fallback, use `templates/public_surface_patrol_work_order.md`
+   before considering any Playwright or browser-assist implementation.
 4. In either case, keep the first execution tiny: source-arm readiness first,
    then a capped run, then human review and reviewer-hour metrics.
 

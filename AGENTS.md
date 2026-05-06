@@ -61,6 +61,7 @@ Use `scam` instead of `fraud` unless a legal determination is actually in scope.
 5. Preserve uncertainty. Suspicion is not guilt, and weak evidence must stay labeled as weak evidence.
 6. Do not use AI/system support to make final scam determinations, legal fraud determinations, enforcement recommendations, public warnings, automated takedowns, or production detector claims.
 7. Do not treat a personal Threads account login or a slow pace as sufficient authorization for browser automation. Official API access is preferred when available; controlled browser runs require a new run-scoped decision and work order.
+8. A public-surface human-reproducible patrol is allowed to be designed only as a run-scoped fallback sub-mode. It must use public no-login surfaces, tiny caps, conservative pacing, no stealth or bypass, repo-safe reproducibility traces, and raw artifacts outside git.
 
 ## Working Style
 
@@ -82,23 +83,24 @@ Start with:
 2. `docs/00-project-charter.md`
 3. `docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md`
 4. `docs/73-authorized-threads-discovery-method-v1.md`
-5. `docs/62-reviewer-assist-layer-design.md`
-6. `docs/63-context-gating-policy.md`
-7. `docs/65-evidence-layer-v1.md`
-8. `docs/66-closed-loop-discovery-v1.md`
-9. `docs/67-advanced-discovery-v2.md`
-10. `docs/68-concept-reasoning-layer-v1.md`
-11. `docs/69-dynamic-intelligence-layer-v1.md`
-12. `docs/70-predictive-simulation-layer-v1.md`
-13. `docs/71-defensive-self-play-layer-v1.md`
-14. `docs/72-adaptive-policy-deployment-loop-v1.md`
-15. `docs/18-recommended-path-v1.md`
-16. `docs/56-first-principle-investment-scam-discovery-method.md`
-17. `docs/57-investment-scam-discovery-signal-family-matrix.md`
-18. `governance/data-governance.md`
-19. `docs/19-codex-workflow.md`
-20. `docs/20-repo-series-naming.md`
-21. `docs/21-repo-relationships.md`
+5. `docs/74-public-surface-human-reproducible-patrol-v0.md`
+6. `docs/62-reviewer-assist-layer-design.md`
+7. `docs/63-context-gating-policy.md`
+8. `docs/65-evidence-layer-v1.md`
+9. `docs/66-closed-loop-discovery-v1.md`
+10. `docs/67-advanced-discovery-v2.md`
+11. `docs/68-concept-reasoning-layer-v1.md`
+12. `docs/69-dynamic-intelligence-layer-v1.md`
+13. `docs/70-predictive-simulation-layer-v1.md`
+14. `docs/71-defensive-self-play-layer-v1.md`
+15. `docs/72-adaptive-policy-deployment-loop-v1.md`
+16. `docs/18-recommended-path-v1.md`
+17. `docs/56-first-principle-investment-scam-discovery-method.md`
+18. `docs/57-investment-scam-discovery-signal-family-matrix.md`
+19. `governance/data-governance.md`
+20. `docs/19-codex-workflow.md`
+21. `docs/20-repo-series-naming.md`
+22. `docs/21-repo-relationships.md`
 
 Before changing scope, update:
 

@@ -89,6 +89,25 @@ properties:
       - account_context_needed
       - not_enough_context
       - unknown
+  source_access_submode:
+    type: string
+    allowed_values:
+      - public_surface_human_reproducible_patrol_v0
+      - not_applicable
+      - unknown
+  human_reproducibility_trace:
+    type: object
+    note: Required for public_surface_human_reproducible_patrol_v0; repo-safe route only, never raw content.
+    allowed_keys:
+      - route_type
+      - query_text_or_query_ref
+      - entry_point
+      - capture_time
+      - scroll_depth_bucket
+      - surface_position_bucket
+      - public_surface_check
+      - raw_artifact_ref
+      - signal_reason_codes
   evidence_availability_flags:
     required:
       - has_post_metadata
