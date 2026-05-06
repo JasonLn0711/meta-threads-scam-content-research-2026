@@ -136,6 +136,10 @@ properties:
       - human_final_label_or_not_reviewable
       - review_time_seconds
       - second_review_required
+    optional_fields:
+      review_worthy:
+        type: boolean
+        note: Human-reviewed flag for discovery-yield metrics such as review_worthy_rate.
     allowed_review_status:
       - not_reviewed
       - reviewed

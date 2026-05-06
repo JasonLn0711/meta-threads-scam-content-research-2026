@@ -154,6 +154,11 @@ This repo should not add or run a live Playwright patrol against Threads until
 `templates/public_surface_patrol_work_order.md` is filled and a matching
 decision record explicitly authorizes a capped run.
 
+The proposed `patrol_threads.py` shape was redline-reviewed in
+`experiments/evaluation-notes/0111-public-surface-patrol-script-redline-review.md`.
+The accepted replacement in this repo is a metrics-only evaluator, not a live
+browser patrol script.
+
 ## Output Contract
 
 Repo-facing output must use `data-contracts/discovery_candidate_v1.schema.yaml`
@@ -169,6 +174,15 @@ source_access_submode: public_surface_human_reproducible_patrol_v0
 The final label remains human-reviewed. The patrol may say a candidate is
 review-worthy or route it to review; it must not make final scam, legal fraud,
 enforcement, public-warning, or takedown decisions.
+
+After a future authorized run creates repo-safe candidate metadata, use:
+
+```bash
+.venv/bin/python scripts/evaluate_public_surface_patrol_records.py PATH_TO_METADATA_ONLY_RECORDS
+```
+
+This computes review-worthy yield and query-level waste without opening
+Threads or reading raw evidence.
 
 ## Stop Rules
 

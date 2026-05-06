@@ -135,6 +135,16 @@ Use `data-contracts/discovery_candidate_v1.schema.yaml`.
 | human-reproducible route rate |  |
 | raw-evidence leakage incidents |  |
 
+The first reviewer-yield metric should be:
+
+```text
+review_worthy_rate = human-review-worthy candidates / generated candidates
+```
+
+Use `scripts/evaluate_public_surface_patrol_records.py` only after future
+repo-safe metadata records exist. The script evaluates records and computes
+metrics; it does not open Threads, run Playwright, or collect evidence.
+
 ## Stop Rules
 
 Stop immediately if:

@@ -43,6 +43,7 @@ validate_candidate_intake_v2.py Validate a metadata-only candidate intake worksh
 convert_candidate_intake_v2.py Report on or convert completed intake entries into candidate_record_v2 files
 build_reviewer_assist_context_gate_packet.py Build the Batch 0012 reviewer-facing context-gate packet without prior outcome leakage
 validate_reviewer_assist_context_gate_result.py Validate and recompute the Batch 0012 context-gate result
+evaluate_public_surface_patrol_records.py Evaluate repo-safe public-surface patrol metadata records and compute review-worthy yield
 ```
 
 ## Local Python Setup
@@ -205,6 +206,17 @@ python scripts/generate_exploration_tasks.py
 ```
 
 This writes `exploration/tasks/latest.yaml` and `data/candidate_stubs/latest.yaml`. It does not access external systems, store raw content, or authorize collection.
+
+Evaluate future public-surface patrol metadata records:
+
+```bash
+.venv/bin/python scripts/evaluate_public_surface_patrol_records.py PATH_TO_METADATA_ONLY_RECORDS
+```
+
+This computes `review_worthy_rate`, query-level yield, and raw-evidence leakage
+incidents from already-created repo-safe metadata records. It does not open
+Threads, run Playwright, capture screenshots, inspect DOM text, or authorize
+browser collection.
 
 Build Batch 0004 from the top two low-coverage high-SVS exploration tasks:
 
