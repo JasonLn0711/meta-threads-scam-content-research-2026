@@ -1,5 +1,6 @@
 # Meta Threads Scam Content Research 2026
 
+<img src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=JasonLn0711&repo=meta-threads-scam-content-research-2026&countColor=%237B1E7B" alt="Visitor count"/>
 ## First Principle
 
 This repo has one highest priority: design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates. Every other goal exists to support that method and must not contradict it.
