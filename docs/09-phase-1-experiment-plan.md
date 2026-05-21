@@ -35,9 +35,10 @@ The first program should start with controlled launch details, local workspace p
 | Field | Plan |
 |---|---|
 | Current status | Not part of the governed Phase 1 launch. |
-| Prerequisites | Governed real evidence, stable labels, completed pilot decision memo, and a later decision record that explicitly authorizes model-assisted testing. |
+| Candidate | Breeze Guard 26 may be considered later as a Taiwan-localized safety-classifier baseline or guardrail candidate, especially for `scam`, `fin_malpractice`, and `health_misinfo` text. |
+| Prerequisites | Governed real evidence, stable labels, completed pilot decision memo, and a later decision record that explicitly authorizes model-assisted or classifier-assisted testing. |
 | Failure modes | Overstated certainty, inconsistent reasoning, privacy concerns, cost growth, and scope drift before manual evidence operations are stable. |
-| Decision implications | Revisit only after Phase 1 answers the manual collection, annotation, redaction, and baseline-readiness questions. |
+| Decision implications | Revisit only after Phase 1 answers the manual collection, annotation, redaction, and baseline-readiness questions; use `docs/50-breeze-guard-26-candidate-baseline.md` as the candidate model note. |
 
 ## Experiment D: Binary Classification vs Risk Triage
 

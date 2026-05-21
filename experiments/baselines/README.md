@@ -4,6 +4,8 @@ Use this directory for keyword, rule, and OCR/reply/link-signal baseline experim
 
 Start with simple text rules. Do not add classifier, model-assisted, or hybrid baselines until governed real evidence, stable labels, and a later decision record justify that scope.
 
+Breeze Guard 26 is recorded as a deferred Taiwan-localized safety-classifier candidate in `docs/50-breeze-guard-26-candidate-baseline.md`. Do not add a Breeze Guard experiment log until a later decision record explicitly authorizes classifier-assisted testing.
+
 ## Current Logs
 
 | Experiment | Purpose |

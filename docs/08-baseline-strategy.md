@@ -47,6 +47,7 @@ Threshold-profile probes are defined in `configs/rule_calibration_variants.yaml`
 | Link/redirection baseline | `external_links`, `visible_contact_handles`, `visible_platform_redirects` | risk and missing-evidence flags | Test whether visible funnels improve precision. |
 | Human-rule baseline | `signal_tags` | expected risk level | Audit whether annotator signals map cleanly to labels. |
 | Simple text classifier | `post_text`, `reply_texts`, `ocr_text` | binary or triage label | Only after enough adjudicated or high-confidence labels exist. |
+| Taiwan-localized safety classifier candidate | redacted `post_text`, `reply_texts`, `ocr_text` | auxiliary unsafe/safety signal | Deferred candidate only; see `docs/50-breeze-guard-26-candidate-baseline.md`. |
 
 ## First Rule Logic
 
@@ -120,3 +121,13 @@ Add a simple text classifier only after:
 - rule failures show patterns that a model might reasonably capture
 
 Model-assisted review is not part of the current Phase 1 launch. Revisit it only after governed real evidence exists, labels are stable, and a later decision record explicitly authorizes the scope.
+
+## Deferred Candidate: Breeze Guard 26
+
+Breeze Guard 26 is recorded as a later Taiwan-localized safety-classifier candidate, not as a current Phase 1 dependency. Its official category vocabulary covers `scam`, `fin_malpractice`, `health_misinfo`, `gender_bias`, `group_hate`, and `pol_manipulation`.
+
+Treat it by system role as a classifier/moderation model, not as a general chatbot. Even though it is built on a decoder-only LLM backbone, a future experiment should parse a safety verdict or category signal rather than ask it to produce free-form investigative conclusions.
+
+For this repo, the relevant future value is a controlled comparison against the transparent rule baseline on the same redacted text bundle. It should be evaluated as a prompt-level safety signal for human-review triage, not as a legal fraud decision, financial-regulatory decision, medical-fact decision, production detector, or replacement for evidence-preserving annotation.
+
+Use `docs/50-breeze-guard-26-candidate-baseline.md` before writing any Breeze Guard experiment log.

@@ -44,6 +44,7 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Unscoped automated collection outside the CIB controlled launch record.
 - Classifier training until labels are stable.
 - LLM-assisted review until Phase 1 produces governed real evidence and a later decision record authorizes that scope.
+- Breeze Guard 26 or any other external safety-classifier baseline until redacted governed evidence, stable labels, and a separate classifier-testing decision exist.
 - Dashboard or web app until reviewer workflow is proven.
 
 ## Ranked ROI
@@ -59,10 +60,11 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 | 7 | Visible link/redirection features | High | Medium | Include with CIB run-record controls |
 | 8 | CIB-authorized API and automation support | High | Medium to high | Include with credential, logging, redaction, and checkpoint controls |
 | 9 | Later model-assisted explanations | Medium | Medium | Defer until separately authorized |
-| 10 | Text classifier | Medium | Medium to high | Wait for more labels |
-| 11 | Short video study | Medium | High | Later only if necessary |
-| 12 | Long video analysis | Low | High | Defer |
-| 13 | Deepfake detection | Low for phase 1 | Very high | Defer |
+| 10 | Taiwan-localized safety classifier comparison, such as Breeze Guard 26 | Medium | Medium to high | Candidate only after governed evidence, stable labels, and explicit classifier-testing authorization |
+| 11 | Text classifier | Medium | Medium to high | Wait for more labels |
+| 12 | Short video study | Medium | High | Later only if necessary |
+| 13 | Long video analysis | Low | High | Defer |
+| 14 | Deepfake detection | Low for phase 1 | Very high | Defer |
 
 ## Budget Guardrail
 
