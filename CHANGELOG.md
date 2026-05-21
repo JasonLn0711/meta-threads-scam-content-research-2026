@@ -4,6 +4,35 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.2 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.1
+- Categories: application-prep;privacy
+- Summary: Record filled Research Tools personal information status
+
+### Detailed Changes
+
+- Recorded the filled-state status of the Research Tools Manager personal-information page with identity-bearing values redacted from git.
+- Noted that the city field is still blank and is the likely blocker for the disabled Next button.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-personal-information-page.md`
+- `templates/meta_research_tools_application_prep.md`
+
+### Verification
+
+- `git diff --check`
+
+### Sources
+
+- User-provided filled Research Tools Manager personal-information screenshot
+
+### Sensitive Data Check
+
+- Repo-visible files redact legal name, email, ORCID, CV file name, application ID, and uploaded file details. Actual values were stored only in ignored local private storage under data/private/.
+
 ## v1.3.1 - 2026-05-21
 
 - Type: patch

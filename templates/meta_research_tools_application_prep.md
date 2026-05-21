@@ -37,6 +37,26 @@ privacy-aware methods. Do not include national ID, home address, raw Threads
 examples, screenshots, handles, URLs, credentials, or confidential stakeholder
 details.
 
+### Current Draft Status From 2026-05-21 Screenshot
+
+Repo-safe status only:
+
+| Form field | Current draft status | Action before next step |
+|---|---|---|
+| Legal first name | Filled; redacted in git | Confirm exact legal spelling. |
+| Legal last name | Filled; redacted in git | Confirm exact legal spelling. |
+| Preferred name | Filled; redacted in git | Confirm this is the preferred professional display name. |
+| Your country | Filled: `Taiwan` | Confirm it matches the organization section. |
+| Your state or province | Filled: `Hsinchu` | Confirm consistency with organization address. |
+| Your city | Blank | Fill before pressing `Next`; candidate values are `Hsinchu` or `Hsinchu City`. |
+| Organizational email | Filled; redacted in git | Confirm institutional mailbox access. |
+| Discipline or area of expertise | Filled: `Computer science` | Accept unless a more precise dropdown option is available and better aligned. |
+| ORCID ID | Filled; redacted in git | Confirm exact ORCID before submission. |
+| Resume or CV | One PDF uploaded; file name redacted in git | Confirm the CV excludes sensitive identifiers and raw case details. |
+
+Visible blocker: the `Next` button appears disabled, likely because `Your city`
+is still blank.
+
 ## Research Purpose
 
 Recommended framing:

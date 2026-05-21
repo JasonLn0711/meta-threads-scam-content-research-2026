@@ -22,6 +22,38 @@
 - Main panel helper text: `Tell us about who you are and what you do.`
 - `Next` button is visible but disabled before required fields are complete.
 
+## Filled Page State From Later Screenshot
+
+The later screenshot shows the personal-information page partially filled.
+Because these fields contain personal information, the repo-safe status below
+redacts identity-bearing values.
+
+| Field | Repo-safe observed status | Notes |
+|---|---|---|
+| Legal first name | Filled; value redacted in git | Actual value stored only in ignored private local note if needed. |
+| Legal last name | Filled; value redacted in git | Actual value stored only in ignored private local note if needed. |
+| Preferred name | Filled; value redacted in git | Optional field was filled in the UI. |
+| Your country | Filled: `Taiwan` | Non-sensitive country-level value retained. |
+| Your state or province | Filled: `Hsinchu` | Consider consistency with city and organization address before submission. |
+| Your city | Blank / not filled | This is the visible likely blocker for the disabled `Next` button. |
+| Organizational email | Filled; NYCU organizational email redacted in git | Do not commit the actual email address. |
+| Your discipline or area of expertise | Filled: `Computer science` | This matches the computer-science research identity. |
+| ORCID ID | Filled; value redacted in git | Do not commit the actual ORCID unless explicitly approved. |
+| Resume or CV | One PDF uploaded; file name redacted in git | Do not commit the file name or CV contents. |
+
+Repo-safe interpretation:
+
+- The page is almost complete.
+- The visible required field still missing is `Your city`.
+- Before pressing `Next`, fill `Your city` and confirm that country,
+  state/province, city, organizational email, ORCID, and CV are all intended for
+  the formal application.
+- Suggested city value candidates are `Hsinchu` or `Hsinchu City`, depending on
+  how the applicant wants the address to align with the organization page.
+
+Private actual values, if a local audit trail is needed, belong only in ignored
+private storage such as `data/private/`. Do not commit that private note.
+
 ## Visible Fields
 
 | Field | Required? | UI note |
