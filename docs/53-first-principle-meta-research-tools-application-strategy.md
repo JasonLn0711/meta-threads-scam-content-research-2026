@@ -189,6 +189,36 @@ Recommended stance:
 - do not mention raw case evidence, CIB operational details, specific accounts,
   handles, URLs, or screenshots in this page.
 
+## Collaborators Page Strategy
+
+The collaborators page is optional in the visible application UI, but it still
+belongs to the access-governance boundary. It should answer whether anyone
+besides the lead researcher needs direct approved access.
+
+Visible fields and repo-safe filled status are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md](../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md).
+
+Observed current draft state:
+
+- `Personal information`, `Organization`, and `Research details` are complete;
+- `Collaborators` is active and optional;
+- one collaborator email field is visible and blank;
+- no additional collaborator rows are visible;
+- `Add another` is visible and unused;
+- `Next` appears enabled.
+
+Recommended stance:
+
+- proceed with zero collaborators only if the lead researcher can complete the
+  application and near-term research workflow without collaborator access;
+- add collaborators only when their approved access is necessary for the
+  research program;
+- use organizational email addresses;
+- decide collaborator roles outside git before adding invitations;
+- do not store collaborator emails, invitation links, collaborator application
+  status, or collaborator personal details in git;
+- record only aggregate collaborator state in repo-visible files.
+
 ## Claim Boundary
 
 Allowed:

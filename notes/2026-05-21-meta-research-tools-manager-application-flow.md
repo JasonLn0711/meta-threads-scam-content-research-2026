@@ -56,6 +56,20 @@ The visible application ID, logged-in account identity, screenshots, and any
 private access or controlled-content artifacts are intentionally not recorded in
 git.
 
+## Application Draft Collaborators Page
+
+A later user-provided screenshot showed the application draft at the
+`Collaborators` section after personal information, organization, and research
+details were completed. The visible page is marked optional and contains a
+blank collaborator email field, an `Add another` control, and `Back`, `Save`,
+and `Next` controls.
+
+The full repo-safe field transcription and filling status are recorded in
+[2026-05-21-meta-research-tools-manager-collaborators-page.md](2026-05-21-meta-research-tools-manager-collaborators-page.md).
+The visible application ID, logged-in account identity, screenshots,
+collaborator email addresses, invitation links, and any private access or
+controlled-content artifacts are intentionally not recorded in git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

@@ -131,6 +131,36 @@ Visible state: `Personal information` and `Organization` are complete,
 `Research details` is active, both research-tool selections are checked, both
 required confirmations are checked, and `Next` appears enabled.
 
+## Collaborators Page
+
+Use this page to add collaborators only when they need access to the approved
+research program. Collaborator emails and invitation status are sensitive
+application data and should not be stored in git.
+
+| Form field / control | Fill design | Outside-git final value |
+|---|---|---|
+| Collaborator email | Organizational email address for each collaborator who needs to join the research program. Leave blank if no collaborator access is needed at submission. |  |
+| Add another | Add one additional collaborator email field per collaborator. |  |
+| Row actions / overflow menu | Use only if editing or removing collaborator rows in the live form. |  |
+
+### Current Collaborators Draft Status From 2026-05-21 Screenshot
+
+Repo-safe status only:
+
+| Form field / control | Current draft status | Action before next step |
+|---|---|---|
+| Collaborator email | Blank; placeholder `Organizational email` | Decide whether the application should proceed with zero collaborators. |
+| Additional collaborator rows | None visible | Add rows only if collaborator invitations are needed. |
+| Add another | Visible and unused | Use only after deciding exact collaborator list outside git. |
+| Next | Appears enabled | Optional page can likely be skipped if zero collaborators is intentional. |
+
+Full repo-safe transcription:
+[../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md](../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md).
+
+Visible state: `Personal information`, `Organization`, and `Research details`
+are complete; `Collaborators` is active and optional; `Terms and Conditions`
+is not yet completed.
+
 ## Research Purpose
 
 Recommended framing:
