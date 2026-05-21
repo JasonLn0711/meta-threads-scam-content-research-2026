@@ -14,6 +14,19 @@
 - Primary action button under Step 1: `Get started`
 - Bottom-left navigation control: `Collapse`
 
+## Application Draft Personal Information Page
+
+A later user-provided screenshot showed the application draft after `Get
+started`, at the `Personal information` section. The visible page contains
+fields for legal first name, legal last name, preferred name, country,
+state/province, city, organizational email, discipline or area of expertise,
+ORCID ID, and resume/CV upload.
+
+The repo-safe field transcription and filling strategy are recorded in
+[2026-05-21-meta-research-tools-manager-personal-information-page.md](2026-05-21-meta-research-tools-manager-personal-information-page.md).
+The visible application ID and logged-in account identity are intentionally not
+recorded in git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

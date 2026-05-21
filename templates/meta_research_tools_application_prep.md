@@ -12,6 +12,31 @@ Use this template before starting a Meta Research Tools Manager application. Fil
 - Related project:
 - Intended Meta tool route: Meta Content Library UI / Content Library API / both / unknown pending approval
 
+## Personal Information Page
+
+Use the actual form only for final personal values. Do not store legal name,
+organizational email, ORCID, CV file name, or uploaded CV contents in this repo
+unless explicitly redacted and approved.
+
+| Form field | Fill design | Outside-git final value |
+|---|---|---|
+| Legal first name | Exact legal given name from institutional, passport, or official research records. |  |
+| Legal last name | Exact legal family name from institutional, passport, or official research records. |  |
+| Preferred name | Optional; leave blank if legal name is already the professional name. Do not add titles. |  |
+| Your country | Country tied to the applicant's institutional research identity and application context. For NYCU/Taiwan framing, use `Taiwan` if accurate and available. |  |
+| Your state or province | Region consistent with the organization address. For NYCU, use `Hsinchu City` if free text is accepted and accurate. |  |
+| Your city | City consistent with the organization address. For NYCU, use `Hsinchu City` if accurate. |  |
+| Organizational email | Institutional email associated with the research institution or organization; avoid personal Gmail when an institutional email exists. |  |
+| Discipline or area of expertise | Choose the closest academic dropdown category, preferably `Computer and Information Sciences`, `Computer Science`, `Information Science`, `Data Science`, `Artificial Intelligence`, or `Cybersecurity`, depending on available options. |  |
+| ORCID ID | Optional but recommended if the applicant has an accurate ORCID. |  |
+| Resume or CV | Optional in the UI, but recommended. Upload a concise academic CV PDF prepared outside git. |  |
+
+CV should emphasize academic affiliation, PhD status, AI governance, cybercrime
+or online-harm research, Trust & Safety, data governance, publications, and
+privacy-aware methods. Do not include national ID, home address, raw Threads
+examples, screenshots, handles, URLs, credentials, or confidential stakeholder
+details.
+
 ## Research Purpose
 
 Recommended framing:

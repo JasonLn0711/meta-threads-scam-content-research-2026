@@ -4,6 +4,36 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.1 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.0
+- Categories: application-prep;governance
+- Summary: Record Research Tools personal information page guidance
+
+### Detailed Changes
+
+- Added a repo-safe transcription of the Research Tools Manager personal-information page and field-level filling guidance for legal name, location, institutional email, discipline, ORCID, and CV upload.
+- Updated the application prep template so final personal values stay outside git while form strategy is reusable.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-personal-information-page.md`
+- `templates/meta_research_tools_application_prep.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+
+### Verification
+
+- `git diff --check`
+
+### Sources
+
+- User-provided Research Tools Manager personal-information screenshot
+
+### Sensitive Data Check
+
+- No legal name, organizational email, ORCID, CV file, application ID, access email, screenshot file, raw Threads evidence, handles, URLs, credentials, or item-level controlled artifacts added.
+
 ## v1.3.0 - 2026-05-21
 
 - Type: minor

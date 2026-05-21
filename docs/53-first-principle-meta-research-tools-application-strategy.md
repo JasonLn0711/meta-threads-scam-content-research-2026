@@ -103,6 +103,29 @@ Prepare these before clicking `Get started` in Research Tools Manager:
 
 Use `templates/meta_research_tools_application_prep.md` to draft the application materials outside git if sensitive.
 
+## Personal Information Page Strategy
+
+The personal-information page should establish accountable research identity,
+not describe the project.
+
+Visible fields and fill guidance are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md](../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md).
+Use exact legal and institutional information in the actual application, while
+keeping legal name, organizational email, ORCID, CV file names, uploaded CVs,
+application IDs, and access screenshots out of git.
+
+Recommended stance:
+
+- use the applicant's exact legal name from official records;
+- use institutional country, state/province, and city consistent with the next
+  organization section;
+- use an institutional email, not a personal mailbox;
+- choose the closest academic discipline category rather than a marketing term;
+- upload a concise academic CV if ready, because it strengthens trust and
+  eligibility;
+- keep CIB-sensitive details, raw evidence, screenshots, handles, URLs, and
+  access identifiers out of the CV and repo.
+
 ## Claim Boundary
 
 Allowed:
