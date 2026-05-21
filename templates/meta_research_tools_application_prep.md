@@ -206,6 +206,39 @@ Terms-driven pre-submit checks:
   application IDs, account identity, collaborator emails, and access details
   stay outside git.
 
+## Post-Submission Review Tracking
+
+Use this section only after the application has been submitted. It tracks
+non-sensitive status and next gates; it does not authorize collection or API
+use.
+
+| Field / control | Current status pattern | Outside-git final value |
+|---|---|---|
+| Submission status | Record `submitted`, submission date, and source screenshot/page if available. |  |
+| Review stage | Record whether the current visible stage is `CASD review`, `Meta processing`, or `Approval`. |  |
+| Expected review window | Record an approximate range only; Research Tools Manager remains the source of truth. |  |
+| Researcher access | Record aggregate state such as `lead_access_pending`, not personal access details. |  |
+| Requested tools | Record selected tools and whether they are pending or approved. |  |
+| Collaborator invitations | Record aggregate state only, such as `0 collaborators invited`, `invites pending`, or `collaborators approved`. |  |
+| Access activation gate | Do not run MCL UI/API until approval, access details, storage, retention, redaction, and run-record boundaries are confirmed. |  |
+
+### Current Post-Submission Status From 2026-05-21 Screenshot
+
+Repo-safe status only:
+
+| Field / control | Current status | Action before tool use |
+|---|---|---|
+| Application status | `Application under independent review` | Wait for CASD result. |
+| Submission date | `May 21, 2026` | Track review timeline without treating it as an SLA. |
+| Current review stage | `Submission` completed; `CASD review` active; `Meta processing` and `Approval` pending | Do not start collection or API calls. |
+| Typical review time | `2-3 weeks` | Approximate planning window: 2026-06-04 to 2026-06-11. |
+| Lead researcher access | `Access pending` | Access is not approved. |
+| Requested tools | Meta Content Library and Meta Content Library API listed with `Open` controls visible | Do not treat visible `Open` buttons as approval. |
+| Collaborators | One lead researcher row visible; no additional collaborator visible | Invite collaborators only if needed and keep details outside git. |
+
+Full repo-safe transcription:
+[../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md](../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md).
+
 ## Research Purpose
 
 Recommended framing:

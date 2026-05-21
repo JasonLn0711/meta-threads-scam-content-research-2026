@@ -86,6 +86,20 @@ The visible application ID, logged-in account identity, screenshots, full legal
 terms text, access credentials, controlled-data outputs, and private application
 artifacts are intentionally not recorded in git.
 
+## Application Submitted / Independent Review Page
+
+A later user-provided screenshot showed the submitted application status page.
+The application is now marked `Application under independent review`, with
+submission shown as completed on `May 21, 2026` and CASD review as the active
+stage. The visible status page states that reviews are independently conducted
+by the Secure Data Access Center, CASD, and typically take `2-3 weeks`.
+
+The repo-safe post-submission review-status transcription is recorded in
+[2026-05-21-meta-research-tools-manager-submission-review-status-page.md](2026-05-21-meta-research-tools-manager-submission-review-status-page.md).
+The visible application ID, logged-in account identity, screenshot, personal
+researcher identity, access credentials, and controlled-data artifacts are
+intentionally not recorded in git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

@@ -4,6 +4,41 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.8 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.7
+- Categories: application-status;governance;data-access;planning
+- Summary: Record Research Tools submitted review status
+
+### Detailed Changes
+
+- Recorded the submitted Research Tools Manager status page: application under independent review, submitted on May 21, 2026, Submission completed, CASD review active, Meta processing and Approval pending, and typical CASD review time of 2-3 weeks.
+- Captured requested tool-access visibility for Meta Content Library and Meta Content Library API, lead access pending state, collaborator invitation availability, and the operational boundary that visible tool controls do not authorize MCL UI/API use before approval and controlled activation.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md`
+- `notes/2026-05-21-meta-research-tools-manager-application-flow.md`
+- `templates/meta_research_tools_application_prep.md`
+- `docs/51-meta-content-library-api-access.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+- `docs/54-meta-official-product-documentation-requirements.md`
+
+### Verification
+
+- `git diff --check`
+- `python3 scripts/validate_thread_dataset.py data/samples/thread_item_sample_batch.csv`
+- `python3 -m py_compile scripts/record_version_update.py`
+
+### Sources
+
+- User-provided Research Tools Manager submitted application review-status screenshot
+
+### Sensitive Data Check
+
+- Repo-visible files omit application ID, logged-in account identity, screenshots, personal legal identity, credentials, raw Threads evidence, handles, source URLs from controlled data, cleanroom exports, collaborator email addresses, invitation links, and item-level controlled artifacts. The lead researcher row is recorded only as role/status, not personal identity.
+
 ## v1.3.7 - 2026-05-21
 
 - Type: patch

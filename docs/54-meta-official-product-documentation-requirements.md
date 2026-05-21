@@ -107,6 +107,31 @@ This record summarizes the user-provided terms excerpt for project governance.
 It is not legal advice and does not replace live review of the official terms
 before submission or use.
 
+## Submitted Application Status
+
+A later Research Tools Manager status screenshot shows the application has been
+submitted and is under independent review:
+
+- submitted date shown by UI: 2026-05-21
+- current status: `Application under independent review`
+- current stage: CASD review
+- typical CASD review time shown by UI: `2-3 weeks`
+- later stages shown but not reached: Meta processing and Approval
+- lead researcher access: pending
+- requested access shown: Meta Content Library and Meta Content Library API
+
+Repo-safe record:
+
+- [../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md](../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md)
+
+Operational meaning:
+
+- Approval has not been granted.
+- Tool access has not been activated.
+- No official run should begin until approval, access details, environment
+  availability, storage, retention, redaction, and run-record boundaries are
+  confirmed.
+
 ## Eligibility Requirements
 
 Access is application-based and reviewed through Research Tools Manager.

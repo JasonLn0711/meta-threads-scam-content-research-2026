@@ -255,6 +255,40 @@ Recommended stance:
 - treat termination, terms updates, data quality limitations, confidentiality,
   and two-day notification duties as operational constraints.
 
+## Post-Submission Review Strategy
+
+The application has now crossed the submission threshold. It has not crossed
+the access threshold.
+
+Visible post-submission status and repo-safe progress are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md](../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md).
+
+Observed current state:
+
+- application status is `Application under independent review`;
+- the UI shows submission on `May 21, 2026`;
+- `Submission` is complete;
+- `CASD review` is active;
+- `Meta processing` and `Approval` are pending;
+- CASD review is shown as typically taking `2-3 weeks`;
+- lead researcher access is still `Access pending`;
+- Meta Content Library and Meta Content Library API are listed as requested
+  tools, but not yet approved for use.
+
+Recommended stance:
+
+- shift repo work from application drafting to review tracking;
+- track an approximate review window of 2026-06-04 to 2026-06-11 without
+  treating it as a guaranteed deadline;
+- do not use the visible `Open` buttons as evidence of access approval;
+- prepare storage, retention, deletion, ethics/IRB, publication, citation, and
+  controlled-run activation plans while waiting;
+- create a new controlled access activation record before any MCL UI or API run
+  after approval;
+- if revision is requested, update the application record in repo-safe form
+  without storing application IDs, screenshots, personal identity, credentials,
+  or controlled data.
+
 ## Claim Boundary
 
 Allowed:

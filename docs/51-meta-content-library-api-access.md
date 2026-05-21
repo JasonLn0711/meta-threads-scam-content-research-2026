@@ -24,6 +24,7 @@ Verified on `2026-05-21` from Meta documentation:
 - A later user-provided screenshot confirms the lower `Research details` form state: Meta Content Library web tool selected, Meta Content Library API selected, Meta Secure Research Environment selected, SOMAR Virtual Data Enclave not selected, and both required confirmations checked. This confirms that the project has attested to reading product documentation and understanding fields, data types, and applicable API endpoints.
 - A later user-provided screenshot of the application draft shows the optional `Collaborators` page with the first collaborator email field blank, the `Add another` control visible and unused, and `Next` appearing enabled. The repo-safe field transcription and filling status are recorded in [../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md](../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md); collaborator emails, invitation links, application IDs, screenshots, and logged-in account identity are intentionally omitted from git.
 - Later user-provided screenshots of the application draft show the `Terms and Conditions` page after prior sections were completed. Image 1 shows the required terms confirmation and marketing-consent checkbox unchecked with `Agree & submit application` disabled; Image 2 shows both checkboxes checked with `Agree & submit application` enabled. The repo-safe field transcription and section-by-section operational summary are recorded in [../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md); the application ID, logged-in account identity, screenshots, full legal terms text, credentials, and controlled-data artifacts are intentionally omitted from git.
+- A later user-provided screenshot of the submitted application status page shows `Application under independent review`, submitted on `May 21, 2026`, with `Submission` completed, `CASD review` active, `Meta processing` pending, and `Approval` pending. The page states that CASD reviews typically take `2-3 weeks`, lists Meta Content Library and Meta Content Library API in the requested tool access area, and shows lead researcher access as pending. The repo-safe transcription is recorded in [../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md](../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md); personal identity, application ID, screenshots, credentials, and access details are intentionally omitted from git.
 - The official product-documentation compliance snapshot for Meta Content Library/API and Meta Secure Research Environment is recorded in [54-meta-official-product-documentation-requirements.md](54-meta-official-product-documentation-requirements.md).
 - Content Library documentation lists Threads public content as posts shared by public profiles with 100 or more followers.[^mcl-content]
 - Threads content is noted as not available for download while that dataset is in development.[^mcl-content]
@@ -162,6 +163,31 @@ Operational caution:
 - The marketing checkbox is separate and should be selected or unselected intentionally.
 - The terms summary reinforces the same project boundary: Approved Purpose only, no scraping/crawling, no unauthorized export/download/combination, no re-identification, no shared access, no commercial exploitation, no competing-product benchmarking, and no raw Meta Data in git.
 - The team should review title truncation, collaborator need, EU systemic-risk framing, API necessity, SRE route, IRB/ethics position, storage/deletion rules, and publication boundaries before clicking `Agree & submit application`.
+
+## Submitted Application Review Status
+
+The application has now moved from draft/pre-submission state to independent
+review tracking:
+
+- canonical note: [../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md](../notes/2026-05-21-meta-research-tools-manager-submission-review-status-page.md)
+- visible status: `Application under independent review`
+- submission date shown by UI: `May 21, 2026`
+- active review body: Secure Data Access Center, CASD
+- progress rail: `Submission` completed; `CASD review` active; `Meta processing` pending; `Approval` pending
+- typical review time shown by UI: `2-3 weeks`
+- planning estimate from the submitted date: 2026-06-04 to 2026-06-11
+- lead researcher access: `Access pending`
+- requested tool access shown: Meta Content Library and Meta Content Library API
+
+Operational caution:
+
+- This status does not grant access.
+- Visible `Open` controls do not override the `Access pending` state.
+- No MCL UI collection, MCL API use, cleanroom work, export, download,
+  scraping, production detection, or legal/enforcement claim is authorized by
+  this page alone.
+- The next repo state should be review tracking until CASD or Meta changes the
+  application status.
 
 ## Application Framing
 
