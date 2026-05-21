@@ -18,6 +18,8 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 |---|---|
 | Source type | `stakeholder_provided_case` / `manual_public_example` / `manual_public_comparator` / `stakeholder_summary_only` / `api_authorized_sample` / `researcher_synthetic` / other |
 | Platform | Threads |
+| Official Meta route | `meta_content_library_ui` / `meta_content_library_api` / `threads_api_keyword_search` / not_applicable |
+| Access environment | Research Tools Manager / Secure Research Environment / approved cleanroom / Threads developer app / other |
 | Proposed collection method |  |
 | Expected item count |  |
 | Expected date range |  |
@@ -31,6 +33,9 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 | Is source sharing approved? |  |
 | Is manual collection approved? |  |
 | Is API access approved? |  |
+| Is Meta Content Library / API access approved? |  |
+| Is Threads API keyword search approved as a supplement? |  |
+| Is download/export approved for this surface? |  |
 | Are screenshots approved? |  |
 | Are source URLs approved? |  |
 | Are visible links approved? |  |
@@ -58,6 +63,8 @@ Mark each as `needed`, `optional`, `not_needed`, or `not_allowed`.
 | `source_url_if_stored` |  |  |
 | `metadata_notes` |  |  |
 | `privacy_redaction_notes` |  |  |
+| official route/query metadata |  |  |
+| engagement or view metrics |  |  |
 
 ## Source Scoring
 
@@ -102,4 +109,3 @@ Rationale:
 | Follow-up | Owner | Due date |
 |---|---|---|
 |  |  |  |
-

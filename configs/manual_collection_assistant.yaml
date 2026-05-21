@@ -43,11 +43,13 @@ defaults:
 allowed_real_source_types:
   - stakeholder_provided
   - manual_public
+  - api_authorized
   - other_approved
 
 allowed_real_collection_methods:
   - stakeholder_provided
   - manual_capture
+  - api_authorized
 
 allowed_synthetic_source_types:
   - researcher_synthetic

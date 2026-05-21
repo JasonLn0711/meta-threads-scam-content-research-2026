@@ -14,6 +14,7 @@ As of `2026-04-23`:
 - no real Threads item has been collected or committed
 - the first real pilot is approved only for bounded `go_with_limits` launch preparation
 - exact sensitive source, storage, access, retention, and redaction details still must be completed outside git before item 1
+- Meta Content Library / API is the preferred official research access route for the CIB case where available
 - immediate unlimited 500-item collection is rejected or paused
 - the next valid real-data step is the first 10-15 item checkpoint inside the conditional 50-item pilot
 
@@ -39,10 +40,13 @@ The evaluation must answer:
 | `manual_public_example` | Publicly visible examples collected manually under approved limits. | Platform/legal comfort, privacy, source URL handling. |
 | `manual_public_comparator` | Non-scam and hard-negative comparator examples. | Overcollection of ordinary users. |
 | `stakeholder_summary_only` | Pattern discovery without raw evidence. | May be too vague for annotation. |
-| `api_authorized_sample` | Structured access if explicit API approval exists. | Scope and terms must be precise. |
+| `meta_content_library_ui` | Official research UI for approved public Meta content discovery and query design. | Threads data may be visible but not downloadable while the dataset is in development. |
+| `meta_content_library_api` | Official research API in Secure Research Environment or approved cleanroom. | API coverage, fields, export, and Threads availability must be verified in the approved environment. |
+| `threads_api_keyword_search` | Official Threads API keyword/hashtag search when explicitly approved. | Query limits, permissions, sensitive-keyword behavior, and public-search scope. |
+| `api_authorized_sample` | Structured access if explicit API approval exists. | Scope and terms must be precise; prefer official Meta routes above. |
 | `researcher_synthetic` | Templates, calibration, tooling dry runs. | Not real evidence; cannot support real-world claims. |
 
-Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it.
+Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it. Content Library downloads or exports are allowed only if the approved tool, surface, contract terms, and controlled run record permit them.
 
 ## Intake Sequence
 

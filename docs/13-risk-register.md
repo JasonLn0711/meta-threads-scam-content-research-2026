@@ -8,6 +8,7 @@ As of `2026-04-23`, tooling risk has been reduced by the synthetic workflow dry 
 |---|---|---:|---:|---|
 | Controlled-store hygiene risk | Real controlled pilot artifacts may be mistaken for synthetic examples or copied into git-facing notes. | High | High | Keep controlled artifacts outside git, use controlled references only, and correct any `example` or `synthetic` mislabeling immediately. |
 | Data access risk | Threads data access may be limited or legally constrained. | Medium | High | Use only CIB-approved manual, stakeholder, API, or automation-assisted paths with run records and controlled storage. |
+| Meta route coverage mismatch | Meta Content Library UI, Content Library API, and official Threads API may expose different Threads fields, query behavior, or export options. | Medium | High | Use `docs/51-meta-content-library-api-access.md`, record route coverage per run, and treat UI/API/download gaps as limitations rather than scraping around them. |
 | Annotation inconsistency | Reviewers may disagree on ambiguous finance or marketing content. | High | High | Use clear labels, second review, disagreement logs, and guideline revisions. |
 | Legal and ethical risk | Mishandled data could expose personal information or investigative material. | Medium | High | Follow data governance, minimize personal data, store raw material outside git. |
 | Scope creep | Project may expand into all Meta platforms, video, or production tooling. | High | High | Use decision logs and budget-fit checks before expanding. |

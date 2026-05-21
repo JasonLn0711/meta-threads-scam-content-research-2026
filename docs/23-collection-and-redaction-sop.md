@@ -6,6 +6,8 @@ This SOP defines how to prepare the first Threads dataset batch without violatin
 
 For the CIB-authorized pilot, API access and all research-required automation are authorized only through `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md` and Decision 0018. This SOP does not authorize unscope automation or production use.
 
+For the CIB/165 Threads scam-content research case, Meta Content Library / API is the preferred official research access route where available. Use `docs/51-meta-content-library-api-access.md` before any Meta Content Library UI/API or Threads API keyword-search run.
+
 ## Preconditions
 
 Before collecting any real item:
@@ -16,6 +18,7 @@ Before collecting any real item:
 - Complete `docs/36-stakeholder-authorization-packet.md`.
 - Complete `templates/stakeholder_authorization_decision_record.md`.
 - Confirm the source is allowed under `governance/data-governance.md`.
+- Confirm whether the approved route is Meta Content Library UI, Meta Content Library API, official Threads API keyword search, stakeholder-provided evidence, or manual public collection.
 - Complete or link `templates/data_authorization_request.md`.
 - Decide where raw evidence will live outside git.
 - Confirm who may see raw evidence.
@@ -35,6 +38,8 @@ If any precondition is unresolved, use only synthetic examples.
 | Synthetic dry run | Always allowed | No real Threads evidence. |
 | Stakeholder-provided cases | Sharing, retention, redaction, and use are approved | Preserve stakeholder report reference only if allowed. |
 | Manual public examples | Legal/platform comfort is documented | Governed by the controlled launch record. |
+| Meta Content Library UI/API examples | Research access, cleanroom/export terms, query scope, and fields are approved | Preferred official route for CIB case where available; raw outputs and query details stay outside git. |
+| Official Threads API keyword-search examples | Endpoint, permission, query count, fields, and purpose are approved | Supplementary route only; not a replacement for Content Library / API where that route answers the research question. |
 | API-authorized examples | API approval is recorded | Approved for the CIB pilot under run-record controls. |
 | Automation-assisted examples | CIB automation authorization and run record exist | Raw outputs, credentials, session artifacts, and logs stay outside git. |
 
@@ -47,6 +52,20 @@ Not approved by this SOP unless explicitly run-scoped under the CIB controlled l
 - landing-page crawling
 - redirect-chain capture
 - raw browser profiles, cookies, or credentials
+
+## Meta API Route Handling
+
+Before retaining any item from Meta Content Library / API or the official Threads API:
+
+- record route as `meta_content_library_ui`, `meta_content_library_api`, or `threads_api_keyword_search`
+- record access environment and approval reference outside git if sensitive
+- record query/search ID, date range, keyword/hashtag filters, media type, language, and requested fields
+- record returned count, retained count, excluded count, and exclusion reasons
+- confirm whether Threads data was available through UI, API, both, or neither
+- confirm whether download/export is allowed for the surface used
+- map official output fields into the v1 schema without adding new retained metadata unless approved
+
+If Content Library UI surfaces Threads records but API/export support is unavailable or inconsistent, record that as a limitation and do not work around it with unofficial scraping.
 
 ## Minimal Evidence To Record
 

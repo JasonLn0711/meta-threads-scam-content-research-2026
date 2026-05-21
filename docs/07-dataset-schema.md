@@ -29,7 +29,7 @@ The schema intentionally centers the content item rather than accounts, profiles
 | `item_id` | string | Yes | Stable internal ID with no personal data. |
 | `schema_version` | string | Yes | Must be `thread_item_schema_v1`. |
 | `source_platform` | enum | Yes | Phase-1 value is `threads`. |
-| `source_type` | enum | Yes | `stakeholder_provided`, `manual_public`, `api_authorized`, `synthetic_redacted`, `researcher_synthetic`, or `other_approved`. |
+| `source_type` | enum | Yes | `stakeholder_provided`, `manual_public`, `api_authorized`, `synthetic_redacted`, `researcher_synthetic`, or `other_approved`; use `api_authorized` for approved Meta Content Library / API or Threads API records and record the specific route in `metadata_notes` or the outside-git run record. |
 | `collection_batch_id` | string | Yes | Batch ID such as `threads_pilot_v1_2026-05`. |
 | `collection_timestamp` | datetime | Yes | ISO 8601 timestamp. |
 | `collection_method` | enum | Yes | `stakeholder_provided`, `manual_capture`, `api_authorized`, `synthetic`, or `other`. |

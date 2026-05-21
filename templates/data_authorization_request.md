@@ -12,6 +12,12 @@
 
 - Source type: `stakeholder_provided` / `manual_public` / `api_authorized` / `other_approved`
 - Platform: Threads
+- Official Meta route: `meta_content_library_ui` / `meta_content_library_api` / `threads_api_keyword_search` / not_applicable
+- Access environment:
+- Research Tools Manager application status:
+- CASD review status:
+- Meta processing status:
+- Access email received: yes / no / not_applicable
 - Proposed collection method:
 - Proposed sample size:
 - Proposed date range:
@@ -23,6 +29,11 @@
 - Intended use:
 - Expected experiment or annotation activity:
 - Why this source is necessary:
+- Public-interest rationale:
+- Why official research access is necessary:
+- Why regular Threads API or scraping is insufficient:
+- Human-review role:
+- Claim boundary / what this request will not claim:
 
 ## Fields Requested
 
@@ -41,6 +52,8 @@ Mark each as approved, denied, pending, or not needed.
 | screenshot snapshot |  |  |
 | link snapshot |  |  |
 | limited metadata notes |  |  |
+| official route/query metadata |  |  |
+| engagement or view metrics |  |  |
 
 ## Privacy And Redaction
 
@@ -64,7 +77,11 @@ Mark each as approved, denied, pending, or not needed.
 
 - Platform terms reviewed:
 - Legal/policy reviewer:
+- IRB or ethics-review status:
+- Human-subjects position:
 - Known restrictions:
+- Content Library / API or Threads API limits:
+- Download/export status:
 - Open concerns:
 
 ## Decision

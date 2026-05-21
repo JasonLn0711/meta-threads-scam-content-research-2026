@@ -22,6 +22,8 @@ On `2026-04-23`, a scope-change request proposed accepting low-speed automated T
 
 Also on `2026-04-23`, the project owner reported a CIB Criminal Investigation Bureau authorization amendment requiring explicit authorization for API access and all automation needed for this research case. That authorization is adopted only through the controlled launch record and Decision 0018. The difference is scope: unscope automation remains rejected, while CIB-authorized API and automation runs are allowed only when run records, field limits, credential controls, raw-storage controls, access limits, retention rules, redaction rules, and audit logs are in place.
 
+On `2026-05-21`, the project owner clarified that the CIB/165 Threads scam-content research case must use Meta Content Library / API as the official research data route where available. This narrows the generic API authorization: use Meta Content Library UI/API first, use the official Threads API only as a scoped supplementary route if approved, and do not substitute unofficial scraping or third-party APIs for missing official coverage. The route details and limits are recorded in `docs/51-meta-content-library-api-access.md` and Decision 0022.
+
 ## Prohibited Repository Contents
 
 Do not commit:
@@ -66,6 +68,7 @@ As of `2026-04-23`, the first real 50-item Threads pilot is approved for bounded
 Phase-1 work should assume:
 
 - Manual, stakeholder-provided, API-authorized, and CIB-authorized automation-assisted sample collection are approved only under the controlled launch record.
+- Meta Content Library / API is the preferred official research data route for this CIB case when it can answer the approved research question; Threads API keyword search is supplementary only when explicitly run-scoped.
 - Exact source, storage, access, retention, redaction, API credential, automation log, screenshot, OCR, URL/link, handle/contact, reply/comment, and run-record limits are governed by the outside-git controlled launch record. Any new source, method, field, or storage change must be recorded there before use.
 - Production scoring, public accusation, and legal fraud determination remain out of scope.
 
@@ -105,7 +108,9 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 | Synthetic examples | Allowed | Use only for templates and tooling tests. |
 | Stakeholder-provided examples | Approved with limits for the 50-item pilot | Exact source, storage, access, retention, and redaction limits required before first item. |
 | Manual public examples | Approved with limits for the 50-item pilot | Privacy-minimized and governed by the controlled launch record. |
-| API-authorized collection | Approved with limits for this CIB-authorized pilot | Use only approved API access paths, credential controls, run records, field limits, and controlled raw storage. |
+| Meta Content Library / API | Required preferred route where available for this CIB case | Controlled-access research route; record UI/API coverage, cleanroom/export limits, fields, query counts, and raw-storage path. |
+| Official Threads API keyword search | Approved only as scoped supplement | Requires approved app permissions, endpoint, query count, fields, and run record; not a full-platform monitoring substitute. |
+| API-authorized collection | Approved with limits for this CIB-authorized pilot | Use only approved official API access paths, credential controls, run records, field limits, and controlled raw storage. |
 | Low-speed automated Threads/Meta collection without scope | Rejected or paused | Rate limiting alone is not authorization; Decision 0016 still applies to unscope automation. |
 | CIB-authorized automation-assisted collection | Approved with limits for this research case | Allowed only under Decision 0018 and the controlled launch record. |
 | Browser automation, scraping-like collection, crawling, bulk export | Approved only if run-scoped under the CIB controlled launch record | Raw outputs, credentials, browser/session artifacts, and logs stay outside git. |
@@ -126,6 +131,7 @@ Before any real Threads item enters `data/interim/` or annotation workflow:
 - Real-pilot readiness review: `docs/35-real-pilot-readiness-review.md`
 - Real-pilot readiness template: `templates/real_pilot_readiness_review.md`
 - Pilot execution plan: `docs/29-authorized-pilot-execution-plan.md`
+- Meta Content Library / API access record: `docs/51-meta-content-library-api-access.md`
 - Manual collection assistant: `docs/48-manual-collection-assistant.md`
 - 500-item expansion plan: `docs/32-500-item-expansion-plan.md`
 - Pilot batch work order: `templates/pilot_batch_work_order.md`

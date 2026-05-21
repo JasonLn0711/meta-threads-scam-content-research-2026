@@ -16,6 +16,7 @@ As of `2026-04-23`:
 - pilot governance package exists
 - approved pilot launch packet exists under `governance/pilot-launch/`
 - launch status is `go_with_limits`
+- Meta Content Library / API is now recorded as the preferred official research access route for the CIB/165 case where available; see `docs/51-meta-content-library-api-access.md`
 - item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed here
 
 Default collection status is limited to the outside-git controlled launch record. Pause any source, method, field, or storage change that is not already covered there.
@@ -31,6 +32,7 @@ Begin this execution plan only when all of the following are true:
 | Source candidate intake | Completed `templates/source_candidate_intake.md` |
 | Sampling frame | Completed `templates/source_sampling_frame_template.csv` |
 | Source and field approval | Completed `templates/data_authorization_request.md` |
+| Meta API route approval | Completed route decision for Meta Content Library UI/API or official Threads API supplement, if any API route is used |
 | Pilot go/no-go | Completed `docs/26-pilot-go-no-go-checklist.md` with `go` or `go_with_limits` |
 | Batch work order | Completed `templates/pilot_batch_work_order.md` |
 | Real-pilot readiness review | Completed `templates/real_pilot_readiness_review.md` with `go` or `go_with_limits` |
@@ -96,10 +98,10 @@ This runbook is the operating order for Phase 1. Do not skip ahead because a lat
 | Field | Requirement |
 |---|---|
 | Purpose | Convert approval into exact, enforceable source, storage, access, retention, redaction, screenshot, OCR, URL/link, handle/contact, role-ID, and field limits. |
-| Required inputs | `governance/pilot-launch/`, `governance/data-governance.md`, `templates/controlled_launch_details_template.md`. |
+| Required inputs | `governance/pilot-launch/`, `governance/data-governance.md`, `docs/51-meta-content-library-api-access.md`, `templates/controlled_launch_details_template.md`. |
 | Commands | None. This is a human governance step outside git. |
 | Exit criteria | Filled controlled launch record has status `ready_for_rehearsal` or `ready_for_first_10_15_items`. |
-| Stop conditions | Any unresolved source, storage, access, retention, redaction, screenshot, OCR, URL, handle, role, permitted-field, or forbidden-field decision. |
+| Stop conditions | Any unresolved source, official Meta route, cleanroom/export limit, storage, access, retention, redaction, screenshot, OCR, URL, handle, role, permitted-field, or forbidden-field decision. |
 | Common failure modes | Sensitive details copied into git; source category too vague; raw storage path missing; retention rule left as "TBD". |
 
 ### Mission 2: Initialize Local Pilot Workspace
@@ -118,7 +120,7 @@ This runbook is the operating order for Phase 1. Do not skip ahead because a lat
 | Field | Requirement |
 |---|---|
 | Purpose | Test 1-2 controlled local records before real volume. |
-| Required inputs | Approved local input JSON or run-scoped API/automation output, controlled fields, `templates/manual_collection_rehearsal_checklist.md`, `templates/controlled_rehearsal_review.md`, `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`, and CIB run record if automation is used. |
+| Required inputs | Approved local input JSON or run-scoped Meta Content Library / API, Threads API, or automation output; controlled fields; `templates/manual_collection_rehearsal_checklist.md`; `templates/controlled_rehearsal_review.md`; `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`; and CIB run record if API or automation is used. |
 | Commands | `python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json --ack-controlled-details --output data/interim/manual_record_0001.json --collection-log data/interim/threads_pilot_v1_collection_log.csv`; then `python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict`. |
 | Exit criteria | Governance errors zero; strict validation passes; redaction review passes; collector does not need unapproved context; rehearsal review records one explicit decision before the first 10-15 item checkpoint begins. |
 | Stop conditions | Full URLs, raw handles, unrelated personal data, profile/landing-page/redirect context outside the run record, automation outside the controlled launch record, or schema blockers. |
