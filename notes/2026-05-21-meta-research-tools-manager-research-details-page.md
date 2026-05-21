@@ -6,6 +6,7 @@
 - URL / application identifier: intentionally omitted from git
 - Screenshot files: not stored in git
 - Repo-safe privacy note: this note records the research-program text and form state only. It does not record the visible application ID, logged-in account identity, access credentials, screenshots, raw Threads evidence, handles, URLs, or item-level controlled artifacts.
+- Related official documentation record: [../docs/54-meta-official-product-documentation-requirements.md](../docs/54-meta-official-product-documentation-requirements.md)
 
 ## Visible Page State
 
@@ -140,6 +141,7 @@ Repo interpretation:
 
 - These confirmations should be true at submission time.
 - The first confirmation should be backed by the official product-documentation notes already recorded in `docs/51-meta-content-library-api-access.md`.
+- The detailed product-documentation requirements snapshot is recorded in `docs/54-meta-official-product-documentation-requirements.md`.
 - The second confirmation is supported by the project's public-interest, metadata-first, uncertainty-preserving reviewer-support framing.
 
 ## Observed UI Notes

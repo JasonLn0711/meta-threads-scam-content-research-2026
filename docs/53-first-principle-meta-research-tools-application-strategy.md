@@ -156,6 +156,9 @@ production enforcement.
 
 Visible fields and repo-safe filled status are recorded in
 [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md).
+The official product-documentation requirements snapshot that supports the
+checked product-documentation confirmation is recorded in
+[54-meta-official-product-documentation-requirements.md](54-meta-official-product-documentation-requirements.md).
 
 Observed current draft state:
 
@@ -176,6 +179,9 @@ Recommended stance:
 - request only public or platform-approved research data;
 - describe API access as necessary for reproducible, scalable analysis inside
   the approved secure environment, not as a general data export path;
+- treat Meta Secure Research Environment as a WorkSpaces Secure Browser
+  cleanroom with copy, network, download, export, model, and package-management
+  restrictions;
 - keep `Yes` on the EU systemic-risk question only if the application is ready
   to defend systemic-risk relevance;
 - preserve the no private messages, no non-public user data, no autonomous

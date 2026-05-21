@@ -124,6 +124,9 @@ Repo-safe status only:
 Full repo-safe transcription:
 [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md).
 
+Official product-documentation requirements snapshot:
+[../docs/54-meta-official-product-documentation-requirements.md](../docs/54-meta-official-product-documentation-requirements.md).
+
 Visible state: `Personal information` and `Organization` are complete,
 `Research details` is active, both research-tool selections are checked, both
 required confirmations are checked, and `Next` appears enabled.
@@ -243,6 +246,7 @@ Reviewer-scarcity measurement:
 ## Pre-Submission Checklist
 
 - [ ] Research question is specific and public-interest oriented.
+- [ ] Official Meta product documentation and SRE requirements have been reviewed.
 - [ ] Governance boundary is written.
 - [ ] Field minimization is justified.
 - [ ] Storage, access, retention, and deletion plan exists.

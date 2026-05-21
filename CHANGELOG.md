@@ -4,6 +4,42 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.5 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.4
+- Categories: application-prep;governance;data-access;secure-environment
+- Summary: Record Meta official product documentation requirements
+
+### Detailed Changes
+
+- Added a structured requirements record for Meta Content Library/API and Meta Secure Research Environment official documentation, including eligibility, application flow, data scope, API/export restrictions, SRE cleanroom restrictions, support/status, citations, disclaimers, and changelog implications.
+- Recorded the latest Research Tools Manager bottom-section screenshot state: web tool and API selected, Meta Secure Research Environment selected, SOMAR not selected, and both confirmations checked.
+
+### Affected Paths
+
+- `docs/54-meta-official-product-documentation-requirements.md`
+- `docs/51-meta-content-library-api-access.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+- `notes/2026-05-21-meta-research-tools-manager-research-details-page.md`
+- `templates/meta_research_tools_application_prep.md`
+
+### Verification
+
+- `git diff --check`
+- `python3 scripts/validate_thread_dataset.py data/samples/thread_item_sample_batch.csv`
+- `python3 -m py_compile scripts/record_version_update.py`
+
+### Sources
+
+- Meta official Content Library/API documentation
+- Meta official Secure Research Environment documentation
+- User-provided Research Tools Manager bottom-section screenshot
+
+### Sensitive Data Check
+
+- Repo-visible files omit application ID, logged-in account identity, screenshots, private access details, raw Threads evidence, handles, source URLs from controlled data, credentials, cleanroom exports, and item-level controlled artifacts. Official public documentation URLs and paraphrased requirements were recorded.
+
 ## v1.3.4 - 2026-05-21
 
 - Type: patch

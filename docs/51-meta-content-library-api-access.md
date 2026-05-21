@@ -21,6 +21,8 @@ Verified on `2026-05-21` from Meta documentation:
 - A later user-provided screenshot of the Research Tools Manager application draft shows the `Personal information` page. The repo-safe field transcription and filling strategy are recorded in [../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md](../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md); the application ID, logged-in account identity, email, ORCID, CV details, and completed personal values are intentionally omitted from git.
 - A later user-provided screenshot of the application draft shows the `Organization` page. The repo-safe field transcription and filling status are recorded in [../notes/2026-05-21-meta-research-tools-manager-organization-page.md](../notes/2026-05-21-meta-research-tools-manager-organization-page.md); department-level affiliation, role, applicant-verification URL, application ID, and logged-in account identity are intentionally omitted or redacted in git.
 - Later user-provided screenshots of the application draft show the `Research details` page filled with a 60-character research title, a `1772/4000` research-program description, a `1552/4000` relevant-data statement, `Yes` for the EU systemic-risk question, both the web-based Meta Content Library and API selected, Meta Secure Research Environment selected, and both required confirmations checked. The full repo-safe transcription is recorded in [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md); application ID, logged-in account identity, screenshots, and private access details are intentionally omitted from git.
+- A later user-provided screenshot confirms the lower `Research details` form state: Meta Content Library web tool selected, Meta Content Library API selected, Meta Secure Research Environment selected, SOMAR Virtual Data Enclave not selected, and both required confirmations checked. This confirms that the project has attested to reading product documentation and understanding fields, data types, and applicable API endpoints.
+- The official product-documentation compliance snapshot for Meta Content Library/API and Meta Secure Research Environment is recorded in [54-meta-official-product-documentation-requirements.md](54-meta-official-product-documentation-requirements.md).
 - Content Library documentation lists Threads public content as posts shared by public profiles with 100 or more followers.[^mcl-content]
 - Threads content is noted as not available for download while that dataset is in development.[^mcl-content]
 - The Content Library API documentation describes near real-time public discussion data from Facebook and Instagram, with dedicated endpoints, more than 100 data fields, up to 100,000 results per query, and asynchronous search.[^mcl-api]
@@ -56,9 +58,12 @@ Do not generalize those capabilities beyond the approved surface:
 - Threads content availability must be checked in the approved environment.
 - UI, API, and download/export coverage can differ.
 - Threads download/export must not be assumed while official documentation marks that dataset as in development.
+- Content Library API must not be treated as a download or local-export route; official documentation says API downloading is not permitted by any means.
+- Meta Secure Research Environment must be treated as a WorkSpaces Secure Browser cleanroom with copy/export/network restrictions, not a normal local Jupyter environment.
 - Missing official coverage is a research limitation, not permission to scrape.
 
 The full conceptual note is [../notes/2026-05-21-meta-content-library-research-scale-platform.md](../notes/2026-05-21-meta-content-library-research-scale-platform.md).
+The official product-documentation requirements record is [54-meta-official-product-documentation-requirements.md](54-meta-official-product-documentation-requirements.md).
 
 ## Scam-Research Fit
 
