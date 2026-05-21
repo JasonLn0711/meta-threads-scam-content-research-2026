@@ -126,6 +126,27 @@ Recommended stance:
 - keep CIB-sensitive details, raw evidence, screenshots, handles, URLs, and
   access identifiers out of the CV and repo.
 
+## Organization Page Strategy
+
+The organization page should establish institutional accountability. It should
+make it easy for Meta and CASD to verify that the applicant is affiliated with
+a legitimate academic organization.
+
+Visible fields and repo-safe filled status are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-organization-page.md](../notes/2026-05-21-meta-research-tools-manager-organization-page.md).
+
+Recommended stance:
+
+- use the exact official English institution name;
+- use the official institution website;
+- use a department/institute/lab name that matches institutional records;
+- choose the closest role dropdown, such as PhD student when accurate;
+- use an organization-hosted profile, directory, lab, advisor, or research-group
+  page for affiliation verification;
+- do not use LinkedIn, GitHub Pages, or a personal website;
+- do not use this page to discuss CIB operations, raw evidence, scam labels, or
+  enforcement claims.
+
 ## Claim Boundary
 
 Allowed:

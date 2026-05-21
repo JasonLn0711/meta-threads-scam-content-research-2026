@@ -27,6 +27,20 @@ The repo-safe field transcription and filling strategy are recorded in
 The visible application ID and logged-in account identity are intentionally not
 recorded in git.
 
+## Application Draft Organization Page
+
+A later user-provided screenshot showed the application draft at the
+`Organization` section after personal information was completed. The visible
+page contains fields for organization name, organization country, organization
+type, organization website, department name, role at organization, and an
+organization-hosted profile or page URL used to verify affiliation.
+
+The repo-safe field transcription and filling status are recorded in
+[2026-05-21-meta-research-tools-manager-organization-page.md](2026-05-21-meta-research-tools-manager-organization-page.md).
+The visible application ID, logged-in account identity, and affiliation details
+that directly identify the applicant are intentionally not recorded in full in
+git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

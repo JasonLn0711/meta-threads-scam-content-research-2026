@@ -4,6 +4,36 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.3 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.2
+- Categories: application-prep;governance;privacy
+- Summary: Record Research Tools organization page status
+
+### Detailed Changes
+
+- Recorded the Organization page fields, repo-safe filled status, institutional verification guidance, and direct-affiliation redaction boundary.
+- Stored complete observed organization values only in ignored local private storage under data/private/.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-organization-page.md`
+- `templates/meta_research_tools_application_prep.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+
+### Verification
+
+- `git diff --check`
+
+### Sources
+
+- User-provided Research Tools Manager Organization screenshot
+
+### Sensitive Data Check
+
+- Repo-visible files retain public institution-level values but redact department-level affiliation, role, applicant-verification URL, application ID, logged-in identity, and any private application details. Actual values were stored only in ignored local private storage under data/private/.
+
 ## v1.3.2 - 2026-05-21
 
 - Type: patch

@@ -57,6 +57,40 @@ Repo-safe status only:
 Visible blocker: the `Next` button appears disabled, likely because `Your city`
 is still blank.
 
+## Organization Page
+
+Use the actual form only for final organization values. Public institution
+fields can be recorded in repo-safe notes when needed, but department-level
+affiliation, role, and applicant-verification URLs should stay outside git
+unless explicitly approved.
+
+| Form field | Fill design | Outside-git final value |
+|---|---|---|
+| Organization name | Exact official institution name. |  |
+| Organization country | Country of the affiliated organization. |  |
+| Organization type | Closest official dropdown type, usually `Academic institution` for NYCU. |  |
+| Organization website | Main official institutional website. |  |
+| Department name | Exact department, institute, lab, or program name used by the organization. |  |
+| Your role at organization | Closest official role dropdown, such as `PhD student` when accurate. |  |
+| Link to your profile or page on your organization's website | Organization-hosted URL that verifies affiliation. Do not use LinkedIn, GitHub Pages, or a personal website. |  |
+
+### Current Organization Draft Status From 2026-05-21 Screenshot
+
+Repo-safe status only:
+
+| Form field | Current draft status | Action before next step |
+|---|---|---|
+| Organization name | Filled: `National Yang Ming Chiao Tung University` | Confirm official English spelling. |
+| Organization country | Filled: `Taiwan` | Confirm consistency with personal-information country. |
+| Organization type | Filled: `Academic institution` | Accept if this is the closest dropdown option. |
+| Organization website | Filled: `https://www.nycu.edu.tw/` | Confirm it remains the official institutional homepage. |
+| Department name | Filled; redacted in git | Confirm exact official department/institute English name. |
+| Your role at organization | Filled; redacted in git | Confirm role dropdown matches current appointment/status. |
+| Affiliation verification URL | Filled; redacted in git | Confirm the URL actually verifies the applicant's affiliation; prefer a profile, directory, lab, or advisor/research-group page over a generic department homepage. |
+
+Visible state: `Personal information` is complete, `Organization` is active,
+and `Next` appears enabled.
+
 ## Research Purpose
 
 Recommended framing:
