@@ -1,0 +1,237 @@
+schema_version: reviewer_assist_evaluation_work_order_v1
+evaluation_id: reviewer-assist-labor-savings-0010
+decision_id: '0146'
+opened_at: '2026-05-05'
+status: completed_assisted_review_result_received
+no_fake_results: true
+purpose: metadata-only execution workbench for the Decision 0145 Reviewer Assist labor-savings evaluation
+single_highest_priority: governed automatic or assisted discovery of review-worthy Threads investment-scam candidates
+comparison_type: retrospective_assist_shadow_on_completed_metadata_slice
+manual_baseline:
+  batch_id: batch-0009-context-gating-policy-check
+  run_log: metrics/batch_logs/batch_0009_run_log.yaml
+  result_note: experiments/evaluation-notes/0105-v2-batch-0009-context-gating-policy-check-result.md
+  candidate_records: data/candidates/batch_0009/*.yaml
+  reviewed_count: 12
+  scam_count: 8
+  non_scam_count: 2
+  uncertain_count: 2
+  yield_rate: 0.666667
+  average_review_time_seconds: 37.333333
+  candidates_per_reviewer_hour: 96.428571
+  high_value_candidates_per_hour: 64.285714
+  needs_thread_rate: 0.083333
+  second_review_rate: 0.25
+  uncertainty_rate: 0.166667
+controller_warning:
+  baseline_fields_are_not_reviewer_facing: true
+  reviewer_packet_must_hide:
+    - manual_baseline.decision
+    - manual_baseline.confidence
+    - manual_baseline.review_time_seconds
+    - manual_baseline.second_review_required
+  reason: avoid letting the assisted condition copy known manual labels or timing
+assisted_condition:
+  status: completed_human_review_fields_in_result_file
+  result_file: data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml
+  input_boundary: structured_metadata_only
+  reviewer_must_record_new_time: true
+  human_final_judgment_required: true
+  assist_outputs_to_prepare:
+    - candidate_summary
+    - signal_family_suggestions
+    - schema_prefill_draft
+    - hard_negative_warning
+    - priority_explanation
+    - missing_evidence_note
+    - second_review_suggestion
+  required_reviewer_fields:
+    - assisted_review_time_seconds
+    - assisted_human_final_label_or_not_reviewable
+    - summary_usefulness_rating
+    - summary_omission_risk
+    - schema_prefill_status
+    - schema_prefill_correction_category
+    - signal_suggestion_status
+    - signal_correction_category
+    - hard_negative_warning_status
+    - priority_explanation_status
+    - second_review_required
+    - insufficient_evidence
+    - raw_evidence_excluded_from_git
+guardrails:
+  external_systems_access_authorized: false
+  new_collection_authorized: false
+  raw_threads_content_allowed: false
+  raw_reply_text_allowed: false
+  raw_ocr_text_allowed: false
+  urls_handles_screenshots_browser_artifacts_allowed: false
+  controlled_store_locators_allowed: false
+  real_llm_or_api_calls_authorized: false
+  model_training_authorized: false
+  final_automated_scam_decisions_allowed: false
+  legal_fraud_or_enforcement_claims_allowed: false
+candidate_entries:
+  - workbench_id: RA_0010_0001
+    source_candidate_id: batch-0009-context-gating-policy-check_0001
+    source_stub_id: STUB_0009_A_01
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.95
+      review_time_seconds: 31.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0002
+    source_candidate_id: batch-0009-context-gating-policy-check_0002
+    source_stub_id: STUB_0009_A_02
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_group_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.93
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0003
+    source_candidate_id: batch-0009-context-gating-policy-check_0003
+    source_stub_id: STUB_0009_A_03
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_reply_funnel_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.94
+      review_time_seconds: 32.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0004
+    source_candidate_id: batch-0009-context-gating-policy-check_0004
+    source_stub_id: STUB_0009_A_04
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_stable_anchor_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.9
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0005
+    source_candidate_id: batch-0009-context-gating-policy-check_0005
+    source_stub_id: STUB_0009_A_05
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_with_result_support_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.96
+      review_time_seconds: 35.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0006
+    source_candidate_id: batch-0009-context-gating-policy-check_0006
+    source_stub_id: STUB_0009_A_06
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_group_with_result_support_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.95
+      review_time_seconds: 37.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0007
+    source_candidate_id: batch-0009-context-gating-policy-check_0007
+    source_stub_id: STUB_0009_A_07
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_emotional_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.97
+      review_time_seconds: 33.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0008
+    source_candidate_id: batch-0009-context-gating-policy-check_0008
+    source_stub_id: STUB_0009_A_08
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_transition_borderline_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.86
+      review_time_seconds: 40.0
+      second_review_required: true
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0009
+    source_candidate_id: batch-0009-context-gating-policy-check_0009
+    source_stub_id: STUB_0009_B_01
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.91
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0010
+    source_candidate_id: batch-0009-context-gating-policy-check_0010
+    source_stub_id: STUB_0009_B_02
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.89
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0011
+    source_candidate_id: batch-0009-context-gating-policy-check_0011
+    source_stub_id: STUB_0009_C_01
+    task_id: EXP_0009_C
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_low_context_boundary_probe
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.57
+      review_time_seconds: 42.0
+      second_review_required: true
+    assisted_review_status: completed_in_assisted_result_file
+  - workbench_id: RA_0010_0012
+    source_candidate_id: batch-0009-context-gating-policy-check_0012
+    source_stub_id: STUB_0009_D_01
+    task_id: EXP_0009_D
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_diagnostic_probe
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.5
+      review_time_seconds: 58.0
+      second_review_required: true
+    assisted_review_status: completed_in_assisted_result_file
+close_conditions:
+  all_entries_have_assisted_human_final_label_or_not_reviewable: true
+  all_entries_have_assisted_review_time_or_unavailable_reason: true
+  all_assist_outputs_accepted_corrected_rejected_or_not_applicable: true
+  raw_evidence_exclusion_confirmed_for_all_entries: true
+  aggregate_only_result_note_written: true
+result_note: experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md

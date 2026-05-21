@@ -14,13 +14,13 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 ### Detailed Changes
 
 - Added a first-principle Research Tools Manager application strategy that frames trust, governance, data minimization, and reviewer support as the scarce-resource problem.
-- Recorded Decision 0024 so the application is not framed as app-building, scraping, platform policing, or autonomous scam detection.
+- Recorded Decision 0160 so the application is not framed as app-building, scraping, platform policing, or autonomous scam detection.
 - Updated README, recommended path, and Meta Content Library/API access notes to route future application prep through the new strategy document.
 
 ### Affected Paths
 
 - `docs/53-first-principle-meta-research-tools-application-strategy.md`
-- `decision-log/0024-record-first-principle-meta-research-tools-application-strategy.md`
+- `decision-log/0160-record-first-principle-meta-research-tools-application-strategy.md`
 - `decision-log/README.md`
 - `README.md`
 - `docs/18-recommended-path-v1.md`
@@ -28,7 +28,7 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 
 ### Decision References
 
-- `decision-log/0024-record-first-principle-meta-research-tools-application-strategy.md`
+- `decision-log/0160-record-first-principle-meta-research-tools-application-strategy.md`
 
 ### Verification
 
@@ -65,7 +65,7 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 
 ### Decision References
 
-- `decision-log/0022-require-meta-content-library-api-route.md`
+- `decision-log/0158-require-meta-content-library-api-route.md`
 
 ### Verification
 
@@ -100,7 +100,7 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 
 ### Decision References
 
-- `decision-log/0022-require-meta-content-library-api-route.md`
+- `decision-log/0158-require-meta-content-library-api-route.md`
 
 ### Verification
 
@@ -137,7 +137,7 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 
 ### Decision References
 
-- `decision-log/0022-require-meta-content-library-api-route.md`
+- `decision-log/0158-require-meta-content-library-api-route.md`
 
 ### Verification
 
@@ -181,9 +181,9 @@ Do not record raw Threads evidence, source URLs, account handles, credentials, s
 - `docs/19-codex-workflow.md`
 - `README.md`
 - `AGENTS.md`
-- `decision-log/0021-record-breeze-guard-26-as-deferred-candidate.md`
-- `decision-log/0022-require-meta-content-library-api-route.md`
-- `decision-log/0023-add-automated-versioning-and-change-log.md`
+- `decision-log/0157-record-breeze-guard-26-as-deferred-candidate.md`
+- `decision-log/0158-require-meta-content-library-api-route.md`
+- `decision-log/0159-add-automated-versioning-and-change-log.md`
 - `decision-log/README.md`
 
 ### Verification

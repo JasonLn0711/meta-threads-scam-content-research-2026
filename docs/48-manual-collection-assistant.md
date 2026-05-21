@@ -27,6 +27,13 @@ The assistant therefore uses:
 configs/manual_collection_assistant.yaml
 ```
 
+Install the local script dependency before using the assistant:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+```
+
 The config explicitly keeps these disabled:
 
 - network access
@@ -90,17 +97,25 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 
 Run a rehearsal before real volume begins. The rehearsal proves the collector can prepare approved local inputs, build a schema-valid record, append the local collection log, and pass redaction review without using unapproved context.
 
-Use one or two local `data/interim/manual_entry_*.json` payloads prepared from approved manual or stakeholder-provided fields. The input JSON itself is local-only and must not contain raw personal data, full source URLs, unredacted contact handles, browser artifacts, credentials, or other forbidden fields.
+Use one or two local `data/interim/manual_entry_*.json` payloads prepared from approved manual fields, stakeholder-provided fields, or a redacted selected item produced under a completed controlled run record. The input JSON itself is local-only and must not contain raw personal data, full source URLs, unredacted contact handles, browser artifacts, credentials, or other forbidden fields.
+
+Before running the builder on a real rehearsal input, complete a local copy of:
+
+```text
+templates/manual_collection_prebuild_handoff.md
+```
+
+This handoff is for the collector and governance reviewer to confirm that the local intake has no placeholders, raw identifiers, unapproved context, full URLs, raw handles, or unsupported evidence fields.
 
 Command for the first rehearsal record:
 
 ```bash
-python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
+.venv/bin/python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.json \
   --ack-controlled-details \
   --output data/interim/manual_record_0001.json \
   --collection-log data/interim/threads_pilot_v1_collection_log.csv
 
-python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
+.venv/bin/python scripts/validate_thread_dataset.py data/interim/manual_record_0001.json --strict
 ```
 
 Review `data/interim/manual_record_0001.json` and `data/interim/threads_pilot_v1_collection_log.csv` locally with `templates/manual_collection_rehearsal_checklist.md`.

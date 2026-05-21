@@ -1,14 +1,31 @@
 # Meta Threads Scam Content Research 2026
 
+<img src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=JasonLn0711&repo=meta-threads-scam-content-research-2026&countColor=%237B1E7B" alt="Visitor count"/>
+## First Principle
+
+This repo has one highest priority: design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates. Every other goal exists to support that method and must not contradict it.
+
+本 repo 唯一最重要的重點是：設計可以自動或半自動發現 Threads 投資詐騙候選貼文的方法。治理、人工審查、Reviewer Assist、schema、報告、指標與 hard-negative 保護都只是支援這個核心，不得違背。
+
 ## Problem Statement
 
-This repository supports a Threads-first research program for studying scam or scam-like content on Meta Threads. The goal is to define the problem carefully, structure evidence, annotate examples, build defensible early baselines, and progressively narrow toward a budget-fit research MVP.
+This repository supports a Threads-first research program for studying scam or scam-like content on Meta Threads. From this point forward, the first-principle goal is:
+
+> Build a scalable, stable, reviewable, and labor-efficient method for discovering enough review-worthy Threads investment-scam candidates with as little human review burden as possible.
+
+More precisely, the project is about designing the discovery method itself: a governed automatic or assisted way to find review-worthy Threads investment-scam candidates beyond the currently known fragments. This is not merely "find scam posts" and not merely summarize existing cases.
 
 The project asks:
 
-> What is the most realistic, evidence-driven, budget-fit way to study and prototype scam-content triage on Threads, starting from text, images, replies, OCR text, and visible redirection signals?
+> What bounded, reviewable candidate-discovery method produces enough review-worthy Threads investment-scam candidates while minimizing reviewer burden, preserving hard-negative boundaries, and keeping evidence handling governance-safe?
 
-This is not a production detector and does not make legal determinations. It is a research scaffold for risk triage, evidence design, and early experimental comparison.
+This is not a production detector and does not make legal determinations. It is a research scaffold for scalable candidate discovery, risk triage, evidence design, and early experimental comparison.
+
+The currently collected cases are fragmentary slices of Threads investment-scam-like activity. They are not a complete sample of all Threads investment scams and must not be treated as a representative platform-wide distribution. Existing cases should be used as seed evidence, hard-negative calibration, reviewer-workflow examples, and evaluation slices. They should not be used to infer a complete taxonomy or claim that observed patterns are the full set of Threads investment-scam patterns.
+
+The project purpose is therefore to design a governed automatic or assisted discovery method for finding review-worthy Threads investment-scam candidates beyond the current case fragments. Case-derived patterns are hypotheses to test in discovery, not the project endpoint.
+
+The current north-star note is [docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md](docs/61-labor-efficient-investment-scam-candidate-discovery-north-star.md). The active Discovery Method v1 access and source-arm design is [docs/73-authorized-threads-discovery-method-v1.md](docs/73-authorized-threads-discovery-method-v1.md). The public-surface fallback patrol design is [docs/74-public-surface-human-reproducible-patrol-v0.md](docs/74-public-surface-human-reproducible-patrol-v0.md). The Reviewer Assist Layer design is [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md). The Reviewer Assist labor-savings evaluation plan is [reports/reviewer-assist-labor-savings-evaluation-plan.md](reports/reviewer-assist-labor-savings-evaluation-plan.md). The active context-gating policy is [docs/63-context-gating-policy.md](docs/63-context-gating-policy.md). The metadata-safe Evidence Layer v1 design is [docs/65-evidence-layer-v1.md](docs/65-evidence-layer-v1.md). The synthetic closed-loop discovery runner is [docs/66-closed-loop-discovery-v1.md](docs/66-closed-loop-discovery-v1.md). The advanced synthetic discovery layer is [docs/67-advanced-discovery-v2.md](docs/67-advanced-discovery-v2.md). The synthetic concept reasoning layer is [docs/68-concept-reasoning-layer-v1.md](docs/68-concept-reasoning-layer-v1.md). The synthetic dynamic intelligence layer is [docs/69-dynamic-intelligence-layer-v1.md](docs/69-dynamic-intelligence-layer-v1.md). The synthetic predictive simulation layer is [docs/70-predictive-simulation-layer-v1.md](docs/70-predictive-simulation-layer-v1.md). The defensive self-play layer is [docs/71-defensive-self-play-layer-v1.md](docs/71-defensive-self-play-layer-v1.md). The adaptive policy deployment loop is [docs/72-adaptive-policy-deployment-loop-v1.md](docs/72-adaptive-policy-deployment-loop-v1.md). The supporting discovery-method note is [docs/56-first-principle-investment-scam-discovery-method.md](docs/56-first-principle-investment-scam-discovery-method.md).
 
 ## Why Threads First
 
@@ -29,7 +46,7 @@ These surfaces are narrow enough for a budget-constrained research phase, but ri
 
 The practical budget target is about NTD 1.8 million. That budget does not support a full-scale, platform-wide detection system, broad automated collection, heavy video pipelines, deepfake detection, or production deployment.
 
-The first useful output should be a defensible research package:
+The first useful output should be a defensible research package that helps answer the scalable-discovery question:
 
 - A stable dataset schema
 - A scam-risk taxonomy
@@ -37,12 +54,15 @@ The first useful output should be a defensible research package:
 - A small reviewed sample
 - Simple baselines
 - A comparison of text, OCR, comment, and link signals
+- Discovery-yield and reviewer-burden metrics, including average/median/p95 review time, candidates reviewed per hour, auto-fill and correction rates, full-thread-reading rate, second-review rate, disagreement rate, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour
+- Hard-negative protection for ordinary investment discussion and anti-scam warnings
 - A decision memo on what to continue, cut, or defer
 
 ## Scope Summary
 
 Included in phase 1:
 
+- Threads investment-scam candidate discovery as the first focused domain
 - Threads text posts
 - Threads text plus image posts
 - Replies and comments
@@ -63,17 +83,47 @@ Deferred in phase 1:
 ```text
 reports/         External-facing research reports and report index
 docs/             Research framing, taxonomy, experiment plans, budget analysis
-data-contracts/   Machine-readable dataset schema drafts
+data-contracts/   Machine-readable dataset schema drafts, including discovery_candidate_v1 for source-arm tests
 templates/        Annotation and experiment templates
 notes/            Early thinking and meeting notes
 governance/       Data handling, legal, platform, and privacy constraints
 experiments/      Logs for baseline, modality, and evaluation experiments
 data/             Placeholder only; no raw sensitive data should be committed
+data/candidates/  v2 metadata-only candidate records; no raw Threads evidence
+data/candidate_intake/ metadata-only manual-assisted fill worksheets
+data/evidence_store/ ignored local simulated controlled store; no raw evidence in git
+data/learning_state/ ignored local synthetic bandit state and metrics
+data/concepts/ ignored local synthetic concept and reasoning logs
+data/predictions/ ignored local synthetic predictive simulation logs
+data/selfplay/ ignored local defensive self-play simulation logs
+data/policy/ ignored local adaptive policy decision, feedback, evaluation, and state logs
+data/concept_graph.yaml ignored local synthetic concept graph
+data/concept_time_series.yaml ignored local synthetic concept time series
+data/adversarial_patterns.yaml ignored local synthetic adversarial findings
+meta-system/      v2 sparse schemas and human-reviewed feature evolution metadata
+metrics/          v2 aggregate signal scores and reviewer-effort metrics
+engine/           v2 metadata-only sparse, embedding, discrepancy, and feature engines
+outputs/          whitelisted v2 structured metadata reports only
+exploration/      metadata-only exploration tasks; no external access or raw content
 scripts/          Minimal utilities only after experiments justify code
-src/              Reserved for small research prototype code
+src/              Small support prototypes for evidence custody, v2 metadata, and synthetic discovery loops
 decision-log/     Durable decisions and scope changes
-versioning/       Repo-level version log support; not a data manifest
+versioning/       Repo operating-version log support; not a data manifest
 ```
+
+Current code is support tooling only: decision `0135` adds a metadata-safe Evidence Layer v1, decision `0136` adds a synthetic closed-loop discovery runner for query-arm and reviewer-hour learning, decision `0137` adds an advanced synthetic layer with prompt-shaped query generation, deterministic embeddings, clustering, and contextual bandit learning, decision `0138` adds a synthetic concept reasoning layer for cluster-to-concept mapping and conservative novelty routing, decision `0139` adds a dynamic intelligence layer for concept graphs, temporal tracking, evolution edges, and adversarial heuristics, decision `0140` adds a predictive simulation layer for subtle concept mutation, simulated posts, risk scoring, and validation hooks, decision `0141` adds a defensive self-play layer for abstract adversary/detector robustness testing, and decision `0142` adds an adaptive policy deployment loop for shadow/assist/partial metadata routing and safe offline policy updates. These decisions do not authorize external collection, real LLM/API calls, raw evidence in git, final scam determinations, actionable scam content generation, enforcement, or production detection.
+
+## Repo Versioning
+
+The current repo operating version is recorded in [VERSION](VERSION). Version
+entries are maintained in [CHANGELOG.md](CHANGELOG.md) and
+[versioning/version_log.csv](versioning/version_log.csv). This is a repo
+operating version for docs, governance, templates, and support tooling; it is
+not a dataset version, schema version, model version, annotation guideline
+version, or controlled run identifier. Use
+[docs/52-automated-versioning-and-change-log.md](docs/52-automated-versioning-and-change-log.md)
+before changing governance, data access, model strategy, application prep, or
+repo tooling.
 
 ## Related Repos
 
@@ -92,6 +142,7 @@ The immediate deliverable is a CIB/165-facing initial research report:
 
 - [reports/threads-scam-content-research-v0.md](reports/threads-scam-content-research-v0.md)
 - [reports/threads-scam-content-research-v0-executive-brief.md](reports/threads-scam-content-research-v0-executive-brief.md)
+- [reports/post-0076-next-decision-memo.md](reports/post-0076-next-decision-memo.md)
 - [reports/report-v0-review-checklist.md](reports/report-v0-review-checklist.md)
 - Target date: `2026-04-30`
 - Status: research report v0, not a production detector or legal fraud determination
@@ -100,8 +151,12 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-05-21`, the repo has moved from scaffold-only to approved pilot launch preparation:
+As of `2026-04-27`, the repo has moved from scaffold-only to a controlled, checkpointed pilot with a CIB-approved 78-record research checkpoint:
 
+- The canonical entry point for checkpoint 0081 is [reports/checkpoint-0081-approved-package-index.md](reports/checkpoint-0081-approved-package-index.md).
+- The short reviewer entry point is [reports/checkpoint-0081-executive-addendum.md](reports/checkpoint-0081-executive-addendum.md).
+- The detailed synthesis is [experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md](experiments/evaluation-notes/0089-checkpoint-0081-cib-approved-synthesis.md).
+- Historical approved checkpoint 0055 remains available at [reports/checkpoint-0055-approved-package-index.md](reports/checkpoint-0055-approved-package-index.md).
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
 - Report v0, executive brief, review checklist, and delivery plan exist.
@@ -124,30 +179,110 @@ As of `2026-05-21`, the repo has moved from scaffold-only to approved pilot laun
 - A synthetic-only integrated launch rehearsal has exercised manual build, validation, calibration, audit, baseline, reviewer packet, and synthesis tooling.
 - The outside-git controlled launch record has been confirmed with final status `ready_for_first_10_15_items`.
 - A non-sensitive controlled launch record now records CIB authorization for API access and all research-required automation under explicit run-record, storage, access, retention, and redaction controls.
-- Breeze Guard 26 is documented as a deferred Taiwan-localized safety-classifier candidate in [docs/50-breeze-guard-26-candidate-baseline.md](docs/50-breeze-guard-26-candidate-baseline.md); it is not authorized for the current Phase 1 launch.
-- Meta Content Library / API is documented as the preferred official research access route for the CIB/165 Threads case in [docs/51-meta-content-library-api-access.md](docs/51-meta-content-library-api-access.md); Threads API keyword search is supplementary only if run-scoped.
-- Meta Research Tools Manager application strategy is recorded in [docs/53-first-principle-meta-research-tools-application-strategy.md](docs/53-first-principle-meta-research-tools-application-strategy.md): trust, governance, and reviewer support are the core application assets.
-- Repo-level versioning now starts at `v1.2.6` in [VERSION](VERSION), with detailed logs in [CHANGELOG.md](CHANGELOG.md) and [versioning/version_log.csv](versioning/version_log.csv). This is separate from dataset, schema, guideline, and experiment-run versions.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed to this repo.
+- The first 15 controlled local records have been collected under ignored `data/interim/`, built, strict-validated, and summarized in repo-safe aggregate notes.
+- The first 15-item aggregate remains low-risk skewed: 14 `non_scam`, 1 adjudicated `uncertain`, 0 `scam`, and 0 medium/high-risk records.
+- Risk-probe runs 0005 and 0006 tested domain plus signal-family seeds, but public unauthenticated browser-rendered search returned no extractable item content.
+- Approved browser-session execution, scoped reply/link evidence runs, confirmed-pointer intake, account-source context, and a hard-negative anti-scam warning example have now produced a 42-record strict-valid checkpoint.
+- The repo-safe run index is [governance/pilot-launch/run_index.md](governance/pilot-launch/run_index.md).
+- The 42-record checkpoint synthesis is [experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md](experiments/evaluation-notes/0064-checkpoint-0042-synthesis.md).
+- Decision 0058 selects a temporary collection pause and starts the CIB/165-facing checkpoint report v0.1: [reports/threads-scam-content-checkpoint-0042-v0.1.md](reports/threads-scam-content-checkpoint-0042-v0.1.md).
+- The stakeholder decision request is [reports/checkpoint-0042-decision-request.md](reports/checkpoint-0042-decision-request.md).
+- The stakeholder handoff note is [reports/checkpoint-0042-stakeholder-handoff-note.md](reports/checkpoint-0042-stakeholder-handoff-note.md).
+- The stakeholder decision record is [governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md](governance/pilot-launch/checkpoint_0042_stakeholder_decision_record.md).
+- Decision 0059 selects Option A and opens a bounded prospective item `0046-0055` tranche: [governance/pilot-launch/threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md](governance/pilot-launch/threads_pilot_v1_2026-05_option_a_limited_browser_tranche_run_record_0038.md).
+- Checkpoint `0042` contains 14 `scam` / high-risk records, 22 `non_scam`, 5 `uncertain`, and 1 `insufficient_evidence`.
+- Option A run 0038 then selected items `0046-0055` from 20 browser-session candidates; after strict validation and second review, the 55-record aggregate contains 17 `scam`, 23 `non_scam`, 9 `uncertain`, and 6 `insufficient_evidence`.
+- The 55-record checkpoint synthesis is [experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md](experiments/evaluation-notes/0068-checkpoint-0055-synthesis.md).
+- Decision 0061 selects the 55-record CIB/165-facing checkpoint report package: [reports/threads-scam-content-checkpoint-0055-v0.1.md](reports/threads-scam-content-checkpoint-0055-v0.1.md).
+- Decision 0067 adds the approved package index: [reports/checkpoint-0055-approved-package-index.md](reports/checkpoint-0055-approved-package-index.md).
+- The checkpoint 0042 baseline is high-recall research triage: precision 0.700, recall 1.000, F1 0.824, 6 false positives, and 0 false negatives.
+- The 55-record baseline smoke result is precision 0.708, recall 1.000, F1 0.829, 7 false positives, and 0 false negatives.
+- The hard-negative lesson is explicit: anti-scam warning content is not scam content unless the item itself introduces a conversion path.
+- Local item `0076` extends this hard-negative lesson as `non_scam` / `low`; the 76-record local aggregate is strict-valid and does not add scam/high-risk evidence.
+- Checkpoint `0081` is now CIB-approved as a 78-record research checkpoint: 36 `scam`, 24 `non_scam`, 13 `uncertain`, and 5 `insufficient_evidence`.
+- The checkpoint 0081 baseline smoke result is precision 0.829, recall 0.944, F1 0.883, 7 false positives, and 2 false negatives on 60 binary-evaluable items.
 
-The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, record the repo-safe rehearsal decision, confirm calibration if annotators changed, and only then collect the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
+The next blocker is no longer basic access-path readiness, A/B checkpoint selection, run 0038 execution, checkpoint 0055 report drafting, C1/C2/C3 selection, reviewer approval, local item `0076` inclusion, or checkpoint 0081 synthesis approval. Raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not move to item `0082`, broad crawler expansion, embedding experiments, or model training until a later checkpoint decision records scope, source mix, content-form mix, evidence mix, and governance limits.
+
+The immediate next step is no longer generic operational-readiness planning, final-gate package polishing, condition-signoff collection, Day 0 start, Day 1 intake-control setup, primary review for batch `0001`, second review for batch `0001`, generic source-arm selection, batch `0002` candidate surfacing, batch `0002` primary review, batch `0002` second review, or another reviewer-only batch. Decisions `0132` through `0154` produced useful reviewer-routing and Reviewer Assist evidence, but they do not solve upstream candidate discovery. Decisions `0155`, `0158`, and `0160` correct the path: the current action is Discovery Method v1 source-arm readiness through the official research-access route. For the CIB/165 case, prepare Meta Content Library / API access through Research Tools Manager and CASD review where possible; use the regular Threads API only as a bounded supplementary route with explicit permissions, endpoint coverage, field limits, query limits, retention, and run records. If official access is unavailable or insufficient, draft a tightly capped controlled browser source-arm work order using the historical controlled-run procedure as a reference. Do not normalize personal-account browser crawling, one-second automated fetching, broad collection, model training, production detection, or sparse schema promotion by habit. Confirmed pointers remain a possible source only inside the approved Track B source-arm design or a later capped decision.
+
+Decision 0115 realigns the repo around the first-principle discovery-method goal: future work should explain how it advances scalable, stable, and reviewable discovery of Threads investment-scam candidates. The forward-looking realignment record [decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md](decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md) adds the labor-efficiency correction: discovery yield and reviewer burden are joint success conditions, not primary and secondary goals. Package, governance, readiness, and shadow-pilot artifacts are support structures for that goal, not the final goal by themselves.
+
+Decision 0143 records the sampling correction: current reviewed and collected examples are partial case fragments, not a representative map of all Threads investment scams. Future discovery design may learn from them only as hypotheses, seeds, calibration material, and evaluation slices. The project goal remains governed automatic or assisted candidate discovery, not retrospective induction from the finite collected set.
+
+Decision 0144 records the single-priority correction: all project goals are subordinate to designing a governed automatic or assisted method for discovering Threads investment-scam candidates. Governance, reports, schemas, reviewer-assist work, synthetic policy loops, and metrics are valid only insofar as they support that method and do not contradict it.
+
+Decision 0145 opens the next evaluation package: Reviewer Assist labor-savings evaluation for automatic discovery. The package includes a report-facing plan, experiment plan, start note, worksheet, correction logs, rubrics, and governance checklist. It opens no new collection and no production or model-training scope.
+
+Decision 0155 opens the active Discovery Method v1 access boundary. It stops
+the default drift toward more reviewer-only batches, requires an official access
+check before browser fallback, and allows controlled browser run reuse only as a
+new run-scoped fallback. Decision 0158 later narrows the official-access check
+for the CIB/165 case toward Meta Content Library / API as the preferred
+research-grade route, with the regular Threads API as a bounded supplement. It
+explicitly rejects broad personal-account browser crawling and one-second
+automated fetching as standing governance permissions.
+
+Decision 0156 opens a design-only public-surface human-reproducible patrol v0
+as a narrower controlled-browser fallback sub-mode. It requires public surfaces
+visible without login, low-frequency bounded interaction, a human-reproducible
+metadata route, no stealth or bypass, and
+`templates/public_surface_patrol_work_order.md` before any browser-assist
+implementation. It does not authorize live Threads collection or Playwright
+execution.
+
+Decision 0157 records Breeze Guard 26 as a deferred Taiwan-localized
+safety-classifier candidate. It may later be tested as an auxiliary baseline or
+guardrail on approved redacted text, but it is not a current dependency and is
+not a final scam, legal, financial, or medical adjudicator.
+
+Decision 0158 records Meta Content Library / API as the preferred official
+research access route for the CIB/165 Threads scam-content research case where
+approved. The regular Threads API remains a bounded supplementary route only
+when endpoint, permission, field, retention, and run-record limits are explicit.
+Missing official coverage is a research limitation, not permission to scrape.
+
+Decision 0159 starts repo operating versioning. The current version is
+`v1.3.0`, with entries in [CHANGELOG.md](CHANGELOG.md) and
+[versioning/version_log.csv](versioning/version_log.csv).
+
+Decision 0160 records the first-principle Meta Research Tools Manager
+application strategy: the scarce resource is trust, not data volume or model
+power. Application prep should frame the work as public-interest study of
+investment-scam narratives and metadata-based reviewer support, not as app
+development, scraping, policing, or autonomous scam detection.
+
+Decision 0146 opens the execution workbench for that package: [data/reviewer_assist_eval/batch_0010_work_order.yaml](data/reviewer_assist_eval/batch_0010_work_order.yaml). The assisted-review fill is [data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml](data/reviewer_assist_eval/batch_0010_assisted_review_result.yaml), and the aggregate-only result is [experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md](experiments/evaluation-notes/0107-reviewer-assist-labor-savings-evaluation-result.md).
+
+Decision 0147 records the aggregate-only Reviewer Assist result: assisted average review time dropped from `37.333333` to `28.750000` seconds, high-value candidates per reviewer hour increased from `64.285714` to `83.478261`, raw-evidence leakage stayed at `0`, and the selected decision is `expand_assist_evaluation`. This is a same-slice metadata-only result, not a platform-wide claim.
+
+Decision 0148 opens the next bounded metadata-only expansion slice on Batch `0008`: [data/reviewer_assist_eval/batch_0011_work_order.yaml](data/reviewer_assist_eval/batch_0011_work_order.yaml), [experiments/batch_variants/0011-reviewer-assist-expansion-batch-0008.md](experiments/batch_variants/0011-reviewer-assist-expansion-batch-0008.md), and [experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md](experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md). Decision 0149 records the completed empirical metadata-only result: assisted average review time dropped from `41.875` to `33.125` seconds, candidates reviewed per hour rose from `85.970149` to `108.679245`, high-value candidates per reviewer hour rose from `21.492537` to `27.169811`, and raw-evidence leakage stayed at `0`. The next action is bounded Reviewer Assist evaluation revision, especially for `result_display_thread_required`; this does not authorize new collection, real LLM/API calls, model training, production detection, or final automated scam decisions.
+
+Decision 0150 opens that revision as Batch `0012`: [data/reviewer_assist_eval/batch_0012_work_order.yaml](data/reviewer_assist_eval/batch_0012_work_order.yaml), [data/reviewer_assist_eval/batch_0012_reviewer_rules.md](data/reviewer_assist_eval/batch_0012_reviewer_rules.md), [data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml](data/reviewer_assist_eval/batch_0012_reviewer_fill_sheet_template.yaml), and [experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md](experiments/evaluation-notes/0109-reviewer-assist-thread-required-lane-revision-result.md). Batch `0012` tests whether Reviewer Assist can route thread-dependent candidates to `needs_thread_before_label` faster while avoiding over-requested thread review on boundary, hard-negative, and fast-lane controls.
+
+Decision 0116 opens the design-only method-test charter draft at [reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md](reports/checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md) and the signal-family matrix at [docs/57-investment-scam-discovery-signal-family-matrix.md](docs/57-investment-scam-discovery-signal-family-matrix.md). Decision 0117 records technical/governance `approve_design_for_next_decision` for that design package. Decision 0118 opens a `draft_only` capped investment-scam discovery method-test decision with proposed source arms, caps, schema fields, reviewer workflow, hard-negative protections, metrics thresholds, stop rules, legal/privacy gates, controlled-store handling, and aggregate reporting requirements. From this point forward, the same method-test path should also evaluate whether AI/system support can reduce reading, summarization, signal extraction, schema filling, triage, hard-negative review, and repo-safe reporting burden without making final scam determinations. The forward-looking decision file [decision-log/0130-open-reviewer-assist-layer-design.md](decision-log/0130-open-reviewer-assist-layer-design.md) opens [docs/62-reviewer-assist-layer-design.md](docs/62-reviewer-assist-layer-design.md) as the design layer for that assistance without authorizing model training or production deployment.
+
+Decision 0118 is not executable. Decision 0119 opens a review-only package for decision `0118` so technical/governance and legal/privacy reviewers can decide whether the capped method-test draft can proceed toward a future execution-gate review. Decision 0120 opens final execution authorization package preparation and splits the possible execution into Track A zero-new-evidence dry run and Track B capped live candidate-discovery method test.
+
+Decision 0121 records the final gate reviewer response as `approve_track_a_now_track_b_after_conditions`. Track A start checklist is complete and the zero-new-evidence dry-run report is [reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B formal signoff is now recorded: legal/privacy status is `no_veto`, CIB/internal owner status is `accepted_boundary`, and the formal signoff summary is [reports/checkpoint-0081-track-b-formal-signoff-summary.md](reports/checkpoint-0081-track-b-formal-signoff-summary.md). Decision 0122 records that Track B may begin under locked caps and stop rules: [decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md](decision-log/0122-record-track-b-start-authorization-after-formal-signoff.md). Decision 0123 records Day 0 operational start and run `0054`: [reports/checkpoint-0081-track-b-day-0-start-record.md](reports/checkpoint-0081-track-b-day-0-start-record.md). Decision 0124 records Day 1 source-arm intake start: [reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md](reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md). Decision 0125 records batch `0001`: [reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md](reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md). Decision 0126 records batch `0001` primary review: [reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md). Decision 0127 records batch `0001` second review: [reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md](reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md). Decisions 0128 and the historical Track B decision 0129 select and surface batch `0002` hard-negative probe candidates: [reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md). Decision 0130 records batch `0002` primary review: [reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md). Decision 0131 records batch `0002` second review: [reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md](reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md). From this point forward, Track B should be interpreted as testing candidate discovery yield, reviewer burden, hard-negative false-positive pressure, and feasibility of AI/system-assisted reviewer workflow. This is controlled execution under capped method-test conditions, not item `0082`, open-ended collection, crawler expansion, model training, production detection, legal fraud determination, public release, automated enforcement, or raw evidence in git.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
 
-## Repo Versioning
+## Historical First Milestone
 
-Use [scripts/record_version_update.py](scripts/record_version_update.py) when a repo-safe change should move the operating version. Large governance, data-access, scope, schema, or claim-boundary changes should also receive a decision record under `decision-log/`.
+This earlier milestone is retained for project lineage. It is not the current
+next action after decisions `0143` through `0145`; the current entry point is
+the Reviewer Assist labor-savings evaluation package for the governed automatic
+or assisted discovery method.
 
-See [docs/52-automated-versioning-and-change-log.md](docs/52-automated-versioning-and-change-log.md) for bump rules and sensitive-data logging boundaries.
-
-## Recommended First Milestone
-
-By `2026-04-30`, produce the readable report v0 above. Within the following 4 weeks, produce:
+The earlier plan was to produce the readable report v0 above by `2026-04-30`.
+Within the following 4 weeks, produce:
 
 1. A finalized phase-1 taxonomy and annotation guide.
 2. Controlled launch details for exact source, storage, access, retention, and redaction limits.
-3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, 1-2 item manual collection rehearsal completed, rehearsal review recorded, 5-item calibration completed if needed, then a 10-15 item checkpoint before completing the conditional 50-item pilot.
+3. Local-only working files initialized under ignored `data/interim/`, pilot preflight passed, controlled browser-rendered rehearsal completed, 42 controlled records strict-validated, run index created, and checkpoint synthesis reviewed before further collection.
 4. A rule-baseline comparison across text, OCR, replies, and visible link/redirection signals only after labels and evidence fields are stable enough.
 5. A decision memo deciding whether to continue to 50, continue with limits, pause, revise the guideline, revise the schema, or narrow sources.
 6. A 100-200 item first usable dataset only after pilot review and revisions justify expansion.
@@ -155,7 +290,7 @@ By `2026-04-30`, produce the readable report v0 above. Within the following 4 we
 Recommended first dataset slice:
 
 - 5 synthetic or redacted calibration items.
-- 10-15 real checkpoint items before completing the conditional 50-item pilot.
+- 10-15 real checkpoint items before completing the conditional 50-item pilot; this lower-bound checkpoint is complete, but high-risk case-finding still needs a method study before item 16.
 - 100-200 manually reviewed examples only after pilot review justifies expansion.
 - Include likely scam-like, likely non-scam, uncertain, and insufficient-evidence cases.
 - Cover text-only posts, text plus image posts, comments/replies, OCR text, and visible redirection or link signals.
@@ -163,4 +298,4 @@ Recommended first dataset slice:
 Recommended first experiment:
 
 - Compare a text-only keyword/rule baseline against a text plus OCR plus comment/link-signal rule baseline.
-- Evaluate not only precision, recall, and F1, but also reviewer burden, evidence completeness, explainability, and ambiguity handling.
+- Evaluate not only precision, recall, and F1, but also average/median/p95 review time, candidates reviewed per hour, fields auto-filled, fields manually corrected, summary usefulness, full-original-thread-reading rate, second-review rate, reviewer disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, high-risk yield per reviewer hour, evidence completeness, explainability, and ambiguity handling.

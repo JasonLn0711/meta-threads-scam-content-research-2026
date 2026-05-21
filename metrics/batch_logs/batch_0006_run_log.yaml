@@ -1,0 +1,216 @@
+schema_version: batch_run_log_v1
+batch_id: batch-0006-contrast-aware-routing-validation
+experiment_id: 0006-contrast-aware-routing-validation
+status: completed
+record_type: actual_run_log
+no_fake_results: true
+principle: maximize high-value candidate discovery per unit reviewer effort
+goal_not: scam detection or legal fraud determination
+created_at: '2026-05-04'
+updated_at: '2026-05-04'
+inputs:
+  experiment_plan: experiments/batch_variants/0006-contrast-aware-routing-validation.md
+  exploration_tasks: exploration/tasks/batch_0006_contrast_aware_routing.yaml
+  candidate_stubs: data/candidate_stubs/batch_0006.yaml
+  intake_worksheet: data/candidate_intake/batch_0006_intake.yaml
+  reviewer_packet: data/candidate_intake/batch_0006_reviewer_packet.md
+  conversion_report: data/candidate_intake/batch_0006_conversion_report.yaml
+  candidate_records: data/candidates/batch_0006/*.yaml
+  routing_scores_after_run: metrics/contrast_scores/latest.yaml
+planned:
+  candidate_count: 12
+  arms:
+  - 'A: strong_source_priority'
+  - 'B: result_display_context_review'
+  - 'C: result_display_contrast_holdout'
+  - 'D: guarantee_context_review'
+  hypothesis: Contrast-aware reviewer routing should preserve fast-lane yield while
+    keeping broad result-display context cases in slower review.
+  expected_measurements:
+  - lane-level SVS before and after Batch 0006
+  - review time by lane
+  - needs_thread rate by lane
+  - second-review rate by lane
+  - uncertainty rate by lane
+  - conversion blocked count
+  - sparse cluster change
+  - discrepancy change
+observed:
+  candidate_count_after_run: 36
+  reviewed_count: 12
+  scam_count: 5
+  non_scam_count: 2
+  uncertain_count: 5
+  yield_rate: 0.416667
+  information_density: 0.425121
+  review_time: 41.75
+  cognitive_load: 1.7125
+  svs: 0.002477502
+  final_batch_result: true
+conversion:
+  intake_count: 12
+  converted_count: 12
+  blocked_count: 0
+  written_count: 12
+  status: ready
+reviewer_burden:
+  average_review_time_seconds: 41.75
+  needs_thread_rate: 0.5
+  second_review_rate: 0.5
+  uncertainty_rate: 0.416667
+signal_results:
+- signal_id: 保證收益
+  reviewed_count_after_run: 17
+  scam_count_after_run: 15
+  yield_rate_after_run: 0.882353
+  svs_after_run: 0.011325292
+  interpretation: remains the highest-SVS sparse signal after Batch 0006
+- signal_id: 成果展示
+  reviewed_count_after_run: 22
+  scam_count_after_run: 6
+  yield_rate_after_run: 0.272727
+  svs_after_run: 0.001597597
+  interpretation: remains context-dependent and low direct SVS after Batch 0006
+lane_results:
+  status: final
+  results:
+  - lane: guarantee_context_review
+    reviewed_count: 2
+    scam_count: 1
+    yield_rate: 0.5
+    information_density: 0.315217
+    review_time: 49.0
+    cognitive_load: 2.325
+    svs: 0.001383443
+    non_scam_count: 0
+    uncertain_count: 1
+    needs_thread_rate: 1.0
+    second_review_rate: 1.0
+    uncertainty_rate: 0.5
+    average_confidence: 0.69
+  - lane: result_display_context_review
+    reviewed_count: 4
+    scam_count: 0
+    yield_rate: 0.0
+    information_density: 0.282609
+    review_time: 49.75
+    cognitive_load: 2.2875
+    svs: 0.0
+    non_scam_count: 0
+    uncertain_count: 4
+    needs_thread_rate: 1.0
+    second_review_rate: 1.0
+    uncertainty_rate: 1.0
+    average_confidence: 0.5425
+  - lane: result_display_contrast_holdout
+    reviewed_count: 2
+    scam_count: 0
+    yield_rate: 0.0
+    information_density: 0.07971
+    review_time: 37.0
+    cognitive_load: 1.0
+    svs: 0.0
+    non_scam_count: 2
+    uncertain_count: 0
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    uncertainty_rate: 0.0
+    average_confidence: 0.89
+  - lane: strong_source_priority
+    reviewed_count: 4
+    scam_count: 4
+    yield_rate: 1.0
+    information_density: 0.79529
+    review_time: 32.5
+    cognitive_load: 1.1875
+    svs: 0.020606701
+    non_scam_count: 0
+    uncertain_count: 0
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    uncertainty_rate: 0.0
+    average_confidence: 0.9375
+contrast_aware_results:
+  scoring_output: metrics/contrast_scores/latest.yaml
+  global_lane_results_after_run:
+    strong_source_priority:
+      reviewed_count: 14
+      scam_count: 14
+      yield_rate: 1.0
+      review_time: 37.428571
+      cognitive_load: 1.246429
+      svs: 0.017651939
+      needs_thread_rate: 0.0
+      second_review_rate: 0.0
+      uncertainty_rate: 0.0
+      routing_action: fast_priority_review
+    result_display_context_review:
+      reviewed_count: 13
+      scam_count: 0
+      yield_rate: 0.0
+      review_time: 46.692308
+      cognitive_load: 2.3
+      svs: 0.0
+      needs_thread_rate: 1.0
+      second_review_rate: 0.846154
+      uncertainty_rate: 0.846154
+      routing_action: slow_context_review
+    result_display_contrast_holdout:
+      reviewed_count: 3
+      scam_count: 0
+      yield_rate: 0.0
+      review_time: 37.666667
+      cognitive_load: 1.0
+      svs: 0.0
+      needs_thread_rate: 0.0
+      second_review_rate: 0.0
+      uncertainty_rate: 0.0
+      routing_action: contrast_or_hard_negative_pool
+    guarantee_context_review:
+      reviewed_count: 3
+      scam_count: 1
+      yield_rate: 0.333333
+      review_time: 50.0
+      cognitive_load: 2.3
+      svs: 0.000833158
+      needs_thread_rate: 1.0
+      second_review_rate: 1.0
+      uncertainty_rate: 0.666667
+      routing_action: priority_context_review
+cluster_results:
+  sparse_summary: one broad sparse cluster after Batch 0006; contrast-aware routing
+    remains necessary because sparse clustering alone over-generalizes the mixed
+    metadata space.
+  embedding_summary: discovery-only embedding output still covers only synthetic
+    embedded examples; Batch 0006 records use no embedding decisions.
+  discrepancy_summary:
+    case_count: 2
+    missed_pattern: 0
+    over_generalization: 2
+failure_modes:
+- Sparse clustering is too broad to serve as the only reviewer routing signal.
+- Result-display context cases remain costly and uncertain even when structured
+  metadata is complete.
+- Embedding coverage is missing for Batch 0006 and cannot be used for decisions.
+decision_implication: Batch 0006 supports keeping contrast-aware routing. The
+  fast lane is not simply "保證收益"; it is "保證收益 plus executable transition
+  and low context burden". Broad result-display context cases should remain in
+  slower review because they increase reviewer effort without increasing direct
+  positive yield in this batch.
+next_action: Keep strong_source_priority as the high-priority source lane, keep
+  result_display_context_review as a slow context lane, and run the next small
+  batch on the highest-uncertainty boundary rather than adding new modules.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  candidate_records_fabricated: false
+  embedding_used_for_decision: false
+  sparse_schema_auto_promoted: false
+  human_review_required: true
+completed_review:
+  completed_intake_count: 12
+  blocked_intake_count: 0
+  candidate_records_written: true
+  completion_gate_status: all_required_gates_true

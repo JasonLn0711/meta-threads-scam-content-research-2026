@@ -1,0 +1,293 @@
+schema_version: reviewer_assist_evaluation_work_order_v1
+evaluation_id: reviewer-assist-expansion-0011
+decision_id: '0148'
+opened_at: '2026-05-05'
+status: empirical_completed
+completed_at: '2026-05-05'
+no_fake_results: true
+purpose: metadata-only expansion workbench using Batch 0008 balanced context-gating baseline
+single_highest_priority: governed automatic or assisted discovery of review-worthy Threads investment-scam candidates
+comparison_type: retrospective_assist_shadow_on_completed_metadata_slice
+manual_baseline:
+  batch_id: batch-0008-context-gate-reviewer-hour-value
+  run_log: metrics/batch_logs/batch_0008_run_log.yaml
+  result_note: experiments/evaluation-notes/0104-v2-batch-0008-reviewer-hour-value-result.md
+  candidate_records: data/candidates/batch_0008/*.yaml
+  reviewed_count: 16
+  scam_count: 4
+  non_scam_count: 4
+  uncertain_count: 8
+  yield_rate: 0.25
+  average_review_time_seconds: 41.875
+  candidates_per_reviewer_hour: 85.970149
+  high_value_candidates_per_hour: 21.492537
+  needs_thread_rate: 0.25
+  second_review_rate: 0.375
+  uncertainty_rate: 0.5
+controller_warning:
+  baseline_fields_are_not_reviewer_facing: true
+  reviewer_packet_must_hide:
+    - manual_baseline.decision
+    - manual_baseline.confidence
+    - manual_baseline.review_time_seconds
+    - manual_baseline.second_review_required
+  reason: avoid letting the assisted condition copy known manual labels or timing
+assisted_condition:
+  status: empirical_completed
+  input_boundary: structured_metadata_only
+  reviewer_must_record_new_time: true
+  human_final_judgment_required: true
+  assist_outputs_to_prepare:
+    - candidate_summary
+    - signal_family_suggestions
+    - schema_prefill_draft
+    - hard_negative_warning
+    - priority_explanation
+    - missing_evidence_note
+    - second_review_suggestion
+  required_reviewer_fields:
+    - assisted_review_time_seconds
+    - assisted_human_final_label_or_not_reviewable
+    - summary_usefulness_rating
+    - summary_omission_risk
+    - schema_prefill_status
+    - schema_prefill_correction_category
+    - signal_suggestion_status
+    - signal_correction_category
+    - hard_negative_warning_status
+    - priority_explanation_status
+    - second_review_required
+    - insufficient_evidence
+    - raw_evidence_excluded_from_git
+guardrails:
+  external_systems_access_authorized: false
+  new_collection_authorized: false
+  raw_threads_content_allowed: false
+  raw_reply_text_allowed: false
+  raw_ocr_text_allowed: false
+  urls_handles_screenshots_browser_artifacts_allowed: false
+  controlled_store_locators_allowed: false
+  real_llm_or_api_calls_authorized: false
+  model_training_authorized: false
+  final_automated_scam_decisions_allowed: false
+  legal_fraud_or_enforcement_claims_allowed: false
+candidate_entries:
+  - workbench_id: RA_0011_0001
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
+    source_stub_id: STUB_0008_A_01
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_executable_transition_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.94
+      review_time_seconds: 32.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0002
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+    source_stub_id: STUB_0008_A_02
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_group_transition_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.92
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0003
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
+    source_stub_id: STUB_0008_A_03
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_reply_funnel_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.95
+      review_time_seconds: 31.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0004
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
+    source_stub_id: STUB_0008_A_04
+    task_id: EXP_0008_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_stable_anchor_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.88
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0005
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0005
+    source_stub_id: STUB_0008_B_01
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_contact_low_context
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.58
+      review_time_seconds: 41.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0006
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0006
+    source_stub_id: STUB_0008_B_02
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_reply_low_context
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.56
+      review_time_seconds: 43.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0007
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0007
+    source_stub_id: STUB_0008_B_03
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_group_low_context
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.54
+      review_time_seconds: 44.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0008
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
+    source_stub_id: STUB_0008_B_04
+    task_id: EXP_0008_B
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_stable_anchor_low_context
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.52
+      review_time_seconds: 42.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0009
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0009
+    source_stub_id: STUB_0008_C_01
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_contact
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.51
+      review_time_seconds: 55.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0010
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0010
+    source_stub_id: STUB_0008_C_02
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_group
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.49
+      review_time_seconds: 58.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0011
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0011
+    source_stub_id: STUB_0008_C_03
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_reply
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.53
+      review_time_seconds: 56.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0012
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0012
+    source_stub_id: STUB_0008_C_04
+    task_id: EXP_0008_C
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_ambiguous_transition
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.48
+      review_time_seconds: 60.0
+      second_review_required: true
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0013
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0013
+    source_stub_id: STUB_0008_D_01
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.90
+      review_time_seconds: 35.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0014
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0014
+    source_stub_id: STUB_0008_D_02
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.91
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0015
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0015
+    source_stub_id: STUB_0008_D_03
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.89
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+  - workbench_id: RA_0011_0016
+    source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0016
+    source_stub_id: STUB_0008_D_04
+    task_id: EXP_0008_D
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.92
+      review_time_seconds: 33.0
+      second_review_required: false
+    assisted_review_status: empirical_completed
+close_conditions:
+  all_entries_have_assisted_human_final_label_or_not_reviewable: true
+  all_entries_have_assisted_review_time_or_unavailable_reason: true
+  all_assist_outputs_accepted_corrected_rejected_or_not_applicable: true
+  raw_evidence_exclusion_confirmed_for_all_entries: true
+  aggregate_only_result_note_written: true
+  empirical_assisted_review_result_file_written: true
+result_note: experiments/evaluation-notes/0108-reviewer-assist-expansion-batch-0008-result.md
+result_files:
+  assisted_review_result: data/reviewer_assist_eval/batch_0011_assisted_review_result.yaml
+  aggregate_result: data/reviewer_assist_eval/batch_0011_aggregate_result.yaml

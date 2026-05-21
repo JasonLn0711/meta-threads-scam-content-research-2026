@@ -1,0 +1,2 @@
+candidate_alias,condition,field_name,prefill_present,accepted_unchanged,corrected,rejected,correction_category,correction_burden_seconds,repo_safe_note
+EXAMPLE_assisted_001,assisted_review,primary_signal_family_group,yes,no,yes,no,signal_family_ambiguous,30,category only no raw evidence

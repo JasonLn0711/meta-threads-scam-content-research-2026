@@ -1,0 +1,395 @@
+schema_version: candidate_intake_batch_v1
+batch_id: batch-0004-low-coverage-high-svs
+purpose: manual-assisted metadata fill worksheet for Batch 0004 candidate stubs
+source_batch_plan: exploration/batches/batch_0004.yaml
+source_stub_batch: data/candidate_stubs/batch_0004.yaml
+status: completed_manual_assisted_fill
+candidate_count: 10
+selected_task_ids:
+- EXP_0001
+- EXP_0002
+target_signal_hints:
+- 保證收益
+- 成果展示
+before_metrics:
+  discrepancy_case_count: 0
+  target_signals:
+    成果展示:
+      reviewed_count: 1
+      yield_rate: 1.0
+      svs: 0.0068438
+    保證收益:
+      reviewed_count: 1
+      yield_rate: 1.0
+      svs: 0.0068438
+intake_entries:
+- intake_id: INTAKE_0001
+  candidate_stub_id: STUB_0001
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 成果展示導向
+    - 引導私訊
+    structural_patterns:
+    - 績效展示+CTA
+    reviewer_signals:
+    - 高報酬呈現但未承諾
+    hard_negative_contrast: 純分享無導流
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.6
+    review_time_seconds: 45
+    second_review_required: true
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0001.yaml
+- intake_id: INTAKE_0002
+  candidate_stub_id: STUB_0002
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 炫耀績效
+    - FOMO刺激
+    structural_patterns:
+    - 成果+情緒推動
+    reviewer_signals:
+    - 高吸引力收益暗示
+    hard_negative_contrast: 無商業誘導分享
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.7
+    review_time_seconds: 50
+    second_review_required: true
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0002.yaml
+- intake_id: INTAKE_0003
+  candidate_stub_id: STUB_0003
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 0
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 個人成果紀錄
+    structural_patterns:
+    - 單純展示
+    reviewer_signals:
+    - 無導流
+    hard_negative_contrast: 商業轉換內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: non_scam
+    confidence: 0.8
+    review_time_seconds: 40
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0003.yaml
+- intake_id: INTAKE_0004
+  candidate_stub_id: STUB_0004
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 收益展示+導流
+    structural_patterns:
+    - 績效+私訊誘導
+    reviewer_signals:
+    - 模糊轉換
+    hard_negative_contrast: 無CTA內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.65
+    review_time_seconds: 48
+    second_review_required: true
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0004.yaml
+- intake_id: INTAKE_0005
+  candidate_stub_id: STUB_0005
+  task_id: EXP_0001
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 0
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+  structured_hints_to_fill:
+    common_behaviors:
+    - 輕度導流
+    structural_patterns:
+    - 成果展示
+    reviewer_signals:
+    - 弱商業動機
+    hard_negative_contrast: 純教學內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: uncertain
+    confidence: 0.55
+    review_time_seconds: 42
+    second_review_required: true
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0005.yaml
+- intake_id: INTAKE_0006
+  candidate_stub_id: STUB_0006
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 保證獲利
+    structural_patterns:
+    - 承諾收益+CTA
+    reviewer_signals:
+    - 明確詐騙訊號
+    hard_negative_contrast: 無收益承諾
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.9
+    review_time_seconds: 35
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0006.yaml
+- intake_id: INTAKE_0007
+  candidate_stub_id: STUB_0007
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 快速致富
+    structural_patterns:
+    - 誇大承諾
+    reviewer_signals:
+    - 高風險訊號
+    hard_negative_contrast: 保守投資分析
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.85
+    review_time_seconds: 30
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0007.yaml
+- intake_id: INTAKE_0008
+  candidate_stub_id: STUB_0008
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 穩賺不賠話術
+    structural_patterns:
+    - 收益承諾
+    reviewer_signals:
+    - 詐騙高度可能
+    hard_negative_contrast: 無誘導
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.92
+    review_time_seconds: 33
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0008.yaml
+- intake_id: INTAKE_0009
+  candidate_stub_id: STUB_0009
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 誘導投資
+    structural_patterns:
+    - 話術導流
+    reviewer_signals:
+    - 收益承諾
+    hard_negative_contrast: 教學型內容
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.88
+    review_time_seconds: 34
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0009.yaml
+- intake_id: INTAKE_0010
+  candidate_stub_id: STUB_0010
+  task_id: EXP_0002
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  fill_status: completed
+  sparse_feature_observations:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 1
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+  structured_hints_to_fill:
+    common_behaviors:
+    - 穩定獲利話術
+    structural_patterns:
+    - 收益保證
+    reviewer_signals:
+    - 極高風險
+    hard_negative_contrast: 無收益聲明
+    metadata_only_note: metadata_only
+  review_metadata_to_fill:
+    decision: scam
+    confidence: 0.93
+    review_time_seconds: 32
+    second_review_required: false
+  completion_gate:
+    raw_threads_content_excluded: true
+    pii_excluded: true
+    only_structured_metadata: true
+    human_review_completed: true
+  candidate_record_output_target: data/candidates/batch_0004/batch-0004-low-coverage-high-svs_0010.yaml
+completion_rules:
+- Fill only structured metadata observations.
+- Do not paste raw Threads content into this repo.
+- Do not include PII, raw URLs, handles, screenshots, browser artifacts, credentials,
+  or controlled-store locators.
+- Do not infer final labels before human review.
+- Convert to candidate_record_v2 only after completion gates are satisfied.
+after_fill_commands:
+- ./.venv/bin/python scripts/validate_candidate_v2.py data/candidates
+- ./.venv/bin/python scripts/run_v2_ros.py
+- ./.venv/bin/python scripts/generate_feature_candidates_v1.py
+- ./.venv/bin/python scripts/generate_exploration_tasks.py
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  candidate_records_fabricated: false
+  this_file_authorizes_collection: false

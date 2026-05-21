@@ -6,8 +6,6 @@ This SOP defines how to prepare the first Threads dataset batch without violatin
 
 For the CIB-authorized pilot, API access and all research-required automation are authorized only through `governance/pilot-launch/threads_pilot_v1_2026-05_controlled_launch_record.md` and Decision 0018. This SOP does not authorize unscope automation or production use.
 
-For the CIB/165 Threads scam-content research case, Meta Content Library / API is the preferred official research access route where available. Use `docs/51-meta-content-library-api-access.md` before any Meta Content Library UI/API or Threads API keyword-search run.
-
 ## Preconditions
 
 Before collecting any real item:
@@ -18,7 +16,6 @@ Before collecting any real item:
 - Complete `docs/36-stakeholder-authorization-packet.md`.
 - Complete `templates/stakeholder_authorization_decision_record.md`.
 - Confirm the source is allowed under `governance/data-governance.md`.
-- Confirm whether the approved route is Meta Content Library UI, Meta Content Library API, official Threads API keyword search, stakeholder-provided evidence, or manual public collection.
 - Complete or link `templates/data_authorization_request.md`.
 - Decide where raw evidence will live outside git.
 - Confirm who may see raw evidence.
@@ -28,6 +25,9 @@ Before collecting any real item:
 - Assign pseudonymous collector and annotator IDs.
 - Complete `templates/real_pilot_readiness_review.md` using `docs/35-real-pilot-readiness-review.md`.
 - Complete `templates/pilot_batch_work_order.md` when preparing the 50-item pilot.
+- For official Meta research access, complete
+  `templates/meta_research_tools_application_prep.md` before submitting through
+  Research Tools Manager or starting an approved Content Library / API run.
 
 If any precondition is unresolved, use only synthetic examples.
 
@@ -38,34 +38,32 @@ If any precondition is unresolved, use only synthetic examples.
 | Synthetic dry run | Always allowed | No real Threads evidence. |
 | Stakeholder-provided cases | Sharing, retention, redaction, and use are approved | Preserve stakeholder report reference only if allowed. |
 | Manual public examples | Legal/platform comfort is documented | Governed by the controlled launch record. |
-| Meta Content Library UI/API examples | Research access, cleanroom/export terms, query scope, and fields are approved | Preferred official route for CIB case where available; raw outputs and query details stay outside git. |
-| Official Threads API keyword-search examples | Endpoint, permission, query count, fields, and purpose are approved | Supplementary route only; not a replacement for Content Library / API where that route answers the research question. |
+| Meta Content Library / API examples | Research Tools Manager, CASD, cleanroom, and controlled run approval are recorded | Preferred official research-grade route for CIB/165 Threads scam-content research where Threads coverage is available. |
 | API-authorized examples | API approval is recorded | Approved for the CIB pilot under run-record controls. |
 | Automation-assisted examples | CIB automation authorization and run record exist | Raw outputs, credentials, session artifacts, and logs stay outside git. |
+| Controlled low-speed crawler rehearsal | CIB authorization and crawler run record exist | Use only for the current CIB-approved research path, starting with one selected item and strict stop conditions. |
 
 Not approved by this SOP unless explicitly run-scoped under the CIB controlled launch record:
 
-- scraping
-- browser automation
+- unscoped scraping
+- unscoped browser automation
 - bulk export
 - account/profile crawling
 - landing-page crawling
 - redirect-chain capture
 - raw browser profiles, cookies, or credentials
 
-## Meta API Route Handling
+For the current CIB-authorized pilot, a controlled low-speed crawler is allowed only through [50-controlled-crawler-acquisition-plan.md](50-controlled-crawler-acquisition-plan.md), `templates/controlled_crawler_run_record.md`, and Decision 0022. Low speed by itself is not sufficient; the run must also have a source category, item limit, field allowlist, storage boundary, redaction rule, and stop-condition review.
 
-Before retaining any item from Meta Content Library / API or the official Threads API:
-
-- record route as `meta_content_library_ui`, `meta_content_library_api`, or `threads_api_keyword_search`
-- record access environment and approval reference outside git if sensitive
-- record query/search ID, date range, keyword/hashtag filters, media type, language, and requested fields
-- record returned count, retained count, excluded count, and exclusion reasons
-- confirm whether Threads data was available through UI, API, both, or neither
-- confirm whether download/export is allowed for the surface used
-- map official output fields into the v1 schema without adding new retained metadata unless approved
-
-If Content Library UI surfaces Threads records but API/export support is unavailable or inconsistent, record that as a limitation and do not work around it with unofficial scraping.
+For the CIB/165 Threads scam-content research case after Decision `0158`,
+Meta Content Library / API is the preferred official route where approved. A
+Content Library UI, Content Library API, or Threads API run must state the
+official route, approved environment, operator role, query or endpoint class,
+field allowlist, query count, returned count, retained count, raw storage
+location outside git, redaction rule, and stop-condition review. The regular
+Threads API should be treated as a bounded supplement, not as a full-platform
+research archive. Gaps in official route coverage are research limitations, not
+permission to scrape or expand browser automation by default.
 
 ## Minimal Evidence To Record
 
@@ -193,9 +191,17 @@ python scripts/build_manual_collection_record.py data/interim/manual_entry_0001.
 
 This assistant does not collect data, fetch URLs, crawl pages, run OCR, or authorize any source. It only structures fields the collector has already captured under the controlled launch limits. Use separate run records for API or automation-assisted capture.
 
+For a Meta Content Library / API run, do not paste raw query outputs, handles,
+permalinks, screenshots, access emails, cleanroom details, or item-level
+exports into git. Repo-visible notes may record only aggregate counts,
+non-sensitive query classes, official route names, field-limit decisions, and
+limitations.
+
+For a crawler-acquired first item, run the crawler under a completed controlled crawler run record first, then enter only the redacted selected item into `data/interim/manual_entry_0001.json`. Do not point the manual collection assistant at raw crawler output.
+
 ## Controlled Collection Rehearsal
 
-Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. The objective is to test whether the team can turn manual, stakeholder-provided, API, or automation-assisted evidence into redacted, schema-valid local records without exceeding the controlled run record.
+Before the first 10-15 item checkpoint, run a 1-2 item rehearsal using only approved, controlled-launch fields. Since CIB redacted handoff and manual controlled sampling are currently unavailable, the next practical path is a one-item controlled low-speed crawler rehearsal. The objective is to test whether the team can turn crawler-acquired evidence into redacted, schema-valid local records without exceeding the controlled run record.
 
 Use rehearsal records to catch operational mistakes, not to make pilot findings. A good rehearsal record:
 
@@ -205,6 +211,8 @@ Use rehearsal records to catch operational mistakes, not to make pilot findings.
 - uses approved redacted or minimized forms for source URLs, visible links, contact handles, OCR text, screenshots, and replies
 - fills `screenshot_snapshot_status`, `link_snapshot_status`, `privacy_redaction_notes`, and `missing_evidence` where relevant
 - records collection burden and exclusion reasons in the local collection log
+
+Before building a real rehearsal record, complete a local copy of `templates/manual_collection_prebuild_handoff.md` to confirm the intake has no placeholders, raw identifiers, unapproved context, full URLs, raw handles, or unsupported evidence fields.
 
 Run:
 
@@ -247,6 +255,7 @@ Rehearsal fails and collection pauses if:
 - redaction cannot be done reliably
 - schema fields are missing, confusing, or too burdensome for the approved evidence
 - any item requires automation or live platform ingestion outside the CIB controlled launch record
+- the crawler hits access challenges, rate-limit blocks, captcha/challenge states, or any condition listed in the controlled crawler run record
 
 If the schema appears wrong during rehearsal, do not improvise new fields in local files. Record the issue as a schema-revision candidate and update `data-contracts/thread_item_schema_v1.json`, templates, and annotation guidance only after project-owner review.
 
@@ -262,6 +271,7 @@ Pause collection if:
 - annotators need context that is not approved to collect
 - stakeholder evidence has unclear retention or sharing restrictions
 - collection or automation is drifting beyond the controlled run record
+- a low-speed crawler starts accumulating candidates beyond the rehearsal cap before review
 
 ## Handoff To Annotation
 

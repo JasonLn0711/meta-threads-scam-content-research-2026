@@ -16,11 +16,11 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 
 | Field | Value |
 |---|---|
-| Source type | `stakeholder_provided_case` / `manual_public_example` / `manual_public_comparator` / `stakeholder_summary_only` / `api_authorized_sample` / `researcher_synthetic` / other |
+| Source type | `stakeholder_provided_case` / `manual_public_example` / `manual_public_comparator` / `stakeholder_summary_only` / `meta_content_library_ui` / `meta_content_library_api` / `api_authorized_sample` / `official_threads_api_keyword_search` / `controlled_browser_run_scoped` / `researcher_synthetic` / other |
 | Platform | Threads |
-| Official Meta route | `meta_content_library_ui` / `meta_content_library_api` / `threads_api_keyword_search` / not_applicable |
-| Access environment | Research Tools Manager / Secure Research Environment / approved cleanroom / Threads developer app / other |
 | Proposed collection method |  |
+| Official route | `meta_content_library_ui` / `meta_content_library_api` / `threads_api_keyword_search` / `manual` / `controlled_browser_run_scoped` / `none` |
+| Access environment | Research Tools Manager / Secure Research Environment / approved cleanroom / Threads developer app / local manual / other |
 | Expected item count |  |
 | Expected date range |  |
 | Expected content forms | text / image / replies / OCR / links / handles / redirects / screenshots |
@@ -32,10 +32,15 @@ Do not put sensitive source names, handles, URLs, or case IDs in this file unles
 |---|---|
 | Is source sharing approved? |  |
 | Is manual collection approved? |  |
-| Is API access approved? |  |
 | Is Meta Content Library / API access approved? |  |
-| Is Threads API keyword search approved as a supplement? |  |
-| Is download/export approved for this surface? |  |
+| Is Research Tools Manager application status documented? |  |
+| Is CASD review status documented? |  |
+| Is approved cleanroom or secure environment documented? |  |
+| Is API access approved? |  |
+| If using official Threads API, are permissions and endpoint coverage documented? |  |
+| If using Meta Content Library / API, are UI/API Threads coverage, field limits, query limits, and export/download limits documented? |  |
+| If using controlled browser run, is a run-scoped decision recorded? |  |
+| Is this free of standing personal-account crawler scope? |  |
 | Are screenshots approved? |  |
 | Are source URLs approved? |  |
 | Are visible links approved? |  |
@@ -61,10 +66,11 @@ Mark each as `needed`, `optional`, `not_needed`, or `not_allowed`.
 | `visible_contact_handles` |  |  |
 | `visible_platform_redirects` |  |  |
 | `source_url_if_stored` |  |  |
+| public engagement or trend metadata |  |  |
+| query/filter metadata |  |  |
+| producer-list membership |  |  |
 | `metadata_notes` |  |  |
 | `privacy_redaction_notes` |  |  |
-| official route/query metadata |  |  |
-| engagement or view metrics |  |  |
 
 ## Source Scoring
 

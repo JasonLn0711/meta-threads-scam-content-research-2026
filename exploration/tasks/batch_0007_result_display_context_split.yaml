@@ -1,0 +1,85 @@
+schema_version: exploration_tasks_v1
+purpose: propose a capped manual-assisted batch to split result-display context
+  review burden after Batch 0006
+source_inputs:
+- experiments/batch_variants/0006-post-review-routing-result.md
+- metrics/contrast_scores/latest.yaml
+- metrics/batch_logs/batch_0006_run_log.yaml
+policy:
+  external_access_allowed: false
+  raw_threads_evidence_storage_allowed: false
+  pii_allowed: false
+  collection_mode: safe_manual_assisted_only
+  max_stubs_per_task: 3
+summary:
+  task_count: 4
+  target_stub_count: 12
+  bottleneck: result_display_context_review is high burden and too broad
+tasks:
+- task_id: EXP_0007_A
+  gap_type: result_display_context_split
+  hypothesis: Result-display candidates with visible transition but no thread dependency
+    may be lower cost than the current broad slow lane.
+  source_hint: result-display visible transition surface
+  search_cues:
+  - result display cue
+  - visible contact or reply transition structure
+  - no full-thread dependency
+  priority: medium
+  reason:
+  - Batch 0006 showed result-display context cases are high burden.
+  - This lane tests whether visible transition lowers review time.
+  signal_hint: 成果展示
+  expected_behavior: result_display_visible_transition_low_context
+- task_id: EXP_0007_B
+  gap_type: result_display_context_split
+  hypothesis: Result-display candidates requiring thread context may remain slow
+    even without emotional pressure.
+  source_hint: result-display thread-context surface
+  search_cues:
+  - result display cue
+  - thread context required
+  - no explicit guarantee cue
+  priority: high
+  reason:
+  - needs_thread is the clearest reviewer-burden feature after Batch 0006.
+  - This lane tests thread burden without emotional-pressure amplification.
+  signal_hint: 成果展示
+  expected_behavior: result_display_thread_context_required
+- task_id: EXP_0007_C
+  gap_type: result_display_context_split
+  hypothesis: Result-display candidates with both thread dependency and emotional
+    pressure may be the highest second-review burden sub-lane.
+  source_hint: result-display emotional context surface
+  search_cues:
+  - result display cue
+  - emotional pressure or urgency structure
+  - thread context required
+  priority: high
+  reason:
+  - Batch 0006 showed uncertainty and second-review burden are concentrated in
+    result-display context review.
+  - This lane tests whether emotional pressure explains the highest-cost cases.
+  signal_hint: 成果展示
+  expected_behavior: result_display_emotional_context_burden
+- task_id: EXP_0007_D
+  gap_type: hard_negative_calibration
+  hypothesis: Clean standalone result-display cases should remain useful as low-burden
+    hard-negative calibration.
+  source_hint: standalone result-display holdout
+  search_cues:
+  - result display cue
+  - no transition structure
+  - no thread dependency
+  priority: medium
+  reason:
+  - Batch 0006 Lane C remained low burden and clean.
+  - Holdout cases prevent over-generalizing result-display metadata.
+  signal_hint: 成果展示
+  expected_behavior: standalone_result_display_holdout
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  tasks_are_collection_suggestions_only: true

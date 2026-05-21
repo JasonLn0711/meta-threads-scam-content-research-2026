@@ -1,0 +1,42 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0006-contrast-aware-routing-validation_0011
+batch_id: batch-0006-contrast-aware-routing-validation
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 0
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: uncertain
+  confidence: 0.6
+  review_time_seconds: 51.0
+  second_review_required: true
+source_stub:
+  candidate_stub_id: STUB_0006_D_01
+  task_id: EXP_0006_D
+  signal_hint: 保證收益
+  expected_behavior: guarantee_without_stable_transition_edge
+structured_hints:
+  common_behaviors:
+  - 模糊收益語句
+  structural_patterns:
+  - 不完整
+  reviewer_signals:
+  - 需補上下文
+  hard_negative_contrast: 明確 funnel
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

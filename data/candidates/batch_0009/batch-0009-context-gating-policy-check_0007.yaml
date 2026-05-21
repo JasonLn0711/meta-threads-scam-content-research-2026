@@ -1,0 +1,42 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0009-context-gating-policy-check_0007
+batch_id: batch-0009-context-gating-policy-check
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 1
+    保證收益: 1
+    社群導流: 0
+    情緒操控: 1
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: scam
+  confidence: 0.97
+  review_time_seconds: 33.0
+  second_review_required: false
+source_stub:
+  candidate_stub_id: STUB_0009_A_07
+  task_id: EXP_0009_A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_contact_emotional_fast_lane
+structured_hints:
+  common_behaviors:
+  - guarantee_executable_transition
+  structural_patterns:
+  - guarantee_contact_with_emotional_pressure
+  reviewer_signals:
+  - guarantee_contact_and_pressure_cue
+  hard_negative_contrast: educational_or_risk_disclosure_content
+  metadata_only_note: metadata_only_no_raw_threads_content
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

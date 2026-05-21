@@ -1,0 +1,76 @@
+schema_version: candidate_stub_schema_v1
+title: Candidate Stub v1
+description: Metadata-only candidate stub linked to controlled evidence by id and hash.
+governance:
+  raw_content_allowed: false
+  final_label_allowed: false
+  human_decision_required: true
+required_top_level:
+  - schema_version
+  - candidate_id
+  - created_at
+  - evidence_ref
+  - evidence_hash
+  - features
+  - score
+  - raw_content_included
+  - human_decision_required
+properties:
+  schema_version:
+    const: candidate_stub_v1
+  candidate_id:
+    type: string
+  created_at:
+    type: string
+    format: utc_timestamp
+  evidence_ref:
+    required:
+      - evidence_id
+      - hash_algorithm
+      - sha256
+  evidence_hash:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+  features:
+    type: object
+    note: Signal or triage metadata only. No raw text, URLs, handles, screenshots, or file paths.
+  score:
+    type: number
+    note: Research triage score only. Not a scam determination.
+  raw_content_included:
+    const: false
+  human_decision_required:
+    const: true
+forbidden_keys:
+  - post_text
+  - reply_text
+  - reply_texts
+  - ocr_text
+  - raw_text
+  - raw_content
+  - raw_threads_content
+  - screenshot
+  - screenshot_path
+  - image_path
+  - image_paths
+  - external_link
+  - external_links
+  - visible_contact_handles
+  - url
+  - urls
+  - profile_url
+  - username
+  - user_id
+  - handle
+  - browser_export
+  - browser_profile
+  - session
+  - cookie
+  - token
+  - credential
+  - controlled_store_path
+forbidden_string_patterns:
+  - "https?://"
+  - "www\\."
+  - "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+  - "@[A-Za-z0-9_]{2,}"

@@ -8,15 +8,22 @@ The goal is to prevent the first real dataset from becoming source-skewed, priva
 
 ## Current State
 
-As of `2026-04-23`:
+As of `2026-04-24`:
 
 - synthetic examples are approved for dry runs
-- no real Threads item has been collected or committed
-- the first real pilot is approved only for bounded `go_with_limits` launch preparation
-- exact sensitive source, storage, access, retention, and redaction details still must be completed outside git before item 1
-- Meta Content Library / API is the preferred official research access route for the CIB case where available
+- 15 controlled local Threads records have been collected under ignored `data/interim/`, built, strict-validated, and summarized only in aggregate repo-safe notes
+- no raw Threads evidence, source URLs, handles, screenshots, browser profiles, cookies, or session artifacts have been committed
+- the first real pilot is approved only for bounded `go_with_limits` execution under explicit run records
+- exact sensitive source, storage, access, retention, and redaction details remain outside git
 - immediate unlimited 500-item collection is rejected or paused
-- the next valid real-data step is the first 10-15 item checkpoint inside the conditional 50-item pilot
+- the next valid real-data step before item 16 is an approved browser-rendered session/access or API/session-aware risk-probe access review, because public unauthenticated risk-probe searches yielded 0 extractable item-content candidates
+
+As of `2026-05-21`, Decision `0158` supersedes generic "API first" wording for
+the CIB/165 Threads scam-content research case: Meta Content Library / API is
+the preferred official research-grade access route where approved. The regular
+Threads API is a bounded supplementary route, and a controlled browser
+source-arm remains only a run-scoped fallback if official routes cannot answer
+the approved research question.
 
 ## Source Intake Principle
 
@@ -40,13 +47,14 @@ The evaluation must answer:
 | `manual_public_example` | Publicly visible examples collected manually under approved limits. | Platform/legal comfort, privacy, source URL handling. |
 | `manual_public_comparator` | Non-scam and hard-negative comparator examples. | Overcollection of ordinary users. |
 | `stakeholder_summary_only` | Pattern discovery without raw evidence. | May be too vague for annotation. |
-| `meta_content_library_ui` | Official research UI for approved public Meta content discovery and query design. | Threads data may be visible but not downloadable while the dataset is in development. |
-| `meta_content_library_api` | Official research API in Secure Research Environment or approved cleanroom. | API coverage, fields, export, and Threads availability must be verified in the approved environment. |
-| `threads_api_keyword_search` | Official Threads API keyword/hashtag search when explicitly approved. | Query limits, permissions, sensitive-keyword behavior, and public-search scope. |
-| `api_authorized_sample` | Structured access if explicit API approval exists. | Scope and terms must be precise; prefer official Meta routes above. |
+| `meta_content_library_ui` | Official research interface for public content search, trend review, producer-list review, and candidate generation where Threads data is surfaced. | Requires Research Tools Manager access, CASD review, documented field limits, and no assumption that Threads export/download is available. |
+| `meta_content_library_api` | Official research API or cleanroom route for programmatic public-content analysis where approved. | UI/API coverage can differ; raw outputs, cleanroom details, handles, URLs, and item-level exports stay outside git. |
+| `api_authorized_sample` | Structured access if explicit API approval exists. | Scope and terms must be precise. |
+| `official_threads_api_keyword_search` | Supplementary Discovery Method v1 source arm if official access and permissions exist. | Endpoint coverage, app permissions, tokens, rate/usage rules, and field limits must be documented; do not treat it as full-platform research access. |
+| `controlled_browser_run_scoped` | Fallback source arm when official API access is unavailable or insufficient. | Requires a new run-scoped decision; not standing personal-account crawling permission. |
 | `researcher_synthetic` | Templates, calibration, tooling dry runs. | Not real evidence; cannot support real-world claims. |
 
-Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it. Content Library downloads or exports are allowed only if the approved tool, surface, contract terms, and controlled run record permit them.
+Do not use scraping, browser automation, crawling, bulk export, landing-page crawling, or redirect-chain expansion unless a later recorded decision explicitly approves it. A personal login and a slow pace do not replace that decision.
 
 ## Intake Sequence
 
@@ -62,7 +70,10 @@ Do not use scraping, browser automation, crawling, bulk export, landing-page cra
    - 100-200 item expansion
    - later 500-item expansion
 6. If real evidence is proposed, complete `templates/data_authorization_request.md`.
-7. If approved, add the source to `templates/source_sampling_frame_template.csv` before collection begins.
+7. If Meta Content Library / API access is proposed, complete
+   `templates/meta_research_tools_application_prep.md` and record only
+   repo-safe application status in git.
+8. If approved, add the source to `templates/source_sampling_frame_template.csv` before collection begins.
 
 ## Source Candidate ID
 
@@ -131,6 +142,14 @@ Suggested pilot mix:
 | ambiguous or insufficient-evidence cases | 5-10 |
 
 If only one real source is approved, the pilot may still proceed, but the pilot result summary must mark source skew as a limitation.
+
+## Risk-Probe Seed Strategy
+
+The first 15 controlled local records show that topic-only seeds can overproduce low-risk comparators. Risk-probe runs 0005 and 0006 then showed that public unauthenticated browser-rendered risk-probe searches do not expose extractable item content. Before item 16, use [0020-high-risk-case-finding-method-study.md](../experiments/evaluation-notes/0020-high-risk-case-finding-method-study.md) and Decision 0024 to define an approved session/API-aware risk-probe run record.
+
+Risk-probe seeds should combine an approved domain with one visible signal family, such as guaranteed outcome, private-channel migration, trading authority, payment/wallet action, urgency, testimonial proof, or reward/giveaway language. These probe terms are candidate-generation aids only; they are not labels.
+
+Do not expand into profile review, landing pages, redirect chains, screenshots, OCR, or broad replies unless the new run record explicitly authorizes those fields and their redaction/storage handling.
 
 ## Comparator Strategy
 

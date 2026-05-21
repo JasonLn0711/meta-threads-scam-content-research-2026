@@ -1,0 +1,2 @@
+candidate_alias,condition,source_lane,hard_negative_category,warning_present,warning_accepted,reviewer_hesitation,final_label,final_risk_level,false_positive_pressure,repo_safe_note
+EXAMPLE_assisted_001,assisted_review,result_display_clean_holdout,ordinary_investment_discussion_possible,yes,yes,no,non_scam,low,no,category only no raw evidence

@@ -1,0 +1,498 @@
+schema_version: reviewer_assist_reviewer_fill_sheet_v1
+evaluation_id: reviewer-assist-expansion-0011
+decision_id: '0148'
+source_rules: data/reviewer_assist_eval/batch_0011_reviewer_rules.md
+source_controller_work_order: data/reviewer_assist_eval/batch_0011_work_order.yaml
+status: reviewer_fill_template
+reviewer_visibility:
+  manual_baseline_hidden: true
+  raw_evidence_forbidden_in_git: true
+  human_final_judgment_required: true
+rating_scale:
+  summary_usefulness_rating: "1 to 5, where 5 means highly useful for faster reviewer orientation"
+  summary_omission_risk: "low | medium | high"
+  schema_prefill_status: "accepted | accepted_with_minor_correction | needs_major_correction | unusable"
+  signal_suggestion_status: "accepted | accepted_with_minor_correction | rejected"
+  hard_negative_warning_status: "accepted | not_applicable | over_warned | missed_warning"
+  priority_explanation_status: "accepted | accepted_with_minor_correction | rejected"
+candidate_entries:
+  - workbench_id: RA_0011_0001
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0001
+      source_stub_id: STUB_0008_A_01
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_executable_transition_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0002
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+      source_stub_id: STUB_0008_A_02
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_group_transition_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0003
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0003
+      source_stub_id: STUB_0008_A_03
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_reply_funnel_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0004
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0004
+      source_stub_id: STUB_0008_A_04
+      task_id: EXP_0008_A
+      routing_lane: strong_source_priority
+      signal_hint: 保證收益
+      expected_behavior: guarantee_stable_anchor_fast_lane
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0005
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0005
+      source_stub_id: STUB_0008_B_01
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_contact_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0006
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0006
+      source_stub_id: STUB_0008_B_02
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_reply_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0007
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0007
+      source_stub_id: STUB_0008_B_03
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_group_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0008
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0008
+      source_stub_id: STUB_0008_B_04
+      task_id: EXP_0008_B
+      routing_lane: result_display_low_context_transition
+      signal_hint: 成果展示
+      expected_behavior: result_display_stable_anchor_low_context
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0009
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0009
+      source_stub_id: STUB_0008_C_01
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_contact
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0010
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0010
+      source_stub_id: STUB_0008_C_02
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_group
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0011
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0011
+      source_stub_id: STUB_0008_C_03
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_reply
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0012
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0012
+      source_stub_id: STUB_0008_C_04
+      task_id: EXP_0008_C
+      routing_lane: result_display_thread_required
+      signal_hint: 成果展示
+      expected_behavior: result_display_thread_required_ambiguous_transition
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0013
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0013
+      source_stub_id: STUB_0008_D_01
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0014
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0014
+      source_stub_id: STUB_0008_D_02
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0015
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0015
+      source_stub_id: STUB_0008_D_03
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+  - workbench_id: RA_0011_0016
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0008-context-gate-reviewer-hour-value_0016
+      source_stub_id: STUB_0008_D_04
+      task_id: EXP_0008_D
+      routing_lane: result_display_clean_holdout
+      signal_hint: 成果展示
+      expected_behavior: clean_result_display_holdout
+    assist_outputs_to_fill_before_review:
+      candidate_summary:
+      signal_family_suggestions: []
+      schema_prefill_draft: {}
+      hard_negative_warning:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      assisted_review_time_seconds:
+      assisted_human_final_label_or_not_reviewable:
+      summary_usefulness_rating:
+      summary_omission_risk:
+      schema_prefill_status:
+      schema_prefill_correction_category:
+      signal_suggestion_status:
+      signal_correction_category:
+      hard_negative_warning_status:
+      priority_explanation_status:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:

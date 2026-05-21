@@ -17,7 +17,7 @@ Sensitive source identifiers, exact CIB contacts, raw evidence paths, credential
 | Related non-sensitive launch packet | `governance/pilot-launch/` |
 | Related decision record | `decision-log/0018-record-cib-api-and-automation-authorization.md` |
 | Current launch status | `ready_for_rehearsal` |
-| Next gate | local workspace initialization, item-1 preflight, then 1-2 item controlled rehearsal |
+| Next gate | controlled crawler run record, then one-item controlled low-speed crawler rehearsal |
 
 ## CIB Authorization Scope
 
@@ -26,6 +26,7 @@ Sensitive source identifiers, exact CIB contacts, raw evidence paths, credential
 | Research case authorization | CIB authorizes the research team to perform the research activities needed for this Threads scam-content research case under this controlled launch record. |
 | API authorization | CIB explicitly authorizes API-based collection and processing for this research case, subject to approved platform access conditions, credential controls, audit logging, field limits, and storage limits. |
 | Automation authorization | CIB explicitly authorizes all automation required for this research case, including collection, retrieval, parsing, OCR, normalization, deduplication, redaction support, validation, audit, baseline scoring, packet generation, and reporting automation under this record. |
+| Controlled crawler path | Authorized as the next practical acquisition path only under Decision 0022, `docs/50-controlled-crawler-acquisition-plan.md`, and a filled crawler run record. |
 | Browser or workflow automation | Authorized only for research collection and evidence-handling tasks covered by this record; credentials, browser profiles, cookies, tokens, HAR files, and session artifacts must not enter git. |
 | Link and redirect automation | Authorized for research-required link parsing, redirect-chain capture, and landing-page evidence capture when needed for this case; raw outputs stay outside git and redacted derived fields are used for annotation. |
 | Profile/account context automation | Authorized only when necessary for the CIB-approved research question and only for approved fields; avoid broad graph capture unless specifically needed and logged. |
@@ -109,6 +110,8 @@ Every API or automation run must have a local or controlled run record with:
 | Stop condition review | Recorded after run |
 
 Pause automation immediately if a run collects fields outside this record, stores raw data in git, exposes credentials/session artifacts, bypasses access controls, or shifts toward production scoring.
+
+For the first crawler rehearsal, use `templates/controlled_crawler_run_record.md` and keep the run to one selected item, five candidate reviews maximum, one worker, no bursts, and at least 30 seconds between fetches unless a later record makes the limits stricter.
 
 ## Retention And Deletion Rule
 
@@ -233,6 +236,7 @@ Pause automation immediately if a run collects fields outside this record, store
 | Gate | Required before collection continues? | Owner | Status |
 |---|---|---|---|
 | 1-2 item controlled manual/API/automation rehearsal | yes | `COLLECTOR-01` / `AUTO-OP-01` / `GOV-REVIEWER-01` | `not_started` |
+| One-item controlled low-speed crawler run record | yes before crawler execution | `AUTO-OP-01` / `GOV-REVIEWER-01` | `not_started` |
 | 5-item annotator calibration | yes before annotation expansion | `ANN-01`, `ANN-02`, `REVIEWER-01` | `not_started` |
 | First 10-15 item checkpoint | yes before 50 items | `PROJECT-OWNER-01` | `not_started` |
 | 50-item pilot decision memo | yes before expansion | `PROJECT-OWNER-01` / `ENG-01` | `not_started` |

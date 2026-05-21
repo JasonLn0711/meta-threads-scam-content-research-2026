@@ -1,0 +1,11 @@
+feature_id: review_stable_funnel_anchor
+type: emergent
+weight: 6.0
+definition: Candidate metadata shows a funnel-stage or value-stage anchor that reviewers can resolve without second review and within the low-review-time band.
+activation_rule: (誘導聯絡 OR 社群導流 OR reply_funnel OR 保證收益 OR 成果展示) AND review_time_seconds <= 120 AND second_review_required == false
+supporting_cases:
+  - disc-0001
+confidence: 0.55
+status: proposed_for_human_review
+promotion_allowed_without_human_review: false
+notes: Metadata-only learning-loop feature. It is not a final scam label, legal finding, enforcement signal, raw-content pattern, or embedding decision.

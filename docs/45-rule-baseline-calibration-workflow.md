@@ -62,8 +62,8 @@ These are transparent probes, not separate models.
 For the first real 30-50 annotated items:
 
 1. Inspect `reviewer_worksheet.csv`.
-2. Review false positives first.
-3. Review false negatives second.
+2. Review false negatives first for the CIB-authorized pilot, especially missed reply/comment, link, private-channel, wallet/deposit, and add-friend signals.
+3. Review false positives second and keep explainable false positives in the triage queue when that improves recall.
 4. Inspect medium-risk uncertain cases.
 5. Compare `text_only` to `text_reply`, `text_ocr`, and `all`.
 6. Compare `baseline` to `precision_first`.
@@ -74,7 +74,8 @@ For the first real 30-50 annotated items:
 Prefer the baseline profile if:
 
 - high-risk reasons are specific and reviewable
-- false positives are rare and understandable
+- false negatives are minimized for approved high-risk evidence families
+- false positives are explainable, reviewable, and not used as final accusations
 - OCR and reply signals improve recall without obvious noise
 
 Prefer `precision_first` settings if:
@@ -83,7 +84,7 @@ Prefer `precision_first` settings if:
 - medium/high output is dominated by weak link or urgency signals
 - reviewers distrust the high-risk queue
 
-Use `recall_probe` only to investigate missed cases. Do not use it as the default until false positives are reviewed.
+Use `recall_probe` to investigate missed cases and to stress-test the CIB preference for lower false negatives. Do not treat recall-probe output as a final label without human review.
 
 ## Non-Claims
 

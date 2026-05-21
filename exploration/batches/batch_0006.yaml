@@ -1,0 +1,23 @@
+schema_version: exploration_batch_v1
+batch_id: batch-0006-contrast-aware-routing-validation
+source_tasks: exploration/tasks/batch_0006_contrast_aware_routing.yaml
+source_experiment_plan: experiments/batch_variants/0006-contrast-aware-routing-validation.md
+purpose: capped validation batch for contrast-aware reviewer routing
+candidate_stub_count: 12
+selected_task_ids:
+- EXP_0006_A
+- EXP_0006_B
+- EXP_0006_C
+- EXP_0006_D
+routing_lanes:
+  A: strong_source_priority
+  B: result_display_context_review
+  C: result_display_contrast_holdout
+  D: guarantee_context_review
+status: planned_pending_manual_assisted_fill
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
+  this_file_authorizes_collection: false

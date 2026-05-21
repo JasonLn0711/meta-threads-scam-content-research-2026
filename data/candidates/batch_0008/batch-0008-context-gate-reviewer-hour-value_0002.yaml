@@ -1,0 +1,44 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0008-context-gate-reviewer-hour-value_0002
+batch_id: batch-0008-context-gate-reviewer-hour-value
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 0
+    保證收益: 1
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 0
+    reply_funnel: 1
+    needs_thread: 0
+    review_stable_funnel_anchor: 1
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: scam
+  confidence: 0.92
+  review_time_seconds: 34.0
+  second_review_required: false
+source_stub:
+  candidate_stub_id: STUB_0008_A_02
+  task_id: EXP_0008_A
+  signal_hint: 保證收益
+  expected_behavior: guarantee_group_transition_fast_lane
+structured_hints:
+  common_behaviors:
+  - 保證收益
+  - 社群導流
+  structural_patterns:
+  - 收益承諾加群組轉換
+  reviewer_signals:
+  - 快速判讀
+  - 低上下文負擔
+  hard_negative_contrast: 公開透明分析或無轉換鏈
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

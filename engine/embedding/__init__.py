@@ -1,0 +1,1 @@
+"""Discovery-only embedding engine."""

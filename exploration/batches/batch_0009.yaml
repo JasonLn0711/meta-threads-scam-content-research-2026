@@ -1,0 +1,29 @@
+schema_version: exploration_batch_v1
+batch_id: batch-0009-context-gating-policy-check
+source_tasks: exploration/tasks/batch_0009_context_gating_policy_check.yaml
+source_experiment_plan: experiments/batch_variants/0009-context-gating-policy-check.md
+source_policy: docs/63-context-gating-policy.md
+purpose: capped prospective check of the Batch 0008 context-gating policy
+candidate_stub_count: 12
+selected_task_ids:
+- EXP_0009_A
+- EXP_0009_B
+- EXP_0009_C
+- EXP_0009_D
+routing_lanes:
+  A: strong_source_priority
+  B: result_display_clean_holdout
+  C: result_display_low_context_transition
+  D: result_display_thread_required
+allocation:
+  strong_source_priority: 8
+  result_display_clean_holdout: 2
+  result_display_low_context_transition: 1
+  result_display_thread_required: 1
+status: planned_pending_manual_assisted_fill
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  collection_method_limited_to_safe_manual_assisted: true
+  this_file_authorizes_collection: false

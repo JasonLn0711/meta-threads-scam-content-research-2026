@@ -1,36 +1,220 @@
 # Recommended Path v1
 
-## Immediate Report Milestone
+## Current First-Principle Path
 
-By `2026-04-30`, produce [../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md) for CIB/165-facing review.
+From this point forward, the repo's first-principle goal is:
 
-This report is the immediate research deliverable. It should turn the current scaffold into a readable v0 initial research report with problem definition, Threads-only scope, dataset v0 plan, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and four-week execution path.
+```text
+Design a governed automatic or assisted method for discovering review-worthy Threads investment-scam candidates.
+```
 
-Use [27-report-v0-delivery-plan.md](27-report-v0-delivery-plan.md), [../reports/threads-scam-content-research-v0-executive-brief.md](../reports/threads-scam-content-research-v0-executive-brief.md), and [../reports/report-v0-review-checklist.md](../reports/report-v0-review-checklist.md) to make the report package reviewable before delivery.
+Everything else is subordinate to this goal. Reviewer burden reduction, governance, evidence handling, hard-negative protection, schema work, synthetic policy loops, and reports are support requirements for the discovery method, not separate competing objectives.
+
+Use [61-labor-efficient-investment-scam-candidate-discovery-north-star.md](61-labor-efficient-investment-scam-candidate-discovery-north-star.md) as the current north-star note. Use [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md) for the next reviewer-assistance research layer. Use [56-first-principle-investment-scam-discovery-method.md](56-first-principle-investment-scam-discovery-method.md) as the supporting discovery-method note.
+
+The current path is:
+
+```text
+checkpoint 0081 research evidence
+→ recipient adoption and readiness gates
+→ investment-scam scalable candidate-discovery method design
+→ signal-family matrix and method-test charter draft
+→ technical/governance approval for next-decision planning
+→ capped method-test decision draft
+→ technical/governance plus legal/privacy review of the capped decision draft
+→ final execution authorization package with Track A and Track B separated
+→ final gate response: Track A approved after start checklist, Track B conditional
+→ Track A zero-new-evidence dry run
+→ formal signoff: legal/privacy no-veto and CIB/internal boundary acceptance
+→ decision 0122: Track B start authorization under locked caps
+→ decision 0123: Track B Day 0 start and run 0054 gate confirmation
+→ decision 0124: Track B Day 1 source-arm intake control starts
+→ decision 0125: Track B batch 0001 checkpoint-derived seed replay surfaced
+→ decision 0126: Track B batch 0001 primary review and second-review pause
+→ decision 0127: Track B batch 0001 second review and final review outcomes
+→ decision 0128: Track B batch 0002 hard-negative probe source-arm selection
+→ decision 0129: Track B batch 0002 hard-negative probe candidate surfacing
+→ decision 0130: Track B batch 0002 hard-negative probe primary review
+→ decision 0131: Track B batch 0002 hard-negative probe second review
+→ labor-efficient candidate-discovery interpretation
+→ decision 0132: Batch 0008 context-gating policy adopted
+→ decision 0133: Batch 0009 prospective context-gating check opened
+→ decision 0134: Batch 0009 supports the context-gating policy
+→ decision 0135: Evidence Layer v1 support tooling added
+→ decision 0136: Synthetic closed-loop discovery runner added
+→ decision 0137: Advanced synthetic discovery v2 added
+→ decision 0138: Concept Reasoning Layer v1 added
+→ decision 0139: Dynamic Intelligence Layer v1 added
+→ decision 0140: Predictive Simulation Layer v1 added
+→ decision 0141: Defensive Self-Play Layer v1 added
+→ decision 0142: Adaptive Policy Deployment Loop v1 added
+→ decision 0143: sample incompleteness and discovery-design purpose recorded
+→ decision 0144: automatic discovery method recorded as the single top priority
+→ decision 0145: Reviewer Assist labor-savings evaluation opened for automatic discovery
+→ decisions 0146-0154: Reviewer Assist and context-gate evidence recorded as support layers
+→ decision 0155: Discovery Method v1 source-arm readiness opened
+→ decision 0156: public-surface human-reproducible patrol v0 fallback design opened
+→ decision 0157: Breeze Guard 26 recorded as deferred classifier candidate
+→ decision 0158: Meta Content Library / API recorded as preferred official research route
+→ decision 0159: repo operating versioning added
+→ decision 0160: first-principle Meta Research Tools application strategy recorded
+→ Meta Content Library / API application and official access viability check
+→ Threads API supplementary check only when needed and approved
+→ controlled browser fallback work order only if official routes cannot answer the research question
+→ capped source-arm method test
+→ discovery-yield and reviewer-burden evaluation
+→ decision on source-arm expansion, revision, or pause
+```
+
+Do not treat package maintenance, generic governance, record-count growth, UI/API/schema demos, or model training as progress unless it improves this labor-efficient discovery-method path.
+
+Do not treat the current collected cases as a representative sample of all Threads investment scams. They are partial fragments that can seed hypotheses and evaluate workflow behavior, but they cannot by themselves establish full-platform rules or a complete scam taxonomy. The path must therefore emphasize governed automatic or assisted candidate-discovery design, followed by bounded tests on new slices, rather than retrospective induction from the known case set.
+
+## Historical Report Milestone
+
+The earlier `2026-04-30` report milestone is preserved here for lineage. It is
+not the current next action after the Decision `0143` through `0145`
+realignment.
+
+The historical milestone was to produce
+[../reports/threads-scam-content-research-v0.md](../reports/threads-scam-content-research-v0.md)
+for CIB/165-facing review.
+
+That report package should turn the scaffold into a readable v0 research checkpoint with problem definition, Threads-only scope, historical dataset design, annotation strategy, baseline comparison, evaluation framework, governance gates, budget-fit argument, and a post-0076 path decision.
+
+Use [27-report-v0-delivery-plan.md](27-report-v0-delivery-plan.md), [../reports/threads-scam-content-research-v0-executive-brief.md](../reports/threads-scam-content-research-v0-executive-brief.md), [../reports/post-0076-next-decision-memo.md](../reports/post-0076-next-decision-memo.md), and [../reports/report-v0-review-checklist.md](../reports/report-v0-review-checklist.md) to make the report package reviewable before delivery.
 
 The report supersedes a concept-only stakeholder scoping memo as the next artifact.
 
-## What To Do Now
+## Current Post-0076 Path
 
-Build a phase-1 research MVP for Threads scam-like content triage.
+The repo moved through v2 metadata-only reviewer-routing and Reviewer Assist
+evaluation, then corrected course back to upstream candidate discovery.
 
-Immediate next action: run the 1-2 item controlled rehearsal under the confirmed controlled launch limits; validate local records; review redaction quality; record the repo-safe rehearsal decision with `templates/controlled_rehearsal_review.md` and `experiments/evaluation-notes/0014-controlled-rehearsal-review-protocol.md`; confirm or rerun 5-item calibration if annotators changed; then start the first 10-15 item checkpoint using [38-first-pilot-checkpoint-protocol.md](38-first-pilot-checkpoint-protocol.md). The rehearsal may use the intended manual, API, or automation path, but every API or automation run must follow the CIB controlled launch record. The outside-git controlled launch record is confirmed, the local-only workspace has been initialized, and before-item-1 preflight has passed with `ERROR: 0`.
+Immediate next action: execute Decisions `0155`, `0158`, and `0160` at the
+planning/readiness level. Do not open Batch `0014` by habit. For the CIB/165
+case, use Meta Content Library / API as the preferred official research access
+route where approved, because the first-principle bottleneck is trusted,
+governed research access rather than raw data volume or model power. Check
+Meta Research Tools Manager eligibility, CASD review requirements, Content
+Library UI/API Threads coverage, export/download limits, cleanroom constraints,
+field availability, and retention rules before treating any source arm as
+available.
+
+The regular Threads API remains a bounded supplementary route only when the
+controlled launch record names the endpoint, permission, fields, date range,
+query count, and retention rule. If official access is unavailable or
+insufficient, draft a tightly capped controlled browser source-arm work order
+using the historical controlled-run procedure as a reference. Do not normalize
+personal-account browser crawling, one-second automated fetching, broad
+collection, model training, production detection, legal fraud claims, or raw
+evidence in git.
+
+Decisions `0132` through `0154` remain useful evidence for reviewer routing and
+Reviewer Assist. They do not solve the upstream problem of repeatedly finding
+new review-worthy Threads investment-scam candidates.
+
+Support tooling now exists for that next work: Evidence Layer v1 provides
+metadata-safe custody, SHA-256 integrity checks, and audit-chain verification;
+Closed-Loop Discovery v1 provides a synthetic query-to-reviewer-hour feedback
+loop; Advanced Discovery v2 adds prompt-shaped query generation, local
+embeddings, clustering, and contextual bandit learning; Concept Reasoning Layer
+v1 turns clusters into metadata-only behavioral concepts and routes weak matches
+to a novelty pool; Dynamic Intelligence Layer v1 adds concept graph, temporal,
+evolution, and adversarial-adaptation heuristics for exploration priorities;
+Predictive Simulation Layer v1 adds subtle concept mutation, simulated posts,
+risk scoring, and validation hooks. These are scaffolds for Reviewer Assist
+evaluation, not authorization for external collection, real LLM API calls,
+crawler expansion, raw evidence in git, final scam labels, or production
+detection.
+
+Breeze Guard 26 is recorded in [50-breeze-guard-26-candidate-baseline.md](50-breeze-guard-26-candidate-baseline.md)
+as a deferred safety-classifier candidate. It may support a later approved
+baseline or guardrail comparison on redacted text, but it should not drive the
+current access application and must not be described as a final scam detector.
+
+Meta Content Library / API is recorded in [51-meta-content-library-api-access.md](51-meta-content-library-api-access.md)
+as the preferred official research-grade route for public Threads research
+where access is approved. The application strategy is
+[53-first-principle-meta-research-tools-application-strategy.md](53-first-principle-meta-research-tools-application-strategy.md).
+The repo operating-version workflow is
+[52-automated-versioning-and-change-log.md](52-automated-versioning-and-change-log.md).
+
+Track A start checklist is complete and the zero-new-evidence dry-run report is [../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md](../reports/checkpoint-0081-track-a-zero-new-evidence-dry-run-report.md). Track B formal signoff is complete: legal/privacy status is `no_veto`, CIB/internal owner status is `accepted_boundary`, and [../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md](../reports/checkpoint-0081-track-b-capped-live-method-test-condition-checklist.md) is fully green. The formal signoff summary is [../reports/checkpoint-0081-track-b-formal-signoff-summary.md](../reports/checkpoint-0081-track-b-formal-signoff-summary.md). Day 0 start is recorded in [../reports/checkpoint-0081-track-b-day-0-start-record.md](../reports/checkpoint-0081-track-b-day-0-start-record.md). Day 1 intake start is recorded in [../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md](../reports/checkpoint-0081-track-b-day-1-source-arm-intake-start.md). Batch `0001` is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-checkpoint-seed-replay.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-primary-review.md), second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0001-second-review.md), batch `0002` source-arm selection is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-selection.md), batch `0002` candidate surfacing is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-hard-negative-probe-candidates.md), primary review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-primary-review.md), and second review is recorded in [../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md](../reports/checkpoint-0081-track-b-day-1-batch-0002-second-review.md).
+
+## Updated Track B Interpretation
+
+The forward-looking realignment record [../decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md](../decision-log/0129-realign-repo-to-labor-efficient-candidate-discovery.md) sets the labor-efficient candidate-discovery lens without rewriting the historical Track B `0129` candidate-surfacing record.
+
+Current Track B work should be interpreted as testing:
+
+1. candidate discovery yield;
+2. reviewer burden;
+3. hard-negative false-positive pressure;
+4. feasibility of AI/system-assisted reviewer workflow.
+
+The next research layer after Track B should be:
+
+- reviewer assist layer design;
+- schema prefill evaluation;
+- summary-assisted review evaluation;
+- priority-ranking evaluation;
+- labor-savings measurement;
+- decision-support UI/API demonstration.
+
+The design entry point for that layer is [62-reviewer-assist-layer-design.md](62-reviewer-assist-layer-design.md). Track B should produce the evidence needed to evaluate it: which reviewer tasks consumed the most time, which fields could be prefilled, which signal families were easiest to summarize, which hard-negative cases caused hesitation, and which source arms produced the best yield per reviewer hour.
+
+Use [../reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md](../reports/checkpoint-0081-track-b-dual-success-evaluation-plan.md) to evaluate Track B as a dual-success test: discovery effectiveness plus reviewer-labor efficiency. This plan does not change source-arm caps, human-reviewed caps, accepted strict-valid caps, or the intake window.
+
+Decision-support UI/API demonstrations are demonstration surfaces only. The research output is the validated method and workflow: which source arms produce review-worthy candidates, how much human labor is required, how much automation can safely reduce that labor, and where final human review remains mandatory.
+
+Forward-looking Track B and post-Track-B reports should include average review time per candidate, median review time, p95 review time, candidates reviewed per hour, percentage of fields auto-filled, percentage of fields manually corrected, summary usefulness rating, percentage of candidates requiring full original-thread reading, second-review rate, reviewer disagreement rate, hard-negative false-positive pressure, insufficient-evidence rate, review-worthy yield per source arm, and high-risk yield per reviewer hour.
+
+Decision `0118` is not execution authorization. Decision `0119` is also not execution authorization; it only opens the review package that asks whether decision `0118` can proceed toward a future execution-gate review. Decision `0120` opens final gate package preparation. Decision `0121` records final gate response: Track A is approved after start-checklist completion, and Track B is approved only after hard conditions pass. Decision `0122` records that those hard conditions are satisfied and that Track B may begin under locked caps, daily stop-rule checks, strict validation, raw-evidence exclusion, and aggregate-only reporting. Decision `0123` records Day 0 start and confirms no candidates were surfaced or reviewed during Day 0. Decision `0124` records Day 1 source-arm intake start. Decision `0125` records 6 checkpoint-derived seed replay candidates surfaced. Decision `0126` records primary review, 6 second-review requirements, and a pause on further checkpoint replay surfacing until second review. Decision `0127` records second review, 6 final review outcomes, 0 disagreements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records. Decision `0128` selects the hard-negative probe arm for batch `0002`. Decision `0129` surfaces 10 hard-negative probe candidates. Decision `0130` records primary review, 10 second-review requirements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records. Decision `0131` records second review, 10 final `non_scam` / `low` hard-negative outcomes, 0 disagreements, 0 hard-negative false-positive pressure, and 0 accepted strict-valid records. Decisions `0157` through `0160` add the deferred Breeze Guard classifier note, Meta Content Library / API route, repo versioning, and first-principle application strategy without authorizing new collection or automated adjudication.
+
+Do not open item `0082`, broad crawler expansion, embedding/model experiment, production detection, legal fraud determination, or another abstract package. Do not execute Track B outside decision `0122`, the locked caps, the approved source arms, or the stop-rule boundary. Historical post-0076 decision choices were:
+
+- `report_only_delivery`
+- `targeted_confirmed_pointer_tranche`
+- `calibration_only_browser_tranche`
+
+Decision 0058 selected a collection pause and checkpoint report v0.1 after checkpoint 0042. Decision 0059 then selected Option A for one bounded browser-session tranche. Decision 0060 closed that tranche after it reached 20 reviewed candidates and 10 selected items. Decision 0061 selected the 55-record checkpoint report package and blocked item `0056` until a new decision was recorded. Decision 0062 selects C2: keep collection paused and review/refine the 55-record checkpoint report package. Decision 0066 records that all reviewer roles approved the checkpoint 0055 package. Decision 0067 adds the canonical approved-package index at [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md). Decision 0072 closed run 0039 after aggressive browser-session search added no final scam/high-risk items. Decision 0073 adopts a dedupe-first/full-thread-ready gate before any future browser candidate promotion. Decision 0085 adopts query diversification as an acquisition rule for future search-based browser runs. Decision 0093 accepts local item `0076` for next-checkpoint inclusion as `non_scam` / `low` hard-negative calibration. Decision 0094 hardens report v0 around the post-0076 state and adds a bounded next-decision memo.
+
+The historical checkpoint 0055 approved package can still be used from:
+
+- [../reports/checkpoint-0055-approved-package-index.md](../reports/checkpoint-0055-approved-package-index.md)
+- [../reports/checkpoint-0055-executive-addendum.md](../reports/checkpoint-0055-executive-addendum.md)
+- [../reports/threads-scam-content-checkpoint-0055-v0.1.md](../reports/threads-scam-content-checkpoint-0055-v0.1.md)
+- [../reports/checkpoint-0076-hard-negative-addendum.md](../reports/checkpoint-0076-hard-negative-addendum.md)
+- [../reports/post-0076-next-decision-memo.md](../reports/post-0076-next-decision-memo.md)
+
+Do not continue collection by habit. Runs 0038 and 0039 show that approved browser-session search can produce strict-valid local candidate records, but it did not add final scam/high-risk items and can create duplicate/context-thin review load. Run 0045 and item 0076 show that browser-session work can still be useful for hard-negative calibration. Confirmed pointers remain the higher-yield path for rule-family learning if a later decision requests more scam/high-risk evidence. After run `0039`, do not promote additional browser-session candidates unless a new decision authorizes that work and the candidates pass the dedupe-first/full-thread-ready gate in [53-dedupe-first-full-thread-ready-gate.md](53-dedupe-first-full-thread-ready-gate.md). If a future browser run uses search queries, apply [54-browser-query-diversification-rule.md](54-browser-query-diversification-rule.md) before execution. Any future candidate-discovery experiment should measure discovery yield, duplicate load, full-thread availability, reviewer burden, false-positive pressure, false-negative pressure, and hard-negative protection. Use [57-investment-scam-discovery-signal-family-matrix.md](57-investment-scam-discovery-signal-family-matrix.md) to avoid collapsing the method back into repeated keyword search.
 
 The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run-results.md](28-synthetic-pilot-dry-run-results.md). Treat it as tooling QA only; it does not replace stakeholder authorization or real pilot evidence.
 
-The stakeholder outcome has been reported as approved. The launch packet is recorded under `governance/pilot-launch/` with status `go_with_limits`.
-
-For this CIB/165 case, use Meta Content Library / API as the preferred official research access route where available. The regular Threads API can support scoped keyword-search or account/reply workflows only when the controlled run record approves the endpoint, fields, query limits, and retention. See [51-meta-content-library-api-access.md](51-meta-content-library-api-access.md).
-
 The same-day research status and first-principles rationale are summarized in [../notes/2026-04-23-research-day-notes.md](../notes/2026-04-23-research-day-notes.md).
 
-Execute the pilot through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`.
+Historical pilot-launch materials remain available in [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`. They are governance history and design references, not the current post-0076 authorization state.
 
-Before any pilot labels are treated as baseline-ready, onboard annotators with [30-annotator-onboarding-quickstart.md](30-annotator-onboarding-quickstart.md) and run QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
+Before any future evidence tranche is treated as baseline-ready, require a new capped decision, controlled evidence handling, redaction, second review, strict validation, and QA through [31-annotation-quality-control-plan.md](31-annotation-quality-control-plan.md).
 
-Do not jump directly to a 500-item real dataset. The safe path to that scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md).
+Decision `0117` records technical/governance `approve_design_for_next_decision` for the checkpoint 0081 investment-scam discovery method design package. Decision `0118` opens the capped method-test decision draft. Decision `0119` opens a review-only package for decision `0118` and separates technical/governance review from legal/privacy review. Decision `0120` opens final execution authorization package preparation with Track A and Track B separated. Decision `0121` records `approve_track_a_now_track_b_after_conditions`. Decision `0122` records Track B start authorization after formal signoff. Decision `0123` records Track B Day 0 operational start. Decision `0124` records Track B Day 1 source-arm intake start. Decision `0125` records Track B batch `0001`. Decision `0126` records Track B batch `0001` primary review. Decision `0127` records Track B batch `0001` second review. Decision `0128` selects Track B batch `0002` hard-negative probe arm. Decision `0129` records Track B batch `0002` candidate surfacing. Decision `0130` records Track B batch `0002` primary review. Decision `0131` records Track B batch `0002` second review. Decision `0132` records the v2 context-gating policy from Batch `0008`. Decision `0133` opens Batch `0009`. Decision `0134` records Batch `0009` as supporting the context-gating policy. Decision `0135` adds Evidence Layer v1 support tooling. Decision `0136` adds a synthetic closed-loop discovery runner. Decision `0137` adds Advanced Discovery v2. Decision `0138` adds Concept Reasoning Layer v1. Decision `0139` adds Dynamic Intelligence Layer v1. Decision `0140` adds Predictive Simulation Layer v1. Decision `0141` adds Defensive Self-Play Layer v1. Decision `0142` adds Adaptive Policy Deployment Loop v1. Decision `0143` records that current cases are partial fragments. Decision `0144` records automatic or assisted discovery as the single highest priority. Decision `0145` opens the Reviewer Assist labor-savings evaluation package for that discovery method. Decision `0146` opens the metadata-only execution workbench. Decision `0147` records the aggregate-only result and selects `expand_assist_evaluation`. Decision `0148` opens the next bounded expansion slice on Batch `0008`. Decision `0149` records Batch `0011` as an empirical metadata-only assisted-review result and selects bounded `expand_assist_evaluation`. Decision `0150` opens Batch `0012` as a thread-required context-gate revision. Decision `0155` opens Discovery Method v1 source-arm readiness and records the API-first / controlled-browser-fallback access boundary. Decision `0158` upgrades that access language for the CIB/165 case: Meta Content Library / API is the preferred official research route where approved, while the regular Threads API is a bounded supplementary route.
 
-The MVP should include:
+The next repo action is not to polish `0118`, `0120`, another package, another
+Reviewer Assist batch, or another generic source arm. Use Decision `0155`,
+[73-authorized-threads-discovery-method-v1.md](73-authorized-threads-discovery-method-v1.md),
+[../templates/discovery_source_arm_work_order.md](../templates/discovery_source_arm_work_order.md),
+[../data-contracts/discovery_candidate_v1.schema.yaml](../data-contracts/discovery_candidate_v1.schema.yaml),
+and [../experiments/modality-studies/0014-discovery-source-arm-viability-v1.md](../experiments/modality-studies/0014-discovery-source-arm-viability-v1.md)
+to test source-arm readiness before any new live evidence work.
+
+The next repo action also must avoid overfitting to current case fragments. Reviewer Assist and policy-routing work should help discover, triage, and evaluate new review-worthy candidates under governed source boundaries. Existing reviewed cases should remain seeds, hard-negative controls, and evaluation references, not the assumed universe of Threads investment-scam behavior.
+
+Do not jump directly to a broad crawler expansion, 500-item dataset, embedding experiment, or model-training pass. The safe path to larger scale is documented in [32-500-item-expansion-plan.md](32-500-item-expansion-plan.md), but it depends on checkpoint review and an explicit continuation decision.
+
+## Historical Phase-1 Design Reference
+
+The original phase-1 MVP design remains useful as research architecture, but it does not authorize new post-0076 collection. If a later decision reopens evidence work, the design should include:
 
 - Structured dataset schema.
 - Annotation guideline.
@@ -44,12 +228,6 @@ The MVP should include:
 - Human-review-oriented evaluation.
 
 Do not add model-assisted explanation tests in the current launch. Revisit only after Phase 1 produces governed real evidence and a later decision record authorizes that scope.
-
-Breeze Guard 26 is recorded as a deferred Taiwan-localized safety-classifier candidate in [50-breeze-guard-26-candidate-baseline.md](50-breeze-guard-26-candidate-baseline.md). It may be useful later as a controlled comparison against the transparent rule baseline, but it is not part of the current launch and should not be treated as a final scam, legal, financial, or medical truth adjudicator.
-
-Repo-level versioning now starts at `v1.2.6`; use [52-automated-versioning-and-change-log.md](52-automated-versioning-and-change-log.md) and `scripts/record_version_update.py` for future governed repository updates. Keep this separate from dataset versions, schema versions, annotation guideline versions, and controlled API run records.
-
-Before submitting through Meta Research Tools Manager, use [53-first-principle-meta-research-tools-application-strategy.md](53-first-principle-meta-research-tools-application-strategy.md). The application should lead with public-interest research, official access governance, metadata-first reviewer support, and over-enforcement risk reduction, not app-building, account policing, or classifier strength.
 
 ## Why This Is The Best First Path
 
@@ -68,14 +246,13 @@ This path creates learning quickly:
 Defer:
 
 - Full Meta cross-platform integration.
-- Automated collection.
+- Unscoped automated collection.
 - Long video.
 - Heavy short-video analysis.
 - Deepfake detection as a mainline workstream.
 - Production deployment.
 - Dashboard or platform engineering.
 - Large custom model training.
-- Breeze Guard 26 or other classifier-assisted review until governed evidence, stable labels, and an explicit later decision record authorize that test.
 
 ## Phase-1 MVP Definition
 

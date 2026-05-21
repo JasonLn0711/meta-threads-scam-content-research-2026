@@ -1,0 +1,102 @@
+schema_version: exploration_batch_v1
+batch_id: batch-0004-low-coverage-high-svs
+purpose: small manual-assisted exploration batch for low-coverage high-SVS signals
+selected_task_ids:
+- EXP_0001
+- EXP_0002
+selected_tasks:
+- task_id: EXP_0001
+  gap_type: low_coverage_high_potential
+  hypothesis: '`成果展示` has high early yield but too little coverage; a small manual-assisted
+    batch can test whether it scales without increasing reviewer burden.'
+  source_hint: result-display candidate surface
+  search_cues:
+  - result display cue
+  - testimonial or proof-of-outcome structure
+  - funnel-adjacent evidence
+  priority: high
+  reason:
+  - reviewed_count=1
+  - yield_rate=1.0
+  - svs=0.0068438
+  - low coverage with high potential
+  signal_hint: 成果展示
+  expected_behavior: result_display_anchor
+  expected_impact:
+    clustering: test whether the signal forms a stable sparse cluster across more
+      candidates
+    reviewer_effort: measure whether high-yield signal remains low-burden in a small
+      batch
+  rank:
+    gap_score: 2.5
+    coverage_score: 2
+    impact_score: 3.0
+- task_id: EXP_0002
+  gap_type: low_coverage_high_potential
+  hypothesis: '`保證收益` has high early yield but too little coverage; a small manual-assisted
+    batch can test whether it scales without increasing reviewer burden.'
+  source_hint: value-claim candidate surface
+  search_cues:
+  - guarantee-or-certainty cue
+  - low-friction value promise
+  - funnel-adjacent evidence
+  priority: high
+  reason:
+  - reviewed_count=1
+  - yield_rate=1.0
+  - svs=0.0068438
+  - low coverage with high potential
+  signal_hint: 保證收益
+  expected_behavior: guarantee_or_certainty_anchor
+  expected_impact:
+    clustering: test whether the signal forms a stable sparse cluster across more
+      candidates
+    reviewer_effort: measure whether high-yield signal remains low-burden in a small
+      batch
+  rank:
+    gap_score: 2.5
+    coverage_score: 2
+    impact_score: 3.0
+candidate_stub_count: 10
+candidate_stub_ids:
+- STUB_0001
+- STUB_0002
+- STUB_0003
+- STUB_0004
+- STUB_0005
+- STUB_0006
+- STUB_0007
+- STUB_0008
+- STUB_0009
+- STUB_0010
+before_metrics:
+  discrepancy_case_count: 0
+  target_signals:
+    成果展示:
+      reviewed_count: 1
+      yield_rate: 1.0
+      svs: 0.0068438
+    保證收益:
+      reviewed_count: 1
+      yield_rate: 1.0
+      svs: 0.0068438
+success_checks:
+- Target signal SVS remains high or changes in an explainable way after new metadata
+  is reviewed.
+- '`review_stable_funnel_anchor` remains useful or produces a clear failure mode.'
+- New missed-pattern discrepancies, if any, produce feature hypotheses rather than
+  schema changes.
+- 'Reviewer effort stays bounded: 10 stubs maximum for this batch.'
+stop_rules:
+- Stop if any step would require raw Threads content in git.
+- Stop if any step would require PII, handles, raw URLs, screenshots, browser exports,
+  credentials, or controlled-store paths.
+- Stop if manual-assisted review cannot keep evidence metadata-only.
+- Stop if reviewer burden exceeds the planned 10-stub batch.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  embedding_used_for_decision: false
+  collection_method: safe / manual-assisted
+  this_file_authorizes_collection: false

@@ -1,0 +1,62 @@
+schema_version: batch_run_log_v1
+batch_id: ""
+experiment_id: ""
+status: planned
+record_type: actual_run_log
+no_fake_results: true
+principle: maximize high-value candidate discovery per unit reviewer effort
+goal_not: scam detection or legal fraud determination
+created_at: ""
+updated_at: ""
+inputs:
+  experiment_plan: ""
+  exploration_tasks: ""
+  candidate_stubs: ""
+  intake_worksheet: ""
+  reviewer_packet: ""
+  conversion_report: ""
+  candidate_records: ""
+planned:
+  candidate_count: 0
+  arms: []
+  hypothesis: ""
+  expected_measurements: []
+observed:
+  candidate_count_after_run: null
+  reviewed_count: null
+  scam_count: null
+  non_scam_count: null
+  uncertain_count: null
+  yield_rate: null
+  information_density: null
+  review_time: null
+  cognitive_load: null
+  svs: null
+conversion:
+  intake_count: null
+  converted_count: null
+  blocked_count: null
+  written_count: null
+  status: ""
+reviewer_burden:
+  average_review_time_seconds: null
+  needs_thread_rate: null
+  second_review_rate: null
+  uncertainty_rate: null
+signal_results: []
+cluster_results:
+  sparse_summary: ""
+  embedding_summary: ""
+  discrepancy_summary: ""
+failure_modes: []
+decision_implication: ""
+next_action: ""
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  candidate_records_fabricated: false
+  embedding_used_for_decision: false
+  sparse_schema_auto_promoted: false
+  human_review_required: true

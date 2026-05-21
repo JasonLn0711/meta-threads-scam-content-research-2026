@@ -1,0 +1,42 @@
+schema_version: candidate_record_v2
+candidate_id: batch-0007-result-display-context-split_0006
+batch_id: batch-0007-result-display-context-split
+sparse_vector:
+  schema_version: sparse_features_v2
+  features:
+    誘導聯絡: 1
+    保證收益: 0
+    社群導流: 1
+    情緒操控: 0
+    成果展示: 1
+    reply_funnel: 1
+    needs_thread: 1
+    review_stable_funnel_anchor: 0
+embedding:
+  model: none
+  dim: 0
+  vector: []
+review:
+  decision: uncertain
+  confidence: 0.56
+  review_time_seconds: 48.0
+  second_review_required: true
+source_stub:
+  candidate_stub_id: STUB_0007_B_03
+  task_id: EXP_0007_B
+  signal_hint: 成果展示
+  expected_behavior: result_display_group_context_required
+structured_hints:
+  common_behaviors:
+  - 多貼文導流
+  structural_patterns:
+  - 分段轉換
+  reviewer_signals:
+  - 必須串聯
+  hard_negative_contrast: 單點轉換
+  metadata_only_note: metadata_only
+metadata_guardrails:
+  raw_threads_content_excluded: true
+  pii_excluded: true
+  only_structured_metadata: true
+  human_review_completed: true

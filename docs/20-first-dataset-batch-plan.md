@@ -59,6 +59,8 @@ Use mixed collection only:
 
 Do not use crawlers, scrapers, browser automation, bulk export, or landing-page crawling unless approval is recorded in `governance/data-governance.md`.
 
+For the current CIB-authorized pilot, API/automation approval is recorded and the next practical source-acquisition path is a one-item controlled low-speed crawler rehearsal under Decision 0022. That rehearsal must happen before the first 10-15 item checkpoint and must not become bulk collection.
+
 Use `docs/34-source-intake-and-sampling-frame.md` before collection to choose source candidates and build the sampling frame. Then complete `docs/35-real-pilot-readiness-review.md`, the controlled launch record outside git, local workspace initialization, item-1 preflight, manual rehearsal, and calibration before any real pilot collection begins. Use `docs/23-collection-and-redaction-sop.md` and `templates/collection_log_template.csv` for the actual collection workflow.
 
 ## Evidence Preservation

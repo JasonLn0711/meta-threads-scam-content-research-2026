@@ -1,0 +1,578 @@
+schema_version: reviewer_assist_evaluation_v1
+evaluation_id: reviewer-assist-labor-savings-0010
+decision_id: "0146"
+status: completed_human_fill
+completed_at: "2026-05-05"
+source_work_order: data/reviewer_assist_eval/batch_0010_work_order.yaml
+source_manual_baseline_batch: batch-0009-context-gating-policy-check
+
+rating_scale:
+  summary_usefulness_rating: "1 to 5, where 5 means highly useful for faster reviewer orientation"
+  summary_omission_risk: "low | medium | high"
+  schema_prefill_status: "accepted | accepted_with_minor_correction | needs_major_correction | unusable"
+  signal_suggestion_status: "accepted | accepted_with_minor_correction | rejected"
+  hard_negative_warning_status: "accepted | not_applicable | over_warned | missed_warning"
+  priority_explanation_status: "accepted | accepted_with_minor_correction | rejected"
+
+candidate_entries:
+  - workbench_id: RA_0010_0001
+    source_candidate_id: batch-0009-context-gating-policy-check_0001
+    source_stub_id: STUB_0009_A_01
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.95
+      review_time_seconds: 31.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 23.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0002
+    source_candidate_id: batch-0009-context-gating-policy-check_0002
+    source_stub_id: STUB_0009_A_02
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_group_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.93
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition
+      signal_family_suggestions:
+        - 保證收益
+        - 社群導流
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 1
+        社群導流: 1
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 25.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0003
+    source_candidate_id: batch-0009-context-gating-policy-check_0003
+    source_stub_id: STUB_0009_A_03
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_reply_funnel_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.94
+      review_time_seconds: 32.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 22.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0004
+    source_candidate_id: batch-0009-context-gating-policy-check_0004
+    source_stub_id: STUB_0009_A_04
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_stable_anchor_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.90
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition
+      signal_family_suggestions:
+        - 保證收益
+        - review_stable_funnel_anchor
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate_with_stable_anchor
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 27.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0005
+    source_candidate_id: batch-0009-context-gating-policy-check_0005
+    source_stub_id: STUB_0009_A_05
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_with_result_support_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.96
+      review_time_seconds: 35.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition_with_result_support
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - 成果展示
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate_with_result_support
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 26.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0006
+    source_candidate_id: batch-0009-context-gating-policy-check_0006
+    source_stub_id: STUB_0009_A_06
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_group_with_result_support_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.95
+      review_time_seconds: 37.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition_with_group_and_result_support
+      signal_family_suggestions:
+        - 保證收益
+        - 社群導流
+        - 成果展示
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 1
+        社群導流: 1
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate_with_private_channel_transition
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 28.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0007
+    source_candidate_id: batch-0009-context-gating-policy-check_0007
+    source_stub_id: STUB_0009_A_07
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_contact_emotional_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.97
+      review_time_seconds: 33.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_executable_transition_with_emotional_pressure
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - 情緒操控
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 1
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 1
+      hard_negative_warning: not_applicable
+      priority_explanation: fast_lane_high_value_candidate_with_pressure_cue
+      missing_evidence_note: no_thread_required_for_metadata_triage
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 24.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 5
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: not_applicable
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0008
+    source_candidate_id: batch-0009-context-gating-policy-check_0008
+    source_stub_id: STUB_0009_A_08
+    task_id: EXP_0009_A
+    routing_lane: strong_source_priority
+    signal_hint: 保證收益
+    expected_behavior: guarantee_transition_borderline_fast_lane
+    manual_baseline:
+      decision: scam
+      confidence: 0.86
+      review_time_seconds: 40.0
+      second_review_required: true
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: guarantee_transition_borderline_fast_lane
+      signal_family_suggestions:
+        - 保證收益
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 1
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 0
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: borderline_fast_lane_requires_second_review
+      priority_explanation: fast_lane_candidate_with_weaker_stable_anchor
+      missing_evidence_note: stable_funnel_anchor_absent
+      second_review_suggestion: true
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 34.0
+      assisted_human_final_label_or_not_reviewable: scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: stable_anchor_boundary
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted_with_minor_correction
+      second_review_required: true
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0009
+    source_candidate_id: batch-0009-context-gating-policy-check_0009
+    source_stub_id: STUB_0009_B_01
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.91
+      review_time_seconds: 34.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 24.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0010
+    source_candidate_id: batch-0009-context-gating-policy-check_0010
+    source_stub_id: STUB_0009_B_02
+    task_id: EXP_0009_B
+    routing_lane: result_display_clean_holdout
+    signal_hint: 成果展示
+    expected_behavior: clean_result_display_holdout
+    manual_baseline:
+      decision: non_scam
+      confidence: 0.89
+      review_time_seconds: 36.0
+      second_review_required: false
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: clean_result_display_holdout
+      signal_family_suggestions:
+        - 成果展示
+      schema_prefill_draft:
+        誘導聯絡: 0
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 0
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: hard_negative_boundary
+      priority_explanation: calibration_sample_low_priority
+      missing_evidence_note: no_missing_metadata_for_clean_holdout
+      second_review_suggestion: false
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 25.0
+      assisted_human_final_label_or_not_reviewable: non_scam
+      summary_usefulness_rating: 4
+      summary_omission_risk: low
+      schema_prefill_status: accepted
+      schema_prefill_correction_category: none
+      signal_suggestion_status: accepted
+      signal_correction_category: none
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: false
+      insufficient_evidence: false
+      raw_evidence_excluded_from_git: true
+
+  - workbench_id: RA_0010_0011
+    source_candidate_id: batch-0009-context-gating-policy-check_0011
+    source_stub_id: STUB_0009_C_01
+    task_id: EXP_0009_C
+    routing_lane: result_display_low_context_transition
+    signal_hint: 成果展示
+    expected_behavior: result_display_low_context_boundary_probe
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.57
+      review_time_seconds: 42.0
+      second_review_required: true
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: visible_transition_low_context
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 0
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: possible_overgeneralization_from_result_display
+      priority_explanation: boundary_probe_not_fast_priority
+      missing_evidence_note: no_explicit_guarantee_observed_in_metadata
+      second_review_suggestion: true
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 34.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 4
+      summary_omission_risk: medium
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: boundary_context_check
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: result_display_overbreadth
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true
+  - workbench_id: RA_0010_0012
+    source_candidate_id: batch-0009-context-gating-policy-check_0012
+    source_stub_id: STUB_0009_D_01
+    task_id: EXP_0009_D
+    routing_lane: result_display_thread_required
+    signal_hint: 成果展示
+    expected_behavior: result_display_thread_required_diagnostic_probe
+    manual_baseline:
+      decision: uncertain
+      confidence: 0.50
+      review_time_seconds: 58.0
+      second_review_required: true
+    assisted_review_status: completed
+    assist_outputs:
+      candidate_summary: thread_context_required
+      signal_family_suggestions:
+        - 成果展示
+        - 誘導聯絡
+        - reply_funnel
+        - needs_thread
+      schema_prefill_draft:
+        誘導聯絡: 1
+        保證收益: 0
+        社群導流: 0
+        情緒操控: 0
+        成果展示: 1
+        reply_funnel: 1
+        needs_thread: 1
+        review_stable_funnel_anchor: 0
+      hard_negative_warning: insufficient_metadata_without_thread
+      priority_explanation: slow_context_probe_not_priority_lane
+      missing_evidence_note: thread_dependency_blocks_confident_single-item_decision
+      second_review_suggestion: true
+    assisted_reviewer_fields:
+      assisted_review_time_seconds: 53.0
+      assisted_human_final_label_or_not_reviewable: uncertain
+      summary_usefulness_rating: 3
+      summary_omission_risk: high
+      schema_prefill_status: accepted_with_minor_correction
+      schema_prefill_correction_category: thread_dependency
+      signal_suggestion_status: accepted_with_minor_correction
+      signal_correction_category: needs_thread_boundary
+      hard_negative_warning_status: accepted
+      priority_explanation_status: accepted
+      second_review_required: true
+      insufficient_evidence: true
+      raw_evidence_excluded_from_git: true

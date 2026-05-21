@@ -10,7 +10,7 @@
 
 ## Proposed Source
 
-- Source type: `stakeholder_provided` / `manual_public` / `api_authorized` / `other_approved`
+- Source type: `stakeholder_provided` / `manual_public` / `api_authorized` / `official_threads_api_keyword_search` / `controlled_browser_run_scoped` / `other_approved`
 - Platform: Threads
 - Official Meta route: `meta_content_library_ui` / `meta_content_library_api` / `threads_api_keyword_search` / not_applicable
 - Access environment:
@@ -76,6 +76,9 @@ Mark each as approved, denied, pending, or not needed.
 ## Platform And Legal Review
 
 - Platform terms reviewed:
+- Official API permissions and endpoint coverage:
+- Browser run-scoped decision, if applicable:
+- Confirmation this is not standing personal-account crawler authorization:
 - Legal/policy reviewer:
 - IRB or ethics-review status:
 - Human-subjects position:

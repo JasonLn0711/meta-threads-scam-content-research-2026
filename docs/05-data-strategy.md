@@ -78,7 +78,9 @@ Before using stakeholder samples, confirm:
 
 ## Legal And Platform Cautions
 
-No automated Threads or Meta collection is approved at repo initialization. Any crawler, scraper, browser automation, or bulk download must be authorized and recorded in `governance/data-governance.md`.
+No automated Threads or Meta collection was approved at repo initialization. Any crawler, scraper, browser automation, or bulk download must be authorized and recorded in `governance/data-governance.md`.
+
+For the current CIB-authorized pilot, Decision 0018 authorizes API and research-required automation under the controlled launch record. Decision 0022 accepts only a one-item controlled low-speed crawler rehearsal as the next practical acquisition path because CIB redacted handoff and manual controlled sampling are unavailable.
 
 ## Sampling Plan
 

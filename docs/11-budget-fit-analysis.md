@@ -2,7 +2,9 @@
 
 ## Budget Frame
 
-The practical budget is approximately NTD 1.8 million. This supports a focused research MVP, not a production-grade detection platform.
+The practical budget is approximately NTD 1.8 million. This supports a focused research MVP for designing a governed automatic or assisted Threads investment-scam candidate-discovery method, not a production-grade detection platform.
+
+All budget choices should be judged by whether they improve that discovery method. Work that does not support automatic or assisted discovery should be deferred even if it looks useful in isolation.
 
 ## Realistic Under NTD 1.8M
 
@@ -28,13 +30,14 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 
 ## What To Do First
 
-1. Lock taxonomy and annotation rules.
-2. Build the dataset schema.
-3. Collect a small, balanced, legally safe sample.
-4. Annotate the first batch.
-5. Run text-only rules.
-6. Add OCR, comments, and link-signal ablations.
-7. Write a decision memo.
+1. Define the governed automatic or assisted discovery method and source-arm boundaries.
+2. Check official Threads API access, permissions, endpoint coverage, token handling, field limits, and rate or usage rules.
+3. If official API access is unavailable or insufficient, prepare only a run-scoped controlled browser fallback; do not normalize personal-account crawling.
+4. Lock the minimum taxonomy, annotation rules, and schema needed to evaluate that method.
+5. Use small, legally safe slices to test whether the method surfaces review-worthy candidates beyond known fragments.
+6. Measure reviewer burden, hard-negative pressure, duplicate load, and evidence sufficiency.
+7. Add OCR, comments/replies, visible-link, and reviewer-assist support only when they improve discovery yield or reduce review burden.
+8. Write a decision memo on whether to expand, revise, or pause the discovery method.
 
 ## Explicitly Postpone
 
@@ -42,6 +45,8 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 - Long video until there is a separate budget and annotation plan.
 - Deepfake indicators until there is a concrete stakeholder sample and expert review path.
 - Unscoped automated collection outside the CIB controlled launch record.
+- Personal-account browser crawling as a standing method.
+- One-second browser fetching as a default control.
 - Classifier training until labels are stable.
 - LLM-assisted review until Phase 1 produces governed real evidence and a later decision record authorizes that scope.
 - Breeze Guard 26 or any other external safety-classifier baseline until redacted governed evidence, stable labels, and a separate classifier-testing decision exist.
@@ -68,4 +73,4 @@ The practical budget is approximately NTD 1.8 million. This supports a focused r
 
 ## Budget Guardrail
 
-If an activity does not improve evidence quality, annotation reliability, signal comparison, or narrowing decisions, it should not be funded in phase 1.
+If an activity does not improve governed automatic or assisted candidate discovery, evidence quality for that discovery method, annotation reliability, signal comparison, reviewer burden, or narrowing decisions, it should not be funded in phase 1.

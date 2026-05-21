@@ -56,17 +56,16 @@ Use one row per issue. Severity values: `blocker`, `required_revision`, `clarifi
 | Are controlled launch details outside git clearly required before item 1? | `yes` / `no` |  |
 | Are workspace initialization and item-1 preflight clear? | `yes` / `no` |  |
 
-## Dataset And Annotation Review
+## Current Post-0076 Package Review
 
 | Question | Answer | Notes |
 |---|---|---|
-| Is the `thread_item` unit understandable? | `yes` / `no` |  |
-| Are the four primary labels understandable? | `yes` / `no` |  |
-| Are `uncertain` and `insufficient_evidence` distinct enough? | `yes` / `no` |  |
-| Are risk levels and signal tags useful for pilot review? | `yes` / `no` |  |
-| Is the 50-item pilot composition defensible? | `yes` / `no` |  |
-| Is the 10-15 item checkpoint clear as a gate before completing 50? | `yes` / `no` |  |
-| Are rehearsal and calibration steps clear enough to execute? | `yes` / `no` |  |
+| Does the package clearly identify checkpoint 0055 as the canonical approved package? | `yes` / `no` |  |
+| Does the package clearly identify item 0076 as a narrow local hard-negative addendum? | `yes` / `no` |  |
+| Does the package avoid treating strict validation as evidence approval? | `yes` / `no` |  |
+| Does the package avoid authorizing item `0077` or any new collection by default? | `yes` / `no` |  |
+| Does the package clearly separate current decision state from historical pilot design? | `yes` / `no` |  |
+| Are the three current path options understandable and mutually exclusive? | `yes` / `no` |  |
 
 ## Baseline And Evaluation Review
 
@@ -77,17 +76,27 @@ Use one row per issue. Severity values: `blocker`, `required_revision`, `clarifi
 | Are reviewer burden and explainability included? | `yes` / `no` |  |
 | Are OCR, replies, and links treated as testable additions rather than assumptions? | `yes` / `no` |  |
 
-## Pilot Decision Recommendation
+## Post-0076 Path Recommendation
 
 Choose one:
 
-- `go`
-- `go_with_limits`
-- `no_go`
-- `revise_first`
-- `not_ready_to_decide`
+- `report_only_delivery`
+- `targeted_confirmed_pointer_tranche`
+- `calibration_only_browser_tranche`
 
-Limits or required conditions:
+Selected path:
+
+```text
+
+```
+
+Required conditions before delivery:
+
+```text
+
+```
+
+Required conditions before any new evidence:
 
 ```text
 

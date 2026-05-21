@@ -1,0 +1,169 @@
+schema_version: batch_run_log_v1
+batch_id: batch-0005-guarantee-vs-result-display-contrast
+experiment_id: 0005-guarantee-vs-result-display-contrast
+status: completed
+record_type: actual_run_log
+no_fake_results: true
+principle: maximize high-value candidate discovery per unit reviewer effort
+goal_not: scam detection or legal fraud determination
+created_at: "2026-05-04"
+updated_at: "2026-05-04"
+inputs:
+  experiment_plan: experiments/batch_variants/0005-guarantee-vs-result-display-contrast.md
+  exploration_tasks: exploration/tasks/batch_0005_contrast.yaml
+  candidate_stubs: data/candidate_stubs/batch_0005.yaml
+  intake_worksheet: data/candidate_intake/batch_0005_intake.yaml
+  reviewer_packet: data/candidate_intake/batch_0005_reviewer_packet.md
+  conversion_report: data/candidate_intake/batch_0005_conversion_report.yaml
+  candidate_records: data/candidates/batch_0005/*.yaml
+  signal_ranking_after_run: metrics/signal_scores/latest_ranking.yaml
+  contrast_scores_after_run: metrics/contrast_scores/latest.yaml
+planned:
+  candidate_count: 10
+  arms:
+  - "A: 保證收益 + funnel/contact structure"
+  - "B: 成果展示 without explicit 保證收益"
+  hypothesis: 保證收益 paired with executable transition structure should preserve
+    higher value per reviewer effort than broad 成果展示 without explicit 保證收益.
+  expected_measurements:
+  - SVS by batch and signal
+  - contrast arm yield
+  - review time by arm
+  - needs_thread rate by arm
+  - second-review rate by arm
+  - uncertainty rate by arm
+  - sparse cluster separation
+  - discrepancy changes
+conversion:
+  intake_count: 10
+  converted_count: 10
+  blocked_count: 0
+  written_count: 10
+  status: ready
+observed:
+  candidate_count_after_run: 24
+  reviewed_count: 10
+  scam_count: 4
+  non_scam_count: 2
+  uncertain_count: 4
+  yield_rate: 0.4
+  information_density: 0.462319
+  review_time: 41.4
+  cognitive_load: 1.68
+  svs: 0.002658839
+arm_results:
+- arm: A
+  definition: 保證收益 + funnel/contact structure
+  reviewed_count: 5
+  scam_count: 4
+  non_scam_count: 0
+  uncertain_count: 1
+  yield_rate: 0.8
+  information_density: 0.682609
+  review_time: 38.4
+  cognitive_load: 1.4
+  svs: 0.010157867
+  needs_thread_rate: 0.2
+  second_review_rate: 0.2
+  average_confidence: 0.868
+- arm: B
+  definition: 成果展示 without explicit 保證收益
+  reviewed_count: 5
+  scam_count: 0
+  non_scam_count: 2
+  uncertain_count: 3
+  yield_rate: 0.0
+  information_density: 0.242029
+  review_time: 44.4
+  cognitive_load: 1.96
+  svs: 0.0
+  needs_thread_rate: 0.8
+  second_review_rate: 0.6
+  average_confidence: 0.692
+signal_results:
+- signal_id: 保證收益
+  before_reviewed_count: 6
+  after_reviewed_count: 11
+  before_svs: 0.015351855
+  after_svs: 0.012867571
+  observed_change: 0.84x of previous SVS
+  after_yield_rate: 0.909091
+- signal_id: 成果展示
+  before_reviewed_count: 9
+  after_reviewed_count: 15
+  before_svs: 0.00358105
+  after_svs: 0.002215116
+  observed_change: 0.62x of previous SVS
+  after_yield_rate: 0.333333
+- signal_id: needs_thread
+  after_reviewed_count: 13
+  after_svs: 0.000229419
+  interpretation: needs_thread is a burden marker, not a discovery target.
+cluster_results:
+  sparse_summary: Sparse clustering now has 2 clusters. One large mixed cluster
+    contains most Batch 0004 and Batch 0005 records; the second isolates the A05
+    burden case with a synthetic candidate through needs_thread + 情緒操控.
+  embedding_summary: Batch 0005 records have no embedding vectors; embedding remains
+    discovery-only and skipped these records.
+  discrepancy_summary: Two over_generalization cases remain, both driven by synthetic
+    embedded candidates. No missed_pattern groups met the feature-discovery filter.
+contrast_aware_results:
+  scoring_output: metrics/contrast_scores/latest.yaml
+  lane_count: 5
+  strong_source_priority:
+    reviewed_count: 10
+    scam_count: 10
+    yield_rate: 1.0
+    review_time: 39.4
+    cognitive_load: 1.27
+    svs: 0.016682973
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    routing_action: fast_priority_review
+  result_display_context_review:
+    reviewed_count: 9
+    scam_count: 0
+    non_scam_count: 2
+    uncertain_count: 7
+    yield_rate: 0.0
+    review_time: 45.333333
+    cognitive_load: 2.305556
+    svs: 0.0
+    needs_thread_rate: 1.0
+    second_review_rate: 0.777778
+    uncertainty_rate: 0.777778
+    routing_action: slow_context_review
+  result_display_contrast_holdout:
+    reviewed_count: 1
+    non_scam_count: 1
+    needs_thread_rate: 0.0
+    second_review_rate: 0.0
+    routing_action: contrast_or_hard_negative_pool
+  recommendations:
+  - Prioritize strong_source_priority candidates when reviewer capacity is constrained.
+  - Route result_display_context_review candidates to slower context review instead
+    of fast priority review.
+  - Keep result_display_contrast_holdout candidates as hard-negative or boundary
+    calibration material.
+failure_modes:
+- Batch-level SVS decreased versus Batch 0004 because Batch 0005 intentionally included
+  contrast and hard-negative/uncertain cases.
+- Broad 成果展示 remained ambiguous and burden-heavy without explicit 保證收益.
+- Sparse clustering became broad enough that cluster separation should not be treated
+  as settled.
+- Missing embeddings prevent discovery-layer comparison for Batch 0005 records.
+decision_implication: A arm and the broader strong_source_priority lane are better
+  source arms for high-value candidate discovery per reviewer effort. B arm should
+  remain a context-dependent contrast source, not a direct negative class and not
+  a primary high-yield source.
+next_action: Use contrast-aware routing in the next small exploration loop while
+  keeping any sparse-schema promotion human-reviewed.
+guardrails:
+  external_systems_accessed: false
+  raw_threads_content_included: false
+  pii_included: false
+  urls_handles_screenshots_or_browser_artifacts_included: false
+  candidate_records_fabricated: false
+  embedding_used_for_decision: false
+  sparse_schema_auto_promoted: false
+  human_review_required: true

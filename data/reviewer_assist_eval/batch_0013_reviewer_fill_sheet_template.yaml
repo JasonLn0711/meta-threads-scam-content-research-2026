@@ -1,0 +1,274 @@
+schema_version: reviewer_assist_context_gate_reviewer_fill_sheet_v1
+evaluation_id: reviewer-assist-context-gate-bounded-reuse-0013
+decision_id: "0154"
+source_rules: data/reviewer_assist_eval/batch_0013_reviewer_rules.md
+source_controller_work_order: data/reviewer_assist_eval/batch_0013_work_order.yaml
+status: reviewer_fill_template
+reviewer_visibility:
+  prior_baseline_outcomes_hidden: true
+  raw_evidence_forbidden_in_git: true
+  human_next_action_required: true
+  human_final_label_required_only_if_metadata_sufficient: true
+rating_scale:
+  context_gate_usefulness_rating: "1 to 5, where 5 means highly useful for faster context routing"
+  context_gate_omission_risk: "low | medium | high"
+  context_gate_status: "accepted | accepted_with_minor_correction | needs_major_correction | unusable"
+  minimal_context_request_status: "accepted | accepted_with_minor_correction | over_requested | under_requested | not_applicable"
+  over_request_risk: "low | medium | high"
+  under_request_risk: "low | medium | high"
+candidate_entries:
+  - workbench_id: RA_0013_0001
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0012
+      source_stub_id: STUB_0009_D_01
+      task_id: EXP_0009_D
+      routing_lane: result_display_thread_required
+      slice_role: target_thread_required
+      signal_hint: 成果展示
+      expected_behavior: thread_required_early_gate_diagnostic
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0002
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0011
+      source_stub_id: STUB_0009_C_01
+      task_id: EXP_0009_C
+      routing_lane: result_display_low_context_transition
+      slice_role: boundary_control
+      signal_hint: 成果展示
+      expected_behavior: boundary_control_contact_low_context
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0003
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0009
+      source_stub_id: STUB_0009_B_01
+      task_id: EXP_0009_B
+      routing_lane: result_display_clean_holdout
+      slice_role: hard_negative_control
+      signal_hint: 成果展示
+      expected_behavior: hard_negative_clean_holdout_primary
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0004
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0010
+      source_stub_id: STUB_0009_B_02
+      task_id: EXP_0009_B
+      routing_lane: result_display_clean_holdout
+      slice_role: hard_negative_control
+      signal_hint: 成果展示
+      expected_behavior: hard_negative_clean_holdout_secondary
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0005
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0001
+      source_stub_id: STUB_0009_A_01
+      task_id: EXP_0009_A
+      routing_lane: strong_source_priority
+      slice_role: fast_lane_control
+      signal_hint: 保證收益
+      expected_behavior: fast_lane_control_contact
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0006
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0002
+      source_stub_id: STUB_0009_A_02
+      task_id: EXP_0009_A
+      routing_lane: strong_source_priority
+      slice_role: fast_lane_control
+      signal_hint: 保證收益
+      expected_behavior: fast_lane_control_group
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0007
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0003
+      source_stub_id: STUB_0009_A_03
+      task_id: EXP_0009_A
+      routing_lane: strong_source_priority
+      slice_role: fast_lane_control
+      signal_hint: 保證收益
+      expected_behavior: fast_lane_control_reply
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:
+
+  - workbench_id: RA_0013_0008
+    reviewer_visible_metadata:
+      source_candidate_id: batch-0009-context-gating-policy-check_0004
+      source_stub_id: STUB_0009_A_04
+      task_id: EXP_0009_A
+      routing_lane: strong_source_priority
+      slice_role: fast_lane_control
+      signal_hint: 保證收益
+      expected_behavior: fast_lane_control_stable_anchor
+    revised_assist_outputs_to_fill_before_review:
+      context_dependency_gate:
+      context_reason_codes: []
+      minimal_context_needed:
+      safe_next_action:
+      metadata_label_guardrail:
+      priority_explanation:
+      missing_evidence_note:
+      second_review_suggestion:
+    reviewer_fields:
+      context_gate_review_time_seconds:
+      human_context_gate_decision:
+      metadata_only_label_or_not_reviewable:
+      context_gate_usefulness_rating:
+      context_gate_omission_risk:
+      context_gate_status:
+      minimal_context_request_status:
+      over_request_risk:
+      under_request_risk:
+      second_review_required:
+      insufficient_evidence:
+      raw_evidence_excluded_from_git:

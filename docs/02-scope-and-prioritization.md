@@ -2,7 +2,20 @@
 
 ## Phase-1 Recommendation
 
-Start with text, images, comments, OCR, visible redirection signals, and CIB-authorized API/automation support for the first governed pilot. Defer video-heavy, deepfake-heavy, and production-enforcement work until the first dataset and baseline comparison show that these signals are insufficient.
+Start with a focused method for governed automatic or assisted investment-scam candidate discovery on Threads. This is the single highest project priority. All scope, tooling, governance, annotation, Reviewer Assist, and reporting choices must support this method and must not contradict it.
+
+Use text, images, comments/replies, OCR, visible redirection signals, and CIB-authorized API/automation support only when they directly improve automatic or assisted candidate discovery and its required joint outcome: review-worthy yield, acceptable reviewer burden, controlled false-positive pressure, hard-negative protection, and governance-safe evidence handling.
+
+Defer video-heavy, deepfake-heavy, cross-family expansion, and production-enforcement work until the investment-scam discovery method shows useful yield, acceptable reviewer burden, hard-negative protection, and measured labor efficiency.
+
+## Labor-Efficient Discovery Boundary
+
+Do not frame the scope as "detect investment scams first, reduce labor second." The scope is "design the governed automatic or assisted discovery method first." Discovery yield and reviewer burden are coupled success conditions for that method.
+
+- A method that finds many candidates but requires excessive manual reading, sorting, summarization, copying, schema filling, and second review is not operationally scalable.
+- A method that saves reviewer time but fails to surface enough review-worthy candidates is not useful.
+- AI/system support may assist with long-thread reading, OCR/post/reply summarization, signal-family extraction, schema prefill, priority ranking, hard-negative risk identification, and repo-safe reviewer notes.
+- AI/system support must not make final labels, legal fraud determinations, enforcement recommendations, public warnings, automated takedowns, production detector claims, or scope-expansion decisions.
 
 ## Scope Matrix
 
@@ -19,7 +32,36 @@ Start with text, images, comments, OCR, visible redirection signals, and CIB-aut
 | Long video | Low to medium | Low | Very high | High | High | Defer | No |
 | Deepfake-related signals | Future risk value | Low | Very high | High | Very high | Defer to future risk note | No |
 
+## Required Forward-Looking Metrics
+
+Future scope, experiment, and continuation decisions should include:
+
+- average review time per candidate;
+- median review time;
+- p95 review time;
+- candidates reviewed per hour;
+- percentage of fields auto-filled;
+- percentage of fields manually corrected;
+- summary usefulness rating;
+- percentage of candidates requiring full original-thread reading;
+- second-review rate;
+- reviewer disagreement rate;
+- hard-negative false-positive pressure;
+- insufficient-evidence rate;
+- review-worthy yield per source arm;
+- high-risk yield per reviewer hour.
+
 ## Detailed Research Judgment
+
+### 0. Investment Scam Candidate Discovery
+
+Prioritize now.
+
+- Technical cost: manageable if the method stays bounded and review-centered.
+- Operational cost: medium. Full-thread/reply review and hard-negative protection require reviewer time.
+- Evidence value: high. Investment-scam patterns expose repeated signal families such as teacher/advisor framing, profit proof, group conversion, private-channel migration, comment-layer reassurance, and external-link/contact cues.
+- Budget fit: strong if the repo measures discovery yield and reviewer burden together before expanding.
+- Expansion logic: later scam families should be added only after the investment-scam method is useful enough to adapt.
 
 ### 1. Text Posts
 
@@ -83,6 +125,18 @@ Include now under the CIB controlled launch record.
 - Operational cost: medium. Every run needs purpose, operator, source, field, output, retention, and stop-condition records.
 - Evidence value: high. API and automation can make source capture more complete, reproducible, and auditable.
 - Budget fit: good if limited to governed collection, OCR, parsing, validation, audit, and baseline automation; poor if it expands into production monitoring or enforcement.
+
+2026-05-05 access correction:
+
+- Official Threads API access is the preferred Discovery Method v1 source arm
+  when app access, permissions, endpoint coverage, token handling, field limits,
+  and rate or usage rules are documented.
+- Controlled browser runs may be reused only as run-scoped fallback source arms
+  with explicit caps, conservative pacing, raw-output exclusion from git, and
+  stop rules.
+- A personal Threads account login does not authorize standing browser
+  crawling, and one-second automated fetching is not an acceptable default
+  control.
 
 ### 8. Short Video
 

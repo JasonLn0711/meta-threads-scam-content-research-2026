@@ -38,7 +38,112 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Recorded CIB authorization for API access and all research-required automation under a controlled launch record | `0018-record-cib-api-and-automation-authorization.md` |
 | 2026-04-23 | Corrected controlled-store status so real controlled pilot artifacts are not mislabeled as examples or synthetic files | `0019-correct-controlled-store-artifact-status.md` |
 | 2026-04-23 | Added a repo-safe controlled rehearsal review bridge before the first 10-15 item checkpoint | `0020-add-controlled-rehearsal-review-bridge.md` |
-| 2026-05-21 | Recorded Breeze Guard 26 as a deferred Taiwan-localized safety-classifier baseline candidate, without authorizing current Phase 1 classifier-assisted review | `0021-record-breeze-guard-26-as-deferred-candidate.md` |
-| 2026-05-21 | Required Meta Content Library / API as the preferred official research data-access route for the CIB/165 Threads scam-content case | `0022-require-meta-content-library-api-route.md` |
-| 2026-05-21 | Added repo-level automated versioning and detailed change logs starting from `v1.2.6` | `0023-add-automated-versioning-and-change-log.md` |
-| 2026-05-21 | Recorded the first-principle Meta Research Tools application strategy around trust, governance, and reviewer-support research | `0024-record-first-principle-meta-research-tools-application-strategy.md` |
+| 2026-04-24 | Recorded CIB-approved rehearsal intake readiness while keeping the first checkpoint blocked until one controlled item is built and strict-validated | `0021-record-cib-approved-rehearsal-intake-ready.md` |
+| 2026-04-24 | Accepted a controlled low-speed crawler as the next practical acquisition path under the existing CIB-authorized automation scope | `0022-record-controlled-low-speed-crawler-path.md` |
+| 2026-04-24 | Required a controlled risk-probe method before item 16 after the first 15 records yielded no high-risk examples | `0023-require-risk-probe-method-before-item-16.md` |
+| 2026-04-24 | Required approved session/API risk-probe access after public browser-rendered risk probes returned no extractable item content | `0024-require-approved-session-or-api-risk-probe-access.md` |
+| 2026-04-25 | Prepared controlled browser storage-state and API/session-aware access paths while keeping secrets and raw output outside git | `0025-prepare-controlled-session-api-access-path.md` |
+| 2026-04-25 | Required method revision after run 0010 exhausted all five item 0017 seeds without selecting a safe redacted item | `0026-require-method-revision-after-run-0010.md` |
+| 2026-04-25 | Paused the text-only item 0017 extension and required a scoped evidence-path study before any further item 0017 attempt | `0027-pause-text-only-item-0017-extension.md` |
+| 2026-04-25 | Selected a scoped evidence-path study using domain-only link/redirect-category evidence plus narrow reply-context feasibility before any further item 0017 attempt | `0028-select-scoped-evidence-path-study.md` |
+| 2026-04-25 | Stopped the item 0017 extension for the current pilot tranche after run 0013 produced no reviewable candidate under the scoped evidence-path boundaries | `0029-stop-item-0017-extension-after-run-0013.md` |
+| 2026-04-25 | Required a stakeholder evidence-scope review gate before any item 0017 retry, item 0018 attempt, or high-risk evidence-expansion collection run | `0030-require-stakeholder-evidence-scope-review.md` |
+| 2026-04-25 | Recorded stakeholder approval for all proposed evidence families while preserving run-level limits and raw-data boundaries before item 0018 | `0031-record-stakeholder-evidence-expansion-approval.md` |
+| 2026-04-25 | Closed run 0015 for collection after its candidate-review cap was exhausted and required a new bounded run design before item 0024 | `0032-close-run-0015-and-require-new-run-design.md` |
+| 2026-04-25 | Closed run 0016 for collection after item 0027 and required a method decision before item 0028 | `0033-close-run-0016-and-require-method-decision-before-item-0028.md` |
+| 2026-04-25 | Selected API/session-aware readiness or targeted redacted exemplars as the required method before item 0028 | `0034-select-api-or-targeted-exemplar-method-before-item-0028.md` |
+| 2026-04-25 | Paused collection by default and selected checkpoint report v0.1 after the 42-record synthesis | `0058-select-checkpoint-report-v0-1-after-0042-synthesis.md` |
+| 2026-04-25 | Selected Option A: limited approved-browser-session tranche for prospective items 0046-0055 | `0059-select-option-a-limited-browser-tranche-after-checkpoint-0042.md` |
+| 2026-04-25 | Closed Option A run 0038 after it reached 20 reviewed candidates and 10 selected items | `0060-close-option-a-run-0038-after-caps.md` |
+| 2026-04-25 | Selected the 55-record CIB/165-facing checkpoint report package and blocked item 0056 until a new decision is recorded | `0061-select-checkpoint-0055-report-package.md` |
+| 2026-04-25 | Selected C2: keep collection paused and review/refine the 55-record checkpoint report package | `0062-select-c2-checkpoint-0055-report-review.md` |
+| 2026-04-25 | Refined the checkpoint 0055 report language after C2 so reviewers see report review as the active path | `0063-refine-checkpoint-0055-report-after-c2.md` |
+| 2026-04-25 | Added role-specific checkpoint 0055 review questions for the selected C2 report-review path | `0064-add-checkpoint-0055-review-questions.md` |
+| 2026-04-25 | Added a short checkpoint 0055 executive addendum for CIB/165-facing C2 review | `0065-add-checkpoint-0055-executive-addendum.md` |
+| 2026-04-25 | Recorded that all reviewer roles approved the checkpoint 0055 package under C2 | `0066-record-checkpoint-0055-reviewer-approval.md` |
+| 2026-04-25 | Added the canonical approved-package index for checkpoint 0055 delivery and handoff | `0067-add-checkpoint-0055-approved-package-index.md` |
+| 2026-04-25 | Aligned the README and recommended path so the approved checkpoint 0055 package index is the main entry point | `0068-align-readme-and-recommended-path-to-approved-package.md` |
+| 2026-04-25 | Added checkpoint 0055 next-decision handoff describing what is required before item 0056 or any new collection | `0069-add-checkpoint-0055-next-decision-handoff.md` |
+| 2026-04-26 | Authorized aggressive but bounded prospective tranche 0056-0075 with confirmed-pointer-first source path and strict caps | `0070-authorize-aggressive-prospective-tranche-0056-0075.md` |
+| 2026-04-26 | Recorded run 0039 preflight and moved the tranche to first-candidate readiness | `0071-record-run-0039-preflight.md` |
+| 2026-04-26 | Closed run 0039 after aggressive browser-session supplement produced no new final scam/high-risk items | `0072-close-run-0039-after-aggressive-browser-result.md` |
+| 2026-04-26 | Adopted a dedupe-first/full-thread-ready gate before future browser candidate promotion | `0073-adopt-dedupe-first-full-thread-ready-gate.md` |
+| 2026-04-26 | Added a browser candidate promotion review template for the dedupe-first/full-thread-ready gate | `0074-add-browser-candidate-promotion-review-template.md` |
+| 2026-04-26 | Added the post-run 0039 confirmed-pointer request as the next stakeholder-facing evidence path | `0075-add-post-run-0039-confirmed-pointer-request.md` |
+| 2026-04-26 | Opened the post-run 0039 confirmed-pointer intake scaffold for possible items 0076-0080 | `0076-open-post-run-0039-confirmed-pointer-intake.md` |
+| 2026-04-26 | Recorded run 0040 receipt readiness while waiting for confirmed-pointer delivery | `0077-record-run-0040-receipt-readiness.md` |
+| 2026-04-26 | Authorized a dedupe-first browser candidate quality run with 60-candidate and 30-quality-review caps | `0078-authorize-dedupe-first-browser-candidate-quality-run.md` |
+| 2026-04-26 | Recorded run 0041 preflight and moved it to candidate-quality execution readiness | `0079-record-run-0041-preflight.md` |
+| 2026-04-26 | Closed run 0041 after the article-based browser extractor produced no candidates | `0080-close-run-0041-no-candidates.md` |
+| 2026-04-26 | Authorized a browser-rendering diagnostic after run 0041 produced no extracted candidates | `0081-authorize-browser-rendering-diagnostic-run.md` |
+| 2026-04-26 | Closed run 0042 and selected body-line segmentation plus post-href discovery for the next browser method | `0082-close-run-0042-and-select-body-line-post-href-method.md` |
+| 2026-04-26 | Authorized a diverse body-line plus post-href browser candidate method run | `0083-authorize-diverse-body-line-post-href-run.md` |
+| 2026-04-26 | Closed run 0043 after the diverse browser method reached candidate cap with no item promotion | `0084-close-run-0043-diverse-browser-result.md` |
+| 2026-04-26 | Adopted a browser query diversification rule for future candidate-discovery runs | `0085-adopt-browser-query-diversification-rule.md` |
+| 2026-04-26 | Authorized a formal browser-candidate promotion review for run 0043 quality-review candidates | `0086-authorize-run-0043-browser-candidate-promotion-review.md` |
+| 2026-04-26 | Authorized aggressive dedupe-first browser candidate-quality run 0044 with 200 reviewed and 180 local-selected caps | `0087-authorize-aggressive-dedupe-first-browser-candidate-quality-run-0044.md` |
+| 2026-04-26 | Closed run 0044 after aggressive browser candidate-quality test reached 200 reviewed and 180 local-selected candidates | `0088-close-run-0044-aggressive-browser-candidate-quality-result.md` |
+| 2026-04-26 | Closed run 0043 promotion first pass with no candidate promotable into manual_entry_0076 yet | `0089-close-run-0043-promotion-first-pass-no-promotable-candidate.md` |
+| 2026-04-26 | Authorized run 0045 source-linkage/full-thread follow-up for run 0043 promotion candidates | `0090-authorize-run-0045-source-linkage-follow-up.md` |
+| 2026-04-26 | Closed run 0045 source-linkage follow-up with 2 candidates eligible for second review | `0091-close-run-0045-source-linkage-follow-up.md` |
+| 2026-04-26 | Promoted one run 0045 source-linked hard negative into local manual_entry_0076 | `0092-promote-run-0045-hard-negative-as-manual-entry-0076.md` |
+| 2026-04-26 | Accepted local hard-negative item 0076 for next checkpoint inclusion | `0093-include-local-hard-negative-0076-in-next-checkpoint.md` |
+| 2026-04-27 | Approved the 78-record CIB research checkpoint synthesis | `0105-approve-cib-78-record-checkpoint-synthesis.md` |
+| 2026-04-27 | Delivered checkpoint 0081 reviewer package and opened response tracking | `0106-deliver-checkpoint-0081-review-package.md` |
+| 2026-04-27 | Recorded checkpoint 0081 `approve_with_minor_edits` response and required repo-safe fixes | `0107-record-checkpoint-0081-approve-with-minor-edits.md` |
+| 2026-04-27 | Recorded checkpoint 0081 technical/governance re-check pass | `0108-record-checkpoint-0081-technical-governance-recheck.md` |
+| 2026-04-27 | Recorded checkpoint 0081 final handoff and recipient-specific sharing gate | `0109-record-checkpoint-0081-final-handoff.md` |
+| 2026-04-27 | Opened checkpoint 0081 recipient adoption tracking without authorizing new collection | `0110-open-checkpoint-0081-recipient-adoption-tracking.md` |
+| 2026-04-27 | Prepared checkpoint 0081 recipient adoption request without authorizing new collection | `0111-prepare-checkpoint-0081-recipient-adoption-request.md` |
+| 2026-04-27 | Opened checkpoint 0081 recipient adoption dispatch log without authorizing new collection | `0112-open-checkpoint-0081-recipient-adoption-dispatch-log.md` |
+| 2026-04-27 | Recorded CIB/internal `accepted_with_conditions` adoption for checkpoint 0081 without authorizing new collection | `0113-record-checkpoint-0081-cib-internal-adoption.md` |
+| 2026-04-27 | Opened a design-only checkpoint 0081 shadow-pilot readiness gap analysis without authorizing execution or new collection | `0114-open-checkpoint-0081-shadow-pilot-readiness-gap-analysis.md` |
+| 2026-04-27 | Realigned repo guidance around scalable investment-scam candidate discovery as the first-principle goal | `0115-realign-repo-to-scalable-investment-scam-discovery-method.md` |
+| 2026-04-27 | Opened a design-only checkpoint 0081 investment-scam discovery method test charter draft without authorizing execution | `0116-open-checkpoint-0081-investment-scam-discovery-method-test-charter-draft.md` |
+| 2026-04-27 | Recorded technical/governance `approve_design_for_next_decision` response for the checkpoint 0081 investment-scam discovery method design package | `0117-record-checkpoint-0081-investment-scam-discovery-method-technical-governance-review-response.md` |
+| 2026-04-27 | Opened a draft-only capped investment-scam discovery method-test decision without authorizing execution | `0118-open-capped-investment-scam-discovery-method-test-decision-draft.md` |
+| 2026-04-27 | Opened a review package for the `0118` capped investment-scam discovery method-test decision draft without authorizing execution | `0119-open-checkpoint-0081-capped-investment-scam-discovery-method-test-decision-review-package.md` |
+| 2026-04-27 | Opened a final capped investment-scam discovery method-test execution authorization package without authorizing execution | `0120-open-final-capped-investment-scam-discovery-method-test-execution-authorization-package.md` |
+| 2026-04-27 | Recorded final gate response: Track A approved after start checklist; Track B conditionally approved after hard conditions | `0121-record-final-gate-review-response-track-a-now-track-b-conditional.md` |
+| 2026-04-27 | Recorded Track B start authorization after legal/privacy no-veto and CIB/internal boundary acceptance | `0122-record-track-b-start-authorization-after-formal-signoff.md` |
+| 2026-04-27 | Recorded Track B Day 0 operational start under decision 0122 with no candidates surfaced yet | `0123-record-track-b-day-0-start.md` |
+| 2026-04-28 | Recorded Track B Day 1 source-arm intake start with zero candidates surfaced so far | `0124-record-track-b-day-1-source-arm-intake-start.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0001: six checkpoint-derived seed replay candidates surfaced, pending Track B review | `0125-record-track-b-day-1-batch-0001-checkpoint-seed-replay.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0001 primary review and second-review pause condition | `0126-record-track-b-day-1-batch-0001-primary-review.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0001 second review and final review outcomes | `0127-record-track-b-day-1-batch-0001-second-review.md` |
+| 2026-04-28 | Selected Track B Day 1 batch 0002 hard-negative probe arm before broader live discovery arms | `0128-select-track-b-day-1-batch-0002-hard-negative-probe.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe candidate surfacing | `0129-record-track-b-day-1-batch-0002-hard-negative-probe-candidates.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe primary review and second-review pause condition | `0130-record-track-b-day-1-batch-0002-primary-review.md` |
+| 2026-04-28 | Recorded Track B Day 1 batch 0002 hard-negative probe second review and final review outcomes | `0131-record-track-b-day-1-batch-0002-second-review.md` |
+| 2026-04-28 | Realigned forward-looking repo direction to labor-efficient investment-scam candidate discovery with discovery yield and reviewer burden as joint success conditions | `0129-realign-repo-to-labor-efficient-candidate-discovery.md` |
+| 2026-04-28 | Opened the Reviewer Assist Layer design for reducing reviewer reading, summarization, signal extraction, schema filling, triage, and reporting burden while preserving human final judgment | `0130-open-reviewer-assist-layer-design.md` |
+| 2026-04-28 | Updated Track B framing so success requires both candidate-discovery effectiveness and reviewer-labor efficiency measurement without changing locked caps | `0131-update-track-b-dual-success-evaluation-framing.md` |
+| 2026-05-04 | Adopted Batch 0008 as the active v2 context-gating policy for reviewer-hour routing | `0132-record-v2-batch-0008-context-gating-policy.md` |
+| 2026-05-05 | Opened Batch 0009 as a capped prospective check of the active context-gating policy | `0133-open-v2-batch-0009-context-gating-policy-check.md` |
+| 2026-05-05 | Recorded Batch 0009 as supporting the active context-gating policy and moved the next action to Reviewer Assist labor-savings evaluation | `0134-record-v2-batch-0009-context-gating-policy-check.md` |
+| 2026-05-05 | Added Evidence Layer v1 as metadata-safe custody support tooling without authorizing new collection or raw evidence in git | `0135-add-evidence-layer-v1.md` |
+| 2026-05-05 | Added synthetic Closed-Loop Discovery v1 support tooling for query-arm and reviewer-hour learning without external APIs or final scam decisions | `0136-add-synthetic-closed-loop-discovery-runner.md` |
+| 2026-05-05 | Added Advanced Discovery v2 support tooling with prompt-shaped query generation, deterministic embeddings, clustering, and contextual bandit learning | `0137-add-advanced-discovery-v2.md` |
+| 2026-05-05 | Added Concept Reasoning Layer v1 support tooling for cluster-to-concept mapping, conservative matching, and novelty routing | `0138-add-concept-reasoning-layer-v1.md` |
+| 2026-05-05 | Added Dynamic Intelligence Layer v1 support tooling for concept graphs, temporal tracking, evolution edges, and adversarial heuristics | `0139-add-dynamic-intelligence-layer-v1.md` |
+| 2026-05-05 | Added Predictive Simulation Layer v1 support tooling for subtle concept mutation, simulated posts, risk scoring, and validation hooks | `0140-add-predictive-simulation-layer-v1.md` |
+| 2026-05-05 | Added Defensive Self-Play Layer v1 support tooling for abstract adversary/detector robustness testing and self-play exploration priorities | `0141-add-defensive-self-play-layer-v1.md` |
+| 2026-05-05 | Added Adaptive Policy Deployment Loop v1 support tooling for shadow/assist/partial metadata routing, feedback logging, offline learning, and safe updates | `0142-add-adaptive-policy-deployment-loop-v1.md` |
+| 2026-05-05 | Recorded that current cases are partial fragments and that the project purpose is governed automatic or assisted discovery design beyond those fragments | `0143-record-sample-incompleteness-and-discovery-design-purpose.md` |
+| 2026-05-05 | Recorded governed automatic or assisted Threads investment-scam candidate discovery as the single highest project priority | `0144-record-automatic-discovery-method-as-single-top-priority.md` |
+| 2026-05-05 | Opened the Reviewer Assist labor-savings evaluation package for governed automatic or assisted discovery without authorizing new collection | `0145-open-reviewer-assist-labor-savings-evaluation-for-automatic-discovery.md` |
+| 2026-05-05 | Opened the metadata-only Reviewer Assist execution workbench for filling the assisted-review condition without claiming results yet | `0146-open-reviewer-assist-evaluation-execution-workbench.md` |
+| 2026-05-05 | Recorded the aggregate-only Reviewer Assist labor-savings result and selected `expand_assist_evaluation` without authorizing new collection | `0147-record-reviewer-assist-labor-savings-evaluation-result.md` |
+| 2026-05-05 | Opened the next bounded metadata-only Reviewer Assist expansion slice using Batch 0008 as the balanced context-gating baseline | `0148-open-reviewer-assist-expansion-slice-batch-0008.md` |
+| 2026-05-05 | Recorded Batch 0011 as an empirical metadata-only Reviewer Assist expansion result and selected bounded `expand_assist_evaluation` | `0149-record-reviewer-assist-expansion-batch-0011-result.md` |
+| 2026-05-05 | Opened Batch 0012 as a bounded metadata-only Reviewer Assist context-gate revision for the thread-required lane | `0150-open-reviewer-assist-thread-required-lane-revision.md` |
+| 2026-05-05 | Prepared the Batch 0012 reviewer-facing context-gate packet and handoff without claiming empirical results | `0151-prepare-reviewer-assist-batch-0012-context-gate-handoff.md` |
+| 2026-05-05 | Recorded Batch 0012 as an empirical context-gate result and adopted the thread-required context-gate revision with a source-packet alignment warning | `0152-record-reviewer-assist-batch-0012-context-gate-result.md` |
+| 2026-05-05 | Reconciled Batch 0012 packet/source alignment so the context-gate packet generator validates with zero alignment warnings before bounded reuse | `0153-reconcile-reviewer-assist-batch-0012-packet-source-alignment.md` |
+| 2026-05-05 | Opened Batch 0013 as a bounded metadata-only context-gate reuse packet on existing Batch 0009 aliases without claiming empirical results | `0154-open-reviewer-assist-batch-0013-bounded-context-gate-reuse.md` |
+| 2026-05-05 | Opened Discovery Method v1 source-arm readiness, preferring official Threads API checks and allowing controlled browser reuse only as a run-scoped fallback | `0155-open-authorized-discovery-method-v1-access-boundary.md` |
+| 2026-05-06 | Opened a design-only public-surface human-reproducible patrol v0 as a narrower controlled-browser fallback sub-mode without authorizing live collection | `0156-open-public-surface-human-reproducible-patrol-v0.md` |
+| 2026-05-21 | Recorded Breeze Guard 26 as a deferred Taiwan-localized safety-classifier candidate, not a current model dependency or final scam adjudicator | `0157-record-breeze-guard-26-as-deferred-candidate.md` |
+| 2026-05-21 | Required Meta Content Library / API as the preferred official research access route for CIB/165 Threads scam-content research where approved | `0158-require-meta-content-library-api-route.md` |
+| 2026-05-21 | Added automated repo operating versioning, Markdown changelog, and CSV version log workflow | `0159-add-automated-versioning-and-change-log.md` |
+| 2026-05-21 | Recorded the first-principle Meta Research Tools Manager application strategy centered on trust, governance, data minimization, and reviewer support | `0160-record-first-principle-meta-research-tools-application-strategy.md` |

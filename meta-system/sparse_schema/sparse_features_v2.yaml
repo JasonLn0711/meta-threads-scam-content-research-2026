@@ -1,0 +1,59 @@
+schema_version: sparse_features_v2
+title: Sparse Feature Schema v2
+description: Primary explainable sparse feature layer for v2 candidate discovery per
+  reviewer effort.
+governance:
+  decision_layer: sparse_primary
+  embedding_role: discovery_only
+  raw_threads_content_allowed: false
+  pii_allowed: false
+  human_approval_required_for_feature_addition: true
+cognitive_load:
+  base: 1.0
+  needs_thread_weight: 0.75
+  second_review_weight: 0.5
+  dense_feature_threshold: 4
+  dense_feature_penalty_per_feature: 0.15
+features:
+  誘導聯絡:
+    type: behavior_unit
+    weight: 1.2
+    definition: Visible metadata indicates contact or conversation movement is part
+      of the candidate pattern.
+  保證收益:
+    type: behavior_unit
+    weight: 1.4
+    definition: Visible metadata indicates guaranteed, fixed, or unusually certain
+      benefit language.
+  社群導流:
+    type: behavior_unit
+    weight: 1.2
+    definition: Visible metadata indicates movement toward a group, community, or
+      repeated audience funnel.
+  情緒操控:
+    type: behavior_unit
+    weight: 1.0
+    definition: Visible metadata indicates urgency, fear, reassurance, scarcity, or
+      other pressure cues.
+  成果展示:
+    type: behavior_unit
+    weight: 1.1
+    definition: Visible metadata indicates profit proof, testimonials, success evidence,
+      or result display.
+  reply_funnel:
+    type: structural_feature
+    weight: 1.1
+    definition: Suspicious metadata depends on reply or comment layer behavior.
+  needs_thread:
+    type: review_burden_feature
+    weight: 0.8
+    definition: Reviewer likely needs thread or reply context to interpret the candidate
+      safely.
+  review_stable_funnel_anchor:
+    type: human_accepted_emergent
+    weight: 6.0
+    definition: Candidate metadata shows a funnel-stage or value-stage anchor that
+      reviewers can resolve without second review and within the low-review-time band.
+    activation_rule: (誘導聯絡 OR 社群導流 OR reply_funnel OR 保證收益 OR 成果展示) AND review_time_seconds
+      <= 120 AND second_review_required == false
+    derived_from_feature_candidate: review_stable_funnel_anchor
