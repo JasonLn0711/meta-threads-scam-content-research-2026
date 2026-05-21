@@ -70,6 +70,22 @@ The visible application ID, logged-in account identity, screenshots,
 collaborator email addresses, invitation links, and any private access or
 controlled-content artifacts are intentionally not recorded in git.
 
+## Application Draft Terms And Conditions Page
+
+Later user-provided screenshots showed the application draft at the
+`Terms and Conditions` section after personal information, organization,
+research details, and collaborators were completed. The visible page contains a
+scrollable `Meta Research Tools Terms and Conditions` viewer, a required
+application/terms confirmation checkbox, a separate marketing-consent checkbox,
+and a final `Agree & submit application` control.
+
+The repo-safe field-state transcription and section-by-section operational
+summary are recorded in
+[2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md).
+The visible application ID, logged-in account identity, screenshots, full legal
+terms text, access credentials, controlled-data outputs, and private application
+artifacts are intentionally not recorded in git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

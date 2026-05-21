@@ -4,6 +4,41 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.7 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.6
+- Categories: application-prep;governance;legal-boundary;privacy
+- Summary: Record Research Tools terms and conditions page status
+
+### Detailed Changes
+
+- Recorded the Terms and Conditions page state, including unchecked and checked checkbox states, enabled/disabled submit button states, visible controls, and section-by-section terms implications from the user-provided terms excerpt.
+- Captured operational compliance boundaries: Approved Purpose only, no scraping/crawling/TDM, no unauthorized export/download/combination/commercial use, no shared access, publication/citation/notice requirements, data-protection/deletion/notification duties, confidentiality, termination, and warranty/liability boundaries.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md`
+- `notes/2026-05-21-meta-research-tools-manager-application-flow.md`
+- `templates/meta_research_tools_application_prep.md`
+- `docs/51-meta-content-library-api-access.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+- `docs/54-meta-official-product-documentation-requirements.md`
+
+### Verification
+
+- `git diff --check`
+- `python3 scripts/validate_thread_dataset.py data/samples/thread_item_sample_batch.csv`
+- `python3 -m py_compile scripts/record_version_update.py`
+
+### Sources
+
+- User-provided Research Tools Manager Terms and Conditions screenshots and pasted terms excerpt
+
+### Sensitive Data Check
+
+- Repo-visible files omit application ID, logged-in account identity, screenshots, access credentials, raw Threads evidence, handles, source URLs from controlled data, cleanroom exports, collaborator email addresses, invitation links, and item-level controlled artifacts. Long legal text is recorded as structured summary rather than full reproduced terms.
+
 ## v1.3.6 - 2026-05-21
 
 - Type: patch

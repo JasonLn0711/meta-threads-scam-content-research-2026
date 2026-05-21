@@ -68,6 +68,45 @@ Operational meaning:
 - API work should be assumed to happen only inside Meta Secure Research Environment unless the application is later changed and approved for a different secure platform.
 - The checked documentation confirmation should be treated as a real attestation: the team should understand the relevant fields, data types, endpoints, and export restrictions before submission.
 
+## Terms And Conditions Application Gate
+
+Later user-provided screenshots of the live Research Tools Manager application
+show the `Terms and Conditions` page after personal information, organization,
+research details, and collaborators were completed.
+
+Repo-safe record:
+
+- [../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md)
+
+Recorded visible state:
+
+- Image 1: required application/terms confirmation unchecked, marketing-consent
+  checkbox unchecked, and `Agree & submit application` disabled.
+- Image 2: both checkboxes checked and `Agree & submit application` enabled.
+- Visible linked materials include the Data Processing Agreement, Terms of
+  Service, and Privacy Policy.
+
+Terms-driven operational requirements for this repo:
+
+- Use Research Tools only for the Approved Purpose.
+- Do not scrape, crawl, harvest, or perform unauthorized text/data mining of
+  Research Tools.
+- Do not re-identify, profile, track, or accuse individual users.
+- Do not export, download, combine, sell, commercially exploit, or benchmark
+  Meta Data outside what the terms and official environment allow.
+- Do not share access; collaborators need their own approved path.
+- Protect, separate, retain, and delete Meta Data according to the approved
+  purpose and Meta's requirements.
+- Notify Meta promptly, and within the terms-stated two-day window, for
+  relevant authority/data-subject requests, investigations, complaints, or
+  inability to comply.
+- Publish only permitted Research Outputs, cite the correct Meta
+  product/version, preserve limitations, and avoid implying Meta endorsement.
+
+This record summarizes the user-provided terms excerpt for project governance.
+It is not legal advice and does not replace live review of the official terms
+before submission or use.
+
 ## Eligibility Requirements
 
 Access is application-based and reviewed through Research Tools Manager.

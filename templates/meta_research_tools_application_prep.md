@@ -161,6 +161,51 @@ Visible state: `Personal information`, `Organization`, and `Research details`
 are complete; `Collaborators` is active and optional; `Terms and Conditions`
 is not yet completed.
 
+## Terms And Conditions Page
+
+Use this page as a final legal and governance review gate, not as a routine
+click-through page. The actual live terms are the source of truth and should be
+reviewed before submission.
+
+| Field / control | Fill design | Outside-git final value |
+|---|---|---|
+| Research Tools terms viewer | Read the live terms and route any uncertainty to the responsible human, PI, institution, or legal reviewer before submission. |  |
+| Required application / terms confirmation | Check only after confirming applicant identity, personal Facebook profile ownership, the terms, linked data-processing/service terms, application-data use, and privacy-policy implications are understood. |  |
+| Marketing consent | Treat as optional and separate from the required terms confirmation. Decide intentionally whether to opt in or leave unchecked. |  |
+| Agree & submit application | Use only after title, collaborator decision, EU systemic-risk answer, API necessity, SRE route, product-documentation confirmation, storage/deletion plan, and ethics/IRB position are ready. |  |
+
+### Current Terms And Conditions Draft Status From 2026-05-21 Screenshots
+
+Repo-safe status only:
+
+| Field / control | Current draft status | Action before submission |
+|---|---|---|
+| Prior sections | Personal information, Organization, Research details, and Collaborators completed | Confirm no earlier-page value needs revision before final submit. |
+| Terms viewer | Visible with `Meta Research Tools Terms and Conditions` | Re-read live terms before submission because terms can change. |
+| Required application / terms confirmation | Image 1 unchecked; Image 2 checked | Check only if the applicant is ready to make the legal confirmation. |
+| Marketing consent | Image 1 unchecked; Image 2 checked | Decide intentionally; this is separate from research access necessity. |
+| Agree & submit application | Image 1 disabled; Image 2 enabled | Do not submit until governance and responsible-human review are complete. |
+
+Full repo-safe transcription:
+[../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md).
+
+Terms-driven pre-submit checks:
+
+- Confirm the application remains within the Approved Purpose.
+- Confirm no scraping, crawling, browser harvesting, unauthorized export,
+  unauthorized combination, commercial exploitation, competing-product
+  benchmarking, or de-anonymization is planned.
+- Confirm access will not be shared and collaborator access will go through
+  Research Tools Manager.
+- Confirm storage separation, retention, deletion, and two-day notification
+  duties are understood.
+- Confirm publications will use permitted Research Outputs, cite the correct
+  Meta product/version, preserve limitations, and avoid implying Meta
+  endorsement.
+- Confirm raw Meta Data, screenshots, handles, URLs, cleanroom exports,
+  application IDs, account identity, collaborator emails, and access details
+  stay outside git.
+
 ## Research Purpose
 
 Recommended framing:
@@ -282,6 +327,8 @@ Reviewer-scarcity measurement:
 - [ ] Storage, access, retention, and deletion plan exists.
 - [ ] IRB or ethics-review position is documented.
 - [ ] Collaborator list is complete.
+- [ ] Terms and Conditions obligations are reviewed by the responsible human team.
+- [ ] Marketing-consent choice is intentional and not confused with required research-access consent.
 - [ ] No application wording implies autonomous accusation or enforcement.
 - [ ] No application wording implies full-platform coverage.
 - [ ] No application wording implies scraping as a fallback.

@@ -219,6 +219,42 @@ Recommended stance:
   status, or collaborator personal details in git;
 - record only aggregate collaborator state in repo-visible files.
 
+## Terms And Conditions Page Strategy
+
+The terms page is the final trust and accountability gate. It should be treated
+as a legal/governance review point, not a routine UI completion step.
+
+Visible fields and repo-safe terms implications are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md).
+
+Observed current draft state:
+
+- `Personal information`, `Organization`, `Research details`, and
+  `Collaborators` are complete;
+- `Terms and Conditions` is active;
+- Image 1 shows the required confirmation and marketing consent unchecked, with
+  `Agree & submit application` disabled;
+- Image 2 shows both checkboxes checked, with `Agree & submit application`
+  enabled;
+- the page links to the Data Processing Agreement, Terms of Service, and
+  Privacy Policy.
+
+Recommended stance:
+
+- treat the required confirmation as a legal attestation by the applicant;
+- decide the marketing-consent checkbox separately from research-access needs;
+- do not submit until the title truncation, zero-collaborator choice, EU
+  systemic-risk answer, API necessity, SRE selection, product-documentation
+  confirmation, ethics/IRB position, storage/deletion plan, and publication
+  boundary are reviewed;
+- preserve the terms boundaries as project rules: Approved Purpose only, no
+  scraping/crawling, no unauthorized export or download, no unauthorized data
+  combination, no re-identification, no shared access, no commercial
+  exploitation, no competing-product benchmarking, no implied Meta endorsement,
+  and no raw Meta Data in git;
+- treat termination, terms updates, data quality limitations, confidentiality,
+  and two-day notification duties as operational constraints.
+
 ## Claim Boundary
 
 Allowed:

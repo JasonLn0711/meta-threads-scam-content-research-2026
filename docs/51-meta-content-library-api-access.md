@@ -23,6 +23,7 @@ Verified on `2026-05-21` from Meta documentation:
 - Later user-provided screenshots of the application draft show the `Research details` page filled with a 60-character research title, a `1772/4000` research-program description, a `1552/4000` relevant-data statement, `Yes` for the EU systemic-risk question, both the web-based Meta Content Library and API selected, Meta Secure Research Environment selected, and both required confirmations checked. The full repo-safe transcription is recorded in [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md); application ID, logged-in account identity, screenshots, and private access details are intentionally omitted from git.
 - A later user-provided screenshot confirms the lower `Research details` form state: Meta Content Library web tool selected, Meta Content Library API selected, Meta Secure Research Environment selected, SOMAR Virtual Data Enclave not selected, and both required confirmations checked. This confirms that the project has attested to reading product documentation and understanding fields, data types, and applicable API endpoints.
 - A later user-provided screenshot of the application draft shows the optional `Collaborators` page with the first collaborator email field blank, the `Add another` control visible and unused, and `Next` appearing enabled. The repo-safe field transcription and filling status are recorded in [../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md](../notes/2026-05-21-meta-research-tools-manager-collaborators-page.md); collaborator emails, invitation links, application IDs, screenshots, and logged-in account identity are intentionally omitted from git.
+- Later user-provided screenshots of the application draft show the `Terms and Conditions` page after prior sections were completed. Image 1 shows the required terms confirmation and marketing-consent checkbox unchecked with `Agree & submit application` disabled; Image 2 shows both checkboxes checked with `Agree & submit application` enabled. The repo-safe field transcription and section-by-section operational summary are recorded in [../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md); the application ID, logged-in account identity, screenshots, full legal terms text, credentials, and controlled-data artifacts are intentionally omitted from git.
 - The official product-documentation compliance snapshot for Meta Content Library/API and Meta Secure Research Environment is recorded in [54-meta-official-product-documentation-requirements.md](54-meta-official-product-documentation-requirements.md).
 - Content Library documentation lists Threads public content as posts shared by public profiles with 100 or more followers.[^mcl-content]
 - Threads content is noted as not available for download while that dataset is in development.[^mcl-content]
@@ -142,6 +143,25 @@ Operational caution:
 - The EU systemic-risk answer should remain `Yes` only if the team is ready to defend that framing.
 - API access should be requested because it is necessary for governed research-scale analysis, not merely because it is available.
 - These selections do not authorize scraping, local raw-data export, production detection, enforcement, or legal attribution.
+
+## Terms And Conditions Page Status
+
+The current Research Tools Manager draft now has a repo-safe `Terms and
+Conditions` record:
+
+- canonical note: [../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md](../notes/2026-05-21-meta-research-tools-manager-terms-and-conditions-page.md)
+- prior sections completed: personal information, organization, research details, and collaborators
+- Image 1 state: required application/terms confirmation unchecked; marketing consent unchecked; final submit disabled
+- Image 2 state: required application/terms confirmation checked; marketing consent checked; final submit enabled
+- visible controls: `Back` and `Agree & submit application`
+- visible linked materials: Data Processing Agreement, Terms of Service, and Privacy Policy
+
+Operational caution:
+
+- The first checkbox is a legal confirmation, not a convenience setting.
+- The marketing checkbox is separate and should be selected or unselected intentionally.
+- The terms summary reinforces the same project boundary: Approved Purpose only, no scraping/crawling, no unauthorized export/download/combination, no re-identification, no shared access, no commercial exploitation, no competing-product benchmarking, and no raw Meta Data in git.
+- The team should review title truncation, collaborator need, EU systemic-risk framing, API necessity, SRE route, IRB/ethics position, storage/deletion rules, and publication boundaries before clicking `Agree & submit application`.
 
 ## Application Framing
 
