@@ -20,6 +20,8 @@ The synthetic workflow dry run has been completed in [28-synthetic-pilot-dry-run
 
 The stakeholder outcome has been reported as approved. The launch packet is recorded under `governance/pilot-launch/` with status `go_with_limits`.
 
+For this CIB/165 case, use Meta Content Library / API as the preferred official research access route where available. The regular Threads API can support scoped keyword-search or account/reply workflows only when the controlled run record approves the endpoint, fields, query limits, and retention. See [51-meta-content-library-api-access.md](51-meta-content-library-api-access.md).
+
 The same-day research status and first-principles rationale are summarized in [../notes/2026-04-23-research-day-notes.md](../notes/2026-04-23-research-day-notes.md).
 
 Execute the pilot through [29-authorized-pilot-execution-plan.md](29-authorized-pilot-execution-plan.md), `governance/pilot-launch/threads_pilot_v1_2026-05_work_order.md`, and `templates/pilot_result_summary.md`.
@@ -42,6 +44,12 @@ The MVP should include:
 - Human-review-oriented evaluation.
 
 Do not add model-assisted explanation tests in the current launch. Revisit only after Phase 1 produces governed real evidence and a later decision record authorizes that scope.
+
+Breeze Guard 26 is recorded as a deferred Taiwan-localized safety-classifier candidate in [50-breeze-guard-26-candidate-baseline.md](50-breeze-guard-26-candidate-baseline.md). It may be useful later as a controlled comparison against the transparent rule baseline, but it is not part of the current launch and should not be treated as a final scam, legal, financial, or medical truth adjudicator.
+
+Repo-level versioning now starts at `v1.2.6`; use [52-automated-versioning-and-change-log.md](52-automated-versioning-and-change-log.md) and `scripts/record_version_update.py` for future governed repository updates. Keep this separate from dataset versions, schema versions, annotation guideline versions, and controlled API run records.
+
+Before submitting through Meta Research Tools Manager, use [53-first-principle-meta-research-tools-application-strategy.md](53-first-principle-meta-research-tools-application-strategy.md). The application should lead with public-interest research, official access governance, metadata-first reviewer support, and over-enforcement risk reduction, not app-building, account policing, or classifier strength.
 
 ## Why This Is The Best First Path
 
@@ -67,6 +75,7 @@ Defer:
 - Production deployment.
 - Dashboard or platform engineering.
 - Large custom model training.
+- Breeze Guard 26 or other classifier-assisted review until governed evidence, stable labels, and an explicit later decision record authorize that test.
 
 ## Phase-1 MVP Definition
 

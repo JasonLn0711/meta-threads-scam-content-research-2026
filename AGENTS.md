@@ -52,8 +52,9 @@ Start with:
 3. `docs/18-recommended-path-v1.md`
 4. `governance/data-governance.md`
 5. `docs/19-codex-workflow.md`
-6. `docs/20-repo-series-naming.md`
-7. `docs/21-repo-relationships.md`
+6. `docs/52-automated-versioning-and-change-log.md`
+7. `docs/20-repo-series-naming.md`
+8. `docs/21-repo-relationships.md`
 
 Before changing scope, update:
 
@@ -74,3 +75,5 @@ Before adding experiments, create or update an experiment log under:
 - `experiments/evaluation-notes/`
 
 Keep `scripts/` and `src/` minimal until experiments justify code.
+
+Before completing a governed repo change, decide whether the repo operating version should move. Use `scripts/record_version_update.py` and keep raw evidence, credentials, handles, screenshots, URLs for controlled examples, and controlled item-level details out of `CHANGELOG.md` and `versioning/version_log.csv`.

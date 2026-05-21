@@ -152,3 +152,5 @@ Use versions such as:
 - `threads_sample_v1_1_2026-05`: corrected labels or schema-compatible updates.
 
 Each dataset version should include a manifest, schema version, annotation guideline version, and known limitations.
+
+Dataset versions are separate from the repo operating version in `VERSION`. The repo version tracks changes to governance, docs, templates, scripts, and research design; dataset versions track actual data slices and their manifests.

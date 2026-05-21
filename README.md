@@ -72,6 +72,7 @@ data/             Placeholder only; no raw sensitive data should be committed
 scripts/          Minimal utilities only after experiments justify code
 src/              Reserved for small research prototype code
 decision-log/     Durable decisions and scope changes
+versioning/       Repo-level version log support; not a data manifest
 ```
 
 ## Related Repos
@@ -99,7 +100,7 @@ This supersedes a concept-only stakeholder scoping memo as the next research art
 
 ## Current Research Status
 
-As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot launch preparation:
+As of `2026-05-21`, the repo has moved from scaffold-only to approved pilot launch preparation:
 
 - Dataset schema and labeling schema v1 exist.
 - Annotation guideline, collection/redaction SOP, pilot runbook, annotator calibration, and go/no-go checklist exist.
@@ -123,12 +124,22 @@ As of `2026-04-23`, the repo has moved from scaffold-only to approved pilot laun
 - A synthetic-only integrated launch rehearsal has exercised manual build, validation, calibration, audit, baseline, reviewer packet, and synthesis tooling.
 - The outside-git controlled launch record has been confirmed with final status `ready_for_first_10_15_items`.
 - A non-sensitive controlled launch record now records CIB authorization for API access and all research-required automation under explicit run-record, storage, access, retention, and redaction controls.
+- Breeze Guard 26 is documented as a deferred Taiwan-localized safety-classifier candidate in [docs/50-breeze-guard-26-candidate-baseline.md](docs/50-breeze-guard-26-candidate-baseline.md); it is not authorized for the current Phase 1 launch.
+- Meta Content Library / API is documented as the preferred official research access route for the CIB/165 Threads case in [docs/51-meta-content-library-api-access.md](docs/51-meta-content-library-api-access.md); Threads API keyword search is supplementary only if run-scoped.
+- Meta Research Tools Manager application strategy is recorded in [docs/53-first-principle-meta-research-tools-application-strategy.md](docs/53-first-principle-meta-research-tools-application-strategy.md): trust, governance, and reviewer support are the core application assets.
+- Repo-level versioning now starts at `v1.2.6` in [VERSION](VERSION), with detailed logs in [CHANGELOG.md](CHANGELOG.md) and [versioning/version_log.csv](versioning/version_log.csv). This is separate from dataset, schema, guideline, and experiment-run versions.
 - The consolidated research day note is [notes/2026-04-23-research-day-notes.md](notes/2026-04-23-research-day-notes.md).
 - Item-level controlled pilot artifacts, if present, live only in the outside-git controlled store; no raw or controlled Threads evidence is committed to this repo.
 
 The next blocker is operational practice, not tooling: continue the 1-2 item controlled rehearsal under the controlled limits, validate local records, review redaction quality, record the repo-safe rehearsal decision, confirm calibration if annotators changed, and only then collect the first 10-15 items before the checkpoint. The rehearsal may use the intended manual, API, or automation path, but raw evidence, credentials, session artifacts, and sensitive item-level outputs must stay outside git. Do not complete the 50-item pilot until the checkpoint decision is `continue_to_50` or `continue_with_limits`.
 
 The Phase 1 operational spine is [docs/29-authorized-pilot-execution-plan.md](docs/29-authorized-pilot-execution-plan.md). The current launch decision note is [notes/phase1-launch-decisions.md](notes/phase1-launch-decisions.md), and the launch readiness note is [experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md](experiments/evaluation-notes/0007-phase1-pilot-launch-readiness.md).
+
+## Repo Versioning
+
+Use [scripts/record_version_update.py](scripts/record_version_update.py) when a repo-safe change should move the operating version. Large governance, data-access, scope, schema, or claim-boundary changes should also receive a decision record under `decision-log/`.
+
+See [docs/52-automated-versioning-and-change-log.md](docs/52-automated-versioning-and-change-log.md) for bump rules and sensitive-data logging boundaries.
 
 ## Recommended First Milestone
 

@@ -38,3 +38,7 @@ Do not silently expand the project into production detection, automated collecti
 | 2026-04-23 | Recorded CIB authorization for API access and all research-required automation under a controlled launch record | `0018-record-cib-api-and-automation-authorization.md` |
 | 2026-04-23 | Corrected controlled-store status so real controlled pilot artifacts are not mislabeled as examples or synthetic files | `0019-correct-controlled-store-artifact-status.md` |
 | 2026-04-23 | Added a repo-safe controlled rehearsal review bridge before the first 10-15 item checkpoint | `0020-add-controlled-rehearsal-review-bridge.md` |
+| 2026-05-21 | Recorded Breeze Guard 26 as a deferred Taiwan-localized safety-classifier baseline candidate, without authorizing current Phase 1 classifier-assisted review | `0021-record-breeze-guard-26-as-deferred-candidate.md` |
+| 2026-05-21 | Required Meta Content Library / API as the preferred official research data-access route for the CIB/165 Threads scam-content case | `0022-require-meta-content-library-api-route.md` |
+| 2026-05-21 | Added repo-level automated versioning and detailed change logs starting from `v1.2.6` | `0023-add-automated-versioning-and-change-log.md` |
+| 2026-05-21 | Recorded the first-principle Meta Research Tools application strategy around trust, governance, and reviewer-support research | `0024-record-first-principle-meta-research-tools-application-strategy.md` |

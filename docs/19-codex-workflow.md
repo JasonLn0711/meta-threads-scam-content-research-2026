@@ -12,8 +12,9 @@ Before making changes, read:
 2. `docs/00-project-charter.md`
 3. `docs/18-recommended-path-v1.md`
 4. `governance/data-governance.md`
-5. `AGENTS.md`
-6. `docs/21-repo-relationships.md`
+5. `docs/52-automated-versioning-and-change-log.md`
+6. `AGENTS.md`
+7. `docs/21-repo-relationships.md`
 
 ## Docs-First Updates
 
@@ -38,6 +39,20 @@ Create a decision record when changing:
 - Budget assumption
 - Production boundary
 - Relationship to the umbrella repo or planning repo
+
+## Version Logging
+
+When a repo-safe change should move the repository operating version, use:
+
+```bash
+python3 scripts/record_version_update.py --bump patch \
+  --summary "Repo-safe summary" \
+  --category governance \
+  --path docs/example.md \
+  --verification "git diff --check"
+```
+
+Use [52-automated-versioning-and-change-log.md](52-automated-versioning-and-change-log.md) to choose `major`, `minor`, or `patch`. Do not put raw evidence, handles, controlled URLs, credentials, screenshots, browser exports, or controlled item-level details in the version log.
 
 ## Branch Naming
 
