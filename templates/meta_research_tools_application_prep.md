@@ -91,6 +91,43 @@ Repo-safe status only:
 Visible state: `Personal information` is complete, `Organization` is active,
 and `Next` appears enabled.
 
+## Research Details Page
+
+Use this page to make the research-program case. The page should show that the
+request is for public-interest, official, governed research access rather than
+app development, platform policing, scraping, or autonomous enforcement.
+
+| Form field | Fill design | Outside-git final value |
+|---|---|---|
+| Research program title | Short, non-accusatory title that fits the 60-character limit and does not end mid-word. |  |
+| Research program description | Public-interest research purpose, bounded method, governance boundary, uncertainty preservation, and reviewer-support goal. |  |
+| Relevant data for your research | Public posts, public metadata, engagement indicators, timestamps, topic/hashtag propagation, trend signals, and aggregate dissemination behavior when approved. |  |
+| EU systemic-risk contribution | Select only the answer the research can defend. If `Yes`, explain systemic-risk relevance without overclaiming legal attribution or enforcement. |  |
+| Research tools | Request the web-based tool and API only when both are necessary for the research design. |  |
+| Secure computing platform | Select the approved platform that matches the intended API route. |  |
+| Required confirmations | Check only after product documentation has been reviewed and the public-interest/scientific contribution statement is accurate. |  |
+
+### Current Research Details Draft Status From 2026-05-21 Screenshot
+
+Repo-safe status only:
+
+| Form field | Current draft status | Action before next step |
+|---|---|---|
+| Research program title | Filled: `Metadata-Driven Public Scam Pattern Analysis and Reviewer Su`; counter `60/60` | Shorten or complete the title so it does not end mid-word. |
+| Research program description | Filled; counter `1772/4000` | Keep as public-interest, metadata-first, reviewer-support research; avoid adding enforcement or legal-attribution claims. |
+| Relevant data for your research | Filled; counter `1552/4000` | Confirm every requested data class is necessary and approved-route compatible. |
+| EU systemic-risk question | `Yes` selected | Confirm this is intentional and defensible before submission. |
+| Selected research tools | Web-based Meta Content Library selected; Meta Content Library API selected | Keep both only if the API need remains necessary. |
+| Secure computing platform | `Meta Secure Research Environment` selected | Confirm this is the intended secure platform. |
+| Required confirmations | Both visible confirmations checked | Confirm product documentation has actually been reviewed. |
+
+Full repo-safe transcription:
+[../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md).
+
+Visible state: `Personal information` and `Organization` are complete,
+`Research details` is active, both research-tool selections are checked, both
+required confirmations are checked, and `Next` appears enabled.
+
 ## Research Purpose
 
 Recommended framing:

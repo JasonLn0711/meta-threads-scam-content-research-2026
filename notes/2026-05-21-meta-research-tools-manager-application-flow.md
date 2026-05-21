@@ -41,6 +41,21 @@ The visible application ID, logged-in account identity, and affiliation details
 that directly identify the applicant are intentionally not recorded in full in
 git.
 
+## Application Draft Research Details Page
+
+A later user-provided screenshot showed the application draft at the
+`Research details` section after personal information and organization were
+completed. The visible page contains fields for research program title,
+research program description, relevant data, EU systemic-risk contribution,
+research-tool selection, secure computing platform selection, and required
+confirmations.
+
+The full repo-safe field transcription and filling status are recorded in
+[2026-05-21-meta-research-tools-manager-research-details-page.md](2026-05-21-meta-research-tools-manager-research-details-page.md).
+The visible application ID, logged-in account identity, screenshots, and any
+private access or controlled-content artifacts are intentionally not recorded in
+git.
+
 ## Application Flow Shown In The UI
 
 ### Step 1: Submit Application

@@ -147,6 +147,42 @@ Recommended stance:
 - do not use this page to discuss CIB operations, raw evidence, scam labels, or
   enforcement claims.
 
+## Research Details Page Strategy
+
+The research-details page is the core trust-review page. It should show why the
+research needs controlled official access and why the team can use that access
+without turning the project into scraping, policing, public accusation, or
+production enforcement.
+
+Visible fields and repo-safe filled status are recorded in
+[../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md).
+
+Observed current draft state:
+
+- research title is filled at `60/60` and appears to end mid-word;
+- research-program description is filled at `1772/4000`;
+- relevant-data explanation is filled at `1552/4000`;
+- EU systemic-risk question is answered `Yes`;
+- both Meta Content Library web-based tool and Meta Content Library API are selected;
+- Meta Secure Research Environment is selected as the secure computing platform;
+- both required confirmations are checked;
+- `Next` appears enabled.
+
+Recommended stance:
+
+- shorten the title before submission so it does not look truncated;
+- keep the description focused on public, aggregate, metadata-first research
+  and human reviewer support;
+- request only public or platform-approved research data;
+- describe API access as necessary for reproducible, scalable analysis inside
+  the approved secure environment, not as a general data export path;
+- keep `Yes` on the EU systemic-risk question only if the application is ready
+  to defend systemic-risk relevance;
+- preserve the no private messages, no non-public user data, no autonomous
+  enforcement, no legal attribution, and aggregate-output boundaries;
+- do not mention raw case evidence, CIB operational details, specific accounts,
+  handles, URLs, or screenshots in this page.
+
 ## Claim Boundary
 
 Allowed:

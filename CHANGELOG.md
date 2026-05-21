@@ -4,6 +4,40 @@ This file tracks repository operating versions for the Threads scam-content rese
 
 Do not record raw Threads evidence, source URLs, account handles, credentials, session artifacts, screenshots, or sensitive controlled-run details here. Record only repo-safe change summaries, affected paths, verification, and decision references.
 
+## v1.3.4 - 2026-05-21
+
+- Type: patch
+- Previous version: v1.3.3
+- Categories: application-prep;governance;data-access
+- Summary: Record Research Tools research details page status
+
+### Detailed Changes
+
+- Recorded the Research details page fields, full drafted application text, EU systemic-risk selection, selected research tools, secure-computing platform, and required confirmations.
+- Noted that the research title is at the 60-character limit and appears to end mid-word before submission.
+
+### Affected Paths
+
+- `notes/2026-05-21-meta-research-tools-manager-research-details-page.md`
+- `notes/2026-05-21-meta-research-tools-manager-application-flow.md`
+- `templates/meta_research_tools_application_prep.md`
+- `docs/51-meta-content-library-api-access.md`
+- `docs/53-first-principle-meta-research-tools-application-strategy.md`
+
+### Verification
+
+- `git diff --check`
+- `python3 scripts/validate_thread_dataset.py data/samples/thread_item_sample_batch.csv`
+- `python3 -m py_compile scripts/record_version_update.py`
+
+### Sources
+
+- User-provided Research Tools Manager Research details screenshots
+
+### Sensitive Data Check
+
+- Repo-visible files omit application ID, logged-in account identity, screenshots, private access details, raw Threads evidence, handles, source URLs, credentials, and item-level controlled artifacts. The recorded research text contains application content but no raw evidence or private personal-information values.
+
 ## v1.3.3 - 2026-05-21
 
 - Type: patch

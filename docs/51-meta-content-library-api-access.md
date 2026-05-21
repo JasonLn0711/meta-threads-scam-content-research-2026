@@ -20,6 +20,7 @@ Verified on `2026-05-21` from Meta documentation:
 - A user-provided screenshot of Meta Research Tools Manager at `www.facebook.com/research-tools-manager` shows the application workflow: submit application, CASD application review, Meta processing, and email-based access details. The full repo-safe transcription is recorded in [../notes/2026-05-21-meta-research-tools-manager-application-flow.md](../notes/2026-05-21-meta-research-tools-manager-application-flow.md).
 - A later user-provided screenshot of the Research Tools Manager application draft shows the `Personal information` page. The repo-safe field transcription and filling strategy are recorded in [../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md](../notes/2026-05-21-meta-research-tools-manager-personal-information-page.md); the application ID, logged-in account identity, email, ORCID, CV details, and completed personal values are intentionally omitted from git.
 - A later user-provided screenshot of the application draft shows the `Organization` page. The repo-safe field transcription and filling status are recorded in [../notes/2026-05-21-meta-research-tools-manager-organization-page.md](../notes/2026-05-21-meta-research-tools-manager-organization-page.md); department-level affiliation, role, applicant-verification URL, application ID, and logged-in account identity are intentionally omitted or redacted in git.
+- Later user-provided screenshots of the application draft show the `Research details` page filled with a 60-character research title, a `1772/4000` research-program description, a `1552/4000` relevant-data statement, `Yes` for the EU systemic-risk question, both the web-based Meta Content Library and API selected, Meta Secure Research Environment selected, and both required confirmations checked. The full repo-safe transcription is recorded in [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md); application ID, logged-in account identity, screenshots, and private access details are intentionally omitted from git.
 - Content Library documentation lists Threads public content as posts shared by public profiles with 100 or more followers.[^mcl-content]
 - Threads content is noted as not available for download while that dataset is in development.[^mcl-content]
 - The Content Library API documentation describes near real-time public discussion data from Facebook and Instagram, with dedicated endpoints, more than 100 data fields, up to 100,000 results per query, and asynchronous search.[^mcl-api]
@@ -114,6 +115,27 @@ The visible Research Tools Manager application page describes a four-step proces
 | 4. Gain access | The applicant receives an email with access details. | Keep access emails, invitation links, credentials, and environment details outside git. |
 
 The repo-safe screenshot note is [../notes/2026-05-21-meta-research-tools-manager-application-flow.md](../notes/2026-05-21-meta-research-tools-manager-application-flow.md). Do not commit screenshots or logged-in account identity details unless a later governance decision explicitly approves a redacted artifact.
+
+## Research Details Page Status
+
+The current Research Tools Manager draft now has a repo-safe `Research details`
+record:
+
+- canonical note: [../notes/2026-05-21-meta-research-tools-manager-research-details-page.md](../notes/2026-05-21-meta-research-tools-manager-research-details-page.md)
+- title observed at the field limit: `60/60`
+- research program description observed at `1772/4000`
+- relevant-data statement observed at `1552/4000`
+- EU systemic-risk answer observed as `Yes`
+- requested tools: Meta Content Library web tool and Meta Content Library API
+- secure computing platform: Meta Secure Research Environment
+- required confirmations: both checked
+
+Operational caution:
+
+- The title appears to end mid-word and should be shortened before final submission.
+- The EU systemic-risk answer should remain `Yes` only if the team is ready to defend that framing.
+- API access should be requested because it is necessary for governed research-scale analysis, not merely because it is available.
+- These selections do not authorize scraping, local raw-data export, production detection, enforcement, or legal attribution.
 
 ## Application Framing
 
